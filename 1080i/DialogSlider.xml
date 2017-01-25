@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>11</defaultcontrol>
+	<animation effect="slide" start="0,-108" end="0,0" time="300">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="0,-108" time="300">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<left>600</left>
+			<control type="image">
+				<left>16</left>
+				<width>688</width>
+				<height>108</height>
+				<texture colordiffuse="grey">dialogs/black.png</texture>
+			</control>
+			<control type="label" id="10">
+				<description>Dialog header</description>
+				<left>32</left>
+				<width>345</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<font>font14_title</font>
+				<textcolor>grey</textcolor>
+			</control>
+			<control type="label" id="12">
+				<description>Slider Value</description>
+				<left>32</left>
+				<width>656</width>
+				<height>60</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font14_title</font>
+				<textcolor>grey</textcolor>
+			</control>
+			<control type="slider" id="11">
+				<description>Slider</description>
+				<left>32</left>
+				<top>60</top>
+				<width>656</width>
+				<height>30</height>
+				<texturesliderbar>settings/osd_slider_bg_2.png</texturesliderbar>
+				<textureslidernib border="1" colordiffuse="themecolor">settings/osd_slider_nibNF.png</textureslidernib>
+				<textureslidernibfocus border="1" colordiffuse="themecolor">settings/osd_slider_nib.png</textureslidernibfocus>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onleft>11</onleft>
+				<onright>11</onright>
+			</control>
+		</control>
+	</controls>
+</window>

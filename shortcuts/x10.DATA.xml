@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>13409</defaultID>
+		<label>13409</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,special://skin/extras/playlists/Top250.xsp,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>31047</defaultID>
+		<label>31047</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,special://skin/extras/playlists/BestPicture.xsp,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>31328</defaultID>
+		<label>31328</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,RecentlyAddedMovies,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>135</defaultID>
+		<label>135</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,MovieGenres,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>20434</defaultID>
+		<label>20434</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Videos,MovieSets,return)</action>
+	</shortcut>
+</shortcuts>

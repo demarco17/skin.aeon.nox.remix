@@ -1,0 +1,10 @@
+*.bat
+*.cmd
+*.log
+*.xbt
+*.exe
+*.py
+*Thumbs.db
+1080i/script-skinshortcuts-includes.xml
+1080i/custom_Debug_Overlay.xml
+media/overlays/debuggrid1080.png

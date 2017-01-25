@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="button" id="9000">
+			<label />
+			<include>HiddenObject</include>
+			<onleft>SetProperty(MediaMenu,True,home)</onleft>
+			<onleft>9050</onleft>
+			<onright>noop</onright>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<left>121</left>
+				<top>126</top>
+				<width>1677</width>
+				<height>872</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="group">
+				<left>137</left>
+				<top>142</top>
+				<width>1645</width>
+				<height>840</height>
+				<control type="image">
+					<left>20</left>
+					<width>540</width>
+					<height>135</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
+				</control>
+				<control type="multiimage">
+					<description>current weather icon</description>
+					<left>1234</left>
+					<width>411</width>
+					<height>345</height>
+					<imagepath>$VAR[WeatherIconPath]</imagepath>
+					<aspectratio>keep</aspectratio>
+					<timeperimage>100</timeperimage>
+					<randomize>false</randomize>
+				</control>
+				<control type="label">
+					<description>weather location label</description>
+					<top>150</top>
+					<width>690</width>
+					<height>45</height>
+					<font>font15_title</font>
+					<textoffsetx>15</textoffsetx>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Window.Property(Location)]</label>
+				</control>
+				<control type="label">
+					<description>update label</description>
+					<top>190</top>
+					<width>690</width>
+					<height>45</height>
+					<font>font13_title</font>
+					<textoffsetx>15</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[Window.Property(Updated),$LOCALIZE[31301]: ]</label>
+				</control>
+				<control type="label">
+					<description>current temp Value</description>
+					<left>824</left>
+					<width>411</width>
+					<height>345</height>
+					<font>WeatherTemp</font>
+					<align>center</align>
+					<label>$INFO[Window.Property(Current.Temperature)]</label>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="label">
+					<description>current temp Value Units</description>
+					<left>1085</left>
+					<width>150</width>
+					<height>290</height>
+					<font>font16</font>
+					<label>$INFO[System.TemperatureUnits]</label>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="label">
+					<description>current condition label</description>
+					<top>260</top>
+					<width>1316</width>
+					<height>70</height>
+					<info>Window.Property(Current.Condition)</info>
+					<font>font48_bold</font>
+					<textoffsetx>15</textoffsetx>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="image">
+					<description>separator image</description>
+					<top>280</top>
+					<width>1645</width>
+					<height>60</height>
+					<texture border="4">dialogs/separator2.png</texture>
+				</control>
+				<control type="grouplist">
+					<top>350</top>
+					<width>411</width>
+					<itemgap>10</itemgap>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[402]: [/COLOR]$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[405]: [/COLOR]$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+					</control>
+				</control>
+				<control type="image">
+					<top>340</top>
+					<left>411</left>
+					<width>2</width>
+					<height>198</height>
+					<texture border="1">dialogs/separator3.png</texture>
+				</control>
+				<control type="grouplist">
+					<left>412</left>
+					<top>350</top>
+					<width>411</width>
+					<itemgap>10</itemgap>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[406]: [/COLOR]$INFO[Window.Property(Current.Humidity)]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[1376]: [/COLOR]$INFO[Window.Property(Current.Pressure)]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+					</control>
+				</control>
+				<control type="image">
+					<top>340</top>
+					<left>823</left>
+					<width>2</width>
+					<height>198</height>
+					<texture border="1">dialogs/separator3.png</texture>
+				</control>
+				<control type="grouplist">
+					<left>824</left>
+					<top>350</top>
+					<width>411</width>
+					<itemgap>10</itemgap>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[404]:[/COLOR][CR]$INFO[Window.Property(Current.Wind)]</label>
+						<include>SettingsPanelButtonsValues</include>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[31040]: [/COLOR]$INFO[Window.Property(Current.WindChill)]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+						<visible>String.IsEqual(Weather.Plugin,weather.yahoo) + !String.IsEmpty(Window.Property(Current.WindChill))</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[1448]: [/COLOR]$INFO[Window.Property(Current.Precipitation)]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+						<visible>!String.IsEqual(Weather.Plugin,weather.yahoo) + !String.IsEmpty(Window.Property(Current.Precipitation))</visible>
+					</control>
+				</control>
+				<control type="image">
+					<top>340</top>
+					<left>1234</left>
+					<width>2</width>
+					<height>198</height>
+					<texture border="1">dialogs/separator3.png</texture>
+				</control>
+				<control type="grouplist">
+					<left>1235</left>
+					<top>350</top>
+					<width>411</width>
+					<itemgap>10</itemgap>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[33027]: [/COLOR]$INFO[Window.Property(Today.Sunrise)]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[33028]: [/COLOR]$INFO[Window.Property(Today.Sunset)]</label>
+						<textoffsety>10</textoffsety>
+						<include>SettingsPanelButtonsValues</include>
+					</control>
+				</control>
+				<control type="panel" id="300">
+					<top>540</top>
+					<width>1645</width>
+					<height>300</height>
+					<orientation>horizontal</orientation>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="300" width="329">
+						<control type="multiimage">
+							<description>current weather icon</description>
+							<top>60</top>
+							<width>329</width>
+							<height>100</height>
+							<imagepath>$INFO[ListItem.Icon]</imagepath>
+							<aspectratio aligny="top">keep</aspectratio>
+							<timeperimage>100</timeperimage>
+							<randomize>false</randomize>
+						</control>
+						<control type="label">
+							<width>329</width>
+							<height>60</height>
+							<font>font15</font>
+							<align>center</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<textoffsetx>15</textoffsetx>
+						</control>
+						<control type="label">
+							<top>160</top>
+							<width>329</width>
+							<height>60</height>
+							<font>font15</font>
+							<align>center</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<textoffsetx>15</textoffsetx>
+						</control>
+						<control type="label">
+							<top>240</top>
+							<width>329</width>
+							<height>60</height>
+							<font>font15</font>
+							<align>center</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Property(HighTemp),[COLOR red],[/COLOR]]$INFO[ListItem.Property(LowTemp),[COLOR grey3]  |  [/COLOR][COLOR dodgerblue],[/COLOR]]</label>
+							<textoffsetx>15</textoffsetx>
+						</control>
+					</itemlayout>
+					<focusedlayout height="300" width="329" />
+					<content>
+						<item>
+							<label>$LOCALIZE[31909]</label>
+							<onclick>noop</onclick>
+							<visible>!Weather.IsFetched</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Day0.Title)]</label>
+							<label2>$INFO[Window.Property(Day0.Outlook)]</label2>
+							<icon>$VAR[WeatherIconDay0]</icon>
+							<property name="HighTemp">$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</property>
+							<property name="LowTemp">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</property>
+							<onclick>noop</onclick>
+							<visible>!String.IsEmpty(Window.Property(Day0.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Day1.Title)]</label>
+							<label2>$INFO[Window.Property(Day1.Outlook)]</label2>
+							<icon>$VAR[WeatherIconDay1]</icon>
+							<property name="HighTemp">$INFO[Window.Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</property>
+							<property name="LowTemp">$INFO[Window.Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</property>
+							<onclick>noop</onclick>
+							<visible>!String.IsEmpty(Window.Property(Day1.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Day2.Title)]</label>
+							<label2>$INFO[Window.Property(Day2.Outlook)]</label2>
+							<icon>$VAR[WeatherIconDay2]</icon>
+							<property name="HighTemp">$INFO[Window.Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</property>
+							<property name="LowTemp">$INFO[Window.Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</property>
+							<onclick>noop</onclick>
+							<visible>!String.IsEmpty(Window.Property(Day2.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Day3.Title)]</label>
+							<label2>$INFO[Window.Property(Day3.Outlook)]</label2>
+							<icon>$VAR[WeatherIconDay3]</icon>
+							<property name="HighTemp">$INFO[Window.Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</property>
+							<property name="LowTemp">$INFO[Window.Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</property>
+							<onclick>noop</onclick>
+							<visible>!String.IsEmpty(Window.Property(Day3.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Day4.Title)]</label>
+							<label2>$INFO[Window.Property(Day4.Outlook)]</label2>
+							<icon>$VAR[WeatherIconDay4]</icon>
+							<property name="HighTemp">$INFO[Window.Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</property>
+							<property name="LowTemp">$INFO[Window.Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</property>
+							<onclick>noop</onclick>
+							<visible>!String.IsEmpty(Window.Property(Day4.Title))</visible>
+						</item>
+					</content>
+				</control>
+			</control>
+		</control>
+		<include>Topbar</include>
+		<control type="group">
+			<left>-440</left>
+			<include>SideBladeLeft</include>
+			<control type="grouplist" id="9050">
+				<top>100</top>
+				<width>400</width>
+				<height>1080</height>
+				<onleft>noop</onleft>
+				<onright>ClearProperty(MediaMenu,Home)</onright>
+				<onright>9000</onright>
+				<onup>9050</onup>
+				<ondown>9050</ondown>
+				<control type="button" id="201">
+					<description>Kiosk Mode button</description>
+					<include>ButtonCommonValues</include>
+					<onfocus>ClearProperty(MediaMenu,Home)</onfocus>
+					<onfocus>SetFocus(9000)</onfocus>
+					<visible>Skin.HasSetting(KioskMode.Enabled)</visible>
+				</control>
+				<control type="button" id="200">
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31006</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="spincontrolex" id="3">
+					<description>change location button</description>
+					<width>400</width>
+					<font />
+				</control>
+				<control type="button" id="206">
+					<description>Weather icons</description>
+					<include>ButtonCommonValues</include>
+					<label>31316</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(9000)</onclick>
+					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
+				</control>
+				<control type="button" id="205">
+					<include>ButtonCommonValues</include>
+					<label>31317</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(9000)</onclick>
+					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
+				</control>
+				<control type="button" id="203">
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31026</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="2">
+					<description>Refresh button</description>
+					<include>ButtonCommonValues</include>
+					<label>103</label>
+				</control>
+				<control type="button" id="4">
+					<description>Settings button</description>
+					<include>ButtonCommonValues</include>
+					<label>5</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(9000)</onclick>
+					<onclick>Addon.OpenSettings($INFO[Weather.plugin])</onclick>
+				</control>
+				<control type="button" id="2003">
+					<description>Actions header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31039</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+					<visible>Player.HasMedia</visible>
+				</control>
+				<control type="button" id="614">
+					<description>Player Controls</description>
+					<include>ButtonCommonValues</include>
+					<label>31068</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="Player.HasAudio">SetFocus(50)</onclick>
+					<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
+					<onclick condition="Player.HasVideo">Fullscreen</onclick>
+					<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
+					<visible>Player.HasMedia</visible>
+				</control>
+			</control>
+			<control type="group">
+				<top>160</top>
+				<control type="label">
+					<include>ButtonCommonValues</include>
+					<label>31069</label>
+					<visible>!Control.HasFocus(3)</visible>
+				</control>
+				<control type="label">
+					<textcolor>white</textcolor>
+					<include>ButtonCommonValues</include>
+					<label>31069</label>
+					<visible>Control.HasFocus(3)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

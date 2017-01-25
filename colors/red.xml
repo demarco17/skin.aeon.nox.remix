@@ -1,0 +1,12 @@
+<colors>
+	<color name="white">FFE5E5E5</color>
+	<color name="grey">AAFFFFFF</color>
+	<color name="grey2">FF999999</color>
+	<color name="grey3">FF464646</color>
+	<color name="selected">FFEE4846</color>
+	<color name="invalid">FFFF0000</color>
+	<color name="themecolor">FFEE4846</color>
+	<color name="dialogheader">FF808080</color>
+	<color name="dialogInner">50FFFFFF</color>
+	<color name="shadow">AA000000</color>
+</colors>

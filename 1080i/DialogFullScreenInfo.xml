@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">62</defaultcontrol>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="0,290" end="0,0" time="200">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,290" time="200">WindowClose</animation>
+			<animation effect="slide" start="0,0" end="0,290" time="200" condition="Player.Paused">Conditional</animation>
+			<top>815</top>
+			<visible>!Player.Paused</visible>
+			<control type="image">
+				<top>-35</top>
+				<width>1920</width>
+				<height>320</height>
+				<texture border="4" flipy="true">dialogs/InfoBar.png</texture>
+			</control>
+			<control type="image">
+				<top>-255</top>
+				<width>1920</width>
+				<height>520</height>
+				<texture>dialogs/logo_back.png</texture>
+			</control>
+			<control type="image">
+				<top>-94</top>
+				<width>253</width>
+				<height>372</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture background="true">$VAR[HomeNowPlayingThumbVar]</texture>
+				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>!VideoPlayer.Content(livetv)</visible>
+			</control>
+			<control type="image">
+				<top>-40</top>
+				<width>253</width>
+				<height>318</height>
+				<aspectratio aligny="center">keep</aspectratio>
+				<texture background="true">$VAR[HomeNowPlayingThumbVar]</texture>
+				<bordersize>20</bordersize>
+				<visible>VideoPlayer.Content(livetv)</visible>
+			</control>
+			<control type="label">
+				<left>238</left>
+				<top>-30</top>
+				<width>1420</width>
+				<height>60</height>
+				<font>font24_title_bold</font>
+				<scroll>true</scroll>
+				<textoffsetx>15</textoffsetx>
+				<label>$VAR[InfoPlayingTitleVar]</label>
+			</control>
+			<control type="image" id="800011">
+				<left>1730</left>
+				<top>-15</top>
+				<width>150</width>
+				<height>70</height>
+				<colordiffuse>grey</colordiffuse>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>$VAR[StudioIconVar]$INFO[VideoPlayer.Studio,,.png]</texture>
+			</control>
+			<control type="label">
+				<left>1690</left>
+				<top>-15</top>
+				<width>200</width>
+				<height>70</height>
+				<align>center</align>
+				<label>$INFO[VideoPlayer.Studio]</label>
+				<font>font10</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
+			</control>
+			<control type="label">
+				<left>238</left>
+				<top>25</top>
+				<width>840</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>themecolor</textcolor>
+				<label>$VAR[InfoPlayingTitleVar2]</label>
+			</control>
+			<control type="label">
+				<left>1079</left>
+				<top>25</top>
+				<width>840</width>
+				<height>40</height>
+				<align>right</align>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[VideoPlayer.NextTitle,[COLOR themecolor]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)]</label>
+				<visible>VideoPlayer.Content(livetv)</visible>
+			</control>
+			<control type="textbox">
+				<label>$INFO[VideoPlayer.Plot]</label>
+				<left>253</left>
+				<top>65</top>
+				<width>1652</width>
+				<height>90</height>
+				<font>font14_textbox2</font>
+				<textcolor>grey</textcolor>
+				<pagecontrol>62</pagecontrol>
+				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+			</control>
+			<control type="grouplist">
+				<left>1320</left>
+				<top>150</top>
+				<width>585</width>
+				<height>90</height>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<itemgap>25</itemgap>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+				</control>
+			</control>
+			<control type="progress">
+				<left>253</left>
+				<top>220</top>
+				<width>1652</width>
+				<height>38</height>
+				<info>Player.Progress</info>
+			</control>
+			<control type="label">
+				<left>253</left>
+				<top>220</top>
+				<width>300</width>
+				<height>35</height>
+				<textoffsetx>10</textoffsetx>
+				<label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ,]</label>
+			</control>
+			<control type="label">
+				<left>253</left>
+				<top>220</top>
+				<width>1652</width>
+				<height>35</height>
+				<align>center</align>
+				<label>$INFO[System.Time]</label>
+			</control>
+			<control type="label">
+				<left>253</left>
+				<top>220</top>
+				<width>1652</width>
+				<height>35</height>
+				<align>right</align>
+				<textoffsetx>10</textoffsetx>
+				<label>$INFO[Player.FinishTime,$LOCALIZE[31013]: ,]</label>
+			</control>
+			<control type="scrollbar" id="62">
+				<left>1910</left>
+				<top>75</top>
+				<width>10</width>
+				<height>70</height>
+				<texturesliderbar border="1">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+		</control>
+	</controls>
+</window>

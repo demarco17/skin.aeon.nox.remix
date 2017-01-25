@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>50</defaultcontrol>
+	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<description>Recordings group</description>
+			<visible>Control.IsVisible(50)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<left>100</left>
+			<top>-40</top>
+			<control type="image">
+				<description>background image</description>
+				<left>-16</left>
+				<top>164</top>
+				<width>1172</width>
+				<height>872</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="list" id="50">
+				<top>180</top>
+				<width>1140</width>
+				<height>840</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>9050</onleft>
+				<onright>72</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>72</pagecontrol>
+				<scrolltime tween="quadratic">200</scrolltime>
+				<itemlayout height="120" width="1140">
+					<control type="image">
+						<width>1140</width>
+						<height>120</height>
+						<texture border="4">dialogs/separator2.png</texture>
+					</control>
+					<control type="label">
+						<width>710</width>
+						<height>70</height>
+						<font>font30</font>
+						<textoffsetx>20</textoffsetx>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.ChannelName)">Conditional</animation>
+					</control>
+					<control type="label">
+						<top>55</top>
+						<width>710</width>
+						<height>60</height>
+						<font>font15</font>
+						<textoffsetx>20</textoffsetx>
+						<textcolor>grey2</textcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="label">
+						<left>710</left>
+						<width>350</width>
+						<height>120</height>
+						<font>font15</font>
+						<align>right</align>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="image">
+						<left>1070</left>
+						<top>28</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="120" width="1140">
+					<control type="image">
+						<width>1140</width>
+						<height>120</height>
+						<texture border="4">dialogs/separator2.png</texture>
+					</control>
+					<control type="image">
+						<width>1139</width>
+						<height>118</height>
+						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="label">
+						<width>710</width>
+						<height>70</height>
+						<font>font30</font>
+						<textoffsetx>20</textoffsetx>
+						<label>$INFO[ListItem.Label]</label>
+						<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.ChannelName)">Conditional</animation>
+					</control>
+					<control type="label">
+						<top>55</top>
+						<width>710</width>
+						<height>60</height>
+						<font>font15</font>
+						<textoffsetx>20</textoffsetx>
+						<textcolor>grey2</textcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="label">
+						<left>710</left>
+						<width>350</width>
+						<height>120</height>
+						<font>font15</font>
+						<align>right</align>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="image">
+						<left>1070</left>
+						<top>28</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="72">
+				<left>1142</left>
+				<top>180</top>
+				<width>12</width>
+				<height>840</height>
+				<onleft>50</onleft>
+				<onright condition="Control.IsVisible(75)">75</onright>
+				<onright condition="Control.IsVisible(74)">74</onright>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(72) + !Container.Scrolling">Conditional</animation>
+			</control>
+			<control type="group">
+				<left>1196</left>
+				<control type="image">
+					<description>background image</description>
+					<left>16</left>
+					<top>164</top>
+					<width>538</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="image">
+					<top>180</top>
+					<left>32</left>
+					<width>505</width>
+					<height>285</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$INFO[Container(50).ListItem.ActualIcon]</texture>
+					<fadetime>CrossfadeTime</fadetime>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsFolder + !String.IsEmpty(Container(50).ListItem.Title)</visible>
+					<control type="button">
+						<left>32</left>
+						<top>466</top>
+						<width>506</width>
+						<height>90</height>
+						<label>$INFO[Container(50).ListItem.Title][CR]$INFO[Container(50).ListItem.Genre,[COLOR themecolor]$LOCALIZE[515]:[/COLOR] ,]</label>
+						<textoffsetx>15</textoffsetx>
+						<font>font14</font>
+						<textcolor>grey</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="4">dialogs/separator2.png</texturefocus>
+						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+						<onclick>noop</onclick>
+					</control>
+					<control type="textbox">
+						<label>$INFO[ListItem.Plot]</label>
+						<top>560</top>
+						<left>47</left>
+						<width>476</width>
+						<height>348</height>
+						<font>font14_textbox2</font>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(74)</autoscroll>
+						<textcolor>grey</textcolor>
+						<pagecontrol>74</pagecontrol>
+					</control>
+					<control type="group">
+						<top>930</top>
+						<left>23</left>
+						<control type="image">
+							<left>32</left>
+							<include>MediaFlagVars</include>
+							<bordersize>5</bordersize>
+							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+						</control>
+						<control type="image">
+							<left>199</left>
+							<include>MediaFlagVars</include>
+							<bordersize>5</bordersize>
+							<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
+							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+						</control>
+						<control type="image">
+							<left>359</left>
+							<include>MediaFlagVars</include>
+							<bordersize>5</bordersize>
+							<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+						</control>
+					</control>
+					<control type="scrollbar" id="74">
+						<left>540</left>
+						<top>560</top>
+						<width>12</width>
+						<height>370</height>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="group">
+					<visible>ListItem.IsFolder</visible>
+					<control type="button">
+						<left>32</left>
+						<top>466</top>
+						<width>506</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Label][CR]$INFO[Container(5000).NumItems,[COLOR themecolor]$LOCALIZE[31025]:[/COLOR] ,]</label>
+						<textoffsetx>15</textoffsetx>
+						<font>font14</font>
+						<textcolor>grey</textcolor>
+						<focusedcolor>grey</focusedcolor>
+						<texturefocus border="4">dialogs/separator2.png</texturefocus>
+						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+						<onclick>noop</onclick>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="panel" id="5000">
+						<left>45</left>
+						<top>560</top>
+						<width>495</width>
+						<height>450</height>
+						<orientation>vertical</orientation>
+						<pagecontrol>75</pagecontrol>
+						<itemlayout height="50" width="495">
+							<control type="label">
+								<height>50</height>
+								<width>495</width>
+								<label>$INFO[ListItem.Duration,, - ]$INFO[ListItem.Label]</label>
+								<font>font14</font>
+								<textcolor>grey</textcolor>
+							</control>
+						</itemlayout>
+						<focusedlayout height="50" width="495">
+							<control type="label">
+								<height>50</height>
+								<width>495</width>
+								<label>$INFO[ListItem.Duration,, - ]$INFO[ListItem.Label]</label>
+								<font>font14</font>
+								<textcolor>grey</textcolor>
+							</control>
+						</focusedlayout>
+						<content>$INFO[ListItem.FolderPath]</content>
+					</control>
+					<control type="scrollbar" id="75">
+						<left>540</left>
+						<top>560</top>
+						<width>12</width>
+						<height>460</height>
+						<onleft>50</onleft>
+						<onright>50</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>Topbar</include>
+		<include>PVRMediaMenu</include>
+	</controls>
+</window>

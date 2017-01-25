@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=x1|x2|x3|x4|x5|x6|x7|x8|x9|x10|x11|x12|x13|x101|x202|x303|x404|x505|x606)</onload>
+	<onload condition="String.IsEmpty(Skin.String(CustomGlobalBackground))">Skin.SetString(CustomGlobalBackground,special://skin/backgrounds/default_bg.jpg)</onload>
+	<onload condition="String.IsEmpty(Skin.String(Videos.Fallback))">Skin.SetString(Videos.Fallback,backgrounds/videos.png)</onload>
+	<onload condition="String.IsEmpty(Skin.String(Music.Fallback))">Skin.SetString(Music.Fallback,backgrounds/music.png)</onload>
+	<onload condition="String.IsEmpty(Skin.String(System.Fallback))">Skin.SetString(System.Fallback,backgrounds/system.png)</onload>
+	<onload condition="String.IsEmpty(Skin.String(LiveTV.Fallback))">Skin.SetString(LiveTV.Fallback,backgrounds/livetv.png)</onload>
+	<onload condition="String.IsEmpty(Skin.String(Pictures.Fallback))">Skin.SetString(Pictures.Fallback,backgrounds/pictures.png)</onload>
+	<onload condition="String.IsEmpty(Skin.String(Apps.Fallback))">Skin.SetString(Apps.Fallback,backgrounds/programs.png)</onload>
+	<controls>
+		<include>CommonBackground</include>
+		<include condition="!Skin.HasSetting(Disable.Videoinfo)">NowPlayingVideoWidget</include>
+		<include condition="!Skin.HasSetting(Disable.Musicinfo)">NowPlayingMusicWidget</include>
+		<include condition="!Skin.HasSetting(Disable.Recordinginfo)">NowRecordingVideoWidget</include>
+		<control type="group">
+			<top>762</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
+				<effect type="fade" start="50" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="group">
+				<animation effect="slide" start="-1920,0" end="0,0" delay="300" time="480">WindowOpen</animation>
+				<control type="image">
+					<width>1920</width>
+					<height>87</height>
+					<texture flipy="true">home/submenu_bar.png</texture>
+				</control>
+				<control type="label">
+					<top>46</top>
+					<width>960</width>
+					<height>40</height>
+					<label>$VAR[LibraryStatsVar]</label>
+					<textoffsetx>15</textoffsetx>
+					<font>font13_title</font>
+					<textcolor>themecolor</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="grouplist" id="9020">
+					<top>46</top>
+					<width>1905</width>
+					<height>40</height>
+					<align>right</align>
+					<orientation>horizontal</orientation>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onleft>9020</onleft>
+					<onright>9020</onright>
+					<include>HomeShutdownButton</include>
+					<include>HomeFavButton</include>
+					<include>HomeSearchButton</include>
+					<include>HomeDVDEjectButton</include>
+					<include>HomeDVDPlayButton</include>
+					<control type="label" id="9022">
+						<width>auto</width>
+						<height>40</height>
+						<label>  |  </label>
+						<font>font13_title</font>
+						<textcolor>grey3</textcolor>
+					</control>
+					<control type="label" id="9023">
+						<width>auto</width>
+						<height>40</height>
+						<label>$INFO[Weather.Temperature,,[COLOR grey3]  |  [/COLOR]]</label>
+						<font>font13_title</font>
+						<textcolor>themecolor</textcolor>
+						<visible>Weather.IsFetched + !String.IsEmpty(Weather.Plugin)</visible>
+					</control>
+					<control type="label" id="9025">
+						<width>auto</width>
+						<height>40</height>
+						<label>$INFO[System.Date,[COLOR grey],[COLOR grey3]  |  [/COLOR][/COLOR]]$INFO[System.Time]</label>
+						<font>font13_title</font>
+						<textcolor>themecolor</textcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include condition="system.getbool(lookandfeel.enablerssfeeds)">RSSFeedWidget</include>
+		<control type="group">
+			<top>790</top>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
+				<effect type="fade" start="50" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="group" id="9001">
+				<top>159</top>
+				<animation effect="slide" start="1920,0" end="0,0" delay="300" time="480">WindowOpen</animation>
+				<control type="image">
+					<width>1920</width>
+					<height>87</height>
+					<texture>home/submenu_bar.png</texture>
+				</control>
+				<control type="fixedlist" id="9010">
+					<left>210</left>
+					<width>1500</width>
+					<height>40</height>
+					<onup>9000</onup>
+					<ondown>9004</ondown>
+					<scrolltime tween="quadratic" easing="out">400</scrolltime>
+					<focusposition>2</focusposition>
+					<movement>2</movement>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="40" width="300">
+						<control type="label">
+							<width>300</width>
+							<height>40</height>
+							<font>font13_title</font>
+							<textcolor>grey</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="40" width="300">
+						<control type="group">
+							<visible>Control.HasFocus(9010)</visible>
+							<control type="image">
+								<width>300</width>
+								<height>39</height>
+								<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>300</width>
+								<height>40</height>
+								<font>font13_title</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!Control.HasFocus(9010)</visible>
+							<control type="label">
+								<width>300</width>
+								<height>40</height>
+								<font>font13_title</font>
+								<textcolor>grey</textcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</control>
+					</focusedlayout>
+					<include condition="!System.HasAddon(script.skinshortcuts)">FallbackSubMenu</include>
+					<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>
+				</control>
+				<control type="image">
+					<left>130</left>
+					<top>6</top>
+					<width>30</width>
+					<height>30</height>
+					<texture flipx="true" colordiffuse="white">home/arrowright.png</texture>
+					<visible>Container(9010).HasPrevious</visible>
+				</control>
+				<control type="image">
+					<left>1800</left>
+					<top>6</top>
+					<width>30</width>
+					<height>30</height>
+					<texture colordiffuse="white">home/arrowright.png</texture>
+					<visible>Container(9010).HasNext</visible>
+				</control>
+			</control>
+			<control type="image">
+				<width>1920</width>
+				<height>225</height>
+				<texture>home/homemenu_back.png</texture>
+			</control>
+			<!-- Main Menu (Includes_Home.xml) -->
+			<include>MainMenuListContent</include>
+			<control type="image">
+				<top>58</top>
+				<width>100</width>
+				<height>104</height>
+				<texture border="1">home/side_fade.png</texture>
+			</control>
+			<control type="image">
+				<left>1820</left>
+				<top>58</top>
+				<width>100</width>
+				<height>104</height>
+				<texture flipx="true" border="1">home/side_fade.png</texture>
+			</control>
+			<control type="image">
+				<top>90</top>
+				<width>1920</width>
+				<height>72</height>
+				<texture border="1">home/gradient_floor.png</texture>
+			</control>
+		</control>
+		<include condition="Skin.HasSetting(Enable.FanartTitle)">FanartTitle</include>
+	</controls>
+</window>

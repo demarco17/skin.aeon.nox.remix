@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>20</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="group">
+				<left>50</left>
+				<top>80</top>
+				<control type="image">
+					<left>16</left>
+					<top>44</top>
+					<width>853</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="label" id="101">
+					<description>current directory text label</description>
+					<top>910</top>
+					<width>821</width>
+					<height>90</height>
+					<font>font16_title_bold</font>
+					<textcolor>grey</textcolor>
+					<textoffsetx>30</textoffsetx>
+					<haspath>true</haspath>
+				</control>
+				<control type="scrollbar" id="30">
+					<left>855</left>
+					<top>62</top>
+					<width>12</width>
+					<height>840</height>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<onleft>20</onleft>
+					<onright>21</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="list" id="20">
+					<left>32</left>
+					<top>62</top>
+					<width>821</width>
+					<height>840</height>
+					<onleft>21</onleft>
+					<onright>30</onright>
+					<onup>20</onup>
+					<ondown>20</ondown>
+					<pagecontrol>30</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>630</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>822</width>
+							<height>58</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(20)</visible>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<left>985</left>
+				<top>80</top>
+				<control type="image">
+					<left>16</left>
+					<top>44</top>
+					<width>853</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="label" id="102">
+					<description>current directory text label</description>
+					<left>60</left>
+					<top>910</top>
+					<width>821</width>
+					<height>90</height>
+					<font>font16_title_bold</font>
+					<textcolor>grey</textcolor>
+					<align>right</align>
+					<textoffsetx>30</textoffsetx>
+					<haspath>true</haspath>
+				</control>
+				<control type="scrollbar" id="31">
+					<left>855</left>
+					<top>62</top>
+					<width>12</width>
+					<height>840</height>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<onleft>21</onleft>
+					<onright>20</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="list" id="21">
+					<left>32</left>
+					<top>62</top>
+					<width>821</width>
+					<height>840</height>
+					<onleft>20</onleft>
+					<onright>31</onright>
+					<onup>21</onup>
+					<ondown>21</ondown>
+					<pagecontrol>31</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>630</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>820</width>
+							<height>58</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(21)</visible>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+		</control>
+		<include>Topbar</include>
+	</controls>
+</window>

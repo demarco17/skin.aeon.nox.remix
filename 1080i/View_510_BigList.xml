@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Video_510_BigList">
+		<control type="group">
+			<visible>Control.IsVisible(510)</visible>
+			<include>ViewAnimation</include>
+			<control type="group">
+				<left>100</left>
+				<top>-20</top>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>134</top>
+					<width>1756</width>
+					<height>902</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="list" id="510">
+					<viewtype label="31095">list</viewtype>
+					<top>151</top>
+					<width>1725</width>
+					<height>868</height>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>9050</onleft>
+					<onright>60</onright>
+					<onup>510</onup>
+					<ondown>510</ondown>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<orientation>vertical</orientation>
+					<scrolltime tween="quadratic">400</scrolltime>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
+					<itemlayout width="1808" height="217">
+						<control type="image">
+							<width>1725</width>
+							<height>217</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<include>BigList_Landscape</include>
+						<control type="group">
+							<left>375</left>
+							<top>10</top>
+							<control type="label">
+								<top>-2</top>
+								<width>1200</width>
+								<height>35</height>
+								<aligny>top</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font16_title_bold</font>
+								<textcolor>grey</textcolor>
+							</control>
+							<control type="label">
+								<top>50</top>
+								<width>980</width>
+								<height>25</height>
+								<label>$VAR[BigListInfoVar]</label>
+								<aligny>bottom</aligny>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+							</control>
+							<control type="label">
+								<top>50</top>
+								<width>1330</width>
+								<height>25</height>
+								<label>$VAR[BigListInfoVar2]</label>
+								<align>right</align>
+								<aligny>bottom</aligny>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+							</control>
+							<control type="textbox">
+								<top>100</top>
+								<width>1330</width>
+								<height>100</height>
+								<label>$VAR[VideoPlotVar]</label>
+								<autoscroll>false</autoscroll>
+								<font>font14_textbox</font>
+								<textcolor>grey</textcolor>
+							</control>
+						</control>
+						<control type="image">
+							<left>1610</left>
+							<top>11.5</top>
+							<width>42</width>
+							<height>42</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="grey2">$VAR[UnFocusHDIndicator]</texture>
+							<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+						</control>
+						<control type="image">
+							<left>1660</left>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+						<control type="group">
+							<description>Unwatched episodes</description>
+							<left>1610</left>
+							<control type="image">
+								<width>64</width>
+								<height>64</height>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+							</control>
+							<control type="label">
+								<left>32</left>
+								<top>-3</top>
+								<width>100</width>
+								<height>68</height>
+								<font>font12_title</font>
+								<align>center</align>
+								<label>$VAR[ListOverlayEpisodesVar]</label>
+								<textcolor>grey2</textcolor>
+								<textoffsetx>18</textoffsetx>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="1808" height="217">
+						<control type="image">
+							<width>1725</width>
+							<height>217</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>1723</width>
+							<height>215</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(510)</visible>
+						</control>
+						<include>BigList_Landscape</include>
+						<control type="group">
+							<left>375</left>
+							<top>10</top>
+							<control type="group">
+								<control type="label">
+									<top>-2</top>
+									<width>1200</width>
+									<height>35</height>
+									<aligny>bottom</aligny>
+									<label>$INFO[ListItem.Label]</label>
+									<font>font16_title_bold</font>
+								</control>
+								<control type="label">
+									<top>50</top>
+									<width>980</width>
+									<height>25</height>
+									<label>$VAR[BigListInfoVar]</label>
+									<aligny>bottom</aligny>
+									<font>font14</font>
+									<textcolor>grey</textcolor>
+								</control>
+								<control type="label">
+									<top>50</top>
+									<width>1330</width>
+									<height>25</height>
+									<label>$VAR[BigListInfoVar2]</label>
+									<align>right</align>
+									<aligny>bottom</aligny>
+									<font>font14</font>
+									<textcolor>grey</textcolor>
+								</control>
+								<control type="textbox">
+									<top>100</top>
+									<width>1330</width>
+									<height>100</height>
+									<label>$VAR[VideoPlotVar]</label>
+									<font>font14_textbox</font>
+									<autoscroll time="3500" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+								</control>
+							</control>
+						</control>
+						<control type="image">
+							<left>1610</left>
+							<top>11.5</top>
+							<width>42</width>
+							<height>42</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="grey">$VAR[UnFocusHDIndicator]</texture>
+							<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+						</control>
+						<control type="image">
+							<left>1660</left>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+						<control type="group">
+							<description>Unwatched episodes</description>
+							<left>1610</left>
+							<control type="image">
+								<width>64</width>
+								<height>64</height>
+								<texture>overlays/list/OverlayUnWatched.png</texture>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+							</control>
+							<control type="label">
+								<left>32</left>
+								<top>-3</top>
+								<width>100</width>
+								<height>68</height>
+								<font>font12_title</font>
+								<align>center</align>
+								<label>$VAR[ListOverlayEpisodesVar]</label>
+								<textcolor>grey2</textcolor>
+								<textoffsetx>18</textoffsetx>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1725</left>
+					<top>151</top>
+					<width>12</width>
+					<height>868</height>
+					<onleft>510</onleft>
+					<onright>510</onright>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="Music_510_BigList">
+		<control type="group">
+			<visible>Control.IsVisible(510)</visible>
+			<include>ViewAnimation</include>
+			<control type="group">
+				<left>100</left>
+				<top>-20</top>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>134</top>
+					<width>1756</width>
+					<height>902</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="list" id="510">
+					<viewtype label="31095">list</viewtype>
+					<top>151</top>
+					<width>1725</width>
+					<height>868</height>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>9050</onleft>
+					<onright>60</onright>
+					<onup>510</onup>
+					<ondown>510</ondown>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<orientation>vertical</orientation>
+					<scrolltime tween="quadratic">400</scrolltime>
+					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+					<itemlayout width="1725" height="217">
+						<control type="image">
+							<width>1725</width>
+							<height>217</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>11</top>
+							<width>195</width>
+							<height>195</height>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+							<bordersize>1</bordersize>
+						</control>
+						<control type="group">
+							<left>225</left>
+							<top>10</top>
+							<control type="label">
+								<width>1330</width>
+								<height>45</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font16_title_bold</font>
+								<textcolor>grey</textcolor>
+							</control>
+							<control type="label">
+								<top>48</top>
+								<width>980</width>
+								<height>45</height>
+								<label>$VAR[BigListInfoVar]</label>
+								<font>font14</font>
+								<textcolor>grey</textcolor>
+							</control>
+							<control type="label">
+								<top>48</top>
+								<width>1480</width>
+								<height>45</height>
+								<label>$VAR[BigListInfoVar2]</label>
+								<align>right</align>
+								<font>font14</font>
+								<textcolor>grey</textcolor>
+							</control>
+							<control type="textbox">
+								<top>95</top>
+								<width>1480</width>
+								<height>105</height>
+								<label>$VAR[MusicPlotVar]</label>
+								<autoscroll>false</autoscroll>
+								<font>font14_textbox</font>
+								<textcolor>grey</textcolor>
+								<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
+							</control>
+							<control type="image">
+								<left>1290</left>
+								<top>5</top>
+								<width>192</width>
+								<height>33</height>
+								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+								<aspectratio align="right">keep</aspectratio>
+								<visible>Container.Content(albums) + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Title)</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="1725" height="217">
+						<control type="image">
+							<width>1725</width>
+							<height>217</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>1723</width>
+							<height>215</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(510)</visible>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>11</top>
+							<width>195</width>
+							<height>195</height>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+							<bordersize>1</bordersize>
+						</control>
+						<control type="group">
+							<left>225</left>
+							<top>10</top>
+							<control type="group">
+								<control type="label">
+									<width>1330</width>
+									<height>45</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>font16_title_bold</font>
+								</control>
+								<control type="label">
+									<top>48</top>
+									<width>980</width>
+									<height>45</height>
+									<label>$VAR[BigListInfoVar]</label>
+									<font>font14</font>
+								</control>
+								<control type="label">
+									<top>48</top>
+									<width>1480</width>
+									<height>45</height>
+									<label>$VAR[BigListInfoVar2]</label>
+									<align>right</align>
+									<font>font14</font>
+								</control>
+								<control type="textbox">
+									<top>95</top>
+									<width>1480</width>
+									<height>105</height>
+									<label>$VAR[MusicPlotVar]</label>
+									<font>font14_textbox</font>
+									<autoscroll time="3500" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+									<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
+								</control>
+								<control type="image">
+									<left>1290</left>
+									<top>5</top>
+									<width>192</width>
+									<height>33</height>
+									<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+									<aspectratio align="right">keep</aspectratio>
+									<visible>Container.Content(albums) + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Title)</visible>
+								</control>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>1725</left>
+					<top>151</top>
+					<width>12</width>
+					<height>868</height>
+					<onleft>510</onleft>
+					<onright>510</onright>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="BigList_Landscape">
+		<control type="group">
+			<left>12</left>
+			<top>11</top>
+			<control type="image">
+				<width>346</width>
+				<height>195</height>
+				<texture background="true" fallback="DefaultVideo.png">$VAR[LandscapeVar]</texture>
+				<aspectratio>scale</aspectratio>
+				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+				<bordersize>1</bordersize>
+			</control>
+			<control type="image">
+				<top>90</top>
+				<width>346</width>
+				<height>98</height>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+				<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+			</control>
+		</control>
+	</include>
+
+</includes>

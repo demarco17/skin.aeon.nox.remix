@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="VideoTriPanel">
+		<control type="group">
+			<visible>Control.IsVisible(55)</visible>
+			<include>ViewAnimation</include>
+			<control type="group">
+				<left>1400</left>
+				<top>136</top>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>76</top>
+					<width>480</width>
+					<height>720</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="grouplist">
+					<top>92</top>
+					<width>448</width>
+					<height>270</height>
+					<visible>!ListItem.IsCollection</visible>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Premiered) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[31019]:[/COLOR][CR]$INFO[ListItem.Studio]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Studio) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Genre) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</control>
+					<control type="group">
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+							<width>224</width>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>!String.IsEmpty(ListItem.Duration)</visible>
+						</control>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
+							<left>224</left>
+							<width>224</width>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Year)</visible>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsCollection</visible>
+					<control type="textbox">
+						<label>$VAR[VideoPlotVar]</label>
+						<left>15</left>
+						<top>370</top>
+						<width>418</width>
+						<height>387</height>
+						<font>font14_textbox2</font>
+						<pagecontrol>62</pagecontrol>
+						<textcolor>grey</textcolor>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+					</control>
+					<control type="scrollbar" id="62">
+						<left>449</left>
+						<top>370</top>
+						<width>12</width>
+						<height>402</height>
+						<onleft>55</onleft>
+						<onright>55</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="group">
+					<left>15</left>
+					<top>92</top>
+					<visible>ListItem.IsCollection</visible>
+					<control type="group">
+						<include content="InfoList">
+							<param name="list_id">5003</param>
+							<param name="header_label">$LOCALIZE[342]:$INFO[Container(5003).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
+							<param name="height">630</param>
+							<param name="width">425</param>
+						</include>
+					</control>
+					<control type="scrollbar" id="64">
+						<left>433</left>
+						<width>12</width>
+						<height>690</height>
+						<onleft>55</onleft>
+						<onright>55</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<left>846</left>
+				<top>154</top>
+				<control type="image">
+					<left>540</left>
+					<top>58</top>
+					<width>80</width>
+					<height>720</height>
+					<texture border="1">dialogs/side_shadow.png</texture>
+				</control>
+				<control type="image">
+					<width>570</width>
+					<height>835</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$VAR[PosterThumbVar]</texture>
+					<fadetime>CrossfadeTime</fadetime>
+					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<top>798</top>
+					<width>570</width>
+					<height>835</height>
+					<aspectratio>scale</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumbVar]</texture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<left>20</left>
+					<top>20</top>
+					<width>40</width>
+					<height>795</height>
+					<texture border="1">dialogs/side_shadow.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<left>76</left>
+				<top>60</top>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>76</top>
+					<width>808</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="list" id="55">
+					<top>92</top>
+					<width>776</width>
+					<height>840</height>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>9050</onleft>
+					<onright condition="Control.IsVisible(60)">60</onright>
+					<onright condition="!Control.IsVisible(60)">62</onright>
+					<onup>55</onup>
+					<ondown>55</ondown>
+					<viewtype label="31078">list</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<preloaditems>2</preloaditems>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="70" width="806" condition="Container.Content(movies)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout height="70" width="806" condition="Container.Content(movies)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>775</width>
+							<height>68</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+					</focusedlayout>
+					<itemlayout height="70" width="806" condition="Container.Content(tvshows)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Rating]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+						<control type="label">
+							<description>Unwatched episodes</description>
+							<left>694</left>
+							<width>100</width>
+							<height>68</height>
+							<font>font12_title</font>
+							<align>center</align>
+							<label>$VAR[ListOverlayEpisodesVar]</label>
+							<textcolor>grey2</textcolor>
+							<textoffsetx>18</textoffsetx>
+							<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="70" width="806" condition="Container.Content(tvshows)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>775</width>
+							<height>68</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<label>$INFO[ListItem.Rating]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+						<control type="label">
+							<description>Unwatched episodes</description>
+							<left>694</left>
+							<width>100</width>
+							<height>68</height>
+							<font>font12_title</font>
+							<align>center</align>
+							<label>$VAR[ListOverlayEpisodesVar]</label>
+							<textoffsetx>18</textoffsetx>
+							<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+						</control>
+					</focusedlayout>
+					<itemlayout height="70" width="806" condition="Container.Content(episodes)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<textoffsetx>15</textoffsetx>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Rating]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout height="70" width="806" condition="Container.Content(episodes)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>775</width>
+							<height>68</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textoffsetx>15</textoffsetx>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<label>$INFO[ListItem.Rating]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+					</focusedlayout>
+					<itemlayout height="70" width="806" condition="Container.Content(seasons)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>overlays/list/OverlayUnWatched.png</texture>
+							<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="label">
+							<description>Unwatched episodes</description>
+							<left>694</left>
+							<width>100</width>
+							<height>68</height>
+							<font>font12_title</font>
+							<align>center</align>
+							<label>$VAR[ListOverlayEpisodesVar]</label>
+							<textcolor>grey2</textcolor>
+							<textoffsetx>18</textoffsetx>
+							<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="70" width="806" condition="Container.Content(seasons)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>775</width>
+							<height>68</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>590</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						</control>
+						<control type="image">
+							<left>712</left>
+							<top>2</top>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture>overlays/list/OverlayUnWatched.png</texture>
+							<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="label">
+							<description>Unwatched episodes</description>
+							<left>694</left>
+							<width>100</width>
+							<height>68</height>
+							<font>font12_title</font>
+							<align>center</align>
+							<label>$VAR[ListOverlayEpisodesVar]</label>
+							<textoffsetx>18</textoffsetx>
+							<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>777</left>
+					<top>92</top>
+					<width>12</width>
+					<height>840</height>
+					<onleft>55</onleft>
+					<onright condition="!ListItem.IsCollection">62</onright>
+					<onright condition="ListItem.IsCollection">64</onright>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="MusicTriPanel">
+		<control type="group">
+			<visible>Control.IsVisible(55)</visible>
+			<include>ViewAnimation</include>
+			<control type="group">
+				<left>1396</left>
+				<top>401</top>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>76</top>
+					<width>480</width>
+					<height>455</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="grouplist">
+					<top>92</top>
+					<width>448</width>
+					<height>420</height>
+					<usecontrolcoords>true</usecontrolcoords>
+					<visible>Container.Content(songs) + !ListItem.IsParentFolder</visible>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[557]:[/COLOR][CR]$INFO[ListItem.Artist]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[558]:[/COLOR][CR]$INFO[ListItem.Album]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Album)</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Year)</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<top>92</top>
+					<width>448</width>
+					<height>420</height>
+					<usecontrolcoords>true</usecontrolcoords>
+					<visible>Container.Content(albums) + !ListItem.IsParentFolder</visible>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[557]:[/COLOR][CR]$INFO[ListItem.Artist]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[21899]:[/COLOR][CR]$INFO[ListItem.Property(Album_Label)]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<top>92</top>
+					<width>448</width>
+					<height>420</height>
+					<usecontrolcoords>true</usecontrolcoords>
+					<visible>![Container.Content(songs) | Container.Content(albums)]</visible>
+					<control type="button">
+						<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Property(Artist_Genre)]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Property(Artist_Genre))</visible>
+					</control>
+					<control type="textbox">
+						<label>$VAR[MusicPlotVar]</label>
+						<left>15</left>
+						<top>10</top>
+						<width>418</width>
+						<height>300</height>
+						<font>font14_textbox2</font>
+						<pagecontrol>63</pagecontrol>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+						<textcolor>grey</textcolor>
+					</control>
+				</control>
+				<control type="scrollbar" id="63">
+					<left>449</left>
+					<top>182</top>
+					<width>12</width>
+					<height>330</height>
+					<onleft>55</onleft>
+					<onright>55</onright>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+					<visible>![Container.Content(songs) | Container.Content(albums)]</visible>
+				</control>
+			</control>
+			<control type="group">
+				<left>846</left>
+				<top>419</top>
+				<control type="image">
+					<left>535</left>
+					<top>58</top>
+					<width>80</width>
+					<height>455</height>
+					<texture border="1">dialogs/side_shadow.png</texture>
+				</control>
+				<control type="image">
+					<width>570</width>
+					<height>570</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<fadetime>CrossfadeTime</fadetime>
+					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<top>532</top>
+					<width>570</width>
+					<height>570</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<left>20</left>
+					<top>20</top>
+					<width>40</width>
+					<height>532</height>
+					<texture border="1">dialogs/side_shadow.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<left>76</left>
+				<top>325</top>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>76</top>
+					<width>808</width>
+					<height>591</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="list" id="55">
+					<top>92</top>
+					<width>776</width>
+					<height>575</height>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>9050</onleft>
+					<onright condition="Control.IsVisible(60)">60</onright>
+					<onright condition="!Control.IsVisible(60)">63</onright>
+					<onup>55</onup>
+					<ondown>55</ondown>
+					<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + !String.Contains(container.folderpath,plugin)</visible>
+					<viewtype label="31078">list</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="70" width="806" condition="Container.Content(albums)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="70" width="806" condition="Container.Content(albums)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>775</width>
+							<height>68</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="label">
+							<width>730</width>
+							<height>66</height>
+							<font>font15</font>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<itemlayout height="70" width="806" condition="!Container.Content(albums)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<width>745</width>
+							<height>66</height>
+							<font>font15</font>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>80</left>
+							<width>680</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="70" width="806" condition="!Container.Content(albums)">
+						<control type="image">
+							<width>776</width>
+							<height>70</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>775</width>
+							<height>68</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<width>745</width>
+							<height>66</height>
+							<font>font15</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>80</left>
+							<width>680</width>
+							<height>66</height>
+							<font>font15</font>
+							<align>right</align>
+							<label>$INFO[ListItem.label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>777</left>
+					<top>92</top>
+					<width>12</width>
+					<height>575</height>
+					<onleft>55</onleft>
+					<onright>63</onright>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

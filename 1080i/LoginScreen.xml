@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">52</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<include>FullscreenDimensions</include>
+			<texture>backgrounds/login.png</texture>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture border="1">dialogs/logo_back.png</texture>
+		</control>
+		<control type="group">
+			<control type="label">
+				<left>442</left>
+				<top>150</top>
+				<width>1035</width>
+				<height>60</height>
+				<font>font15</font>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+				<label>$LOCALIZE[31421]</label>
+			</control>
+			<control type="list" id="52">
+				<left>442</left>
+				<top>255</top>
+				<width>1035</width>
+				<height>602</height>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="150" width="1035">
+					<control type="image">
+						<left>15</left>
+						<top>15</top>
+						<width>120</width>
+						<height>112</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>165</left>
+						<top>15</top>
+						<width>870</width>
+						<height>60</height>
+						<font>font24_title</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>165</left>
+						<top>75</top>
+						<width>870</width>
+						<height>38</height>
+						<font>font13</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="150" width="870">
+					<control type="image">
+						<width>1035</width>
+						<height>142</height>
+						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<visible>Control.HasFocus(52)</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>15</top>
+						<width>120</width>
+						<height>112</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>165</left>
+						<top>15</top>
+						<width>870</width>
+						<height>60</height>
+						<font>font24_title</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>165</left>
+						<top>75</top>
+						<width>870</width>
+						<height>38</height>
+						<font>font13</font>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>1482</left>
+				<top>960</top>
+				<width>356</width>
+				<height>90</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>flags/aeon-nox-logo.png</texture>
+			</control>
+			<control type="button" id="20">
+				<description>Power push button</description>
+				<left>920</left>
+				<top>960</top>
+				<width>80</width>
+				<height>80</height>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<texturefocus colordiffuse="themecolor">flags/power.png</texturefocus>
+				<texturenofocus colordiffuse="grey">flags/power.png</texturenofocus>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>90</left>
+				<top>960</top>
+				<width>356</width>
+				<height>90</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>flags/xbmc-logo.png</texture>
+				<bordersize>10</bordersize>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1119" type="dialog">
+	<defaultcontrol always="true">90200</defaultcontrol>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="list" id="90200">
+			<left>713</left>
+			<top>336</top>
+			<width>494</width>
+			<height>420</height>
+			<onup>90200</onup>
+			<ondown>90200</ondown>
+			<onleft>Dialog.Close(1119)</onleft>
+			<onright>Dialog.Close(1119)</onright>
+			<orientation>vertical</orientation>
+			<itemlayout height="60" width="494">
+				<control type="image">
+					<width>494</width>
+					<height>60</height>
+					<texture>dialogs/separator4.png</texture>
+				</control>
+				<control type="label">
+					<width>494</width>
+					<height>60</height>
+					<font>font14</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60" width="494">
+				<control type="image">
+					<width>494</width>
+					<height>60</height>
+					<texture>dialogs/separator4.png</texture>
+				</control>
+				<control type="image">
+					<width>494</width>
+					<height>60</height>
+					<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+				</control>
+				<control type="label">
+					<width>494</width>
+					<height>60</height>
+					<font>font14</font>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>$INFO[System.AddonTitle(script.artwork.downloader)]</label>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+				</item>
+				<item>
+					<label>$INFO[System.AddonTitle(script.artwork.downloader),,: $LOCALIZE[413]]</label>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+				</item>
+				<item>
+					<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick>RunScript(script.tv.show.next.aired,updateshow=$INFO[ListItem.Label])</onclick>
+					<visible>System.HasAddon(script.tv.show.next.aired) + Container.Content(tvshows)</visible>
+				</item>
+				<item>
+					<label>$INFO[System.AddonTitle(script.ratingupdate)]</label>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick condition="Container.Content(movies)">RunScript(script.ratingupdate,Single=Movie)</onclick>
+					<onclick condition="Container.Content(tvshows)">RunScript(script.ratingupdate,Single=TVShow)</onclick>
+					<visible>System.HasAddon(script.ratingupdate)</visible>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[21435] $LOCALIZE[29943]</label>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[31092]</label>
+					<onclick>SetProperty(FSFanart,$INFO[ListItem.Art(fanart)],movieinformation)</onclick>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick>ActivateWindow(1131)</onclick>
+					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
+				</item>
+			</content>
+		</control>
+	</controls>
+</window>

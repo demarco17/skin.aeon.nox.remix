@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Topbar</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>background image</description>
+				<left>104</left>
+				<top>184</top>
+				<width>1712</width>
+				<height>783</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="image">
+				<left>960</left>
+				<top>200</top>
+				<width>2</width>
+				<height>750</height>
+				<texture border="1">dialogs/separator3.png</texture>
+			</control>
+			<control type="panel" id="9000">
+				<left>120</left>
+				<top>199</top>
+				<width>1680</width>
+				<height>750</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemlayout height="150" width="840">
+					<control type="image">
+						<width>840</width>
+						<height>150</height>
+						<texture border="4">dialogs/separator2.png</texture>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<width>134</width>
+						<height>134</height>
+						<texture colordiffuse="grey">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>670</width>
+						<height>70</height>
+						<font>font15_bold</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="textbox">
+						<left>150</left>
+						<top>65</top>
+						<width>670</width>
+						<height>85</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="150" width="840">
+					<control type="image">
+						<width>840</width>
+						<height>150</height>
+						<texture border="4">dialogs/separator2.png</texture>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<width>838</width>
+						<height>148</height>
+						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<width>134</width>
+						<height>134</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>150</left>
+						<width>670</width>
+						<height>70</height>
+						<font>font15_bold</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="textbox">
+						<left>150</left>
+						<top>65</top>
+						<width>670</width>
+						<height>85</height>
+						<font>font12</font>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>14206</label>
+						<label2>31400</label2>
+						<icon>settings/icons/interface.png</icon>
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>
+					</item>
+					<item>
+						<label>14200</label>
+						<label2>31401</label2>
+						<icon>settings/icons/player.png</icon>
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
+					</item>
+					<item>
+						<label>14211</label>
+						<label2>31402</label2>
+						<icon>settings/icons/media.png</icon>
+						<onclick>ActivateWindow(MediaSettings)</onclick>
+					</item>
+					<item>
+						<label>31502</label>
+						<label2>31409</label2>
+						<icon>settings/icons/livetv.png</icon>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+					</item>
+					<item>
+						<label>13200</label>
+						<label2>31407</label2>
+						<icon>settings/icons/profiles.png</icon>
+						<onclick>ActivateWindow(Profiles)</onclick>
+					</item>
+					<item>
+						<label>14036</label>
+						<label2>31410</label2>
+						<icon>settings/icons/service.png</icon>
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
+					</item>
+					<item>
+						<label>13000</label>
+						<label2>31406</label2>
+						<icon>settings/icons/system.png</icon>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+					</item>
+					<item>
+						<label>10511</label>
+						<label2>31405</label2>
+						<icon>settings/icons/sysinfo.png</icon>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+					</item>
+					<item>
+						<label>7</label>
+						<label2>31411</label2>
+						<icon>settings/icons/filemanager.png</icon>
+						<onclick>ActivateWindow(FileManager)</onclick>
+					</item>
+					<item>
+						<label>20077</label>
+						<label2>31408</label2>
+						<icon>settings/icons/skin.png</icon>
+						<onclick>ActivateWindow(SkinSettings)</onclick>
+						<visible>!System.HasAddon(service.libreelec.settings)</visible>
+					</item>
+					<item>
+						<label>31003</label>
+						<label2>31404</label2>
+						<onclick>RunAddon(service.libreelec.settings)</onclick>
+						<icon>settings/icons/libreelec.png</icon>
+						<visible>System.HasAddon(service.libreelec.settings)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+	</controls>
+</window>

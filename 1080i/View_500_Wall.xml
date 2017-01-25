@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="WallBackPanel">
+		<control type="image">
+			<description>background image</description>
+			<left>104</left>
+			<top>162</top>
+			<width>1712</width>
+			<height>752</height>
+			<texture border="18">dialogs/dialog-bg.png</texture>
+		</control>
+	</include>
+	<include name="VideoWall">
+		<control type="group">
+			<visible>Control.IsVisible(500) + !Window.IsActive(addoninformation)</visible>
+			<include>ViewAnimation</include>
+			<top>30</top>
+			<include>WallBackPanel</include>
+			<control type="panel" id="500">
+				<left>120</left>
+				<top>179</top>
+				<width>1680</width>
+				<height>720</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>9050</onleft>
+				<onright>60</onright>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="31010">icon</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<visible>[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]] | Container.Content(addons)</visible>
+				<itemlayout height="360" width="240" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
+					<control type="image">
+						<width>240</width>
+						<height>360</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="image">
+						<left>188</left>
+						<top>2</top>
+						<width>50</width>
+						<height>50</height>
+						<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout height="360" width="240" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						</animation>
+						<control type="image">
+							<width>240</width>
+							<height>360</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$VAR[PosterThumb]</texture>
+							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<left>185</left>
+							<top>5</top>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout height="240" width="240" condition="Container.Content(addons)">
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+				</itemlayout>
+				<focusedlayout height="240" width="240" condition="Container.Content(addons)">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						</animation>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout height="240" width="420" condition="Container.Content(episodes)">
+					<control type="image">
+						<width>420</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="image">
+						<left>368</left>
+						<top>2</top>
+						<width>50</width>
+						<height>50</height>
+						<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout height="240" width="420" condition="Container.Content(episodes)">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						</animation>
+						<control type="image">
+							<width>420</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$VAR[PosterThumb]</texture>
+							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<left>365</left>
+							<top>5</top>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1800</left>
+				<top>179</top>
+				<width>12</width>
+				<height>720</height>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<showonepage>false</showonepage>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
+		</control>
+	</include>
+
+	<include name="MusicWall">
+		<control type="group">
+			<visible>Control.IsVisible(500) + !Window.IsActive(addoninformation)</visible>
+			<top>30</top>
+			<include>ViewAnimation</include>
+			<include>WallBackPanel</include>
+			<control type="panel" id="500">
+				<left>120</left>
+				<top>179</top>
+				<width>1680</width>
+				<height>720</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>9050</onleft>
+				<onright>60</onright>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="31010">icon</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons)</visible>
+				<itemlayout height="240" width="240">
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+				</itemlayout>
+				<focusedlayout height="240" width="240">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						</animation>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1800</left>
+				<top>179</top>
+				<width>12</width>
+				<height>720</height>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<showonepage>false</showonepage>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
+		</control>
+	</include>
+
+	<include name="AddonWall">
+		<control type="group">
+			<visible>Control.IsVisible(500) + !Window.IsActive(addoninformation)</visible>
+			<include>ViewAnimation</include>
+			<top>30</top>
+			<include>WallBackPanel</include>
+			<control type="panel" id="500">
+				<left>120</left>
+				<top>179</top>
+				<width>1680</width>
+				<height>720</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>9050</onleft>
+				<onright>60</onright>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="31010">icon</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<visible>Container.Content(addons)</visible>
+				<itemlayout height="240" width="240">
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+				</itemlayout>
+				<focusedlayout height="240" width="240">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						</animation>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1800</left>
+				<top>179</top>
+				<width>12</width>
+				<height>720</height>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<showonepage>false</showonepage>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
+		</control>
+	</include>
+</includes>

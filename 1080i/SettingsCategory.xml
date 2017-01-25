@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>3</defaultcontrol>
+	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(audiodspmanager)">Conditional</animation>
+			<top>128</top>
+			<include>Window_OpenClose_Animation</include>
+			<include>SystemLeftPanel</include>
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<left>82</left>
+				<top>32</top>
+				<width>356</width>
+				<height>840</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>SetFocus(9050)</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>82</left>
+				<top>762</top>
+				<width>356</width>
+				<height>100</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flags/aeon-nox-logo.png</texture>
+			</control>
+			<include>SystemRightPanel</include>
+			<control type="image">
+				<description>separator image</description>
+				<left>522</left>
+				<top>692</top>
+				<width>1316</width>
+				<height>60</height>
+				<texture border="4">dialogs/separator2.png</texture>
+				<visible>!Container(5).HasNext</visible>
+			</control>
+			<control type="textbox" id="6">
+				<description>description area</description>
+				<include>VisibleFadeEffect</include>
+				<left>552</left>
+				<top>760</top>
+				<width>1256</width>
+				<height>100</height>
+				<font>Description_textbox</font>
+				<align>left</align>
+				<textcolor>themecolor</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<left>522</left>
+				<top>32</top>
+				<width>1316</width>
+				<height>720</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>3</onleft>
+				<onright>60</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1839</left>
+				<top>32</top>
+				<width>12</width>
+				<height>720</height>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<showonepage>false</showonepage>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
+		</control>
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<height>90</height>
+			<width>356</width>
+			<textoffsetx>15</textoffsetx>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font15</font>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<width>1136</width>
+			<height>90</height>
+			<font>font15</font>
+			<textoffsetx>30</textoffsetx>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<width>1316</width>
+			<height>90</height>
+			<font>font15</font>
+			<textoffsetx>30</textoffsetx>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<width>1316</width>
+			<height>90</height>
+			<font>font15</font>
+			<textoffsetx>30</textoffsetx>
+			<aligny>center</aligny>
+			<spinposx>10</spinposx>
+		</control>
+		<control type="sliderex" id="13">
+			<description>Default Slider</description>
+			<width>1316</width>
+			<height>90</height>
+			<font>font15</font>
+			<textoffsetx>30</textoffsetx>
+			<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+			<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<height>1</height>
+			<texture />
+			<visible>false</visible>
+		</control>
+		<control type="label" id="14">
+			<description>Default Label</description>
+			<width>1136</width>
+			<height>88</height>
+			<font>font15_title</font>
+			<align>left</align>
+			<textcolor>themecolor</textcolor>
+			<textoffsetx>30</textoffsetx>
+		</control>
+		<control type="label" id="2">
+			<description>Fake Label so we can pass it value down to the one below</description>
+			<include>HiddenObject</include>
+			<visible>false</visible>
+		</control>
+		<include>Topbar</include>
+		<control type="group">
+			<left>-440</left>
+			<include>SideBladeLeft</include>
+			<control type="grouplist" id="9050">
+				<top>100</top>
+				<width>400</width>
+				<height>980</height>
+				<onleft>noop</onleft>
+				<onright>ClearProperty(MediaMenu,Home)</onright>
+				<onright>SetFocus(3)</onright>
+				<onup>9050</onup>
+				<ondown>9050</ondown>
+				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
+				<control type="button" id="203">
+					<description>Settings level</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[31142]</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="20">
+					<description>Change settings level</description>
+					<label />
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>SettingsLevelChange</onclick>
+				</control>
+				<control type="button" id="204">
+					<description>Actions header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31039</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+					<visible>Player.HasMedia</visible>
+				</control>
+				<control type="button" id="614">
+					<description>Player Controls</description>
+					<include>ButtonCommonValues</include>
+					<label>31068</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(3)</onclick>
+					<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
+					<onclick condition="Player.HasVideo">Fullscreen</onclick>
+					<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
+					<visible>Player.HasMedia</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

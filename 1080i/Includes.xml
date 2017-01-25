@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include file="defaults.xml" />
+	<include file="Includes_CommonValues.xml" />
+	<include file="Includes_Animations.xml" />
+	<include file="Includes_Home.xml" />
+	<include file="IncludesBackgroundBuilding.xml" />
+	<include file="View_50_List.xml" />
+	<include file="View_51_InfoWall.xml" />
+	<include file="View_52_Landscape.xml" />
+	<include file="View_53_ShowCase.xml" />
+	<include file="View_54_ShowCase.xml" />
+	<include file="View_55_TriPanel.xml" />
+	<include file="View_57_Shift.xml" />
+	<include file="View_58_BannerWall.xml" />
+	<include file="View_59_Logo.xml" />
+	<include file="View_500_Wall.xml" />
+	<include file="View_501_LowList.xml" />
+	<include file="View_507_FanartList.xml" />
+	<include file="View_508_KodiFlix.xml" />
+	<include file="View_510_BigList.xml" />
+	<include file="View_511_PicWall.xml" />
+	<include file="Variables.xml" />
+	<include file="script-skinshortcuts-includes.xml" />
+	<constant name="CrossfadeTime">300</constant>
+	<variable name="BannerThumb">
+		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PosterThumb">
+		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<!-- Media Menu -->
+	<include name="SideBladeLeft">
+		<animation effect="slide" start="440,0" end="0,0" time="400" tween="quadratic" easing="out" condition="String.IsEmpty(Window(home).Property(MediaMenu))">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+		<control type="image">
+			<width>432</width>
+			<height>1080</height>
+			<texture border="40">dialogs/mediamenu_back.png</texture>
+		</control>
+		<control type="image">
+			<description>LOGO</description>
+			<top>5</top>
+			<width>400</width>
+			<height>100</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flags/aeon-nox-logo.png</texture>
+		</control>
+	</include>
+	<include name="KioskModeButton">
+		<control type="button">
+			<description>Kiosk Mode button</description>
+			<include>ButtonCommonValues</include>
+			<onfocus>ClearProperty(MediaMenu,Home)</onfocus>
+			<onfocus>SetFocus(50)</onfocus>
+		</control>
+	</include>
+	<include name="MediaMenuTop">
+		<top>100</top>
+		<width>400</width>
+		<height>980</height>
+		<onleft>noop</onleft>
+		<onright>ClearProperty(MediaMenu,Home)</onright>
+		<onright>50</onright>
+		<onup>9050</onup>
+		<ondown>9050</ondown>
+		<onback>ClearProperty(MediaMenu,Home)</onback>
+		<onback>50</onback>
+		<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
+		<control type="button" id="200">
+			<description>View options header</description>
+			<textwidth>352</textwidth>
+			<font>font13_title</font>
+			<include>ButtonCommonValues</include>
+			<label>31006</label>
+			<enable>false</enable>
+			<disabledcolor>themecolor</disabledcolor>
+		</control>
+		<control type="button" id="2">
+			<description>View As button</description>
+			<textwidth>352</textwidth>
+			<label2>[COLOR themecolor]$INFO[Container.ViewCount][/COLOR]</label2>
+			<include>ButtonCommonValues</include>
+		</control>
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<include>ButtonCommonValues</include>
+			<label>103</label>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<include>ButtonCommonValues</include>
+			<label>31051</label>
+			<altlabel>31050</altlabel>
+			<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+		</control>
+		<control type="radiobutton" id="31">
+			<description>Filter</description>
+			<textwidth>352</textwidth>
+			<label>587</label>
+			<selected>Container.Filtered</selected>
+			<include>ButtonCommonValues</include>
+			<visible>Window.IsActive(MyPVRChannels.xml)</visible>
+		</control>
+	</include>
+	<include name="PVRMediaMenu">
+		<control type="group">
+			<left>-440</left>
+			<include>SideBladeLeft</include>
+			<control type="grouplist" id="9050">
+				<top>100</top>
+				<width>400</width>
+				<height>980</height>
+				<onleft>noop</onleft>
+				<onright>ClearProperty(MediaMenu,Home)</onright>
+				<onright condition="!Window.IsVisible(tvguide)">50</onright>
+				<onright condition="Window.IsVisible(tvguide)">10</onright>
+				<onup>9050</onup>
+				<ondown>9050</ondown>
+				<onback>ClearProperty(MediaMenu,Home)</onback>
+				<onback condition="!Window.IsVisible(tvguide)">50</onback>
+				<onback condition="Window.IsVisible(tvguide)">10</onback>
+				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
+				<control type="button" id="200">
+					<description>View options header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31006</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="2">
+					<description>View As button</description>
+					<textwidth>352</textwidth>
+					<label2>[COLOR themecolor]$INFO[Container.ViewCount][/COLOR]</label2>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<include>ButtonCommonValues</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<include>ButtonCommonValues</include>
+					<label>31051</label>
+					<altlabel>31050</altlabel>
+					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="button" id="203">
+					<description>Actions header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31039</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="100">
+					<description>Channels</description>
+					<label>19019</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvchannels)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiochannels)</onclick>
+				</control>
+				<control type="button" id="101">
+					<description>Guide</description>
+					<label>22020</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvguide)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radioguide)</onclick>
+				</control>
+				<control type="button" id="102">
+					<description>Recordings</description>
+					<label>19163</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvrecordings)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiorecordings)</onclick>
+				</control>
+				<control type="button" id="103">
+					<description>Timers</description>
+					<label>19040</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvtimers)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiotimers)</onclick>
+				</control>
+				<control type="button" id="105">
+					<description>Timer Rules</description>
+					<label>19138</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
+				</control>
+				<control type="button" id="104">
+					<description>Search</description>
+					<label>137</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvsearch)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiosearch)</onclick>
+				</control>
+				<control type="button" id="614">
+					<description>Player Controls</description>
+					<include>ButtonCommonValues</include>
+					<label>31068</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="Player.HasAudio + !Window.IsVisible(tvguide)">SetFocus(50)</onclick>
+					<onclick condition="Player.HasAudio + Window.IsVisible(tvguide)">SetFocus(10)</onclick>
+					<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
+					<onclick condition="Player.HasVideo">Fullscreen</onclick>
+					<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
+					<visible>Player.HasMedia</visible>
+				</control>
+				<control type="button" id="201">
+					<description>Misc options header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31026</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+					<visible>!Window.IsActive(MyPVRSearch.xml)</visible>
+				</control>
+				<control type="button" id="28">
+					<description>Channel Groups</description>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(tvguide)</visible>
+				</control>
+				<control type="radiobutton" id="5">
+					<description>Group recording items by folder structure</description>
+					<include>ButtonCommonValues</include>
+					<label>19270</label>
+					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+				</control>
+				<control type="radiobutton" id="6">
+					<description>Show hidden channels</description>
+					<include>ButtonCommonValues</include>
+					<label>19051</label>
+					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
+				</control>
+				<control type="radiobutton" id="7">
+					<description>Show deleted recordings</description>
+					<include>ButtonCommonValues</include>
+					<label>19184</label>
+					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+				</control>
+				<control type="radiobutton" id="8">
+					<description>Hide disabled timers</description>
+					<include>ButtonCommonValues</include>
+					<label>19077</label>
+					<visible>Window.IsActive(MyPVRTimers.xml)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- Navigation Bar -->
+	<include name="Topbar">
+		<control type="group">
+			<animation effect="slide" start="0,-43" end="0,0" time="480" condition="Window.Previous(home)">WindowOpen</animation>
+			<animation effect="slide" end="0,-43" start="0,0" time="480" condition="Window.Next(home)">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" time="480" condition="Window.IsActive(playercontrols)">Conditional</animation>
+			<control type="image">
+				<width>1920</width>
+				<height>43</height>
+				<texture border="4">dialogs/InfoBar.png</texture>
+			</control>
+			<control type="label">
+				<width>900</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey</textcolor>
+				<label>$VAR[BreadcrumbsVar]</label>
+			</control>
+			<control type="label">
+				<left>1020</left>
+				<width>900</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey</textcolor>
+				<align>right</align>
+				<label>$VAR[TopbarRightVar]</label>
+			</control>
+			<control type="label">
+				<width>1920</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+				<label>$INFO[System.Time]</label>
+			</control>
+			<control type="group">
+				<visible>Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + ![Window.IsActive(volumebar)]</visible>
+				<animation effect="slide" start="0,-60" end="0,0" time="200">Visible</animation>
+				<animation effect="slide" start="0,0" end="0,-60" time="200">Hidden</animation>
+				<left>1080</left>
+				<control type="progress">
+					<width>500</width>
+					<height>41</height>
+					<info>Player.Progress</info>
+				</control>
+				<control type="fadelabel">
+					<width>500</width>
+					<height>40</height>
+					<font>font13_title</font>
+					<textoffsetx>10</textoffsetx>
+					<textcolor>grey</textcolor>
+					<scroll>true</scroll>
+					<scrollspeed>20</scrollspeed>
+					<scrollout>false</scrollout>
+					<pauseatend>10000</pauseatend>
+					<label>$INFO[Player.Title]</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>340</left>
+				<visible>Window.IsActive(tvrecordings)</visible>
+				<control type="progress">
+					<description>Disk usage bar</description>
+					<width>500</width>
+					<height>41</height>
+					<info>Pvr.backenddiskspaceprogr</info>
+					<visible>!Integer.IsGreater(Pvr.backenddiskspaceprogr,100)</visible>
+				</control>
+				<control type="label">
+					<description>Disk usage text</description>
+					<width>500</width>
+					<height>40</height>
+					<textoffsetx>10</textoffsetx>
+					<label>$INFO[Pvr.backenddiskspace]</label>
+					<align>left</align>
+					<font>font13_title</font>
+					<textcolor>grey</textcolor>
+					<visible>!Integer.IsGreater(Pvr.backenddiskspaceprogr,100)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- System windows -->
+	<include name="SystemLeftPanel">
+		<control type="image">
+			<left>66</left>
+			<top>16</top>
+			<width>388</width>
+			<height>872</height>
+			<texture border="18">dialogs/dialog-bg.png</texture>
+		</control>
+	</include>
+	<include name="SystemRightPanel">
+		<control type="image">
+			<left>506</left>
+			<top>16</top>
+			<width>1348</width>
+			<height>872</height>
+			<texture border="18">dialogs/dialog-bg.png</texture>
+		</control>
+	</include>
+	<!-- Home window buttons -->
+	<include name="HomeShutdownButton">
+		<control type="button" id="9027">
+			<label></label>
+			<textoffsetx>0</textoffsetx>
+			<width>50</width>
+			<height>40</height>
+			<align>center</align>
+			<font>IconTiny</font>
+			<textcolor>grey</textcolor>
+			<texturenofocus />
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+		</control>
+	</include>
+	<include name="HomeFavButton">
+		<control type="button" id="9028">
+			<label></label>
+			<textoffsetx>0</textoffsetx>
+			<width>50</width>
+			<height>40</height>
+			<align>center</align>
+			<font>IconTiny</font>
+			<textcolor>grey</textcolor>
+			<texturenofocus />
+			<onclick>ActivateWindow(Favourites)</onclick>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+		</control>
+	</include>
+	<include name="HomeSearchButton">
+		<control type="button" id="9029">
+			<label></label>
+			<textoffsetx>0</textoffsetx>
+			<width>50</width>
+			<height>40</height>
+			<align>center</align>
+			<font>IconTiny</font>
+			<textcolor>grey</textcolor>
+			<texturenofocus />
+			<onclick>ActivateWindow(1124)</onclick>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+		</control>
+	</include>
+	<include name="HomeDVDEjectButton">
+		<control type="button" id="9030">
+			<label></label>
+			<textoffsetx>0</textoffsetx>
+			<width>50</width>
+			<height>40</height>
+			<align>center</align>
+			<font>IconTiny</font>
+			<textcolor>grey</textcolor>
+			<texturenofocus />
+			<visible>System.HasMediaDVD</visible>
+			<onclick>EjectTray()</onclick>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+		</control>
+	</include>
+	<include name="HomeDVDPlayButton">
+		<control type="button" id="9031">
+			<label></label>
+			<textoffsetx>0</textoffsetx>
+			<width>50</width>
+			<height>40</height>
+			<align>center</align>
+			<font>IconTiny</font>
+			<textcolor>grey</textcolor>
+			<texturenofocus />
+			<visible>System.HasMediaDVD | Player.HasMedia</visible>
+			<onclick condition="System.HasMediaDVD + !Player.HasMedia">PlayDVD</onclick>
+			<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
+			<onclick condition="Player.HasVideo">Fullscreen</onclick>
+			<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+		</control>
+	</include>
+	<!-- Extended info lists -->
+	<include name="ExtendedVideoInfoLists">
+		<control type="panel" id="90019">
+			<left>3</left>
+			<top>570</top>
+			<width>1188</width>
+			<height>420</height>
+			<onleft>90019</onleft>
+			<onright>90019</onright>
+			<onup>9000</onup>
+			<ondown>noop</ondown>
+			<scrolltime tween="quadratic" easing="out">300</scrolltime>
+			<orientation>horizontal</orientation>
+			<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+			<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
+			<itemlayout height="420" width="297">
+				<control type="image">
+					<width>297</width>
+					<height>418</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>2</bordersize>
+				</control>
+				<control type="image">
+					<top>328</top>
+					<width>297</width>
+					<height>90</height>
+					<texture colordiffuse="grey">dialogs/black.png</texture>
+				</control>
+				<control type="textbox">
+					<left>14</left>
+					<top>330</top>
+					<width>269</width>
+					<height>75</height>
+					<align>center</align>
+					<font>font13</font>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="420" width="297">
+				<control type="group">
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+					</animation>
+					<control type="image">
+						<width>297</width>
+						<height>418</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+						<bordersize>5</bordersize>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>328</top>
+						<width>287</width>
+						<height>85</height>
+						<texture colordiffuse="grey">dialogs/black.png</texture>
+					</control>
+					<control type="textbox">
+						<left>14</left>
+						<top>330</top>
+						<width>269</width>
+						<height>75</height>
+						<font>font13</font>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
+						<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
+					</control>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(0).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(0).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(0).Icon]</icon>
+					<onclick>SetProperty(ActorID,0)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(0).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(0).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(1).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(1).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(1).Icon]</icon>
+					<onclick>SetProperty(ActorID,1)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(1).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(1).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(2).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(2).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(2).Icon]</icon>
+					<onclick>SetProperty(ActorID,2)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(2).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(2).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(3).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(3).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(3).Icon]</icon>
+					<onclick>SetProperty(ActorID,3)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(3).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(3).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(4).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(4).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(4).Icon]</icon>
+					<onclick>SetProperty(ActorID,4)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(4).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(4).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(5).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(5).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(5).Icon]</icon>
+					<onclick>SetProperty(ActorID,5)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(5).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(5).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(6).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(6).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(6).Icon]</icon>
+					<onclick>SetProperty(ActorID,6)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(6).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(6).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(7).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(7).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(7).Icon]</icon>
+					<onclick>SetProperty(ActorID,7)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(7).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(7).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(8).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(8).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(8).Icon]</icon>
+					<onclick>SetProperty(ActorID,8)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(8).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(8).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(9).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(9).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(9).Icon]</icon>
+					<onclick>SetProperty(ActorID,9)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(9).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(9).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(10).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(10).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(10).Icon]</icon>
+					<onclick>SetProperty(ActorID,10)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(10).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(10).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(11).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(11).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(11).Icon]</icon>
+					<onclick>SetProperty(ActorID,11)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(11).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(11).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(12).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(12).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(12).Icon]</icon>
+					<onclick>SetProperty(ActorID,12)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(12).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(12).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(13).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(13).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(13).Icon]</icon>
+					<onclick>SetProperty(ActorID,13)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(13).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(13).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(14).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(14).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(14).Icon]</icon>
+					<onclick>SetProperty(ActorID,14)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(14).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(14).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(15).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(15).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(15).Icon]</icon>
+					<onclick>SetProperty(ActorID,15)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(15).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(15).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(16).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(16).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(16).Icon]</icon>
+					<onclick>SetProperty(ActorID,16)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(16).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(16).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(17).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(17).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(17).Icon]</icon>
+					<onclick>SetProperty(ActorID,17)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(17).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(17).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(18).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(18).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(18).Icon]</icon>
+					<onclick>SetProperty(ActorID,18)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(18).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(18).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(19).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(19).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(19).Icon]</icon>
+					<onclick>SetProperty(ActorID,19)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(19).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(19).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(20).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(20).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(20).Icon]</icon>
+					<onclick>SetProperty(ActorID,20)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(20).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(20).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(21).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(21).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(21).Icon]</icon>
+					<onclick>SetProperty(ActorID,21)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(21).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(21).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(22).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(22).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(22).Icon]</icon>
+					<onclick>SetProperty(ActorID,22)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(22).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(22).Label)</visible>
+				</item>
+				<item>
+					<label>$INFO[Container(50).ListItemAbsolute(23).Label]</label>
+					<label2>$INFO[Container(50).ListItemAbsolute(23).Label2]</label2>
+					<icon>$INFO[Container(50).ListItemAbsolute(23).Icon]</icon>
+					<onclick>SetProperty(ActorID,23)</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(235).Label])</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(23).Label)</visible>
+				</item>
+			</content>
+		</control>
+	</include>
+	<include name="DefaultActorList">
+		<control type="panel" id="50">
+			<left>3</left>
+			<top>570</top>
+			<width>1188</width>
+			<height>420</height>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>9000</onup>
+			<ondown>noop</ondown>
+			<scrolltime tween="quadratic" easing="out">300</scrolltime>
+			<orientation>horizontal</orientation>
+			<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+			<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
+			<itemlayout height="420" width="297">
+				<control type="image">
+					<width>297</width>
+					<height>418</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>2</bordersize>
+				</control>
+				<control type="image">
+					<top>328</top>
+					<width>297</width>
+					<height>90</height>
+					<texture colordiffuse="grey">dialogs/black.png</texture>
+				</control>
+				<control type="textbox">
+					<left>14</left>
+					<top>330</top>
+					<width>269</width>
+					<height>75</height>
+					<align>center</align>
+					<font>font13</font>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="420" width="297">
+				<control type="group">
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+					</animation>
+					<control type="image">
+						<width>297</width>
+						<height>418</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+						<bordersize>5</bordersize>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>328</top>
+						<width>287</width>
+						<height>85</height>
+						<texture colordiffuse="grey">dialogs/black.png</texture>
+					</control>
+					<control type="textbox">
+						<left>14</left>
+						<top>330</top>
+						<width>269</width>
+						<height>75</height>
+						<font>font13</font>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
+						<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
+					</control>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<include name="HiddenActorList">
+		<control type="list" id="50">
+			<include>HiddenList</include>
+		</control>
+	</include>
+	<!-- MovieSet info -->
+	<include name="InfoList">
+		<param name="list_label">$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</param>
+		<param name="header_label">$LOCALIZE[342]:$INFO[Container(5000).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
+		<param name="path">$INFO[ListItem.Path]</param>
+		<param name="height">300</param>
+		<param name="width">800</param>
+		<param name="list_id">5000</param>
+		<param name="sortby">year</param>
+		<param name="sortorder">descending</param>
+		<param name="page_control">64</param>
+		<param name="autoscroll">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(64)</param>
+		<definition>
+			<control type="label">
+				<height>50</height>
+				<width>auto</width>
+				<label>$PARAM[header_label]</label>
+				<font>font14</font>
+				<textcolor>themecolor</textcolor>
+			</control>
+			<control type="list" id="$PARAM[list_id]">
+				<top>45</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<orientation>vertical</orientation>
+				<pagecontrol>$PARAM[page_control]</pagecontrol>
+				<autoscroll time="1000">$PARAM[autoscroll]</autoscroll>
+				<itemlayout height="45" width="$PARAM[width]">
+					<control type="label">
+						<height>45</height>
+						<width>$PARAM[width]</width>
+						<label>[I]$PARAM[list_label][/I]</label>
+						<font>font14</font>
+						<textcolor>grey</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="45" width="$PARAM[width]">
+					<control type="label">
+						<height>45</height>
+						<width>$PARAM[width]</width>
+						<label>[I]$PARAM[list_label][/I]</label>
+						<font>font14</font>
+						<textcolor>grey</textcolor>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
+			</control>
+		</definition>
+	</include>
+	<include name="MovieSetGenre">
+		<param name="list_id">5010</param>
+		<param name="label">$INFO[Container(5010).ListItemPosition().Genre]</param>
+		<param name="width">auto</param>
+		<param name="align">left</param>
+		<param name="sortby">year</param>
+		<param name="sortorder">descending</param>
+		<definition>
+			<control type="label">
+				<visible>ListItem.IsCollection </visible>
+				<height>30</height>
+				<width>$PARAM[width]</width>
+				<textcolor>grey3</textcolor>
+				<label>$PARAM[label]</label>
+				<font>font13_title</font>
+				<align>$PARAM[align]</align>
+			</control>
+			<control type="list" id="$PARAM[list_id]">
+				<visible>ListItem.IsCollection</visible>
+				<include>HiddenList</include>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$INFO[ListItem.Path]</content>
+			</control>
+		</definition>
+	</include>
+</includes>

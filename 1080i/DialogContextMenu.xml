@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="150" end="100" center="auto" time="300" tween="cubic" easing="out" />
+		<effect type="fade" end="100" time="150" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="fade" start="100" end="0" time="100" delay="100" />
+		<effect type="zoom" start="100" end="130" center="auto" time="200" tween="cubic" easing="in" />
+	</animation>
+	<controls>
+        <control type="image" id="999">
+			<description>background image</description>
+			<left>16</left>
+			<top>-16</top>
+			<width>494</width>
+			<height>1116</height>
+			<texture border="18">dialogs/dialog-bg2.png</texture>
+		</control>
+		<control type="grouplist" id="996">
+			<description>grouplist for context buttons</description>
+			<left>32</left>
+			<width>462</width>
+			<height max="1080">auto</height>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<width>462</width>
+			<height>60</height>
+			<align>center</align>
+		</control>
+	</controls>
+</window>

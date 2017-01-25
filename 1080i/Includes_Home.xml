@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Main Menu Includes -->
+	<include name="MainMenuListContent">
+		<control type="wraplist" id="9000">
+			<left>-315</left>
+			<top>62</top>
+			<width>2550</width>
+			<height>100</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9020</onup>           
+			<ondown>9001</ondown>
+			<scrolltime tween="quadratic" easing="out">400</scrolltime>
+			<focusposition>2</focusposition>
+			<orientation>Horizontal</orientation>
+			<itemlayout height="100" width="510">
+				<control type="label">
+					<width>510</width>
+					<height>90</height>
+					<font>font_MainMenu</font>
+					<textcolor>grey2</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="100" width="510">
+				<control type="label">
+					<width>510</width>
+					<height>90</height>
+					<font>font_MainMenu</font>
+					<textcolor>grey2</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<width>510</width>
+					<height>90</height>
+					<font>font_MainMenu</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>Control.HasFocus(9000)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</focusedlayout>
+			<include>FallbackMenu</include>
+		</control>
+	</include>
+	<!--Main Menu-->
+	<include name="PicturesMainMenu">
+		<item id="4">
+			<label fallback="1">$INFO[Skin.String(PicturesHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(PicturesHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Pictures)">$INFO[Skin.String(PicturesHomeItem.Path)]</property>
+			<property name="Item">Pictures</property>
+			<property name="BGType">$INFO[Skin.String(PicturesHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(PicturesHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x4">$INFO[Skin.String(PicturesHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(PicturesHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="MusicMainMenu">
+		<item id="3">
+			<label fallback="2">$INFO[Skin.String(MusicHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(MusicHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Music,root)">$INFO[Skin.String(MusicHomeItem.Path)]</property>
+			<property name="Item">Music</property>
+			<property name="BGType">$INFO[Skin.String(MusicHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(MusicHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x3">$INFO[Skin.String(MusicHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(MusicHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="MoviesMainMenu">
+		<item id="10">
+			<label fallback="342">$INFO[Skin.String(MovieHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(MovieHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Videos,library://video/movies/titles.xml,return)">$INFO[Skin.String(MovieHomeItem.Path)]</property>
+			<property name="Item">Movie</property>
+			<property name="BGType">$INFO[Skin.String(MovieHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(MovieHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x10">$INFO[Skin.String(MovieHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(MovieHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="TVShowsMainMenu">
+		<item id="11">
+			<label fallback="20343">$INFO[Skin.String(TVShowHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(TVShowHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Videos,library://video/tvshows/titles.xml,return)">$INFO[Skin.String(TVShowHomeItem.Path)]</property>
+			<property name="Item">TVShow</property>
+			<property name="BGType">$INFO[Skin.String(TVShowHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(TVShowHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x11">$INFO[Skin.String(TVShowHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(TVShowHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="PseudoTVMainMenu">
+		<item id="8">
+			<label fallback="31949">$INFO[Skin.String(PseudoTVHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(PseudoTVHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="RunAddon(script.pseudotv)">$INFO[Skin.String(PseudoTVHomeItem.Path)]</property>
+			<property name="Item">PseudoTV</property>
+			<property name="BGType">$INFO[Skin.String(PseudoTVHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(PseudoTVHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x8">$INFO[Skin.String(PseudoTVHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(PseudoTVHomeItem.Disable)]</property>
+			<visible>System.HasAddon(script.pseudotv)</visible>
+		</item>
+	</include>
+	<include name="TVMainMenu">
+		<item id="12">
+			<label fallback="31502">$INFO[Skin.String(LiveTVHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(tvguide)">$INFO[Skin.String(LiveTVHomeItem.Path)]</property>
+			<property name="Item">LiveTV</property>
+			<property name="BGType">$INFO[Skin.String(LiveTVHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(LiveTVHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x12">$INFO[Skin.String(LiveTVHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(LiveTVHomeItem.Disable)]</property>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+	</include>
+	<include name="VideosMainMenu">
+		<item id="2">
+			<label fallback="3">$INFO[Skin.String(VideosHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(VideosHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Videos,root)">$INFO[Skin.String(VideosHomeItem.Path)]</property>
+			<property name="Item">Videos</property>
+			<property name="BGType">$INFO[Skin.String(VideosHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(VideosHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x2">$INFO[Skin.String(VideosHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(VideosHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="ProgramsMainMenu">
+		<item id="1">
+			<label fallback="31950">$INFO[Skin.String(ProgramsHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(ProgramsHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(1133)">$INFO[Skin.String(ProgramsHomeItem.Path)]</property>
+			<property name="Item">Programs</property>
+			<property name="BGType">$INFO[Skin.String(ProgramsHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(ProgramsHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x1">$INFO[Skin.String(ProgramsHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(ProgramsHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="SettingsMainMenu">
+		<item id="5">
+			<label fallback="13000">$INFO[Skin.String(SettingsHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(SettingsHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Settings)">$INFO[Skin.String(SettingsHomeItem.Path)]</property>
+			<property name="Item">Settings</property>
+			<property name="BGType">$INFO[Skin.String(SettingsHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(SettingsHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x5">$INFO[Skin.String(SettingsHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(SettingsHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="WeatherMainMenu">
+		<item id="7">
+			<label fallback="8">$INFO[Skin.String(WeatherHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(WeatherHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Weather)">$INFO[Skin.String(WeatherHomeItem.Path)]</property>
+			<property name="Item">Weather</property>
+			<property name="BGType">$INFO[Skin.String(WeatherHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(WeatherHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x7">$INFO[Skin.String(WeatherHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(WeatherHomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="MusicVideosMainMenu">
+		<item id="13">
+			<label fallback="31951">$INFO[Skin.String(MusicVideoHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(MusicVideoHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Videos,videodb://musicvideos/titles/,return)">$INFO[Skin.String(MusicVideoHomeItem.Path)]</property>
+			<property name="Item">MusicVideo</property>
+			<property name="BGType">$INFO[Skin.String(MusicVideoHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(MusicVideoHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x13">$INFO[Skin.String(MusicVideoHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(MusicVideoHomeItem.Disable)]</property>
+			<visible>Library.HasContent(MusicVideos)</visible>
+		</item>
+	</include>
+	<include name="CustomMainMenuItem1">
+		<item id="101">
+			<label fallback="Custom 1">$INFO[Skin.String(Custom1HomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(Custom1HomeItem.MultiFanart)]</thumb>
+			<property name="Path">$INFO[Skin.String(Custom1HomeItem.Path)]</property>
+			<property name="Item">Custom1</property>
+			<property name="BGType">$INFO[Skin.String(Custom1HomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(Custom1HomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x101">$INFO[Skin.String(Custom1HomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(Custom1HomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="CustomMainMenuItem2">
+		<item id="202">
+			<label fallback="Custom 2">$INFO[Skin.String(Custom2HomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(Custom2HomeItem.MultiFanart)]</thumb>
+			<property name="Path">$INFO[Skin.String(Custom2HomeItem.Path)]</property>
+			<property name="Item">Custom2</property>
+			<property name="BGType">$INFO[Skin.String(Custom2HomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(Custom2HomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x202">$INFO[Skin.String(Custom2HomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(Custom2HomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="CustomMainMenuItem3">
+		<item id="303">
+			<label fallback="Custom 3">$INFO[Skin.String(Custom3HomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(Custom3HomeItem.MultiFanart)]</thumb>
+			<property name="Path">$INFO[Skin.String(Custom3HomeItem.Path)]</property>
+			<property name="Item">Custom3</property>
+			<property name="BGType">$INFO[Skin.String(Custom3HomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(Custom3HomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x303">$INFO[Skin.String(Custom3HomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(Custom3HomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="CustomMainMenuItem4">
+		<item id="404">
+			<label fallback="Custom 4">$INFO[Skin.String(Custom4HomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(Custom4HomeItem.MultiFanart)]</thumb>
+			<property name="Path">$INFO[Skin.String(Custom4HomeItem.Path)]</property>
+			<property name="Item">Custom4</property>
+			<property name="BGType">$INFO[Skin.String(Custom4HomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(Custom4HomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x404">$INFO[Skin.String(Custom4HomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(Custom4HomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="CustomMainMenuItem5">
+		<item id="505">
+			<label fallback="Custom 5">$INFO[Skin.String(Custom5HomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(Custom5HomeItem.MultiFanart)]</thumb>
+			<property name="Path">$INFO[Skin.String(Custom5HomeItem.Path)]</property>
+			<property name="Item">Custom5</property>
+			<property name="BGType">$INFO[Skin.String(Custom5HomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(Custom5HomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x505">$INFO[Skin.String(Custom5HomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(Custom5HomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="CustomMainMenuItem6">
+		<item id="606">
+			<label fallback="Custom 6">$INFO[Skin.String(Custom6HomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(Custom6HomeItem.MultiFanart)]</thumb>
+			<property name="Path">$INFO[Skin.String(Custom6HomeItem.Path)]</property>
+			<property name="Item">Custom6</property>
+			<property name="BGType">$INFO[Skin.String(Custom6HomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(Custom6HomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x606">$INFO[Skin.String(Custom6HomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(Custom6HomeItem.Disable)]</property>
+		</item>
+	</include>
+	<include name="FallbackMenu">
+		<content>
+			<include condition="String.IsEmpty(Skin.String(PicturesHomeItem.Disable))">PicturesMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(MusicHomeItem.Disable))">MusicMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(MovieHomeItem.Disable))">MoviesMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(TVShowHomeItem.Disable))">TVShowsMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(PseudoTVHomeItem.Disable)) + System.HasAddon(script.pseudotv)">PseudoTVMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(LiveTVHomeItem.Disable))">TVMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(Custom1HomeItem.Disable)) + !String.IsEmpty(Skin.String(Custom1HomeItem.Path))">CustomMainMenuItem1</include>
+			<include condition="String.IsEmpty(Skin.String(Custom2HomeItem.Disable)) + !String.IsEmpty(Skin.String(Custom2HomeItem.Path))">CustomMainMenuItem2</include>
+			<include condition="String.IsEmpty(Skin.String(Custom3HomeItem.Disable)) + !String.IsEmpty(Skin.String(Custom3HomeItem.Path))">CustomMainMenuItem3</include>
+			<include condition="String.IsEmpty(Skin.String(Custom4HomeItem.Disable)) + !String.IsEmpty(Skin.String(Custom4HomeItem.Path))">CustomMainMenuItem4</include>
+			<include condition="String.IsEmpty(Skin.String(Custom5HomeItem.Disable)) + !String.IsEmpty(Skin.String(Custom5HomeItem.Path))">CustomMainMenuItem5</include>
+			<include condition="String.IsEmpty(Skin.String(Custom6HomeItem.Disable)) + !String.IsEmpty(Skin.String(Custom6HomeItem.Path))">CustomMainMenuItem6</include>
+			<include condition="String.IsEmpty(Skin.String(VideosHomeItem.Disable))">VideosMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(ProgramsHomeItem.Disable))">ProgramsMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(SettingsHomeItem.Disable))">SettingsMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(WeatherHomeItem.Disable)) + !String.IsEmpty(Weather.Plugin)">WeatherMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
+		</content>
+	</include>
+	<!-- SubMenu -->
+	<include name="HomeSubMenuVideos">
+		<item>
+			<label>342</label>
+			<onclick>ActivateWindow(Videos,Movies,root)</onclick>
+			<visible>Library.HasContent(Movies) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+		</item>
+		<item>
+			<label>20343</label>
+			<onclick>ActivateWindow(Videos,TvShows,root)</onclick>
+			<visible>Library.HasContent(TVShows) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+		</item>
+		<item>
+			<label>136</label>
+			<onclick>ActivateWindow(Videos,Playlists,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+		</item>
+		<item>
+			<label>24001</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+		</item>
+		<item>
+			<label>14022</label>
+			<onclick>ActivateWindow(Videos,Root)</onclick>
+			<visible>Library.HasContent(Video) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuMovies">
+		<item>
+			<label>13409</label>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/Top250.xsp,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
+		</item>
+		<item>
+			<label>31047</label>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/BestPicture.xsp,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
+		</item>
+		<item>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
+		</item>
+		<item>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,MovieGenres,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
+		</item>
+		<item>
+			<label>20434</label>
+			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuTVShows">
+		<item>
+			<label>575</label>
+			<onclick>ActivateWindow(Videos,inprogresstvshows,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11) + !System.HasAddon(script.tv.show.next.aired)</visible>
+		</item>
+		<item>
+			<label>$ADDON[script.tv.show.next.aired 32019]</label>
+			<onclick>RunAddon(script.tv.show.next.aired,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11) + System.HasAddon(script.tv.show.next.aired)</visible>
+		</item>
+		<item>
+			<label>19519</label>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/Documentary.xsp,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
+		</item>
+		<item>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
+		</item>
+		<item>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
+		</item>
+		<item>
+			<label>20388</label>
+			<onclick>ActivateWindow(Videos,TvShowStudios,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuPseudoTV">
+		<item>
+			<label>5</label>
+			<onclick>Addon.OpenSettings(script.pseudotv)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x8) + System.HasAddon(script.pseudotv)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuMusic">
+		<item>
+			<label>134</label>
+			<onclick>ActivateWindow(Music,Songs,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+		</item>
+		<item>
+			<label>133</label>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+		</item>
+		<item>
+			<label>132</label>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+		</item>
+		<item>
+			<label>24001</label>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+		</item>
+		<item>
+			<label>14022</label>
+			<onclick>ActivateWindow(Music,root)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuPrograms">
+		<item>
+			<label>1038</label>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
+		</item>
+		<item>
+			<label>1037</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
+		</item>
+		<item>
+			<label>10040</label>
+			<onclick>ActivateWindow(Addonbrowser,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
+		</item>
+		<item>
+			<label>1043</label>
+			<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
+		</item>
+		<item>
+			<label>1039</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuSettings">
+		<item>
+			<label>14111</label>
+			<onclick>ActivateWindow(EventLog,events://)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+		</item>
+		<item>
+			<label>20077</label>
+			<onclick>ActivateWindow(SkinSettings)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+		</item>
+		<item>
+			<label>7</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+		</item>
+		<item>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+		</item>
+		<item>
+			<label>130</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuWeather">
+		<item>
+			<label>5</label>
+			<onclick>ActivateWindow(servicesettings,weather)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x7)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuPictures">
+		<item>
+			<label>24001</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x4)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuLiveTV">
+		<item>
+			<label>137</label>
+			<onclick>ActivateWindow(tvsearch)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
+		</item>
+		<item>
+			<label>19069</label>
+			<onclick>ActivateWindow(tvguide)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
+		</item>
+		<item>
+			<label>19023</label>
+			<onclick>ActivateWindow(tvchannels)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12) + Pvr.Hastvchannels</visible>
+		</item>
+		<item>
+			<label>19163</label>
+			<onclick>ActivateWindow(tvrecordings)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
+		</item>
+		<item>
+			<label>19040</label>
+			<onclick>ActivateWindow(tvtimers)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuMusicVideos">
+		<item>
+			<label>133</label>
+			<onclick>ActivateWindow(Videos,MusicVideoArtists,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
+		</item>
+		<item>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,MusicVideoGenres,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
+		</item>
+		<item>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMusicVideos,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
+		</item>
+		<item>
+			<label>652</label>
+			<onclick>ActivateWindow(Videos,MusicVideoYears,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
+		</item>
+		<item>
+			<label>20459</label>
+			<onclick>ActivateWindow(Videos,MusicVideoTags,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
+		</item>
+	</include>
+	<include name="FallbackSubMenu">
+		<content>
+			<include>HomeSubMenuVideos</include>
+			<include>HomeSubMenuMovies</include>
+			<include>HomeSubMenuTVShows</include>
+			<include>HomeSubMenuPseudoTV</include>
+			<include>HomeSubMenuMusic</include>
+			<include>HomeSubMenuPrograms</include>
+			<include>HomeSubMenuSettings</include>
+			<include>HomeSubMenuWeather</include>
+			<include>HomeSubMenuPictures</include>
+			<include>HomeSubMenuLiveTV</include>
+			<include>HomeSubMenuMusicVideos</include>
+		</content>
+	</include>
+	<include name="CustomSubMenu">
+		<content>
+			<include>skinshortcuts-submenu</include>
+		</content>
+	</include>
+	<include name="NowPlayingVideoWidget">
+		<!-- Video Info -->
+		<control type="group">
+			<left>15</left>
+			<top>590</top>
+			<visible>Player.HasVideo + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
+			<visible>!System.HasModalDialog</visible>
+			<include>VisibleFadeEffect</include>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
+				<effect type="fade" start="50" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+			</animation>
+			<control type="image">
+				<description>background image</description>
+				<left>16</left>
+				<top>16</top>
+				<width>768</width>
+				<height>174</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="image">
+				<left>33</left>
+				<top>33</top>
+				<width>110</width>
+				<height>141</height>
+				<texture fallback="DefaultVideoCover.png">$VAR[HomeNowPlayingThumbVar]</texture>
+				<aspectratio align="left">keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>155</left>
+				<top>34</top>
+				<width>595</width>
+				<height>50</height>
+				<label>10522</label>
+				<font>font15_title</font>
+				<textcolor>themecolor</textcolor>
+			</control>
+			<control type="fadelabel">
+				<left>155</left>
+				<top>86</top>
+				<width>595</width>
+				<height>30</height>
+				<font>font15</font>
+				<label>$VAR[HomePlayingTitleVar]</label>
+				<textcolor>grey</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+			</control>
+			<control type="label">
+				<left>155</left>
+				<top>130</top>
+				<width>595</width>
+				<height>30</height>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
+				<font>font15</font>
+				<textcolor>grey</textcolor>
+			</control>
+		</control>
+	</include>
+	<include name="NowRecordingVideoWidget">
+		<!-- Recording Info -->
+		<control type="group">
+			<left>15</left>
+			<top>590</top>
+			<visible>Pvr.IsRecording + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
+			<visible>!System.HasModalDialog</visible>
+			<include>VisibleFadeEffect</include>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
+				<effect type="fade" start="50" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+			</animation>
+			<control type="image">
+				<description>background image</description>
+				<left>16</left>
+				<top>16</top>
+				<width>768</width>
+				<height>174</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="image">
+				<left>33</left>
+				<top>33</top>
+				<width>110</width>
+				<height>141</height>
+				<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NowRecordingChannelIcon]</texture>
+				<aspectratio align="left" aligny="center">keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>155</left>
+				<top>34</top>
+				<width>595</width>
+				<height>50</height>
+				<label>19158</label>
+				<font>font15_title</font>
+				<textcolor>themecolor</textcolor>
+			</control>
+			<control type="fadelabel">
+				<left>155</left>
+				<top>86</top>
+				<width>595</width>
+				<height>30</height>
+				<font>font15</font>
+				<label>$INFO[Pvr.NowRecordingChannel,$LOCALIZE[19029]: ,]</label>
+				<textcolor>grey</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+			</control>
+			<control type="fadelabel">
+				<left>155</left>
+				<top>130</top>
+				<width>595</width>
+				<height>30</height>
+				<label>$INFO[Pvr.NowRecordingTitle]</label>
+				<font>font15</font>
+				<textcolor>grey</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+			</control>
+		</control>
+	</include>
+	<include name="NowPlayingMusicWidget">
+		<!-- Music Info -->
+		<control type="group">
+			<left>15</left>
+			<top>590</top>
+			<visible>Player.HasAudio + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
+			<visible>!System.HasModalDialog</visible>
+			<include>VisibleFadeEffect</include>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
+				<effect type="fade" start="50" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+			</animation>
+			<control type="image">
+				<description>background image</description>
+				<left>16</left>
+				<top>16</top>
+				<width>768</width>
+				<height>174</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="image">
+				<left>33</left>
+				<top>33</top>
+				<width>110</width>
+				<height>141</height>
+				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio  align="left" aligny="center">keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>155</left>
+				<top>34</top>
+				<width>595</width>
+				<height>50</height>
+				<label>10517</label>
+				<font>font15_title</font>
+				<textcolor>themecolor</textcolor>
+			</control>
+			<control type="fadelabel">
+				<left>155</left>
+				<top>86</top>
+				<width>595</width>
+				<height>30</height>
+				<font>font15</font>
+				<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.TrackNumber, - ,. ]$INFO[Player.Title]</label>
+				<textcolor>grey</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+			</control>
+			<control type="label">
+				<left>155</left>
+				<top>130</top>
+				<width>595</width>
+				<height>30</height>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
+				<font>font15</font>
+				<textcolor>grey</textcolor>
+			</control>
+		</control>
+	</include>
+	<include name="RSSFeedWidget">
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="1920,0" end="0,0" delay="300" time="480" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+			</animation>
+			<control type="image">
+				<left>0</left>
+				<width>1920</width>
+				<height>87</height>
+				<texture>home/submenu_bar.png</texture>
+			</control>
+			<control type="label">
+				<left>1880</left>
+				<top>-2</top>
+				<width>40</width>
+				<height>41</height>
+				<label></label>
+				<font>IconSmall</font>
+				<textcolor>themecolor</textcolor>
+			</control>
+			<control type="rss">
+				<description>RSS feed</description>
+				<left>10</left>
+				<top>-2</top>
+				<height>25</height>
+				<width>1860</width>
+				<font>font13</font>
+				<urlset>1</urlset>
+				<textcolor>themecolor</textcolor>
+				<titlecolor>themecolor</titlecolor>
+				<headlinecolor>grey</headlinecolor>
+				<shadowcolor>shadow</shadowcolor>
+			</control>
+		</control>
+	</include>
+</includes>

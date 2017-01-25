@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">202</defaultcontrol>
+	<controls>
+		<control type="group">
+			<visible>Player.HasAudio + !Window.IsActive(Visualisation)</visible>
+			<animation effect="slide" start="0,-106" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="0,-106" start="0,0" time="400" tween="quadratic">WindowClose</animation>
+			<animation effect="slide" start="0,-106" end="0,0" time="400" tween="quadratic">VisibleChange</animation>
+			<control type="image">
+				<width>1920</width>
+				<height>106</height>
+				<texture border="4">dialogs/InfoBar.png</texture>
+			</control>
+			<control type="grouplist" id="202">
+				<defaultcontrol always="true">602</defaultcontrol>
+				<height>144</height>
+				<width>1920</width>
+				<align>center</align>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<control type="button" id="700">
+					<texturefocus>osd/buttons/OSDPlaylist.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPlaylist.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+				</control>
+				<control type="button" id="600">
+					<texturefocus>osd/buttons/OSDPrevTrack.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPrevTrack.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="601">
+					<texturefocus>osd/buttons/OSDRewind.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRewind.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="togglebutton" id="602">
+					<texturefocus>osd/buttons/OSDPause.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPause.png</texturenofocus>
+					<alttexturefocus>osd/buttons/OSDPlay.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPlay.png</alttexturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="603">
+					<texturefocus>osd/buttons/OSDStop.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDStop.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Stop)</onclick>
+					<onclick>close</onclick>
+				</control>
+				<control type="button" id="604">
+					<texturefocus>osd/buttons/OSDForward.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDForward.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="605">
+					<texturefocus>osd/buttons/OSDNextTrack.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDNextTrack.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+				<control type="togglebutton" id="704">
+					<texturefocus>osd/buttons/OSDRandomOff.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRandomOff.png</texturenofocus>
+					<alttexturefocus>osd/buttons/OSDRandomOn.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRandomOn.png</alttexturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<usealttexture>Playlist.IsRandom</usealttexture>
+					<onclick>PlayerControl(Random)</onclick>
+				</control>
+				<control type="button" id="707">
+					<width>0.1</width>
+					<height>0.1</height>
+					<texturefocus />
+					<texturenofocus />
+					<label />
+					<font />
+					<onclick>PlayerControl(Repeat)</onclick>
+				</control>
+				<control type="image" id="708">
+					<texture colordiffuse="$VAR[RepeatButtonColordiffuseVar]">$VAR[OSDRepeatButtonVar]</texture>
+					<width>100</width>
+					<height>100</height>
+				</control>
+				<control type="button" id="606">
+					<texturefocus>osd/buttons/OSDChannelList.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelList.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>Dialog.Close(All,true)</onclick>
+					<onclick>Fullscreen</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

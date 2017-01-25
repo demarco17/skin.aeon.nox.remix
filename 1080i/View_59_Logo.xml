@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_59_Logo">
+		<control type="group">
+			<visible>Control.IsVisible(59)</visible>
+			<include>ViewAnimation</include>
+			<control type="wraplist" id="59">
+				<top>800</top>
+				<width>1920</width>
+				<height>210</height>
+				<onleft>59</onleft>
+				<onright>59</onright>
+				<onup>SetProperty(MediaMenu,True,home)</onup>
+				<onup>9050</onup>
+				<ondown>61</ondown>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>0</scrolltime>
+				<preloaditems>2</preloaditems>
+				<viewtype label="31084">Icon</viewtype>
+				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
+				<orientation>horizontal</orientation>
+				<itemlayout width="640" height="210" />
+				<focusedlayout width="640" height="210">
+					<control type="group">
+						<animation effect="fade" time="400" reversible="false">Focus</animation>
+						<control type="image">
+							<left>660</left>
+							<width>600</width>
+							<height>200</height>
+							<aspectratio align="center" aligny="bottom">keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+						</control>
+						<control type="textbox">
+							<left>660</left>
+							<width>600</width>
+							<height>205</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<font>font_LogoAlt</font> 
+							<label>$VAR[FloorLabelVar]</label>
+							<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="61">
+				<top>1068</top>
+				<width>1920</width>
+				<height>12</height>
+				<onup>59</onup>
+				<ondown>59</ondown>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+				<showonepage>false</showonepage>
+				<orientation>horizontal</orientation>
+				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+			</control>
+		</control>
+	</include>
+</includes>

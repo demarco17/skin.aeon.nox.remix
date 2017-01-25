@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.aeon.nox.remix" version="1.0.0" name="Aeon Nox Remix" provider-name="BigNoid | Steveb">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+		<import addon="resource.images.studios.white" version="0.0.1"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.75">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Aeon Nox Remix: Modded by Steveb</summary>
+		<description lang="en">A modded version of Aeon Nox 5.[CR]Extensive thanks to BigNoid for creating such a great skin!</description>
+		<disclaimer lang="en">Mouse and touchscreen use not supported</disclaimer>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<news lang="en">Kodi Krypton compatible (v17).</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.png</fanart>
+			<screenshot>resources/screenshot-01.png</screenshot>
+			<screenshot>resources/screenshot-02.png</screenshot>
+			<screenshot>resources/screenshot-03.png</screenshot>
+			<screenshot>resources/screenshot-04.png</screenshot>
+			<screenshot>resources/screenshot-05.png</screenshot>
+			<screenshot>resources/screenshot-06.png</screenshot>
+			<screenshot>resources/screenshot-07.png</screenshot>
+			<screenshot>resources/screenshot-08.png</screenshot>
+			<screenshot>resources/screenshot-09.png</screenshot>
+			<screenshot>resources/screenshot-10.png</screenshot>
+			<screenshot>resources/screenshot-11.png</screenshot>
+			<screenshot>resources/screenshot-12.png</screenshot>
+		</assets>
+	</extension>
+</addon>

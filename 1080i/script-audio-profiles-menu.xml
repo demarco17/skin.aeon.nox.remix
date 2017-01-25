@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10070</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<left>671</left>
+		<top>400</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<description>BG</description>
+			<left>16</left>
+			<top>16</top>
+			<width>546</width>
+			<control type="image">
+				<height>154</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
+				<visible>String.IsEqual(Window(10000).Property(script.audio.profiles_items),1)</visible>
+			</control>
+			<control type="image">
+				<height>214</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
+				<visible>String.IsEqual(Window(10000).Property(script.audio.profiles_items),2)</visible>
+			</control>
+			<control type="image">
+				<height>274</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
+				<visible>String.IsEqual(Window(10000).Property(script.audio.profiles_items),3)</visible>
+			</control>
+			<control type="image">
+				<height>334</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
+				<visible>String.IsEqual(Window(10000).Property(script.audio.profiles_items),4)</visible>
+			</control>
+		</control>
+		<control type="label" id="10071">
+			<description>title</description>
+			<left>32</left>
+			<top>32</top>
+			<width>514</width>
+			<height>40</height>
+			<align>center</align>
+			<font>font14_title</font>
+			<textcolor>dialogheader</textcolor>
+		</control>
+		<control type="list" id="10070">
+			<description>button list</description>
+			<left>32</left>
+			<top>88</top>
+			<width>514</width>
+			<height>240</height>
+			<itemlayout width="514" height="60">
+				<control type="image">
+					<width>514</width>
+					<height>60</height>
+					<texture  border="4">dialogs/separator2.png</texture>
+				</control>
+				<control type="label">
+					<width>514</width>
+					<height>60</height>
+					<font>font14</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout width="514" height="60">
+				<control type="image">
+					<width>514</width>
+					<height>60</height>
+					<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+				</control>
+				<control type="label">
+					<width>514</width>
+					<height>60</height>
+					<font>font14</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

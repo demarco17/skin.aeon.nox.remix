@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="CommonBackground">
+		<control type="group">
+			<animation effect="fade" time="400">WindowOpen</animation>
+			<animation effect="fade" time="400">WindowClose</animation>
+			<include condition="Window.IsActive(home)">HomeFanart</include>
+			<include condition="![Window.IsActive(home) | Window.IsActive(weather)]">GlobalFanart</include>
+			<include condition="Window.IsActive(weather)">WeatherBackground</include>
+		</control>
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(Disable.ShowBackgroundVis) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + ![Window.IsVisible(tvchannels) | Window.IsVisible(radiochannels)] + !SlideShow.IsActive</visible>
+		</control>
+		<control type="group">
+			<visible>Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo) + ![Window.IsVisible(tvchannels) | Window.IsVisible(radiochannels)] + !SlideShow.IsActive</visible>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>dialogs/black.png</texture>
+			</control>
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+			</control>
+		</control>
+		<control type="group">
+			<visible>![Window.IsActive(home) | Window.IsActive(startup)]</visible>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture border="1">dialogs/logo_back.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="GlobalFanart">
+		<control type="list" id="9033">
+			<include>HiddenList</include>
+			<content>
+				<include condition="Window.IsActive(pictures)">PicturesFallback</include>
+				<include condition="Window.IsActive(music) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor)">MusicFallback</include>
+				<include condition="Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyPVRTimers.xml)">LiveTVFallback</include>
+				<include condition="Window.IsActive(programs) | Window.IsActive(addonbrowser) | Window.IsActive(1133)">AppsFallback</include>
+				<include condition="Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(filemanager) | Window.IsActive(eventlog)">SystemFallback</include>
+				<include condition="Window.IsActive(videos) | Window.IsActive(videoplaylist)">VideoFallback</include>
+			</content>
+		</control>
+		<control type="image">
+			<visible>!Control.IsVisible(508)</visible>
+			<description>Normal Default Background Image</description>
+			<include>FullscreenDimensions</include>
+			<fadetime>CrossfadeTime</fadetime>
+			<texture background="true">$VAR[GlobalBackgroundVar]</texture>
+		</control>
+		<control type="image">
+			<visible>Control.IsVisible(508)</visible>
+			<description>KodiFlix Background Image</description>
+			<left>500</left>
+			<width>1420</width>
+			<height>855</height>
+			<fadetime>CrossfadeTime</fadetime>
+			<aspectratio align="left">scale</aspectratio>
+			<texture background="true" diffuse="thumbs/fanart_diffuse.png">$VAR[GlobalBackgroundVar]</texture>
+		</control>
+	</include>
+	<include name="HomeFanart">
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<include>FullscreenDimensions</include>
+			<fadetime>CrossfadeTime</fadetime>
+			<texture background="true">$VAR[HomeBackgroundVar]</texture>
+		</control>
+	</include>
+	<include name="WeatherBackground">
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath background="true">$VAR[WeatherFanartPath]</imagepath>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="400">WindowOpen</animation>
+			<animation effect="fade" time="400">WindowClose</animation>
+		</control>
+	</include>
+	<include name="TVShowNextAiredBackground">
+		<control type="image">
+			<animation effect="fade" time="400">Visible</animation>
+			<animation effect="fade" time="400">Hidden</animation>
+			<include>FullscreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$VAR[NextAiredFanart]</texture>
+			<fadetime>CrossfadeTime</fadetime>
+		</control>
+		<control type="group">
+			<include>ViewAnimation</include>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture border="1">dialogs/logo_back.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="VideoFallback">
+		<item>
+			<onclick>noop</onclick>
+			<thumb>$INFO[Skin.String(Videos.Fallback)]</thumb>
+		</item>
+	</include>
+	<include name="MusicFallback">
+		<item>
+			<onclick>noop</onclick>
+			<thumb>$INFO[Skin.String(Music.Fallback)]</thumb>
+		</item>
+	</include>
+	<include name="SystemFallback">
+		<item>
+			<onclick>noop</onclick>
+			<thumb>$INFO[Skin.String(System.Fallback)]</thumb>
+		</item>
+	</include>
+	<include name="LiveTVFallback">
+		<item>
+			<onclick>noop</onclick>
+			<thumb>$INFO[Skin.String(LiveTV.Fallback)]</thumb>
+		</item>
+	</include>
+	<include name="PicturesFallback">
+		<item>
+			<onclick>noop</onclick>
+			<thumb>$INFO[Skin.String(Pictures.Fallback)]</thumb>
+		</item>
+	</include>
+	<include name="AppsFallback">
+		<item>
+			<onclick>noop</onclick>
+			<thumb>$INFO[Skin.String(Apps.Fallback)]</thumb>
+		</item>
+	</include>
+	<include name="ShowCaseInfoPanel">
+		<control type="group" id="12000">
+			<visible>!String.IsEmpty(Control.GetLabel(4420)) + Control.IsVisible(4420)</visible>
+			<animation effect="slide" start="0,-1200" end="0,0" time="720" tween="cubic">VisibleChange</animation>
+			<animation effect="slide" start="0,-1200" end="0,0" time="720" tween="cubic">WindowOpen</animation>
+			<animation effect="slide" end="0,-1200" start="0,0" time="720" tween="cubic">WindowClose</animation>
+			<top>55</top>
+			<control type="image">
+				<description>background image</description>
+				<left>122</left>
+				<top>146</top>
+				<width>1674</width>
+				<height>720</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(Control.GetLabel(4420),1) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
+				<include>SettingsFadeEffect</include>
+				<control type="grouplist">
+					<left>138</left>
+					<top>162</top>
+					<control type="button">
+						<label>$VAR[InfoPanelLabel1Var]</label>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+					</control>
+					<control type="button">
+						<label>$VAR[InfoPanelLabel2Var]</label>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+					</control>
+				</control>
+				<control type="image">
+					<left>638</left>
+					<top>162</top>
+					<width>2</width>
+					<height>179</height>
+					<texture border="1">dialogs/separator3.png</texture>
+				</control>
+				<control type="grouplist">
+					<left>639</left>
+					<top>162</top>
+					<control type="button">
+						<label>$VAR[InfoPanelLabel3Var]</label>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+					</control>
+					<control type="group">
+						<control type="button">
+							<label>$VAR[InfoPanelLabel4Var]</label>
+							<width>251</width>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+						</control>
+						<control type="image">
+							<top>-1</top>
+							<left>251</left>
+							<width>2</width>
+							<height>90</height>
+							<texture border="1">dialogs/separator3.png</texture>
+						</control>
+						<control type="button">
+							<label>$VAR[InfoPanelLabel5Var]</label>
+							<left>251</left>
+							<width>250</width>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsCollection</visible>
+					<control type="textbox">
+						<label>$VAR[VideoPlotVar]</label>
+						<top>342</top>
+						<left>152</left>
+						<width>970</width>
+						<height>170</height>
+						<font>font14_textbox2</font>
+						<pagecontrol>62</pagecontrol>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+						<textcolor>grey</textcolor>
+						<visible>!ListItem.IsCollection</visible>
+					</control>
+					<control type="scrollbar" id="62">
+						<top>342</top>
+						<left>1130</left>
+						<width>10</width>
+						<height>180</height>
+						<onup>SetProperty(MediaMenu,True,home)</onup>
+						<onup>9050</onup>
+						<onleft condition="Control.IsVisible(53)">53</onleft>
+						<onleft condition="Control.IsVisible(52)">52</onleft>
+						<onright condition="Control.IsVisible(53)">53</onright>
+						<onright condition="Control.IsVisible(52)">52</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="group">
+					<left>152</left>
+					<top>342</top>
+					<visible>ListItem.IsCollection</visible>
+					<include content="InfoList">
+						<param name="list_id">5005</param>
+						<param name="header_label">$LOCALIZE[342]:$INFO[Container(5005).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
+						<param name="height">140</param>
+						<param name="width">970</param>
+					</include>
+					<control type="scrollbar" id="64">
+						<left>978</left>
+						<width>10</width>
+						<height>180</height>
+						<onup>SetProperty(MediaMenu,True,home)</onup>
+						<onup>9050</onup>
+						<onleft condition="Control.IsVisible(53)">53</onleft>
+						<onleft condition="Control.IsVisible(52)">52</onleft>
+						<onright condition="Control.IsVisible(53)">53</onright>
+						<onright condition="Control.IsVisible(52)">52</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="image">
+					<left>138</left>
+					<top>464</top>
+					<width>1643</width>
+					<height>60</height>
+					<texture border="4">dialogs/separator2.png</texture>
+				</control>
+				<control type="image">
+					<left>1140</left>
+					<top>162</top>
+					<width>640</width>
+					<height>360</height>
+					<fadetime>CrossfadeTime</fadetime>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(fanart)]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(Control.GetLabel(4420),2) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
+				<include>SettingsFadeEffect</include>
+				<control type="grouplist">
+					<left>138</left>
+					<top>162</top>
+					<control type="button">
+						<label>$VAR[InfoPanelLabel1Var]</label>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+					</control>
+					<control type="button">
+						<label>$VAR[InfoPanelLabel2Var]</label>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+					</control>
+					<control type="button">
+						<label>$VAR[InfoPanelLabel3Var]</label>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+					</control>
+					<control type="group">
+						<control type="button">
+							<label>$VAR[InfoPanelLabel4Var]</label>
+							<width>251</width>
+							<height>92</height>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+						</control>
+						<control type="image">
+							<left>251</left>
+							<top>-1</top>
+							<width>2</width>
+							<height>91</height>
+							<texture border="1">dialogs/separator3.png</texture>
+						</control>
+						<control type="button">
+							<label>$VAR[InfoPanelLabel5Var]</label>
+							<left>251</left>
+							<width>250</width>
+							<height>92</height>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+						</control>
+					</control>
+				</control>
+				<control type="image">
+					<left>638</left>
+					<top>162</top>
+					<width>2</width>
+					<height>360</height>
+					<texture border="1">dialogs/separator3.png</texture>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsCollection</visible>
+					<control type="textbox">
+						<left>655</left>
+						<label>$VAR[VideoPlotVar]</label>
+						<top>162</top>
+						<width>855</width>
+						<height>344</height>
+						<font>font14_textbox2</font>
+						<pagecontrol>62</pagecontrol>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+						<textcolor>grey</textcolor>
+						<visible>!ListItem.IsCollection</visible>
+					</control>
+					<control type="scrollbar" id="62">
+						<top>162</top>
+						<left>1525</left>
+						<width>10</width>
+						<height>360</height>
+						<onup>SetProperty(MediaMenu,True,home)</onup>
+						<onup>9050</onup>
+						<onleft condition="Control.IsVisible(53)">53</onleft>
+						<onleft condition="Control.IsVisible(52)">52</onleft>
+						<onright condition="Control.IsVisible(53)">53</onright>
+						<onright condition="Control.IsVisible(52)">52</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="group">
+					<left>655</left>
+					<top>162</top>
+					<visible>ListItem.IsCollection</visible>
+					<include content="InfoList">
+						<param name="list_id">5006</param>
+						<param name="header_label">$LOCALIZE[342]:$INFO[Container(5006).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
+						<param name="height">310</param>
+						<param name="width">855</param>
+					</include>
+					<control type="scrollbar" id="64">
+						<left>870</left>
+						<width>10</width>
+						<height>360</height>
+						<onup>SetProperty(MediaMenu,True,home)</onup>
+						<onup>9050</onup>
+						<onleft condition="Control.IsVisible(53)">53</onleft>
+						<onleft condition="Control.IsVisible(52)">52</onleft>
+						<onright condition="Control.IsVisible(53)">53</onright>
+						<onright condition="Control.IsVisible(52)">52</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="image">
+					<left>637</left>
+					<top>464</top>
+					<width>1141</width>
+					<height>60</height>
+					<texture border="4">dialogs/separator2.png</texture>
+				</control>
+				<control type="image">
+					<left>1535</left>
+					<top>162</top>
+					<width>245</width>
+					<height>360</height>
+					<fadetime>CrossfadeTime</fadetime>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$VAR[PosterThumbVar]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="ShowCaseMusicInfoPanel">
+		<control type="group" id="12001">
+			<visible>!String.IsEmpty(Control.GetLabel(4420))</visible>
+			<animation effect="slide" start="0,-1200" end="0,0" time="720" tween="cubic">VisibleChange</animation>
+			<animation effect="slide" start="0,-1200" end="0,0" time="720" tween="cubic">WindowOpen</animation>
+			<animation effect="slide" end="0,-1200" start="0,0" time="720" tween="cubic">WindowClose</animation>
+			<top>85</top>
+			<control type="image">
+				<description>background image</description>
+				<left>122</left>
+				<top>146</top>
+				<width>1674</width>
+				<height>680</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(Control.GetLabel(4420),1)</visible>
+				<include>SettingsFadeEffect</include>
+				<control type="group">
+					<visible>Container.Content(albums) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
+					<control type="grouplist">
+						<left>137</left>
+						<top>162</top>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>!String.IsEmpty(ListItem.Genre)</visible>
+						</control>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>String.IsEmpty(ListItem.Genre)</visible>
+						</control>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[21899]:[/COLOR][CR]$INFO[ListItem.Property(Album_Label)]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
+						</control>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[21899]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>String.IsEmpty(ListItem.Property(Album_Label))</visible>
+						</control>
+					</control>
+					<control type="image">
+						<left>638</left>
+						<top>162</top>
+						<width>2</width>
+						<height>179</height>
+						<texture border="1">dialogs/separator3.png</texture>
+					</control>
+					<control type="grouplist">
+						<left>640</left>
+						<top>162</top>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[175]:[/COLOR][CR]$INFO[ListItem.Property(Album_Mood)]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
+						</control>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[175]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>String.IsEmpty(ListItem.Property(Album_Mood))</visible>
+						</control>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[176]:[/COLOR][CR]$INFO[ListItem.Property(Album_Style)]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
+						</control>
+						<control type="button">
+							<label>[COLOR themecolor]$LOCALIZE[176]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>String.IsEmpty(ListItem.Property(Album_Style))</visible>
+						</control>
+					</control>
+					<control type="textbox">
+						<label>$VAR[MusicPlotVar,[COLOR themecolor]$LOCALIZE[183]:[CR][/COLOR]]</label>
+						<top>342</top>
+						<left>152</left>
+						<width>970</width>
+						<height>180</height>
+						<font>font14_textbox2</font>
+						<pagecontrol>62</pagecontrol>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(63)</autoscroll>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="scrollbar" id="62">
+						<top>342</top>
+						<left>1132</left>
+						<width>10</width>
+						<height>180</height>
+						<onup>SetProperty(MediaMenu,True,home)</onup>
+						<onup>9050</onup>
+						<onleft>54</onleft>
+						<onright>54</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Container.Content(artists) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
+					<control type="textbox">
+						<label>$VAR[MusicPlotVar,[COLOR themecolor]$LOCALIZE[21887]:[CR][/COLOR]]</label>
+						<top>162</top>
+						<left>152</left>
+						<width>940</width>
+						<height>350</height>
+						<font>font14_textbox2</font>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+						<pagecontrol>62</pagecontrol>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="scrollbar" id="62">
+						<top>162</top>
+						<left>1132</left>
+						<width>10</width>
+						<height>357</height>
+						<onup>SetProperty(MediaMenu,True,home)</onup>
+						<onup>9050</onup>
+						<onleft>54</onleft>
+						<onright>54</onright>
+						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+				<control type="image">
+					<left>137</left>
+					<top>464</top>
+					<width>1643</width>
+					<height>60</height>
+					<texture border="4">dialogs/separator2.png</texture>
+				</control>
+				<control type="image">
+					<left>1142</left>
+					<top>162</top>
+					<width>640</width>
+					<height>360</height>
+					<fadetime>CrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="FanartTitle">
+		<control type="label">
+			<animation effect="fade" time="400">WindowOpen</animation>
+			<animation effect="fade" time="300">WindowClose</animation>
+			<include>VisibleFadeEffect</include>
+			<top>1000</top>
+			<width>1920</width>
+			<height>80</height>
+			<font>font14</font>
+			<textcolor>F0FFFFFF</textcolor>
+			<shadowcolor>F0000000</shadowcolor>
+			<align>right</align>
+			<textoffsetx>40</textoffsetx>
+			<label>$VAR[FanartTitleVar]</label>
+			<visible>!Player.HasVideo | Skin.HasSetting(Disable.ShowBackgroundVideo)</visible>
+		</control>
+	</include>
+</includes>

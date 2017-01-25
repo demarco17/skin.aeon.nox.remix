@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1133" type="window">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onload condition="String.IsEmpty(Skin.String(CustomAppsView))">Skin.SetString(CustomAppsView,$LOCALIZE[535])</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>ViewAnimation</include>
+			<visible>!Window.IsActive(addoninformation)</visible>
+			<control type="group">
+				<left>100</left>
+				<top>-40</top>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>164</top>
+					<width>452</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="panel" id="50">
+					<top>180</top>
+					<width>420</width>
+					<height>840</height>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>SetFocus(9050)</onleft>
+					<onright>51</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="120" width="420">
+						<control type="image">
+							<width>4420</width>
+							<height>120</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<top>25</top>
+							<width>420</width>
+							<height>70</height>
+							<font>font30</font>
+							<textcolor>grey</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<textoffsetx>20</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="120" width="420">
+						<control type="image">
+							<width>420</width>
+							<height>120</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>419</width>
+							<height>118</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(50)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<top>25</top>
+							<width>420</width>
+							<height>70</height>
+							<font>font30</font>
+							<selectedcolor>selected</selectedcolor>
+							<textoffsetx>20</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$LOCALIZE[1043]</label>
+							<property name="AppsTarget">programs</property>
+							<property name="AppsContent">addons://sources/executable/</property>
+							<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[1037]</label>
+							<property name="AppsTarget">videos</property>
+							<property name="AppsContent">addons://sources/video/</property>
+							<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[1038]</label>
+							<property name="AppsTarget">music</property>
+							<property name="AppsContent">addons://sources/audio/</property>
+							<onclick>ActivateWindow(Music,Addons,return)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[1039]</label>
+							<property name="AppsTarget">pictures</property>
+							<property name="AppsContent">addons://sources/image/</property>
+							<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[20244]</label>
+							<property name="AppsTarget">programs</property>
+							<property name="AppsContent">androidapp://sources/apps/</property>
+							<onclick>ActivateWindow(programs,androidapp://sources/apps/,return)</onclick>
+							<visible>System.Platform.Android</visible>
+						</item>
+					</content>
+				</control>
+			</control>
+			<control type="group">
+				<left>624</left>
+				<control type="image">
+					<description>background image</description>
+					<left>-16</left>
+					<top>124</top>
+					<width>1232</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="panel" id="51">
+					<top>140</top>
+					<width>1200</width>
+					<height>840</height>
+					<onleft>50</onleft>
+					<onright>61</onright>
+					<onup>51</onup>
+					<ondown>51</ondown>
+					<animation effect="fade" start="100" end="0" time="300" condition="Container(51).IsUpdating">conditional</animation>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<include>VisibleFadeEffect</include>
+					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[535])</visible>
+					<itemlayout height="120" width="1200">
+						<control type="image">
+							<width>1200</width>
+							<height>120</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>7</top>
+							<width>105</width>
+							<height>105</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<width>940</width>
+							<height>70</height>
+							<font>font30</font>
+							<textcolor>grey</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>50</top>
+							<width>1050</width>
+							<height>60</height>
+							<font>font15</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.AddonSummary]</label>
+						</control>
+						<control type="label">
+							<width>1200</width>
+							<height>60</height>
+							<font>font15</font>
+							<align>right</align>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.AddonVersion]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="120" width="1200">
+						<control type="image">
+							<width>1200</width>
+							<height>120</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>1199</width>
+							<height>118</height>
+							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(51)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>7</top>
+							<width>105</width>
+							<height>105</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<width>940</width>
+							<height>70</height>
+							<font>font30</font>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>50</top>
+							<width>1050</width>
+							<height>60</height>
+							<font>font15</font>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.AddonSummary]</label>
+						</control>
+						<control type="label">
+							<width>1200</width>
+							<height>60</height>
+							<font>font15</font>
+							<align>right</align>
+							<textoffsetx>15</textoffsetx>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.AddonVersion]</label>
+						</control>
+					</focusedlayout>
+					<content target="$INFO[Container(50).ListItem.Property(AppsTarget)]" sortby="lastused" sortorder="descending">$INFO[Container(50).ListItem.Property(AppsContent)]</content>
+				</control>
+				<control type="panel" id="51">
+					<top>140</top>
+					<width>1200</width>
+					<height>720</height>
+					<onleft>50</onleft>
+					<onright>61</onright>
+					<onup>51</onup>
+					<ondown>51</ondown>
+					<animation effect="fade" start="100" end="0" time="300" condition="Container(51).IsUpdating">conditional</animation>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<include>VisibleFadeEffect</include>
+					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[31010])</visible>
+					<itemlayout height="240" width="240">
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+							<bordersize>2</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="240" width="240">
+						<control type="group">
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+							</animation>
+							<control type="image">
+								<width>240</width>
+								<height>240</height>
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordersize>5</bordersize>
+							</control>
+						</control>
+					</focusedlayout>
+					<content target="$INFO[Container(50).ListItem.Property(AppsTarget)]" sortby="lastused" sortorder="descending">$INFO[Container(50).ListItem.Property(AppsContent)]</content>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[31010])</visible>
+					<top>800</top>
+					<control type="image">
+						<width>1200</width>
+						<height>60</height>
+						<texture border="4">dialogs/separator2.png</texture>
+					</control>
+					<control type="group">
+						<visible>Control.HasFocus(51)</visible>
+						<include>VisibleFadeEffect</include>
+						<control type="label">
+							<top>80</top>
+							<width>1200</width>
+							<height>50</height>
+							<font>font16_title_bold</font>
+							<textcolor>grey</textcolor>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[Container(51).ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<top>120</top>
+							<width>1200</width>
+							<height>50</height>
+							<font>font13_title</font>
+							<textcolor>grey3</textcolor>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[Container(51).ListItem.AddonSummary]</label>
+						</control>
+						<control type="label">
+							<top>80</top>
+							<width>1200</width>
+							<height>50</height>
+							<font>font16_title_bold</font>
+							<textcolor>grey</textcolor>
+							<textoffsetx>15</textoffsetx>
+							<align>right</align>
+							<label>$INFO[Container(51).ListItem.AddonVersion]</label>
+						</control>
+					</control>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>1201</left>
+					<top>140</top>
+					<width>12</width>
+					<height>840</height>
+					<onleft>51</onleft>
+					<onright>noop</onright>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<include>Topbar</include>
+		<control type="group">
+			<left>-440</left>
+			<include>SideBladeLeft</include>
+			<control type="grouplist" id="9050">
+				<top>100</top>
+				<width>400</width>
+				<height>1080</height>
+				<onleft>noop</onleft>
+				<onright>ClearProperty(MediaMenu,Home)</onright>
+				<onright>50</onright>
+				<onup>9050</onup>
+				<ondown>9050</ondown>
+				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
+				<control type="button" id="200">
+					<description>View options header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31006</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="201">
+					<description>View As button</description>
+					<textwidth>352</textwidth>
+					<label>$LOCALIZE[24140]:$INFO[Skin.String(CustomAppsView), ,]</label>
+					<label2>[COLOR themecolor]$LOCALIZE[12312][/COLOR]</label2>
+					<include>ButtonCommonValues</include>
+					<onclick>$VAR[CustomAppsViewVar]</onclick>
+				</control>
+				<control type="button" id="202">
+					<description>Actions header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31039</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="203">
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[10040]</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>ActivateWindow(addonbrowser,root)</onclick>
+				</control>
+				<control type="button" id="204">
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[10140]</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>ActivateWindow(systemsettings,addons)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

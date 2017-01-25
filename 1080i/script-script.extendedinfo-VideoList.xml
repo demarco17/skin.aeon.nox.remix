@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<views>500</views>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<controls>
+		<control type="image">
+			<animation effect="fade" time="300">WindowOpen</animation>
+			<animation effect="fade" time="300">WindowClose</animation>
+			<texture background="true" fallback="dialogs/black.png">$INFO[ListItem.Art(fanart_small)]</texture>
+			<include>FullscreenDimensions</include>
+			<aspectratio aligny="top">scale</aspectratio>
+			<fadetime>CrossfadeTime</fadetime>
+		</control>
+		<control type="group">
+			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" start="0,0" end="0,1080">WindowClose</animation>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture border="1">dialogs/logo_back.png</texture>
+				<include>ViewAnimation</include>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>106</left>
+				<top>185</top>
+				<width>1708</width>
+				<height>752</height>
+				<texture border="18">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="panel" id="500">
+				<left>120</left>
+				<top>200</top>
+				<width>1200</width>
+				<height>720</height>
+				<viewtype label="31010">icon</viewtype>
+				<scrolltime tween="quadratic">300</scrolltime>
+				<onleft>9000</onleft>
+				<onright>500</onright>
+				<onup>700</onup>
+				<ondown>600</ondown>
+				<oninfo>Action(Select)</oninfo>
+				<orientation>vertical</orientation>
+				<itemlayout height="360" width="240">
+					<control type="group">
+						<control type="image">
+							<width>240</width>
+							<height>360</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="DefaultMovieTitle.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+							<bordersize>2</bordersize>
+						</control>
+						<control type="image">
+							<left>178</left>
+							<width>60</width>
+							<height>60</height>
+							<texture>overlays/OverlayHardDisk.png</texture>
+							<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="360" width="240">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						</animation>
+						<control type="image">
+							<width>240</width>
+							<height>360</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="DefaultMovieTitle.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<left>178</left>
+							<top>5</top>
+							<width>60</width>
+							<height>60</height>
+							<texture>overlays/OverlayHardDisk.png</texture>
+							<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<left>1335</left>
+				<control type="image">
+					<left>-3</left>
+					<top>200</top>
+					<width>2</width>
+					<height>720</height>
+					<texture border="1">dialogs/separator3.png</texture>
+				</control>
+				<control type="image">
+					<top>202</top>
+					<width>462</width>
+					<height>262</height>
+					<fadetime>CrossfadeTime</fadetime>
+					<aspectratio>scale</aspectratio>
+					<texture>$INFO[ListItem.Art(fanart_small)]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="button">
+					<top>470</top>
+					<width>465</width>
+					<label>$INFO[ListItem.Genre][CR]$INFO[ListItem.Year]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Votes, (, $ADDON[script.extendedinfo 32082])]</label>
+					<include>ShowCaseInfoPanelButtonsValues</include>
+				</control>
+				<control type="textbox">
+					<left>15</left>
+					<top>565</top>
+					<width>445</width>
+					<height>345</height>
+					<label>$INFO[ListItem.Plot]</label>
+					<font>font14_textbox2</font>
+					<textcolor>grey</textcolor>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				</control>
+			</control>
+			<control type="button" id="600">
+				<onfocus>SetFocus(500)</onfocus>
+				<include>HiddenObject</include>
+			</control>
+			<control type="button" id="700">
+				<onfocus>SetFocus(500)</onfocus>
+				<include>HiddenObject</include>
+			</control>
+			<control type="group">
+				<top>-30</top>
+				<control type="group">
+					<left>90</left>
+					<top>1010</top>
+					<include>VisibleFadeEffect</include>
+					<control type="label">
+						<width>11500</width>
+						<height>42</height>
+						<aligny>top</aligny>
+						<align>left</align>
+						<font>font16_title_bold</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.UserRating,[COLOR grey3]  |  ,[/COLOR]]</label>
+						<textoffsety>-2</textoffsety>
+						<textoffsetx>30</textoffsetx>
+					</control>
+					<control type="grouplist">
+						<left>30</left>
+						<top>45</top>
+						<width>1100</width>
+						<height>30</height>
+						<align>left</align>
+						<itemgap>10</itemgap>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<width>auto</width>
+							<height>30</height>
+							<align>left</align>
+							<textcolor>grey3</textcolor>
+							<font>font13_title</font>
+							<label>$ADDON[script.extendedinfo 32023]:</label>
+						</control>
+						<control type="label">
+							<width>auto</width>
+							<height>30</height>
+							<textcolor>grey3</textcolor>
+							<font>font13_title</font>
+							<label fallback="16018">$INFO[Window.Property(Filter_Label)]</label>
+						</control>
+					</control>
+				</control>
+				<control type="image">
+					<left>1675</left>
+					<top>1010</top>
+					<include>MediaFlagVars</include>
+					<texture>flags/moviedb.png</texture>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,-43" end="0,0" time="480" condition="true">WindowOpen</animation>
+			<animation effect="slide" end="0,-43" start="0,0" time="480" condition="true">WindowClose</animation>
+			<control type="image">
+				<width>1920</width>
+				<height>43</height>
+				<texture border="4">dialogs/InfoBar.png</texture>
+			</control>
+			<control type="label">
+				<width>900</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey</textcolor>
+				<align>left</align>
+				<label>$INFO[Control.GetLabel(5001),IMDB[COLOR grey3] | [/COLOR],]</label>
+			</control>
+			<control type="label">
+				<width>1920</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+				<label>$INFO[System.Time]</label>
+			</control>
+			<control type="label">
+				<left>1020</left>
+				<width>900</width>
+				<height>40</height>
+				<font>font13_title</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey</textcolor>
+				<align>right</align>
+				<label>$INFO[Window.Property(TotalItems),, $LOCALIZE[31025]]</label>
+			</control>
+		</control>
+		<control type="group">
+			<left>-440</left>
+			<animation effect="slide" start="0,0" end="440,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic" easing="out" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<width>432</width>
+				<height>1080</height>
+				<texture border="40">dialogs/mediamenu_back.png</texture>
+			</control>
+			<control type="image">
+				<top>5</top>
+				<description>LOGO</description>
+				<width>400</width>
+				<height>100</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flags/aeon-nox-logo.png</texture>
+			</control>
+			<control type="grouplist" id="9000">
+				<top>100</top>
+				<width>400</width>
+				<height>1080</height>
+				<orientation>vertical</orientation>
+				<scroll>true</scroll>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onright>500</onright>
+				<onleft>noop</onleft>
+				<control type="button" id="5000">
+					<description>View Options Heading</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31006</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="5007">
+					<description>Type</description>
+					<label>$INFO[Window.Property(Type),$LOCALIZE[146] ,]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5001">
+					<description>Sort by:</description>
+					<label>$INFO[Window.Property(Sort_Label),$LOCALIZE[581]: ,]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5004">
+					<description>Order by:</description>
+					<label>$INFO[Window.Property(Order_Label),$LOCALIZE[21429]: ,]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="50013">
+					<description>Filter Heading</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="5002">
+					<description>Genre</description>
+					<label>515</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5003">
+					<description>Release Date</description>
+					<label>172</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5006">
+					<description>Certification</description>
+					<label>$ADDON[script.extendedinfo 32127]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5008">
+					<description>Actor/Crew</description>
+					<label>$ADDON[script.extendedinfo 32126]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5009">
+					<description>Keywords</description>
+					<label>$ADDON[script.extendedinfo 32114]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="50010">
+					<description>Studio</description>
+					<label>572</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="50012">
+					<description>Vote count</description>
+					<label>$ADDON[script.extendedinfo 32111]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="50014">
+					<description>Misc Options Heading</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31026</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="6000">
+					<description>Search</description>
+					<label>137</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<onclick>SetFocus(500)</onclick>
+				</control>
+				<control type="button" id="7000">
+					<description>My Account</description>
+					<label>$ADDON[script.extendedinfo 32024]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5005">
+					<description>Clear Filter</description>
+					<label>$ADDON[script.extendedinfo 32022]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

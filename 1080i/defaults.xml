@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<default type="image">
+		<left>0</left>
+		<top>0</top>
+	</default>
+	<default type="multiimage">
+		<aspectratio align="center">scale</aspectratio>
+		<fadetime>CrossfadeTime</fadetime>
+		<include>FullscreenDimensions</include>
+		<timeperimage>7000</timeperimage>
+		<randomize>true</randomize>
+	</default>
+	<default type="label">
+		<left>0</left>
+		<top>0</top>
+		<align>left</align>
+		<aligny>center</aligny>
+		<label />
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<selectedcolor>selected</selectedcolor>
+		<scrollspeed>30</scrollspeed>
+	</default>
+	<default type="fadelabel">
+		<left>0</left>
+		<top>0</top>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<scrollspeed>50</scrollspeed>
+	</default>
+	<default type="button">
+		<left>0</left>
+		<top>0</top>
+		<width>450</width>
+		<height>60</height>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<label />
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="togglebutton">
+		<left>0</left>
+		<top>0</top>
+		<width>30</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<alttexturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</alttexturefocus>
+		<alttexturenofocus border="4">dialogs/separator2.png</alttexturenofocus>
+		<textcolor>grey</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<aligny>center</aligny>
+		<font>font14</font>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="textbox">
+		<left>0</left>
+		<top>0</top>
+		<width>615</width>
+		<height>322</height>
+		<align>left</align>
+		<textcolor>white</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<font>font15_textbox</font>
+	</default>
+	<default type="progress">
+		<left>0</left>
+		<top>0</top>
+		<texturebg colordiffuse="80FFFFFF">dialogs/white50.png</texturebg>
+		<midtexture colordiffuse="themecolor">dialogs/white50.png</midtexture>
+		<lefttexture />
+		<righttexture />
+		<overlaytexture />
+	</default>
+	<default type="spincontrol">
+		<left>0</left>
+		<top>0</top>
+		<textureup colordiffuse="grey">settings/arrow_up.png</textureup>
+		<textureupfocus colordiffuse="themecolor">settings/arrow_up.png</textureupfocus>
+		<textureupdisabled colordiffuse="grey3">settings/arrow_up.png</textureupdisabled>
+		<texturedown colordiffuse="grey">settings/arrow_down.png</texturedown>
+		<texturedownfocus colordiffuse="themecolor">settings/arrow_down.png</texturedownfocus>
+		<texturedowndisabled colordiffuse="grey3">settings/arrow_down.png</texturedowndisabled>
+		<align>right</align>
+		<width>40</width>
+		<height>25</height>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<subtype>text</subtype>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="spincontrolex">
+		<left>0</left>
+		<top>0</top>
+		<width>450</width>
+		<height>60</height>
+		<spinwidth>40</spinwidth>
+		<spinheight>25</spinheight>
+		<textureup colordiffuse="grey">settings/arrow_up.png</textureup>
+		<textureupfocus colordiffuse="themecolor">settings/arrow_up.png</textureupfocus>
+		<textureupdisabled colordiffuse="grey3">settings/arrow_up.png</textureupdisabled>
+		<texturedown colordiffuse="grey">settings/arrow_down.png</texturedown>
+		<texturedownfocus colordiffuse="themecolor">settings/arrow_down.png</texturedownfocus>
+		<texturedowndisabled colordiffuse="grey3">settings/arrow_down.png</texturedowndisabled>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="radiobutton">
+		<left>0</left>
+		<top>0</top>
+		<width>450</width>
+		<height>60</height>
+		<radiowidth>60</radiowidth>
+		<radioheight>60</radioheight>
+		<textureradioonfocus colordiffuse="white">settings/radio_on.png</textureradioonfocus>
+		<textureradioonnofocus colordiffuse="grey">settings/radio_on.png</textureradioonnofocus>
+		<textureradioondisabled colordiffuse="grey3">settings/radio_on.png</textureradioondisabled>
+		<textureradioofffocus colordiffuse="white">settings/radio_off.png</textureradioofffocus>
+		<textureradiooffnofocus colordiffuse="grey">settings/radio_off.png</textureradiooffnofocus>
+		<textureradiooffdisabled colordiffuse="grey3">settings/radio_off.png</textureradiooffdisabled>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<label>215</label>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="slider">
+		<left>0</left>
+		<top>0</top>
+		<orientation>horizontal</orientation>
+		<texturesliderbar />
+		<textureslidernib border="1" colordiffuse="themecolor">settings/osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus border="1" colordiffuse="themecolor">settings/osd_slider_nib.png</textureslidernibfocus>
+	</default>
+	<default type="sliderex">
+		<left>0</left>
+		<top>0</top>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<sliderwidth>150</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturesliderbar>settings/osd_slider_bg.png</texturesliderbar>
+		<textureslidernib border="1" colordiffuse="themecolor">settings/osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus border="1" colordiffuse="themecolor">settings/osd_slider_nib.png</textureslidernibfocus>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="mover">
+		<left>0</left>
+		<top>0</top>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="resize">
+		<left>0</left>
+		<top>0</top>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="edit">
+		<left>0</left>
+		<top>0</top>
+		<width>450</width>
+		<height>60</height>
+		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="group">
+		<left>0</left>
+		<top>0</top>
+	</default>
+	<default type="grouplist">
+		<left>0</left>
+		<top>0</top>
+		<itemgap>0</itemgap>
+	</default>
+</includes>

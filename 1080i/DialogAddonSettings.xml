@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9</defaultcontrol>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="group">
+			<left>122</left>
+			<top>254</top>
+			<control type="image">
+				<description>background image</description>
+				<left>16</left>
+				<top>16</top>
+				<width>1642</width>
+				<height>568</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
+			</control>
+			<control type="label" id="20">
+				<description>header label</description>
+				<left>32</left>
+				<top>32</top>
+				<width>1612</width>
+				<height>40</height>
+				<textoffsetx>15</textoffsetx>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>dialogheader</textcolor>
+				<font>font15_title</font>
+			</control>
+			<!-- left group -->
+			<control type="group">
+				<left>32</left>
+				<top>88</top>
+				<control type="image">
+					<width>312</width>
+					<height>480</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				</control>
+				<control type="grouplist" id="9">
+					<description>button area</description>
+					<width>312</width>
+					<height>480</height>
+					<onleft>9001</onleft>
+					<onright>2</onright>
+					<onup>9</onup>
+					<ondown>9</ondown>
+				</control>
+			</control>
+			<!-- middle group -->
+			<control type="group">
+				<left>356</left>
+				<top>88</top>
+				<control type="image">
+					<width>960</width>
+					<height>480</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				</control>
+				<control type="grouplist" id="2">
+					<description>control area</description>
+					<width>960</width>
+					<height>480</height>
+					<pagecontrol>30</pagecontrol>
+					<onleft>9</onleft>
+					<onright>30</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<scrolltime tween="cubic" easing="out">200</scrolltime>
+				</control>
+				<control type="scrollbar" id="30">
+					<left>961</left>
+					<width>12</width>
+					<height>480</height>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<onleft>2</onleft>
+					<onright>9001</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+			</control>
+			<!-- right group -->
+			<control type="group">
+				<left>1330</left>
+				<top>88</top>
+				<control type="image">
+					<top>300</top>
+					<width>312</width>
+					<height>180</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>3</top>
+					<width>282</width>
+					<height>282</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[System.AddonIcon(Window.Property(Addon.ID))]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="grouplist" id="9001">
+					<top>300</top>
+					<width>312</width>
+					<height>180</height>
+					<onleft>2</onleft>
+					<onright>9</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="button" id="10">
+						<description>OK Button</description>
+						<width>312</width>
+						<label>186</label>
+					</control>
+					<control type="button" id="11">
+						<description>Cancel Button</description>
+						<width>312</width>
+						<label>222</label>
+					</control>
+					<control type="button" id="12">
+						<description>Defaults Button</description>
+						<width>312</width>
+						<label>409</label>
+					</control>
+				</control>
+			</control>
+			<control type="button" id="13">
+				<description>Default Category Button</description>
+				<height>60</height>
+				<width>312</width>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="button" id="3">
+				<description>Default Button</description>
+				<width>960</width>
+				<height>60</height>
+			</control>
+			<control type="radiobutton" id="4">
+				<description>Default RadioButton</description>
+				<width>960</width>
+				<height>60</height>
+				<textwidth>880</textwidth>
+			</control>
+			<control type="spincontrolex" id="5">
+				<description>Default spincontrolex</description>
+				<width>960</width>
+				<height>60</height>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="7">
+				<width>960</width>
+				<height>60</height>
+				<font>font14_title</font>
+				<textcolor>themecolor</textcolor>
+				<textoffsetx>15</textoffsetx>
+			</control>
+			<control type="image" id="6">
+				<description>Default Seperator</description>
+				<width>960</width>
+				<height>1</height>
+				<visible>false</visible>
+			</control>
+			<control type="sliderex" id="8">
+				<description>Default Slider</description>
+				<width>960</width>
+				<height>60</height>
+			</control>
+		</control>
+	</controls>
+</window>

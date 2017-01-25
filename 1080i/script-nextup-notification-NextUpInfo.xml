@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">3012</defaultcontrol>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="0,255" end="0,0" time="400">WindowOpen</animation>
+			<control type="image">
+				<top>955</top>
+				<width>1920</width>
+				<height>125</height>
+				<texture colordiffuse="grey">dialogs/black.png</texture>
+			</control>
+			<control type="image" id="80055">
+				<top>827</top>
+				<width>450</width>
+				<height>253</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture background="true">$VAR[PlayerArtworkVar]</texture>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<top>827</top>
+				<width>450</width>
+				<height>253</height>
+				<texture>$INFO[Control.GetLabel(3008)]</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>String.IsEmpty(Control.GetLabel(80055))</visible>
+			</control>
+			<control type="group">
+				<left>450</left>
+				<top>955</top>
+				<control type="label">
+					<top>10</top>
+					<height>40</height>
+					<width>1270</width>
+					<font>font15</font>
+					<textoffsetx>15</textoffsetx>
+					<textcolor>themecolor</textcolor>
+					<label>$ADDON[service.nextup.notification 30008]..</label>
+				</control>
+				<control type="label">
+					<top>55</top>
+					<height>60</height>
+					<width>1270</width>
+					<font>font48_title</font>
+					<textoffsetx>20</textoffsetx>
+					<scroll>true</scroll>
+					<label>$INFO[Control.GetLabel(3002),[COLOR grey2],[/COLOR]]$INFO[Control.GetLabel(3000), ,]</label>
+				</control>
+				<control type="button" id="3012">
+					<description>Watch Now</description>
+					<left>1270</left>
+					<top>12.5</top>
+					<width>100</width>
+					<height>100</height>
+					<onleft>3013</onleft>
+					<onright>3013</onright>
+					<texturefocus>osd/buttons/OSDPlay.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPlay.png</texturenofocus>
+				</control>
+				<control type="button" id="3013">
+					<description>Cancel</description>
+					<left>1360</left>
+					<top>12.5</top>
+					<width>100</width>
+					<height>100</height>
+					<onleft>3012</onleft>
+					<onright>3012</onright>
+					<texturefocus>osd/buttons/OSDStop.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDStop.png</texturenofocus>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>false</visible>
+			<control type="label" id="3000" /><!--title-->
+			<control type="textbox" id="3001" /><!--overview-->
+			<control type="label" id="3002" /><!--episodeInfo-->
+			<control type="label" id="3003" /><!--rating-->
+			<control type="label" id="3004" /><!--year-->
+			<control type="image" id="3005" /><!--fanartimage-->
+			<control type="image" id="3006" /><!--clearartimage-->
+			<control type="image" id="3007" /><!--TV Show Title-->
+			<control type="image" id="3008" /><!--thumb-->
+			<control type="image" id="3009" /><!--poster-->
+			<control type="image" id="3010" /><!--landscapeimage-->
+			<control type="label" id="3011" /><!--resolution-->
+			<control type="label" id="3015" /><!--season-->
+			<control type="label" id="3016" /><!--episodeNum-->
+			<control type="label" id="3018" /><!--playcount-->
+		</control>
+	</controls>
+</window>

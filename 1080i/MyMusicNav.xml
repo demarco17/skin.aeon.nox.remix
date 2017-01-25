@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<views>50,501,54,55,57,500,51,510</views>
+	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+	<controls>
+		<control type="label" id="4420">
+			<label>$VAR[MusicInfoPanelVar]</label>
+			<include>HiddenObject</include>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+		<control type="label" id="4440">
+			<label>$VAR[MusicCaseToggleVar]</label>
+			<include>HiddenObject</include>
+			<visible>Control.IsVisible(57) | Control.IsVisible(501)</visible>
+		</control>
+		<control type="label" id="4450">
+			<label>$VAR[MusicWrapListToggleVar]</label>
+			<include>HiddenObject</include>
+			<visible>Control.IsVisible(54)</visible>
+		</control>
+		<include>CommonBackground</include>
+		<control type="group">
+			<visible>Control.IsVisible(54)</visible>
+			<top>-30</top>
+			<include>ShowCaseMusicInfoPanel</include>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>MusicList</include><!-- view id = 50 -->
+			<include>MusicInfoWall</include><!-- view id = 51 -->
+			<include>View_54_ShowCase</include><!-- view id = 54 -->
+			<include>MusicTriPanel</include><!-- view id = 55 -->
+			<include>AlbumShift</include><!-- view id = 57 -->
+			<include>MusicWall</include><!-- view id = 500 -->
+			<include>MusicLowList</include><!-- view id = 501 -->
+			<include>Music_510_BigList</include><!-- view id = 510 -->
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(55) | Control.IsVisible(54) | Control.IsVisible(52) | Control.IsVisible(500) | Control.IsVisible(57)</visible>
+			<visible>!Window.IsActive(addoninformation)</visible>
+			<include>Window_OpenClose_Animation</include>
+			<include>ViewAnimation</include>
+			<top>-30</top>
+			<control type="group">
+				<visible>Control.IsVisible(54) | Control.IsVisible(52)</visible>
+				<control type="group">
+					<left>410</left>
+					<top>1010</top>
+					<control type="label">
+						<width>1100</width>
+						<height>42</height>
+						<aligny>top</aligny>
+						<align>center</align>
+						<font>font16_title_bold</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<textoffsety>-2</textoffsety>
+						<textoffsetx>30</textoffsetx>
+					</control>
+					<control type="label">
+						<top>45</top>
+						<width>1100</width>
+						<height>30</height>
+						<align>center</align>
+						<font>font13_title</font>
+						<textcolor>grey3</textcolor>
+						<label>$VAR[FloorLabel2Var]</label>
+						<textoffsetx>30</textoffsetx>
+					</control>
+				</control>
+				<control type="group">
+					<top>1010</top>
+					<width>1920</width>
+					<visible>[Container.Content(albums) | Container.Content(songs)]</visible>
+					<control type="label">
+						<left>100</left>
+						<width>155</width>
+						<height>90</height>
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Year]</label>
+						<font>font35_title_bold</font>
+					</control>
+					<control type="image">
+						<left>1600</left>
+						<width>200</width>
+						<include>MediaFlagVars</include>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(55) | Control.IsVisible(500) | Control.IsVisible(57)</visible>
+				<animation effect="slide" start="0" end="45" condition="Control.IsVisible(55) | Control.IsVisible(57)">Conditional</animation>
+				<control type="group">
+					<left>90</left>
+					<top>1010</top>
+					<visible>!Control.IsVisible(55)</visible>
+					<control type="label">
+						<width>1150</width>
+						<height>42</height>
+						<aligny>top</aligny>
+						<align>left</align>
+						<font>font16_title_bold</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<textoffsety>-2</textoffsety>
+						<textoffsetx>30</textoffsetx>
+					</control>
+					<control type="label">
+						<top>45</top>
+						<width>1100</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font13_title</font>
+						<textcolor>grey3</textcolor>
+						<label>$VAR[FloorLabel2Var]</label>
+						<textoffsetx>30</textoffsetx>
+					</control>
+					<control type="label">
+						<left>1512</left>
+						<width>198</width>
+						<height>42</height>
+						<aligny>top</aligny>
+						<align>right</align>
+						<font>font16_title_bold</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.AddonVersion]</label>
+						<textoffsety>-2</textoffsety>
+					</control>
+				</control>
+				<control type="grouplist">
+					<top>1017</top>
+					<width>1820</width>
+					<height>90</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<itemgap>25</itemgap>
+					<orientation>horizontal</orientation>
+					<visible>[Container.Content(albums) | Container.Content(songs)] + !ListItem.IsParentFolder</visible>
+					<control type="image">
+						<width>200</width>
+						<height>80</height>
+						<include>MediaFlagVars</include>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+					</control>
+					<control type="label">
+						<width>135</width>
+						<height>80</height>
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<label fallback="• • • •">$INFO[ListItem.Year]</label>
+						<font>font35_title_bold</font>
+						<visible>Container.Content(albums)</visible>
+					</control>
+					<control type="image">
+						<bordersize>5</bordersize>
+						<include>MediaFlagVars</include>
+						<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
+						<visible>Container.Content(songs)</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>Topbar</include>
+		<control type="group">
+			<left>-440</left>
+			<include>SideBladeLeft</include>
+			<control type="grouplist" id="9050">
+				<include>MediaMenuTop</include>
+				<control type="button" id="6051">
+					<description>Show Info Toggle</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[31018]</label>
+					<label2>[COLOR themecolor]$VAR[InfoPanelLabelVar][/COLOR]</label2>
+					<onclick>$VAR[54MusicInfoPanelVar]</onclick>
+					<visible>Control.IsVisible(54) + [Container.Content(albums) | Container.Content(artists)]</visible>
+				</control>
+				<control type="button" id="300">
+					<description>WrapList Toggle</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[31005]</label>
+					<label2>[COLOR themecolor]$VAR[WrapListToggleLabelVar][/COLOR]</label2>
+					<onclick>$VAR[54WrapListToggleVar]</onclick>
+					<visible>Control.IsVisible(54)</visible>
+				</control>
+				<control type="button" id="301">
+					<description>Case Toggle</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[31017]</label>
+					<label2>[COLOR themecolor]$VAR[CaseToggleLabelVar][/COLOR]</label2>
+					<onclick>$VAR[StringMusicCaseToggleVar]</onclick>
+					<visible>[Control.IsVisible(57) | Control.IsVisible(501)] + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
+				</control>
+				<control type="button" id="201">
+					<description>Misc options header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31026</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="8">
+					<description>Search</description>
+					<include>ButtonCommonValues</include>
+					<label>137</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				<control type="edit" id="19">
+					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<textwidth>345</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+				</control>
+				<control type="radiobutton" id="98">
+					<visible>Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<selected>Container.Filtered</selected>
+					<onclick>right</onclick>
+					<onclick>Filter</onclick>
+				</control>
+				<control type="radiobutton" id="16">
+					<description>PartyMode</description>
+					<label>589</label>
+					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="203">
+					<description>Actions header</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31039</label>
+					<enable>false</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="613">
+					<description>Get more</description>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[21452]</label>
+					<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
+					<visible>Container.Content(addons)</visible>
+				</control>
+				<control type="togglebutton" id="20">
+					<description>Update library</description>
+					<include>ButtonCommonValues</include>
+					<label>653</label>
+					<altlabel>13353</altlabel>
+					<usealttexture>library.isscanningmusic</usealttexture>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(50)</onclick>
+				</control>
+				<control type="button" id="612">
+					<description>Go to playlist</description>
+					<include>ButtonCommonValues</include>
+					<label>13350</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>ActivateWindow(musicplaylist)</onclick>
+					<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
+				</control>
+				<control type="button" id="614">
+					<description>Player Controls</description>
+					<include>ButtonCommonValues</include>
+					<label>31068</label>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick condition="Player.HasAudio">SetFocus(50)</onclick>
+					<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
+					<onclick condition="Player.HasVideo">Fullscreen</onclick>
+					<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
+					<visible>Player.HasMedia</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
