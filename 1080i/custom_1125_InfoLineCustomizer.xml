@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">90100</defaultcontrol>
 	<coordinates>
 		<left>697</left>
-		<top>238</top>
+		<top>208</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.InfoLine))">Skin.SetString($INFO[Window(Home).Property(Nox.InfoLine)],$INFO[Skin.String(ItemToEdit.InfoLine)])</onunload>
@@ -13,14 +13,14 @@
 			<left>16</left>
 			<top>16</top>
 			<width>494</width>
-			<height>572</height>
+			<height>632</height>
 			<texture border="18">dialogs/dialog-bg2.png</texture>
 		</control>
 		<control type="list" id="90100">
 			<left>32</left>
 			<top>32</top>
 			<width>462</width>
-			<height>540</height>
+			<height>600</height>
 			<onup>90100</onup>
 			<ondown>90100</ondown>
 			<onleft>noop</onleft>

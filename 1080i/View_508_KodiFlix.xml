@@ -122,7 +122,6 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(62) + !Container.Scrolling">Conditional</animation>
 				<visible>!ListItem.IsCollection</visible>
 			</control>
 			<control type="group">
@@ -147,7 +146,6 @@
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(64) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="fixedlist" id="508">
