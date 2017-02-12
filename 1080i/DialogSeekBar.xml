@@ -5,6 +5,7 @@
 	<controls>
 		<control type="group">
 			<visible>!Player.ShowInfo</visible>
+			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<animation effect="slide" start="0,90" end="0,0" time="200">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,90" time="200">WindowClose</animation>
 			<top>1010</top>
@@ -146,6 +147,7 @@
 			<height>254</height>
 			<aspectratio aligny="bottom" align="right">keep</aspectratio>
 			<texture background="true">$VAR[PlayerArtworkVar]</texture>
+			<animation effect="slide" start="0,0" end="0,50" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning))">Conditional</animation>
 			<animation effect="slide" start="0,300" end="0,0" time="200">WindowOpen</animation>
 			<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
 		</control>
@@ -158,6 +160,7 @@
 			<orientation>horizontal</orientation>
 			<visible>Player.Forwarding | Player.Rewinding | Player.Paused | Player.IsTempo</visible>
 			<usecontrolcoords>true</usecontrolcoords>
+			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning))">Conditional</animation>
 			<animation effect="slide" start="0,150" end="0,0" time="200">WindowOpen</animation>
 			<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
 			<control type="label">

@@ -339,7 +339,7 @@
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.LatestDate)) + String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR themecolor]$LOCALIZE[31012]: [/COLOR],]$INFO[Window(Home).Property(NextAired.AirTime), | ,]</label>
+							<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR themecolor]$LOCALIZE[31012]: [/COLOR],]$INFO[Window(Home).Property(NextAired.AirTime), - ,]</label>
 							<onclick>noop</onclick>
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 						</item>

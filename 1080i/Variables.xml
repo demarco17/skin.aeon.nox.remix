@@ -397,7 +397,7 @@
 		<value condition="Container.Content(seasons) + !String.IsEqual(ListItem.Dbtype,movie)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: ,]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
 		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,Top250.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[ListItem.Top250,#, $LOCALIZE[13409]]$INFO[ListItem.Rating,[COLOR grey3] | [/COLOR],]$VAR[RatingAndVotesVar, (,)]</value>
-		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,BestPicture.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[Container.FolderName]$INFO[ListItem.Year,[COLOR grey3] | [/COLOR],]</value>
+		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,BestPicture.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[Container.FolderName]$INFO[ListItem.Year,[COLOR grey3]: [/COLOR],]</value>
 		<value condition="Container.Content(musicvideos) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>

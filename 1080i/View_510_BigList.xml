@@ -167,7 +167,7 @@
 									<height>100</height>
 									<label>$VAR[VideoPlotVar]</label>
 									<font>font14_textbox</font>
-									<autoscroll time="3500" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+									<autoscroll time="3500" delay="4000" repeat="5000">True</autoscroll>
 								</control>
 							</control>
 						</control>
