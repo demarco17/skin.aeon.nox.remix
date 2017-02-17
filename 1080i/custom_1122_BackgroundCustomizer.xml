@@ -5,7 +5,7 @@
 		<left>697</left>
 		<top>298</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.MultiFanart))">Skin.SetString($INFO[Window(Home).Property(Nox.Temp)],$INFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.BGType))">Skin.SetString($INFO[Window(Home).Property(Nox.BGType)],$INFO[Skin.String(ItemToEdit.BGType)])</onunload>
 	<onunload condition="String.IsEmpty(Skin.String(Videos.Fallback))">Skin.SetString(Videos.Fallback,backgrounds/videos.png)</onunload>

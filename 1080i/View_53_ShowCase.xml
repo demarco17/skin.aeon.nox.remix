@@ -4,19 +4,19 @@
 		<control type="group">
 			<visible>Control.IsVisible(53)</visible>
 			<top>-10</top>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<camera x="960" y="750" />
 				<control type="group" id="6001">
 					<left>55</left>
 					<top>570</top>
 					<visible>Container.OnNext</visible>
-					<animation effect="slide" end="-135,0" time="300" reversible="false">Hidden</animation>
+					<animation effect="slide" end="-135,0" time="400" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>15</left>
 						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-7).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 						<visible>Container.OnNext</visible>
-						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+						<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
 						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<include>MovieShowCaseItem-7</include>
 					</control>
@@ -54,7 +54,7 @@
 						<left>1635</left>
 						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 						<visible>!Container.OnNext</visible>
-						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+						<animation effect="fade" end="100" time="400" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="2100" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<include>MovieShowCaseItem6</include>
 					</control>
@@ -90,12 +90,12 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnNext</visible>
-						<animation effect="slide" end="75,0" time="300" reversible="false">Hidden</animation>
+						<animation effect="slide" end="75,0" time="400" reversible="false">Hidden</animation>
 						<control type="group">
 							<left>825</left>
 							<visible>Container.OnNext</visible>
 							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
-							<animation effect="rotatey" center="1290" end="-55" time="300" reversible="false" tween="circle" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="1290" end="-55" time="400" reversible="false" tween="circle" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
 							<include>MovieShowCaseItem0</include>
 						</control>
@@ -103,7 +103,7 @@
 							<left>758</left>
 							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 							<visible>Container.OnNext</visible>
-							<animation effect="rotatey" center="608" end="-55" time="300" reversible="false" tween="quadratic">Hidden</animation>
+							<animation effect="rotatey" center="608" end="-55" time="400" reversible="false" tween="quadratic">Hidden</animation>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
 								<include>MovieShowcaseThumb</include>
@@ -124,12 +124,12 @@
 					<left>55</left>
 					<top>570</top>
 					<visible>Container.OnPrevious</visible>
-					<animation effect="slide" end="135,0" time="300" reversible="false">Hidden</animation>
+					<animation effect="slide" end="135,0" time="400" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>1500</left>
 						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(7).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 						<visible>Container.OnPrevious</visible>
-						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+						<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
 						<animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<include>MovieShowCaseItem7</include>
 					</control>
@@ -167,7 +167,7 @@
 						<left>-120</left>
 						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 						<visible>!Container.OnPrevious</visible>
-						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+						<animation effect="fade" end="100" time="400" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<include>MovieShowCaseItem-6</include>
 					</control>
@@ -203,12 +203,12 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnPrevious</visible>
-						<animation effect="slide" end="-75,0" time="300" reversible="false">Hidden</animation>
+						<animation effect="slide" end="-75,0" time="400" reversible="false">Hidden</animation>
 						<control type="group">
 							<left>690</left>
 							<visible>Container.OnPrevious</visible>
 							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
-							<animation effect="rotatey" center="540" end="55" time="300" reversible="false" tween="circle" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="540" end="55" time="400" reversible="false" tween="circle" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 							<include>MovieShowCaseItem0</include>
 						</control>
@@ -216,7 +216,7 @@
 							<left>758</left>
 							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 							<visible>Container.OnPrevious</visible>
-							<animation effect="rotatey" center="1223" end="55" time="300" reversible="false" tween="quadratic">Hidden</animation>
+							<animation effect="rotatey" center="1223" end="55" time="400" reversible="false" tween="quadratic">Hidden</animation>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
 								<include>MovieShowcaseThumb</include>
@@ -331,7 +331,7 @@
 			<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
-			<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			<visible>Control.IsVisible(53)</visible>
 		</control>
 	</include>

@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="-729,0" time="500" tween="quadratic">WindowClose</animation>
+			<animation effect="slide" start="-729,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="-729,0" time="400" tween="quadratic">WindowClose</animation>
 			<control type="image">
 				<width>729</width>
 				<height>1080</height>
@@ -13,8 +13,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" start="1242,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="1242,0" time="500" tween="quadratic">WindowClose</animation>
+			<animation effect="slide" start="1242,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="1242,0" time="400" tween="quadratic">WindowClose</animation>
 			<left>729</left>
 			<control type="image">
 				<width>1192</width>
@@ -198,7 +198,7 @@
 					<textcolor>white</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<visible>ControlGroup(9000).HasFocus(30)</visible>
 				</control>
 				<control type="scrollbar" id="60">
@@ -229,7 +229,7 @@
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(32)</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="297">
 						<control type="image">
 							<width>297</width>
@@ -266,7 +266,7 @@
 					<focusedlayout height="420" width="297">
 						<control type="group">
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 							</animation>
 							<control type="image">
 								<width>297</width>
@@ -319,7 +319,7 @@
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(34)</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="297">
 						<control type="image">
 							<width>297</width>
@@ -356,7 +356,7 @@
 					<focusedlayout height="420" width="297">
 						<control type="group">
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 							</animation>
 							<control type="image">
 								<width>297</width>
@@ -409,7 +409,7 @@
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(38)</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="594">
 						<control type="image">
 							<width>594</width>
@@ -438,7 +438,7 @@
 					<focusedlayout height="420" width="594">
 						<control type="group">
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 							</animation>
 							<control type="image">
 								<width>594</width>
@@ -482,7 +482,7 @@
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[20445])</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="297">
 						<control type="image">
 							<width>297</width>
@@ -496,7 +496,7 @@
 					<focusedlayout height="420" width="297">
 						<control type="group">
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 							</animation>
 							<control type="image">
 								<width>297</width>
@@ -523,7 +523,7 @@
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[31016])</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="594">
 						<control type="image">
 							<width>594</width>
@@ -552,7 +552,7 @@
 					<focusedlayout height="420" width="594">
 						<control type="group">
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 							</animation>
 							<control type="image">
 								<width>594</width>
@@ -598,7 +598,7 @@
 					<textcolor>grey</textcolor>
 					<label>161</label>
 					<visible>ControlGroup(9000).HasFocus(36) + [[!Integer.IsGreater(Container(750).NumItems,0) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[31016])] | [!Integer.IsGreater(Container(450).NumItems,0) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[20445])]]</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Movies - Items/Page -->
 				<control type="label">
@@ -613,7 +613,7 @@
 					<aligny>top</aligny>
 					<label>$INFO[Container(150).NumItems,, $LOCALIZE[31025]]</label>
 					<visible>Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(32)</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- TvShows - Items/Page -->
 				<control type="label">
@@ -628,7 +628,7 @@
 					<aligny>top</aligny>
 					<label>$INFO[Container(250).NumItems,, $LOCALIZE[31025]]</label>
 					<visible>Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(34)</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Fanart - Items/Page -->
 				<control type="label">
@@ -643,7 +643,7 @@
 					<aligny>top</aligny>
 					<label>$INFO[Container(750).NumItems,, $LOCALIZE[31025]]</label>
 					<visible>Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[31016])</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Thumb - Items/Page -->
 				<control type="label">
@@ -658,7 +658,7 @@
 					<aligny>top</aligny>
 					<label>$INFO[Container(450).NumItems,, $LOCALIZE[31025]]</label>
 					<visible>Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[20445])</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- YouTube - Items/Page -->
 				<control type="label">
@@ -673,7 +673,7 @@
 					<aligny>top</aligny>
 					<label>$INFO[Container(350).NumItems,, $LOCALIZE[31025]]</label>
 					<visible>Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(38)</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 				</control>
 			</control>
 			<control type="group">

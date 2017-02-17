@@ -3,7 +3,7 @@
 	<include name="BannerWall">
 		<control type="group">
 			<visible>Control.IsVisible(58)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<top>40</top>
 			<control type="image">
 				<description>background image</description>
@@ -69,7 +69,7 @@
 				<focusedlayout height="110" width="560">
 					<control type="group">
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 						</animation>
 						<control type="image">
 							<width>560</width>
@@ -120,7 +120,7 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>

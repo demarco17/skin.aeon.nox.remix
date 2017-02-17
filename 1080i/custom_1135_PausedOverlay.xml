@@ -6,9 +6,8 @@
 	<controls>
 		<control type="image">
 			<include>FullscreenDimensions</include>
+			<include>OpenCloseAnimation</include>
 			<texture colordiffuse="grey">dialogs/black.png</texture>
-			<animation effect="fade" time="300">WindowOpen</animation>
-			<animation effect="fade" time="300">WindowClose</animation>
 		</control>
 		<control type="grouplist">
 			<left>100</left>
@@ -16,14 +15,7 @@
 			<width>1720</width>
 			<height>595</height>
 			<usecontrolcoords>true</usecontrolcoords>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="150" end="100" center="550,540" time="300" tween="cubic" easing="out" />
-				<effect type="fade" end="100" time="150" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="150" center="550,540" time="300" tween="cubic" easing="in" />
-				<effect type="fade" start="100" end="0" time="150" />
-			</animation>
+			<include>OpenCloseAnimation</include>
 			<control type="label">
 				<width>1720</width>
 				<height>40</height>

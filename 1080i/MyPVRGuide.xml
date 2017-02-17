@@ -10,7 +10,7 @@
 		<include>CommonBackground</include>
 		<control type="group">
 			<top>110</top>
-			<include>Window_OpenClose_Animation</include>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<left>66</left>
 				<top>16</top>
@@ -43,8 +43,8 @@
 			<description>TV Guide Timeline</description>
 			<visible>Control.IsVisible(10)</visible>
 			<top>110</top>
-			<include>Window_OpenClose_Animation</include>
-			<include>VisibleFadeEffect</include>
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="epggrid" id="10">
 				<description>EPG Grid</description>
 				<left>82</left>
@@ -167,7 +167,7 @@
 						<font>IconTiny</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$VAR[PVRTimerIcon]</label>
-						<animation effect="fade" end="70" condition="True">Conditional</animation>
+						<animation effect="fade" end="50" condition="True">Conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="90" width="120">

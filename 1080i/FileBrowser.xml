@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">450</defaultcontrol>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="group">
 			<left>175</left>
@@ -26,7 +26,7 @@
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
 				<visible>ListItem.IsParentFolder</visible>
-				<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+				<include>VisibleFadeAnimation</include>
 			</control>
 			<control type="label" id="412">
 				<description>Path label</description>
@@ -41,7 +41,7 @@
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
 				<visible>!ListItem.IsParentFolder</visible>
-				<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+				<include>VisibleFadeAnimation</include>
 			</control>
 			<control type="group">
 				<left>32</left>
@@ -147,7 +147,7 @@
 					<focusedlayout height="270" width="480">
 						<control type="group">
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 							</animation>
 							<control type="image">
 								<width>480</width>

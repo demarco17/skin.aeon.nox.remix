@@ -6,8 +6,7 @@
 		<control type="group">
 			<visible>!Player.ShowInfo</visible>
 			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
-			<animation effect="slide" start="0,90" end="0,0" time="200">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,90" time="200">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<top>1010</top>
 			<control type="image">
 				<top>20</top>
@@ -52,8 +51,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" start="0,290" end="0,0" time="200">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,290" time="200">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<top>814</top>
 			<visible>VideoPlayer.Content(LiveTV) + Player.ShowInfo</visible>
 			<control type="image">
@@ -148,8 +146,7 @@
 			<aspectratio aligny="bottom" align="right">keep</aspectratio>
 			<texture background="true">$VAR[PlayerArtworkVar]</texture>
 			<animation effect="slide" start="0,0" end="0,50" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning))">Conditional</animation>
-			<animation effect="slide" start="0,300" end="0,0" time="200">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+			<include>VisibleFadeAnimation</include>
 		</control>
 		<control type="grouplist">
 			<left>30</left>
@@ -161,8 +158,7 @@
 			<visible>Player.Forwarding | Player.Rewinding | Player.Paused | Player.IsTempo</visible>
 			<usecontrolcoords>true</usecontrolcoords>
 			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning))">Conditional</animation>
-			<animation effect="slide" start="0,150" end="0,0" time="200">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+			<include>VisibleFadeAnimation</include>
 			<control type="label">
 				<label>$VAR[VideoPlayerForwardRewindVar]</label>
 				<width min="10" max="300">auto</width>

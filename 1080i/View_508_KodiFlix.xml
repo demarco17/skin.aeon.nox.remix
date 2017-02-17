@@ -3,7 +3,7 @@
 	<include name="Video_508_KodiFlix">
 		<control type="group">
 			<visible>Control.IsVisible(508)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="label">
 				<left>25</left>
 				<top>75</top>
@@ -246,7 +246,7 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
-				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(63) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(63) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>

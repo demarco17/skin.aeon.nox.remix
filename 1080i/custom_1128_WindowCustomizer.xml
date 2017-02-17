@@ -5,7 +5,7 @@
 		<left>697</left>
 		<top>328</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="image">
 			<left>16</left>

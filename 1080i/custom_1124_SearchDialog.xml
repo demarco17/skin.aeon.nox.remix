@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1124">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="group">
 			<left>697</left>

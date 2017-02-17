@@ -11,8 +11,8 @@
 		<control type="group">
 			<description>Timers group</description>
 			<visible>Control.IsVisible(50)</visible>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
+			<include>VisibleFadeAnimation</include>
+			<include>OpenCloseAnimation</include>
 			<left>100</left>
 			<top>-40</top>
 			<control type="image">
@@ -159,7 +159,7 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(73) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(73) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
 				<left>1196</left>

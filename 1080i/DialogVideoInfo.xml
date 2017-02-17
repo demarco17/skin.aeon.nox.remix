@@ -5,10 +5,10 @@
 	<controls>
 		<include condition="System.HasAddon(script.extendedinfo)">HiddenActorList</include>
 		<control type="group">
-			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="-729,0" time="500" tween="quadratic">WindowClose</animation>
-			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
-			<animation effect="slide" end="-729,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+			<animation effect="slide" start="-729,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="-729,0" time="400" tween="quadratic">WindowClose</animation>
+			<animation effect="slide" start="-729,0" end="0,0" time="400" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
+			<animation effect="slide" end="-729,0" time="400" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
 			<control type="image">
 				<width>729</width>
 				<height>1080</height>
@@ -17,10 +17,10 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" start="1242,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="1242,0" time="500" tween="quadratic">WindowClose</animation>
-			<animation effect="slide" start="1242,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
-			<animation effect="slide" end="1242,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+			<animation effect="slide" start="1242,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="1242,0" time="400" tween="quadratic">WindowClose</animation>
+			<animation effect="slide" start="1242,0" end="0,0" time="400" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
+			<animation effect="slide" end="1242,0" time="400" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
 			<left>729</left>
 			<control type="image">
 				<width>1192</width>
@@ -548,7 +548,7 @@
 					<textcolor>grey</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[206]) + !String.IsEmpty(ListItem.Art(discart))</visible>
 				</control>
 				<control type="textbox" id="401">
@@ -563,7 +563,7 @@
 					<textcolor>grey</textcolor>
 					<pagecontrol>61</pagecontrol>
 					<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[206]) + String.IsEmpty(ListItem.Art(discart))</visible>
 				</control>
 				<!-- cdart -->
@@ -575,7 +575,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 					<visible>String.IsEqual(ListItem.DBType,movie) + String.IsEqual(Control.GetLabel(5),$LOCALIZE[206]) + !String.IsEmpty(ListItem.Art(discart))</visible>
-					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+					<include>VisibleFadeAnimation</include>
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1181</left>

@@ -4,16 +4,16 @@
 		<control type="group">
 			<visible>Control.IsVisible(54)</visible>
 			<camera x="960" y="750" />
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<top>10</top>
 			<control type="group" id="7007">
 				<top>570</top>
 				<visible>Container.OnNext</visible>
-				<animation effect="slide" end="-150,0" time="300" reversible="false">Hidden</animation>
+				<animation effect="slide" end="-150,0" time="400" reversible="false">Hidden</animation>
 				<control type="group">
 					<left>75</left>
 					<visible>Container.OnNext</visible>
-					<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+					<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
 					<animation effect="rotatey" center="-75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 					<include>MusicShowcaseItem-6</include>
 				</control>
@@ -40,7 +40,7 @@
 				<control type="group">
 					<left>1590</left>
 					<visible>!Container.OnNext</visible>
-					<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+					<animation effect="fade" end="100" time="400" reversible="false">Visible</animation>
 					<animation effect="rotatey" center="2145" start="65" end="65" time="0" condition="true">Conditional</animation>
 					<include>MusicShowcaseItem5</include>
 				</control>
@@ -66,18 +66,18 @@
 				</control>
 				<control type="group">
 					<visible>Container.OnNext</visible>
-					<animation effect="slide" end="68,0" time="300" reversible="false">Hidden</animation>
+					<animation effect="slide" end="68,0" time="400" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>840</left>
 						<visible>Container.OnNext</visible>
-						<animation effect="rotatey" center="1395" end="-65" time="300" reversible="false" tween="circle" easing="in">Hidden</animation>
+						<animation effect="rotatey" center="1395" end="-65" time="400" reversible="false" tween="circle" easing="in">Hidden</animation>
 						<animation effect="rotatey" center="1395" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<include>MusicShowcaseItem0</include>
 					</control>
 					<control type="group">
 						<left>758</left>
 						<visible>Container.OnNext</visible>
-						<animation effect="rotatey" center="608" end="-65" time="300" reversible="false" tween="quadratic">Hidden</animation>
+						<animation effect="rotatey" center="608" end="-65" time="400" reversible="false" tween="quadratic">Hidden</animation>
 						<include>MusicShowcaseItem-1</include>
 					</control>
 				</control>
@@ -85,11 +85,11 @@
 			<control type="group" id="7002">
 				<top>570</top>
 				<visible>Container.OnPrevious</visible>
-				<animation effect="slide" end="150,0" time="300" reversible="false">Hidden</animation>
+				<animation effect="slide" end="150,0" time="400" reversible="false">Hidden</animation>
 				<control type="group">
 					<left>1440</left>
 					<visible>Container.OnPrevious</visible>
-					<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+					<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
 					<animation effect="rotatey" center="1995" start="65" end="65" time="0" condition="true">Conditional</animation>
 					<include>MusicShowcaseItem6</include>
 				</control>
@@ -116,7 +116,7 @@
 				<control type="group">
 					<left>-75</left>
 					<visible>!Container.OnPrevious</visible>
-					<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+					<animation effect="fade" end="100" time="400" reversible="false">Visible</animation>
 					<animation effect="rotatey" center="-225" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 					<include>MusicShowcaseItem-5</include>
 				</control>
@@ -142,18 +142,18 @@
 				</control>
 				<control type="group">
 					<visible>Container.OnPrevious</visible>
-					<animation effect="slide" end="-68,0" time="300" reversible="false">Hidden</animation>
+					<animation effect="slide" end="-68,0" time="400" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>675</left>
 						<visible>Container.OnPrevious</visible>
-						<animation effect="rotatey" center="525" end="65" time="300" reversible="false" tween="circle" easing="in">Hidden</animation>
+						<animation effect="rotatey" center="525" end="65" time="400" reversible="false" tween="circle" easing="in">Hidden</animation>
 						<animation effect="rotatey" center="525" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<include>MusicShowcaseItem0</include>
 					</control>
 					<control type="group">
 						<left>758</left>
 						<visible>Container.OnPrevious</visible>
-						<animation effect="rotatey" center="1312" end="65" time="300" reversible="false" tween="quadratic">Hidden</animation>
+						<animation effect="rotatey" center="1312" end="65" time="400" reversible="false" tween="quadratic">Hidden</animation>
 						<include>MusicShowcaseItem1</include>
 					</control>
 				</control>
@@ -229,7 +229,7 @@
 			<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
-			<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			<visible>Control.IsVisible(54)</visible>
 		</control>
 	</include>
@@ -271,18 +271,13 @@
 		<bordersize>16</bordersize>
 		<bordertexture border="16">thumbs/cd_shadow.png</bordertexture>
 	</include>
-	<include name="MusicShowcaseThumbReflectionDimensions">
+	<include name="MusicShowcaseThumbReflection">
+		<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 		<left>27</left>
 		<top>378</top>
 		<width>351</width>
 		<height>351</height>
 	</include>
-	<include name="MusicShowcaseThumbReflection">
-		<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-		<include>MusicShowcaseThumbReflectionDimensions</include>
-		<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
-	</include>
-
 	<include name="MusicShowcaseItem-6">
 		<control type="group">
 			<visible>!String.IsEmpty(ListItemNoWrap(-6).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>

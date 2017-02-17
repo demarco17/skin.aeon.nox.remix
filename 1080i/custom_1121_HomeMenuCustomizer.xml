@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">90000</defaultcontrol>
 	<controls>
 		<control type="group">
-			<include>WindowSettingsFadeEffect</include>
+			<include>OpenCloseAnimation</include>
 			<top>128</top>
 			<control type="list" id="90000">
 				<left>82</left>
@@ -76,7 +76,7 @@
 			</control>
 			<control type="textbox">
 				<description>description area</description>
-				<include>VisibleFadeEffect</include>
+				<include>VisibleFadeAnimation</include>
 				<left>552</left>
 				<top>760</top>
 				<width>1256</width>

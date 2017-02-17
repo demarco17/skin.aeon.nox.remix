@@ -3,9 +3,8 @@
 	<defaultcontrol always="true">2</defaultcontrol>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="0,-224" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
-			<animation effect="slide" end="0,-224" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="0,-224" end="0,0" time="500" tween="cubic" easing="out">VisibleChange</animation>
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<width>1920</width>
 				<height>224</height>
@@ -52,7 +51,7 @@
 				<focusedlayout height="210" width="392">
 					<control type="group">
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 						</animation>
 						<control type="image">
 							<width>392</width>
@@ -91,7 +90,7 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="grouplist" id="9000">
 				<width>350</width>

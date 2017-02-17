@@ -4,7 +4,7 @@
 		<left>502</left>
 		<top>293</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="label" id="1">
 			<description>fake heading label</description>

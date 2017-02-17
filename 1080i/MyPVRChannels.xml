@@ -11,9 +11,9 @@
 		<control type="group">
 			<description>Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
-			<include>VisibleFadeEffect</include>
+			<include>VisibleFadeAnimation</include>
 			<top>110</top>
-			<include>Window_OpenClose_Animation</include>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<left>66</left>
 				<top>16</top>
@@ -175,7 +175,7 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(70) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(70) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
 				<description>Small Media Window</description>
@@ -193,7 +193,7 @@
 					<width>821</width>
 					<height>461</height>
 					<texture>backgrounds/livetv.png</texture>
-					<include>VisibleFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<visible>!Player.HasVideo</visible>
 				</control>
 				<control type="group">
@@ -204,7 +204,7 @@
 						<width>821</width>
 						<height>461</height>
 						<texture>dialogs/black.png</texture>
-						<include>VisibleFadeEffect</include>
+						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="videowindow">
 						<left>33</left>

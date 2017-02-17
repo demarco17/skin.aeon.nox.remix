@@ -9,8 +9,8 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
-			<include>ViewAnimation</include>
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<visible>!Window.IsActive(addoninformation)</visible>
 			<control type="group">
 				<left>100</left>
@@ -62,7 +62,7 @@
 							<height>118</height>
 							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeEffect</include>
+							<include>VisibleFadeAnimation</include>
 						</control>
 						<control type="label">
 							<top>25</top>
@@ -127,11 +127,11 @@
 					<onright>61</onright>
 					<onup>51</onup>
 					<ondown>51</ondown>
-					<animation effect="fade" start="100" end="0" time="300" condition="Container(51).IsUpdating">conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="Container(51).IsUpdating">conditional</animation>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<include>VisibleFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[535])</visible>
 					<itemlayout height="120" width="1200">
 						<control type="image">
@@ -189,7 +189,7 @@
 							<height>118</height>
 							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(51)</visible>
-							<include>VisibleFadeEffect</include>
+							<include>VisibleFadeAnimation</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -237,11 +237,11 @@
 					<onright>61</onright>
 					<onup>51</onup>
 					<ondown>51</ondown>
-					<animation effect="fade" start="100" end="0" time="300" condition="Container(51).IsUpdating">conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="Container(51).IsUpdating">conditional</animation>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<include>VisibleFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[31010])</visible>
 					<itemlayout height="240" width="240">
 						<control type="image">
@@ -256,7 +256,7 @@
 					<focusedlayout height="240" width="240">
 						<control type="group">
 							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 							</animation>
 							<control type="image">
 								<width>240</width>
@@ -280,7 +280,7 @@
 					</control>
 					<control type="group">
 						<visible>Control.HasFocus(51)</visible>
-						<include>VisibleFadeEffect</include>
+						<include>VisibleFadeAnimation</include>
 						<control type="label">
 							<top>80</top>
 							<width>1200</width>
@@ -322,7 +322,7 @@
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 		</control>

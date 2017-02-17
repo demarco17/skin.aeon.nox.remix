@@ -4,7 +4,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(52)</visible>
 			<top>580</top>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<include condition="!String.IsEqual(Control.GetLabel(4450),1)">LandscapeFixed</include>
 			<include condition="String.IsEqual(Control.GetLabel(4450),1)">LandscapeWrap</include>
 			<control type="group">
@@ -12,12 +12,12 @@
 				<camera x="960" y="200" />
 				<control type="group" id="6011">
 					<visible>Container.OnNext</visible>
-					<animation effect="slide" end="-300,0" time="300" reversible="false">Hidden</animation>
+					<animation effect="slide" end="-300,0" time="400" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>75</left>
 						<visible>Container.OnNext</visible>
 						<visible>!String.IsEmpty(Container(52).ListItemNoWrap(-3).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
-						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+						<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
 						<animation effect="rotatey" center="-40" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<include>LandscapeItem-3</include>
 					</control>
@@ -31,7 +31,7 @@
 						<left>1442</left>
 						<visible>!String.IsEmpty(Container(52).ListItemNoWrap(2).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 						<visible>!Container.OnNext</visible>
-						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+						<animation effect="fade" end="100" time="400" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="2250" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<include>LandscapeItem2</include>
 					</control>
@@ -43,12 +43,12 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnNext</visible>
-						<animation effect="slide" end="75,0" time="300" reversible="false">Hidden</animation>
+						<animation effect="slide" end="75,0" time="400" reversible="false">Hidden</animation>
 						<control type="group">
 							<left>842</left>
 							<visible>!String.IsEmpty(Container(52).ListItemNoWrap(0).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 							<visible>Container.OnNext</visible>
-							<animation effect="rotatey" center="1650" end="-55" time="300" reversible="false" tween="circle" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="1650" end="-55" time="400" reversible="false" tween="circle" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="1650" start="55" end="55" time="0" condition="true">Conditional</animation>
 							<include>LandscapeItem0</include>
 						</control>
@@ -56,20 +56,20 @@
 							<left>610</left>
 							<visible>Container.OnNext</visible>
 							<visible>!String.IsEmpty(Container(52).ListItemNoWrap(-1).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
-							<animation effect="rotatey" center="485" end="-55" time="300" reversible="false" tween="quadratic">Hidden</animation>
+							<animation effect="rotatey" center="485" end="-55" time="400" reversible="false" tween="quadratic">Hidden</animation>
 							<include>LandscapeItem-1</include>
 						</control>
 					</control>
 				</control>
 				<control type="group" id="6012">
 					<visible>Container.OnPrevious</visible>
-					<animation effect="slide" end="300,0" time="300" reversible="false">Hidden</animation>
+					<animation effect="slide" end="300,0" time="400" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>1142</left>
 						<visible>!String.IsEmpty(Container(52).ListItemNoWrap(3).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 						<animation effect="rotatey" center="1950" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<visible>Container.OnPrevious</visible>
-						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+						<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
 						<include>LandscapeItem3</include>
 					</control>
 					<control type="group">
@@ -82,7 +82,7 @@
 						<left>-225</left>
 						<visible>!String.IsEmpty(Container(52).ListItemNoWrap(-2).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 						<visible>!Container.OnPrevious</visible>
-						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
+						<animation effect="fade" end="100" time="400" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="-340" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<include>LandscapeItem-2</include>
 					</control>
@@ -94,12 +94,12 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnPrevious</visible>
-						<animation effect="slide" end="-75,0" time="300" reversible="false">Hidden</animation>
+						<animation effect="slide" end="-75,0" time="400" reversible="false">Hidden</animation>
 						<control type="group">
 							<left>375</left>
 							<visible>!String.IsEmpty(Container(52).ListItemNoWrap(0).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 							<visible>Container.OnPrevious</visible>
-							<animation effect="rotatey" center="260" end="55" time="300" reversible="false" tween="circle" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="260" end="55" time="400" reversible="false" tween="circle" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="260" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 							<include>LandscapeItem0</include>
 						</control>
@@ -107,7 +107,7 @@
 							<left>610</left>
 							<visible>!String.IsEmpty(Container(52).ListItemNoWrap(1).FolderPath) | String.IsEqual(Control.GetLabel(4450),1)</visible>
 							<visible>Container.OnPrevious</visible>
-							<animation effect="rotatey" center="1425" end="55" time="300" reversible="false" tween="quadratic">Hidden</animation>
+							<animation effect="rotatey" center="1425" end="55" time="400" reversible="false" tween="quadratic">Hidden</animation>
 							<include>LandscapeItem1</include>
 						</control>
 					</control>
@@ -156,7 +156,7 @@
 			<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
-			<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			<visible>Control.IsVisible(52)</visible>
 		</control>
 	</include>

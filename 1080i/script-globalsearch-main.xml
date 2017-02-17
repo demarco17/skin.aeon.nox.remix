@@ -3,8 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 		<control type="image">
-			<animation effect="fade" time="300">WindowOpen</animation>
-			<animation effect="fade" time="300">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<include>FullscreenDimensions</include>
 			<texture background="true">$VAR[GlobalSearchFanart]</texture>
 			<aspectratio>scale</aspectratio>
@@ -56,8 +55,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,0" end="0,1080">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<width>105</width>
 			<height>30</height>
 			<left>1670</left>
@@ -97,8 +95,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,0" end="0,1080">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture border="1">dialogs/logo_back.png</texture>
@@ -239,8 +236,7 @@
 			</control>
 		</control>
 		<control type="group" id="100">
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,0" end="0,1080">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<control type="label" id="199">
 				<left>522</left>
 				<top>160</top>
@@ -250,7 +246,7 @@
 				<align>center</align>
 				<label>$LOCALIZE[284]</label>
 				<textcolor>grey</textcolor>
-				<include>VisibleFadeEffect</include>
+				<include>VisibleFadeAnimation</include>
 			</control>
 			<control type="button" id="198">
 				<onfocus>SetFocus(9000,9)</onfocus>
@@ -265,7 +261,7 @@
 				<!-- Guide -->
 				<control type="group" id="229">
 					<visible>Container(9000).HasFocus(12)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="221">
 						<width>1316</width>
 						<height>658</height>
@@ -307,7 +303,7 @@
 						<focusedlayout width="329" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>329</width>
@@ -383,7 +379,7 @@
 				<!-- Movies -->
 				<control type="group" id="119">
 					<visible>Container(9000).HasFocus(1)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="111">
 						<width>1316</width>
 						<height>658</height>
@@ -408,7 +404,7 @@
 						<focusedlayout width="219" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>219</width>
@@ -468,7 +464,7 @@
 				<!-- Actors -->
 				<control type="group" id="219">
 					<visible>Container(9000).HasFocus(11)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="211">
 						<width>1316</width>
 						<height>658</height>
@@ -493,7 +489,7 @@
 						<focusedlayout width="219" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>219</width>
@@ -553,7 +549,7 @@
 				<!-- Directors -->
 				<control type="group" id="239">
 					<visible>Container(9000).HasFocus(13)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="231">
 						<width>1316</width>
 						<height>658</height>
@@ -578,7 +574,7 @@
 						<focusedlayout width="219" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>219</width>
@@ -637,7 +633,7 @@
 				<!-- TV Shows -->
 				<control type="group" id="129">
 					<visible>Container(9000).HasFocus(2)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="121">
 						<width>1316</width>
 						<height>658</height>
@@ -662,7 +658,7 @@
 						<focusedlayout width="219" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>219</width>
@@ -710,7 +706,7 @@
 				<!-- Seasons -->
 				<control type="group" id="139">
 					<visible>Container(9000).HasFocus(3)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="131">
 						<width>1316</width>
 						<height>658</height>
@@ -735,7 +731,7 @@
 						<focusedlayout width="219" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>219</width>
@@ -773,7 +769,7 @@
 				<!-- Episodes -->
 				<control type="group" id="149">
 					<visible>Container(9000).HasFocus(4)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="141">
 						<width>1316</width>
 						<height>658</height>
@@ -815,7 +811,7 @@
 						<focusedlayout width="329" height="219">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>329</width>
@@ -879,7 +875,7 @@
 				<!-- Music Videos -->
 				<control type="group" id="159">
 					<visible>Container(9000).HasFocus(5)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="151">
 						<width>1316</width>
 						<height>658</height>
@@ -904,7 +900,7 @@
 						<focusedlayout width="219" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>219</width>
@@ -952,7 +948,7 @@
 				<!-- Artists -->
 				<control type="group" id="169">
 					<visible>Container(9000).HasFocus(6)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="161">
 						<width>1316</width>
 						<height>658</height>
@@ -977,7 +973,7 @@
 						<focusedlayout width="329" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>329</width>
@@ -1025,7 +1021,7 @@
 				<!-- Albums -->
 				<control type="group" id="179">
 					<visible>Container(9000).HasFocus(7)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="171">
 						<width>1316</width>
 						<height>658</height>
@@ -1050,7 +1046,7 @@
 						<focusedlayout width="329" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>329</width>
@@ -1098,7 +1094,7 @@
 				<!-- Songs -->
 				<control type="group" id="189">
 					<visible>Container(9000).HasFocus(8)</visible>
-					<include>SettingsFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="panel" id="181">
 						<width>1316</width>
 						<height>658</height>
@@ -1123,7 +1119,7 @@
 						<focusedlayout width="329" height="329">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>329</width>
@@ -1179,7 +1175,7 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</controls>

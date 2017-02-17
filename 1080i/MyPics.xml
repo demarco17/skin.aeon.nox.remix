@@ -9,15 +9,15 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
+			<include>OpenCloseAnimation</include>
 			<include>PictureList</include><!-- view id = 50 -->
 			<include>AddonWall</include><!-- view id = 500 -->
 			<include>PictureWall</include><!-- view id = 511 -->
 		</control>
 		<control type="group">
 			<visible>[Control.IsVisible(500) + Container.Content(addons)] + !Window.IsActive(addoninformation)</visible>
-			<include>Window_OpenClose_Animation</include>
-			<include>ViewAnimation</include>
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<left>90</left>
 				<top>980</top>

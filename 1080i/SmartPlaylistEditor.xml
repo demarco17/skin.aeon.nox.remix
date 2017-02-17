@@ -5,11 +5,11 @@
 		<left>199</left>
 		<top>180</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(smartplaylistrule)</visible>
-			<include>VisibleFadeEffect</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>

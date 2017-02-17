@@ -3,7 +3,7 @@
 	<include name="VideoFanartList">
 		<control type="group">
 			<visible>Control.IsVisible(507)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<left>1149</left>
 				<top>136</top>
@@ -582,7 +582,7 @@
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 		</control>

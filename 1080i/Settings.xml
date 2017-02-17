@@ -5,7 +5,7 @@
 		<include>CommonBackground</include>
 		<include>Topbar</include>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>
 				<left>104</left>

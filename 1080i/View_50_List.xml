@@ -3,7 +3,7 @@
 	<include name="VideoList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -243,7 +243,7 @@
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
@@ -328,7 +328,7 @@
 				<left>1280</left>
 				<top>-40</top>
 				<visible>Container.Content(episodes)</visible>
-				<include>VisibleFadeEffect</include>
+				<include>VisibleFadeAnimation</include>
 				<control type="image">
 					<description>background image</description>
 					<left>16</left>
@@ -402,7 +402,7 @@
 	<include name="MusicList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -558,7 +558,7 @@
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
@@ -612,7 +612,7 @@
 	<include name="AddonList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -721,7 +721,7 @@
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
@@ -751,7 +751,7 @@
 	<include name="PictureList">
 		<control type="group">
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
@@ -860,7 +860,7 @@
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">

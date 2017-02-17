@@ -3,7 +3,7 @@
 	<defaultcontrol>61</defaultcontrol>
 	<controls>
 		<control type="group">
-			<include>WindowSettingsFadeEffect</include>
+			<include>OpenCloseAnimation</include>
 			<top>108</top>
 			<left>270</left>
 			<control type="image">

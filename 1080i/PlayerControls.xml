@@ -4,9 +4,8 @@
 	<controls>
 		<control type="group">
 			<visible>Player.HasAudio + !Window.IsActive(Visualisation)</visible>
-			<animation effect="slide" start="0,-106" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="0,-106" start="0,0" time="400" tween="quadratic">WindowClose</animation>
-			<animation effect="slide" start="0,-106" end="0,0" time="400" tween="quadratic">VisibleChange</animation>
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<width>1920</width>
 				<height>106</height>

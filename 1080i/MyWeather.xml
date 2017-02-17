@@ -17,7 +17,7 @@
 			<ondown>noop</ondown>
 		</control>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<left>121</left>
 				<top>126</top>

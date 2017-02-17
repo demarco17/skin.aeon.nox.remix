@@ -4,20 +4,17 @@
 	<defaultcontrol always="true">500</defaultcontrol>
 	<controls>
 		<control type="image">
-			<animation effect="fade" time="300">WindowOpen</animation>
-			<animation effect="fade" time="300">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<texture background="true" fallback="dialogs/black.png">$INFO[ListItem.Art(fanart_small)]</texture>
 			<include>FullscreenDimensions</include>
 			<aspectratio aligny="top">scale</aspectratio>
 			<fadetime>CrossfadeTime</fadetime>
 		</control>
 		<control type="group">
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,0" end="0,1080">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture border="1">dialogs/logo_back.png</texture>
-				<include>ViewAnimation</include>
 			</control>
 			<control type="image">
 				<description>background image</description>
@@ -62,7 +59,7 @@
 				<focusedlayout height="360" width="240">
 					<control type="group">
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 						</animation>
 						<control type="image">
 							<width>240</width>
@@ -132,7 +129,7 @@
 				<control type="group">
 					<left>90</left>
 					<top>1010</top>
-					<include>VisibleFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<control type="label">
 						<width>11500</width>
 						<height>42</height>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="group">
 			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>

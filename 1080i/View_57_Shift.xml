@@ -27,8 +27,8 @@
 			<height>372</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
-			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
 		</control>
 	</include>
 	<include name="ShiftPosterCase">
@@ -64,8 +64,8 @@
 			<height>364</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
-			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
 		</control>
 		<control type="image">
 			<left>-28</left>
@@ -74,8 +74,8 @@
 			<height>424</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/$VAR[ShiftCase_Var]</texture>
-			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
-			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
 		</control>
 	</include>
 	<include name="ShiftSquareThumbs">
@@ -95,8 +95,8 @@
 			<height>320</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
-			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
 		</control>
 	</include>
 	<include name="ShiftSquareCase">
@@ -115,8 +115,8 @@
 			<height>300</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
-			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
 		</control>
 		<control type="image">
 			<top>280</top>
@@ -131,13 +131,13 @@
 			<height>322</height>           
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/cdcase.png</texture>
-			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
-			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
 		</control>
 	</include>
 	<include name="PosterShift">
 		<control type="group">
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<visible>Control.IsVisible(57)</visible>
 			<control type="fixedlist" id="57">
 				<left>-95</left>
@@ -186,13 +186,13 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>
 	<include name="AlbumShift">
 		<control type="group">
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<visible>Control.IsVisible(57)</visible>
 			<control type="fixedlist" id="57">
 				<left>-148</left>
@@ -242,7 +242,7 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>

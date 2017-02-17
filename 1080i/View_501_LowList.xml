@@ -3,7 +3,7 @@
 	<include name="VideoLowList">
 		<control type="group">
 			<visible>Control.IsVisible(501)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<top>650</top>
 				<width>1920</width>
@@ -54,7 +54,7 @@
 					<width>650</width>
 					<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<include>VisibleFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="textbox">
@@ -671,7 +671,7 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -679,7 +679,7 @@
 	<include name="MusicLowList">
 		<control type="group">
 			<visible>Control.IsVisible(501)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<top>650</top>
 				<width>1920</width>
@@ -843,7 +843,7 @@
 			</control>
 			<control type="group">
 				<visible>Container.Content(songs)</visible>
-				<include>VisibleFadeEffect</include>
+				<include>VisibleFadeAnimation</include>
 				<left>1255</left>
 				<top>1000</top>
 				<width>1840</width>
@@ -1076,7 +1076,7 @@
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>

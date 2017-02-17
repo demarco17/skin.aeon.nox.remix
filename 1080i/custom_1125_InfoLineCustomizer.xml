@@ -5,7 +5,7 @@
 		<left>697</left>
 		<top>208</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.InfoLine))">Skin.SetString($INFO[Window(Home).Property(Nox.InfoLine)],$INFO[Skin.String(ItemToEdit.InfoLine)])</onunload>
 	<onunload>ClearProperty(Nox.InfoLine,Home)</onunload>
 	<controls>

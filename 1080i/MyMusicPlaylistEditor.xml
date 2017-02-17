@@ -10,7 +10,7 @@
 		<control type="group">
 			<left>50</left>
 			<top>80</top>
-			<include>dialogeffect</include>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<left>16</left>
 				<top>44</top>
@@ -110,7 +110,7 @@
 		<control type="group">
 			<left>985</left>
 			<top>80</top>
-			<include>dialogeffect</include>
+			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<left>16</left>
 				<top>44</top>

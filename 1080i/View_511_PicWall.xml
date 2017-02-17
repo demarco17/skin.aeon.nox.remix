@@ -3,7 +3,7 @@
 	<include name="PictureWall">
 		<control type="group">
 			<visible>Control.IsVisible(511)</visible>
-			<include>ViewAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<description>background image</description>
 				<left>106</left>
@@ -40,7 +40,7 @@
 				<focusedlayout height="236" width="420">
 					<control type="group">
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 						</animation>
 						<control type="image">
 							<width>420</width>
@@ -63,10 +63,10 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
-				<include>ViewAnimation</include>
+				<include>VisibleFadeAnimation</include>
 				<control type="group">
 					<left>90</left>
 					<top>980</top>

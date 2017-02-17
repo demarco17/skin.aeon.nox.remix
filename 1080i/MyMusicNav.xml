@@ -29,7 +29,7 @@
 			<include>ShowCaseMusicInfoPanel</include>
 		</control>
 		<control type="group">
-			<include>Window_OpenClose_Animation</include>
+			<include>OpenCloseAnimation</include>
 			<include>MusicList</include><!-- view id = 50 -->
 			<include>MusicInfoWall</include><!-- view id = 51 -->
 			<include>View_54_ShowCase</include><!-- view id = 54 -->
@@ -42,8 +42,8 @@
 		<control type="group">
 			<visible>Control.IsVisible(55) | Control.IsVisible(54) | Control.IsVisible(52) | Control.IsVisible(500) | Control.IsVisible(57)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
-			<include>Window_OpenClose_Animation</include>
-			<include>ViewAnimation</include>
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<top>-30</top>
 			<control type="group">
 				<visible>Control.IsVisible(54) | Control.IsVisible(52)</visible>

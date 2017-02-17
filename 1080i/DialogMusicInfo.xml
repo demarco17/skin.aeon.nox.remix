@@ -5,11 +5,11 @@
 		<left>399</left>
 		<top>165</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<onunload>ClearProperty(Discography,musicinformation)</onunload>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(1132)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(1132)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>
@@ -45,7 +45,7 @@
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">200</scrolltime>
-				<include>SettingsFadeEffect</include>
+				<include>VisibleFadeAnimation</include>
 				<visible>String.IsEmpty(Window.Property(Discography))</visible>
 				<itemlayout height="90" width="736">
 					<control type="image">
@@ -353,7 +353,7 @@
 				<onleft>9001</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
-				<include>SettingsFadeEffect</include>
+				<include>VisibleFadeAnimation</include>
 				<visible>!String.IsEmpty(Window.Property(Discography))</visible>
 				<scrolltime tween="quadratic" easing="out">200</scrolltime>
 				<itemlayout height="90" width="736">

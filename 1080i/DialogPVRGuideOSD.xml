@@ -155,7 +155,7 @@
 				<onleft>11</onleft>
 				<onright>11</onright>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</controls>

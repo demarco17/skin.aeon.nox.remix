@@ -5,7 +5,7 @@
 		<left>697</left>
 		<top>240</top>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>OpenCloseAnimation</include>
 	<onunload>ClearProperty(Nox.Label,Home)</onunload>
 	<onunload>ClearProperty(Nox.Path,Home)</onunload>
 	<onunload>ClearProperty(Nox.MultiFanart,Home)</onunload>

@@ -3,8 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 		<control type="group">
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
 			<top>108</top>
 			<control type="group">
 				<include>SystemLeftPanel</include>
@@ -90,7 +89,7 @@
 				<include>SystemRightPanel</include>
 				<control type="group">
 					<visible>![Control.HasFocus(200) | Control.HasFocus(50)] + String.IsEmpty(ListItem.AddonBroken)</visible>
-					<include>VisibleFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<left>490</left>
 					<control type="grouplist">
 						<left>32</left>
@@ -165,7 +164,7 @@
 				</control>
 				<control type="group">
 					<visible>Control.HasFocus(200) | Control.HasFocus(50)</visible>
-					<include>VisibleFadeEffect</include>
+					<include>VisibleFadeAnimation</include>
 					<left>490</left>
 					<control type="panel" id="50">
 						<left>32</left>
@@ -189,7 +188,7 @@
 						<focusedlayout height="371" width="658">
 							<control type="group">
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" start="98" end="100" time="300" tween="sine" easing="inout" center="auto" />
+									<effect type="zoom" start="98" end="100" time="400" tween="sine" easing="inout" center="auto" />
 								</animation>
 								<control type="image">
 									<width>658</width>
@@ -203,7 +202,7 @@
 						</focusedlayout>
 					</control>
 					<control type="image">
-						<include>VisibleFadeEffect</include>
+						<include>VisibleFadeAnimation</include>
 						<left>661</left>
 						<top>36</top>
 						<width>60</width>
@@ -212,7 +211,7 @@
 						<visible>Container(50).HasPrevious</visible>
 					</control>
 					<control type="image">
-						<include>VisibleFadeEffect</include>
+						<include>VisibleFadeAnimation</include>
 						<left>661</left>
 						<top>830</top>
 						<width>60</width>

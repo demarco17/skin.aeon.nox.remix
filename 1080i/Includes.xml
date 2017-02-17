@@ -22,7 +22,7 @@
 	<include file="View_511_PicWall.xml" />
 	<include file="Variables.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
-	<constant name="CrossfadeTime">300</constant>
+	<constant name="CrossfadeTime">400</constant>
 	<variable name="BannerThumb">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
@@ -271,9 +271,8 @@
 	<!-- Navigation Bar -->
 	<include name="Topbar">
 		<control type="group">
-			<animation effect="slide" start="0,-43" end="0,0" time="480" condition="Window.Previous(home)">WindowOpen</animation>
-			<animation effect="slide" end="0,-43" start="0,0" time="480" condition="Window.Next(home)">WindowClose</animation>
-			<animation effect="fade" start="100" end="0" time="480" condition="Window.IsActive(playercontrols)">Conditional</animation>
+			<include>OpenCloseAnimation</include>
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(playercontrols)">Conditional</animation>
 			<control type="image">
 				<width>1920</width>
 				<height>43</height>
@@ -308,8 +307,7 @@
 			</control>
 			<control type="group">
 				<visible>Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + ![Window.IsActive(volumebar)]</visible>
-				<animation effect="slide" start="0,-60" end="0,0" time="200">Visible</animation>
-				<animation effect="slide" start="0,0" end="0,-60" time="200">Hidden</animation>
+				<include>VisibleFadeAnimation</include>
 				<left>1080</left>
 				<control type="progress">
 					<width>500</width>
@@ -384,14 +382,7 @@
 			<textcolor>grey</textcolor>
 			<texturenofocus />
 			<onclick>ActivateWindow(shutdownmenu)</onclick>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
+			<include>VisibleFadeAnimation</include>
 		</control>
 	</include>
 	<include name="HomeFavButton">
@@ -405,14 +396,7 @@
 			<textcolor>grey</textcolor>
 			<texturenofocus />
 			<onclick>ActivateWindow(Favourites)</onclick>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
+			<include>VisibleFadeAnimation</include>
 		</control>
 	</include>
 	<include name="HomeSearchButton">
@@ -426,14 +410,7 @@
 			<textcolor>grey</textcolor>
 			<texturenofocus />
 			<onclick>ActivateWindow(1124)</onclick>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
+			<include>VisibleFadeAnimation</include>
 		</control>
 	</include>
 	<include name="HomeDVDEjectButton">
@@ -448,14 +425,7 @@
 			<texturenofocus />
 			<visible>System.HasMediaDVD</visible>
 			<onclick>EjectTray()</onclick>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
+			<include>VisibleFadeAnimation</include>
 		</control>
 	</include>
 	<include name="HomeDVDPlayButton">
@@ -473,14 +443,7 @@
 			<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
 			<onclick condition="Player.HasVideo">Fullscreen</onclick>
 			<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
-			</animation>
+			<include>VisibleFadeAnimation</include>
 		</control>
 	</include>
 	<!-- Extended info lists -->
@@ -496,7 +459,7 @@
 			<ondown>noop</ondown>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
 			<orientation>horizontal</orientation>
-			<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+			<include>VisibleFadeAnimation</include>
 			<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
 			<itemlayout height="420" width="297">
 				<control type="image">
@@ -526,7 +489,7 @@
 			<focusedlayout height="420" width="297">
 				<control type="group">
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 					</animation>
 					<control type="image">
 						<width>297</width>
@@ -787,7 +750,7 @@
 			<ondown>noop</ondown>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
 			<orientation>horizontal</orientation>
-			<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+			<include>VisibleFadeAnimation</include>
 			<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
 			<itemlayout height="420" width="297">
 				<control type="image">
@@ -817,7 +780,7 @@
 			<focusedlayout height="420" width="297">
 				<control type="group">
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+						<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
 					</animation>
 					<control type="image">
 						<width>297</width>
