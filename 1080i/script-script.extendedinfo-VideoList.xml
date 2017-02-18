@@ -35,7 +35,6 @@
 				<onright>500</onright>
 				<onup>700</onup>
 				<ondown>600</ondown>
-				<oninfo>Action(Select)</oninfo>
 				<orientation>vertical</orientation>
 				<itemlayout height="360" width="240">
 					<control type="group">
@@ -58,9 +57,7 @@
 				</itemlayout>
 				<focusedlayout height="360" width="240">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>240</width>
 							<height>360</height>
@@ -129,7 +126,6 @@
 				<control type="group">
 					<left>90</left>
 					<top>1010</top>
-					<include>VisibleFadeAnimation</include>
 					<control type="label">
 						<width>11500</width>
 						<height>42</height>

@@ -3,8 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="-729,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="-729,0" time="400" tween="quadratic">WindowClose</animation>
+			<include>VideoInfoLeftAnimation</include>
 			<control type="image">
 				<width>729</width>
 				<height>1080</height>
@@ -21,8 +20,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" start="1242,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="1242,0" time="400" tween="quadratic">WindowClose</animation>
+			<include>VideoInfoRightAnimation</include>
 			<left>729</left>
 			<control type="image">
 				<width>1192</width>
@@ -219,7 +217,6 @@
 					<height>306</height>
 					<onup>4002</onup>
 					<ondown>9000</ondown>
-					<oninfo>Action(Back)</oninfo>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="61" width="595">
@@ -353,7 +350,6 @@
 					<ondown>noop</ondown>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<oninfo>Action(Back)</oninfo>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
@@ -418,7 +414,6 @@
 					<onright>250</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<oninfo>Action(Select)</oninfo>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)</visible>
@@ -458,9 +453,7 @@
 					</itemlayout>
 					<focusedlayout height="420" width="297">
 						<control type="group">
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-							</animation>
+							<include>IconZoomAnimation</include>
 							<control type="image">
 								<width>297</width>
 								<height>418</height>
@@ -508,7 +501,6 @@
 					<onright>1000</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<oninfo>Action(Select)</oninfo>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>[ControlGroup(9000).HasFocus(5) | ControlGroup(9000).HasFocus(8)] + String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
@@ -540,9 +532,7 @@
 					</itemlayout>
 					<focusedlayout height="420" width="297">
 						<control type="group">
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-							</animation>
+							<include>IconZoomAnimation</include>
 							<control type="image">
 								<width>297</width>
 								<height>418</height>
@@ -581,7 +571,6 @@
 					<onright>1150</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<oninfo>Action(Back)</oninfo>
 					<orientation>horizontal</orientation>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -614,9 +603,7 @@
 					</itemlayout>
 					<focusedlayout height="420" width="594">
 						<control type="group">
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-							</animation>
+							<include>IconZoomAnimation</include>
 							<control type="image">
 								<width>594</width>
 								<height>418</height>
@@ -655,7 +642,6 @@
 					<onright>1250</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<oninfo>Action(Back)</oninfo>
 					<orientation>horizontal</orientation>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -673,9 +659,7 @@
 					</itemlayout>
 					<focusedlayout height="420" width="297">
 						<control type="group">
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-							</animation>
+							<include>IconZoomAnimation</include>
 							<control type="image">
 								<width>297</width>
 								<height>418</height>
@@ -697,7 +681,6 @@
 					<onright>1350</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<oninfo>Action(Back)</oninfo>
 					<orientation>horizontal</orientation>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -715,9 +698,7 @@
 					</itemlayout>
 					<focusedlayout height="420" width="594">
 						<control type="group">
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-							</animation>
+							<include>IconZoomAnimation</include>
 							<control type="image">
 								<width>594</width>
 								<height>418</height>
@@ -873,7 +854,6 @@
 						<focusedcolor>white</focusedcolor>
 						<label>208</label>
 						<enable>!String.IsEmpty(Window.Property(DBID))</enable>
-						<oninfo>Action(Back)</oninfo>
 					</control>
 					<control type="image" id="200">
 						<width>2</width>
@@ -892,7 +872,6 @@
 						<focusedcolor>white</focusedcolor>
 						<label>206</label>
 						<altlabel>207</altlabel>
-						<oninfo>Action(Back)</oninfo>
 					</control>
 					<control type="image" id="201">
 						<width>2</width>
@@ -912,7 +891,6 @@
 						<label>20445</label>
 						<altlabel>31016</altlabel>
 						<enable>Integer.IsGreater(Container(1250).NumItems,0) | Integer.IsGreater(Container(1350).NumItems,0)</enable>
-						<oninfo>Action(Back)</oninfo>
 					</control>
 					<control type="image" id="205">
 						<width>2</width>
@@ -931,7 +909,6 @@
 						<focusedcolor>white</focusedcolor>
 						<label>20410</label>
 						<enable>Integer.IsGreater(Container(1150).NumItems,0)</enable>
-						<oninfo>Action(Back)</oninfo>
 					</control>
 					<control type="image" id="207">
 						<width>2</width>
@@ -950,7 +927,6 @@
 						<focusedcolor>white</focusedcolor>
 						<label>20141</label>
 						<enable>Integer.IsGreater(Container(250).NumItems,0)</enable>
-						<oninfo>Action(Back)</oninfo>
 					</control>
 				</control>
 			</control>

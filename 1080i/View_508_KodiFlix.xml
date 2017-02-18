@@ -12,6 +12,7 @@
 				<font>font_KodiFiix</font>
 				<textcolor>grey</textcolor>
 				<label>$INFO[ListItem.Title]</label>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)</visible>
 			</control>
 			<control type="grouplist">
 				<left>25</left>
@@ -20,6 +21,7 @@
 				<height>485</height>
 				<orientation>vertical</orientation>
 				<visible>!ListItem.IsCollection</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)</visible>
 				<control type="label">
 					<height>90</height>
 					<font>font14</font>
@@ -127,6 +129,7 @@
 			<control type="group">
 				<left>25</left>
 				<top>170</top>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)</visible>
 				<visible>ListItem.IsCollection</visible>
 				<control type="group">
 					<include content="InfoList">
@@ -196,9 +199,7 @@
 				</itemlayout>
 				<focusedlayout height="270" width="480">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<left>20</left>
 							<width>440</width>

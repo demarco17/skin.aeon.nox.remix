@@ -255,9 +255,7 @@
 					</itemlayout>
 					<focusedlayout height="240" width="240">
 						<control type="group">
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-							</animation>
+							<include>IconZoomAnimation</include>
 							<control type="image">
 								<width>240</width>
 								<height>240</height>

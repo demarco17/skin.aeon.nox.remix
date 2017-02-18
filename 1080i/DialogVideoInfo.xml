@@ -5,10 +5,7 @@
 	<controls>
 		<include condition="System.HasAddon(script.extendedinfo)">HiddenActorList</include>
 		<control type="group">
-			<animation effect="slide" start="-729,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="-729,0" time="400" tween="quadratic">WindowClose</animation>
-			<animation effect="slide" start="-729,0" end="0,0" time="400" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
-			<animation effect="slide" end="-729,0" time="400" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+			<include>VideoInfoLeftAnimation</include>
 			<control type="image">
 				<width>729</width>
 				<height>1080</height>
@@ -17,10 +14,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<animation effect="slide" start="1242,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="1242,0" time="400" tween="quadratic">WindowClose</animation>
-			<animation effect="slide" start="1242,0" end="0,0" time="400" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
-			<animation effect="slide" end="1242,0" time="400" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+			<include>VideoInfoRightAnimation</include>
 			<left>729</left>
 			<control type="image">
 				<width>1192</width>

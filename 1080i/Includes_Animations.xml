@@ -6,7 +6,18 @@
 	</include>
 	<include name="VisibleFadeAnimation">
 		<animation effect="fade" time="400">Visible</animation>
-		<animation effect="fade" time="400">Hidden</animation>
+		<animation effect="fade" time="300">Hidden</animation>
 		<animation effect="fade" time="400">VisibleChange</animation>
+	</include>
+	<include name="IconZoomAnimation">
+		<animation effect="zoom" center="auto" start="95" end="100" time="400" reversible="false">Focus</animation>
+	</include>
+	<include name="VideoInfoLeftAnimation">
+		<animation effect="slide" start="-729,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+		<animation effect="slide" end="-729,0" time="400" tween="quadratic">WindowClose</animation>
+	</include>
+	<include name="VideoInfoRightAnimation">
+		<animation effect="slide" start="1242,0" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+		<animation effect="slide" end="1242,0" time="400" tween="quadratic">WindowClose</animation>
 	</include>
 </includes>

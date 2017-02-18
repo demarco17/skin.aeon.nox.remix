@@ -49,9 +49,7 @@
 				</itemlayout>
 				<focusedlayout height="300" width="196" condition="String.IsEqual(Control.GetLabel(4430),1)">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>196</width>
 							<height>300</height>
@@ -110,9 +108,7 @@
 				</itemlayout>
 				<focusedlayout width="980" height="180" condition="String.IsEqual(Control.GetLabel(4430),2)">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="97" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>980</width>
 							<height>180</height>
@@ -410,9 +406,7 @@
 				</itemlayout>
 				<focusedlayout height="300" width="300" condition="Container.Content(albums)">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>300</width>
 							<height>300</height>
@@ -435,9 +429,7 @@
 				</itemlayout>
 				<focusedlayout height="300" width="300" condition="Container.Content(artists)">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>300</width>
 							<height>300</height>

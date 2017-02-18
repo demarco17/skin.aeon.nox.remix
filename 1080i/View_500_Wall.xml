@@ -51,9 +51,7 @@
 				</itemlayout>
 				<focusedlayout height="360" width="240" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>240</width>
 							<height>360</height>
@@ -84,9 +82,7 @@
 				</itemlayout>
 				<focusedlayout height="240" width="240" condition="Container.Content(addons)">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
@@ -117,9 +113,7 @@
 				</itemlayout>
 				<focusedlayout height="240" width="420" condition="Container.Content(episodes)">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>420</width>
 							<height>240</height>
@@ -186,9 +180,7 @@
 				</itemlayout>
 				<focusedlayout height="240" width="240">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
@@ -247,9 +239,7 @@
 				</itemlayout>
 				<focusedlayout height="240" width="240">
 					<control type="group">
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="400" tween="sine" easing="inout" center="auto" />
-						</animation>
+						<include>IconZoomAnimation</include>
 						<control type="image">
 							<width>240</width>
 							<height>240</height>
