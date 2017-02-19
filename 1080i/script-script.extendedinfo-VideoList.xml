@@ -228,7 +228,7 @@
 			<control type="grouplist" id="9000">
 				<top>100</top>
 				<width>400</width>
-				<height>1080</height>
+				<height>960</height>
 				<orientation>vertical</orientation>
 				<scroll>true</scroll>
 				<onup>9000</onup>
@@ -262,12 +262,12 @@
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
-				<control type="button" id="50013">
+				<control type="button" id="5333">
 					<description>Filter Heading</description>
 					<textwidth>352</textwidth>
 					<font>font13_title</font>
 					<include>ButtonCommonValues</include>
-					<label>587</label>
+					<label>$ADDON[script.extendedinfo 32023]</label>
 					<enable>false</enable>
 					<disabledcolor>themecolor</disabledcolor>
 				</control>
@@ -301,11 +301,17 @@
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
-				<control type="button" id="50010">
+				<control type="button" id="5010">
 					<description>Studio</description>
 					<label>572</label>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
+				</control>
+				<control type="button" id="5011">
+					<label>$LOCALIZE[2050]</label>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<visible>false</visible>
 				</control>
 				<control type="button" id="50012">
 					<description>Vote count</description>
@@ -313,7 +319,7 @@
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
-				<control type="button" id="50014">
+				<control type="button" id="5334">
 					<description>Misc Options Heading</description>
 					<textwidth>352</textwidth>
 					<font>font13_title</font>

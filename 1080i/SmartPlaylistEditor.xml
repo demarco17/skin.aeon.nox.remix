@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">22</defaultcontrol>
-	<coordinates>
-		<left>199</left>
-		<top>180</top>
-	</coordinates>
 	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(smartplaylistrule)</visible>
 			<include>VisibleFadeAnimation</include>
+			<left>199</left>
+			<top>180</top>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>
