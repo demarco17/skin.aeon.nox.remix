@@ -3,7 +3,7 @@
 	<include name="VideoTriPanel">
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>1400</left>
 				<top>136</top>
@@ -531,7 +531,7 @@
 	<include name="MusicTriPanel">
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>1396</left>
 				<top>401</top>

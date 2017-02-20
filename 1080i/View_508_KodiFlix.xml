@@ -3,7 +3,7 @@
 	<include name="Video_508_KodiFlix">
 		<control type="group">
 			<visible>Control.IsVisible(508)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="label">
 				<left>25</left>
 				<top>75</top>
@@ -12,7 +12,6 @@
 				<font>font_KodiFiix</font>
 				<textcolor>grey</textcolor>
 				<label>$INFO[ListItem.Title]</label>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)</visible>
 			</control>
 			<control type="grouplist">
 				<left>25</left>
@@ -21,7 +20,6 @@
 				<height>485</height>
 				<orientation>vertical</orientation>
 				<visible>!ListItem.IsCollection</visible>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)</visible>
 				<control type="label">
 					<height>90</height>
 					<font>font14</font>
@@ -129,7 +127,6 @@
 			<control type="group">
 				<left>25</left>
 				<top>170</top>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)</visible>
 				<visible>ListItem.IsCollection</visible>
 				<control type="group">
 					<include content="InfoList">

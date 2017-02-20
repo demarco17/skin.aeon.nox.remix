@@ -17,7 +17,7 @@
 		<control type="group">
 			<visible>[Control.IsVisible(500) + Container.Content(addons)] + !Window.IsActive(addoninformation)</visible>
 			<include>OpenCloseAnimation</include>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>90</left>
 				<top>980</top>

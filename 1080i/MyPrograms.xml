@@ -11,12 +11,12 @@
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<include>AddonList</include><!-- view id = 50 -->
-			<include condition="!Skin.HasSetting(Wall.Disable)">AddonWall</include><!-- view id = 500 -->
+			<include>AddonWall</include><!-- view id = 500 -->
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(500)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
-			<include>OpenCloseAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>90</left>
 				<top>980</top>

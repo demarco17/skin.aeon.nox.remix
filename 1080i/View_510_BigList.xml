@@ -3,7 +3,7 @@
 	<include name="Video_510_BigList">
 		<control type="group">
 			<visible>Control.IsVisible(510)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-20</top>
@@ -231,7 +231,7 @@
 	<include name="Music_510_BigList">
 		<control type="group">
 			<visible>Control.IsVisible(510)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
 				<top>-20</top>

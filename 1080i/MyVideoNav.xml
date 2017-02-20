@@ -56,7 +56,7 @@
 			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(59) | Control.IsVisible(508)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
 			<include>OpenCloseAnimation</include>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<top>-30</top>
 			<control type="group">
 				<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(59)</visible>

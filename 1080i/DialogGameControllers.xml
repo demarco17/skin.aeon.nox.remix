@@ -1,155 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<coordinates>
-		<left>122</left>
-		<top>254</top>
-	</coordinates>
 	<include>OpenCloseAnimation</include>
 	<controls>
-		<control type="image">
-			<description>background image</description>
-			<left>16</left>
-			<top>16</top>
-			<width>1642</width>
-			<height>568</height>
-			<texture border="18">dialogs/dialog-bg2.png</texture>
-		</control>
-		<control type="label">
-			<description>header label</description>
-			<left>32</left>
-			<top>32</top>
-			<width>1610</width>
-			<height>40</height>
-			<textoffsetx>15</textoffsetx>
-			<align>center</align>
-			<textcolor>dialogheader</textcolor>
-			<font>font15_title</font>
-			<label>$LOCALIZE[35058]</label>
-		</control>
-		<!-- left group -->
 		<control type="group">
-			<left>32</left>
-			<top>88</top>
+			<left>122</left>
+			<top>254</top>
 			<control type="image">
-				<width>310</width>
-				<height>480</height>
-				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				<description>background image</description>
+				<left>16</left>
+				<top>16</top>
+				<width>1642</width>
+				<height>568</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
-			<control type="grouplist" id="3">
-				<description>Controller types grouplist</description>
-				<width>310</width>
-				<height>480</height>
-				<onleft>9001</onleft>
-				<onright>5</onright>
-				<scrolltime tween="cubic" easing="out">200</scrolltime>
-			</control>
-			<control type="button" id="10">
-				<description>Default controller types button</description>
-				<width>310</width>
-				<align>right</align>
-			</control>
-		</control>
-		<!-- middle group 1 -->
-		<control type="group">
-			<left>357</left>
-			<top>88</top>
-			<control type="image">
-				<width>636</width>
-				<height>480</height>
-				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-			</control>
-			<control type="gamecontroller" id="31">
-				<left>78</left>
-				<top>90</top>
-				<width>480</width>
-				<height>300</height>
-			</control>
-		</control>
-		<!-- middle group 2 -->
-		<control type="group">
-			<left>1007</left>
-			<top>88</top>
-			<control type="image">
-				<width>310</width>
-				<height>480</height>
-				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-			</control>
-			<control type="grouplist" id="5">
-				<description>Feature types grouplist</description>
-				<width>310</width>
-				<height>480</height>
-				<pagecontrol>60</pagecontrol>
-				<onleft>3</onleft>
-				<onright>60</onright>
-				<scrolltime tween="cubic" easing="out">200</scrolltime>
-			</control>
-			<control type="button" id="7">
-				<description>Default feature types button</description>
-				<width>310</width>
-			</control>
-			<control type="label" id="8">
-				<description>settings category label</description>
-				<width>310</width>
-				<height>60</height>
-				<font>font14</font>
-				<textcolor>themecolor</textcolor>
+			<control type="label">
+				<description>header label</description>
+				<left>32</left>
+				<top>32</top>
+				<width>1610</width>
+				<height>40</height>
 				<textoffsetx>15</textoffsetx>
-				<label />
+				<align>center</align>
+				<textcolor>dialogheader</textcolor>
+				<font>font15_title</font>
+				<label>$LOCALIZE[35058]</label>
 			</control>
-			<control type="image" id="9">
-				<description>settings category separator</description>
-				<height>1</height>
-				<width>310</width>
-				<visible>false</visible>
-			</control>
-			<control type="scrollbar" id="60">
-				<left>312</left>
-				<width>12</width>
-				<height>480</height>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<onleft>5</onleft>
-				<onright>9001</onright>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-			</control>
-		</control>
-		<!-- right group -->
-		<control type="group">
-			<left>1331</left>
-			<top>88</top>
-			<control type="image">
-				<width>310</width>
-				<height>480</height>
-				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-			</control>
-			<control type="grouplist" id="9001">
-				<width>310</width>
-				<height>480</height>
-				<onleft>5</onleft>
-				<onright>3</onright>
-				<onup>9001</onup>
-				<ondown>9001</ondown>
-				<control type="button" id="18">
-					<description>OK Button</description>
+			<!-- left group -->
+			<control type="group">
+				<left>32</left>
+				<top>88</top>
+				<control type="image">
 					<width>310</width>
-					<label>186</label>
+					<height>480</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 				</control>
-				<control type="button" id="19">
-					<description>Reset</description>
+				<control type="grouplist" id="3">
+					<description>Controller types grouplist</description>
 					<width>310</width>
-					<label>10035</label>
+					<height>480</height>
+					<onleft>9001</onleft>
+					<onright>5</onright>
+					<scrolltime tween="cubic" easing="out">200</scrolltime>
 				</control>
-				<control type="button" id="17">
-					<description>Help</description>
+				<control type="button" id="10">
+					<description>Default controller types button</description>
 					<width>310</width>
-					<label>10043</label>
+					<align>right</align>
 				</control>
-				<control type="button" id="20">
-					<description>Link to install more controllers</description>
+			</control>
+			<!-- middle group 1 -->
+			<control type="group">
+				<left>357</left>
+				<top>88</top>
+				<control type="image">
+					<width>636</width>
+					<height>480</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				</control>
+				<control type="gamecontroller" id="31">
+					<left>78</left>
+					<top>90</top>
+					<width>480</width>
+					<height>300</height>
+				</control>
+			</control>
+			<!-- middle group 2 -->
+			<control type="group">
+				<left>1007</left>
+				<top>88</top>
+				<control type="image">
 					<width>310</width>
-					<label>$LOCALIZE[21452]</label>
+					<height>480</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				</control>
+				<control type="grouplist" id="5">
+					<description>Feature types grouplist</description>
+					<width>310</width>
+					<height>480</height>
+					<pagecontrol>60</pagecontrol>
+					<onleft>3</onleft>
+					<onright>60</onright>
+					<scrolltime tween="cubic" easing="out">200</scrolltime>
+				</control>
+				<control type="button" id="7">
+					<description>Default feature types button</description>
+					<width>310</width>
+				</control>
+				<control type="label" id="8">
+					<description>settings category label</description>
+					<width>310</width>
+					<height>60</height>
+					<font>font14</font>
+					<textcolor>themecolor</textcolor>
+					<textoffsetx>15</textoffsetx>
+					<label />
+				</control>
+				<control type="image" id="9">
+					<description>settings category separator</description>
+					<height>1</height>
+					<width>310</width>
+					<visible>false</visible>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>312</left>
+					<width>12</width>
+					<height>480</height>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<onleft>5</onleft>
+					<onright>9001</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+			</control>
+			<!-- right group -->
+			<control type="group">
+				<left>1331</left>
+				<top>88</top>
+				<control type="image">
+					<width>310</width>
+					<height>480</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				</control>
+				<control type="grouplist" id="9001">
+					<width>310</width>
+					<height>480</height>
+					<onleft>5</onleft>
+					<onright>3</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="button" id="18">
+						<description>OK Button</description>
+						<width>310</width>
+						<label>186</label>
+					</control>
+					<control type="button" id="19">
+						<description>Reset</description>
+						<width>310</width>
+						<label>10035</label>
+					</control>
+					<control type="button" id="17">
+						<description>Help</description>
+						<width>310</width>
+						<label>10043</label>
+					</control>
+					<control type="button" id="20">
+						<description>Link to install more controllers</description>
+						<width>310</width>
+						<label>$LOCALIZE[21452]</label>
+					</control>
 				</control>
 			</control>
 		</control>

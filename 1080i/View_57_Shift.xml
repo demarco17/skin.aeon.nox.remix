@@ -137,7 +137,7 @@
 	</include>
 	<include name="PosterShift">
 		<control type="group">
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<visible>Control.IsVisible(57)</visible>
 			<control type="fixedlist" id="57">
 				<left>-95</left>
@@ -192,7 +192,7 @@
 	</include>
 	<include name="AlbumShift">
 		<control type="group">
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<visible>Control.IsVisible(57)</visible>
 			<control type="fixedlist" id="57">
 				<left>-148</left>

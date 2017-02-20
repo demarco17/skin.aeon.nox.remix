@@ -3,7 +3,7 @@
 	<include name="VideoFanartList">
 		<control type="group">
 			<visible>Control.IsVisible(507)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>1149</left>
 				<top>136</top>

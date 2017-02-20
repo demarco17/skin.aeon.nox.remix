@@ -2,7 +2,7 @@
 <window id="3033">
 	<defaultcontrol always="true">1000</defaultcontrol>
 	<controls>
-		 <include>CommonBackground</include>
+		<include>CommonBackground</include>
 		<control type="group">
 			<top>128</top>
 			<include>OpenCloseAnimation</include>
@@ -13,8 +13,6 @@
 				<width>356</width>
 				<height>720</height>
 				<onleft>1500</onleft>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
 				<scrolltime tween="quadratic" easing="out">200</scrolltime>
 				<itemlayout height="90" width="356">
 					<control type="image">
@@ -43,7 +41,6 @@
 						<width>356</width>
 						<height>90</height>
 						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
-						<visible>Control.HasFocus(1000)</visible>
 					</control>
 					<control type="label">
 						<width>356</width>
@@ -68,71 +65,88 @@
 			</control>
 			<include>SystemRightPanel</include>
 			<control type="group" id="1900">
-				<control type="grouplist">
-					<description>control area</description>
-					<left>522</left>
-					<top>60</top>
+				<left>522</left>
+				<top>60</top>
+				<width>1316</width>
+				<height>720</height>
+				<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1900)</visible>
+				<control type="label">
+					<description>Label 1</description>
 					<width>1316</width>
-					<height>720</height>
-					<itemgap>30</itemgap>
-					<onleft>noop</onleft>
-					<onright>noop</onright>
-					<usecontrolcoords>true</usecontrolcoords>
-					<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1900)</visible>
-					<control type="button">
-						<description>Label 1</description>
-						<width>1316</width>
-						<height>30</height>
-						<textoffsetx>30</textoffsetx>
-						<label>[COLOR themecolor]$ADDON[service.libreelec.settings 606][/COLOR]</label>
-						<label2>$INFO[Window.Property(Distri)] ($INFO[Window.Property(build)])</label2>
-						<font>font15</font>
-						<texturefocus />
-						<texturenofocus />
-					</control>
-					<control type="button">
-						<description>Label 2</description>
-						<width>1316</width>
-						<height>30</height>
-						<textoffsetx>30</textoffsetx>
-						<label>[COLOR themecolor]$ADDON[service.libreelec.settings 608][/COLOR]</label>
-						<label2>$INFO[Window.Property(Arch)]</label2>
-						<font>font15</font>
-						<texturefocus />
-						<texturenofocus />
-					</control>
-					<control type="button">
-						<description>Label 3</description>
-						<width>1316</width>
-						<height>30</height>
-						<textoffsetx>30</textoffsetx>
-						<label>[COLOR themecolor]$ADDON[service.libreelec.settings 607][/COLOR]</label>
-						<label2>$INFO[Window.Property(Version)]</label2>
-						<font>font15</font>
-						<texturefocus />
-						<texturenofocus />
-					</control>
-					<control type="textbox">
-						<left>30</left>
-						<width>1256</width>
-						<height>auto</height>
-						<font>font15_textbox</font>
-						<textcolor>grey</textcolor>
-						<label>$ADDON[service.libreelec.settings 609]</label>
-					</control>
-					<control type="textbox">
-						<left>30</left>
-						<width>1256</width>
-						<height>auto</height>
-						<font>font10</font>
-						<textcolor>grey</textcolor>
-						<label>$ADDON[service.libreelec.settings 610]</label>
-					</control>
+					<height>30</height>
+					<textoffsetx>30</textoffsetx>
+					<label>[COLOR themecolor]$ADDON[service.libreelec.settings 606][/COLOR]</label>
+					<font>font15</font>
+				</control>
+				<control type="label">
+					<description>Label 1</description>
+					<width>1316</width>
+					<height>30</height>
+					<textoffsetx>30</textoffsetx>
+					<align>right</align>
+					<label>$INFO[Window.Property(Distri)] ($INFO[Window.Property(build)])</label>
+					<font>font15</font>
+				</control>
+				<control type="label">
+					<description>Label 2</description>
+					<top>50</top>
+					<width>1316</width>
+					<height>30</height>
+					<textoffsetx>30</textoffsetx>
+					<label>[COLOR themecolor]$ADDON[service.libreelec.settings 608][/COLOR]</label>
+					<font>font15</font>
+				</control>
+				<control type="label">
+					<description>Label 2</description>
+					<top>50</top>
+					<width>1316</width>
+					<height>30</height>
+					<textoffsetx>30</textoffsetx>
+					<align>right</align>
+					<label>$INFO[Window.Property(Arch)]</label>
+					<font>font15</font>
+				</control>
+				<control type="label">
+					<description>Label 3</description>
+					<top>95</top>
+					<width>1316</width>
+					<height>30</height>
+					<textoffsetx>30</textoffsetx>
+					<label>[COLOR themecolor]$ADDON[service.libreelec.settings 607][/COLOR]</label>
+					<font>font15</font>
+				</control>
+				<control type="label">
+					<description>Label 3</description>
+					<top>95</top>
+					<width>1316</width>
+					<height>30</height>
+					<textoffsetx>30</textoffsetx>
+					<align>right</align>
+					<label>$INFO[Window.Property(Version)]</label>
+					<font>font15</font>
+				</control>
+				<control type="textbox">
+					<top>155</top>
+					<left>30</left>
+					<width>1256</width>
+					<height>auto</height>
+					<font>font15_textbox</font>
+					<textcolor>grey</textcolor>
+					<label>$ADDON[service.libreelec.settings 609]</label>
+				</control>
+				<control type="textbox">
+					<top>350</top>
+					<left>30</left>
+					<width>1256</width>
+					<height>auto</height>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<label>$ADDON[service.libreelec.settings 610]</label>
 				</control>
 				<control type="image">
 					<description>LOGO</description>
-					<left>1538</left>
-					<top>400</top>
+					<left>1016</left>
+					<top>350</top>
 					<width>300</width>
 					<height>300</height>
 					<aspectratio>keep</aspectratio>
@@ -148,8 +162,8 @@
 					<height>720</height>
 					<onleft>1000</onleft>
 					<onright>60</onright>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1100)</visible>
 					<itemlayout height="90">
 						<!-- entry name and text value -->
@@ -454,8 +468,18 @@
 							<width>20</width>
 							<height>20</height>
 							<aspectratio>keep</aspectratio>
-							<visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible>
+							<visible>Integer.IsEqual(ListItem.Property(Security), 1)</visible>
 							<texture>libreelec/icons/Key.png</texture>
+						</control>
+						<!-- Insecure Symbol (bottom right) -->
+						<control type="image">
+							<left>1260</left>
+							<top>50</top>
+							<width>20</width>
+							<height>20</height>
+							<aspectratio>keep</aspectratio>
+							<visible>Integer.IsEqual(ListItem.Property(Security), 0)</visible>
+							<texture>libreelec/icons/Unlock.png</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="90">
@@ -649,11 +673,22 @@
 							<width>20</width>
 							<height>20</height>
 							<aspectratio>keep</aspectratio>
-							<visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible>
+							<visible>Integer.IsEqual(ListItem.Property(Security), 1)</visible>
 							<texture>libreelec/icons/Key.png</texture>
+						</control>
+						<!-- Insecure Symbol (bottom right) -->
+						<control type="image">
+							<left>1260</left>
+							<top>50</top>
+							<width>20</width>
+							<height>20</height>
+							<aspectratio>keep</aspectratio>
+							<visible>Integer.IsEqual(ListItem.Property(Security), 0)</visible>
+							<texture>libreelec/icons/Unlock.png</texture>
 						</control>
 					</focusedlayout>
 				</control>
+				<!-- Bluetooth Menu Content -->
 				<control type="list" id="1300">
 					<left>522</left>
 					<top>32</top>
@@ -837,7 +872,7 @@
 							<width>20</width>
 							<height>20</height>
 							<aspectratio>keep</aspectratio>
-							<visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible>
+							<visible>Integer.IsEqual(ListItem.Property(Trusted), 1)</visible>
 							<texture>libreelec/icons/Key.png</texture>
 						</control>
 					</itemlayout>
@@ -973,71 +1008,35 @@
 							<visible>String.IsEqual(ListItem.Property(Icon), computer)</visible>
 							<texture>libreelec/icons/bt-computer.png</texture>
 						</control>
-						<control type="group">
-							<visible>!Control.HasFocus(1300)</visible>
-							<!-- Connection Name -->
-							<control type="label">
-								<left>140</left>
-								<top>10</top>
-								<width>490</width>
-								<height>30</height>
-								<font>font24_title</font>
-								<textcolor>grey</textcolor>
-								<info>ListItem.Label</info>
-							</control>
-							<!-- Connection Address -->
-							<control type="label">
-								<left>650</left>
-								<top>49</top>
-								<width>340</width>
-								<height>20</height>
-								<font>font12</font>
-								<textcolor>themecolor</textcolor>
-								<label>$ADDON[service.libreelec.settings 605]: [COLOR=grey]$INFO[ListItem.Property(Address)][/COLOR]</label>
-							</control>
-							<!-- Connected State -->
-							<control type="label">
-								<left>650</left>
-								<top>20</top>
-								<width>340</width>
-								<height>20</height>
-								<font>font12</font>
-								<textcolor>themecolor</textcolor>
-								<label>$ADDON[service.libreelec.settings 32333][COLOR=grey]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
-							</control>
+						<!-- Connection Name -->
+						<control type="label">
+							<left>140</left>
+							<top>10</top>
+							<width>490</width>
+							<height>30</height>
+							<font>font24_title</font>
+							<textcolor>grey</textcolor>
+							<info>ListItem.Label</info>
 						</control>
-						<control type="group">
-							<visible>Control.HasFocus(1300)</visible>
-							<!-- Connection Name -->
-							<control type="label">
-								<left>140</left>
-								<top>10</top>
-								<width>490</width>
-								<height>30</height>
-								<font>font24_title</font>
-								<textcolor>grey</textcolor>
-								<info>ListItem.Label</info>
-							</control>
-							<!-- Connection Address -->
-							<control type="label">
-								<left>650</left>
-								<top>49</top>
-								<width>340</width>
-								<height>20</height>
-								<font>font12</font>
-								<textcolor>themecolor</textcolor>
-								<label>$ADDON[service.libreelec.settings 605]: [COLOR=grey]$INFO[ListItem.Property(Address)][/COLOR]</label>
-							</control>
-							<!-- Connected State -->
-							<control type="label">
-								<left>650</left>
-								<top>20</top>
-								<width>340</width>
-								<height>20</height>
-								<font>font12</font>
-								<textcolor>themecolor</textcolor>
-								<label>$ADDON[service.libreelec.settings 32333][COLOR=grey]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
-							</control>
+						<!-- Connection Address -->
+						<control type="label">
+							<left>650</left>
+							<top>49</top>
+							<width>340</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>themecolor</textcolor>
+							<label>$ADDON[service.libreelec.settings 605]: [COLOR=grey]$INFO[ListItem.Property(Address)][/COLOR]</label>
+						</control>
+						<!-- Connected State -->
+						<control type="label">
+							<left>650</left>
+							<top>20</top>
+							<width>340</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>themecolor</textcolor>
+							<label>$ADDON[service.libreelec.settings 32333][COLOR=grey]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
 						</control>
 						<!-- Paired Symbol (bottom right) -->
 						<control type="image">
@@ -1056,7 +1055,7 @@
 							<width>20</width>
 							<height>20</height>
 							<aspectratio>keep</aspectratio>
-							<visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible>
+							<visible>Integer.IsEqual(ListItem.Property(Trusted), 1)</visible>
 							<texture>libreelec/icons/Key.png</texture>
 						</control>
 					</focusedlayout>
@@ -1079,11 +1078,8 @@
 				<width>12</width>
 				<height>720</height>
 				<onleft>9000</onleft>
-				<onright>1000</onright>
-				<ondown>60</ondown>
-				<onup>60</onup>
+				<onright>1500</onright>
 				<showonepage>false</showonepage>
-				<texturesliderbackground />
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -1182,7 +1178,7 @@
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
 				<align>right</align>
-				<label>$INFO[Window.Property(Version)]</label>
+				<label>$ADDON[service.libreelec.settings 607]$INFO[Window.Property(Version), ,]</label>
 			</control>
 			<control type="group">
 				<visible>Player.HasMedia + ![Window.IsActive(volumebar)]</visible>

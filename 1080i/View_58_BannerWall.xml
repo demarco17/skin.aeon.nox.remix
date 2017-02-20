@@ -3,7 +3,7 @@
 	<include name="BannerWall">
 		<control type="group">
 			<visible>Control.IsVisible(58)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<top>40</top>
 			<control type="image">
 				<description>background image</description>

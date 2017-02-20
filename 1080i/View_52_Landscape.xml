@@ -4,7 +4,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(52)</visible>
 			<top>580</top>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<include condition="!String.IsEqual(Control.GetLabel(4450),1)">LandscapeFixed</include>
 			<include condition="String.IsEqual(Control.GetLabel(4450),1)">LandscapeWrap</include>
 			<control type="group">

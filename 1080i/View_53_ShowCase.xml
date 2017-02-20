@@ -4,7 +4,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(53)</visible>
 			<top>-10</top>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<camera x="960" y="750" />
 				<control type="group" id="6001">

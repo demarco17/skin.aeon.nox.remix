@@ -3,7 +3,7 @@
 	<include name="VideoLowList">
 		<control type="group">
 			<visible>Control.IsVisible(501)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="image">
 				<top>650</top>
 				<width>1920</width>
@@ -54,7 +54,7 @@
 					<width>650</width>
 					<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<include>VisibleFadeAnimation</include>
+					<include>ViewFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="textbox">
@@ -679,7 +679,7 @@
 	<include name="MusicLowList">
 		<control type="group">
 			<visible>Control.IsVisible(501)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="image">
 				<top>650</top>
 				<width>1920</width>
@@ -843,7 +843,7 @@
 			</control>
 			<control type="group">
 				<visible>Container.Content(songs)</visible>
-				<include>VisibleFadeAnimation</include>
+				<include>ViewFadeAnimation</include>
 				<left>1255</left>
 				<top>1000</top>
 				<width>1840</width>

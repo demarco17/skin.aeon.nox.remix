@@ -3,7 +3,7 @@
 	<include name="View_59_Logo">
 		<control type="group">
 			<visible>Control.IsVisible(59)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="wraplist" id="59">
 				<top>800</top>
 				<width>1920</width>

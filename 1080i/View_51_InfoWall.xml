@@ -3,7 +3,7 @@
 	<include name="VideoInfoWall">
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<top>-65</top>
 			<control type="image">
 				<description>background image</description>
@@ -369,7 +369,7 @@
 	<include name="MusicInfoWall">
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<top>-65</top>
 			<control type="image">
 				<description>background image</description>

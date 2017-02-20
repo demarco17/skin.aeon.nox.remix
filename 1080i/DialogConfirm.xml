@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<coordinates>
-		<left>502</left>
-		<top>293</top>
-	</coordinates>
 	<include>OpenCloseAnimation</include>
 	<controls>
-		<control type="label" id="1">
-			<description>fake heading label</description>
-			<width>0</width>
-			<height>0</height>
-			<label />
-			<font />
-			<visible>false</visible>
-		</control>
-		<control type="image">
-			<left>16</left>
-			<top>16</top>
-			<width>884</width>
-			<height>462</height>
-			<texture border="18">dialogs/dialog-bg2.png</texture>
-		</control>
-		<control type="image">
-			<left>32</left>
-			<top>88</top>
-			<width>852</width>
-			<height>300</height>
-			<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-		</control>
-		<control type="progress">
-			<description>Progressbar</description>
-			<left>32</left>
-			<top>32</top>
-			<width>852</width>
-			<height>40</height>
-			<info>System.Progressbar</info>
-			<visible>Window.IsActive(progressdialog)</visible>
-		</control>
-		<control type="label">
-			<description>header label</description>
-			<left>32</left>
-			<top>32</top>
-			<width>852</width>
-			<height>40</height>
-			<textoffsetx>15</textoffsetx>
-			<font>font15_title</font>
-			<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
-			<align>center</align>
-		</control>
-		<control type="textbox" id="9">
-			<left>45</left>
-			<top>98</top>
-			<width>825</width>
-			<height>282</height>
-			<font>font15_textbox</font>
-			<align>left</align>
-			<label />
-			<textcolor>grey</textcolor>
-			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-		</control>
-		<control type="grouplist" id="9000">
-			<left>32</left>
-			<top>402</top>
-			<width>852</width>
-			<orientation>horizontal</orientation>
-			<align>center</align>
-			<itemgap>14</itemgap>
-			<control type="button" id="11">
-				<description>Yes button</description>
-				<width>419</width>
+		<control type="group">
+			<left>502</left>
+			<top>293</top>
+			<control type="label" id="1">
+				<description>fake heading label</description>
+				<width>0</width>
+				<height>0</height>
 				<label />
-				<font>font15_title</font>
-				<align>center</align>
-				<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+				<font />
+				<visible>false</visible>
 			</control>
-			<control type="button" id="10">
-				<description>No button</description>
-				<width>419</width>
-				<label />
-				<font>font15_title</font>
-				<align>center</align>
-				<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+			<control type="image">
+				<left>16</left>
+				<top>16</top>
+				<width>884</width>
+				<height>462</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
-			<control type="button" id="12">
-				<description>Cancel button</description>
-				<width>419</width>
-				<label />
+			<control type="image">
+				<left>32</left>
+				<top>88</top>
+				<width>852</width>
+				<height>300</height>
+				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+			</control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<left>32</left>
+				<top>32</top>
+				<width>852</width>
+				<height>40</height>
+				<info>System.Progressbar</info>
+				<visible>Window.IsActive(progressdialog)</visible>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>32</left>
+				<top>32</top>
+				<width>852</width>
+				<height>40</height>
+				<textoffsetx>15</textoffsetx>
 				<font>font15_title</font>
+				<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
 				<align>center</align>
-				<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+			</control>
+			<control type="textbox" id="9">
+				<left>45</left>
+				<top>98</top>
+				<width>825</width>
+				<height>282</height>
+				<font>font15_textbox</font>
+				<align>left</align>
+				<label />
+				<textcolor>grey</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>32</left>
+				<top>402</top>
+				<width>852</width>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<itemgap>14</itemgap>
+				<control type="button" id="11">
+					<description>Yes button</description>
+					<width>419</width>
+					<label />
+					<font>font15_title</font>
+					<align>center</align>
+					<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+				</control>
+				<control type="button" id="10">
+					<description>No button</description>
+					<width>419</width>
+					<label />
+					<font>font15_title</font>
+					<align>center</align>
+					<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+				</control>
+				<control type="button" id="12">
+					<description>Cancel button</description>
+					<width>419</width>
+					<label />
+					<font>font15_title</font>
+					<align>center</align>
+					<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+				</control>
 			</control>
 		</control>
 	</controls>

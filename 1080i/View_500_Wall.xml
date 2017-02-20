@@ -13,7 +13,7 @@
 	<include name="VideoWall">
 		<control type="group">
 			<visible>Control.IsVisible(500) + !Window.IsActive(addoninformation)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<top>30</top>
 			<include>WallBackPanel</include>
 			<control type="panel" id="500">
@@ -152,7 +152,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(500) + !Window.IsActive(addoninformation)</visible>
 			<top>30</top>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<include>WallBackPanel</include>
 			<control type="panel" id="500">
 				<left>120</left>
@@ -210,7 +210,7 @@
 	<include name="AddonWall">
 		<control type="group">
 			<visible>Control.IsVisible(500) + !Window.IsActive(addoninformation)</visible>
-			<include>VisibleFadeAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<top>30</top>
 			<include>WallBackPanel</include>
 			<control type="panel" id="500">
