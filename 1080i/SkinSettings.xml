@@ -235,6 +235,16 @@
 						<selected>!Skin.HasSetting(Disable.ShowBackgroundVis)</selected>
 						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="204">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31022</label>
+						<onclick>Skin.ToggleSetting(Disable.PauseClearArt)</onclick>
+						<selected>!Skin.HasSetting(Disable.PauseClearArt)</selected>
+						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+					</control>
 				</control>
 				<control type="grouplist" id="9003">
 					<description>control area</description>

@@ -28,7 +28,7 @@
 			<label>               $INFO[Player.Title]</label>
 			<label>               $INFO[MusicPlayer.Artist]</label>
 			<label>               $INFO[MusicPlayer.Album]</label>
-			<textcolor>20FFFFFF</textcolor>
+			<textcolor>40FFFFFF</textcolor>
 			<shadowcolor />
 			<textoffsetx>30</textoffsetx>
 			<resetonlabelchange>true</resetonlabelchange>
@@ -44,7 +44,7 @@
 			<label>               $INFO[MusicPlayer.Artist]</label>
 			<label>               $INFO[MusicPlayer.Album]</label>
 			<label>               $INFO[Player.Title]</label>
-			<textcolor>30FFFFFF</textcolor>
+			<textcolor>40FFFFFF</textcolor>
 			<shadowcolor />
 			<textoffsetx>20</textoffsetx>
 			<resetonlabelchange>true</resetonlabelchange>

@@ -138,6 +138,7 @@
 			</control>
 		</control>
 		<control type="image">
+			<visible>!Skin.HasSetting(Disable.PauseClearArt)</visible>
 			<visible>Player.Paused + !Window.IsVisible(SubtitleSearch)</visible>
 			<left>1470</left>
 			<top>776</top>
@@ -163,7 +164,6 @@
 				<label>$VAR[VideoPlayerForwardRewindVar]</label>
 				<width min="10" max="300">auto</width>
 				<height>90</height>
-				<aligny>center</aligny>
 				<font>font_MainMenu</font>
 				<textcolor>grey</textcolor>
 			</control>
