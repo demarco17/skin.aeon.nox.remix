@@ -150,7 +150,7 @@
 			<include>VisibleFadeAnimation</include>
 		</control>
 		<control type="grouplist">
-			<left>30</left>
+			<left>10</left>
 			<top>930</top>
 			<width>748</width>
 			<height>150</height>
