@@ -72,7 +72,7 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR themecolor]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+						<label>[COLOR themecolor]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
 					<control type="label">

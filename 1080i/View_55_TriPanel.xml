@@ -46,7 +46,7 @@
 					</control>
 					<control type="group">
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+							<label>[COLOR themecolor]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
 							<width>224</width>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>!String.IsEmpty(ListItem.Duration)</visible>

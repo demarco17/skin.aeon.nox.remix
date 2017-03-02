@@ -157,6 +157,19 @@
 			<property name="Disable">$INFO[Skin.String(ProgramsHomeItem.Disable)]</property>
 		</item>
 	</include>
+	<include name="GamesMainMenu">
+		<item id="6">
+			<label fallback="15016">$INFO[Skin.String(GamesHomeItem.Label)]</label>
+			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+			<thumb>$INFO[Skin.String(GamesHomeItem.MultiFanart)]</thumb>
+			<property name="Path" fallback="ActivateWindow(Games,root)">$INFO[Skin.String(GamesHomeItem.Path)]</property>
+			<property name="Item">Games</property>
+			<property name="BGType">$INFO[Skin.String(GamesHomeItem.BGType)]</property>
+			<property name="InfoLine">$INFO[Skin.String(GamesHomeItem.InfoLine)]</property>
+			<property name="submenuVisibility" fallback="x14">$INFO[Skin.String(GamesHomeItem.SubMenu)]</property>
+			<property name="Disable">$INFO[Skin.String(GamesHomeItem.Disable)]</property>
+		</item>
+	</include>
 	<include name="SettingsMainMenu">
 		<item id="5">
 			<label fallback="13000">$INFO[Skin.String(SettingsHomeItem.Label)]</label>
@@ -291,6 +304,7 @@
 			<include condition="String.IsEmpty(Skin.String(Custom6HomeItem.Disable)) + !String.IsEmpty(Skin.String(Custom6HomeItem.Path))">CustomMainMenuItem6</include>
 			<include condition="String.IsEmpty(Skin.String(VideosHomeItem.Disable))">VideosMainMenu</include>
 			<include condition="String.IsEmpty(Skin.String(ProgramsHomeItem.Disable))">ProgramsMainMenu</include>
+			<include condition="String.IsEmpty(Skin.String(GamesHomeItem.Disable))">GamesMainMenu</include>
 			<include condition="String.IsEmpty(Skin.String(SettingsHomeItem.Disable))">SettingsMainMenu</include>
 			<include condition="String.IsEmpty(Skin.String(WeatherHomeItem.Disable)) + !String.IsEmpty(Weather.Plugin)">WeatherMainMenu</include>
 			<include condition="String.IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
@@ -444,6 +458,13 @@
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
 		</item>
 	</include>
+	<include name="HomeSubMenuGames">
+		<item>
+			<label>24001</label>
+			<onclick>ActivateWindow(Games,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x14)</visible>
+		</item>
+	</include>
 	<include name="HomeSubMenuSettings">
 		<item>
 			<label>14111</label>
@@ -547,6 +568,7 @@
 			<include>HomeSubMenuPseudoTV</include>
 			<include>HomeSubMenuMusic</include>
 			<include>HomeSubMenuPrograms</include>
+			<include>HomeSubMenuGames</include>
 			<include>HomeSubMenuSettings</include>
 			<include>HomeSubMenuWeather</include>
 			<include>HomeSubMenuPictures</include>
@@ -565,7 +587,7 @@
 			<left>15</left>
 			<top>590</top>
 			<visible>Player.HasVideo + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
-			<visible>!System.HasModalDialog</visible>
+			<visible>!System.HasActiveModalDialog</visible>
 			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
@@ -623,7 +645,7 @@
 			<left>15</left>
 			<top>590</top>
 			<visible>Pvr.IsRecording + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
-			<visible>!System.HasModalDialog</visible>
+			<visible>!System.HasActiveModalDialog</visible>
 			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
@@ -685,7 +707,7 @@
 			<left>15</left>
 			<top>590</top>
 			<visible>Player.HasAudio + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
-			<visible>!System.HasModalDialog</visible>
+			<visible>!System.HasActiveModalDialog</visible>
 			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">

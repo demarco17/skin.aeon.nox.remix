@@ -100,6 +100,12 @@
 							<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 						</item>
 						<item>
+							<label>$LOCALIZE[35049]</label>
+							<property name="AppsTarget">games</property>
+							<property name="AppsContent">addons://sources/game/</property>
+							<onclick>ActivateWindow(Games,Addons,return)</onclick>
+						</item>
+						<item>
 							<label>$LOCALIZE[20244]</label>
 							<property name="AppsTarget">programs</property>
 							<property name="AppsContent">androidapp://sources/apps/</property>

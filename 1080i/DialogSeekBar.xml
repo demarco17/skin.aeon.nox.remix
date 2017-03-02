@@ -2,7 +2,19 @@
 <window>
 	<defaultcontrol>1</defaultcontrol>
 	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo] + VideoPlayer.IsFullscreen + !Window.IsVisible(1135)</visible>
+	<visible>Window.IsActive(fullscreenvideo) + !String.IsEmpty(PVR.ChannelNumberInput)</visible>
 	<controls>
+		<control type="label">
+			<include>VisibleFadeAnimation</include>
+			<left>60</left>
+			<top>60</top>
+			<width>200</width>
+			<height>85</height>
+			<label>$INFO[PVR.ChannelNumberInput]</label>
+			<font>font35_title_bold</font>
+			<textcolor>grey</textcolor>
+			<visible>!String.IsEmpty(PVR.ChannelNumberInput) + !System.HasActiveModalDialog</visible>
+		</control>
 		<control type="group">
 			<visible>!Player.ShowInfo</visible>
 			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
@@ -27,7 +39,6 @@
 				<height>35</height>
 				<textoffsetx>15</textoffsetx>
 				<align>left</align>
-				<textoffsety>-2</textoffsety>
 				<label>$VAR[PlayerTitleLabelVar]</label>
 			</control>
 			<control type="label">
@@ -36,7 +47,6 @@
 				<height>35</height>
 				<textoffsetx>15</textoffsetx>
 				<align>center</align>
-				<textoffsety>-2</textoffsety>
 				<label>$VAR[SeekLabelVar]</label>
 			</control>
 			<control type="label">
@@ -46,7 +56,6 @@
 				<height>35</height>
 				<textoffsetx>15</textoffsetx>
 				<align>right</align>
-				<textoffsety>-2</textoffsety>
 				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 			</control>
 		</control>

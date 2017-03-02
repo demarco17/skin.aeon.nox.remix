@@ -194,7 +194,7 @@
 							<width>196</width>
 							<height>30</height>
 							<align>center</align>
-							<label>[LOWERCASE]$LOCALIZE[12391][/LOWERCASE]</label>
+							<label>[LOWERCASE]$LOCALIZE[2050][/LOWERCASE]</label>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
 						</control>

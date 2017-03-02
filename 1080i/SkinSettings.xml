@@ -331,6 +331,7 @@
 						<onclick>Skin.SetString(Videos.Fallback,backgrounds/videos.png)</onclick>
 						<onclick>Skin.SetString(Music.Fallback,backgrounds/music.png)</onclick>
 						<onclick>Skin.SetString(System.Fallback,backgrounds/system.png)</onclick>
+						<onclick>Skin.SetString(Games.Fallback,backgrounds/games.png)</onclick>
 						<onclick>Skin.SetString(LiveTV.Fallback,backgrounds/livetv.png)</onclick>
 						<onclick>Skin.SetString(Pictures.Fallback,backgrounds/pictures.png)</onclick>
 						<onclick>Skin.SetString(Apps.Fallback,backgrounds/programs.png)</onclick>

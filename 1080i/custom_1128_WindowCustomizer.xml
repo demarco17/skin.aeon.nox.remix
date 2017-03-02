@@ -10,14 +10,14 @@
 				<left>16</left>
 				<top>16</top>
 				<width>494</width>
-				<height>392</height>
+				<height>452</height>
 				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
 			<control type="list" id="90100">
 				<left>32</left>
 				<top>32</top>
 				<width>462</width>
-				<height>360</height>
+				<height>420</height>
 				<onup>90100</onup>
 				<ondown>90100</ondown>
 				<onleft>noop</onleft>
@@ -96,6 +96,12 @@
 						<label>$LOCALIZE[10002]</label>
 						<onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
 						<onclick>SetProperty(Nox.Temp,Pictures.Fallback,home)</onclick>
+						<onclick>ActivateWindow(1122)</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[15016]</label>
+						<onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
+						<onclick>SetProperty(Nox.Temp,Games.Fallback,home)</onclick>
 						<onclick>ActivateWindow(1122)</onclick>
 					</item>
 				</content>

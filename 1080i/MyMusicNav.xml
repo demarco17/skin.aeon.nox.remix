@@ -53,13 +53,11 @@
 					<control type="label">
 						<width>1100</width>
 						<height>42</height>
-						<aligny>top</aligny>
 						<align>center</align>
 						<font>font16_title_bold</font>
 						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<textoffsety>-2</textoffsety>
 						<textoffsetx>30</textoffsetx>
 					</control>
 					<control type="label">
@@ -105,13 +103,11 @@
 					<control type="label">
 						<width>1150</width>
 						<height>42</height>
-						<aligny>top</aligny>
 						<align>left</align>
 						<font>font16_title_bold</font>
 						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<textoffsety>-2</textoffsety>
 						<textoffsetx>30</textoffsetx>
 					</control>
 					<control type="label">
@@ -128,12 +124,10 @@
 						<left>1512</left>
 						<width>198</width>
 						<height>42</height>
-						<aligny>top</aligny>
 						<align>right</align>
 						<font>font16_title_bold</font>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.AddonVersion]</label>
-						<textoffsety>-2</textoffsety>
 					</control>
 				</control>
 				<control type="grouplist">

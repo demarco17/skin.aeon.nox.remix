@@ -69,6 +69,7 @@
 					<include>CustomMainMenuItem6</include>
 					<include>VideosMainMenu</include>
 					<include>ProgramsMainMenu</include>
+					<include>GamesMainMenu</include>
 					<include>SettingsMainMenu</include>
 					<include>WeatherMainMenu</include>
 					<include>MusicVideosMainMenu</include>

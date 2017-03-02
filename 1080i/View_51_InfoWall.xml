@@ -190,7 +190,7 @@
 					<left>1113</left>
 					<top>625</top>
 					<width>685</width>
-					<label>$INFO[ListItem.Genre,,[CR]]$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes,[COLOR grey3] | [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3] | [/COLOR], $LOCALIZE[12391]]</label>
+					<label>$INFO[ListItem.Genre,,[CR]]$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes,[COLOR grey3] | [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3] | [/COLOR],]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>

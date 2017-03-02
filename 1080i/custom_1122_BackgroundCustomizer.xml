@@ -7,6 +7,7 @@
 	<onunload condition="String.IsEmpty(Skin.String(Videos.Fallback))">Skin.SetString(Videos.Fallback,backgrounds/videos.png)</onunload>
 	<onunload condition="String.IsEmpty(Skin.String(Music.Fallback))">Skin.SetString(Music.Fallback,backgrounds/music.png)</onunload>
 	<onunload condition="String.IsEmpty(Skin.String(System.Fallback))">Skin.SetString(System.Fallback,backgrounds/system.png)</onunload>
+	<onunload condition="String.IsEmpty(Skin.String(Games.Fallback))">Skin.SetString(Games.Fallback,backgrounds/games.png)</onunload>
 	<onunload condition="String.IsEmpty(Skin.String(LiveTV.Fallback))">Skin.SetString(LiveTV.Fallback,backgrounds/livetv.png)</onunload>
 	<onunload condition="String.IsEmpty(Skin.String(Pictures.Fallback))">Skin.SetString(Pictures.Fallback,backgrounds/pictures.png)</onunload>
 	<onunload condition="String.IsEmpty(Skin.String(Apps.Fallback))">Skin.SetString(Apps.Fallback,backgrounds/programs.png)</onunload>

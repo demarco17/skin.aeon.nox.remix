@@ -1,54 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,500,511</views>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
 	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+	<views>50,500</views>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
-			<include>PictureList</include><!-- view id = 50 -->
+			<include>VideoList</include><!-- view id = 50 -->
 			<include>AddonWall</include><!-- view id = 500 -->
-			<include>PictureWall</include><!-- view id = 511 -->
 		</control>
 		<control type="group">
-			<visible>[Control.IsVisible(500) + Container.Content(addons)] + !Window.IsActive(addoninformation)</visible>
+			<visible>Control.IsVisible(500)</visible>
+			<visible>!Window.IsActive(addoninformation)</visible>
 			<include>OpenCloseAnimation</include>
 			<include>ViewFadeAnimation</include>
 			<control type="group">
-				<left>90</left>
-				<top>980</top>
-				<control type="label">
-					<width>1150</width>
-					<height>42</height>
-					<align>left</align>
-					<font>font16_title_bold</font>
-					<textcolor>grey</textcolor>
-					<scroll>true</scroll>
-					<label>$INFO[ListItem.Label]</label>
-					<textoffsetx>30</textoffsetx>
-				</control>
-				<control type="label">
-					<left>1512</left>
-					<width>198</width>
-					<height>42</height>
-					<align>right</align>
-					<font>font16_title_bold</font>
-					<textcolor>grey</textcolor>
-					<label>$INFO[ListItem.AddonVersion]</label>
-				</control>
-				<control type="label">
-					<top>45</top>
-					<width>1500</width>
-					<height>30</height>
-					<align>left</align>
-					<font>font13_title</font>
-					<textcolor>grey3</textcolor>
-					<label>$INFO[ListItem.AddonSummary]</label>
-					<textoffsetx>30</textoffsetx>
+				<visible>Control.IsVisible(500)</visible>
+				<!--<animation effect="slide" start="0" end="50" condition="Control.IsVisible(57)">Conditional</animation>-->
+				<control type="group">
+					<left>90</left>
+					<top>980</top>
+					<control type="label">
+						<right>680</right>
+						<height>48</height>
+						<font>font16_title_bold</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<textoffsetx>30</textoffsetx>
+					</control>
+					<control type="label">
+						<left>1512</left>
+						<width>198</width>
+						<height>42</height>
+						<align>right</align>
+						<font>font16_title_bold</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.AddonVersion]</label>
+					</control>
+					<control type="label">
+						<top>45</top>
+						<width>1500</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font13_title</font>
+						<textcolor>grey3</textcolor>
+						<label>$INFO[ListItem.AddonSummary]</label>
+						<textoffsetx>30</textoffsetx>
+					</control>
 				</control>
 			</control>
 		</control>
@@ -70,51 +73,32 @@
 					<description>Filter</description>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
-					<onclick>right</onclick>
+					<selected>Container.Filtered</selected>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(50)</onclick>
 					<onclick>Filter</onclick>
 				</control>
-				<control type="button" id="201">
-					<description>Misc options header</description>
-					<textwidth>352</textwidth>
-					<font>font13_title</font>
-					<include>ButtonCommonValues</include>
-					<label>31026</label>
-					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
-				</control>
-				<control type="button" id="6">
-					<description>Slideshow</description>
-					<textwidth>352</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>108</label>
-				</control>
-				<control type="button" id="7">
-					<description>Recersive Slideshow</description>
-					<textwidth>352</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>361</label>
-				</control>
-				<control type="radiobutton" id="9">
-					<description>Randomize Toggle</description>
-					<include>ButtonCommonValues</include>
-					<label>13319</label>
-				</control>
 				<control type="button" id="203">
-					<description>Actions header</description>
+					<description>Actions</description>
 					<textwidth>352</textwidth>
 					<font>font13_title</font>
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
-					<enable>false</enable>
+					<enable>no</enable>
 					<disabledcolor>themecolor</disabledcolor>
-					<visible>Container.Content(addons) | !String.IsEmpty(Container.PluginName) | Player.HasMedia</visible>
 				</control>
 				<control type="button" id="613">
 					<description>Get more</description>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[21452]</label>
-					<onclick>ActivateWindow(addonbrowser,addons://more/image/,return)</onclick>
-					<visible>Container.Content(addons)</visible>
+					<onclick>ActivateWindow(addonbrowser,addons://more/game/,return)</onclick>
+					<visible>Container.COntent(addons)</visible>
+				</control>
+				<control type="button" id="615">
+					<description>Settings</description>
+					<include>ButtonCommonValues</include>
+					<label>10004</label>
+					<onclick>ActivateWindow(GameSettings)</onclick>
 				</control>
 				<control type="button" id="614">
 					<description>Add-on settings</description>
@@ -123,7 +107,7 @@
 					<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
 					<visible>!String.IsEmpty(Container.PluginName)</visible>
 				</control>
-				<control type="button" id="615">
+				<control type="button" id="616">
 					<description>Player Controls</description>
 					<include>ButtonCommonValues</include>
 					<label>31068</label>

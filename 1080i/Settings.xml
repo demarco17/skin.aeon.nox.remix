@@ -152,19 +152,19 @@
 						<onclick>ActivateWindow(FileManager)</onclick>
 					</item>
 					<item>
-						<label>20077</label>
+						<label>15016</label>
 						<label2>31408</label2>
-						<icon>settings/icons/skin.png</icon>
-						<onclick>ActivateWindow(SkinSettings)</onclick>
-						<visible>!System.HasAddon(service.libreelec.settings)</visible>
+						<icon>settings/icons/games.png</icon>
+						<onclick>ActivateWindow(GameSettings)</onclick>
+						<!--<visible>!System.HasAddon(service.libreelec.settings)</visible>-->
 					</item>
-					<item>
+					<!--<item>
 						<label>31003</label>
 						<label2>31404</label2>
 						<onclick>RunAddon(service.libreelec.settings)</onclick>
 						<icon>settings/icons/libreelec.png</icon>
 						<visible>System.HasAddon(service.libreelec.settings)</visible>
-					</item>
+					</item>-->
 				</content>
 			</control>
 		</control>

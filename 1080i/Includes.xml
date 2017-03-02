@@ -247,6 +247,14 @@
 					<label>19270</label>
 					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
 				</control>
+				<control type="button" id="10">
+					<description>Watched Toggle</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>20367</label>
+					<label2>[COLOR themecolor]$INFO[Container.NumItems][/COLOR]</label2>
+					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+				</control>
 				<control type="radiobutton" id="6">
 					<description>Show hidden channels</description>
 					<include>ButtonCommonValues</include>
