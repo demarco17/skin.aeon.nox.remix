@@ -2,17 +2,6 @@
 <window>
 	<defaultcontrol always="true">62</defaultcontrol>
 	<controls>
-		<control type="label">
-			<include>VisibleFadeAnimation</include>
-			<left>60</left>
-			<top>60</top>
-			<width>200</width>
-			<height>85</height>
-			<label>$INFO[PVR.ChannelNumberInput]</label>
-			<font>font35_title_bold</font>
-			<textcolor>grey</textcolor>
-			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
-		</control>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
