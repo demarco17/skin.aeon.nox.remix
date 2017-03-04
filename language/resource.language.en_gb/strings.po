@@ -467,7 +467,7 @@ msgid "Setup and manage user profiles · Enable login screen · Change password 
 msgstr ""
 
 msgctxt "#31408"
-msgid "Configure geme settings · rewind options · Keyboard configuration & number of players"
+msgid "Configure game settings · rewind options · Keyboard configuration & number of players"
 msgstr ""
 
 msgctxt "#31409"
