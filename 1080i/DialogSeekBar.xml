@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol>1</defaultcontrol>
 	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo] + VideoPlayer.IsFullscreen + !Window.IsVisible(1135)</visible>
-	<visible>Window.IsActive(fullscreenvideo) + !String.IsEmpty(PVR.ChannelNumberInput)</visible>
 	<controls>
 		<control type="label">
 			<include>VisibleFadeAnimation</include>
@@ -13,7 +12,7 @@
 			<label>$INFO[PVR.ChannelNumberInput]</label>
 			<font>font35_title_bold</font>
 			<textcolor>grey</textcolor>
-			<visible>!String.IsEmpty(PVR.ChannelNumberInput) + !System.HasActiveModalDialog</visible>
+			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
 		</control>
 		<control type="group">
 			<visible>!Player.ShowInfo</visible>
