@@ -3,17 +3,6 @@
 	<defaultcontrol>1</defaultcontrol>
 	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo] + VideoPlayer.IsFullscreen + !Window.IsVisible(1135)</visible>
 	<controls>
-		<control type="label">
-			<include>VisibleFadeAnimation</include>
-			<left>60</left>
-			<top>60</top>
-			<width>200</width>
-			<height>85</height>
-			<label>$INFO[PVR.ChannelNumberInput]</label>
-			<font>font35_title_bold</font>
-			<textcolor>grey</textcolor>
-			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
-		</control>
 		<control type="group">
 			<visible>!Player.ShowInfo</visible>
 			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
