@@ -17,6 +17,15 @@
 				<animation effect="fade" start="100" end="40" condition="!String.IsEmpty(Visualisation.Name)">Conditional</animation>
 			</control>
 		</control>
+		<control type="label" id="1">
+			<left>30</left>
+			<top>30</top>
+			<width>300</width>
+			<height>50</height>
+			<label>$INFO[Player.SeekNumeric]</label>
+			<font>font35_title_bold</font>
+			<visible>!String.IsEmpty(Player.SeekNumeric) + !Window.IsActive(musicosd)</visible>
+		</control>
 		<!-- media infos -->
 		<control type="fadelabel">
 			<width>1920</width>
@@ -30,7 +39,6 @@
 			<label>               $INFO[MusicPlayer.Album]</label>
 			<textcolor>40FFFFFF</textcolor>
 			<shadowcolor />
-			<textoffsetx>30</textoffsetx>
 			<resetonlabelchange>true</resetonlabelchange>
 			<visible>Skin.HasSetting(BigAssLabel)</visible>
 		</control>
@@ -114,26 +122,26 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="image">
 						<description>ADSP Master Mode Image</description>
-						<top>-5</top>
+						<top>-8</top>
 						<width>100</width>
-						<height>60</height>
+						<height>70</height>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>system.getbool(audiooutput.dspaddonsenabled) + !String.IsEmpty(ADSP.MasterOwnIcon)</visible>
 						<texture>$INFO[ADSP.MasterOwnIcon]</texture>
 					</control>
 					<control type="image">
-						<top>-3</top>
+						<top>-8</top>
 						<width>100</width>
-						<height>60</height>
+						<height>70</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="grey">$VAR[VisMediaFlags]</texture>
 						<visible>String.IsEmpty(ADSP.MasterOverrideIcon)</visible>
 					</control>
 					<control type="image">
 						<description>ADSP Audio Codec Override Image</description>
-						<top>-3</top>
+						<top>-8</top>
 						<width>100</width>
-						<height>60</height>
+						<height>70</height>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>system.getbool(audiooutput.dspaddonsenabled) + !String.IsEmpty(ADSP.MasterOverrideIcon)</visible>
 						<texture>$INFO[ADSP.MasterOverrideIcon]</texture>
@@ -163,7 +171,7 @@
 					<height>50</height>
 					<width>1180</width>
 					<align>right</align>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR themecolor] / [/COLOR]]</label>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 					<font>font48</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>grey</textcolor>
