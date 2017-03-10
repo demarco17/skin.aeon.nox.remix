@@ -582,9 +582,9 @@
 		<value>$INFO[VideoPlayer.MPAA,flags/mpaa/,.png]</value>
 	</variable>
 	<variable name="UnFocusHDIndicator">
-		<value condition="ListItem.IsStereoscopic">overlays/3d.png</value>
-		<value condition="ListItem.IsCollection">overlays/Set.png</value>
-		<value>$INFO[ListItem.VideoResolution,overlays/,.png]</value>
+		<value condition="ListItem.IsStereoscopic">overlays/list/3d.png</value>
+		<value condition="ListItem.IsCollection">overlays/list/Set.png</value>
+		<value>$INFO[ListItem.VideoResolution,overlays/list/,.png]</value>
 	</variable>
 	<variable name="StudioIconVar">
 		<value condition="!String.IsEmpty(Skin.String(studioicons.path))">$INFO[Skin.String(studioicons.path)]</value>
