@@ -4,22 +4,22 @@
 	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="group">
-			<left>468</left>
-			<top>210</top>
+			<left>457</left>
+			<top>240</top>
 			<control type="group" id="200">
 				<control type="image">
 					<description>background image</description>
 					<left>16</left>
 					<top>16</top>
-					<width>953</width>
-					<height>628</height>
+					<width>974</width>
+					<height>568</height>
 					<texture border="18">dialogs/dialog-bg2.png</texture>
 				</control>
 				<control type="label" id="2">
 					<description>header label</description>
-					<left>16</left>
+					<left>32</left>
 					<top>32</top>
-					<width>953</width>
+					<width>942</width>
 					<height>40</height>
 					<font>font15_title</font>
 					<label>$INFO[System.AddonTitle(script.skinshortcuts)]</label>
@@ -29,31 +29,31 @@
 				<control type="image">
 					<left>32</left>
 					<top>88</top>
-					<width>600</width>
-					<height>540</height>
+					<width>630</width>
+					<height>480</height>
 					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 				</control>
 				<control type="image">
-					<left>644</left>
+					<left>676</left>
+					<width>298</width>
 					<top>88</top>
-					<width>310</width>
-					<height>540</height>
+					<height>480</height>
 					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 				</control>
 				<!-- id 211 - Current shortcuts -->
 				<control type="list" id="211">
 					<left>32</left>
 					<top>88</top>
-					<width>600</width>
-					<height>540</height>
+					<width>630</width>
+					<height>480</height>
 					<onright>260</onright>
 					<orientation>vertical</orientation>
 					<viewtype label="535">list</viewtype>
 					<preloaditems>2</preloaditems>
 					<pagecontrol>260</pagecontrol>
-					<itemlayout width="600" height="60">
+					<itemlayout width="630" height="60">
 						<control type="label">
-							<width>600</width>
+							<width>630</width>
 							<height>60</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font14</font>
@@ -61,7 +61,7 @@
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
-							<width>600</width>
+							<width>630</width>
 							<height>60</height>
 							<label>$INFO[ListItem.Label2]</label>
 							<font>font14</font>
@@ -70,21 +70,21 @@
 							<textoffsetx>15</textoffsetx>
 						</control>
 					</itemlayout>
-					<focusedlayout width="600" height="60">
+					<focusedlayout width="630" height="60">
 						<control type="image">
-							<width>598</width>
+							<width>630</width>
 							<height>60</height>
 							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
 						</control>
 						<control type="label">
-							<width>600</width>
+							<width>630</width>
 							<height>60</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
-							<width>600</width>
+							<width>630</width>
 							<height>60</height>
 							<label>$INFO[ListItem.Label2]</label>
 							<font>font14</font>
@@ -94,21 +94,20 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="260">
+					<left>663</left>
 					<top>88</top>
-					<left>632</left>
+					<height>480</height>
 					<width>12</width>
-					<height>540</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<onleft>211</onleft>
 					<onright>300</onright>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(260) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="grouplist" id="300">
-				<left>644</left>
+				<left>676</left>
 				<top>88</top>
 				<onup>300</onup>
 				<ondown>300</ondown>
@@ -116,49 +115,49 @@
 				<onright>111</onright>
 				<control type="button" id="401">
 					<description>Type Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 					<label>$LOCALIZE[467]</label>
 				</control>
 				<control type="button" id="301">
 					<description>Add Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 				</control>
 				<control type="button" id="302">
 					<description>Delete Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 				</control>
 				<control type="button" id="303">
 					<description>Move up Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 				</control>
 				<control type="button" id="304">
 					<description>Move down Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 				</control>
 				<control type="button" id="305">
 					<description>Set label Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 				</control>
 				<control type="button" id="306">
 					<description>Change shortcut thumbnail</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 					<visible>false</visible>
 				</control>
 				<control type="button" id="307">
 					<description>Set action Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 				</control>
 				<control type="button" id="308">
 					<description>Reset shortcuts Button</description>
-					<width>310</width>
+					<width>298</width>
 					<align>center</align>
 				</control>
 			</control>

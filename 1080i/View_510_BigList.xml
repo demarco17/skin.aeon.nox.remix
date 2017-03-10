@@ -92,17 +92,19 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+							<texture>overlays/list/OverlayUnWatched2.png</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+						<control type="image">
+							<left>1660</left>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>
 							<left>1610</left>
-							<control type="image">
-								<width>64</width>
-								<height>64</height>
-								<texture>overlays/list/OverlayUnWatched.png</texture>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
-							</control>
 							<control type="label">
 								<left>32</left>
 								<top>-3</top>
@@ -185,17 +187,19 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+							<texture>overlays/list/OverlayUnWatched2.png</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+						<control type="image">
+							<left>1660</left>
+							<width>64</width>
+							<height>64</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>
 							<left>1610</left>
-							<control type="image">
-								<width>64</width>
-								<height>64</height>
-								<texture>overlays/list/OverlayUnWatched.png</texture>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
-							</control>
 							<control type="label">
 								<left>32</left>
 								<top>-3</top>

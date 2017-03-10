@@ -54,7 +54,6 @@
 			<label>               $INFO[Player.Title]</label>
 			<textcolor>40FFFFFF</textcolor>
 			<shadowcolor />
-			<textoffsetx>20</textoffsetx>
 			<resetonlabelchange>true</resetonlabelchange>
 			<visible>Skin.HasSetting(BigAssLabel)</visible>
 			<animation effect="rotate" tween="cubic" time="720" center="auto" end="90" condition="true">Conditonal</animation>

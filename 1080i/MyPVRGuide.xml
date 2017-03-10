@@ -18,26 +18,6 @@
 				<height>872</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
-			<control type="image">
-				<left>82</left>
-				<width>1758</width>
-				<height>90</height>
-				<texture border="4">dialogs/separator2.png</texture>
-			</control>
-			<control type="image">
-				<left>518</left>
-				<top>32</top>
-				<width>2</width>
-				<height>840</height>
-				<texture border="1">dialogs/separator3.png</texture>
-			</control>
-			<control type="image">
-				<left>522</left>
-				<top>677</top>
-				<width>1316</width>
-				<height>60</height>
-				<texture border="4">dialogs/separator2.png</texture>
-			</control>
 		</control>
 		<control type="group">
 			<description>TV Guide Timeline</description>
@@ -199,6 +179,26 @@
 						<label>$VAR[PVRTimerIcon]</label>
 					</control>
 				</focusedlayout>
+			</control>
+			<control type="image">
+				<left>82</left>
+				<width>1758</width>
+				<height>90</height>
+				<texture border="4">dialogs/separator2.png</texture>
+			</control>
+			<control type="image">
+				<left>518</left>
+				<top>32</top>
+				<width>2</width>
+				<height>840</height>
+				<texture border="1">dialogs/separator3.png</texture>
+			</control>
+			<control type="image">
+				<left>522</left>
+				<top>677</top>
+				<width>1316</width>
+				<height>60</height>
+				<texture border="4">dialogs/separator2.png</texture>
 			</control>
 			<control type="image">
 				<left>82</left>

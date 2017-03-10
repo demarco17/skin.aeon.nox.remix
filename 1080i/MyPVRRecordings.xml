@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>50</defaultcontrol>
+	<views>50</views>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
@@ -73,7 +74,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>1070</left>
+						<top>28</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="1140">
@@ -119,7 +129,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>1070</left>
+						<top>28</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 				</focusedlayout>
 			</control>

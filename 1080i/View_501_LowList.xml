@@ -303,7 +303,7 @@
 					</control>
 				</control>
 			</control>
-			<control type="fixedlist" id="501">
+			<control type="list" id="501">
 				<left>450</left>
 				<top>655</top>
 				<width>976</width>
@@ -316,8 +316,6 @@
 				<onup>501</onup>
 				<ondown>501</ondown>
 				<pagecontrol>60</pagecontrol>
-				<focusposition>0</focusposition>
-				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<scrolltime tween="Linear">200</scrolltime>
@@ -350,7 +348,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>742</left>
+						<top>2</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="68" width="806" condition="Container.Content(movies)">
@@ -386,7 +393,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>742</left>
+						<top>2</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout height="68" width="806" condition="Container.Content(tvshows)">
@@ -418,7 +434,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>742</left>
+						<top>2</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -466,7 +491,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>742</left>
+						<top>2</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -509,7 +543,8 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<left>742</left>
@@ -517,8 +552,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>overlays/list/OverlayUnWatched.png</texture>
-						<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -566,7 +600,8 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<left>742</left>
@@ -574,8 +609,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>overlays/list/OverlayUnWatched.png</texture>
-						<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -618,7 +652,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>742</left>
+						<top>2</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="68" width="806" condition="Container.Content(episodes)">
@@ -654,7 +697,16 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<left>742</left>
+						<top>2</top>
+						<width>64</width>
+						<height>64</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
 					</control>
 				</focusedlayout>
 			</control>
