@@ -238,7 +238,7 @@
 							<left>235</left>
 							<width>60</width>
 							<height>60</height>
-							<texture>overlays/OverlayHardDisk.png</texture>
+							<texture>overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							<bordersize>1</bordersize>
 						</control>
@@ -274,7 +274,7 @@
 								<top>5</top>
 								<width>60</width>
 								<height>60</height>
-								<texture>overlays/OverlayHardDisk.png</texture>
+								<texture>overlays/OverlayWatched.png</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 								<bordersize>1</bordersize>
 							</control>
@@ -325,7 +325,7 @@
 							<left>235</left>
 							<width>60</width>
 							<height>60</height>
-							<texture>overlays/OverlayHardDisk.png</texture>
+							<texture>overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							<bordersize>1</bordersize>
 						</control>
@@ -361,7 +361,7 @@
 								<top>5</top>
 								<width>60</width>
 								<height>60</height>
-								<texture>overlays/OverlayHardDisk.png</texture>
+								<texture>overlays/OverlayWatched.png</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 								<bordersize>1</bordersize>
 							</control>

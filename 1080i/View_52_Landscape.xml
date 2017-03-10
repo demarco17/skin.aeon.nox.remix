@@ -218,7 +218,7 @@
 		<left>620</left>
 		<top>19</top>
 		<width>60</width>
-		<height>60</height>
+		<height>55</height>
 		<aspectratio align="center" aligny="top">keep</aspectratio>
 		<bordersize>1</bordersize>
 	</include>
@@ -287,7 +287,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture>$INFO[ListItem(-1).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(-1).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem0">
@@ -311,7 +311,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem1">
@@ -338,7 +338,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture>$INFO[ListItem(1).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(1).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem2">
@@ -365,7 +365,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture>$INFO[ListItem(2).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(2).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem3">
@@ -389,7 +389,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture>$INFO[ListItem(3).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(3).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<variable name="LandscapeItem-3Var">

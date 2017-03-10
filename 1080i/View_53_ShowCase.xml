@@ -110,7 +110,7 @@
 							</control>
 							<control type="image">
 								<include>WatchedOverlayShowCase</include>
-								<texture>$INFO[ListItem(-1).Overlay,overlays/]</texture>
+								<texture colordiffuse="themecolor">$INFO[ListItem(-1).Overlay,overlays/]</texture>
 							</control>
 							<control type="image">
 								<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
@@ -223,7 +223,7 @@
 							</control>
 							<control type="image">
 								<include>WatchedOverlayShowCase</include>
-								<texture>$INFO[ListItem(1).Overlay,overlays/]</texture>
+								<texture colordiffuse="themecolor">$INFO[ListItem(1).Overlay,overlays/]</texture>
 							</control>
 							<control type="image">
 								<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
@@ -465,7 +465,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(-1).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(-1).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
@@ -481,7 +481,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
@@ -495,7 +495,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(1).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(1).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
@@ -512,7 +512,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(2).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(2).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
@@ -529,7 +529,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(3).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(3).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
@@ -546,7 +546,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(4).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(4).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
@@ -563,7 +563,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(5).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(5).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
@@ -580,7 +580,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(6).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(6).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
@@ -597,7 +597,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
-			<texture>$INFO[ListItem(7).Overlay,overlays/]</texture>
+			<texture colordiffuse="themecolor">$INFO[ListItem(7).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>

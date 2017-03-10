@@ -44,8 +44,8 @@
 						<left>188</left>
 						<top>2</top>
 						<width>50</width>
-						<height>50</height>
-						<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+						<height>45</height>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 					</control>
 				</itemlayout>
@@ -64,8 +64,8 @@
 							<left>185</left>
 							<top>5</top>
 							<width>50</width>
-							<height>50</height>
-							<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+							<height>45</height>
+							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 							<aspectratio align="center" aligny="top">keep</aspectratio>
 						</control>
 					</control>
@@ -106,8 +106,8 @@
 						<left>368</left>
 						<top>2</top>
 						<width>50</width>
-						<height>50</height>
-						<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+						<height>45</height>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 					</control>
 				</itemlayout>
@@ -126,8 +126,8 @@
 							<left>365</left>
 							<top>5</top>
 							<width>50</width>
-							<height>50</height>
-							<texture>$INFO[ListItem.Overlay,overlays/]</texture>
+							<height>45</height>
+							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 							<aspectratio align="center" aligny="top">keep</aspectratio>
 						</control>
 					</control>

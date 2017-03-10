@@ -74,7 +74,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<texture>overlays/OverlayUnWatched2.png</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
@@ -83,7 +83,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="1140">
@@ -129,7 +129,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture>overlays/list/OverlayUnWatched2.png</texture>
+						<texture>overlays/OverlayUnWatched2.png</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
@@ -138,7 +138,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/list/]</texture>
+						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
 				</focusedlayout>
 			</control>

@@ -99,7 +99,7 @@
 							<left>580</left>
 							<width>50</width>
 							<height>50</height>
-							<texture>overlays/list/OverlayWatched.png</texture>
+							<texture>overlays/OverlayWatched.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 					</itemlayout>
@@ -151,7 +151,7 @@
 							<left>580</left>
 							<width>50</width>
 							<height>50</height>
-							<texture>overlays/list/OverlayWatched.png</texture>
+							<texture>overlays/OverlayWatched.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 						<control type="label">
