@@ -219,8 +219,7 @@
 		<top>19</top>
 		<width>60</width>
 		<height>55</height>
-		<aspectratio align="center" aligny="top">keep</aspectratio>
-		<bordersize>1</bordersize>
+		<aspectratio>keep</aspectratio>
 	</include>
 	<include name="LandscapeItem-3">
 		<control type="image">

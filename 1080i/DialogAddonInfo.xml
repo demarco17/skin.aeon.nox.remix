@@ -226,10 +226,10 @@
 				<control type="image">
 					<width>120</width>
 					<height>120</height>
+					<texture>DefaultIconError.png</texture>
 					<aspectratio align="left">keep</aspectratio>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>1</bordersize>
-					<texture>DefaultIconError.png</texture>
 				</control>
 				<control type="label">
 					<left>135</left>

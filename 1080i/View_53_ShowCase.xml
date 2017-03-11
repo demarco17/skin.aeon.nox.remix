@@ -385,8 +385,8 @@
 		<left>220</left>
 		<top>3</top>
 		<width>60</width>
-		<height>60</height>
-		<bordersize>1</bordersize>
+		<height>55</height>
+		<aspectratio>keep</aspectratio>
 	</include>
 	<include name="MovieShowCaseItem-7">
 		<control type="image">

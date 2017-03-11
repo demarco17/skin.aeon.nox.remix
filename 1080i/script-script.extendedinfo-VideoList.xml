@@ -49,9 +49,10 @@
 						<control type="image">
 							<left>178</left>
 							<width>60</width>
-							<height>60</height>
+							<height>55</height>
 							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
+							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 				</itemlayout>
@@ -70,9 +71,10 @@
 							<left>178</left>
 							<top>5</top>
 							<width>60</width>
-							<height>60</height>
+							<height>55</height>
 							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
+							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>

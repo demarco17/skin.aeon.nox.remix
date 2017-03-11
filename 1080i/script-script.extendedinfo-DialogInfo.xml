@@ -237,10 +237,10 @@
 						<control type="image">
 							<left>235</left>
 							<width>60</width>
-							<height>60</height>
+							<height>55</height>
 							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<bordersize>1</bordersize>
+							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
 							<top>328</top>
@@ -273,10 +273,10 @@
 								<left>235</left>
 								<top>5</top>
 								<width>60</width>
-								<height>60</height>
+								<height>55</height>
 								<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
-								<bordersize>1</bordersize>
+								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="image">
 								<left>5</left>
@@ -324,10 +324,10 @@
 						<control type="image">
 							<left>235</left>
 							<width>60</width>
-							<height>60</height>
+							<height>55</height>
 							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<bordersize>1</bordersize>
+							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
 							<top>328</top>
@@ -360,10 +360,10 @@
 								<left>235</left>
 								<top>5</top>
 								<width>60</width>
-								<height>60</height>
+								<height>55</height>
 								<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
-								<bordersize>1</bordersize>
+								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="image">
 								<left>5</left>

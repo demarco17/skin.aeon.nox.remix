@@ -63,7 +63,7 @@
 						<width>50</width>
 						<height>45</height>
 						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout height="110" width="560">
@@ -103,7 +103,7 @@
 							<width>50</width>
 							<height>45</height>
 							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
+							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>

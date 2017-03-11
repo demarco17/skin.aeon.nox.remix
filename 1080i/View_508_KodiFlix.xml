@@ -179,11 +179,12 @@
 						<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="image">
-						<left>410</left>
+						<left>408</left>
+						<top>2</top>
 						<width>50</width>
-						<height>40</height>
+						<height>45</height>
 						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio align="right" aligny="top">keep</aspectratio>
+						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="image">
 						<left>20</left>
@@ -216,12 +217,12 @@
 							<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						</control>
 						<control type="image">
-							<left>404</left>
+							<left>405</left>
 							<top>5</top>
 							<width>50</width>
-							<height>40</height>
+							<height>45</height>
 							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio align="right" aligny="top">keep</aspectratio>
+							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
 							<left>20</left>

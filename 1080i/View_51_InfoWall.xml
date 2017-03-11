@@ -44,7 +44,7 @@
 						<width>50</width>
 						<height>45</height>
 						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout height="300" width="196" condition="String.IsEqual(Control.GetLabel(4430),1)">
@@ -64,7 +64,7 @@
 							<width>50</width>
 							<height>45</height>
 							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
+							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>
@@ -103,7 +103,7 @@
 						<width>60</width>
 						<height>60</height>
 						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout width="980" height="180" condition="String.IsEqual(Control.GetLabel(4430),2)">
@@ -143,7 +143,7 @@
 							<width>60</width>
 							<height>60</height>
 							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
+							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>
