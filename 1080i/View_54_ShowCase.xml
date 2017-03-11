@@ -244,7 +244,7 @@
 		<ondown>61</ondown>
 		<viewtype label="31077">bigwrap</viewtype>
 		<pagecontrol>61</pagecontrol>
-		<scrolltime>300</scrolltime>
+		<scrolltime tween="quadratic">300</scrolltime>
 		<focusposition>3</focusposition>
 		<orientation>horizontal</orientation>
 		<preloaditems>2</preloaditems>

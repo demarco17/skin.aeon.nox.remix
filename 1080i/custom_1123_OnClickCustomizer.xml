@@ -38,7 +38,7 @@
 				<onleft>noop</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="60" width="628">
 					<control type="image">
 						<width>628</width>

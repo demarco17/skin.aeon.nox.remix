@@ -41,6 +41,14 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
 		<control type="image">
+			<left>-28</left>
+			<top>106</top>
+			<width>318</width>
+			<height>424</height>
+			<texture>thumbs/boxes/$VAR[ShiftCase_Var]</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
 			<left>223</left>
 			<top>142</top>
 			<width>50</width>
@@ -48,14 +56,6 @@
 			<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
 			<aspectratio align="center" aligny="top">keep</aspectratio>
 			<bordersize>1</bordersize>
-		</control>
-		<control type="image">
-			<left>-28</left>
-			<top>106</top>
-			<width>318</width>
-			<height>424</height>
-			<texture>thumbs/boxes/$VAR[ShiftCase_Var]</texture>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
 		<control type="image">
 			<left>23</left>

@@ -15,7 +15,7 @@
 				<onleft>9001</onleft>
 				<onright>20</onright>
 				<orientation>vertical</orientation>
-				<scrolltime tween="sine" easing="out">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout width="356" height="90">
 					<control type="image">
 						<width>356</width>

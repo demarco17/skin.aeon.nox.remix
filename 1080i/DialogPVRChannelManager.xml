@@ -99,7 +99,15 @@
 							<left>580</left>
 							<width>50</width>
 							<height>50</height>
-							<texture>overlays/OverlayWatched.png</texture>
+							<aspectratio>keep</aspectratio>
+							<texture>overlays/OverlayUnWatched2.png</texture>
+						</control>
+						<control type="image">
+							<left>580</left>
+							<width>50</width>
+							<height>50</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 					</itemlayout>
@@ -151,7 +159,15 @@
 							<left>580</left>
 							<width>50</width>
 							<height>50</height>
-							<texture>overlays/OverlayWatched.png</texture>
+							<aspectratio>keep</aspectratio>
+							<texture>overlays/OverlayUnWatched2.png</texture>
+						</control>
+						<control type="image">
+							<left>580</left>
+							<width>50</width>
+							<height>50</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 						<control type="label">

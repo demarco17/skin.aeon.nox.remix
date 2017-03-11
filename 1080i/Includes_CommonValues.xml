@@ -112,7 +112,7 @@
 		<ondown>60</ondown>
 		<onleft>9000</onleft>
 		<orientation>horizontal</orientation>
-		<scrolltime tween="quadratic">300</scrolltime>
+		<scrolltime tween="quadratic" easing="out">300</scrolltime>
 		<pagecontrol>60</pagecontrol>
 		<itemlayout height="840" width="439">
 			<control type="image">

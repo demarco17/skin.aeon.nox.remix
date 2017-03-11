@@ -15,7 +15,7 @@
 				<height>144</height>
 				<width>1920</width>
 				<align>center</align>
-				<scrolltime tween="sine">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
 				<onleft>202</onleft>
 				<onright>202</onright>

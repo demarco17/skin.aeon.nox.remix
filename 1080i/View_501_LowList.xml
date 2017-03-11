@@ -318,7 +318,7 @@
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
-				<scrolltime tween="Linear">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="68" width="806" condition="Container.Content(movies)">
 					<control type="image">
 						<width>806</width>
@@ -922,7 +922,7 @@
 					<texture border="4">dialogs/separator2.png</texture>
 				</control>
 			</control>
-			<control type="fixedlist" id="501">
+			<control type="list" id="501">
 				<left>450</left>
 				<top>655</top>
 				<width>976</width>
@@ -934,11 +934,9 @@
 				<onup>501</onup>
 				<ondown>501</ondown>
 				<pagecontrol>60</pagecontrol>
-				<focusposition>0</focusposition>
-				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
-				<scrolltime tween="Linear">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="68" width="806" condition="Container.Content(albums)">
 					<control type="image">
 						<width>806</width>

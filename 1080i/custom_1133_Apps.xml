@@ -33,7 +33,7 @@
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="420">
 						<control type="image">
 							<width>4420</width>
@@ -136,7 +136,7 @@
 					<animation effect="fade" start="100" end="0" time="400" condition="Container(51).IsUpdating">conditional</animation>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[535])</visible>
 					<itemlayout height="120" width="1200">

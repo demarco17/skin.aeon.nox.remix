@@ -30,7 +30,7 @@
 				<width>1200</width>
 				<height>720</height>
 				<viewtype label="31010">icon</viewtype>
-				<scrolltime tween="quadratic">300</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<onleft>9000</onleft>
 				<onright>500</onright>
 				<onup>700</onup>
@@ -50,7 +50,7 @@
 							<left>178</left>
 							<width>60</width>
 							<height>60</height>
-							<texture>overlays/OverlayWatched.png</texture>
+							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 						</control>
 					</control>
@@ -71,7 +71,7 @@
 							<top>5</top>
 							<width>60</width>
 							<height>60</height>
-							<texture>overlays/OverlayWatched.png</texture>
+							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 						</control>
 					</control>

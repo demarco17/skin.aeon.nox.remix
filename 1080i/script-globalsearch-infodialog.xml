@@ -82,7 +82,7 @@
 					<onup>110</onup>
 					<ondown>195</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -221,7 +221,7 @@
 					<onup>110</onup>
 					<ondown>196</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -342,7 +342,7 @@
 					<onup>110</onup>
 					<ondown>196</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -433,7 +433,7 @@
 					<onup>110</onup>
 					<ondown>195</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -560,7 +560,7 @@
 					<onup>110</onup>
 					<ondown>195</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -681,7 +681,7 @@
 					<onup>110</onup>
 					<ondown>196</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -802,7 +802,7 @@
 					<onup>110</onup>
 					<ondown>196</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -929,7 +929,7 @@
 					<onup>110</onup>
 					<ondown>196</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>
@@ -1056,7 +1056,7 @@
 					<onup>110</onup>
 					<ondown>196</ondown>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="82" width="569">
 						<control type="image">
 							<width>569</width>

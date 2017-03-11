@@ -24,7 +24,7 @@
 				<ondown>90100</ondown>
 				<onleft>noop</onleft>
 				<onright>noop</onright>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="60" width="462">
 					<control type="image">
 						<width>462</width>

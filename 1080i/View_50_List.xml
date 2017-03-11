@@ -27,7 +27,7 @@
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -63,7 +63,7 @@
 							<textcolor>grey</textcolor>
 							<label>$VAR[ListLabel2Var]</label>
 							<animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEmpty(ListItem.VideoResolution) + !ListItem.IsCollection">conditional</animation>
-							<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(Addons) | Container.Content(Actors) | Container.Content(Directors)">conditional</animation>
+							<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(Addons) | Container.Content(Actors) | Container.Content(Directors) | Container.Content(Games)">conditional</animation>
 						</control>
 						<control type="image">
 							<left>1020</left>
@@ -146,7 +146,7 @@
 							<align>right</align>
 							<label>$VAR[ListLabel2Var]</label>
 							<animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEmpty(ListItem.VideoResolution) + !ListItem.IsCollection">conditional</animation>
-							<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(Addons) | Container.Content(Actors) | Container.Content(Directors)">conditional</animation>
+							<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(Addons) | Container.Content(Actors) | Container.Content(Directors) | Container.Content(Games)">conditional</animation>
 						</control>
 						<control type="image">
 							<left>1020</left>
@@ -382,7 +382,7 @@
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -592,7 +592,7 @@
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -731,7 +731,7 @@
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -870,7 +870,7 @@
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>

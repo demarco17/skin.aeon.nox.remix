@@ -42,7 +42,7 @@
 				<onleft>9001</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<include>VisibleFadeAnimation</include>
 				<visible>String.IsEmpty(Window.Property(Discography))</visible>
 				<itemlayout height="90" width="736">
@@ -353,7 +353,7 @@
 				<pagecontrol>60</pagecontrol>
 				<include>VisibleFadeAnimation</include>
 				<visible>!String.IsEmpty(Window.Property(Discography))</visible>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="90" width="736">
 					<control type="image">
 						<width>736</width>

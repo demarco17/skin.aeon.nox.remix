@@ -198,7 +198,6 @@
 					<width>1645</width>
 					<height>300</height>
 					<orientation>horizontal</orientation>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="300" width="329">
 						<control type="multiimage">
 							<description>current weather icon</description>

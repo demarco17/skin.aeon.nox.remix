@@ -63,7 +63,7 @@
 					<onright>30</onright>
 					<onup>2</onup>
 					<ondown>2</ondown>
-					<scrolltime tween="cubic" easing="out">200</scrolltime>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				</control>
 				<control type="scrollbar" id="30">
 					<left>961</left>

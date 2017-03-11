@@ -18,7 +18,7 @@
 				<onup>2</onup>
 				<ondown>2</ondown>
 				<pagecontrol>61</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="90" width="356">
 					<control type="image">
 						<top>30</top>

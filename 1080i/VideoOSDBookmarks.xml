@@ -19,7 +19,7 @@
 				<pagecontrol>60</pagecontrol>
 				<focusposition>0</focusposition>
 				<movement>3</movement>
-				<scrolltime tween="quadratic" easing="out">400</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<viewtype label="536">icon</viewtype>
 				<orientation>horizontal</orientation>
 				<itemlayout height="210" width="392">
