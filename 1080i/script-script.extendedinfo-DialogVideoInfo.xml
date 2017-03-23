@@ -848,7 +848,6 @@
 						<width>236</width>
 						<textoffsetx>0</textoffsetx>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font15</font>
 						<textcolor>grey</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -866,7 +865,6 @@
 						<width>236</width>
 						<textoffsetx>0</textoffsetx>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font15</font>
 						<textcolor>grey</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -884,7 +882,6 @@
 						<width>236</width>
 						<textoffsetx>0</textoffsetx>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font15</font>
 						<textcolor>grey</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -903,7 +900,6 @@
 						<width>236</width>
 						<textoffsetx>0</textoffsetx>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font15</font>
 						<textcolor>grey</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -921,7 +917,6 @@
 						<width>236</width>
 						<textoffsetx>0</textoffsetx>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font15</font>
 						<textcolor>grey</textcolor>
 						<focusedcolor>white</focusedcolor>

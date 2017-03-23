@@ -28,7 +28,6 @@
 						<textcolor>grey</textcolor>
 						<textoffsetx>15</textoffsetx>
 						<align>right</align>
-						<aligny>center</aligny>
 						<font>font15</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -51,7 +50,6 @@
 						<textcolor>white</textcolor>
 						<textoffsetx>15</textoffsetx>
 						<align>right</align>
-						<aligny>center</aligny>
 						<font>font15</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -95,7 +93,6 @@
 							<font>font14_title</font>
 							<label>$LOCALIZE[15050] ($INFO[Container(20).NumItems])</label>
 							<align>center</align>
-							<aligny>center</aligny>
 							<textcolor>themecolor</textcolor>
 						</control>
 						<control type="image">
@@ -129,7 +126,6 @@
 							<font>font14_title</font>
 							<label>$LOCALIZE[15051] ($INFO[Container(21).NumItems])</label>
 							<align>center</align>
-							<aligny>center</aligny>
 							<textcolor>themecolor</textcolor>
 						</control>
 						<control type="image">

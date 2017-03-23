@@ -162,7 +162,6 @@
 					<height>24</height>
 					<label>$LOCALIZE[13271]</label>
 					<align>right</align>
-					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
 					<font>font12_title</font>
 				</control>
@@ -182,7 +181,6 @@
 					<height>24</height>
 					<label>$LOCALIZE[31309]</label>
 					<align>right</align>
-					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
 					<font>font12_title</font>
 				</control>

@@ -23,7 +23,6 @@
 				<font>font15_title</font>
 				<label>$LOCALIZE[19023]$INFO[VideoPlayer.ChannelGroup, - ,]</label>
 				<align>center</align>
-				<aligny>center</aligny>
 				<textcolor>themecolor</textcolor>
 				<visible>!pvr.IsPlayingRadio</visible>
 			</control>
@@ -35,7 +34,6 @@
 				<font>font15_title</font>
 				<label>$LOCALIZE[19024]$INFO[MusicPlayer.ChannelGroup, - ,]</label>
 				<align>center</align>
-				<aligny>center</aligny>
 				<textcolor>themecolor</textcolor>
 				<visible>pvr.IsPlayingRadio</visible>
 			</control>
@@ -47,7 +45,6 @@
 				<font>font14</font>
 				<label>$INFO[System.Date]$INFO[System.Time,[COLOR grey3] | [/COLOR],]</label>
 				<align>center</align>
-				<aligny>center</aligny>
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="list" id="11">

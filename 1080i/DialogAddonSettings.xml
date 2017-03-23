@@ -22,7 +22,6 @@
 				<height>40</height>
 				<textoffsetx>15</textoffsetx>
 				<align>center</align>
-				<aligny>center</aligny>
 				<textcolor>dialogheader</textcolor>
 				<font>font15_title</font>
 			</control>
@@ -127,7 +126,6 @@
 				<height>60</height>
 				<width>312</width>
 				<align>right</align>
-				<aligny>center</aligny>
 				<textoffsetx>20</textoffsetx>
 			</control>
 			<control type="button" id="3">
@@ -145,7 +143,6 @@
 				<description>Default spincontrolex</description>
 				<width>960</width>
 				<height>60</height>
-				<aligny>center</aligny>
 			</control>
 			<control type="label" id="7">
 				<width>960</width>

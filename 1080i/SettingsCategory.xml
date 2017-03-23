@@ -86,7 +86,6 @@
 			<width>356</width>
 			<textoffsetx>15</textoffsetx>
 			<align>right</align>
-			<aligny>center</aligny>
 			<font>font15</font>
 		</control>
 		<control type="button" id="7">
@@ -109,7 +108,6 @@
 			<height>90</height>
 			<font>font15</font>
 			<textoffsetx>30</textoffsetx>
-			<aligny>center</aligny>
 			<spinposx>10</spinposx>
 		</control>
 		<control type="sliderex" id="13">

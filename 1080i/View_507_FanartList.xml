@@ -270,7 +270,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="1056" condition="Container.Content(movies)">
@@ -315,7 +315,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(tvshows)">
@@ -466,7 +466,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="1056" condition="Container.Content(episodes)">
@@ -511,7 +511,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(seasons)">

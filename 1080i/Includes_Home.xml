@@ -21,7 +21,6 @@
 					<font>font_MainMenu</font>
 					<textcolor>grey2</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
@@ -32,7 +31,6 @@
 					<font>font_MainMenu</font>
 					<textcolor>grey2</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
@@ -41,7 +39,6 @@
 					<font>font_MainMenu</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>Control.HasFocus(9000)</visible>
 					<include>VisibleFadeAnimation</include>
@@ -588,7 +585,6 @@
 			<top>590</top>
 			<visible>Player.HasVideo + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<visible>!System.HasActiveModalDialog</visible>
-			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>
@@ -646,7 +642,6 @@
 			<top>590</top>
 			<visible>Pvr.IsRecording + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<visible>!System.HasActiveModalDialog</visible>
-			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>
@@ -708,7 +703,6 @@
 			<top>590</top>
 			<visible>Player.HasAudio + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<visible>!System.HasActiveModalDialog</visible>
-			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>

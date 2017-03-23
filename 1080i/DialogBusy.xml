@@ -55,7 +55,6 @@
 						<description>Busy label</description>
 						<width>180</width>
 						<height>100</height>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font15_title</font>
 					</control>
@@ -65,7 +64,6 @@
 						<description>Busy label</description>
 						<width>180</width>
 						<height>100</height>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font15_title</font>
 					</control>

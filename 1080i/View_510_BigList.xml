@@ -100,7 +100,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>
@@ -195,7 +195,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>

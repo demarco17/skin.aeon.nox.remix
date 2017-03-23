@@ -43,7 +43,6 @@
 				<font>font13_title</font>
 				<textcolor>grey</textcolor>
 				<align>right</align>
-				<aligny>center</aligny>
 				<textoffsetx>15</textoffsetx>
 			</control>
 			<control type="label" id="190">

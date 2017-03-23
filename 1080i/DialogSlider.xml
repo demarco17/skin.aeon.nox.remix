@@ -16,7 +16,6 @@
 				<left>32</left>
 				<width>345</width>
 				<height>60</height>
-				<aligny>center</aligny>
 				<font>font14_title</font>
 				<textcolor>grey</textcolor>
 			</control>
@@ -26,7 +25,6 @@
 				<width>656</width>
 				<height>60</height>
 				<align>right</align>
-				<aligny>center</aligny>
 				<font>font14_title</font>
 				<textcolor>grey</textcolor>
 			</control>
