@@ -63,6 +63,13 @@
 					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 				</item>
 				<item>
+					<label>$INFO[System.AddonTitle(script.cinemavision)]</label>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick>Dialog.Close(MovieInformation)</onclick>
+					<onclick>RunScript(script.cinemavision,experience)</onclick>
+					<visible>System.HasAddon(script.cinemavision) + Container.Content(movies) + String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+				</item>
+				<item>
 					<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
 					<onclick>Dialog.Close(1119)</onclick>
 					<onclick>RunScript(script.tv.show.next.aired,updateshow=$INFO[ListItem.Label])</onclick>
