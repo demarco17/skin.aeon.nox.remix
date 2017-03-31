@@ -18,14 +18,6 @@
 	</shortcut>
 	<shortcut>
 		<defaultID>apps</defaultID>
-		<label>10040</label>
-		<label2 />
-		<icon />
-		<thumb />
-		<action>ActivateWindow(Addonbrowser)</action>
-	</shortcut>
-	<shortcut>
-		<defaultID>apps</defaultID>
 		<label>1043</label>
 		<label2 />
 		<icon />
@@ -39,5 +31,13 @@
 		<icon />
 		<thumb />
 		<action>ActivateWindow(Pictures,Addons,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>apps</defaultID>
+		<label>35049</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Games,Addons,return)</action>
 	</shortcut>
 </shortcuts>

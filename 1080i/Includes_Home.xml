@@ -440,11 +440,6 @@
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
 		</item>
 		<item>
-			<label>10040</label>
-			<onclick>ActivateWindow(Addonbrowser,return)</onclick>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
-		</item>
-		<item>
 			<label>1043</label>
 			<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
@@ -452,6 +447,11 @@
 		<item>
 			<label>1039</label>
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
+		</item>
+		<item>
+			<label>35049</label>
+			<onclick>ActivateWindow(Games,Addons,return)</onclick>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
 		</item>
 	</include>
