@@ -768,7 +768,9 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Thumb,5)">$INFO[Window(Home).Property(script.grab.fanart.Global.Title)]</value>
 	</variable>
 	<variable name="MediaWatchedIconVar">
-		<value condition="ListItem.IsResumable + !Integer.IsGreater(ListItem.Playcount,0)">overlays/resume.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,66) + !Integer.IsGreater(ListItem.Playcount,0)">overlays/inprogress-75.png</value>
+        <value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,33) + !Integer.IsGreater(ListItem.Playcount,0)">overlays/inprogress-50.png</value>
+        <value condition="ListItem.IsResumable + !Integer.IsGreater(ListItem.Playcount,0)">overlays/inprogress-25.png</value>
 		<value>$INFO[ListItem.Overlay,overlays/]</value>
 	</variable>
 </includes>

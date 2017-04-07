@@ -102,6 +102,13 @@
 				<pagecontrol>62</pagecontrol>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 			</control>
+			<control type="image">
+				<left>253</left>
+				<top>105</top>
+				<width>160</width>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$VAR[VideoPlayerStarRating]</texture>
+			</control>
 			<control type="grouplist">
 				<left>1320</left>
 				<top>150</top>
