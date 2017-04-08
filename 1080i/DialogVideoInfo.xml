@@ -403,6 +403,24 @@
 					</content>
 				</control>
 				<control type="image">
+					<left>10</left>
+					<top>330</top>
+					<width>20</width>
+					<height>50</height>
+					<texture flipx="true" colordiffuse="themecolor">home/arrowright.png</texture>
+					<visible>Container(300).HasPrevious</visible>
+					<include>VisibleFadeAnimation</include>
+				</control>
+				<control type="image">
+					<left>1160</left>
+					<top>330</top>
+					<width>20</width>
+					<height>50</height>
+					<texture colordiffuse="themecolor">home/arrowright.png</texture>
+					<visible>Container(300).HasNext</visible>
+					<include>VisibleFadeAnimation</include>
+				</control>
+				<control type="image">
 					<left>596</left>
 					<top>204</top>
 					<width>2</width>

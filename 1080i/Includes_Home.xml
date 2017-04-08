@@ -479,8 +479,8 @@
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
 		</item>
 		<item>
-			<label>13200</label>
-			<onclick>ActivateWindow(Profiles)</onclick>
+			<label>24001</label>
+			<onclick>ActivateWindow(AddonBrowser)</onclick>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
 		</item>
 		<item>
@@ -607,7 +607,7 @@
 				<top>34</top>
 				<width>595</width>
 				<height>50</height>
-				<label>10522</label>
+				<label>31021</label>
 				<font>font15_title</font>
 				<textcolor>themecolor</textcolor>
 			</control>
@@ -725,7 +725,7 @@
 				<top>34</top>
 				<width>595</width>
 				<height>50</height>
-				<label>10517</label>
+				<label>31020</label>
 				<font>font15_title</font>
 				<textcolor>themecolor</textcolor>
 			</control>

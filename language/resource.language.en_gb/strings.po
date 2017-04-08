@@ -98,7 +98,13 @@ msgctxt "#31019"
 msgid "Network"
 msgstr ""
 
-#empty strings from id 31020 to 31021
+msgctxt "#31020"
+msgid "Now playing: Audio"
+msgstr ""
+
+msgctxt "#31021"
+msgid "Now playing: Video"
+msgstr ""
 
 msgctxt "#31022"
 msgid "Show clearart/logo on pause"
@@ -194,7 +200,7 @@ msgstr ""
 #empty strings from id 31059 to 31060
 
 msgctxt "#31061"
-msgid "Favourites statistics"
+msgid "Add-on & Favourite statistics"
 msgstr ""
 
 msgctxt "#31062"

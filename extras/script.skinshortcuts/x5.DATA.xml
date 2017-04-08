@@ -25,12 +25,12 @@
 		<action>ActivateWindow(FileManager)</action>
 	</shortcut>
 	<shortcut>
-		<defaultID>13200</defaultID>
-		<label>13200</label>
+		<defaultID>24001</defaultID>
+		<label>24001</label>
 		<label2 />
 		<icon />
 		<thumb />
-		<action>ActivateWindow(Profiles)</action>
+		<action>ActivateWindow(AddonBrowser)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>130</defaultID>
