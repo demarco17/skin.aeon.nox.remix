@@ -66,7 +66,6 @@
 					<font>font14_textbox2</font>
 					<pagecontrol>62</pagecontrol>
 					<textcolor>grey</textcolor>
-					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 				</control>
 				<control type="scrollbar" id="62">
 					<left>640</left>
@@ -172,7 +171,6 @@
 						<pagecontrol>72</pagecontrol>
 						<font>font14_textbox2</font>
 						<textcolor>grey</textcolor>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(72)</autoscroll>
 					</control>
 					<control type="scrollbar" id="72">
 						<left>638</left>
@@ -850,7 +848,6 @@
 						<font>font14_textbox2</font>
 						<pagecontrol>62</pagecontrol>
 						<textcolor>grey</textcolor>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 						<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 					</control>
 					<control type="scrollbar" id="62">
@@ -877,7 +874,6 @@
 						<font>font14_textbox2</font>
 						<pagecontrol>62</pagecontrol>
 						<textcolor>grey</textcolor>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="scrollbar" id="62">

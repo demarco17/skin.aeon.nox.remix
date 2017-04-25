@@ -147,7 +147,6 @@
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.AddonDescription,[COLOR themecolor]$LOCALIZE[21821]: [/COLOR][CR],[CR]]$INFO[ListItem.AddonNews,[COLOR themecolor]$LOCALIZE[24054]: [/COLOR][CR],[CR]]$INFO[ListItem.AddonDisclaimer,[COLOR themecolor]$LOCALIZE[24052]: [/COLOR][CR],]</label>
 							<pagecontrol>60</pagecontrol>
-							<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 						</control>
 					</control>
 					<control type="scrollbar" id="60">

@@ -737,7 +737,7 @@
 					<label2>$INFO[Container(50).ListItemAbsolute(23).Label2]</label2>
 					<icon>$INFO[Container(50).ListItemAbsolute(23).Icon]</icon>
 					<onclick>SetProperty(ActorID,23)</onclick>
-					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(235).Label])</onclick>
+					<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute(23).Label])</onclick>
 					<onclick>ActivateWindow(1130)</onclick>
 					<visible>!String.IsEmpty(Container(50).ListItemAbsolute(23).Label)</visible>
 				</item>
@@ -831,7 +831,6 @@
 		<param name="sortby">year</param>
 		<param name="sortorder">descending</param>
 		<param name="page_control">64</param>
-		<param name="autoscroll">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(64)</param>
 		<definition>
 			<control type="label">
 				<height>50</height>
@@ -846,7 +845,6 @@
 				<height>$PARAM[height]</height>
 				<orientation>vertical</orientation>
 				<pagecontrol>$PARAM[page_control]</pagecontrol>
-				<autoscroll time="1000">$PARAM[autoscroll]</autoscroll>
 				<itemlayout height="45" width="$PARAM[width]">
 					<control type="label">
 						<height>45</height>

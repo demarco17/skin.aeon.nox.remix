@@ -63,19 +63,15 @@
 				<content>
 					<item id="1">
 						<label>513</label>
-						<onclick>noop</onclick>
 					</item>
 					<item id="2">
 						<label>16000</label>
-						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>250</label>
-						<onclick>noop</onclick>
 					</item>
 					<item id="4">
 						<label>31014</label>
-						<onclick>noop</onclick>
 					</item>
 				</content>
 			</control>
@@ -203,16 +199,6 @@
 						<font>font15</font>
 						<label>31947</label>
 						<onclick>ActivateWindow(1128)</onclick>
-						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="200">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>20189</label>
-						<onclick>Skin.ToggleSetting(Enable.AutoScroll)</onclick>
-						<selected>Skin.HasSetting(Enable.AutoScroll)</selected>
 						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="201">

@@ -211,7 +211,6 @@
 						<width>476</width>
 						<height>438</height>
 						<font>font14_textbox2</font>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(74)</autoscroll>
 						<textcolor>grey</textcolor>
 						<pagecontrol>74</pagecontrol>
 					</control>

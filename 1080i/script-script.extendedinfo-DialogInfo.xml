@@ -194,7 +194,6 @@
 					<label fallback="161">$INFO[Window.Property(Biography)]</label>
 					<textcolor>white</textcolor>
 					<pagecontrol>60</pagecontrol>
-					<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					<include>VisibleFadeAnimation</include>
 					<visible>ControlGroup(9000).HasFocus(30)</visible>
 				</control>

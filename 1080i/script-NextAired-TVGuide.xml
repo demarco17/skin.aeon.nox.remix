@@ -185,70 +185,56 @@
 			<include>SystemRightPanel</include>
 			<control type="group" id="9001">
 				<control type="scrollbar" id="60">
-					<left>522</left>
-					<top>874</top>
-					<width>1316</width>
-					<height>12</height>
-					<onup condition="Container(9000).HasFocus(1)">200</onup>
-					<onup condition="Container(9000).HasFocus(2)">201</onup>
-					<onup condition="Container(9000).HasFocus(3)">202</onup>
-					<onup condition="Container(9000).HasFocus(4)">203</onup>
-					<onup condition="Container(9000).HasFocus(5)">204</onup>
-					<onup condition="Container(9000).HasFocus(6)">205</onup>
-					<onup condition="Container(9000).HasFocus(7)">206</onup>
-					<ondown condition="Container(9000).HasFocus(1)">200</ondown>
-					<ondown condition="Container(9000).HasFocus(2)">201</ondown>
-					<ondown condition="Container(9000).HasFocus(3)">202</ondown>
-					<ondown condition="Container(9000).HasFocus(4)">203</ondown>
-					<ondown condition="Container(9000).HasFocus(5)">204</ondown>
-					<ondown condition="Container(9000).HasFocus(6)">205</ondown>
-					<ondown condition="Container(9000).HasFocus(7)">206</ondown>
-					<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+					<left>1839</left>
+					<top>32</top>
+					<width>12</width>
+					<height>840</height>
+					<onleft condition="Container(9000).HasFocus(1)">200</onleft>
+					<onleft condition="Container(9000).HasFocus(2)">201</onleft>
+					<onleft condition="Container(9000).HasFocus(3)">202</onleft>
+					<onleft condition="Container(9000).HasFocus(4)">203</onleft>
+					<onleft condition="Container(9000).HasFocus(5)">204</onleft>
+					<onleft condition="Container(9000).HasFocus(6)">205</onleft>
+					<onleft condition="Container(9000).HasFocus(7)">206</onleft>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
-					<orientation>horizontal</orientation>
+					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 				<control type="panel" id="200">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(1)] | Control.HasFocus(200) | [Container(9000).HasFocus(1) + Control.HasFocus(60)]</visible>
 					<include>VisibleFadeAnimation</include>
-					<onright>200</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 				<control type="panel" id="201">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(2)] | Control.HasFocus(201) | [Container(9000).HasFocus(2) + Control.HasFocus(60)]</visible>
 					<include>VisibleFadeAnimation</include>
-					<onright>201</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 				<control type="panel" id="202">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(3)] | Control.HasFocus(202) | [Container(9000).HasFocus(3) + Control.HasFocus(60)]</visible>
 					<include>VisibleFadeAnimation</include>
-					<onright>202</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 				<control type="panel" id="203">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(4)] | Control.HasFocus(203) | [Container(9000).HasFocus(4) + Control.HasFocus(60)]</visible>
 					<include>VisibleFadeAnimation</include>
-					<onright>203</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 				<control type="panel" id="204">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(5)] | Control.HasFocus(204) | [Container(9000).HasFocus(5) + Control.HasFocus(60)]</visible>
 					<include>VisibleFadeAnimation</include>
-					<onright>204</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 				<control type="panel" id="205">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(6)] | Control.HasFocus(205) | [Container(9000).HasFocus(6) + Control.HasFocus(60)]</visible>
 					<include>VisibleFadeAnimation</include>
-					<onright>205</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 				<control type="panel" id="206">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(7)] | Control.HasFocus(206) | [Container(9000).HasFocus(7) + Control.HasFocus(60)]</visible>
 					<include>VisibleFadeAnimation</include>
-					<onright>206</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 			</control>

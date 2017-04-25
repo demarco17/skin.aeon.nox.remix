@@ -553,7 +553,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<textcolor>grey</textcolor>
 					<pagecontrol>60</pagecontrol>
-					<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[206]) + !String.IsEmpty(ListItem.Art(discart))</visible>
 				</control>
@@ -568,7 +567,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<textcolor>grey</textcolor>
 					<pagecontrol>61</pagecontrol>
-					<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[206]) + String.IsEmpty(ListItem.Art(discart))</visible>
 				</control>

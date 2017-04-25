@@ -566,9 +566,7 @@ msgctxt "#31916"
 msgid "Change the default global background image."
 msgstr ""
 
-msgctxt "#31917"
-msgid "When enabled text scrolls automatically. When disabled manual scrolling is required."
-msgstr ""
+#empty string with id 31917
 
 msgctxt "#31918"
 msgid "Projects the current playing video on the background when video is played."

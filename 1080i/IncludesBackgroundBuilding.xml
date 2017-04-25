@@ -210,7 +210,6 @@
 						<height>170</height>
 						<font>font14_textbox2</font>
 						<pagecontrol>62</pagecontrol>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 						<textcolor>grey</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>
@@ -334,7 +333,6 @@
 						<height>344</height>
 						<font>font14_textbox2</font>
 						<pagecontrol>62</pagecontrol>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 						<textcolor>grey</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>
@@ -484,7 +482,6 @@
 						<height>180</height>
 						<font>font14_textbox2</font>
 						<pagecontrol>62</pagecontrol>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(63)</autoscroll>
 						<textcolor>grey</textcolor>
 					</control>
 					<control type="scrollbar" id="62">
@@ -511,7 +508,6 @@
 						<width>940</width>
 						<height>350</height>
 						<font>font14_textbox2</font>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 						<pagecontrol>62</pagecontrol>
 						<textcolor>grey</textcolor>
 					</control>

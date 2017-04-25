@@ -98,7 +98,6 @@
 						<font>IconTiny</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$VAR[PVRTimerIcon]</label>
-						<animation effect="fade" end="50" condition="True">Conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="90">

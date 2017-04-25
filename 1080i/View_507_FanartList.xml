@@ -26,7 +26,6 @@
 						<font>font14_textbox</font>
 						<pagecontrol>62</pagecontrol>
 						<textcolor>grey</textcolor>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
 					</control>
 					<control type="scrollbar" id="62">
 						<left>689</left>

@@ -1153,7 +1153,6 @@
 				<textcolor>grey</textcolor>
 				<pagecontrol>195</pagecontrol>
 				<label fallback="161">$INFO[Container(100).ListItem.Property(Plot)]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(110) | Control.IsVisible(140) | Control.IsVisible(150) | Control.IsVisible(210)</visible>
 			</control>
 			<control type="textbox">
@@ -1165,7 +1164,6 @@
 				<textcolor>grey</textcolor>
 				<pagecontrol>196</pagecontrol>
 				<label fallback="161">$INFO[Container(100).ListItem.Property(Plot)]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(120) | Control.IsVisible(200)</visible>
 			</control>
 			<control type="textbox">
@@ -1177,7 +1175,6 @@
 				<textcolor>grey</textcolor>
 				<pagecontrol>196</pagecontrol>
 				<label fallback="161">$INFO[Container(100).ListItem.Property(Artist_Description)]$INFO[Container(100).ListItem.Property(Album_Description)]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<visible>Control.IsVisible(160) | Control.IsVisible(170)</visible>
 			</control>
 			<control type="scrollbar" id="195">
