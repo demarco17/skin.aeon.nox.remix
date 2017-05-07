@@ -161,33 +161,25 @@
 			</control>
 			<control type="textbox">
 				<description>NextEpisode</description>
-				<left>15</left>
 				<top>195</top>
-				<width>409</width>
+				<width>420</width>
 				<height>130</height>
 				<label>[COLOR themecolor]$LOCALIZE[209]:[/COLOR][CR]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,]</label>
 				<textcolor>grey</textcolor>
 				<font>font14</font>
+				<align>center</align>
 				<autoscroll>false</autoscroll>
 			</control>
 			<control type="textbox">
-				<description>AirTime</description>
-				<left>15</left>
+				<description>AirTime - Studio</description>
 				<top>315</top>
-				<width>409</width>
+				<width>420</width>
 				<height>130</height>
-				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]</label>
+				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,]</label>
 				<textcolor>grey</textcolor>
 				<font>font14</font>
+				<align>center</align>
 				<autoscroll>false</autoscroll>
-			</control>
-			<control type="image">
-				<description>Network</description>
-				<top>330</top>
-				<width>420</width>
-				<height>70</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture colordiffuse="grey" fallback="flags/default-studio.png">$INFO[ListItem.Property(Network),resource://resource.images.studios.white/,.png]</texture>
 			</control>
 		</itemlayout>
 		<focusedlayout height="420" width="439">
@@ -233,31 +225,23 @@
 			</control>
 			<control type="textbox">
 				<description>NextEpisode</description>
-				<left>15</left>
 				<top>195</top>
-				<width>409</width>
+				<width>420</width>
 				<height>130</height>
 				<label>[COLOR themecolor]$LOCALIZE[209]:[/COLOR][CR]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,]</label>
 				<font>font14</font>
+				<align>center</align>
 				<autoscroll>false</autoscroll>
 			</control>
 			<control type="textbox">
-				<description>AirTime</description>
-				<left>15</left>
+				<description>AirTime - Studio</description>
 				<top>315</top>
-				<width>409</width>
-				<height>130</height>
-				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]</label>
-				<font>font14</font>
-				<autoscroll>false</autoscroll>
-			</control>
-			<control type="image">
-				<description>Network</description>
-				<top>330</top>
 				<width>420</width>
-				<height>70</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="flags/default-studio.png">$INFO[ListItem.Property(Network),resource://resource.images.studios.white/,.png]</texture>
+				<height>130</height>
+				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,]</label>
+				<font>font14</font>
+				<align>center</align>
+				<autoscroll>false</autoscroll>
 			</control>
 		</focusedlayout>
 	</include>

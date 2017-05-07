@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<views>50</views>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
@@ -216,7 +217,6 @@
 				<top>100</top>
 				<width>400</width>
 				<height>1080</height>
-				<onleft>9050</onleft>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>50</onright>
 				<onup>9050</onup>
