@@ -88,7 +88,13 @@
 					<onclick>Dialog.Close(1119)</onclick>
 					<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
 					<visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
-				</item>
+				</item>			
+				<item>
+					<label>$LOCALIZE[31088]</label>
+					<onclick>Dialog.Close(1119)</onclick>
+					<onclick>RunScript(script.extendedinfo,info=openinfodialog)</onclick>
+					<visible>System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]</visible>
+				</item>				
 				<item>
 					<label>$LOCALIZE[31092]</label>
 					<onclick>SetProperty(FSFanart,$INFO[ListItem.Art(fanart)],movieinformation)</onclick>
@@ -96,6 +102,7 @@
 					<onclick>ActivateWindow(1131)</onclick>
 					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</item>
+				
 			</content>
 		</control>
 	</controls>

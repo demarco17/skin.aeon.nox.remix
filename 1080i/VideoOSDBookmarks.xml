@@ -117,6 +117,12 @@
 					<height>70</height>
 				</control>
 			</control>
+			<control type="image">
+				<left>349</left>
+				<width>2</width>
+				<height>209</height>
+				<texture border="1">dialogs/separator3.png</texture>
+			</control>
 		</control>
 	</controls>
 </window>

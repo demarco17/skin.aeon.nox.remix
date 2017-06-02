@@ -180,7 +180,7 @@
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Duration]</label>
-							<font>font48_bold</font>
+							<font>font30_title_bold</font>
 							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">
@@ -208,7 +208,7 @@
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Rating]</label>
-							<font>font48_bold</font>
+							<font>font30_title_bold</font>
 							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">
@@ -236,7 +236,7 @@
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Top250,#]</label>
-							<font>font48_bold</font>
+							<font>font30_title_bold</font>
 							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">

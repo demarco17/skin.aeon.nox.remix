@@ -297,7 +297,9 @@ msgctxt "#31087"
 msgid "Banner"
 msgstr ""
 
-#empty string with id 31088
+msgctxt "#31088"
+msgid "Extended info"
+msgstr ""
 
 msgctxt "#31089"
 msgid "Play item on startup"

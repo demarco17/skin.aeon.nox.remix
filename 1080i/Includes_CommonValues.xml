@@ -127,9 +127,8 @@
 			</control>
 			<control type="image">
 				<description>Poster</description>
-				<left>10</left>
 				<top>10</top>
-				<width>419</width>
+				<width>420</width>
 				<height>180</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
@@ -151,10 +150,9 @@
 			</control>
 			<control type="image">
 				<description>Logo</description>
-				<left>10</left>
 				<top>10</top>
-				<width>419</width>
-				<height>180</height>
+				<width>439</width>
+				<height>160</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
 				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
@@ -163,7 +161,7 @@
 				<description>NextEpisode</description>
 				<top>195</top>
 				<width>420</width>
-				<height>130</height>
+				<height>120</height>
 				<label>[COLOR themecolor]$LOCALIZE[209]:[/COLOR][CR]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,]</label>
 				<textcolor>grey</textcolor>
 				<font>font14</font>
@@ -174,7 +172,7 @@
 				<description>AirTime - Studio</description>
 				<top>315</top>
 				<width>420</width>
-				<height>130</height>
+				<height>80</height>
 				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,]</label>
 				<textcolor>grey</textcolor>
 				<font>font14</font>
@@ -191,9 +189,8 @@
 			</control>
 			<control type="image">
 				<description>Poster</description>
-				<left>10</left>
 				<top>10</top>
-				<width>419</width>
+				<width>420</width>
 				<height>180</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
@@ -215,10 +212,9 @@
 			</control>
 			<control type="image">
 				<description>Logo</description>
-				<left>10</left>
 				<top>10</top>
-				<width>419</width>
-				<height>180</height>
+				<width>439</width>
+				<height>160</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
 				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
@@ -227,17 +223,17 @@
 				<description>NextEpisode</description>
 				<top>195</top>
 				<width>420</width>
-				<height>130</height>
+				<height>120</height>
 				<label>[COLOR themecolor]$LOCALIZE[209]:[/COLOR][CR]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,]</label>
 				<font>font14</font>
 				<align>center</align>
-				<autoscroll>false</autoscroll>
+				<autoscroll time="3500" delay="3000" repeat="3000">True</autoscroll>
 			</control>
 			<control type="textbox">
 				<description>AirTime - Studio</description>
 				<top>315</top>
 				<width>420</width>
-				<height>130</height>
+				<height>80</height>
 				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,]</label>
 				<font>font14</font>
 				<align>center</align>

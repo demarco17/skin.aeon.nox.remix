@@ -121,7 +121,7 @@
 			</control>
 			<control type="label" id="101">
 				<description>current directory text label</description>
-				<left>50</left>
+				<left>60</left>
 				<top>910</top>
 				<width>821</width>
 				<height>90</height>
