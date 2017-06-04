@@ -159,6 +159,7 @@
 			</control>
 			<control type="textbox">
 				<description>NextEpisode</description>
+				<left>5</left>
 				<top>195</top>
 				<width>420</width>
 				<height>120</height>
@@ -170,6 +171,7 @@
 			</control>
 			<control type="textbox">
 				<description>AirTime - Studio</description>
+				<left>5</left>
 				<top>315</top>
 				<width>420</width>
 				<height>80</height>
@@ -221,6 +223,7 @@
 			</control>
 			<control type="textbox">
 				<description>NextEpisode</description>
+				<left>5</left>
 				<top>195</top>
 				<width>420</width>
 				<height>120</height>
@@ -231,6 +234,7 @@
 			</control>
 			<control type="textbox">
 				<description>AirTime - Studio</description>
+				<left>5</left>
 				<top>315</top>
 				<width>420</width>
 				<height>80</height>
