@@ -56,7 +56,7 @@
 							<height>210</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="center">scale</aspectratio>
-							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
 						<control type="image">
@@ -85,7 +85,7 @@
 				<onup>11</onup>
 				<ondown>9000</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>

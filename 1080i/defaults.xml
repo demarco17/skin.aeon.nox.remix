@@ -21,7 +21,7 @@
 		<textcolor>white</textcolor>
 		<shadowcolor>shadow</shadowcolor>
 		<disabledcolor>grey3</disabledcolor>
-		<selectedcolor>selected</selectedcolor>
+		<selectedcolor>$VAR[SkinThemeColour]</selectedcolor>
 		<scrollspeed>30</scrollspeed>
 	</default>
 	<default type="fadelabel">
@@ -38,7 +38,7 @@
 		<top>0</top>
 		<width>450</width>
 		<height>60</height>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		<label />
 		<font>font14</font>
@@ -56,9 +56,9 @@
 		<width>30</width>
 		<height>60</height>
 		<textoffsetx>15</textoffsetx>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
-		<alttexturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</alttexturefocus>
+		<alttexturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</alttexturefocus>
 		<alttexturenofocus border="4">dialogs/separator2.png</alttexturenofocus>
 		<textcolor>grey</textcolor>
 		<shadowcolor>shadow</shadowcolor>
@@ -82,7 +82,7 @@
 		<left>0</left>
 		<top>0</top>
 		<texturebg colordiffuse="80FFFFFF">dialogs/white50.png</texturebg>
-		<midtexture colordiffuse="themecolor">dialogs/white50.png</midtexture>
+		<midtexture colordiffuse="$VAR[SkinThemeColour]">dialogs/white50.png</midtexture>
 		<lefttexture />
 		<righttexture />
 		<overlaytexture />
@@ -91,10 +91,10 @@
 		<left>0</left>
 		<top>0</top>
 		<textureup colordiffuse="grey">settings/arrow_up.png</textureup>
-		<textureupfocus colordiffuse="themecolor">settings/arrow_up.png</textureupfocus>
+		<textureupfocus colordiffuse="$VAR[SkinThemeColour]">settings/arrow_up.png</textureupfocus>
 		<textureupdisabled colordiffuse="grey3">settings/arrow_up.png</textureupdisabled>
 		<texturedown colordiffuse="grey">settings/arrow_down.png</texturedown>
-		<texturedownfocus colordiffuse="themecolor">settings/arrow_down.png</texturedownfocus>
+		<texturedownfocus colordiffuse="$VAR[SkinThemeColour]">settings/arrow_down.png</texturedownfocus>
 		<texturedowndisabled colordiffuse="grey3">settings/arrow_down.png</texturedowndisabled>
 		<align>right</align>
 		<width>40</width>
@@ -118,12 +118,12 @@
 		<spinwidth>40</spinwidth>
 		<spinheight>25</spinheight>
 		<textureup colordiffuse="grey">settings/arrow_up.png</textureup>
-		<textureupfocus colordiffuse="themecolor">settings/arrow_up.png</textureupfocus>
+		<textureupfocus colordiffuse="$VAR[SkinThemeColour]">settings/arrow_up.png</textureupfocus>
 		<textureupdisabled colordiffuse="grey3">settings/arrow_up.png</textureupdisabled>
 		<texturedown colordiffuse="grey">settings/arrow_down.png</texturedown>
-		<texturedownfocus colordiffuse="themecolor">settings/arrow_down.png</texturedownfocus>
+		<texturedownfocus colordiffuse="$VAR[SkinThemeColour]">settings/arrow_down.png</texturedownfocus>
 		<texturedowndisabled colordiffuse="grey3">settings/arrow_down.png</texturedowndisabled>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		<font>font14</font>
 		<textcolor>grey</textcolor>
@@ -147,7 +147,7 @@
 		<textureradioofffocus colordiffuse="white">settings/radio_off.png</textureradioofffocus>
 		<textureradiooffnofocus colordiffuse="grey">settings/radio_off.png</textureradiooffnofocus>
 		<textureradiooffdisabled colordiffuse="grey3">settings/radio_off.png</textureradiooffdisabled>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		<label>215</label>
 		<font>font14</font>
@@ -164,8 +164,8 @@
 		<top>0</top>
 		<orientation>horizontal</orientation>
 		<texturesliderbar />
-		<textureslidernib border="1" colordiffuse="themecolor">settings/osd_slider_nibNF.png</textureslidernib>
-		<textureslidernibfocus border="1" colordiffuse="themecolor">settings/osd_slider_nib.png</textureslidernibfocus>
+		<textureslidernib border="1" colordiffuse="$VAR[SkinThemeColour]">settings/osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus border="1" colordiffuse="$VAR[SkinThemeColour]">settings/osd_slider_nib.png</textureslidernibfocus>
 	</default>
 	<default type="sliderex">
 		<left>0</left>
@@ -173,13 +173,13 @@
 		<height>60</height>
 		<textoffsetx>15</textoffsetx>
 		<aligny>center</aligny>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		<sliderwidth>150</sliderwidth>
 		<sliderheight>20</sliderheight>
 		<texturesliderbar>settings/osd_slider_bg.png</texturesliderbar>
-		<textureslidernib border="1" colordiffuse="themecolor">settings/osd_slider_nibNF.png</textureslidernib>
-		<textureslidernibfocus border="1" colordiffuse="themecolor">settings/osd_slider_nib.png</textureslidernibfocus>
+		<textureslidernib border="1" colordiffuse="$VAR[SkinThemeColour]">settings/osd_slider_nibNF.png</textureslidernib>
+		<textureslidernibfocus border="1" colordiffuse="$VAR[SkinThemeColour]">settings/osd_slider_nib.png</textureslidernibfocus>
 		<font>font14</font>
 		<textcolor>grey</textcolor>
 		<shadowcolor>shadow</shadowcolor>
@@ -190,14 +190,14 @@
 	<default type="mover">
 		<left>0</left>
 		<top>0</top>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="resize">
 		<left>0</left>
 		<top>0</top>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -206,14 +206,14 @@
 		<top>0</top>
 		<width>450</width>
 		<height>60</height>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		<font>font14</font>
 		<textcolor>grey</textcolor>
 		<shadowcolor>shadow</shadowcolor>
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>grey3</disabledcolor>
-		<invalidcolor>invalid</invalidcolor>
+		<invalidcolor>red</invalidcolor>
 		<textoffsetx>15</textoffsetx>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>

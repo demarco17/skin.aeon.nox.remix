@@ -54,7 +54,7 @@
 						<height>30</height>
 						<align>left</align>
 						<font>font15</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Tagline]</label>
 						<visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.Tagline)</visible>
@@ -64,7 +64,7 @@
 						<height>30</height>
 						<align>left</align>
 						<font>font15</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Status]</label>
 						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Status)</visible>
@@ -74,7 +74,7 @@
 						<height>30</height>
 						<align>left</align>
 						<font>font15</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[Window(Home).Property(NextAired.Status)]</label>
 						<visible>String.IsEqual(ListItem.DBType,tvshow) + String.IsEmpty(ListItem.Status) + !IsEmpty(Window(Home).Property(NextAired.Status))</visible>
@@ -84,7 +84,7 @@
 						<height>30</height>
 						<align>left</align>
 						<font>font15</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.TvShowTitle]</label>
 						<visible>String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TvShowTitle)</visible>
@@ -94,7 +94,7 @@
 						<height>30</height>
 						<align>left</align>
 						<font>font15</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Artist]</label>
 						<visible>String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Artist)</visible>
@@ -277,7 +277,7 @@
 							<width>545</width>
 							<height>55</height>
 							<font>font14</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
@@ -290,7 +290,7 @@
 						<control type="image">
 							<width>595</width>
 							<height>60</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(300)</visible>
 						</control>
 						<control type="label">
@@ -298,13 +298,13 @@
 							<width>545</width>
 							<height>55</height>
 							<font>font14</font>
-							<textcolor>white</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[ListItem.Director,[COLOR themecolor]$LOCALIZE[20339]: [/COLOR],]</label>
+							<label>$INFO[ListItem.Director,$LOCALIZE[20339]: [COLOR grey],[/COLOR]]</label>
 							<onclick condition="System.HasAddon(script.extendedinfo)">SetProperty(DirectorID,True)</onclick>
 							<onclick condition="System.HasAddon(script.extendedinfo)">SetProperty(ActorName,$INFO[ListItem.Director])</onclick>
 							<onclick condition="System.HasAddon(script.extendedinfo)">ActivateWindow(1130)</onclick>
@@ -312,92 +312,75 @@
 							<visible>!String.IsEmpty(ListItem.Director)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Writer,[COLOR themecolor]$LOCALIZE[20417]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Writer,$LOCALIZE[20417]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Writer)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window(Home).Property(NextAired.NextNumber),[COLOR themecolor]$LOCALIZE[209]: [/COLOR],]$INFO[Window(Home).Property(NextAired.NextTitle), - ,]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window(Home).Property(NextAired.NextNumber),$LOCALIZE[209]: [COLOR grey],[/COLOR]]$INFO[Window(Home).Property(NextAired.NextTitle),[COLOR grey] - ,[/COLOR]]</label>
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window(Home).Property(NextAired.LatestNumber),[COLOR themecolor]$LOCALIZE[31011]: [/COLOR],]$INFO[Window(Home).Property(NextAired.LatestTitle), - ,]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window(Home).Property(NextAired.LatestNumber),$LOCALIZE[31011]: [COLOR grey],[/COLOR]]$INFO[Window(Home).Property(NextAired.LatestTitle),[COLOR grey] - ,[/COLOR]]</label>
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.LatestDate)) + String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR themecolor]$LOCALIZE[31012]: [/COLOR],]$INFO[Window(Home).Property(NextAired.AirTime), - ,]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window(Home).Property(NextAired.NextDate),$LOCALIZE[31012]: [COLOR grey],[/COLOR]]$INFO[Window(Home).Property(NextAired.AirTime),[COLOR grey] - ,[/COLOR]]</label>
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Genre,[COLOR themecolor]$LOCALIZE[515]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Premiered,[COLOR themecolor]$LOCALIZE[20416]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window(Home).Property(NextAired.Country),[COLOR themecolor]$LOCALIZE[574]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window(Home).Property(NextAired.Country),$LOCALIZE[574]: [COLOR grey],[/COLOR]]</label>
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.Country))</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Country,[COLOR themecolor]$LOCALIZE[574]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Country,$LOCALIZE[574]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Country)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.DateAdded,[COLOR themecolor]$LOCALIZE[570]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.DateAdded,$LOCALIZE[570]: [COLOR grey],[/COLOR]]</label>
 							<visible>[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + !String.IsEmpty(ListItem.DateAdded)</visible>
 						</item>
 						<item>
-							<label>$VAR[UserRating,[COLOR themecolor]$LOCALIZE[38018]: [/COLOR],]</label>
+							<label>$VAR[UserRating,$LOCALIZE[38018]: [COLOR grey],[/COLOR]]</label>
 							<onclick>SendClick(2003,7)</onclick>
 						</item>
 						<item>
-							<label>$INFO[ListItem.PlayCount,[COLOR themecolor]$LOCALIZE[567]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.PlayCount,$LOCALIZE[567]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.PlayCount)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.PercentPlayed,[COLOR themecolor]$LOCALIZE[575]: [/COLOR],%]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.PercentPlayed,$LOCALIZE[575]: [COLOR grey],%[/COLOR]]</label>
 							<visible>ListItem.IsResumable</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.LastPlayed,[COLOR themecolor]$LOCALIZE[568]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.LastPlayed,$LOCALIZE[568]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Set,[COLOR themecolor]$LOCALIZE[20457]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Set,$LOCALIZE[20457]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Set)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Tag,[COLOR themecolor]$LOCALIZE[20459]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Tag,$LOCALIZE[20459]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Tag)</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Property(AudioLanguage.1),[COLOR themecolor]$LOCALIZE[21447]: [/COLOR],]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey3] | [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.Property(SubtitleLanguage.1),[COLOR themecolor]$LOCALIZE[21448]: [/COLOR],]$INFO[ListItem.Property(SubtitleLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[ListItem.Property(SubtitleLanguage.3),[COLOR grey3] | [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 						</item>
 						<item>
-							<label>$INFO[ListItem.FileNameAndPath,[COLOR themecolor]$LOCALIZE[573]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[ListItem.FileNameAndPath,$LOCALIZE[573]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(ListItem.FileNameAndPath)</visible>
 						</item>
 					</content>
@@ -407,7 +390,7 @@
 					<top>330</top>
 					<width>20</width>
 					<height>50</height>
-					<texture flipx="true" colordiffuse="themecolor">home/arrowright.png</texture>
+					<texture flipx="true" colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
 					<visible>Container(300).HasPrevious</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
@@ -416,7 +399,7 @@
 					<top>330</top>
 					<width>20</width>
 					<height>50</height>
-					<texture colordiffuse="themecolor">home/arrowright.png</texture>
+					<texture colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
 					<visible>Container(300).HasNext</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
@@ -589,7 +572,7 @@
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<visible>Control.IsVisible(400)</visible>
@@ -602,7 +585,7 @@
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<visible>Control.IsVisible(401)</visible>

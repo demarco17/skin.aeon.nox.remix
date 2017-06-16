@@ -49,7 +49,7 @@
 				<height>48</height>
 				<align>right</align>
 				<font>font15</font>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$INFO[Player.Filename]</label>
 			</control>
 			<control type="group" id="130">
@@ -180,7 +180,7 @@
 					<control type="image">
 						<width>1260</width>
 						<height>88</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(120)</visible>
 					</control>
 					<control type="image">
@@ -260,7 +260,7 @@
 				<onleft>120</onleft>
 				<onright>150</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
@@ -306,7 +306,7 @@
 					<control type="image">
 						<width>397</width>
 						<height>88</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(150)</visible>
 					</control>
 					<control type="label">

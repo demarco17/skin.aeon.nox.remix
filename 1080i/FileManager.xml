@@ -31,7 +31,7 @@
 					<width>12</width>
 					<height>840</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<onleft>20</onleft>
 					<onright>21</onright>
 					<showonepage>false</showonepage>
@@ -81,7 +81,7 @@
 						<control type="image">
 							<width>822</width>
 							<height>58</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(20)</visible>
 						</control>
 						<control type="label">
@@ -130,7 +130,7 @@
 					<width>12</width>
 					<height>840</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<onleft>21</onleft>
 					<onright>20</onright>
 					<showonepage>false</showonepage>
@@ -180,7 +180,7 @@
 						<control type="image">
 							<width>820</width>
 							<height>58</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(21)</visible>
 						</control>
 						<control type="label">

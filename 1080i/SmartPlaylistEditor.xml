@@ -68,7 +68,7 @@
 					<label>21434</label>
 					<font>font14</font>
 					<textoffsetx>15</textoffsetx>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 					<enable>false</enable>
 				</control>
 				<control type="image">
@@ -112,7 +112,7 @@
 						<control type="image">
 							<width>828</width>
 							<height>60</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						</control>
 						<control type="label">
 							<width>828</width>

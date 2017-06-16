@@ -21,7 +21,7 @@
 				<height>40</height>
 				<font>font14_title</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$LOCALIZE[31126]</label>
 			</control>
 			<control type="fadelabel">
@@ -99,7 +99,7 @@
 				<height>70</height>
 				<font>font15_bold</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$INFO[VideoPlayer.Title]$VAR[EpisodePlayCountVar, [COLOR grey2](,)[/COLOR]]</label>
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>

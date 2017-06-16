@@ -174,7 +174,7 @@
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31018]</label>
-					<label2>[COLOR themecolor]$VAR[InfoPanelLabelVar][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[InfoPanelLabelVar][/COLOR]</label2>
 					<onclick>$VAR[54MusicInfoPanelVar]</onclick>
 					<visible>Control.IsVisible(54) + [Container.Content(albums) | Container.Content(artists)]</visible>
 				</control>
@@ -183,7 +183,7 @@
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31005]</label>
-					<label2>[COLOR themecolor]$VAR[WrapListToggleLabelVar][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[WrapListToggleLabelVar][/COLOR]</label2>
 					<onclick>$VAR[54WrapListToggleVar]</onclick>
 					<visible>Control.IsVisible(54)</visible>
 				</control>
@@ -192,7 +192,7 @@
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31017]</label>
-					<label2>[COLOR themecolor]$VAR[CaseToggleLabelVar][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[CaseToggleLabelVar][/COLOR]</label2>
 					<onclick>$VAR[StringMusicCaseToggleVar]</onclick>
 					<visible>[Control.IsVisible(57) | Control.IsVisible(501)] + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
 				</control>
@@ -203,7 +203,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31026</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="8">
 					<description>Search</description>
@@ -240,7 +240,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="613">
 					<description>Get more</description>

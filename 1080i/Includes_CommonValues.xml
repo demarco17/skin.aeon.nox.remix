@@ -50,22 +50,22 @@
 		<font>font15</font>
 		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
-		<selectedcolor>selected</selectedcolor>
+		<selectedcolor>$VAR[SkinThemeColour]</selectedcolor>
 	</include>
 	<include name="Objects_DoubleKeyOff">
 		<left>-123</left>
 		<width>320</width>
 		<height>80</height>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/keyboard_focus.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/keyboard_focus.png</texturefocus>
 		<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
-		<alttexturefocus border="4" colordiffuse="themecolor">dialogs/keyboard_focus.png</alttexturefocus>
+		<alttexturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/keyboard_focus.png</alttexturefocus>
 		<alttexturenofocus colordiffuse="dialogInner">dialogs/black.png</alttexturenofocus>
 		<include>Objects_KeyOffVars</include>
 	</include>
 	<include name="Objects_SingleKeyOff">
 		<width>80</width>
 		<height>80</height>
-		<texturefocus border="4" colordiffuse="themecolor">dialogs/keyboard_focus.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/keyboard_focus.png</texturefocus>
 		<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
 		<include>Objects_KeyOffVars</include>
 	</include>
@@ -79,7 +79,6 @@
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="4">dialogs/separator2.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
-		<onclick>noop</onclick>
 	</include>
 	<include name="SettingsPanelButtonsValues">
 		<height>90</height>
@@ -92,7 +91,6 @@
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="4">dialogs/separator2.png</texturefocus>
 		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
-		<onclick>noop</onclick>
 	</include>
 	<!-- Media Flags -->
 	<include name="MediaFlagVars">
@@ -128,7 +126,7 @@
 			<control type="image">
 				<description>Poster</description>
 				<top>10</top>
-				<width>420</width>
+				<width>432</width>
 				<height>180</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
@@ -161,10 +159,10 @@
 				<description>NextEpisode</description>
 				<left>5</left>
 				<top>195</top>
-				<width>420</width>
+				<width>429</width>
 				<height>120</height>
-				<label>[COLOR themecolor]$LOCALIZE[209]:[/COLOR][CR]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,]</label>
-				<textcolor>grey</textcolor>
+				<label>$LOCALIZE[209]:[CR][COLOR grey]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<font>font14</font>
 				<align>center</align>
 				<autoscroll>false</autoscroll>
@@ -173,10 +171,10 @@
 				<description>AirTime - Studio</description>
 				<left>5</left>
 				<top>315</top>
-				<width>420</width>
+				<width>429</width>
 				<height>80</height>
-				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,]</label>
-				<textcolor>grey</textcolor>
+				<label>$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<font>font14</font>
 				<align>center</align>
 				<autoscroll>false</autoscroll>
@@ -186,13 +184,15 @@
 			<control type="image">
 				<width>439</width>
 				<height>418</height>
-				<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+				<bordersize>5</bordersize>
 				<visible>ControlGroup(9001).HasFocus()</visible>
 			</control>
 			<control type="image">
 				<description>Poster</description>
 				<top>10</top>
-				<width>420</width>
+				<width>432</width>
 				<height>180</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
@@ -220,14 +220,15 @@
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
 				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-			</control>
+			</control>			
 			<control type="textbox">
 				<description>NextEpisode</description>
 				<left>5</left>
 				<top>195</top>
-				<width>420</width>
+				<width>429</width>
 				<height>120</height>
-				<label>[COLOR themecolor]$LOCALIZE[209]:[/COLOR][CR]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,]</label>
+				<label>$LOCALIZE[209]:[CR][COLOR white]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<font>font14</font>
 				<align>center</align>
 				<autoscroll time="3500" delay="3000" repeat="3000">True</autoscroll>
@@ -236,9 +237,10 @@
 				<description>AirTime - Studio</description>
 				<left>5</left>
 				<top>315</top>
-				<width>420</width>
+				<width>429</width>
 				<height>80</height>
-				<label>[COLOR themecolor]$LOCALIZE[31012]:[/COLOR][CR]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,]</label>
+				<label>$LOCALIZE[31012]:[CR][COLOR white]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<font>font14</font>
 				<align>center</align>
 				<autoscroll>false</autoscroll>

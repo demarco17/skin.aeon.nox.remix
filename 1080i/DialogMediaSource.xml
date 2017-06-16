@@ -36,7 +36,7 @@
 				<textoffsetx>15</textoffsetx>
 				<font>font14</font>
 				<label>1021</label>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="group">
 				<left>32</left>
@@ -79,7 +79,7 @@
 						<control type="image">
 							<width>786</width>
 							<height>60</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(10)</visible>
 						</control>
 						<control type="label">
@@ -96,7 +96,7 @@
 					<width>12</width>
 					<height>180</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<onleft>10</onleft>
 					<onright>9000</onright>
 					<showonepage>false</showonepage>
@@ -146,7 +146,7 @@
 					<font>font14</font>
 					<label>1022</label>
 					<align>center</align>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="edit" id="12">
 					<description>Name Button</description>

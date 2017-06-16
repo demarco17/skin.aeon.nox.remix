@@ -62,7 +62,7 @@
 							<width>738</width>
 							<height>45</height>
 							<font>font14</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 							<textoffsetx>15</textoffsetx>
 						</control>
@@ -85,7 +85,7 @@
 							<width>738</width>
 							<height>45</height>
 							<font>font14</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 							<textoffsetx>15</textoffsetx>
 						</control>
@@ -94,24 +94,20 @@
 						<item>
 							<label>$INFO[ListItem.Title]</label>
 							<label2>$LOCALIZE[369]:</label2>
-							<onclick>noop</onclick>
 						</item>
 						<item>
 							<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])</label>
 							<label2>$LOCALIZE[142]</label2>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(ListItem.StartTime)</visible>
 						</item>
 						<item>
 							<label>$INFO[ListItem.Duration]</label>
 							<label2>$LOCALIZE[180]:</label2>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(ListItem.Duration)</visible>
 						</item>
 						<item>
 							<label>$INFO[ListItem.Genre]</label>
 							<label2>$LOCALIZE[515]:</label2>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						</item>
 					</content>
@@ -136,7 +132,7 @@
 					<onleft>9001</onleft>
 					<onright>9001</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>

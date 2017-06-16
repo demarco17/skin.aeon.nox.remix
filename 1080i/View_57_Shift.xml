@@ -16,7 +16,7 @@
 			<top>140</top>
 			<width>50</width>
 			<height>45</height>
-			<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
 		<control type="image">
@@ -52,7 +52,7 @@
 			<top>142</top>
 			<width>50</width>
 			<height>45</height>
-			<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
 		<control type="image">
@@ -181,7 +181,7 @@
 				<onup>57</onup>
 				<ondown>57</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
@@ -237,7 +237,7 @@
 				<onup>57</onup>
 				<ondown>57</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>

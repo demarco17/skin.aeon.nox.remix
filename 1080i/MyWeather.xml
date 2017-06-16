@@ -108,12 +108,12 @@
 					<width>411</width>
 					<itemgap>10</itemgap>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[402]: [/COLOR]$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[402]: [/COLOR]$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 					</control>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[405]: [/COLOR]$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[405]: [/COLOR]$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 					</control>
@@ -131,12 +131,12 @@
 					<width>411</width>
 					<itemgap>10</itemgap>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[406]: [/COLOR]$INFO[Window.Property(Current.Humidity)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[406]: [/COLOR]$INFO[Window.Property(Current.Humidity)]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 					</control>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[1376]: [/COLOR]$INFO[Window.Property(Current.Pressure)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[1376]: [/COLOR]$INFO[Window.Property(Current.Pressure)]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 					</control>
@@ -154,17 +154,17 @@
 					<width>411</width>
 					<itemgap>10</itemgap>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[404]:[/COLOR][CR]$INFO[Window.Property(Current.Wind)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[404]:[/COLOR][CR]$INFO[Window.Property(Current.Wind)]</label>
 						<include>SettingsPanelButtonsValues</include>
 					</control>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[31040]: [/COLOR]$INFO[Window.Property(Current.WindChill)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31040]: [/COLOR]$INFO[Window.Property(Current.WindChill)]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 						<visible>String.IsEqual(Weather.Plugin,weather.yahoo) + !String.IsEmpty(Window.Property(Current.WindChill))</visible>
 					</control>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[1448]: [/COLOR]$INFO[Window.Property(Current.Precipitation)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[1448]: [/COLOR]$INFO[Window.Property(Current.Precipitation)]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 						<visible>!String.IsEqual(Weather.Plugin,weather.yahoo) + !String.IsEmpty(Window.Property(Current.Precipitation))</visible>
@@ -183,12 +183,12 @@
 					<width>411</width>
 					<itemgap>10</itemgap>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[33027]: [/COLOR]$INFO[Window.Property(Today.Sunrise)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33027]: [/COLOR]$INFO[Window.Property(Today.Sunrise)]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 					</control>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[33028]: [/COLOR]$INFO[Window.Property(Today.Sunset)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33028]: [/COLOR]$INFO[Window.Property(Today.Sunset)]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
 					</control>
@@ -243,7 +243,6 @@
 					<content>
 						<item>
 							<label>$LOCALIZE[31909]</label>
-							<onclick>noop</onclick>
 							<visible>!Weather.IsFetched</visible>
 						</item>
 						<item>
@@ -252,7 +251,6 @@
 							<icon>$VAR[WeatherIconDay0]</icon>
 							<property name="HighTemp">$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(Day0.Title))</visible>
 						</item>
 						<item>
@@ -261,7 +259,6 @@
 							<icon>$VAR[WeatherIconDay1]</icon>
 							<property name="HighTemp">$INFO[Window.Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window.Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(Day1.Title))</visible>
 						</item>
 						<item>
@@ -270,7 +267,6 @@
 							<icon>$VAR[WeatherIconDay2]</icon>
 							<property name="HighTemp">$INFO[Window.Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window.Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(Day2.Title))</visible>
 						</item>
 						<item>
@@ -279,7 +275,6 @@
 							<icon>$VAR[WeatherIconDay3]</icon>
 							<property name="HighTemp">$INFO[Window.Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window.Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(Day3.Title))</visible>
 						</item>
 						<item>
@@ -288,7 +283,6 @@
 							<icon>$VAR[WeatherIconDay4]</icon>
 							<property name="HighTemp">$INFO[Window.Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window.Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(Day4.Title))</visible>
 						</item>
 					</content>
@@ -320,7 +314,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31006</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="spincontrolex" id="3">
 					<description>change location button</description>
@@ -349,7 +343,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31026</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="2">
 					<description>Refresh button</description>
@@ -371,7 +365,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 					<visible>Player.HasMedia</visible>
 				</control>
 				<control type="button" id="614">

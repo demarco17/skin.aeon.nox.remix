@@ -35,7 +35,7 @@
 				<width>12</width>
 				<height>840</height>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<onleft>50</onleft>
 				<onright>100</onright>
 				<showonepage>false</showonepage>
@@ -86,7 +86,7 @@
 					<control type="image">
 						<width>820</width>
 						<height>58</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="label">
@@ -137,7 +137,7 @@
 				<width>12</width>
 				<height>840</height>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<onleft>100</onleft>
 				<onright>noop</onright>
 				<showonepage>false</showonepage>
@@ -187,7 +187,7 @@
 					<control type="image">
 						<width>820</width>
 						<height>58</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(100)</visible>
 					</control>
 					<control type="label">
@@ -228,7 +228,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31006</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
@@ -249,7 +249,7 @@
 					<include>ButtonCommonValues</include>
 					<label>559</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="6">
 					<description>Open Playlist</description>

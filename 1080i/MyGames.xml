@@ -85,7 +85,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>no</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="613">
 					<description>Get more</description>

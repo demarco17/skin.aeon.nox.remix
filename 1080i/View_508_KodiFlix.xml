@@ -24,21 +24,21 @@
 					<height>90</height>
 					<font>font14</font>
 					<textcolor>grey</textcolor>
-					<label>[COLOR themecolor]$LOCALIZE[20339]:[/COLOR][CR]$INFO[ListItem.Director]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20339]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 					<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Director)</visible>
 				</control>
 				<control type="label">
 					<height>90</height>
 					<font>font14</font>
 					<textcolor>grey</textcolor>
-					<label>[COLOR themecolor]$LOCALIZE[36902]:[/COLOR][CR]$INFO[ListItem.TVShowTitle]$VAR[EpisodeInfoCountVar, (,)]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[36902]:[/COLOR][CR]$INFO[ListItem.TVShowTitle]$VAR[EpisodeInfoCountVar, (,)]</label>
 					<visible>Container.Content(episodes) + !String.IsEmpty(ListItem.TVShowTitle)</visible>
 				</control>
 				<control type="label">
 					<height>90</height>
 					<font>font14</font>
 					<textcolor>grey</textcolor>
-					<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="grouplist">
@@ -51,7 +51,7 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR themecolor]$LOCALIZE[33054]:[/COLOR][CR]$INFO[ListItem.Property(TotalSeasons)]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33054]:[/COLOR][CR]$INFO[ListItem.Property(TotalSeasons)]</label>
 						<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
 					</control>
 					<control type="label">
@@ -59,7 +59,7 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR themecolor]$LOCALIZE[20360]:[/COLOR][CR]$INFO[ListItem.Property(TotalEpisodes)]$INFO[ListItem.Property(UnWatchedEpisodes), (,[LOWERCASE] $LOCALIZE[16101][/LOWERCASE])]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20360]:[/COLOR][CR]$INFO[ListItem.Property(TotalEpisodes)]$INFO[ListItem.Property(UnWatchedEpisodes), (,[LOWERCASE] $LOCALIZE[16101][/LOWERCASE])]</label>
 						<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 					</control>
 				</control>
@@ -72,7 +72,7 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR themecolor]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
 					<control type="label">
@@ -80,7 +80,7 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR themecolor]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
 						<visible>[Container.Content(episodes) | Container.Content(tvshows)] + !String.IsEmpty(ListItem.Premiered)</visible>
 					</control>
 					<control type="label">
@@ -88,7 +88,7 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR themecolor]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
 						<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="label">
@@ -96,7 +96,7 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR themecolor]$LOCALIZE[563]:[/COLOR][CR]$INFO[ListItem.Rating]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[563]:[/COLOR][CR]$INFO[ListItem.Rating]</label>
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</control>
 				</control>
@@ -105,7 +105,7 @@
 					<width>800</width>
 					<height>215</height>
 					<font>font15</font>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<pagecontrol>62</pagecontrol>
 				</control>
 			</control>
@@ -118,7 +118,7 @@
 				<onleft>508</onleft>
 				<onright>508</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>!ListItem.IsCollection</visible>
@@ -142,7 +142,7 @@
 					<onleft>508</onleft>
 					<onright>508</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>
@@ -182,7 +182,7 @@
 						<top>2</top>
 						<width>50</width>
 						<height>45</height>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="image">
@@ -203,7 +203,7 @@
 							<height>248</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[LandscapeVar]</texture>
-							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
 						<control type="image">
@@ -220,7 +220,7 @@
 							<top>5</top>
 							<width>50</width>
 							<height>45</height>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
@@ -241,7 +241,7 @@
 				<onup>508</onup>
 				<ondown>508</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(63) + !Container.Scrolling">Conditional</animation>

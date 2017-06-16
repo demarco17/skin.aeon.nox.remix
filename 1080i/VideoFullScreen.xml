@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
+		<control type="group">
+			<description>Video Mode</description>
+			<include>VisibleFadeAnimation</include>
+			<visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12)</visible>
+			<control type="image">
+				<width>1920</width>
+				<height>155</height>
+				<texture border="4">dialogs/InfoBar.png</texture>
+			</control>
+			<control type="grouplist">
+				<top>10</top>
+				<left>30</left>
+				<width>1860</width>
+				<height>140</height>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<control type="label" id="10">
+					<height>40</height>
+					<textcolor>grey</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+				</control>
+				<control type="label" id="11">
+					<height>40</height>
+					<textcolor>grey</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+				</control>
+				<control type="label" id="12">
+					<height>40</height>
+					<textcolor>grey</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+				</control>
+			</control>
+		</control>
 		<control type="label">
 			<left>30</left>
 			<top>30</top>
@@ -8,7 +41,7 @@
 			<height>50</height>
 			<label>$INFO[PVR.ChannelNumberInput]</label>
 			<font>font35_title_bold</font>
-			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning)) + !String.IsEmpty(PVR.ChannelNumberInput) + !Window.IsActive(videoosd)</visible>
+			<visible>VideoPlayer.Content(livetv) + !String.IsEmpty(PVR.ChannelNumberInput)</visible>
 		</control>
 		<control type="label" id="1">
 			<left>30</left>

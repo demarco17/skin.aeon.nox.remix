@@ -65,7 +65,7 @@
 					<control type="image">
 						<width>1035</width>
 						<height>142</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(52)</visible>
 					</control>
 					<control type="image">
@@ -109,7 +109,7 @@
 				<width>80</width>
 				<height>80</height>
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
-				<texturefocus colordiffuse="themecolor">flags/power.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[SkinThemeColour]">flags/power.png</texturefocus>
 				<texturenofocus colordiffuse="grey">flags/power.png</texturenofocus>
 				<onleft>52</onleft>
 				<onright>52</onright>

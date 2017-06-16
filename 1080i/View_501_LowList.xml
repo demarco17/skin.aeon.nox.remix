@@ -52,7 +52,7 @@
 				<visible>!Container.Content(episodes) + !ListItem.IsCollection</visible>
 				<control type="button">
 					<width>650</width>
-					<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>ViewFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
@@ -65,7 +65,7 @@
 					<height>215</height>
 					<font>font14_textbox2</font>
 					<pagecontrol>62</pagecontrol>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="scrollbar" id="62">
 					<left>640</left>
@@ -75,7 +75,7 @@
 					<onleft>501</onleft>
 					<onright>501</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>
@@ -98,7 +98,7 @@
 						<onleft>501</onleft>
 						<onright>501</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -138,7 +138,6 @@
 						<focusedcolor>grey</focusedcolor>
 						<texturefocus />
 						<texturenofocus />
-						<onclick>noop</onclick>
 					</control>
 				</control>
 				<control type="group">
@@ -150,7 +149,7 @@
 					<control type="button">
 						<top>-89</top>
 						<width>645</width>
-						<label>[COLOR themecolor]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 					</control>
@@ -179,7 +178,7 @@
 						<onleft>501</onleft>
 						<onright>501</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -355,7 +354,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="68" width="806" condition="Container.Content(movies)">
@@ -367,7 +366,7 @@
 					<control type="image">
 						<width>806</width>
 						<height>66</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
@@ -400,7 +399,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout height="68" width="806" condition="Container.Content(tvshows)">
@@ -441,7 +440,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -465,7 +464,7 @@
 					<control type="image">
 						<width>806</width>
 						<height>66</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
@@ -498,7 +497,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -550,7 +549,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -574,7 +573,7 @@
 					<control type="image">
 						<width>806</width>
 						<height>66</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
@@ -607,7 +606,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
@@ -659,7 +658,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="68" width="806" condition="Container.Content(episodes)">
@@ -671,7 +670,7 @@
 					<control type="image">
 						<width>806</width>
 						<height>66</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
@@ -704,7 +703,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 					</control>
 				</focusedlayout>
 			</control>
@@ -718,7 +717,7 @@
 				<onright condition="!ListItem.IsCollection + !Container.Content(episodes)">62</onright>
 				<onright condition="Container.Content(episodes)">73</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -800,19 +799,19 @@
 				<height>270</height>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="button">
-					<label>[COLOR themecolor]$LOCALIZE[557]:[/COLOR][CR]$INFO[ListItem.Artist]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[557]:[/COLOR][CR]$INFO[ListItem.Artist]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Artist) + !Container.Content(artists)</visible>
 				</control>
 				<control type="button">
-					<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Property(Artist_Genre)]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Property(Artist_Genre)]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Property(Artist_Genre)) + Container.Content(artists)</visible>
 				</control>
 				<control type="button">
-					<label>[COLOR themecolor]$LOCALIZE[558]:[/COLOR][CR]$INFO[ListItem.Album]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[558]:[/COLOR][CR]$INFO[ListItem.Album]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Duration) + Container.Content(songs)</visible>
@@ -820,13 +819,13 @@
 				<control type="group">
 					<visible>!Container.Content(artists)</visible>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 						<width>325</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</control>
 					<control type="button">
-						<label>[COLOR themecolor]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
 						<left>325</left>
 						<width>325</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
@@ -858,7 +857,7 @@
 						<onleft>501</onleft>
 						<onright>501</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -883,7 +882,7 @@
 						<onleft>501</onleft>
 						<onright>501</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -966,7 +965,7 @@
 					<control type="image">
 						<width>806</width>
 						<height>66</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
@@ -1038,7 +1037,7 @@
 					<control type="image">
 						<width>806</width>
 						<height>66</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
@@ -1099,7 +1098,7 @@
 					<control type="image">
 						<width>806</width>
 						<height>66</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
@@ -1119,7 +1118,7 @@
 				<onleft>501</onleft>
 				<onright>62</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>

@@ -56,7 +56,7 @@
 								<label>$VAR[BigListInfoVar]</label>
 								<aligny>bottom</aligny>
 								<font>font14</font>
-								<textcolor>grey2</textcolor>
+								<textcolor>$VAR[SkinThemeColour]</textcolor>
 							</control>
 							<control type="label">
 								<top>50</top>
@@ -75,7 +75,7 @@
 								<label>$VAR[VideoPlotVar]</label>
 								<autoscroll>false</autoscroll>
 								<font>font14_textbox</font>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[SkinThemeColour]</textcolor>
 							</control>
 						</control>
 						<control type="image">
@@ -100,7 +100,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>
@@ -128,7 +128,7 @@
 						<control type="image">
 							<width>1723</width>
 							<height>215</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(510)</visible>
 						</control>
 						<include>BigList_Landscape</include>
@@ -151,7 +151,7 @@
 									<label>$VAR[BigListInfoVar]</label>
 									<aligny>bottom</aligny>
 									<font>font14</font>
-									<textcolor>grey</textcolor>
+									<textcolor>$VAR[SkinThemeColour]</textcolor>
 								</control>
 								<control type="label">
 									<top>50</top>
@@ -170,6 +170,7 @@
 									<label>$VAR[VideoPlotVar]</label>
 									<font>font14_textbox</font>
 									<autoscroll time="3500" delay="4000" repeat="5000">True</autoscroll>
+									<textcolor>$VAR[SkinThemeColour]</textcolor>
 								</control>
 							</control>
 						</control>
@@ -195,7 +196,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>
@@ -223,7 +224,7 @@
 					<onleft>510</onleft>
 					<onright>510</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -294,7 +295,7 @@
 								<height>45</height>
 								<label>$VAR[BigListInfoVar]</label>
 								<font>font14</font>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[SkinThemeColour]</textcolor>
 							</control>
 							<control type="label">
 								<top>48</top>
@@ -335,7 +336,7 @@
 						<control type="image">
 							<width>1723</width>
 							<height>215</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(510)</visible>
 						</control>
 						<control type="image">
@@ -364,6 +365,7 @@
 									<height>45</height>
 									<label>$VAR[BigListInfoVar]</label>
 									<font>font14</font>
+									<textcolor>$VAR[SkinThemeColour]</textcolor>
 								</control>
 								<control type="label">
 									<top>48</top>
@@ -403,7 +405,7 @@
 					<onleft>510</onleft>
 					<onright>510</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>

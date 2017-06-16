@@ -609,7 +609,7 @@
 				<height>50</height>
 				<label>31021</label>
 				<font>font15_title</font>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="fadelabel">
 				<left>155</left>
@@ -666,7 +666,7 @@
 				<height>50</height>
 				<label>19158</label>
 				<font>font15_title</font>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="fadelabel">
 				<left>155</left>
@@ -727,7 +727,7 @@
 				<height>50</height>
 				<label>31020</label>
 				<font>font15_title</font>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="fadelabel">
 				<left>155</left>
@@ -769,7 +769,7 @@
 				<height>41</height>
 				<label></label>
 				<font>IconSmall</font>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="rss">
 				<description>RSS feed</description>
@@ -779,8 +779,8 @@
 				<width>1860</width>
 				<font>font13</font>
 				<urlset>1</urlset>
-				<textcolor>themecolor</textcolor>
-				<titlecolor>themecolor</titlecolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<titlecolor>$VAR[SkinThemeColour]</titlecolor>
 				<headlinecolor>grey</headlinecolor>
 				<shadowcolor>shadow</shadowcolor>
 			</control>

@@ -107,7 +107,7 @@
 					<control type="image">
 						<width>821</width>
 						<height>120</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="label">
@@ -174,7 +174,7 @@
 				<onright condition="Control.IsVisible(62)">62</onright>
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(70) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
@@ -230,20 +230,20 @@
 					<width>821</width>
 					<height>30</height>
 					<font>font15</font>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 					<visible>!String.IsEmpty(Container(50).ListItem.Title)</visible>
-					<label>[COLOR themecolor]$INFO[Container(50).ListItem.StartTime]$INFO[Container(50).ListItem.EndTime, - ,: ][/COLOR]$INFO[Container(50).ListItem.Title]</label>
+					<label>$INFO[Container(50).ListItem.StartTime]$INFO[Container(50).ListItem.EndTime, - ,: ]$INFO[Container(50).ListItem.Title,[COLOR grey],[/COLOR]]</label>
 				</control>
 				<control type="label">
 					<top>58</top>
 					<width>821</width>
 					<height>30</height>
 					<font>font15</font>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 					<visible>!String.IsEmpty(Container(50).ListItem.NextTitle)</visible>
-					<label>$INFO[Container(50).ListItem.NextTitle,[COLOR themecolor]$LOCALIZE[19031]:[/COLOR] ,]</label>
+					<label>$INFO[Container(50).ListItem.NextTitle,$LOCALIZE[19031]: [COLOR grey],[/COLOR]]</label>
 				</control>
 				<control type="image">
 					<description>separator image</description>
@@ -270,7 +270,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>

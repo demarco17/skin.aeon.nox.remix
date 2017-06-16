@@ -136,7 +136,7 @@
 						<control type="image">
 							<width>355</width>
 							<height>88</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						</control>
 						<control type="label">
 							<width>356</width>
@@ -294,7 +294,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 								<control type="image">
@@ -323,7 +323,7 @@
 							<height>40</height>
 							<label>$INFO[Container(221).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -393,7 +393,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -406,7 +406,7 @@
 							<height>40</height>
 							<label>$INFO[Container(111).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -476,7 +476,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -489,7 +489,7 @@
 							<height>40</height>
 							<label>$INFO[Container(211).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -559,7 +559,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -572,7 +572,7 @@
 							<height>40</height>
 							<label>$INFO[Container(231).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -641,7 +641,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -654,7 +654,7 @@
 							<height>40</height>
 							<label>$INFO[Container(121).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -712,7 +712,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -725,7 +725,7 @@
 							<height>40</height>
 							<label>$INFO[Container(131).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -790,7 +790,7 @@
 									<height>219</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 								<control type="image">
@@ -819,7 +819,7 @@
 							<height>40</height>
 							<label>$INFO[Container(141).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -877,7 +877,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -890,7 +890,7 @@
 							<height>40</height>
 							<label>$INFO[Container(151).ListItem.Property(Artist),,[COLOR grey3] | [/COLOR]]$INFO[Container(151).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -948,7 +948,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -961,7 +961,7 @@
 							<height>40</height>
 							<label>$INFO[Container(161).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -1019,7 +1019,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -1032,7 +1032,7 @@
 							<height>40</height>
 							<label>$INFO[Container(171).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -1090,7 +1090,7 @@
 									<height>329</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>5</bordersize>
 								</control>
 							</control>
@@ -1103,7 +1103,7 @@
 							<height>40</height>
 							<label>$INFO[Container(181).ListItem.Label]</label>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
@@ -1138,7 +1138,7 @@
 				<onright>9000</onright>
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>

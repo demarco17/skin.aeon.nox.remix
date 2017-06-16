@@ -48,7 +48,7 @@
 					<control type="image">
 						<width>356</width>
 						<height>90</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(9000)</visible>
 					</control>
 					<control type="label">
@@ -102,7 +102,7 @@
 				<height>100</height>
 				<font>Description_textbox</font>
 				<align>left</align>
-				<textcolor>themecolor</textcolor>
+				<textcolor>grey3</textcolor>
 				<label>$VAR[SkinSettingsDescriptionVar]</label>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 				<visible>!Window.IsActive(1121)</visible>
@@ -183,13 +183,23 @@
 					<onup>9002</onup>
 					<ondown>9002</ondown>
 					<visible>Container(9000).HasFocus(2)</visible>
+					<control type="button" id="206">
+                        <width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+                        <label>31028</label>
+                        <label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(skincolour.name)][/COLOR]</label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+                        <onclick>RunScript(script.skin.helper.colorpicker,skinstring=skincolour.name)</onclick>
+                    </control>
 					<control type="button" id="205">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>31002</label>
-						<label2>[COLOR themecolor]$INFO[Skin.String(CustomGlobalBackground)][/COLOR]</label2>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(CustomGlobalBackground)][/COLOR]</label2>
 						<onclick>Skin.SetImage(CustomGlobalBackground,special://skin/backgrounds)</onclick>
 					</control>
 					<control type="button" id="203">
@@ -270,7 +280,7 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>$LOCALIZE[572] $LOCALIZE[536]</label>
-						<label2>[COLOR themecolor]$INFO[Skin.String(studioicons.name)][/COLOR]</label2>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(studioicons.name)][/COLOR]</label2>
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=studioicons&amp;type=resource.images.studios)</onclick>
 					</control>
@@ -280,7 +290,7 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>$LOCALIZE[157] $LOCALIZE[515] $LOCALIZE[536]</label>
-						<label2>[COLOR themecolor]$INFO[Skin.String(moviegenreicons.name)][/COLOR]</label2>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(moviegenreicons.name)][/COLOR]</label2>
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=moviegenreicons&amp;type=resource.images.moviegenreicons)</onclick>
 					</control>
@@ -290,7 +300,7 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>$LOCALIZE[2] $LOCALIZE[515] $LOCALIZE[536]</label>
-						<label2>[COLOR themecolor]$INFO[Skin.String(musicgenreicons.name)][/COLOR]</label2>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(musicgenreicons.name)][/COLOR]</label2>
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=musicgenreicons&amp;type=resource.images.musicgenreicons)</onclick>
 					</control>
@@ -376,7 +386,7 @@
 				<onright>9004</onright>
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>

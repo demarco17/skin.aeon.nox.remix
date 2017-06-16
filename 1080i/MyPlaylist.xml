@@ -27,7 +27,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31026</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="radiobutton" id="20">
 					<description>Shuffle button</description>
@@ -61,7 +61,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 					<visible>Player.HasMedia</visible>
 				</control>
 				<control type="button" id="614">

@@ -19,7 +19,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[38031]</label>
 					<font>font13_title</font>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="button">
 					<description>Hardware decoding</description>
@@ -76,7 +76,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[460]</label>
 					<font>font13_title</font>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="button">
 					<description>Decoder</description>
@@ -109,7 +109,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[138]</label>
 					<font>font13_title</font>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="button">
 					<description>CPU</description>

@@ -52,7 +52,7 @@
 				<height>100</height>
 				<font>Description_textbox</font>
 				<align>left</align>
-				<textcolor>themecolor</textcolor>
+				<textcolor>grey3</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="grouplist" id="5">
@@ -76,7 +76,7 @@
 				<onright>3</onright>
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
@@ -116,7 +116,7 @@
 			<height>90</height>
 			<font>font15</font>
 			<textoffsetx>30</textoffsetx>
-			<texturefocus border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texturefocus>
+			<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
 			<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		</control>
 		<control type="image" id="11">
@@ -131,7 +131,7 @@
 			<height>88</height>
 			<font>font15_title</font>
 			<align>left</align>
-			<textcolor>themecolor</textcolor>
+			<textcolor>$VAR[SkinThemeColour]</textcolor>
 			<textoffsetx>30</textoffsetx>
 		</control>
 		<control type="label" id="2">
@@ -160,7 +160,7 @@
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31142]</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="20">
 					<description>Change settings level</description>
@@ -176,7 +176,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 					<visible>Player.HasMedia</visible>
 				</control>
 				<control type="button" id="614">

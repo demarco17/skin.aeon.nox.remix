@@ -63,7 +63,7 @@
 							<height>90</height>
 							<font>font15_bold</font>
 							<textoffsetx>20</textoffsetx>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -71,7 +71,7 @@
 							<height>90</height>
 							<font>font15</font>
 							<textoffsetx>20</textoffsetx>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -86,7 +86,7 @@
 					<control type="image">
 						<width>354</width>
 						<height>88</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<animation effect="fade" start="100" end="40" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>	
 					</control>
 					<control type="group">
@@ -114,7 +114,7 @@
 							<height>90</height>
 							<font>font15_bold</font>
 							<textoffsetx>20</textoffsetx>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -122,7 +122,7 @@
 							<height>90</height>
 							<font>font15</font>
 							<textoffsetx>20</textoffsetx>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -133,43 +133,36 @@
 						<label>$INFO[Container(200).NumItems,$LOCALIZE[41] (,)]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.1.Date)]</label2>
 						<property name="day">$LOCALIZE[41]</property>
-						<onclick>noop</onclick>
 					</item>
 					<item id="2">
 						<label>$INFO[Container(201).NumItems,$LOCALIZE[42] (,)]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.2.Date)]</label2>
 						<property name="day">$LOCALIZE[42]</property>
-						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>$INFO[Container(202).NumItems,$LOCALIZE[43] (,)]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.3.Date)]</label2>
 						<property name="day">$LOCALIZE[43]</property>
-						<onclick>noop</onclick>
 					</item>
 					<item id="4">
 						<label>$INFO[Container(203).NumItems,$LOCALIZE[44] (,)]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.4.Date)]</label2>
 						<property name="day">$LOCALIZE[44]</property>
-						<onclick>noop</onclick>
 					</item>
 					<item id="5">
 						<label>$INFO[Container(204).NumItems,$LOCALIZE[45] (,)]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.5.Date)]</label2>
 						<property name="day">$LOCALIZE[45]</property>
-						<onclick>noop</onclick>
 					</item>
 					<item id="6">
 						<label>$INFO[Container(205).NumItems,$LOCALIZE[46] (,)]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.6.Date)]</label2>
 						<property name="day">$LOCALIZE[46]</property>
-						<onclick>noop</onclick>
 					</item>
 					<item id="7">
 						<label>$INFO[Container(206).NumItems,$LOCALIZE[47] (,)]</label>
 						<label2>$INFO[Window(Home).Property(NextAired.7.Date)]</label2>
 						<property name="day">$LOCALIZE[47]</property>
-						<onclick>noop</onclick>
 					</item>
 				</content>
 			</control>
@@ -197,7 +190,7 @@
 					<onleft condition="Container(9000).HasFocus(6)">205</onleft>
 					<onleft condition="Container(9000).HasFocus(7)">206</onleft>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -274,7 +267,7 @@
 					<textoffsetx>15</textoffsetx>
 					<font>font13_title</font>
 					<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="button" id="8">
 					<description>Settings</description>

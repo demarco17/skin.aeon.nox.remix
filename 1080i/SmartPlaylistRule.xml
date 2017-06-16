@@ -42,7 +42,7 @@
 				<label>21422</label>
 				<font>font14</font>
 				<textoffsetx>15</textoffsetx>
-				<disabledcolor>themecolor</disabledcolor>
+				<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				<enable>false</enable>
 			</control>
 			<!-- left group -->

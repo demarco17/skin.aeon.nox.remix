@@ -25,7 +25,7 @@
 					<width>1270</width>
 					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<label>$LOCALIZE[16101]</label>
 				</control>
 				<control type="label">

@@ -88,7 +88,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>
@@ -116,7 +116,7 @@
 							<left>1</left>
 							<width>1138</width>
 							<height>118</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
@@ -171,7 +171,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 						<control type="group">
 							<description>Unwatched episodes</description>
@@ -197,7 +197,7 @@
 					<onleft>50</onleft>
 					<onright>62</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -312,7 +312,7 @@
 					<width>476</width>
 					<height>445</height>
 					<font>font14_textbox</font>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<pagecontrol>62</pagecontrol>
 				</control>
 				<control type="group">
@@ -348,7 +348,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>
@@ -450,7 +450,7 @@
 							<left>1</left>
 							<width>1138</width>
 							<height>118</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50) + !Window.IsVisible(musicinformation)</visible>
 						</control>
 						<control type="label">
@@ -511,7 +511,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -636,7 +636,7 @@
 							<left>1</left>
 							<width>1138</width>
 							<height>118</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
@@ -674,7 +674,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -775,7 +775,7 @@
 							<left>1</left>
 							<width>1138</width>
 							<height>118</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
@@ -813,7 +813,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
@@ -914,7 +914,7 @@
 							<left>1</left>
 							<width>1138</width>
 							<height>118</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
@@ -952,7 +952,7 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>

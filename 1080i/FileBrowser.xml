@@ -86,7 +86,7 @@
 						<control type="image">
 							<width>960</width>
 							<height>60</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(450)</visible>
 						</control>
 						<control type="label">
@@ -147,7 +147,7 @@
 							<control type="image">
 								<width>480</width>
 								<height>270</height>
-								<texture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</texture>
+								<texture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</texture>
 							</control>
 							<control type="image">
 								<width>480</width>
@@ -180,7 +180,7 @@
 					<width>12</width>
 					<height>540</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<onleft>450</onleft>
 					<onright>9000</onright>
 					<showonepage>false</showonepage>

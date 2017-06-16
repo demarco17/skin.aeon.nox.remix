@@ -31,7 +31,7 @@
 					<label>$VAR[LibraryStatsVar]</label>
 					<textoffsetx>15</textoffsetx>
 					<font>font13_title</font>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="grouplist" id="9020">
@@ -61,7 +61,7 @@
 						<height>40</height>
 						<label>$INFO[Weather.Temperature,,[COLOR grey3]  |  [/COLOR]]</label>
 						<font>font13_title</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<visible>Weather.IsFetched + !String.IsEmpty(Weather.Plugin)</visible>
 					</control>
 					<control type="label" id="9025">
@@ -69,7 +69,7 @@
 						<height>40</height>
 						<label>$INFO[System.Date,[COLOR grey],[COLOR grey3]  |  [/COLOR][/COLOR]]$INFO[System.Time]</label>
 						<font>font13_title</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
 				</control>
 			</control>
@@ -111,7 +111,7 @@
 							<control type="image">
 								<width>300</width>
 								<height>39</height>
-								<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+								<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							</control>
 							<control type="label">
 								<width>300</width>
@@ -141,7 +141,7 @@
 					<top>6</top>
 					<width>30</width>
 					<height>30</height>
-					<texture flipx="true" colordiffuse="themecolor">home/arrowright.png</texture>
+					<texture flipx="true" colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
 					<visible>Container(9010).HasPrevious</visible>
 				</control>
 				<control type="image">
@@ -149,7 +149,7 @@
 					<top>6</top>
 					<width>30</width>
 					<height>30</height>
-					<texture colordiffuse="themecolor">home/arrowright.png</texture>
+					<texture colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
 					<visible>Container(9010).HasNext</visible>
 				</control>
 			</control>

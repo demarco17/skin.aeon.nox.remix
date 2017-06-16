@@ -89,7 +89,7 @@
 							<width>594</width>
 							<height>40</height>
 							<font>font15</font>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 							<textoffsetx>36</textoffsetx>
 						</control>
@@ -105,7 +105,7 @@
 							<top>1</top>
 							<width>594</width>
 							<height>100</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(300)</visible>
 						</control>
 						<control type="label">
@@ -129,50 +129,41 @@
 						<item>
 							<label fallback="161">$INFO[Window.Property(AlsoKnownAs)]</label>
 							<label2>$ADDON[script.extendedinfo 32016]:</label2>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(AlsoKnownAs))</visible>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(Birthday)]</label>
 							<label2>$ADDON[script.extendedinfo 32012]:</label2>
-							<onclick>noop</onclick>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(Age)]</label>
 							<label2>$ADDON[script.extendedinfo 32020]:</label2>
-							<onclick>noop</onclick>
 							<visible>String.IsEmpty(Window.Property(Deathday))</visible>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(Deathday)]$INFO[Window.Property(Age), ($ADDON[script.extendedinfo 32020]: ,)]</label>
 							<label2>$ADDON[script.extendedinfo 32013]:</label2>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(Deathday))</visible>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(PlaceOfBirth)]</label>
 							<label2>$ADDON[script.extendedinfo 32014]:</label2>
-							<onclick>noop</onclick>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Container(150).NumItems]</label>
 							<label2>$ADDON[script.extendedinfo 32011]:</label2>
-							<onclick>noop</onclick>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(DBMovies)]</label>
 							<label2>$ADDON[script.extendedinfo 32021]:</label2>
-							<onclick>noop</onclick>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(Homepage)]</label>
 							<label2>$ADDON[script.extendedinfo 32017]:</label2>
-							<onclick>noop</onclick>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(Adult)]</label>
 							<label2>$ADDON[script.extendedinfo 32015]:</label2>
-							<onclick>noop</onclick>
 							<visible>String.Contains(Window.Property(Adult),True)</visible>
 						</item>
 					</content>
@@ -205,7 +196,7 @@
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<visible>Control.IsVisible(800)</visible>
@@ -237,7 +228,7 @@
 							<left>235</left>
 							<width>60</width>
 							<height>55</height>
-							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -265,7 +256,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
@@ -273,7 +264,7 @@
 								<top>5</top>
 								<width>60</width>
 								<height>55</height>
-								<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+								<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
@@ -324,7 +315,7 @@
 							<left>235</left>
 							<width>60</width>
 							<height>55</height>
-							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -352,7 +343,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
@@ -360,7 +351,7 @@
 								<top>5</top>
 								<width>60</width>
 								<height>55</height>
-								<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+								<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 								<visible>!String.IsEmpty(ListItem.DBID)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
@@ -431,7 +422,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
@@ -486,7 +477,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 						</control>
@@ -539,7 +530,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">

@@ -153,7 +153,7 @@
 			<onup>52</onup>
 			<ondown>52</ondown>
 			<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-			<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+			<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
 			<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
@@ -286,7 +286,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="themecolor">$INFO[ListItem(-1).Overlay,overlays/]</texture>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(-1).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem0">
@@ -310,7 +310,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem1">
@@ -337,7 +337,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="themecolor">$INFO[ListItem(1).Overlay,overlays/]</texture>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(1).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem2">
@@ -364,7 +364,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="themecolor">$INFO[ListItem(2).Overlay,overlays/]</texture>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(2).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<include name="LandscapeItem3">
@@ -388,7 +388,7 @@
 		</control>
 		<control type="image">
 			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="themecolor">$INFO[ListItem(3).Overlay,overlays/]</texture>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(3).Overlay,overlays/]</texture>
 		</control>
 	</include>
 	<variable name="LandscapeItem-3Var">

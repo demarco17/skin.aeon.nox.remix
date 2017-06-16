@@ -41,7 +41,7 @@
 					<control type="image">
 						<width>356</width>
 						<height>90</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(9000)</visible>
 					</control>
 					<control type="label">
@@ -93,7 +93,7 @@
 							<font>font14_title</font>
 							<label>$LOCALIZE[15050] ($INFO[Container(20).NumItems])</label>
 							<align>center</align>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 						</control>
 						<control type="image">
 							<description>available modes list border</description>
@@ -109,7 +109,7 @@
 							<width>12</width>
 							<height>533</height>
 							<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-							<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+							<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 							<onleft>20</onleft>
 							<onright>21</onright>
 							<showonepage>false</showonepage>
@@ -126,7 +126,7 @@
 							<font>font14_title</font>
 							<label>$LOCALIZE[15051] ($INFO[Container(21).NumItems])</label>
 							<align>center</align>
-							<textcolor>themecolor</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 						</control>
 						<control type="image">
 							<description>active modes list border</description>
@@ -142,7 +142,7 @@
 							<width>12</width>
 							<height>533</height>
 							<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-							<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+							<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 							<onleft>21</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -203,7 +203,7 @@
 							<control type="image">
 								<width>651</width>
 								<height>89</height>
-								<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+								<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 								<visible>Control.HasFocus(20)</visible>
 							</control>
 							<control type="image">
@@ -306,7 +306,7 @@
 							<control type="image">
 								<width>651</width>
 								<height>89</height>
-								<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+								<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 								<visible>Control.HasFocus(21)</visible>
 							</control>
 							<control type="image">
@@ -403,7 +403,7 @@
 						<height>100</height>
 						<font>Description_textbox</font>
 						<align>left</align>
-						<textcolor>themecolor</textcolor>
+						<textcolor>grey3</textcolor>
 						<info>Container(9000).ListItem.Label2</info>
 						<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					</control>

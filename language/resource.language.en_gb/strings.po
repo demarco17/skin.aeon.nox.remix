@@ -130,7 +130,11 @@ msgctxt "#31027"
 msgid "Set item background"
 msgstr ""
 
-#empty strings from id 31028 to 31038
+msgctxt "#31028"
+msgid "Theme Colour"
+msgstr ""
+
+#empty strings from id 31029 to 31038
 
 msgctxt "#31039"
 msgid "Actions"
@@ -235,7 +239,11 @@ msgctxt "#31069"
 msgid "Change location"
 msgstr ""
 
-#empty strings from id 31070 to 31072
+msgctxt "#31070"
+msgid "Last checked.."
+msgstr ""
+
+#empty strings from id 31071 to 31072
 
 msgctxt "#31073"
 msgid "Move menu item"
@@ -568,7 +576,9 @@ msgctxt "#31916"
 msgid "Change the default global background image."
 msgstr ""
 
-#empty string with id 31917
+msgctxt "#31917"
+msgid "Customize the skins colour theme."
+msgstr ""
 
 msgctxt "#31918"
 msgid "Projects the current playing video on the background when video is played."

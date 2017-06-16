@@ -46,7 +46,6 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<textoffsetx>20</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -60,7 +59,7 @@
 						<control type="image">
 							<width>419</width>
 							<height>118</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -69,7 +68,6 @@
 							<width>420</width>
 							<height>70</height>
 							<font>font30</font>
-							<selectedcolor>selected</selectedcolor>
 							<textoffsetx>20</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -159,7 +157,6 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -170,7 +167,6 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -180,7 +176,6 @@
 							<align>right</align>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
-							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.AddonVersion]</label>
 						</control>
 					</itemlayout>
@@ -193,7 +188,7 @@
 						<control type="image">
 							<width>1199</width>
 							<height>118</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(51)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -210,7 +205,6 @@
 							<width>940</width>
 							<height>70</height>
 							<font>font30</font>
-							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -220,7 +214,6 @@
 							<width>1050</width>
 							<height>60</height>
 							<font>font15</font>
-							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -229,7 +222,6 @@
 							<font>font15</font>
 							<align>right</align>
 							<textoffsetx>15</textoffsetx>
-							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.AddonVersion]</label>
 						</control>
 					</focusedlayout>
@@ -267,7 +259,7 @@
 								<height>240</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 						</control>
@@ -323,7 +315,7 @@
 					<onleft>51</onleft>
 					<onright>noop</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
@@ -351,13 +343,13 @@
 					<include>ButtonCommonValues</include>
 					<label>31006</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="201">
 					<description>View As button</description>
 					<textwidth>352</textwidth>
 					<label>$LOCALIZE[24140]:$INFO[Skin.String(CustomAppsView), ,]</label>
-					<label2>[COLOR themecolor]$LOCALIZE[12312][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[12312][/COLOR]</label2>
 					<include>ButtonCommonValues</include>
 					<onclick>$VAR[CustomAppsViewVar]</onclick>
 				</control>
@@ -368,7 +360,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="203">
 					<textwidth>352</textwidth>

@@ -107,7 +107,7 @@
 							<width>50</width>
 							<height>50</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 					</itemlayout>
@@ -120,7 +120,7 @@
 						<control type="image">
 							<width>632</width>
 							<height>100</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<animation effect="fade" start="100" end="40" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
 						</control>
 						<control type="image">
@@ -167,7 +167,7 @@
 							<width>50</width>
 							<height>50</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 							<visible>ListItem.Property(Changed)</visible>
 						</control>
 						<control type="label">
@@ -191,7 +191,7 @@
 					<height>40</height>
 					<font>font14</font>
 					<label>$LOCALIZE[31511]</label>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 				</control>
 				<control type="image">
@@ -251,7 +251,7 @@
 						<height>40</height>
 						<font>font14</font>
 						<label>$LOCALIZE[31026]</label>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<textoffsetx>15</textoffsetx>
 					</control>
 					<control type="button" id="30">

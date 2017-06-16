@@ -226,7 +226,7 @@
 			<onup>54</onup>
 			<ondown>54</ondown>
 			<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-			<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+			<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
 			<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>

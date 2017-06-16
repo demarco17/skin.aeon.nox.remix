@@ -42,7 +42,7 @@
 					<control type="image">
 						<width>356</width>
 						<height>90</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(90000)</visible>
 					</control>
 					<control type="label">
@@ -84,7 +84,7 @@
 				<height>100</height>
 				<font>Description_textbox</font>
 				<align>left</align>
-				<textcolor>themecolor</textcolor>
+				<textcolor>grey3</textcolor>
 				<label>$VAR[SkinSettingsDescriptionVar]</label>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
@@ -122,7 +122,7 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[13334]</label>
-					<label2>[COLOR themecolor]$INFO[Container(90000).ListItem.Label][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(90000).ListItem.Label][/COLOR]</label2>
 					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onclick>Skin.SetString($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label])</onclick>
 				</control>
@@ -133,7 +133,7 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[31027]</label>
-					<label2>[COLOR themecolor]$VAR[BackgroundLabel2Var][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[BackgroundLabel2Var][/COLOR]</label2>
 					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onfocus>Skin.Reset(ItemToEdit.MultiFanart)</onfocus>
 					<onfocus>Skin.Reset(ItemToEdit.BGType)</onfocus>
@@ -149,7 +149,7 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[22079]</label>
-					<label2>[COLOR themecolor]$INFO[Container(90000).ListItem.Property(Path)][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(90000).ListItem.Property(Path)][/COLOR]</label2>
 					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onfocus>Skin.Reset(ItemToEdit.Path)</onfocus>
 					<onfocus>Skin.Reset(ItemToEdit.Label)</onfocus>
@@ -165,7 +165,7 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[22079]</label>
-					<label2>[COLOR themecolor]$INFO[Container(90000).ListItem.Property(Path)][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(90000).ListItem.Property(Path)][/COLOR]</label2>
 					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=True&amp;skinLabel=$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label]&amp;skinAction=$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Path])</onclick>
 					<visible>System.HasAddon(script.skinshortcuts)</visible>
@@ -177,7 +177,7 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[31049]</label>
-					<label2>[COLOR themecolor]$VAR[InfoLineLabelVar][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[InfoLineLabelVar][/COLOR]</label2>
 					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onfocus>Skin.Reset(ItemToEdit.InfoLine)</onfocus>
 					<onclick>SetProperty(Nox.InfoLine,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.InfoLine],home)</onclick>

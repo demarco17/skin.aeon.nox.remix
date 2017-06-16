@@ -25,7 +25,7 @@
 						<height>250</height>
 						<font>font14_textbox</font>
 						<pagecontrol>62</pagecontrol>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
 					<control type="scrollbar" id="62">
 						<left>689</left>
@@ -35,7 +35,7 @@
 						<onleft>507</onleft>
 						<onright>507</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -58,7 +58,7 @@
 							<onleft>507</onleft>
 							<onright>507</onright>
 							<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-							<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+							<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 							<showonepage>false</showonepage>
 							<orientation>vertical</orientation>
 						</control>
@@ -269,7 +269,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="1056" condition="Container.Content(movies)">
@@ -281,7 +281,7 @@
 						<control type="image">
 							<width>1055</width>
 							<height>68</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>
 						<control type="label">
@@ -314,7 +314,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(tvshows)">
@@ -356,7 +356,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 						</control>
 						<control type="label">
 							<description>Unwatched episodes</description>
@@ -380,7 +380,7 @@
 						<control type="image">
 							<width>1055</width>
 							<height>68</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>
 						<control type="label">
@@ -413,7 +413,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 						</control>
 						<control type="label">
 							<description>Unwatched episodes</description>
@@ -465,7 +465,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="1056" condition="Container.Content(episodes)">
@@ -477,7 +477,7 @@
 						<control type="image">
 							<width>1055</width>
 							<height>68</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>
 						<control type="label">
@@ -510,7 +510,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$VAR[MediaWatchedIconVar]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(seasons)">
@@ -551,7 +551,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 						</control>
 						<control type="label">
 							<description>Unwatched episodes</description>
@@ -575,7 +575,7 @@
 						<control type="image">
 							<width>1055</width>
 							<height>68</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>
 						<control type="label">
@@ -608,7 +608,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 						</control>
 						<control type="label">
 							<description>Unwatched episodes</description>
@@ -632,7 +632,7 @@
 					<onright condition="!ListItem.IsCollection">62</onright>
 					<onright condition="ListItem.IsCollection">64</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>

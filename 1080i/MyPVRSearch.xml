@@ -86,7 +86,7 @@
 					<control type="image">
 						<width>1139</width>
 						<height>118</height>
-						<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="label">
@@ -133,7 +133,7 @@
 				<onright condition="!Control.IsVisible(74)">50</onright>
 				<onright condition="Control.IsVisible(74)">74</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(77) + !Container.Scrolling">Conditional</animation>
@@ -172,14 +172,12 @@
 						<top>466</top>
 						<width>506</width>
 						<height>90</height>
-						<label>$INFO[Container(50).ListItem.Title][CR]$INFO[Container(50).ListItem.Genre,[COLOR themecolor]$LOCALIZE[515]:[/COLOR] ,]</label>
+						<label>$INFO[Container(50).ListItem.Title,[COLOR grey],[/COLOR]][CR]$INFO[Container(50).ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
 						<textoffsetx>15</textoffsetx>
 						<font>font14</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>grey</focusedcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<texturefocus border="4">dialogs/separator2.png</texturefocus>
 						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
-						<onclick>noop</onclick>
 					</control>
 					<control type="textbox">
 						<label>$INFO[Container(50).ListItem.Plot]</label>
@@ -199,7 +197,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>

@@ -76,12 +76,12 @@
 			<include>ButtonCommonValues</include>
 			<label>31006</label>
 			<enable>false</enable>
-			<disabledcolor>themecolor</disabledcolor>
+			<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 		</control>
 		<control type="button" id="2">
 			<description>View As button</description>
 			<textwidth>352</textwidth>
-			<label2>[COLOR themecolor]$INFO[Container.ViewCount][/COLOR]</label2>
+			<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container.ViewCount][/COLOR]</label2>
 			<include>ButtonCommonValues</include>
 		</control>
 		<control type="button" id="3">
@@ -130,12 +130,12 @@
 					<include>ButtonCommonValues</include>
 					<label>31006</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="2">
 					<description>View As button</description>
 					<textwidth>352</textwidth>
-					<label2>[COLOR themecolor]$INFO[Container.ViewCount][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container.ViewCount][/COLOR]</label2>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="3">
@@ -157,7 +157,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="100">
 					<description>Channels</description>
@@ -232,7 +232,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31026</label>
 					<enable>false</enable>
-					<disabledcolor>themecolor</disabledcolor>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 					<visible>!Window.IsActive(MyPVRSearch.xml)</visible>
 				</control>
 				<control type="button" id="28">
@@ -252,7 +252,7 @@
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>20367</label>
-					<label2>[COLOR themecolor]$INFO[Container.NumItems][/COLOR]</label2>
+					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container.NumItems][/COLOR]</label2>
 					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
 				</control>
 				<control type="radiobutton" id="6">
@@ -502,7 +502,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+						<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 						<bordersize>5</bordersize>
 					</control>
 					<control type="image">
@@ -791,7 +791,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+						<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 						<bordersize>5</bordersize>
 					</control>
 					<control type="image">
@@ -837,7 +837,7 @@
 				<width>auto</width>
 				<label>$PARAM[header_label]</label>
 				<font>font14</font>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="list" id="$PARAM[list_id]">
 				<top>45</top>

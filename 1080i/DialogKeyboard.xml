@@ -116,7 +116,7 @@
 					<control type="togglebutton" id="304">
 						<description>Symbols</description>
 						<label>@#!*</label>
-						<altlabel>[COLOR themecolor]@#!*[/COLOR]</altlabel>
+						<altlabel>[COLOR $VAR[SkinThemeColour]]@#!*[/COLOR]</altlabel>
 						<onup>309</onup>
 						<ondown>303</ondown>
 						<width>160</width>
@@ -198,7 +198,7 @@
 					<control type="togglebutton" id="303">
 						<description>Caps</description>
 						<label>20179</label>
-						<altlabel>[COLOR themecolor]$LOCALIZE[20179][/COLOR]</altlabel>
+						<altlabel>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20179][/COLOR]</altlabel>
 						<onup>307</onup>
 						<ondown>302</ondown>
 						<include>Objects_DoubleKeyOff</include>
@@ -271,7 +271,7 @@
 					<control type="togglebutton" id="302">
 						<description>Shift</description>
 						<label>$LOCALIZE[20178]</label>
-						<altlabel>[COLOR themecolor]$LOCALIZE[20178][/COLOR]</altlabel>
+						<altlabel>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20178][/COLOR]</altlabel>
 						<onup>303</onup>
 						<ondown>300</ondown>
 						<include>Objects_DoubleKeyOff</include>
@@ -350,7 +350,7 @@
 					<control type="button" id="32">
 						<width>400</width>
 						<height>80</height>
-						<texturefocus border="4" colordiffuse="themecolor">dialogs/keyboard_focus.png</texturefocus>
+						<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/keyboard_focus.png</texturefocus>
 						<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
 						<label>$LOCALIZE[20182]</label>
 						<onup>160</onup>
@@ -377,7 +377,7 @@
 						<description>Backspace</description>
 						<width>240</width>
 						<height>80</height>
-						<texturefocus border="4" colordiffuse="themecolor">dialogs/keyboard_focus.png</texturefocus>
+						<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/keyboard_focus.png</texturefocus>
 						<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
 						<label>20181</label>
 						<onup>169</onup>

@@ -38,7 +38,7 @@
 				<control type="image">
 					<width>494</width>
 					<height>60</height>
-					<texture colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+					<texture colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 					<visible>Control.HasFocus(9000)</visible>
 				</control>
 				<control type="label">

@@ -51,7 +51,7 @@
 				<width>12</width>
 				<height>540</height>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<onleft>5</onleft>
 				<onright>9001</onright>
 				<showonepage>false</showonepage>
@@ -82,7 +82,7 @@
 				<height>60</height>
 				<font>font14</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<!-- right group -->
 			<control type="group">

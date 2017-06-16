@@ -62,7 +62,7 @@
 						<top>2</top>
 						<width>50</width>
 						<height>45</height>
-						<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
@@ -74,7 +74,7 @@
 							<height>110</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[BannerThumb]</texture>
-							<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>!String.IsEmpty(ListItem.Art(banner)) | String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
@@ -85,7 +85,7 @@
 								<height>110</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
@@ -102,7 +102,7 @@
 							<top>2</top>
 							<width>50</width>
 							<height>45</height>
-							<texture colordiffuse="themecolor">$INFO[ListItem.Overlay,overlays/]</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
@@ -117,7 +117,7 @@
 				<onleft>58</onleft>
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>

@@ -28,7 +28,7 @@
 				<width>595</width>
 				<height>50</height>
 				<font>font15_title</font>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scrollout>false</scrollout>

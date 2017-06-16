@@ -96,43 +96,36 @@
 	</include>
 	<include name="VideoFallback">
 		<item>
-			<onclick>noop</onclick>
 			<thumb>$INFO[Skin.String(Videos.Fallback)]</thumb>
 		</item>
 	</include>
 	<include name="MusicFallback">
 		<item>
-			<onclick>noop</onclick>
 			<thumb>$INFO[Skin.String(Music.Fallback)]</thumb>
 		</item>
 	</include>
 	<include name="SystemFallback">
 		<item>
-			<onclick>noop</onclick>
 			<thumb>$INFO[Skin.String(System.Fallback)]</thumb>
 		</item>
 	</include>
 	<include name="LiveTVFallback">
 		<item>
-			<onclick>noop</onclick>
 			<thumb>$INFO[Skin.String(LiveTV.Fallback)]</thumb>
 		</item>
 	</include>
 	<include name="PicturesFallback">
 		<item>
-			<onclick>noop</onclick>
 			<thumb>$INFO[Skin.String(Pictures.Fallback)]</thumb>
 		</item>
 	</include>
 	<include name="AppsFallback">
 		<item>
-			<onclick>noop</onclick>
 			<thumb>$INFO[Skin.String(Apps.Fallback)]</thumb>
 		</item>
 	</include>
 	<include name="GamesFallback">
 		<item>
-			<onclick>noop</onclick>
 			<thumb>$INFO[Skin.String(Games.Fallback)]</thumb>
 		</item>
 	</include>
@@ -210,7 +203,7 @@
 						<height>170</height>
 						<font>font14_textbox2</font>
 						<pagecontrol>62</pagecontrol>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>
 					<control type="scrollbar" id="62">
@@ -225,7 +218,7 @@
 						<onright condition="Control.IsVisible(53)">53</onright>
 						<onright condition="Control.IsVisible(52)">52</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -251,7 +244,7 @@
 						<onright condition="Control.IsVisible(53)">53</onright>
 						<onright condition="Control.IsVisible(52)">52</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -333,7 +326,7 @@
 						<height>344</height>
 						<font>font14_textbox2</font>
 						<pagecontrol>62</pagecontrol>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>
 					<control type="scrollbar" id="62">
@@ -348,7 +341,7 @@
 						<onright condition="Control.IsVisible(53)">53</onright>
 						<onright condition="Control.IsVisible(52)">52</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -374,7 +367,7 @@
 						<onright condition="Control.IsVisible(53)">53</onright>
 						<onright condition="Control.IsVisible(52)">52</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -423,22 +416,22 @@
 						<left>137</left>
 						<top>162</top>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[515]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$LOCALIZE[161]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>String.IsEmpty(ListItem.Genre)</visible>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[21899]:[/COLOR][CR]$INFO[ListItem.Property(Album_Label)]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21899]:[/COLOR][CR]$INFO[ListItem.Property(Album_Label)]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[21899]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21899]:[/COLOR][CR]$LOCALIZE[161]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>String.IsEmpty(ListItem.Property(Album_Label))</visible>
 						</control>
@@ -454,28 +447,28 @@
 						<left>640</left>
 						<top>162</top>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[175]:[/COLOR][CR]$INFO[ListItem.Property(Album_Mood)]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[175]:[/COLOR][CR]$INFO[ListItem.Property(Album_Mood)]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[175]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[175]:[/COLOR][CR]$LOCALIZE[161]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>String.IsEmpty(ListItem.Property(Album_Mood))</visible>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[176]:[/COLOR][CR]$INFO[ListItem.Property(Album_Style)]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[176]:[/COLOR][CR]$INFO[ListItem.Property(Album_Style)]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[176]:[/COLOR][CR]$LOCALIZE[161]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[176]:[/COLOR][CR]$LOCALIZE[161]</label>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>String.IsEmpty(ListItem.Property(Album_Style))</visible>
 						</control>
 					</control>
 					<control type="textbox">
-						<label>$VAR[MusicPlotVar,[COLOR themecolor]$LOCALIZE[183]:[CR][/COLOR]]</label>
+						<label>$VAR[MusicPlotVar,[COLOR $VAR[SkinThemeColour]]$LOCALIZE[183]:[CR][/COLOR]]</label>
 						<top>342</top>
 						<left>152</left>
 						<width>970</width>
@@ -494,7 +487,7 @@
 						<onleft>54</onleft>
 						<onright>54</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -502,7 +495,7 @@
 				<control type="group">
 					<visible>Container.Content(artists) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 					<control type="textbox">
-						<label>$VAR[MusicPlotVar,[COLOR themecolor]$LOCALIZE[21887]:[CR][/COLOR]]</label>
+						<label>$VAR[MusicPlotVar,[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21887]:[CR][/COLOR]]</label>
 						<top>162</top>
 						<left>152</left>
 						<width>940</width>
@@ -521,7 +514,7 @@
 						<onleft>54</onleft>
 						<onright>54</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>

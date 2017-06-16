@@ -77,10 +77,9 @@
 						<width>354</width>
 						<height>68.57</height>
 						<label>$LOCALIZE[20008]</label>
-						<label2>$INFO[Container(50).NumItems,[COLOR themecolor],[/COLOR]]</label2>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(50).NumItems][/COLOR]</label2>
 						<align>left</align>
 						<font>font15</font>
-						<onclick>noop</onclick>
 						<enable>Integer.IsGreater(Container(50).NumItems,0)</enable>
 					</control>
 				</control>
@@ -97,11 +96,11 @@
 						<width>439</width>
 						<itemgap>10</itemgap>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[21863]:[/COLOR][CR]$INFO[ListItem.AddonCreator]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21863]:[/COLOR][CR]$INFO[ListItem.AddonCreator]</label>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[24051][/COLOR][CR]$INFO[ListItem.AddonVersion]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[24051][/COLOR][CR]$INFO[ListItem.AddonVersion]</label>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 					</control>
@@ -112,11 +111,11 @@
 						<width>439</width>
 						<usecontrolcoords>true</usecontrolcoords>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[146][/COLOR][CR]$INFO[ListItem.AddonType]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[146][/COLOR][CR]$INFO[ListItem.AddonType]</label>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[560]:[/COLOR][CR]$INFO[ListItem.Property(Addon.ID)]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[560]:[/COLOR][CR]$INFO[ListItem.Property(Addon.ID)]</label>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 					</control>
@@ -127,11 +126,11 @@
 						<width>439</width>
 						<usecontrolcoords>true</usecontrolcoords>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[12014][/COLOR][CR]$VAR[AddonLastUpdated]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[12014][/COLOR][CR]$VAR[AddonLastUpdated]</label>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 						<control type="button">
-							<label>[COLOR themecolor]$LOCALIZE[12012]:[/COLOR][CR]$VAR[AddonLastUsed]</label>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[12012]:[/COLOR][CR]$VAR[AddonLastUsed]</label>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 					</control>
@@ -144,8 +143,8 @@
 							<height>640</height>
 							<font>font15_textbox</font>
 							<align>justify</align>
-							<textcolor>grey</textcolor>
-							<label>$INFO[ListItem.AddonDescription,[COLOR themecolor]$LOCALIZE[21821]: [/COLOR][CR],[CR]]$INFO[ListItem.AddonNews,[COLOR themecolor]$LOCALIZE[24054]: [/COLOR][CR],[CR]]$INFO[ListItem.AddonDisclaimer,[COLOR themecolor]$LOCALIZE[24052]: [/COLOR][CR],]</label>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<label>$INFO[ListItem.AddonDescription,$LOCALIZE[21821]:[COLOR grey][CR],[CR][/COLOR]]$INFO[ListItem.AddonNews,$LOCALIZE[24054]:[COLOR grey][CR],[CR][/COLOR]]$INFO[ListItem.AddonDisclaimer,$LOCALIZE[24052]:[COLOR grey][CR],[CR][/COLOR]]</label>
 							<pagecontrol>60</pagecontrol>
 						</control>
 					</control>
@@ -158,7 +157,7 @@
 						<onright>9000</onright>
 						<showonepage>false</showonepage>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					</control>
 				</control>
 				<control type="group">
@@ -192,7 +191,7 @@
 									<height>371</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+									<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 									<bordersize>4</bordersize>
 								</control>
 							</control>
@@ -204,7 +203,7 @@
 						<top>36</top>
 						<width>60</width>
 						<height>36</height>
-						<texture colordiffuse="themecolor">settings/arrow_up.png</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">settings/arrow_up.png</texture>
 						<visible>Container(50).HasPrevious</visible>
 					</control>
 					<control type="image">
@@ -213,7 +212,7 @@
 						<top>830</top>
 						<width>60</width>
 						<height>36</height>
-						<texture colordiffuse="themecolor">settings/arrow_down.png</texture>
+						<texture colordiffuse="$VAR[SkinThemeColour]">settings/arrow_down.png</texture>
 						<visible>Container(50).HasNext</visible>
 					</control>
 				</control>
@@ -236,7 +235,7 @@
 					<width>1180</width>
 					<height>115</height>
 					<aligny>top</aligny>
-					<textcolor>themecolor</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<font>font15_title</font>
 					<label>24096</label>
 				</control>

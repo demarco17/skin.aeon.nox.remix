@@ -58,7 +58,7 @@
 						<width>1168</width>
 						<height>30</height>
 						<font>font15</font>
-						<textcolor>themecolor</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[Window.Property(tagline)]</label>
 						<visible>!String.IsEmpty(Window.Property(tagline))</visible>
@@ -243,7 +243,7 @@
 						<control type="image">
 							<width>594</width>
 							<height>60</height>
-							<texture border="4" colordiffuse="themecolor">dialogs/listselect_fo.png</texture>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(300)</visible>
 						</control>
 						<control type="label">
@@ -257,63 +257,52 @@
 					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(originaltitle),[COLOR themecolor]$LOCALIZE[20376]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(originaltitle),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20376]: [/COLOR],]</label>
 							<visible>!String.IsEmpty(Window.Property(originaltitle)) + !String.IsEqual(Window.Property(originaltitle),Window.Property(Title))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(director),[COLOR themecolor]$LOCALIZE[20339]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(director),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20339]: [/COLOR],]</label>
 							<visible>!String.IsEmpty(Window.Property(director))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(director),[COLOR themecolor]$LOCALIZE[20417]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(director),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20417]: [/COLOR],]</label>
 							<visible>!String.IsEmpty(Window.Property(writer))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(genre),[COLOR themecolor]$LOCALIZE[515]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(genre),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]: [/COLOR],]</label>
 							<visible>!String.IsEmpty(Window.Property(genre))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(releasedate),[COLOR themecolor]$LOCALIZE[20416]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(releasedate),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]: [/COLOR],]</label>
 							<label2>$LOCALIZE[20416]:</label2>
-							<onclick>noop</onclick>
 							<visible>!String.IsEmpty(Window.Property(releasedate))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(Budget),[COLOR themecolor]$ADDON[script.extendedinfo 32109]: [/COLOR]$,]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(Budget),[COLOR $VAR[SkinThemeColour]]$ADDON[script.extendedinfo 32109]: [/COLOR]$,]</label>
 							<visible>!String.IsEmpty(Window.Property(Budget))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(Revenue),[COLOR themecolor]$ADDON[script.extendedinfo 32108]: [/COLOR]$,]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(Revenue),[COLOR $VAR[SkinThemeColour]]$ADDON[script.extendedinfo 32108]: [/COLOR]$,]</label>
 							<visible>!String.IsEmpty(Window.Property(Revenue))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(country),[COLOR themecolor]$LOCALIZE[574]: [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(country),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[574]: [/COLOR],]</label>
 							<visible>!String.IsEmpty(Window.Property(country))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(AudioLanguage.1),[COLOR themecolor]$LOCALIZE[21447]: [/COLOR],]$INFO[Window.Property(AudioLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[Window.Property(AudioLanguage.3),[COLOR grey3] | [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(AudioLanguage.1),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21447]: [/COLOR],]$INFO[Window.Property(AudioLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[Window.Property(AudioLanguage.3),[COLOR grey3] | [/COLOR],]</label>
 							<visible>!String.IsEmpty(Window.Property(AudioLanguage.1))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(SubtitleLanguage.1),[COLOR themecolor]$LOCALIZE[21448]: [/COLOR],]$INFO[Window.Property(SubtitleLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[Window.Property(SubtitleLanguage.3),[COLOR grey3] | [/COLOR],]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(SubtitleLanguage.1),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21448]: [/COLOR],]$INFO[Window.Property(SubtitleLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[Window.Property(SubtitleLanguage.3),[COLOR grey3] | [/COLOR],]</label>
 							<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(PercentPlayed),[COLOR themecolor]$LOCALIZE[575]: [/COLOR],%]</label>
-							<onclick>noop</onclick>
+							<label>$INFO[Window.Property(PercentPlayed),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[575]: [/COLOR],%]</label>
 							<visible>!String.IsEmpty(Window.Property(DBID)) + Integer.IsGreater(Window.Property(PercentPlayed),0)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(omdb.Awards),[COLOR themecolor]$LOCALIZE[31015]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(omdb.Awards),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31015]: [/COLOR],]</label>
 							<onclick>SetProperty(TextViewerHeader,$LOCALIZE[31015],Home)</onclick>
 							<onclick>SetProperty(TextViewerContent,$ESCINFO[Window.Property(omdb.Awards)],Home)</onclick>
 							<onclick>ActivateWindow(1132)</onclick>
@@ -352,7 +341,7 @@
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<visible>ControlGroup(9000).HasFocus(5) + Control.IsVisible(800)</visible>
@@ -432,7 +421,7 @@
 							<left>235</left>
 							<width>60</width>
 							<height>55</height>
-							<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 							<visible>!String.IsEmpty(ListItem.dbid)</visible>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -460,7 +449,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
@@ -468,7 +457,7 @@
 								<top>5</top>
 								<width>60</width>
 								<height>55</height>
-								<texture colordiffuse="themecolor">overlays/OverlayWatched.png</texture>
+								<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
 								<visible>!String.IsEmpty(ListItem.dbid)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
@@ -539,7 +528,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
@@ -610,7 +599,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
@@ -666,7 +655,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 						</control>
@@ -705,7 +694,7 @@
 								<height>418</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture border="5" colordiffuse="themecolor">thumbs/thumbnail_focused.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 						</control>

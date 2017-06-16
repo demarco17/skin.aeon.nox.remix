@@ -76,7 +76,7 @@
 				<height>40</height>
 				<font>font13_title</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>themecolor</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$VAR[InfoPlayingTitleVar2]</label>
 			</control>
 			<control type="label">
@@ -88,7 +88,7 @@
 				<font>font13_title</font>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey2</textcolor>
-				<label>$INFO[VideoPlayer.NextTitle,[COLOR themecolor]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)]</label>
+				<label>$INFO[VideoPlayer.NextTitle,[COLOR $VAR[SkinThemeColour]]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)]</label>
 				<visible>VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="textbox">
@@ -179,7 +179,7 @@
 				<width>10</width>
 				<height>70</height>
 				<texturesliderbar border="1">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="themecolor">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
