@@ -78,7 +78,7 @@
 				<width>400</width>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey3</textcolor>
-				<label>$LOCALIZE[31070][CR]$INFO[Window(AddonBrowser).Property(Updated)]</label>
+				<label>[I]$LOCALIZE[31070][CR]$INFO[Window(AddonBrowser).Property(Updated)][/I]</label>
 			</control>
 		</control>
 	</controls>
