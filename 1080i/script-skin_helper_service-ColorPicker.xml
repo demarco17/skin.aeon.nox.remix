@@ -80,7 +80,8 @@
 					<width>280</width>
 					<align>center</align>
                     <label>571</label>
-					<onclick>AlarmClock(ResetColor,Skin.Reset(skincolour.name),00:00,silent)</onclick>
+					<onclick>Skin.Reset(skincolour.name)</onclick>
+					<onclick>SetFocus(3012)</onclick>
 					<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
                 </control>
             </control>

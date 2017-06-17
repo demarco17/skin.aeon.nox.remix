@@ -181,69 +181,72 @@
 			</control>
 		</itemlayout>
 		<focusedlayout height="420" width="439">
-			<control type="image">
-				<width>439</width>
-				<height>418</height>
-				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-				<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
-				<bordersize>5</bordersize>
-				<visible>ControlGroup(9001).HasFocus()</visible>
-			</control>
-			<control type="image">
-				<description>Poster</description>
-				<top>10</top>
-				<width>432</width>
-				<height>180</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-				<bordersize>1</bordersize>
-				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-			</control>
-			<control type="image">
-				<description>Banner</description>
-				<left>10</left>
-				<top>10</top>
-				<width>419</width>
-				<height>180</height>
-				<aspectratio aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-				<bordersize>1</bordersize>
-				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
-			</control>
-			<control type="image">
-				<description>Logo</description>
-				<top>10</top>
-				<width>439</width>
-				<height>160</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-			</control>			
-			<control type="textbox">
-				<description>NextEpisode</description>
-				<left>5</left>
-				<top>195</top>
-				<width>429</width>
-				<height>120</height>
-				<label>$LOCALIZE[209]:[CR][COLOR white]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR]</label>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<font>font14</font>
-				<align>center</align>
-				<autoscroll time="3500" delay="3000" repeat="3000">True</autoscroll>
-			</control>
-			<control type="textbox">
-				<description>AirTime - Studio</description>
-				<left>5</left>
-				<top>315</top>
-				<width>429</width>
-				<height>80</height>
-				<label>$LOCALIZE[31012]:[CR][COLOR white]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<font>font14</font>
-				<align>center</align>
-				<autoscroll>false</autoscroll>
+			<control type="group">
+				<include>IconZoomAnimation</include>
+				<control type="image">
+					<width>439</width>
+					<height>418</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+					<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>ControlGroup(9001).HasFocus()</visible>
+				</control>
+				<control type="image">
+					<description>Poster</description>
+					<top>10</top>
+					<width>432</width>
+					<height>180</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+				</control>
+				<control type="image">
+					<description>Banner</description>
+					<left>10</left>
+					<top>10</top>
+					<width>419</width>
+					<height>180</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+				</control>
+				<control type="image">
+					<description>Logo</description>
+					<top>10</top>
+					<width>439</width>
+					<height>160</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
+					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+				</control>			
+				<control type="textbox">
+					<description>NextEpisode</description>
+					<left>5</left>
+					<top>195</top>
+					<width>429</width>
+					<height>120</height>
+					<label>$LOCALIZE[209]:[CR][COLOR white]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<font>font14</font>
+					<align>center</align>
+					<autoscroll time="3500" delay="3000" repeat="3000">True</autoscroll>
+				</control>
+				<control type="textbox">
+					<description>AirTime - Studio</description>
+					<left>5</left>
+					<top>315</top>
+					<width>429</width>
+					<height>80</height>
+					<label>$LOCALIZE[31012]:[CR][COLOR white]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<font>font14</font>
+					<align>center</align>
+					<autoscroll>false</autoscroll>
+				</control>
 			</control>
 		</focusedlayout>
 	</include>
