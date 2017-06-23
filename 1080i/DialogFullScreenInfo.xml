@@ -87,8 +87,8 @@
 				<align>right</align>
 				<font>font13_title</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>grey2</textcolor>
-				<label>$INFO[VideoPlayer.NextTitle,[COLOR $VAR[SkinThemeColour]]$LOCALIZE[19031]: [/COLOR]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: [COLOR grey2]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)][/COLOR]</label>
 				<visible>VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="textbox">

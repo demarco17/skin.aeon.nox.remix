@@ -485,7 +485,7 @@
 				<control type="button">
 					<top>461</top>
 					<width>668</width>
-					<label>$INFO[ListItem.Artist,,[CR]]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label),[COLOR grey3] | [/COLOR]]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Artist,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label),[COLOR grey3] | [/COLOR]]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
