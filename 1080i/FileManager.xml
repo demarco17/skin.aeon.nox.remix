@@ -201,6 +201,13 @@
 					</focusedlayout>
 				</control>
 			</control>
+			<control type="image">
+				<left>926</left>
+				<top>506</top>
+				<width>68</width>
+				<height>68</height>
+				<texture colordiffuse="lightgrey" border="4">flags/left-right.png</texture>
+			</control>
 		</control>
 		<include>Topbar</include>
 	</controls>

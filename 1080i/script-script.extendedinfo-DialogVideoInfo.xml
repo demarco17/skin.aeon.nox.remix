@@ -230,7 +230,7 @@
 							<width>545</width>
 							<height>55</height>
 							<font>font14</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
@@ -251,58 +251,57 @@
 							<width>545</width>
 							<height>55</height>
 							<font>font14</font>
-							<textcolor>white</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</focusedlayout>
 					<content>
 						<item>
-							<label>$INFO[Window.Property(originaltitle),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20376]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(originaltitle),$LOCALIZE[20376]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(originaltitle)) + !String.IsEqual(Window.Property(originaltitle),Window.Property(Title))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(director),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20339]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(director),$LOCALIZE[20339]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(director))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(director),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20417]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(director),$LOCALIZE[20417]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(writer))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(genre),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(genre),$LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(genre))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(releasedate),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]: [/COLOR],]</label>
-							<label2>$LOCALIZE[20416]:</label2>
+							<label>$INFO[Window.Property(releasedate),$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(releasedate))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(Budget),[COLOR $VAR[SkinThemeColour]]$ADDON[script.extendedinfo 32109]: [/COLOR]$,]</label>
+							<label>$INFO[Window.Property(Budget),$ADDON[script.extendedinfo 32109]: [COLOR grey]$,[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(Budget))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(Revenue),[COLOR $VAR[SkinThemeColour]]$ADDON[script.extendedinfo 32108]: [/COLOR]$,]</label>
+							<label>$INFO[Window.Property(Revenue),$ADDON[script.extendedinfo 32108]: [COLOR grey]$,[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(Revenue))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(country),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[574]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(country),$LOCALIZE[574]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(country))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(AudioLanguage.1),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21447]: [/COLOR],]$INFO[Window.Property(AudioLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[Window.Property(AudioLanguage.3),[COLOR grey3] | [/COLOR],]</label>
+							<label>$INFO[Window.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(AudioLanguage.1))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(SubtitleLanguage.1),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21448]: [/COLOR],]$INFO[Window.Property(SubtitleLanguage.2),[COLOR grey3] | [/COLOR],]$INFO[Window.Property(SubtitleLanguage.3),[COLOR grey3] | [/COLOR],]</label>
+							<label>$INFO[Window.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(PercentPlayed),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[575]: [/COLOR],%]</label>
+							<label>$INFO[Window.Property(PercentPlayed),$LOCALIZE[575]: [COLOR grey],%[/COLOR]]</label>
 							<visible>!String.IsEmpty(Window.Property(DBID)) + Integer.IsGreater(Window.Property(PercentPlayed),0)</visible>
 						</item>
 						<item>
-							<label>$INFO[Window.Property(omdb.Awards),[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31015]: [/COLOR],]</label>
+							<label>$INFO[Window.Property(omdb.Awards),$LOCALIZE[31015]: [COLOR grey],[/COLOR]]</label>
 							<onclick>SetProperty(TextViewerHeader,$LOCALIZE[31015],Home)</onclick>
 							<onclick>SetProperty(TextViewerContent,$ESCINFO[Window.Property(omdb.Awards)],Home)</onclick>
 							<onclick>ActivateWindow(1132)</onclick>

@@ -101,7 +101,7 @@
 				<control type="button">
 					<top>470</top>
 					<width>465</width>
-					<label>$INFO[ListItem.Genre][CR]$INFO[ListItem.Year]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Votes, (, $ADDON[script.extendedinfo 32082])]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Genre][/COLOR][CR]$INFO[ListItem.Year]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Votes, (, $ADDON[script.extendedinfo 32082])]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 				</control>
 				<control type="textbox">

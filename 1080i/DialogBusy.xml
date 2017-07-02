@@ -38,7 +38,7 @@
 				<top>34</top>
 				<width>96</width>
 				<height>96</height>
-				<texture>dialogs/spinner_outer.png</texture>
+				<texture colordiffuse="$VAR[SkinThemeColour]">dialogs/spinner_outer.png</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="rotate" start="360" end="0" center="auto" time="2000" loop="true" condition="true">conditional</animation>
 			</control>

@@ -81,8 +81,8 @@
 					<font>font48_title</font>
 					<textoffsetx>15</textoffsetx>
 					<align>right</align>
-					<textcolor>grey</textcolor>
-					<label>$INFO[MusicPlayer.TrackNumber,[COLOR $VAR[SkinThemeColour]],. [/COLOR]]$INFO[Player.Title]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[Player.Title,[COLOR grey],[/COLOR]]</label>
 				</control>
 				<control type="image">
 					<left>1140</left>
@@ -109,7 +109,7 @@
 					<textoffsetx>15</textoffsetx>
 					<align>right</align>
 					<textcolor>grey</textcolor>
-					<label>$INFO[musicplayer.discnumber,[B]$LOCALIZE[427]:[/B] ]$INFO[MusicPlayer.Year, [COLOR $VAR[SkinThemeColour]][,][/COLOR]]</label>
+					<label>$INFO[musicplayer.discnumber,[B]$LOCALIZE[427]: ,[/B]][COLOR $VAR[SkinThemeColour]]$INFO[MusicPlayer.Year, [,]][/COLOR]</label>
 				</control>
 				<control type="grouplist">
 					<left>1140</left>
@@ -150,7 +150,7 @@
 						<height>50</height>
 						<font>font16</font>
 						<textcolor>grey</textcolor>
-						<label>$INFO[musicplayer.Bitrate,[COLOR $VAR[SkinThemeColour]],[/COLOR] ]kbps</label>
+						<label>$INFO[musicplayer.Bitrate,, kbps]</label>
 						<visible>!String.IsEmpty(musicplayer.Bitrate)</visible>
 					</control>
 				</control>

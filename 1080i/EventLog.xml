@@ -151,7 +151,7 @@
 					<font>font13_title</font>
 					<include>ButtonCommonValues</include>
 					<label>31026</label>
-					<enable>no</enable>
+					<enable>false</enable>
 					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="21">
