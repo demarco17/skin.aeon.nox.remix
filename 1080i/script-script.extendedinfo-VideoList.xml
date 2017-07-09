@@ -231,10 +231,7 @@
 				<height>960</height>
 				<orientation>vertical</orientation>
 				<scroll>true</scroll>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
 				<onright>500</onright>
-				<onleft>noop</onleft>
 				<control type="button" id="5000">
 					<description>View Options Heading</description>
 					<textwidth>352</textwidth>

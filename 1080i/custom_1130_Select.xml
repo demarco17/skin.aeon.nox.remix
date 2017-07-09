@@ -27,8 +27,6 @@
 				<top>32</top>
 				<width>462</width>
 				<height>120</height>
-				<onup>90100</onup>
-				<ondown>90100</ondown>
 				<onleft>Close</onleft>
 				<onright>Close</onright>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>

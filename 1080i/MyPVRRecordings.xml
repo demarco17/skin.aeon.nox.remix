@@ -30,8 +30,6 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>72</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>72</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -154,7 +152,6 @@
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(72) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
 				<left>1196</left>

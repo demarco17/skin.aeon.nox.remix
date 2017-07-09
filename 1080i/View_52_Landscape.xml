@@ -146,7 +146,7 @@
 				</control>
 			</control>
 		</control>
-		<control type="scrollbar" id="61">
+		<control type="scrollbar" id="5261">
 			<top>1068</top>
 			<width>1920</width>
 			<height>12</height>
@@ -156,7 +156,6 @@
 			<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
-			<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			<visible>Control.IsVisible(52)</visible>
 		</control>
 	</include>
@@ -173,12 +172,10 @@
 	<include name="contents52list">
 		<width>1920</width>
 		<height>300</height>
-		<onleft>52</onleft>
-		<onright>52</onright>
-		<onup condition="Listitem.IsCollection">64</onup>
-		<onup condition="!Listitem.IsCollection">62</onup>
-		<ondown>61</ondown>
-		<pagecontrol>61</pagecontrol>
+		<onup condition="Listitem.IsCollection">5263</onup>
+		<onup condition="!Listitem.IsCollection">5262</onup>
+		<ondown>5261</ondown>
+		<pagecontrol>5261</pagecontrol>
 		<focusposition>1</focusposition>
 		<orientation>horizontal</orientation>
 		<preloaditems>2</preloaditems>

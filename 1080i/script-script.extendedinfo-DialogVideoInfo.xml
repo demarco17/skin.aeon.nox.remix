@@ -335,8 +335,6 @@
 					<top>570</top>
 					<width>10</width>
 					<height>418</height>
-					<onup>9000</onup>
-					<ondown>noop</ondown>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>

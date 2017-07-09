@@ -45,8 +45,6 @@
 				<top>88</top>
 				<width>630</width>
 				<height>420</height>
-				<onup>450</onup>
-				<ondown>450</ondown>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
@@ -111,11 +109,10 @@
 				<width>12</width>
 				<onleft>450</onleft>
 				<onright>450</onright>
-				<showonepage>true</showonepage>
+				<showonepage>false</showonepage>
 				<texturesliderbackground></texturesliderbackground>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</controls>

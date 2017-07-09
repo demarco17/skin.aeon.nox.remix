@@ -15,8 +15,6 @@
 				<height>840</height>
 				<onleft>9001</onleft>
 				<onright>61</onright>
-				<onup>2</onup>
-				<ondown>2</ondown>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="90" width="356">
@@ -69,7 +67,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="image">
 				<description>separator image</description>
@@ -98,8 +95,6 @@
 				<height>720</height>
 				<onleft>2</onleft>
 				<onright>2</onright>
-				<onup>9001</onup>
-				<ondown>9001</ondown>
 				<control type="radiobutton" id="4">
 					<description>Enable Login screen</description>
 					<label>20096</label>

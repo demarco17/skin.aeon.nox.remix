@@ -17,8 +17,6 @@
 			<top>336</top>
 			<width>494</width>
 			<height>420</height>
-			<onup>90100</onup>
-			<ondown>90100</ondown>
 			<onleft>Dialog.Close(1119)</onleft>
 			<onright>Dialog.Close(1119)</onright>
 			<orientation>vertical</orientation>

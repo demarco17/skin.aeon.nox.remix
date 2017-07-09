@@ -108,8 +108,6 @@
 					<height>720</height>
 					<onleft>101</onleft>
 					<onright>101</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="90" width="356">
 						<control type="image">
@@ -1139,7 +1137,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</controls>

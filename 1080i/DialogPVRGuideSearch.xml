@@ -51,8 +51,6 @@
 				<width>1136</width>
 				<height>480</height>
 				<pagecontrol>6</pagecontrol>
-				<onup>9</onup>
-				<ondown>9</ondown>
 				<onleft>9001</onleft>
 				<onright>6</onright>
 				<control type="radiobutton" id="10">
@@ -147,7 +145,6 @@
 				<onright>9001</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(6) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<!-- right group -->
 			<control type="group">
@@ -159,10 +156,8 @@
 					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 				</control>
 				<control type="grouplist" id="9001">
-					<onup>9001</onup>
 					<onleft>6</onleft>
 					<onright>5</onright>
-					<ondown>9001</ondown>
 					<control type="button" id="28">
 						<description>Defaults Button</description>
 						<width>310</width>

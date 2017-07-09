@@ -23,11 +23,9 @@
 				<height>720</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright>60</onright>
-				<onup>500</onup>
-				<ondown>500</ondown>
+				<onright>50060</onright>
 				<viewtype label="31010">icon</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>50060</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]] | Container.Content(addons)</visible>
@@ -133,7 +131,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50060">
 				<left>1800</left>
 				<top>179</top>
 				<width>12</width>
@@ -143,7 +141,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -161,11 +158,9 @@
 				<height>720</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright>60</onright>
-				<onup>500</onup>
-				<ondown>500</ondown>
+				<onright>50060</onright>
 				<viewtype label="31010">icon</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>50060</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons)</visible>
 				<itemlayout height="240" width="240">
@@ -192,7 +187,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50060">
 				<left>1800</left>
 				<top>179</top>
 				<width>12</width>
@@ -202,7 +197,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -220,11 +214,9 @@
 				<height>720</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright>60</onright>
-				<onup>500</onup>
-				<ondown>500</ondown>
+				<onright>50060</onright>
 				<viewtype label="31010">icon</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>50060</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Container.Content(addons)</visible>
 				<itemlayout height="240" width="240">
@@ -251,7 +243,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50060">
 				<left>1800</left>
 				<top>179</top>
 				<width>12</width>
@@ -261,7 +253,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>

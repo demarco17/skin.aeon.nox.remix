@@ -16,8 +16,6 @@
 				<height>840</height>
 				<onleft>9010</onleft>
 				<onright>9010</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>!Window.IsActive(1121)</visible>
 				<include>VisibleFadeAnimation</include>
@@ -117,9 +115,7 @@
 					<width>1316</width>
 					<height>720</height>
 					<onleft>9000</onleft>
-					<onright>noop</onright>
-					<onup>9001</onup>
-					<ondown>9001</ondown>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(1)</visible>
 					<control type="button" id="100">
 						<width>1316</width>
@@ -179,9 +175,7 @@
 					<width>1316</width>
 					<height>720</height>
 					<onleft>9000</onleft>
-					<onright>noop</onright>
-					<onup>9002</onup>
-					<ondown>9002</ondown>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(2)</visible>
 					<control type="button" id="206">
                         <width>1316</width>
@@ -249,9 +243,7 @@
 					<width>1316</width>
 					<height>720</height>
 					<onleft>9000</onleft>
-					<onright>noop</onright>
-					<onup>9003</onup>
-					<ondown>9003</ondown>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(4)</visible>
 					<control type="radiobutton" id="305">
 						<width>1316</width>
@@ -341,9 +333,7 @@
 					<width>1316</width>
 					<height>720</height>
 					<onleft>9000</onleft>
-					<onright>noop</onright>
-					<onup>9003</onup>
-					<ondown>9003</ondown>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(3)</visible>
 					<control type="radiobutton" id="405">
 						<width>1316</width>
@@ -377,7 +367,7 @@
 					</control>
 				</control>
 			</control>
-			<control type="scrollbar" id="60">
+			<!--<control type="scrollbar" id="60">
 				<left>1839</left>
 				<top>32</top>
 				<width>12</width>
@@ -387,8 +377,7 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-			</control>
+			</control>-->
 		</control>
 	</controls>
 </window>

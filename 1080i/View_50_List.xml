@@ -21,12 +21,9 @@
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
-					<onright condition="Control.IsVisible(60)">60</onright>
-					<onright condition="!Control.IsVisible(60)">62</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>5060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
@@ -189,19 +186,6 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
-					<left>1141</left>
-					<top>180</top>
-					<width>12</width>
-					<height>840</height>
-					<onleft>50</onleft>
-					<onright>62</onright>
-					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-				</control>
 			</control>
 			<control type="group">
 				<left>1296</left>
@@ -313,7 +297,7 @@
 					<height>445</height>
 					<font>font14_textbox</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
-					<pagecontrol>62</pagecontrol>
+					<pagecontrol>5062</pagecontrol>
 				</control>
 				<control type="group">
 					<top>930</top>
@@ -340,8 +324,8 @@
 						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 				</control>
-				<control type="scrollbar" id="62">
-					<left>540</left>
+				<control type="scrollbar" id="5062">
+					<left>538</left>
 					<top>470</top>
 					<width>12</width>
 					<height>460</height>
@@ -352,6 +336,18 @@
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>
+			</control>
+			<control type="scrollbar" id="5060">
+				<left>1241</left>
+				<top>140</top>
+				<width>12</width>
+				<height>840</height>
+				<onleft>50</onleft>
+				<onright>5062</onright>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
 			</control>
 		</control>
 	</include>
@@ -376,11 +372,9 @@
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
-					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>5060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
@@ -503,7 +497,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="5060">
 					<left>1141</left>
 					<top>180</top>
 					<width>12</width>
@@ -514,7 +508,6 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
@@ -586,11 +579,9 @@
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
-					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>5060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
@@ -666,7 +657,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="5060">
 					<left>1141</left>
 					<top>180</top>
 					<width>12</width>
@@ -677,7 +668,6 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
@@ -725,11 +715,9 @@
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
-					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>5060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
@@ -805,7 +793,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="5060">
 					<left>1141</left>
 					<top>180</top>
 					<width>12</width>
@@ -816,7 +804,6 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
@@ -864,11 +851,9 @@
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
-					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>5060</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
@@ -944,7 +929,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="5060">
 					<left>1141</left>
 					<top>180</top>
 					<width>12</width>
@@ -955,7 +940,6 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">

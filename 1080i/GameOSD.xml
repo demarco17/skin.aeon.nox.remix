@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">11101</defaultcontrol>
+	<controls>
+		<control type="group">
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<visible>![Window.IsActive(GameVideoSettings) | Window.IsActive(GameControllers)]</visible> 
+			<control type="image">
+				<width>1920</width>
+				<height>106</height>
+				<texture border="4">dialogs/InfoBar.png</texture>
+			</control>
+			<control type="grouplist" id="11101">
+				<height>144</height>
+				<width>1920</width>
+				<align>center</align>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<orientation>horizontal</orientation>							
+				<control type="button" id="11102">
+					<description>Resume button</description> 
+					<texturefocus>osd/buttons/OSDPlay.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPlay.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>Play</onclick>
+				</control>
+				<control type="button" id="11103">
+					<description>Reset button</description> 
+					<texturefocus>osd/buttons/OSDRepeat.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRepeat.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Reset)</onclick>
+				</control>				
+				<control type="button" id="11104">
+					<description>Stop button</description> 
+					<texturefocus>osd/buttons/OSDStop.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDStop.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>Stop</onclick>
+				</control>
+				<control type="button" id="11107">
+					<description>Video settings button</description>
+					<texturefocus>osd/buttons/OSDVideo.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDVideo.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(gamevideosettings)</onclick>
+				</control>
+				<control type="button" id="11109">
+					<description>Input settings button</description>
+					<texturefocus>osd/buttons/OSDInput.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDInput.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(gamecontrollers)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

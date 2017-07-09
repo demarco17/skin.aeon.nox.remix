@@ -37,10 +37,6 @@
 				<texturesliderbar>settings/osd_slider_bg_2.png</texturesliderbar>
 				<textureslidernib border="1" colordiffuse="$VAR[SkinThemeColour]">settings/osd_slider_nibNF.png</textureslidernib>
 				<textureslidernibfocus border="1" colordiffuse="$VAR[SkinThemeColour]">settings/osd_slider_nib.png</textureslidernibfocus>
-				<onup>noop</onup>
-				<ondown>noop</ondown>
-				<onleft>11</onleft>
-				<onright>11</onright>
 			</control>
 		</control>
 	</controls>

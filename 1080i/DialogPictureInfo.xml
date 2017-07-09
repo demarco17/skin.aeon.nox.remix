@@ -30,8 +30,6 @@
 				<top>88</top>
 				<width>1058</width>
 				<height>600</height>
-				<onup>5</onup>
-				<ondown>5</ondown>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>

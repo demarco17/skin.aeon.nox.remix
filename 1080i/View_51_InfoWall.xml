@@ -20,11 +20,8 @@
 				<width>980</width>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright condition="Control.IsVisible(60)">60</onright>
-				<onright condition="!Control.IsVisible(60)">61</onright>
-				<onup>51</onup>
-				<ondown>51</ondown>
-				<pagecontrol>60</pagecontrol>
+				<onright>5160</onright>
+				<pagecontrol>5160</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<viewtype label="31090">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -148,19 +145,18 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="5160">
 				<left>1100</left>
 				<top>180</top>
 				<width>12</width>
 				<height>896</height>
-				<onright condition="!ListItem.IsCollection">61</onright>
-				<onright condition="ListItem.IsCollection">64</onright>
+				<onright condition="!ListItem.IsCollection">5161</onright>
+				<onright condition="ListItem.IsCollection">5164</onright>
 				<onleft>51</onleft>
 				<showonepage>false</showonepage>
 				<texturesliderbackground></texturesliderbackground>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>1113</left>
@@ -201,12 +197,12 @@
 					<width>655</width>
 					<height>247</height>
 					<font>font14_textbox</font>
-					<autoscroll time="3000" delay="4000" repeat="5000">String.IsEqual(Control.GetLabel(4430),1) + !Control.HasFocus(61)</autoscroll>
-					<pagecontrol>61</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000">String.IsEqual(Control.GetLabel(4430),1) + !Control.HasFocus(5161)</autoscroll>
+					<pagecontrol>5161</pagecontrol>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
-				<control type="scrollbar" id="61">
-					<left>1800</left>
+				<control type="scrollbar" id="5161">
+					<left>1798</left>
 					<top>725</top>
 					<width>12</width>
 					<height>250</height>
@@ -227,11 +223,12 @@
 						<param name="header_label">$LOCALIZE[342]:$INFO[Container(5004).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
 						<param name="height">400</param>
 						<param name="width">655</param>
-						<param name="autoscroll">String.IsEqual(Control.GetLabel(4430),1) + !Control.HasFocus(64)</param>
+						<param name="autoscroll">String.IsEqual(Control.GetLabel(4430),1) + !Control.HasFocus(5164)</param>
+						<param name="page_control">5164</param>
 					</include>
-					<control type="scrollbar" id="64">
-						<left>674</left>
-						<width>10</width>
+					<control type="scrollbar" id="5164">
+						<left>670</left>
+						<width>12</width>
 						<height>450</height>
 						<onleft>51</onleft>
 						<onright>51</onright>
@@ -386,10 +383,8 @@
 				<height>900</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright>60</onright>
-				<onup>51</onup>
-				<ondown>51</ondown>
-				<pagecontrol>60</pagecontrol>
+				<onright>5160</onright>
+				<pagecontrol>5160</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<viewtype label="31090">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -441,17 +436,16 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="5160">
 				<left>1069</left>
 				<top>179</top>
 				<width>12</width>
 				<height>900</height>
 				<onright>51</onright>
 				<onleft>51</onleft>
-				<showonepage>true</showonepage>
+				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>1080</left>

@@ -30,8 +30,6 @@
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
 					<onright>51</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="420">
@@ -110,6 +108,18 @@
 							<onclick>ActivateWindow(programs,androidapp://sources/apps/,return)</onclick>
 							<visible>System.Platform.Android</visible>
 						</item>
+						<!--<item>
+							<label>$LOCALIZE[24998]</label>
+							<property name="AppsTarget">addonbrowser</property>
+							<property name="AppsContent">addons://user/</property>
+							<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
+						</item>
+						<item>
+							<label>$LOCALIZE[33003]</label>
+							<property name="AppsTarget">addonbrowser</property>
+							<property name="AppsContent">addons://all/</property>
+							<onclick>ActivateWindow(addonbrowser,addons://all/,return)</onclick>
+						</item>-->
 					</content>
 				</control>
 			</control>
@@ -129,8 +139,6 @@
 					<height>840</height>
 					<onleft>50</onleft>
 					<onright>61</onright>
-					<onup>51</onup>
-					<ondown>51</ondown>
 					<animation effect="fade" start="100" end="0" time="400" condition="Container(51).IsUpdating">conditional</animation>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
@@ -149,7 +157,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -198,7 +206,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -233,8 +241,6 @@
 					<height>720</height>
 					<onleft>50</onleft>
 					<onright>61</onright>
-					<onup>51</onup>
-					<ondown>51</ondown>
 					<animation effect="fade" start="100" end="0" time="400" condition="Container(51).IsUpdating">conditional</animation>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
@@ -246,7 +252,7 @@
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
@@ -258,7 +264,7 @@
 								<width>240</width>
 								<height>240</height>
 								<aspectratio>keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
@@ -313,12 +319,11 @@
 					<width>12</width>
 					<height>840</height>
 					<onleft>51</onleft>
-					<onright>noop</onright>
+					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 		</control>
@@ -330,11 +335,8 @@
 				<top>100</top>
 				<width>400</width>
 				<height>1080</height>
-				<onleft>noop</onleft>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>50</onright>
-				<onup>9050</onup>
-				<ondown>9050</ondown>
 				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 				<control type="button" id="200">
 					<description>View options header</description>

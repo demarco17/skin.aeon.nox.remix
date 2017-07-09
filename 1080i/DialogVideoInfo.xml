@@ -612,8 +612,6 @@
 					<top>508</top>
 					<width>1188</width>
 					<height>60</height>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
 					<onup>300</onup>
 					<align>left</align>
 					<ondown condition="String.IsEqual(Control.GetLabel(5),$LOCALIZE[206]) + Control.IsVisible(400)">60</ondown>

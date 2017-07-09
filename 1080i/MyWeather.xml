@@ -12,9 +12,6 @@
 			<include>HiddenObject</include>
 			<onleft>SetProperty(MediaMenu,True,home)</onleft>
 			<onleft>9050</onleft>
-			<onright>noop</onright>
-			<onup>noop</onup>
-			<ondown>noop</ondown>
 		</control>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
@@ -297,7 +294,6 @@
 				<top>100</top>
 				<width>400</width>
 				<height>1080</height>
-				<onleft>noop</onleft>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>9000</onright>
 				<onup>9050</onup>

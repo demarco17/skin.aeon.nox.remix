@@ -6,6 +6,7 @@
 		<control type="group">
 			<visible>!Player.ShowInfo</visible>
 			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
+			<visible>!Player.HasGame</visible>
 			<include>OpenCloseAnimation</include>
 			<top>1010</top>
 			<control type="image">
@@ -137,6 +138,7 @@
 		<control type="image">
 			<visible>!Skin.HasSetting(Disable.PauseClearArt)</visible>
 			<visible>Player.Paused + !Window.IsVisible(SubtitleSearch)</visible>
+			<visible>!Player.HasGame</visible>
 			<left>1470</left>
 			<top>776</top>
 			<width>450</width>
@@ -155,7 +157,7 @@
 			<orientation>horizontal</orientation>
 			<visible>Player.Forwarding | Player.Rewinding | Player.Paused | Player.IsTempo</visible>
 			<usecontrolcoords>true</usecontrolcoords>
-			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning)) | Player.HasGame">Conditional</animation>
 			<include>VisibleFadeAnimation</include>
 			<control type="label">
 				<label>$VAR[VideoPlayerForwardRewindVar]</label>

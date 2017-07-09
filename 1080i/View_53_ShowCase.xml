@@ -321,7 +321,7 @@
 			<include condition="!String.IsEqual(Control.GetLabel(4450),1)">scmfixed</include>
 			<include condition="String.IsEqual(Control.GetLabel(4450),1)">scmwrap</include>
 		</control>
-		<control type="scrollbar" id="61">
+		<control type="scrollbar" id="5361">
 			<top>1068</top>
 			<width>1920</width>
 			<height>12</height>
@@ -331,7 +331,6 @@
 			<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
-			<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			<visible>Control.IsVisible(53)</visible>
 		</control>
 	</include>
@@ -350,14 +349,12 @@
 		<top>540</top>
 		<width>2058</width>
 		<height>525</height>
-		<onleft>53</onleft>
-		<onright>53</onright>
-		<onup condition="Listitem.IsCollection">64</onup>
-		<onup condition="!Listitem.IsCollection">62</onup>
-		<ondown>61</ondown>
+		<onup condition="!Listitem.IsCollection">5362</onup>
+		<onup condition="Listitem.IsCollection">5363</onup>			
+		<ondown>5361</ondown>
 		<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 		<viewtype label="31077">bigwrap</viewtype>
-		<pagecontrol>61</pagecontrol>
+		<pagecontrol>5361</pagecontrol>
 		<scrolltime tween="quadratic">300</scrolltime>
 		<focusposition>3</focusposition>
 		<orientation>horizontal</orientation>

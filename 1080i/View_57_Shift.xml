@@ -1,138 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="ShiftPosterThumbs">
-		<control type="image">
-			<left>-2</left>
-			<top>121</top>
-			<width>288</width>
-			<height>412</height>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture background="true" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
-			<bordersize>20</bordersize>
-		</control>
-		<control type="image">
-			<left>218</left>
-			<top>140</top>
-			<width>50</width>
-			<height>45</height>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
-		<control type="image">
-			<left>18</left>
-			<top>515</top>
-			<width>248</width>
-			<height>372</height>
-			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
-		</control>
-	</include>
-	<include name="ShiftPosterCase">
-		<control type="image">
-			<left>23</left>
-			<top>143</top>
-			<width>249</width>
-			<height>364</height>
-			<texture background="true" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
-		<control type="image">
-			<left>-28</left>
-			<top>106</top>
-			<width>318</width>
-			<height>424</height>
-			<texture>thumbs/boxes/$VAR[ShiftCase_Var]</texture>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
-		<control type="image">
-			<left>223</left>
-			<top>142</top>
-			<width>50</width>
-			<height>45</height>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
-		<control type="image">
-			<left>23</left>
-			<top>525</top>
-			<width>249</width>
-			<height>364</height>
-			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
-		</control>
-		<control type="image">
-			<left>-28</left>
-			<top>502</top>
-			<width>318</width>
-			<height>424</height>
-			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/$VAR[ShiftCase_Var]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
-		</control>
-	</include>
-	<include name="ShiftSquareThumbs">
-		<control type="image">
-			<left>-20</left>
-			<top>250</top>
-			<width>360</width>
-			<height>360</height>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-			<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
-			<bordersize>20</bordersize>
-		</control>
-		<control type="image">
-			<top>590</top>
-			<width>320</width>
-			<height>320</height>
-			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
-		</control>
-	</include>
-	<include name="ShiftSquareCase">
-		<control type="image">
-			<left>32</left>
-			<top>285</top>
-			<width>300</width>
-			<height>300</height>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-		</control>
-		<control type="image">
-			<left>32</left>
-			<top>597</top>
-			<width>300</width>
-			<height>300</height>
-			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
-		</control>
-		<control type="image">
-			<top>280</top>
-			<width>352</width>
-			<height>322</height>           
-			<texture>thumbs/boxes/cdcase.png</texture>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
-		<control type="image">
-			<top>580</top>
-			<width>352</width>
-			<height>322</height>           
-			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/cdcase.png</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
-		</control>
-	</include>
 	<include name="PosterShift">
 		<control type="group">
 			<include>ViewFadeAnimation</include>
@@ -144,12 +11,10 @@
 				<width>2110</width>
 				<onup>SetProperty(MediaMenu,True,home)</onup>
 				<onup>9050</onup>
-				<onleft>57</onleft>
-				<onright>57</onright>
-				<ondown>61</ondown>
+				<ondown>5761</ondown>
 				<orientation>horizontal</orientation>
 				<viewtype label="31079">BigWrap</viewtype>
-				<pagecontrol>61</pagecontrol>
+				<pagecontrol>5761</pagecontrol>
 				<scrolltime tween="quadratic">400</scrolltime>
 				<focusposition>1</focusposition>
 				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
@@ -174,7 +39,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="61">
+			<control type="scrollbar" id="5761">
 				<top>1068</top>
 				<width>1920</width>
 				<height>12</height>
@@ -184,7 +49,6 @@
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -199,12 +63,10 @@
 				<height>750</height>
 				<onup>SetProperty(MediaMenu,True,home)</onup>
 				<onup>9050</onup>
-				<onleft>57</onleft>
-				<onright>57</onright>
-				<ondown>61</ondown>
+				<ondown>5761</ondown>
 				<orientation>horizontal</orientation>
 				<viewtype label="31079">BigWrap</viewtype>
-				<pagecontrol>61</pagecontrol>
+				<pagecontrol>5761</pagecontrol>
 				<scrolltime tween="quadratic">400</scrolltime>
 				<focusposition>1</focusposition>
 				<preloaditems>2</preloaditems>
@@ -230,7 +92,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="61">
+			<control type="scrollbar" id="5761">
 				<top>1068</top>
 				<width>1920</width>
 				<height>12</height>
@@ -240,7 +102,6 @@
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>

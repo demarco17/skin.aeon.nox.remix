@@ -3,9 +3,9 @@
 	<defaultcontrol always="true">602</defaultcontrol>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(addonsettings) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDAudioSettings)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<visible>![Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(addonsettings) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDAudioSettings)]</visible>
 			<control type="image">
 				<width>1920</width>
 				<height>106</height>
@@ -17,8 +17,6 @@
 				<align>center</align>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
-				<onleft>202</onleft>
-				<onright>202</onright>
 				<control type="button" id="700">
 					<texturefocus>osd/buttons/OSDPlaylist.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPlaylist.png</texturenofocus>

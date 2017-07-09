@@ -89,8 +89,6 @@
 				<height>540</height>
 				<onleft>121</onleft>
 				<onright>121</onright>
-				<onup>120</onup>
-				<ondown>120</ondown>
 				<pagecontrol>121</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout width="1260" height="90">

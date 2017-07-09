@@ -30,7 +30,7 @@
 				<haspath>true</haspath>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>855</left>
+				<left>854</left>
 				<top>62</top>
 				<width>12</width>
 				<height>840</height>
@@ -49,8 +49,6 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>60</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="60" width="821">
@@ -132,14 +130,14 @@
 				<haspath>true</haspath>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>855</left>
+				<left>854</left>
 				<top>62</top>
 				<width>12</width>
 				<height>840</height>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<onleft>100</onleft>
-				<onright>noop</onright>
+				<onright>50</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
@@ -150,8 +148,6 @@
 				<height>840</height>
 				<onleft>60</onleft>
 				<onright>61</onright>
-				<onup>100</onup>
-				<ondown>100</ondown>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="60" width="821">
@@ -219,8 +215,6 @@
 				<height>1080</height>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>50</onright>
-				<onup>9050</onup>
-				<ondown>9050</ondown>
 				<control type="button" id="200">
 					<description>View Options</description>
 					<textwidth>352</textwidth>

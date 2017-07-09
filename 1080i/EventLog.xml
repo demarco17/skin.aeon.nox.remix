@@ -31,8 +31,6 @@
 						<onleft>SetProperty(MediaMenu,True,home)</onleft>
 						<onleft>9050</onleft>
 						<onright>60</onright>
-						<onup>50</onup>
-						<ondown>50</ondown>
 						<viewtype label="535">list</viewtype>
 						<pagecontrol>60</pagecontrol>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>

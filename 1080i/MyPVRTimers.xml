@@ -27,8 +27,6 @@
 				<top>180</top>
 				<width>1140</width>
 				<height>840</height>
-				<onup>50</onup>
-				<ondown>50</ondown>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>73</onright>
@@ -157,9 +155,8 @@
 				<onright condition="Control.IsVisible(74)">74</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<showonepage>true</showonepage>
+				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(73) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
 				<left>1196</left>

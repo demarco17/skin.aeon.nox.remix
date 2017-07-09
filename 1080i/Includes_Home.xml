@@ -7,8 +7,6 @@
 			<top>62</top>
 			<width>2550</width>
 			<height>100</height>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
 			<onup>9020</onup>           
 			<ondown>9001</ondown>
 			<scrolltime tween="quadratic" easing="out">400</scrolltime>

@@ -68,8 +68,7 @@
 					<label>24034</label>
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick>SetFocus(50)</onclick>
-				</control>
-				
+				</control>				
 			</control>
 			<control type="label">
 				<description>Last checked info</description>

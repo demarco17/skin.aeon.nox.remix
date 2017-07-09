@@ -35,8 +35,6 @@
 				<onright condition="Container(9000).HasFocus(14)">213</onright>
 				<onright condition="Container(9000).HasFocus(15)">214</onright>
 				<onright condition="Container(9000).HasFocus(16)">215</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="90" width="356">
@@ -185,7 +183,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="image">
 				<description>LOGO</description>
@@ -223,7 +220,6 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 				<control type="panel" id="200">
 					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(1)] | Control.HasFocus(200) | [Container(9000).HasFocus(1) + Control.HasFocus(60)]</visible>
@@ -352,7 +348,6 @@
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onright>ClearProperty(MediaMenu,Home)</onright>
 					<onright>9000</onright>
-					<onleft>noop</onleft>
 					<include>ButtonCommonValues</include>
 					<label>5</label>
 				</control>

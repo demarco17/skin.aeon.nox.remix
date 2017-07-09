@@ -64,10 +64,10 @@
 					<width>615</width>
 					<height>215</height>
 					<font>font14_textbox2</font>
-					<pagecontrol>62</pagecontrol>
+					<pagecontrol>50162</pagecontrol>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
-				<control type="scrollbar" id="62">
+				<control type="scrollbar" id="50162">
 					<left>640</left>
 					<top>89</top>
 					<width>10</width>
@@ -90,8 +90,9 @@
 						<param name="header_label">$LOCALIZE[342]:$INFO[Container(5001).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
 						<param name="height">355</param>
 						<param name="width">620</param>
+						<param name="page_control">50164</param>
 					</include>
-					<control type="scrollbar" id="64">
+					<control type="scrollbar" id="50164">
 						<left>625</left>
 						<width>10</width>
 						<height>427</height>
@@ -307,12 +308,8 @@
 				<height>410</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright condition="Control.IsVisible(60)">60</onright>
-				<onright condition="!Control.IsVisible(60) + !Container.Content(episodes)">62</onright>
-				<onright condition="!Control.IsVisible(60) + Container.Content(episodes)">73</onright>
-				<onup>501</onup>
-				<ondown>501</ondown>
-				<pagecontrol>60</pagecontrol>
+				<onright>50160</onright>
+				<pagecontrol>50160</pagecontrol>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -707,20 +704,19 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50160">
 				<left>1260</left>
 				<top>654</top>
 				<width>12</width>
 				<height>427</height>
 				<onleft>501</onleft>
-				<onright condition="ListItem.IsCollection">64</onright>
-				<onright condition="!ListItem.IsCollection + !Container.Content(episodes)">62</onright>
+				<onright condition="ListItem.IsCollection">50164</onright>
+				<onright condition="!ListItem.IsCollection + !Container.Content(episodes)">50162</onright>
 				<onright condition="Container.Content(episodes)">73</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -845,11 +841,11 @@
 						<width>615</width>
 						<height>215</height>
 						<font>font14_textbox2</font>
-						<pagecontrol>62</pagecontrol>
+						<pagecontrol>50162</pagecontrol>
 						<textcolor>grey</textcolor>
 						<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 					</control>
-					<control type="scrollbar" id="62">
+					<control type="scrollbar" id="50162">
 						<left>640</left>
 						<top>90</top>
 						<width>10</width>
@@ -871,11 +867,11 @@
 						<width>615</width>
 						<height>310</height>
 						<font>font14_textbox2</font>
-						<pagecontrol>62</pagecontrol>
+						<pagecontrol>50163</pagecontrol>
 						<textcolor>grey</textcolor>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
-					<control type="scrollbar" id="62">
+					<control type="scrollbar" id="50163">
 						<left>640</left>
 						<width>10</width>
 						<height>335</height>
@@ -924,11 +920,8 @@
 				<height>410</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright condition="Control.IsVisible(60)">60</onright>
-				<onright condition="!Control.IsVisible(60)">62</onright>
-				<onup>501</onup>
-				<ondown>501</ondown>
-				<pagecontrol>60</pagecontrol>
+				<onright>50160</onright>
+				<pagecontrol>50160</pagecontrol>
 				<viewtype label="31081">list</viewtype>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -1110,18 +1103,18 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50160">
 				<left>1260</left>
 				<top>654</top>
 				<width>12</width>
 				<height>427</height>
 				<onleft>501</onleft>
-				<onright>62</onright>
+				<onright condition="Container.Content(albums)">50162</onright>
+				<onright condition="!Container.Content(albums)">50163</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 	</include>

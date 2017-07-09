@@ -19,11 +19,9 @@
 				<height>708</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
-				<onright>60</onright>
-				<onup>511</onup>
-				<ondown>511</ondown>
+				<onright>51160</onright>
 				<viewtype label="31010">icon</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>51160</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Container.Content(images)</visible>
@@ -51,7 +49,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="51160">
 				<left>1800</left>
 				<top>210</top>
 				<width>12</width>
@@ -61,7 +59,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
 				<include>ViewFadeAnimation</include>

@@ -174,34 +174,25 @@
 	</variable>
 	<variable name="52VideoInfoPanelVar">
 		<value condition="Container.Content(movies) + String.IsEmpty(Skin.String(52.Movies.InfoPanel))">Skin.SetString(52.Movies.InfoPanel,1)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(52.Movies.InfoPanel),1)">Skin.SetString(52.Movies.InfoPanel,2)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(52.Movies.InfoPanel),2)">Skin.Reset(52.Movies.InfoPanel)</value>
+		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(52.Movies.InfoPanel),1)">Skin.Reset(52.Movies.InfoPanel)</value>
 		<value condition="Container.Content(tvshows) + String.IsEmpty(Skin.String(52.TVShows.InfoPanel))">Skin.SetString(52.TVShows.InfoPanel,1)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(52.TVShows.InfoPanel),1)">Skin.SetString(52.TVShows.InfoPanel,2)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(52.TVShows.InfoPanel),2)">Skin.Reset(52.TVShows.InfoPanel)</value>
+		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(52.TVShows.InfoPanel),1)">Skin.Reset(52.TVShows.InfoPanel)</value>
 		<value condition="Container.Content(seasons) + String.IsEmpty(Skin.String(52.Seasons.InfoPanel))">Skin.SetString(52.Seasons.InfoPanel,1)</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(52.Seasons.InfoPanel),1)">Skin.SetString(52.Seasons.InfoPanel,2)</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(52.Seasons.InfoPanel),2)">Skin.Reset(52.Seasons.InfoPanel)</value>
+		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(52.Seasons.InfoPanel),1)">Skin.Reset(52.Seasons.InfoPanel)</value>		
 		<value condition="Container.Content(episodes) + String.IsEmpty(Skin.String(52.Episodes.InfoPanel))">Skin.SetString(52.Episodes.InfoPanel,1)</value>
-		<value condition="Container.Content(episodes) + String.IsEqual(Skin.String(52.Episodes.InfoPanel),1)">Skin.SetString(52.Episodes.InfoPanel,2)</value>
-		<value condition="Container.Content(episodes) + String.IsEqual(Skin.String(52.Episodes.InfoPanel),2)">Skin.Reset(52.Episodes.InfoPanel)</value>
+		<value condition="Container.Content(episodes) + String.IsEqual(Skin.String(52.Episodes.InfoPanel),1)">Skin.Reset(52.Episodes.InfoPanel)</value>
 		<value condition="Container.Content(sets) + String.IsEmpty(Skin.String(52.Sets.InfoPanel))">Skin.SetString(52.Sets.InfoPanel,1)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(52.Sets.InfoPanel),1)">Skin.SetString(52.Sets.InfoPanel,2)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(52.Sets.InfoPanel),2)">Skin.Reset(52.Sets.InfoPanel)</value>
+		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(52.Sets.InfoPanel),1)">Skin.Reset(52.Sets.InfoPanel)</value>
 	</variable>
 	<variable name="53VideoInfoPanelVar">
 		<value condition="Container.Content(movies) + String.IsEmpty(Skin.String(53.Movies.InfoPanel))">Skin.SetString(53.Movies.InfoPanel,1)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(53.Movies.InfoPanel),1)">Skin.SetString(53.Movies.InfoPanel,2)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(53.Movies.InfoPanel),2)">Skin.Reset(53.Movies.InfoPanel)</value>
+		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(53.Movies.InfoPanel),1)">Skin.Reset(53.Movies.InfoPanel)</value>		
 		<value condition="Container.Content(tvshows) + String.IsEmpty(Skin.String(53.TVShows.InfoPanel))">Skin.SetString(53.TVShows.InfoPanel,1)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(53.TVShows.InfoPanel),1)">Skin.SetString(53.TVShows.InfoPanel,2)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(53.TVShows.InfoPanel),2)">Skin.Reset(53.TVShows.InfoPanel)</value>
+		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(53.TVShows.InfoPanel),1)">Skin.Reset(53.TVShows.InfoPanel)</value>
 		<value condition="Container.Content(seasons) + String.IsEmpty(Skin.String(53.Seasons.InfoPanel))">Skin.SetString(53.Seasons.InfoPanel,1)</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(53.Seasons.InfoPanel),1)">Skin.SetString(53.Seasons.InfoPanel,2)</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(53.Seasons.InfoPanel),2)">Skin.Reset(53.Seasons.InfoPanel)</value>
+		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(53.Seasons.InfoPanel),1)">Skin.Reset(53.Seasons.InfoPanel)</value>
 		<value condition="Container.Content(sets) + String.IsEmpty(Skin.String(53.Sets.InfoPanel))">Skin.SetString(53.Sets.InfoPanel,1)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(53.Sets.InfoPanel),1)">Skin.SetString(53.Sets.InfoPanel,2)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(53.Sets.InfoPanel),2)">Skin.Reset(53.Sets.InfoPanel)</value>
+		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(53.Sets.InfoPanel),1)">Skin.Reset(53.Sets.InfoPanel)</value>
 	</variable>
 	<variable name="54MusicInfoPanelVar">
 		<value condition="Container.Content(albums) + String.IsEmpty(Skin.String(54.Albums.InfoPanel))">Skin.SetString(54.Albums.InfoPanel,1)</value>
@@ -210,8 +201,7 @@
 		<value condition="Container.Content(artists) + String.IsEqual(Skin.String(54.Artists.InfoPanel),1)">Skin.Reset(54.Artists.InfoPanel)</value>
 	</variable>
 	<variable name="InfoPanelLabelVar">
-		<value condition="String.IsEqual(Control.GetLabel(4420),1)">$LOCALIZE[20445]</value>
-		<value condition="String.IsEqual(Control.GetLabel(4420),2)">$LOCALIZE[31086]</value>
+		<value condition="String.IsEqual(Control.GetLabel(4420),1)">$LOCALIZE[16041]</value>
 		<value>$LOCALIZE[351]</value>
 	</variable>
 	<variable name="InfoPanelLabel1Var">

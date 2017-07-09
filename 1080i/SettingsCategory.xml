@@ -64,8 +64,6 @@
 				<pagecontrol>60</pagecontrol>
 				<onleft>3</onleft>
 				<onright>60</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
 			</control>
 			<control type="scrollbar" id="60">
 				<left>1839</left>
@@ -77,7 +75,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>
 		<control type="button" id="10">
@@ -147,11 +144,8 @@
 				<top>100</top>
 				<width>400</width>
 				<height>980</height>
-				<onleft>noop</onleft>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>SetFocus(3)</onright>
-				<onup>9050</onup>
-				<ondown>9050</ondown>
 				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 				<control type="button" id="203">
 					<description>Settings level</description>

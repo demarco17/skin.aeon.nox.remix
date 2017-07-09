@@ -61,11 +61,8 @@
 		<top>100</top>
 		<width>400</width>
 		<height>980</height>
-		<onleft>noop</onleft>
 		<onright>ClearProperty(MediaMenu,Home)</onright>
 		<onright>50</onright>
-		<onup>9050</onup>
-		<ondown>9050</ondown>
 		<onback>ClearProperty(MediaMenu,Home)</onback>
 		<onback>50</onback>
 		<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
@@ -113,12 +110,9 @@
 				<top>100</top>
 				<width>400</width>
 				<height>980</height>
-				<onleft>noop</onleft>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright condition="!Window.IsVisible(tvguide)">50</onright>
 				<onright condition="Window.IsVisible(tvguide)">10</onright>
-				<onup>9050</onup>
-				<ondown>9050</ondown>
 				<onback>ClearProperty(MediaMenu,Home)</onback>
 				<onback condition="!Window.IsVisible(tvguide)">50</onback>
 				<onback condition="Window.IsVisible(tvguide)">10</onback>
@@ -461,10 +455,7 @@
 			<top>570</top>
 			<width>1188</width>
 			<height>420</height>
-			<onleft>90019</onleft>
-			<onright>90019</onright>
 			<onup>9000</onup>
-			<ondown>noop</ondown>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
 			<orientation>horizontal</orientation>
 			<include>VisibleFadeAnimation</include>
@@ -750,10 +741,7 @@
 			<top>570</top>
 			<width>1188</width>
 			<height>420</height>
-			<onleft>50</onleft>
-			<onright>50</onright>
 			<onup>9000</onup>
-			<ondown>noop</ondown>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
 			<orientation>horizontal</orientation>
 			<include>VisibleFadeAnimation</include>
@@ -830,7 +818,7 @@
 		<param name="list_id">5000</param>
 		<param name="sortby">year</param>
 		<param name="sortorder">descending</param>
-		<param name="page_control">64</param>
+		<param name="page_control"></param>
 		<definition>
 			<control type="label">
 				<height>50</height>
@@ -890,5 +878,160 @@
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$INFO[ListItem.Path]</content>
 			</control>
 		</definition>
+	</include>
+	<include name="ShiftPosterThumbs">
+		<control type="image">
+			<left>-2</left>
+			<top>121</top>
+			<width>288</width>
+			<height>412</height>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<texture background="true" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
+			<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+			<bordersize>20</bordersize>
+		</control>
+		<control type="image">
+			<left>218</left>
+			<top>140</top>
+			<width>50</width>
+			<height>45</height>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<left>18</left>
+			<top>515</top>
+			<width>248</width>
+			<height>372</height>
+			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+		</control>
+	</include>
+	<include name="ShiftPosterCase">
+		<control type="image">
+			<left>23</left>
+			<top>143</top>
+			<width>249</width>
+			<height>364</height>
+			<texture background="true" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<left>-28</left>
+			<top>106</top>
+			<width>318</width>
+			<height>424</height>
+			<texture>thumbs/boxes/$VAR[ShiftCase_Var]</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<left>223</left>
+			<top>142</top>
+			<width>50</width>
+			<height>45</height>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<left>23</left>
+			<top>525</top>
+			<width>249</width>
+			<height>364</height>
+			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+		</control>
+		<control type="image">
+			<left>-28</left>
+			<top>502</top>
+			<width>318</width>
+			<height>424</height>
+			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/$VAR[ShiftCase_Var]</texture>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+		</control>
+	</include>
+	<include name="ShiftSquareThumbs">
+		<control type="image">
+			<left>-20</left>
+			<top>250</top>
+			<width>360</width>
+			<height>360</height>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+			<bordersize>20</bordersize>
+		</control>
+		<control type="image">
+			<top>590</top>
+			<width>320</width>
+			<height>320</height>
+			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+		</control>
+	</include>
+	<include name="ShiftSquareCase">
+		<control type="image">
+			<left>32</left>
+			<top>285</top>
+			<width>300</width>
+			<height>300</height>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
+		</control>
+		<control type="image">
+			<left>32</left>
+			<top>597</top>
+			<width>300</width>
+			<height>300</height>
+			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+		</control>
+		<control type="image">
+			<top>280</top>
+			<width>352</width>
+			<height>322</height>           
+			<texture>thumbs/boxes/cdcase.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<top>580</top>
+			<width>352</width>
+			<height>322</height>           
+			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/cdcase.png</texture>
+			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+		</control>
+	</include>
+	<include name="BigList_Landscape">
+		<control type="group">
+			<left>12</left>
+			<top>11</top>
+			<control type="image">
+				<width>346</width>
+				<height>195</height>
+				<texture background="true" fallback="DefaultVideo.png">$VAR[LandscapeVar]</texture>
+				<aspectratio>scale</aspectratio>
+				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+				<bordersize>1</bordersize>
+			</control>
+			<control type="image">
+				<top>90</top>
+				<width>346</width>
+				<height>98</height>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+				<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+			</control>
+		</control>
 	</include>
 </includes>

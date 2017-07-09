@@ -29,8 +29,6 @@
 				<height>602</height>
 				<onleft>20</onleft>
 				<onright>20</onright>
-				<onup>52</onup>
-				<ondown>52</ondown>
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>

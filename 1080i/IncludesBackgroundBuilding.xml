@@ -144,6 +144,7 @@
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="group">
+				<visible>Control.IsVisible(53)</visible>
 				<visible>String.IsEqual(Control.GetLabel(4420),1) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 				<include>VisibleFadeAnimation</include>
 				<control type="grouplist">
@@ -202,25 +203,23 @@
 						<width>970</width>
 						<height>170</height>
 						<font>font14_textbox2</font>
-						<pagecontrol>62</pagecontrol>
+						<pagecontrol>5362</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>
-					<control type="scrollbar" id="62">
+					<control type="scrollbar" id="5362">
 						<top>342</top>
 						<left>1130</left>
 						<width>10</width>
 						<height>180</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
 						<onup>9050</onup>
-						<onleft condition="Control.IsVisible(53)">53</onleft>
-						<onleft condition="Control.IsVisible(52)">52</onleft>
-						<onright condition="Control.IsVisible(53)">53</onright>
-						<onright condition="Control.IsVisible(52)">52</onright>
+						<onleft>53</onleft>						
+						<onright>53</onright>						
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
+						<showonepage>false</showonepage>
 					</control>
 				</control>
 				<control type="group">
@@ -232,21 +231,20 @@
 						<param name="header_label">$LOCALIZE[342]:$INFO[Container(5005).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
 						<param name="height">140</param>
 						<param name="width">970</param>
+						<param name="page_control">5363</param>
 					</include>
-					<control type="scrollbar" id="64">
+					<control type="scrollbar" id="5363">
 						<left>978</left>
 						<width>10</width>
 						<height>180</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
 						<onup>9050</onup>
-						<onleft condition="Control.IsVisible(53)">53</onleft>
-						<onleft condition="Control.IsVisible(52)">52</onleft>
-						<onright condition="Control.IsVisible(53)">53</onright>
-						<onright condition="Control.IsVisible(52)">52</onright>
+						<onleft>53</onleft>						
+						<onright>53</onright>						
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
+						<showonepage>false</showonepage>
 					</control>
 				</control>
 				<control type="image">
@@ -269,7 +267,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>String.IsEqual(Control.GetLabel(4420),2) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
+				<visible>Control.IsVisible(52)</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),1) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 				<include>VisibleFadeAnimation</include>
 				<control type="grouplist">
 					<left>138</left>
@@ -325,21 +324,19 @@
 						<width>855</width>
 						<height>344</height>
 						<font>font14_textbox2</font>
-						<pagecontrol>62</pagecontrol>
+						<pagecontrol>5262</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>
-					<control type="scrollbar" id="62">
+					<control type="scrollbar" id="5262">
 						<top>162</top>
 						<left>1525</left>
 						<width>10</width>
 						<height>360</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
 						<onup>9050</onup>
-						<onleft condition="Control.IsVisible(53)">53</onleft>
-						<onleft condition="Control.IsVisible(52)">52</onleft>
-						<onright condition="Control.IsVisible(53)">53</onright>
-						<onright condition="Control.IsVisible(52)">52</onright>
+						<onleft>52</onleft>
+						<onright>52</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
@@ -355,17 +352,16 @@
 						<param name="header_label">$LOCALIZE[342]:$INFO[Container(5006).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
 						<param name="height">310</param>
 						<param name="width">855</param>
+						<param name="page_control">5263</param>
 					</include>
-					<control type="scrollbar" id="64">
+					<control type="scrollbar" id="5263">
 						<left>870</left>
 						<width>10</width>
 						<height>360</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
 						<onup>9050</onup>
-						<onleft condition="Control.IsVisible(53)">53</onleft>
-						<onleft condition="Control.IsVisible(52)">52</onleft>
-						<onright condition="Control.IsVisible(53)">53</onright>
-						<onright condition="Control.IsVisible(52)">52</onright>
+						<onleft>52</onleft>
+						<onright>52</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>
@@ -468,16 +464,16 @@
 						</control>
 					</control>
 					<control type="textbox">
-						<label>$VAR[MusicPlotVar,[COLOR $VAR[SkinThemeColour]]$LOCALIZE[183]:[CR][/COLOR]]</label>
+						<label>$VAR[MusicPlotVar,$LOCALIZE[183]:[CR][COLOR grey],[/COLOR]]</label>
 						<top>342</top>
 						<left>152</left>
 						<width>970</width>
 						<height>180</height>
 						<font>font14_textbox2</font>
-						<pagecontrol>62</pagecontrol>
-						<textcolor>grey</textcolor>
+						<pagecontrol>5462</pagecontrol>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
-					<control type="scrollbar" id="62">
+					<control type="scrollbar" id="5462">
 						<top>342</top>
 						<left>1132</left>
 						<width>10</width>
@@ -495,16 +491,16 @@
 				<control type="group">
 					<visible>Container.Content(artists) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 					<control type="textbox">
-						<label>$VAR[MusicPlotVar,[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21887]:[CR][/COLOR]]</label>
+						<label>$VAR[MusicPlotVar,$LOCALIZE[21887]:[CR][COLOR grey],[/COLOR]]</label>
 						<top>162</top>
 						<left>152</left>
 						<width>940</width>
 						<height>350</height>
 						<font>font14_textbox2</font>
-						<pagecontrol>62</pagecontrol>
-						<textcolor>grey</textcolor>
+						<pagecontrol>5463</pagecontrol>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
-					<control type="scrollbar" id="62">
+					<control type="scrollbar" id="5463">
 						<top>162</top>
 						<left>1132</left>
 						<width>10</width>

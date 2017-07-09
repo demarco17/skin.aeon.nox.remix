@@ -15,18 +15,18 @@
 					<height>902</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="list" id="510">
+				<control type="fixedlist" id="510">
 					<viewtype label="31095">list</viewtype>
 					<top>151</top>
 					<width>1725</width>
 					<height>868</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
-					<onright>60</onright>
-					<onup>510</onup>
-					<ondown>510</ondown>
+					<onright>51060</onright>
 					<preloaditems>2</preloaditems>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>51060</pagecontrol>
+					<focusposition>0</focusposition>
+					<movement>3</movement>
 					<orientation>vertical</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
@@ -216,7 +216,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="51060">
 					<left>1725</left>
 					<top>151</top>
 					<width>12</width>
@@ -227,7 +227,6 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 		</control>
@@ -255,11 +254,11 @@
 					<height>868</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
-					<onright>60</onright>
+					<onright>51060</onright>
 					<onup>510</onup>
 					<ondown>510</ondown>
 					<preloaditems>2</preloaditems>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>51060</pagecontrol>
 					<orientation>vertical</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<visible>Container.Content(artists) | Container.Content(albums)</visible>
@@ -397,7 +396,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="51060">
 					<left>1725</left>
 					<top>151</top>
 					<width>12</width>
@@ -408,33 +407,8 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				</control>
 			</control>
 		</control>
 	</include>
-
-	<include name="BigList_Landscape">
-		<control type="group">
-			<left>12</left>
-			<top>11</top>
-			<control type="image">
-				<width>346</width>
-				<height>195</height>
-				<texture background="true" fallback="DefaultVideo.png">$VAR[LandscapeVar]</texture>
-				<aspectratio>scale</aspectratio>
-				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-				<bordersize>1</bordersize>
-			</control>
-			<control type="image">
-				<top>90</top>
-				<width>346</width>
-				<height>98</height>
-				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-				<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
-			</control>
-		</control>
-	</include>
-
 </includes>

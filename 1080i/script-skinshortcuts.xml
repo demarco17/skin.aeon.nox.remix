@@ -110,8 +110,6 @@
 			<control type="grouplist" id="300">
 				<left>676</left>
 				<top>88</top>
-				<onup>300</onup>
-				<ondown>300</ondown>
 				<onleft>260</onleft>
 				<onright>111</onright>
 				<control type="button" id="401">

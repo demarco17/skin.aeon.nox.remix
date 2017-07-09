@@ -81,9 +81,6 @@
 				<top>88</top>
 				<width>462</width>
 				<height>480</height>
-				<onup>90100</onup>
-				<ondown>90100</ondown>
-				<onleft>noop</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
