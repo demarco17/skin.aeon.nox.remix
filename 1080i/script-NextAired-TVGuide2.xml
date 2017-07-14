@@ -72,7 +72,7 @@
 						<height>88</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<animation effect="fade" start="100" end="40" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>	
-					</control>					
+					</control>
 					<control type="label">
 						<width>356</width>
 						<height>90</height>

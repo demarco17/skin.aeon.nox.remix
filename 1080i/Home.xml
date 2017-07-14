@@ -12,9 +12,11 @@
 	<onload condition="String.IsEmpty(Skin.String(Apps.Fallback))">Skin.SetString(Apps.Fallback,backgrounds/programs.png)</onload>
 	<controls>
 		<include>CommonBackground</include>
+		<include condition="system.getbool(lookandfeel.enablerssfeeds)">RSSFeedWidget</include>
 		<include condition="!Skin.HasSetting(Disable.Videoinfo)">NowPlayingVideoWidget</include>
 		<include condition="!Skin.HasSetting(Disable.Musicinfo)">NowPlayingMusicWidget</include>
 		<include condition="!Skin.HasSetting(Disable.Recordinginfo)">NowRecordingVideoWidget</include>
+		<include condition="Skin.HasSetting(Enable.HomeWidget)">HomeVideoWidget</include>
 		<control type="group">
 			<top>762</top>
 			<include>OpenCloseAnimation</include>
@@ -40,7 +42,7 @@
 					<height>40</height>
 					<align>right</align>
 					<orientation>horizontal</orientation>
-					<onup>9000</onup>
+					<onup>9060</onup>
 					<ondown>9000</ondown>
 					<include>HomeShutdownButton</include>
 					<include>HomeFavButton</include>
@@ -72,7 +74,6 @@
 				</control>
 			</control>
 		</control>
-		<include condition="system.getbool(lookandfeel.enablerssfeeds)">RSSFeedWidget</include>
 		<control type="group">
 			<top>790</top>
 			<include>OpenCloseAnimation</include>

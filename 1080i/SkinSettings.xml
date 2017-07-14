@@ -167,6 +167,17 @@
 						<selected>Skin.HasSetting(Enable.FanartTitle)</selected>
 						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="106">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[20386] ($LOCALIZE[16101])</label>
+						<onclick>Skin.ToggleSetting(Enable.HomeWidget)</onclick>
+						<selected>Skin.HasSetting(Enable.HomeWidget)</selected>
+						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+						<visible>Library.HasContent(Movies)</visible>
+					</control>
 				</control>
 				<control type="grouplist" id="9002">
 					<description>control area</description>

@@ -144,7 +144,9 @@ msgctxt "#31040"
 msgid "Wind Chill"
 msgstr ""
 
-#empty string with id 31041
+msgctxt "#31041"
+msgid "Test Widget - Recently added movies (unwatched).[CR]Hows that look mate.. :)"
+msgstr ""
 
 msgctxt "#31042"
 msgid "Show \"Now Playing\" information"

@@ -891,10 +891,10 @@
 			<bordersize>20</bordersize>
 		</control>
 		<control type="image">
-			<left>218</left>
-			<top>140</top>
-			<width>50</width>
-			<height>45</height>
+			<left>206</left>
+			<top>134</top>
+			<width>64</width>
+			<height>64</height>
 			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
@@ -927,10 +927,10 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
 		<control type="image">
-			<left>223</left>
-			<top>142</top>
-			<width>50</width>
-			<height>45</height>
+			<left>210</left>
+			<top>138</top>
+			<width>64</width>
+			<height>64</height>
 			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
@@ -998,14 +998,14 @@
 		<control type="image">
 			<top>280</top>
 			<width>352</width>
-			<height>322</height>           
+			<height>322</height>
 			<texture>thumbs/boxes/cdcase.png</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
 		<control type="image">
 			<top>580</top>
 			<width>352</width>
-			<height>322</height>           
+			<height>322</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/cdcase.png</texture>
 			<animation effect="fade" start="100" end="0" time="400">Focus</animation>

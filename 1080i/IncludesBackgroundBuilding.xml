@@ -67,6 +67,15 @@
 			<fadetime>CrossfadeTime</fadetime>
 			<texture background="true">$VAR[HomeBackgroundVar]</texture>
 		</control>
+		<control type="image">
+			<description>Widget background image</description>
+			<include>VisibleFadeAnimation</include>
+			<aspectratio align="center">scale</aspectratio>
+			<include>FullscreenDimensions</include>
+			<fadetime>CrossfadeTime</fadetime>
+			<texture background="true">$INFO[Container(9060).ListItem.Art(fanart)]</texture>
+			<visible>!String.IsEmpty(Container(9060).ListItem.Art(fanart)) + Control.HasFocus(9060)</visible>
+		</control>
 	</include>
 	<include name="WeatherBackground">
 		<control type="multiimage">

@@ -7,7 +7,7 @@
 			<top>62</top>
 			<width>2550</width>
 			<height>100</height>
-			<onup>9020</onup>           
+			<onup>9020</onup>
 			<ondown>9001</ondown>
 			<scrolltime tween="quadratic" easing="out">400</scrolltime>
 			<focusposition>2</focusposition>
@@ -35,7 +35,7 @@
 					<width>510</width>
 					<height>90</height>
 					<font>font_MainMenu</font>
-					<textcolor>white</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>Control.HasFocus(9000)</visible>
@@ -580,9 +580,8 @@
 		<!-- Video Info -->
 		<control type="group">
 			<left>15</left>
-			<top>590</top>
+			<top>55</top>
 			<visible>Player.HasVideo + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
-			<visible>!System.HasActiveModalDialog</visible>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>
@@ -637,9 +636,8 @@
 		<!-- Recording Info -->
 		<control type="group">
 			<left>15</left>
-			<top>590</top>
+			<top>55</top>
 			<visible>Pvr.IsRecording + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
-			<visible>!System.HasActiveModalDialog</visible>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>
@@ -698,9 +696,8 @@
 		<!-- Music Info -->
 		<control type="group">
 			<left>15</left>
-			<top>590</top>
+			<top>55</top>
 			<visible>Player.HasAudio + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
-			<visible>!System.HasActiveModalDialog</visible>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>
@@ -781,6 +778,109 @@
 				<titlecolor>$VAR[SkinThemeColour]</titlecolor>
 				<headlinecolor>grey</headlinecolor>
 				<shadowcolor>shadow</shadowcolor>
+			</control>
+		</control>
+	</include>
+	<include name="HomeVideoWidget">
+		<control type="group">
+			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<visible>Library.HasContent(Movies)</visible>
+			<top>310</top>
+			<control type="image">
+				<top>-28</top>
+				<width>1920</width>
+				<height>87</height>
+				<texture flipy="true">home/submenu_bar.png</texture>
+			</control>
+			<control type="image">
+				<top>382</top>
+				<width>1920</width>
+				<height>87</height>
+				<texture>home/submenu_bar.png</texture>
+			</control>
+			<control type="label">
+				<top>18</top>
+				<width>1920</width>
+				<height>40</height>
+				<label>$LOCALIZE[20386]</label>
+				<textoffsetx>15</textoffsetx>
+				<font>font13_title</font>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+			</control>
+			<control type="image">
+				<width>1920</width>
+				<height>450</height>
+				<texture border="0,112,0,112">home/homemenu_back.png</texture>
+			</control>
+			<control type="panel" id="9060">
+				<left>-1</left>
+				<top>76</top>
+				<visible>Integer.IsGreater(Container(9060).NumItems,0) | Container(9060).IsUpdating</visible>
+				<height>300</height>
+				<scrolltime tween="quadratic" easing="out">400</scrolltime>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onback>SetFocus(9060,0,absolute)</onback>
+				<itemlayout width="212" height="290">
+					<control type="image">
+						<left>15</left>
+						<width>197</width>
+						<height>290</height>
+						<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout width="212" height="290">
+					<control type="group">
+						<include>IconZoomAnimation</include>
+						<control type="image">
+							<left>15</left>
+							<width>197</width>
+							<height>290</height>
+							<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+							<aspectratio>scale</aspectratio>
+						</control>
+					</control>
+				</focusedlayout>
+				<content target="videos" sortby="dateadded" sortorder="descending" limit="15">special://skin/extras/playlists/RecentUnwatchedMovies.xsp</content>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(9060)</visible>
+				<include>VisibleFadeAnimation</include>
+				<control type="label">
+					<left>160</left>
+					<top>382</top>
+					<width>1600</width>
+					<height>40</height>
+					<label>$INFO[Container(9060).ListItem.Label]$INFO[Container(9060).ListItem.Year,[COLOR grey3]  |  [/COLOR]]</label>
+					<textoffsetx>15</textoffsetx>
+					<font>font13_title</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<left>130</left>
+					<top>388</top>
+					<width>30</width>
+					<height>30</height>
+					<texture flipx="true" colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
+					<visible>Container(9060).HasPrevious</visible>
+				</control>
+				<control type="image">
+					<left>1800</left>
+					<top>388</top>
+					<width>30</width>
+					<height>30</height>
+					<texture colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
+					<visible>Container(9060).HasNext</visible>
+				</control>
 			</control>
 		</control>
 	</include>

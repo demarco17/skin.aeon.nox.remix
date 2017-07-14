@@ -5,9 +5,9 @@
 	<controls>
 		<control type="list" id="9000">
 			<left>713</left>
-			<top>200</top>
+			<top>320</top>
 			<width>494</width>
-			<height>880</height>
+			<height>600</height>
 			<onleft>Dialog.Close(shutdownmenu)</onleft>
 			<onright>Dialog.Close(shutdownmenu)</onright>
 			<orientation>vertical</orientation>
@@ -113,7 +113,7 @@
 					<label>$LOCALIZE[5]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>!String.IsEmpty(Skin.String(SettingsHomeItem.Disable))</visible>
+					<!--<visible>!String.IsEmpty(Skin.String(SettingsHomeItem.Disable))</visible>-->
 				</item>
 			</content>
 		</control>
