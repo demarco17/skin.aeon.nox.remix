@@ -144,9 +144,7 @@ msgctxt "#31040"
 msgid "Wind Chill"
 msgstr ""
 
-msgctxt "#31041"
-msgid "Test Widget - Recently added movies (unwatched).[CR]Hows that look mate.. :)"
-msgstr ""
+#empty string with id 31041
 
 msgctxt "#31042"
 msgid "Show \"Now Playing\" information"
@@ -634,7 +632,11 @@ msgctxt "#31930"
 msgid "Will show clearart/logo (if available) on the video paused screen."
 msgstr ""
 
-#empty strings from id 31931 to 31932
+msgctxt "#31931"
+msgid "Enable recently added movie widget (unwatched) on the home screen."
+msgstr ""
+
+#empty string with id 31932
 
 msgctxt "#31933"
 msgid "Select an item to display on the left top of the main menu."
