@@ -6,7 +6,7 @@
 			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
-				<top>-20</top>
+				<top>-25</top>
 				<control type="image">
 					<description>background image</description>
 					<left>-16</left>

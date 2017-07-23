@@ -831,7 +831,7 @@
 						<width>197</width>
 						<height>290</height>
 						<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>stretch</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout width="212" height="290">
@@ -844,7 +844,7 @@
 							<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
-							<aspectratio>scale</aspectratio>
+							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>

@@ -8,14 +8,14 @@
 			<control type="image">
 				<description>background image</description>
 				<left>106</left>
-				<top>164</top>
+				<top>154</top>
 				<width>1708</width>
 				<height>932</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="panel" id="51">
 				<left>120</left>
-				<top>179</top>
+				<top>169</top>
 				<height>900</height>
 				<width>980</width>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>

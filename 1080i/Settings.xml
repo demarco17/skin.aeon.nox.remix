@@ -9,21 +9,21 @@
 			<control type="image">
 				<description>background image</description>
 				<left>104</left>
-				<top>184</top>
+				<top>164</top>
 				<width>1712</width>
 				<height>783</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="image">
 				<left>960</left>
-				<top>200</top>
+				<top>180</top>
 				<width>2</width>
 				<height>750</height>
 				<texture border="1">dialogs/separator3.png</texture>
 			</control>
 			<control type="panel" id="9000">
 				<left>120</left>
-				<top>199</top>
+				<top>179</top>
 				<width>1680</width>
 				<height>750</height>
 				<onleft>9000</onleft>
