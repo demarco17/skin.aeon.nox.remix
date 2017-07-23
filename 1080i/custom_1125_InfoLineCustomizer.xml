@@ -10,8 +10,8 @@
 			<top>210</top>
 			<width>494</width>
 			<height>660</height>
-			<onleft>Dialog.Close(1119)</onleft>
-			<onright>Dialog.Close(1119)</onright>
+			<onleft>Dialog.Close(1125)</onleft>
+			<onright>Dialog.Close(1125)</onright>
 			<orientation>vertical</orientation>
 			<itemlayout height="60" width="494">
 				<control type="image">

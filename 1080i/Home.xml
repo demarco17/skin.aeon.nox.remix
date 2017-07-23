@@ -2,14 +2,7 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=x1|x2|x3|x4|x5|x6|x7|x8|x9|x10|x11|x12|x13|x14|x101|x202|x303|x404|x505|x606)</onload>
-	<onload condition="String.IsEmpty(Skin.String(CustomGlobalBackground))">Skin.SetString(CustomGlobalBackground,special://skin/backgrounds/default_bg.jpg)</onload>
-	<onload condition="String.IsEmpty(Skin.String(Videos.Fallback))">Skin.SetString(Videos.Fallback,backgrounds/videos.png)</onload>
-	<onload condition="String.IsEmpty(Skin.String(Music.Fallback))">Skin.SetString(Music.Fallback,backgrounds/music.png)</onload>
-	<onload condition="String.IsEmpty(Skin.String(System.Fallback))">Skin.SetString(System.Fallback,backgrounds/system.png)</onload>
-	<onload condition="String.IsEmpty(Skin.String(Games.Fallback))">Skin.SetString(Games.Fallback,backgrounds/games.png)</onload>
-	<onload condition="String.IsEmpty(Skin.String(LiveTV.Fallback))">Skin.SetString(LiveTV.Fallback,backgrounds/livetv.png)</onload>
-	<onload condition="String.IsEmpty(Skin.String(Pictures.Fallback))">Skin.SetString(Pictures.Fallback,backgrounds/pictures.png)</onload>
-	<onload condition="String.IsEmpty(Skin.String(Apps.Fallback))">Skin.SetString(Apps.Fallback,backgrounds/programs.png)</onload>
+	<onload condition="String.IsEmpty(Skin.String(CustomGlobalBackground))">Skin.SetString(CustomGlobalBackground,backgrounds/default_bg.png)</onload>
 	<controls>
 		<include>CommonBackground</include>
 		<include condition="system.getbool(lookandfeel.enablerssfeeds)">RSSFeedWidget</include>

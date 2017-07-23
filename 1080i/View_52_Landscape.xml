@@ -211,13 +211,6 @@
 		<height>200</height>
 		<aspectratio align="center" aligny="bottom">keep</aspectratio>
 	</include>
-	<include name="WatchedOverlayLandscape">
-		<left>620</left>
-		<top>19</top>
-		<width>60</width>
-		<height>55</height>
-		<aspectratio>keep</aspectratio>
-	</include>
 	<include name="LandscapeItem-3">
 		<control type="image">
 			<include>LandscapeThumbCommonValues</include>
@@ -253,12 +246,12 @@
 			<width>299</width>
 			<include>LandscapeThumbReflectionCommonValues</include>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeItem-2Var]</texture>
-		</control>       
+		</control>
 		<control type="image">
 			<include>LandscapeLogoReflectionCommonValues</include>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem(-2).Art(clearlogo)]</texture>
 			<visible>!String.IsEmpty(ListItem(-2).Art(clearlogo)) + String.IsEmpty(ListItem(-2).Art(landscape)) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)]</visible>
-		</control>        
+		</control>
 	</include>
 	<include name="LandscapeItem-1">
 		<control type="image">
@@ -281,21 +274,17 @@
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem(-1).Art(clearlogo)]</texture>
 			<visible>!String.IsEmpty(ListItem(-1).Art(clearlogo)) + String.IsEmpty(ListItem(-1).Art(landscape)) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)]</visible>
 		</control>
-		<control type="image">
-			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(-1).Overlay,overlays/]</texture>
-		</control>
 	</include>
 	<include name="LandscapeItem0">
 		<control type="image">
 			<include>LandscapeThumbCommonValues</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png">$VAR[LandscapeItem0Var]</texture>
-		</control>       
+		</control>
 		<control type="image">
 			<include>LandscapeLogoCommonValues</include>
 			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 			<visible>!String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(landscape)) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)]</visible>
-		</control>       
+		</control>
 		<control type="image">
 			<include>LandscapeThumbReflectionCommonValues</include>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeItem0Var]</texture>
@@ -305,9 +294,11 @@
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem.Art(clearlogo)]</texture>
 			<visible>!String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(landscape)) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)]</visible>
 		</control>
-		<control type="image">
-			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
+		<control type="group">
+			<left>640</left>
+			<top>350</top>
+			<animation effect="fade" start="0" end="100" time="300" delay="100" condition="Container.OnNext">Conditional</animation>
+			<include>IconWatchedStatus</include>
 		</control>
 	</include>
 	<include name="LandscapeItem1">
@@ -332,10 +323,6 @@
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem(1).Art(clearlogo)]</texture>
 			<visible>!String.IsEmpty(ListItem(1).Art(clearlogo)) + String.IsEmpty(ListItem(1).Art(landscape)) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)]</visible>
 		</control>
-		<control type="image">
-			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(1).Overlay,overlays/]</texture>
-		</control>
 	</include>
 	<include name="LandscapeItem2">
 		<control type="image">
@@ -359,10 +346,6 @@
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem(2).Art(clearlogo)]</texture>
 			<visible>!String.IsEmpty(ListItem(2).Art(clearlogo)) + String.IsEmpty(ListItem(2).Art(landscape)) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)]</visible>
 		</control>
-		<control type="image">
-			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(2).Overlay,overlays/]</texture>
-		</control>
 	</include>
 	<include name="LandscapeItem3">
 		<control type="image">
@@ -383,24 +366,20 @@
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$INFO[ListItem(3).Art(clearlogo)]</texture>
 			<visible>!String.IsEmpty(ListItem(3).Art(clearlogo)) + String.IsEmpty(ListItem(3).Art(landscape)) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)]</visible>
 		</control>
-		<control type="image">
-			<include>WatchedOverlayLandscape</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(3).Overlay,overlays/]</texture>
-		</control>
 	</include>
 	<variable name="LandscapeItem-3Var">
 		<value condition="!String.IsEmpty(ListItem(-3).Art(landscape)) + !Container.Content(episodes)">$INFO[ListItem(-3).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(-3).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(-3).Art(landscape))">$INFO[ListItem(-3).Art(fanart)]</value>       
+		<value condition="!String.IsEmpty(ListItem(-3).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(-3).Art(landscape))">$INFO[ListItem(-3).Art(fanart)]</value>
 		<value>$INFO[ListItem(-3).Icon]</value>
 	</variable>
 	<variable name="LandscapeItem-2Var">
 		<value condition="!String.IsEmpty(ListItem(-2).Art(landscape)) + !Container.Content(episodes)">$INFO[ListItem(-2).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(-2).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(-2).Art(landscape))">$INFO[ListItem(-2).Art(fanart)]</value>       
+		<value condition="!String.IsEmpty(ListItem(-2).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(-2).Art(landscape))">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value>$INFO[ListItem(-2).Icon]</value>
 	</variable>
 	<variable name="LandscapeItem-1Var">
 		<value condition="!String.IsEmpty(ListItem(-1).Art(landscape)) + !Container.Content(episodes)">$INFO[ListItem(-1).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(-1).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(-1).Art(landscape))">$INFO[ListItem(-1).Art(fanart)]</value>     
+		<value condition="!String.IsEmpty(ListItem(-1).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(-1).Art(landscape))">$INFO[ListItem(-1).Art(fanart)]</value>
 		<value>$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="LandscapeItem0Var">
@@ -410,17 +389,17 @@
 	</variable>
 	<variable name="LandscapeItem1Var">
 		<value condition="!String.IsEmpty(ListItem(1).Art(landscape)) + !Container.Content(episodes)">$INFO[ListItem(1).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(1).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(1).Art(landscape))">$INFO[ListItem(1).Art(fanart)]</value>        
+		<value condition="!String.IsEmpty(ListItem(1).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(1).Art(landscape))">$INFO[ListItem(1).Art(fanart)]</value>
 		<value>$INFO[ListItem(1).Icon]</value>
 	</variable>
 	<variable name="LandscapeItem2Var">
 		<value condition="!String.IsEmpty(ListItem(2).Art(landscape)) + !Container.Content(episodes)">$INFO[ListItem(2).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(2).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(2).Art(landscape))">$INFO[ListItem(2).Art(fanart)]</value>        
+		<value condition="!String.IsEmpty(ListItem(2).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(2).Art(landscape))">$INFO[ListItem(2).Art(fanart)]</value>
 		<value>$INFO[ListItem(2).Icon]</value>
 	</variable>
 	<variable name="LandscapeItem3Var">
 		<value condition="!String.IsEmpty(ListItem(3).Art(landscape)) + !Container.Content(episodes)">$INFO[ListItem(3).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(3).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(3).Art(landscape))">$INFO[ListItem(3).Art(fanart)]</value>       
+		<value condition="!String.IsEmpty(ListItem(3).Art(fanart)) + !Container.Content(episodes) + String.IsEmpty(ListItem(3).Art(landscape))">$INFO[ListItem(3).Art(fanart)]</value>
 		<value>$INFO[ListItem(3).Icon]</value>
 	</variable>
 </includes>

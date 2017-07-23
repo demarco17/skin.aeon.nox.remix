@@ -4,21 +4,14 @@
 	<include>OpenCloseAnimation</include>
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.MultiFanart))">Skin.SetString($INFO[Window(Home).Property(Nox.Temp)],$INFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.BGType))">Skin.SetString($INFO[Window(Home).Property(Nox.BGType)],$INFO[Skin.String(ItemToEdit.BGType)])</onunload>
-	<onunload condition="String.IsEmpty(Skin.String(Videos.Fallback))">Skin.SetString(Videos.Fallback,backgrounds/videos.png)</onunload>
-	<onunload condition="String.IsEmpty(Skin.String(Music.Fallback))">Skin.SetString(Music.Fallback,backgrounds/music.png)</onunload>
-	<onunload condition="String.IsEmpty(Skin.String(System.Fallback))">Skin.SetString(System.Fallback,backgrounds/system.png)</onunload>
-	<onunload condition="String.IsEmpty(Skin.String(Games.Fallback))">Skin.SetString(Games.Fallback,backgrounds/games.png)</onunload>
-	<onunload condition="String.IsEmpty(Skin.String(LiveTV.Fallback))">Skin.SetString(LiveTV.Fallback,backgrounds/livetv.png)</onunload>
-	<onunload condition="String.IsEmpty(Skin.String(Pictures.Fallback))">Skin.SetString(Pictures.Fallback,backgrounds/pictures.png)</onunload>
-	<onunload condition="String.IsEmpty(Skin.String(Apps.Fallback))">Skin.SetString(Apps.Fallback,backgrounds/programs.png)</onunload>
 	<controls>
 		<control type="list" id="90100">
 			<left>713</left>
 			<top>336</top>
 			<width>494</width>
 			<height>420</height>
-			<onleft>Dialog.Close(1119)</onleft>
-			<onright>Dialog.Close(1119)</onright>
+			<onleft>Dialog.Close(1122)</onleft>
+			<onright>Dialog.Close(1122)</onright>
 			<orientation>vertical</orientation>
 			<itemlayout height="60" width="494">
 				<control type="image">

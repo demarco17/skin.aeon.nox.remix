@@ -146,7 +146,6 @@
 				<height>980</height>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>SetFocus(3)</onright>
-				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 				<control type="button" id="203">
 					<description>Settings level</description>
 					<textwidth>352</textwidth>

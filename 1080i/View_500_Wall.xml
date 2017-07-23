@@ -38,13 +38,10 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
-					<control type="image">
-						<left>188</left>
-						<top>2</top>
-						<width>50</width>
-						<height>45</height>
-						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio>keep</aspectratio>
+					<control type="group">
+						<left>198</left>
+						<top>318</top>
+						<include>IconWatchedStatus</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="360" width="240" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
@@ -58,13 +55,10 @@
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="image">
-							<left>185</left>
-							<top>5</top>
-							<width>50</width>
-							<height>45</height>
-							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio>keep</aspectratio>
+						<control type="group">
+							<left>195</left>
+							<top>315</top>
+							<include>IconWatchedStatus</include>
 						</control>
 					</control>
 				</focusedlayout>
@@ -100,13 +94,10 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
-					<control type="image">
-						<left>368</left>
-						<top>2</top>
-						<width>50</width>
-						<height>45</height>
-						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio>keep</aspectratio>
+					<control type="group">
+						<left>378</left>
+						<top>198</top>
+						<include>IconWatchedStatus</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="240" width="420" condition="Container.Content(episodes)">
@@ -120,13 +111,10 @@
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="image">
-							<left>365</left>
-							<top>5</top>
-							<width>50</width>
-							<height>45</height>
-							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio>keep</aspectratio>
+						<control type="group">
+							<left>375</left>
+							<top>195</top>
+							<include>IconWatchedStatus</include>
 						</control>
 					</control>
 				</focusedlayout>

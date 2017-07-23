@@ -13,7 +13,7 @@
 					<width>356</width>
 					<height>356</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture border="30">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
@@ -79,6 +79,15 @@
 						<align>left</align>
 						<font>font15</font>
 						<enable>Integer.IsGreater(Container(50).NumItems,0)</enable>
+					</control>
+					<control type="button" id="10">
+						<description>Dependencies</description>
+						<width>354</width>
+						<height>68.57</height>
+						<label>24069</label>
+						<align>left</align>
+						<font>font15</font>
+						<label>$LOCALIZE[39024]</label>
 					</control>
 				</control>
 			</control>

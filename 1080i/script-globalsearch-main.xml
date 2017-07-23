@@ -317,7 +317,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(221).ListItem.Label]</label>
 							<font>font15</font>
@@ -400,7 +400,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(111).ListItem.Label]</label>
 							<font>font15</font>
@@ -483,7 +483,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(211).ListItem.Label]</label>
 							<font>font15</font>
@@ -566,7 +566,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(231).ListItem.Label]</label>
 							<font>font15</font>
@@ -648,7 +648,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(121).ListItem.Label]</label>
 							<font>font15</font>
@@ -719,7 +719,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(131).ListItem.Label]</label>
 							<font>font15</font>
@@ -813,7 +813,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(141).ListItem.Label]</label>
 							<font>font15</font>
@@ -884,7 +884,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(151).ListItem.Property(Artist),,[COLOR grey3] | [/COLOR]]$INFO[Container(151).ListItem.Label]</label>
 							<font>font15</font>
@@ -955,7 +955,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(161).ListItem.Label]</label>
 							<font>font15</font>
@@ -1026,7 +1026,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(171).ListItem.Label]</label>
 							<font>font15</font>
@@ -1097,7 +1097,7 @@
 					<control type="group">
 						<control type="label">
 							<top>670</top>
-							<width>1316</width>
+							<width>996</width>
 							<height>40</height>
 							<label>$INFO[Container(181).ListItem.Label]</label>
 							<font>font15</font>

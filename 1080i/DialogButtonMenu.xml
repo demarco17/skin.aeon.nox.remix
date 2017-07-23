@@ -113,7 +113,6 @@
 					<label>$LOCALIZE[5]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>ActivateWindow(settings)</onclick>
-					<!--<visible>!String.IsEmpty(Skin.String(SettingsHomeItem.Disable))</visible>-->
 				</item>
 			</content>
 		</control>

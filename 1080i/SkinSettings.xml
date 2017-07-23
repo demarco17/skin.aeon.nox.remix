@@ -205,16 +205,7 @@
 						<font>font15</font>
 						<label>31002</label>
 						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(CustomGlobalBackground)][/COLOR]</label2>
-						<onclick>Skin.SetImage(CustomGlobalBackground,special://skin/backgrounds)</onclick>
-					</control>
-					<control type="button" id="203">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>31947</label>
-						<onclick>ActivateWindow(1128)</onclick>
-						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+						<onclick>Skin.SetImage(CustomGlobalBackground)</onclick>
 					</control>
 					<control type="radiobutton" id="201">
 						<width>1316</width>
@@ -307,17 +298,6 @@
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=musicgenreicons&amp;type=resource.images.musicgenreicons)</onclick>
 					</control>
-					<control type="radiobutton" id="307">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>31941</label>
-						<onclick>Skin.ToggleSetting(KioskMode.Enabled)</onclick>
-						<onclick>ReloadSkin()</onclick>
-						<selected>Skin.HasSetting(KioskMode.Enabled)</selected>
-						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
-					</control>
 					<control type="button" id="308">
 						<width>1316</width>
 						<height>90</height>
@@ -326,14 +306,7 @@
 						<label>$LOCALIZE[10035] $LOCALIZE[20077]</label>
 						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 						<onclick>Skin.ResetSettings</onclick>
-						<onclick>Skin.SetString(CustomGlobalBackground,special://skin/backgrounds/default_bg.jpg)</onclick>
-						<onclick>Skin.SetString(Videos.Fallback,backgrounds/videos.png)</onclick>
-						<onclick>Skin.SetString(Music.Fallback,backgrounds/music.png)</onclick>
-						<onclick>Skin.SetString(System.Fallback,backgrounds/system.png)</onclick>
-						<onclick>Skin.SetString(Games.Fallback,backgrounds/games.png)</onclick>
-						<onclick>Skin.SetString(LiveTV.Fallback,backgrounds/livetv.png)</onclick>
-						<onclick>Skin.SetString(Pictures.Fallback,backgrounds/pictures.png)</onclick>
-						<onclick>Skin.SetString(Apps.Fallback,backgrounds/programs.png)</onclick>
+						<onclick>Skin.SetString(CustomGlobalBackground,backgrounds/default_bg.png)</onclick>
 						<onclick>ReloadSkin()</onclick>
 					</control>
 				</control>
@@ -378,17 +351,6 @@
 					</control>
 				</control>
 			</control>
-			<!--<control type="scrollbar" id="60">
-				<left>1839</left>
-				<top>32</top>
-				<width>12</width>
-				<height>720</height>
-				<onleft>9004</onleft>
-				<onright>9004</onright>
-				<showonepage>false</showonepage>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-			</control>-->
 		</control>
 	</controls>
 </window>

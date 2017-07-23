@@ -294,7 +294,7 @@
 					<top>475</top>
 					<left>47</left>
 					<width>476</width>
-					<height>445</height>
+					<height>440</height>
 					<font>font14_textbox</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<pagecontrol>5062</pagecontrol>

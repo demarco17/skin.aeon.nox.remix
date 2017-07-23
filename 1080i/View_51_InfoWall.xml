@@ -35,13 +35,10 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
-					<control type="image">
-						<left>145</left>
-						<top>2</top>
-						<width>50</width>
-						<height>45</height>
-						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio>keep</aspectratio>
+					<control type="group">
+						<left>154</left>
+						<top>259</top>
+						<include>IconWatchedStatus</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="300" width="196" condition="String.IsEqual(Control.GetLabel(4430),1)">
@@ -55,13 +52,10 @@
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="image">
-							<left>145</left>
-							<top>2</top>
-							<width>50</width>
-							<height>45</height>
-							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio>keep</aspectratio>
+						<control type="group">
+							<left>151</left>
+							<top>255</top>
+							<include>IconWatchedStatus</include>
 						</control>
 					</control>
 				</focusedlayout>
@@ -94,13 +88,10 @@
 							<bordersize>4</bordersize>
 						</control>
 					</control>
-					<control type="image">
-						<left>915</left>
-						<top>2</top>
-						<width>60</width>
-						<height>60</height>
-						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-						<aspectratio>keep</aspectratio>
+					<control type="group">
+						<left>938</left>
+						<top>139</top>
+						<include>IconWatchedStatus</include>
 					</control>
 				</itemlayout>
 				<focusedlayout width="980" height="180" condition="String.IsEqual(Control.GetLabel(4430),2)">
@@ -134,13 +125,10 @@
 								<bordersize>4</bordersize>
 							</control>
 						</control>
-						<control type="image">
-							<left>915</left>
-							<top>2</top>
-							<width>60</width>
-							<height>60</height>
-							<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-							<aspectratio>keep</aspectratio>
+						<control type="group">
+							<left>935</left>
+							<top>135</top>
+							<include>IconWatchedStatus</include>
 						</control>
 					</control>
 				</focusedlayout>

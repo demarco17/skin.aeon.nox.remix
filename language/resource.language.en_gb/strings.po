@@ -666,25 +666,7 @@ msgctxt "#31939"
 msgid "Customize music genre icons."
 msgstr ""
 
-#empty string with id 31940
-
-msgctxt "#31941"
-msgid "Kiosk mode"
-msgstr ""
-
-msgctxt "#31942"
-msgid "Disables the slide out menu (media menu)."
-msgstr ""
-
-#empty strings from id 31943 to 31945
-
-msgctxt "#31946"
-msgid "The images selected here will override the skins default fall-back images in the corresponding section if no fanart is available."
-msgstr ""
-
-msgctxt "#31947"
-msgid "Setup fallback background images."
-msgstr ""
+#empty strings from id 31940 to 31947
 
 msgctxt "#31948"
 msgid "**WARNING** This will reset all skin settings to there default values."

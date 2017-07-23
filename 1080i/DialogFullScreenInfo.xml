@@ -95,7 +95,7 @@
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<left>253</left>
 				<top>65</top>
-				<width>1652</width>
+				<width>1645</width>
 				<height>90</height>
 				<font>font14_textbox2</font>
 				<textcolor>grey</textcolor>

@@ -251,13 +251,6 @@
 				<top>100</top>
 				<width>400</width>
 				<height>1080</height>
-				<control type="button">
-					<description>Kiosk Mode button</description>
-					<include>ButtonCommonValues</include>
-					<onfocus>ClearProperty(MediaMenu,Home)</onfocus>
-					<onfocus>SetFocus(9000)</onfocus>
-					<visible>Skin.HasSetting(KioskMode.Enabled)</visible>
-				</control>
 				<control type="label" id="20001">
 					<width>400</width>
 					<height>52</height>

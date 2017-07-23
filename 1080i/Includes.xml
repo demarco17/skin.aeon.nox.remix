@@ -49,14 +49,6 @@
 			<texture>flags/aeon-nox-logo.png</texture>
 		</control>
 	</include>
-	<include name="KioskModeButton">
-		<control type="button">
-			<description>Kiosk Mode button</description>
-			<include>ButtonCommonValues</include>
-			<onfocus>ClearProperty(MediaMenu,Home)</onfocus>
-			<onfocus>SetFocus(50)</onfocus>
-		</control>
-	</include>
 	<include name="MediaMenuTop">
 		<top>100</top>
 		<width>400</width>
@@ -65,7 +57,6 @@
 		<onright>50</onright>
 		<onback>ClearProperty(MediaMenu,Home)</onback>
 		<onback>50</onback>
-		<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 		<control type="button" id="200">
 			<description>View options header</description>
 			<textwidth>352</textwidth>
@@ -111,12 +102,9 @@
 				<width>400</width>
 				<height>980</height>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
-				<onright condition="!Window.IsVisible(tvguide)">50</onright>
-				<onright condition="Window.IsVisible(tvguide)">10</onright>
+				<onright>50</onright>
 				<onback>ClearProperty(MediaMenu,Home)</onback>
-				<onback condition="!Window.IsVisible(tvguide)">50</onback>
-				<onback condition="Window.IsVisible(tvguide)">10</onback>
-				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
+				<onback>50</onback>
 				<control type="button" id="200">
 					<description>View options header</description>
 					<textwidth>352</textwidth>
@@ -161,6 +149,7 @@
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvchannels)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiochannels)</onclick>
+					<visible>!Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="button" id="101">
 					<description>Guide</description>
@@ -170,6 +159,7 @@
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvguide)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radioguide)</onclick>
+					<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
 				</control>
 				<control type="button" id="102">
 					<description>Recordings</description>
@@ -179,6 +169,7 @@
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvrecordings)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiorecordings)</onclick>
+					<visible>!Window.IsActive(MyPVRRecordings.xml)</visible>
 				</control>
 				<control type="button" id="103">
 					<description>Timers</description>
@@ -188,6 +179,7 @@
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvtimers)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiotimers)</onclick>
+					<visible>![Window.IsActive(tvtimers) | Window.IsActive(radiotimers)]</visible>
 				</control>
 				<control type="button" id="105">
 					<description>Timer Rules</description>
@@ -197,6 +189,7 @@
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
+					<visible>![Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)]</visible>
 				</control>
 				<control type="button" id="104">
 					<description>Search</description>
@@ -891,14 +884,6 @@
 			<bordersize>20</bordersize>
 		</control>
 		<control type="image">
-			<left>206</left>
-			<top>134</top>
-			<width>64</width>
-			<height>64</height>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
-		<control type="image">
 			<left>18</left>
 			<top>515</top>
 			<width>248</width>
@@ -925,14 +910,6 @@
 			<height>424</height>
 			<texture>thumbs/boxes/$VAR[ShiftCase_Var]</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
-		<control type="image">
-			<left>210</left>
-			<top>138</top>
-			<width>64</width>
-			<height>64</height>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
-			<aspectratio>keep</aspectratio>
 		</control>
 		<control type="image">
 			<left>23</left>
@@ -1032,6 +1009,23 @@
 				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
+		</control>
+	</include>
+	<include name="IconWatchedStatus">
+		<control type="image">
+			<width>40</width>
+			<height>40</height>
+			<texture>overlays/corner.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
+		</control>
+		<control type="image">
+			<left>6</left>
+			<top>6</top>
+			<width>45</width>
+			<height>45</height>
+			<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
+			<aspectratio>keep</aspectratio>
 		</control>
 	</include>
 </includes>

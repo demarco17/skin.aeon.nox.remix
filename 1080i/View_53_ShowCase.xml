@@ -109,10 +109,6 @@
 								<include>MovieShowcaseThumb</include>
 							</control>
 							<control type="image">
-								<include>WatchedOverlayShowCase</include>
-								<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(-1).Overlay,overlays/]</texture>
-							</control>
-							<control type="image">
 								<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
 								<aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
 								<include>MovieShowcaseThumbReflection</include>
@@ -220,10 +216,6 @@
 							<control type="image">
 								<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
 								<include>MovieShowcaseThumb</include>
-							</control>
-							<control type="image">
-								<include>WatchedOverlayShowCase</include>
-								<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(1).Overlay,overlays/]</texture>
 							</control>
 							<control type="image">
 								<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
@@ -350,7 +342,7 @@
 		<width>2058</width>
 		<height>525</height>
 		<onup condition="!Listitem.IsCollection">5362</onup>
-		<onup condition="Listitem.IsCollection">5363</onup>			
+		<onup condition="Listitem.IsCollection">5363</onup>
 		<ondown>5361</ondown>
 		<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 		<viewtype label="31077">bigwrap</viewtype>
@@ -377,13 +369,6 @@
 		<top>401</top>
 		<width>264</width>
 		<height>396</height>
-	</include>
-	<include name="WatchedOverlayShowCase">
-		<left>220</left>
-		<top>3</top>
-		<width>60</width>
-		<height>55</height>
-		<aspectratio>keep</aspectratio>
 	</include>
 	<include name="MovieShowCaseItem-7">
 		<control type="image">
@@ -461,10 +446,6 @@
 			<include>MovieShowcaseThumb</include>
 		</control>
 		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(-1).Overlay,overlays/]</texture>
-		</control>
-		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
 			<aspectratio scalediffuse="false" aligny="top" align="left">scale</aspectratio>
 			<width>180</width>
@@ -476,9 +457,11 @@
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
 			<include>MovieShowcaseThumb</include>
 		</control>
-		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
+		<control type="group">
+			<left>240</left>
+			<top>360</top>
+			<animation effect="fade" start="0" end="100" time="300" delay="100" condition="Container.OnNext">Conditional</animation>
+			<include>IconWatchedStatus</include>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
@@ -489,10 +472,6 @@
 		<control type="image">
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
 			<include>MovieShowcaseThumb</include>
-		</control>
-		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(1).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
@@ -508,10 +487,6 @@
 			<include>MovieShowcaseThumb</include>
 		</control>
 		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(2).Overlay,overlays/]</texture>
-		</control>
-		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
 			<aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
 			<left>102</left>
@@ -523,10 +498,6 @@
 		<control type="image">
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
 			<include>MovieShowcaseThumb</include>
-		</control>
-		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(3).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
@@ -542,10 +513,6 @@
 			<include>MovieShowcaseThumb</include>
 		</control>
 		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(4).Overlay,overlays/]</texture>
-		</control>
-		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
 			<aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
 			<left>136</left>
@@ -557,10 +524,6 @@
 		<control type="image">
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
 			<include>MovieShowcaseThumb</include>
-		</control>
-		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(5).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
@@ -576,10 +539,6 @@
 			<include>MovieShowcaseThumb</include>
 		</control>
 		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(6).Overlay,overlays/]</texture>
-		</control>
-		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
 			<aspectratio scalediffuse="false" aligny="top" align="right">scale</aspectratio>
 			<left>158</left>
@@ -591,10 +550,6 @@
 		<control type="image">
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>
 			<include>MovieShowcaseThumb</include>
-		</control>
-		<control type="image">
-			<include>WatchedOverlayShowCase</include>
-			<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem(7).Overlay,overlays/]</texture>
 		</control>
 		<control type="image">
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>

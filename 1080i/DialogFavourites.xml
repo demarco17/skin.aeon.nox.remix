@@ -11,7 +11,7 @@
 				<top>16</top>
 				<width>1096</width>
 				<height>508</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
 			<control type="image">
 				<left>676</left>

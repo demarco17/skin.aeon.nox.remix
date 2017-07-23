@@ -4,8 +4,8 @@
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<include condition="Window.IsActive(home)">HomeFanart</include>
-			<include condition="![Window.IsActive(home) | Window.IsActive(weather)]">GlobalFanart</include>
 			<include condition="Window.IsActive(weather)">WeatherBackground</include>
+			<include condition="![Window.IsActive(home) | Window.IsActive(weather)]">GlobalFanart</include>
 		</control>
 		<control type="visualisation">
 			<include>FullscreenDimensions</include>
@@ -30,25 +30,6 @@
 		</control>
 	</include>
 	<include name="GlobalFanart">
-		<control type="list" id="9033">
-			<include>HiddenList</include>
-			<content>
-				<include condition="Window.IsActive(pictures)">PicturesFallback</include>
-				<include condition="Window.IsActive(music) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor)">MusicFallback</include>
-				<include condition="Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyPVRTimers.xml)">LiveTVFallback</include>
-				<include condition="Window.IsActive(programs) | Window.IsActive(addonbrowser) | Window.IsActive(1133)">AppsFallback</include>
-				<include condition="Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(filemanager) | Window.IsActive(eventlog)">SystemFallback</include>
-				<include condition="Window.IsActive(videos) | Window.IsActive(videoplaylist)">VideoFallback</include>
-				<include condition="Window.IsActive(games)">GamesFallback</include>
-			</content>
-		</control>
-		<control type="image">
-			<visible>!Control.IsVisible(508)</visible>
-			<description>Normal Default Background Image</description>
-			<include>FullscreenDimensions</include>
-			<fadetime>CrossfadeTime</fadetime>
-			<texture background="true">$VAR[GlobalBackgroundVar]</texture>
-		</control>
 		<control type="image">
 			<visible>Control.IsVisible(508)</visible>
 			<description>KodiFlix Background Image</description>
@@ -58,6 +39,13 @@
 			<fadetime>CrossfadeTime</fadetime>
 			<aspectratio align="left">scale</aspectratio>
 			<texture background="true" diffuse="thumbs/fanart_diffuse.png">$VAR[GlobalBackgroundVar]</texture>
+		</control>
+		<control type="image">
+			<visible>!Control.IsVisible(508)</visible>
+			<description>Normal Default Background Image</description>
+			<include>FullscreenDimensions</include>
+			<fadetime>CrossfadeTime</fadetime>
+			<texture fallback="backgrounds/default_bg.png" background="true">$VAR[GlobalBackgroundVar]</texture>
 		</control>
 	</include>
 	<include name="HomeFanart">
@@ -102,41 +90,6 @@
 				<texture border="1">dialogs/logo_back.png</texture>
 			</control>
 		</control>
-	</include>
-	<include name="VideoFallback">
-		<item>
-			<thumb>$INFO[Skin.String(Videos.Fallback)]</thumb>
-		</item>
-	</include>
-	<include name="MusicFallback">
-		<item>
-			<thumb>$INFO[Skin.String(Music.Fallback)]</thumb>
-		</item>
-	</include>
-	<include name="SystemFallback">
-		<item>
-			<thumb>$INFO[Skin.String(System.Fallback)]</thumb>
-		</item>
-	</include>
-	<include name="LiveTVFallback">
-		<item>
-			<thumb>$INFO[Skin.String(LiveTV.Fallback)]</thumb>
-		</item>
-	</include>
-	<include name="PicturesFallback">
-		<item>
-			<thumb>$INFO[Skin.String(Pictures.Fallback)]</thumb>
-		</item>
-	</include>
-	<include name="AppsFallback">
-		<item>
-			<thumb>$INFO[Skin.String(Apps.Fallback)]</thumb>
-		</item>
-	</include>
-	<include name="GamesFallback">
-		<item>
-			<thumb>$INFO[Skin.String(Games.Fallback)]</thumb>
-		</item>
 	</include>
 	<include name="ShowCaseInfoPanel">
 		<control type="group" id="12000">
@@ -223,8 +176,8 @@
 						<height>180</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
 						<onup>9050</onup>
-						<onleft>53</onleft>						
-						<onright>53</onright>						
+						<onleft>53</onleft>
+						<onright>53</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>
@@ -248,8 +201,8 @@
 						<height>180</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
 						<onup>9050</onup>
-						<onleft>53</onleft>						
-						<onright>53</onright>						
+						<onleft>53</onleft>
+						<onright>53</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<orientation>vertical</orientation>

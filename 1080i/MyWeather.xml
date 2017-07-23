@@ -298,13 +298,6 @@
 				<onright>9000</onright>
 				<onup>9050</onup>
 				<ondown>9050</ondown>
-				<control type="button" id="201">
-					<description>Kiosk Mode button</description>
-					<include>ButtonCommonValues</include>
-					<onfocus>ClearProperty(MediaMenu,Home)</onfocus>
-					<onfocus>SetFocus(9000)</onfocus>
-					<visible>Skin.HasSetting(KioskMode.Enabled)</visible>
-				</control>
 				<control type="button" id="200">
 					<font>font13_title</font>
 					<include>ButtonCommonValues</include>
