@@ -63,16 +63,15 @@
 						<align>right</align>
 						<font>font13</font>
 						<textoffsetx>20</textoffsetx>
-						<textcolor>grey</textcolor>
+						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
-					<control type="label">
+					<control type="image">
 						<left>1090</left>
 						<top>20</top>
-						<width>40</width>
+						<width>30</width>
 						<height>30</height>
-						<font>IconSmall</font>
-						<label>$VAR[PVRTimerIcon]</label>
+						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="1140">
@@ -112,13 +111,12 @@
 						<textoffsetx>20</textoffsetx>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
-					<control type="label">
+					<control type="image">
 						<left>1090</left>
 						<top>20</top>
-						<width>40</width>
+						<width>30</width>
 						<height>30</height>
-						<font>IconSmall</font>
-						<label>$VAR[PVRTimerIcon]</label>
+						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 				</focusedlayout>
 			</control>

@@ -113,8 +113,6 @@
 			<height>90</height>
 			<font>font15</font>
 			<textoffsetx>30</textoffsetx>
-			<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
-			<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 		</control>
 		<control type="image" id="11">
 			<description>separator image</description>

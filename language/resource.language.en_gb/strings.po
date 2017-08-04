@@ -27,7 +27,7 @@ msgid "Written by"
 msgstr ""
 
 msgctxt "#31002"
-msgid "Default Background"
+msgid "Select Background"
 msgstr ""
 
 msgctxt "#31003"
@@ -134,7 +134,11 @@ msgctxt "#31028"
 msgid "Theme Colour"
 msgstr ""
 
-#empty strings from id 31029 to 31038
+msgctxt "#31029"
+msgid "Enable custom global background"
+msgstr ""
+
+#empty strings from id 31030 to 31038
 
 msgctxt "#31039"
 msgid "Actions"

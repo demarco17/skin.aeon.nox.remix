@@ -117,29 +117,24 @@
 						<width>312</width>
 					</control>
 				</control>
-			</control>			
+			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
 				<width>960</width>
-				<height>60</height>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
 				<width>960</width>
-				<height>60</height>
 				<textwidth>880</textwidth>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default spincontrolex</description>
 				<width>960</width>
-				<height>60</height>
 			</control>
 			<control type="button" id="10">
 				<description>Default Category Button</description>
-				<height>60</height>
 				<width>312</width>
 				<align>right</align>
-				<textoffsetx>20</textoffsetx>
 			</control>
 			<control type="image" id="11">
 				<description>Default Seperator</description>
@@ -150,7 +145,6 @@
 			<control type="edit" id="12">
 				<description>Default Edit</description>
 				<width>960</width>
-				<height>60</height>
 			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>
@@ -164,7 +158,7 @@
 				<font>font14_title</font>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<textoffsetx>15</textoffsetx>
-			</control>						
+			</control>
 		</control>
 	</controls>
 </window>

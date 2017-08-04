@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload condition="VideoPlayer.Content(livetv)">SetFocus(808)</onload>
+	<onload condition="VideoPlayer.Content(livetv)">SetFocus(807)</onload>
 	<onload condition="!VideoPlayer.Content(livetv)">SetFocus(602)</onload>
 	<controls>
 		<control type="group">

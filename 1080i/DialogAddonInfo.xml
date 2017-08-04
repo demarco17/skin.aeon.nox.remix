@@ -12,7 +12,7 @@
 					<top>32</top>
 					<width>356</width>
 					<height>356</height>
-					<aspectratio>keep</aspectratio>
+					<aspectratio>scale</aspectratio>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>1</bordersize>
@@ -22,72 +22,46 @@
 					<top>390</top>
 					<width>354</width>
 					<height>480</height>
-					<onleft condition="!Control.HasFocus(200)">60</onleft>
+					<onright condition="!Control.HasFocus(200)">60</onright>
 					<onright condition="Control.HasFocus(200)">50</onright>
-					<onright>60</onright>
 					<control type="button" id="9">
 						<description>Configure Addon</description>
 						<width>354</width>
-						<height>68.57</height>
 						<label>24020</label>
-						<align>left</align>
-						<font>font15</font>
 					</control>
 					<control type="button" id="8">
 						<description>Update Addon button</description>
 						<width>354</width>
-						<height>68.57</height>
 						<label>24069</label>
-						<align>left</align>
-						<font>font15</font>
 					</control>
 					<control type="radiobutton" id="13">
 						<description>Auto-update button</description>
 						<width>354</width>
-						<height>68.57</height>
-						<align>left</align>
-						<font>font15</font>
 					</control>
 					<control type="button" id="12">
 						<description>Launch Addon button</description>
 						<width>354</width>
-						<height>68.57</height>
 						<label>518</label>
-						<align>left</align>
-						<font>font15</font>
 					</control>
 					<control type="button" id="6">
 						<description>Install/UnInstall Addon button</description>
 						<width>354</width>
-						<height>68.57</height>
-						<align>left</align>
-						<font>font15</font>
 					</control>
 					<control type="button" id="7">
 						<description>Enable/Disable Addon button</description>
 						<width>354</width>
-						<height>68.57</height>
-						<align>left</align>
-						<font>font15</font>
-					</control>
-					<control type="button" id="200">
-						<description>Screenshot button</description>
-						<width>354</width>
-						<height>68.57</height>
-						<label>$LOCALIZE[20008]</label>
-						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(50).NumItems][/COLOR]</label2>
-						<align>left</align>
-						<font>font15</font>
-						<enable>Integer.IsGreater(Container(50).NumItems,0)</enable>
 					</control>
 					<control type="button" id="10">
 						<description>Dependencies</description>
 						<width>354</width>
-						<height>68.57</height>
-						<label>24069</label>
-						<align>left</align>
-						<font>font15</font>
-						<label>$LOCALIZE[39024]</label>
+						<label>39024</label>
+					</control>
+					<control type="button" id="200">
+						<description>Screenshot button</description>
+						<width>354</width>
+						<label>$LOCALIZE[20008]</label>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(50).NumItems][/COLOR]</label2>
+						<enable>Integer.IsGreater(Container(50).NumItems,0)</enable>
 					</control>
 				</control>
 			</control>
@@ -168,7 +142,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Control.HasFocus(200) | Control.HasFocus(50)</visible>
+					<visible>[Control.HasFocus(200) | Control.HasFocus(50)] + String.IsEmpty(ListItem.AddonBroken)</visible>
 					<include>VisibleFadeAnimation</include>
 					<left>490</left>
 					<control type="panel" id="50">

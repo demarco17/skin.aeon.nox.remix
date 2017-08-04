@@ -15,36 +15,34 @@
 				<height>120</height>
 				<texture border="4">dialogs/separator2.png</texture>
 			</control>
+			<control type="image">
+				<width>120</width>
+				<height>120</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture colordiffuse="white">settings/icons/livetv.png</texture>
+			</control>
 			<control type="label">
 				<description>header label</description>
-				<top>10</top>
-				<width>820</width>
+				<left>120</left>
+				<top>15</top>
+				<width>700</width>
 				<height>45</height>
-				<font>font15_title</font>
+				<font>font14_title</font>
 				<label>$LOCALIZE[19023]$INFO[VideoPlayer.ChannelGroup, - ,]</label>
-				<align>center</align>
+				<align>right</align>
+				<textoffsetx>15</textoffsetx>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<visible>!pvr.IsPlayingRadio</visible>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<top>10</top>
-				<width>820</width>
-				<height>45</height>
-				<font>font15_title</font>
-				<label>$LOCALIZE[19024]$INFO[MusicPlayer.ChannelGroup, - ,]</label>
-				<align>center</align>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<visible>pvr.IsPlayingRadio</visible>
-			</control>
-			<control type="label">
-				<description>header label</description>
+				<left>120</left>
 				<top>60</top>
-				<width>820</width>
+				<width>700</width>
 				<height>40</height>
-				<font>font14</font>
+				<font>font13</font>
 				<label>$INFO[System.Date]$INFO[System.Time,[COLOR grey3] | [/COLOR],]</label>
-				<align>center</align>
+				<align>right</align>
+				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="list" id="11">

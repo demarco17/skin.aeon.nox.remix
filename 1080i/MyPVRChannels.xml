@@ -74,25 +74,20 @@
 						<info>ListItem.Progress</info>
 					</control>
 					<control type="image">
+						<left>675</left>
+						<top>45</top>
+						<width>30</width>
+						<height>30</height>
+						<texture>overlays/pvr/PVR-IsRecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
 						<left>708</left>
 						<top>7</top>
 						<width>105</width>
 						<height>105</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<left>595</left>
-						<top>45</top>
-						<width>120</width>
-						<height>30</height>
-						<font>IconSmall</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>red</textcolor>
-						<selectedcolor>red</selectedcolor>
-						<align>right</align>
-						<label></label>
-						<visible>ListItem.IsRecording</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="821">
@@ -140,25 +135,20 @@
 						<info>ListItem.Progress</info>
 					</control>
 					<control type="image">
+						<left>675</left>
+						<top>45</top>
+						<width>30</width>
+						<height>30</height>
+						<texture>overlays/pvr/PVR-IsRecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
 						<left>708</left>
 						<top>7</top>
 						<width>105</width>
 						<height>105</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<left>595</left>
-						<top>45</top>
-						<width>120</width>
-						<height>30</height>
-						<font>IconSmall</font>
-						<textoffsetx>15</textoffsetx>
-						<align>right</align>
-						<textcolor>red</textcolor>
-						<selectedcolor>red</selectedcolor>
-						<label></label>
-						<visible>ListItem.IsRecording</visible>
 					</control>
 				</focusedlayout>
 			</control>

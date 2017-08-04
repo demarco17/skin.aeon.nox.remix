@@ -206,7 +206,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(2))</visible>
 				</control>
 				<control type="button" id="3">
@@ -214,7 +213,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(3))</visible>
 				</control>
 				<control type="button" id="4">
@@ -222,7 +220,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(4))</visible>
 				</control>
 				<control type="button" id="5">
@@ -230,7 +227,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(5))</visible>
 				</control>
 				<control type="button" id="6">
@@ -238,7 +234,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(6))</visible>
 				</control>
 				<control type="button" id="7">
@@ -246,7 +241,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(7))</visible>
 				</control>
 				<control type="button" id="8">
@@ -254,7 +248,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(8))</visible>
 				</control>
 				<control type="button" id="9">
@@ -262,7 +255,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(9))</visible>
 				</control>
 				<control type="button" id="10">
@@ -270,7 +262,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(10))</visible>
 				</control>
 				<control type="button" id="11">
@@ -278,7 +269,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(11))</visible>
 				</control>
 				<control type="button" id="12">
@@ -286,7 +276,6 @@
 					<height>90</height>
 					<label />
 					<font>font15</font>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<visible>!String.IsEmpty(Control.GetLabel(12))</visible>
 				</control>
 			</control>

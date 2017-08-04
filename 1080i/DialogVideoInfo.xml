@@ -681,6 +681,7 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>+</label>
 						<onclick>ActivateWindow(1119)</onclick>
+						<enable>!Window.IsActive(home)</enable>
 					</control>
 				</control>
 			</control>

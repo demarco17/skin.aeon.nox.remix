@@ -103,7 +103,6 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[305]</label>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onfocus condition="String.IsEmpty(Container(90000).ListItem.Property(Disable))">ClearProperty(Nox.Disable,Home)</onfocus>
 					<onfocus condition="!String.IsEmpty(Container(90000).ListItem.Property(Disable))">SetProperty(Nox.Disable,True,home)</onfocus>
 					<onclick condition="String.IsEmpty(Container(90000).ListItem.Property(Disable))">SetProperty(Nox.Disable,True,home)</onclick>
@@ -121,7 +120,6 @@
 					<font>font15</font>
 					<label>$LOCALIZE[13334]</label>
 					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(90000).ListItem.Label][/COLOR]</label2>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onclick>Skin.SetString($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label])</onclick>
 				</control>
 				<control type="button" id="90012">
@@ -132,7 +130,6 @@
 					<font>font15</font>
 					<label>$LOCALIZE[31027]</label>
 					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[BackgroundLabel2Var][/COLOR]</label2>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onfocus>Skin.Reset(ItemToEdit.MultiFanart)</onfocus>
 					<onfocus>Skin.Reset(ItemToEdit.BGType)</onfocus>
 					<onclick condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onclick>
@@ -148,7 +145,6 @@
 					<font>font15</font>
 					<label>$LOCALIZE[22079]</label>
 					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(90000).ListItem.Property(Path)][/COLOR]</label2>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onfocus>Skin.Reset(ItemToEdit.Path)</onfocus>
 					<onfocus>Skin.Reset(ItemToEdit.Label)</onfocus>
 					<onclick>SetProperty(Nox.Path,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Path],home)</onclick>
@@ -164,7 +160,6 @@
 					<font>font15</font>
 					<label>$LOCALIZE[22079]</label>
 					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container(90000).ListItem.Property(Path)][/COLOR]</label2>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=True&amp;skinLabel=$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label]&amp;skinAction=$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Path])</onclick>
 					<visible>System.HasAddon(script.skinshortcuts)</visible>
 				</control>
@@ -176,7 +171,6 @@
 					<font>font15</font>
 					<label>$LOCALIZE[31049]</label>
 					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[InfoLineLabelVar][/COLOR]</label2>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onfocus>Skin.Reset(ItemToEdit.InfoLine)</onfocus>
 					<onclick>SetProperty(Nox.InfoLine,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.InfoLine],home)</onclick>
 					<onclick>ActivateWindow(1125)</onclick>
@@ -188,7 +182,6 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[31073]</label>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onclick>SetProperty(ItemToEdit.Label,$INFO[Container(90000).ListItem.Label],home)</onclick>
 					<onclick>SetProperty(ItemToEdit.Path,$INFO[Container(90000).ListItem.Property(Path)],home)</onclick>
 					<onclick>SetProperty(ItemToEdit.MultiFanart,$INFO[Container(90000).ListItem.Thumb],home)</onclick>
@@ -216,7 +209,6 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[31080]</label>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=$INFO[Container(90000).ListItem.Property(submenuVisibility)])</onclick>
 				</control>
@@ -227,7 +219,6 @@
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
 					<label>$LOCALIZE[10035]</label>
-					<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label])</onclick>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Path])</onclick>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.MultiFanart])</onclick>

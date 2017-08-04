@@ -138,13 +138,12 @@
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="label">
+					<control type="image">
+						<left>15</left>
 						<top>47</top>
-						<width>120</width>
+						<width>30</width>
 						<height>30</height>
-						<font>IconTiny</font>
-						<textoffsetx>15</textoffsetx>
-						<label>$VAR[PVRTimerIcon]</label>
+						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="90" width="120">
@@ -167,13 +166,12 @@
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="label">
+					<control type="image">
+						<left>15</left>
 						<top>47</top>
-						<width>120</width>
+						<width>30</width>
 						<height>30</height>
-						<font>IconTiny</font>
-						<textoffsetx>15</textoffsetx>
-						<label>$VAR[PVRTimerIcon]</label>
+						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 				</focusedlayout>
 			</control>

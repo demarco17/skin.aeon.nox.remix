@@ -800,8 +800,9 @@
 				<texture>home/submenu_bar.png</texture>
 			</control>
 			<control type="label">
+				<left>160</left>
 				<top>18</top>
-				<width>1920</width>
+				<width>1600</width>
 				<height>40</height>
 				<label>$LOCALIZE[20386]</label>
 				<textoffsetx>15</textoffsetx>
@@ -815,7 +816,6 @@
 				<texture border="0,112,0,112">home/homemenu_back.png</texture>
 			</control>
 			<control type="panel" id="9060">
-				<left>-1</left>
 				<top>76</top>
 				<visible>Integer.IsGreater(Container(9060).NumItems,0) | Container(9060).IsUpdating</visible>
 				<height>300</height>
@@ -827,7 +827,7 @@
 				<onback>SetFocus(9060,0,absolute)</onback>
 				<itemlayout width="212" height="290">
 					<control type="image">
-						<left>15</left>
+						<left>13</left>
 						<width>197</width>
 						<height>290</height>
 						<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
@@ -838,7 +838,7 @@
 					<control type="group">
 						<include>IconZoomAnimation</include>
 						<control type="image">
-							<left>15</left>
+							<left>13</left>
 							<width>197</width>
 							<height>290</height>
 							<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
