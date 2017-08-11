@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>50</defaultcontrol>
+	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50</views>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
@@ -9,9 +9,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<description>Timers group</description>
 			<visible>Control.IsVisible(50)</visible>
-			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<left>100</left>
 			<top>-40</top>
@@ -19,27 +17,36 @@
 				<description>background image</description>
 				<left>-16</left>
 				<top>164</top>
-				<width>1172</width>
+				<width>1752</width>
 				<height>872</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="list" id="50">
 				<top>180</top>
-				<width>1140</width>
+				<width>1720</width>
 				<height>840</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>73</onright>
 				<pagecontrol>73</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<itemlayout height="120" width="1140">
+				<itemlayout height="120" width="1720">
 					<control type="image">
-						<width>1140</width>
+						<width>1720</width>
 						<height>120</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
+					<control type="image">
+						<left>15</left>
+						<top>8</top>
+						<width>105</width>
+						<height>105</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true" fallback="settings/icons/livetv.png">$INFO[ListItem.Icon]</texture>
+					</control>
 					<control type="label">
-						<width>760</width>
+						<left>120</left>
+						<width>1600</width>
 						<height>70</height>
 						<font>font30</font>
 						<textoffsetx>20</textoffsetx>
@@ -48,8 +55,9 @@
 						<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.ChannelName)">Conditional</animation>
 					</control>
 					<control type="label">
+						<left>120</left>
 						<top>55</top>
-						<width>620</width>
+						<width>1600</width>
 						<height>60</height>
 						<font>font15</font>
 						<textoffsetx>20</textoffsetx>
@@ -57,18 +65,19 @@
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 					<control type="label">
-						<width>1140</width>
+						<left>120</left>
+						<width>1600</width>
 						<height>70</height>
 						<align>right</align>
 						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
 						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Timertype]$INFO[ListItem.Comment, (,)]</label>
-						<animation effect="slide" start="0,0" end="-50,0" time="0" condition="ListItem.IsRecording">Conditional</animation>
+						<label>$INFO[ListItem.Timertype][COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Comment, (,)][/COLOR]</label>
 					</control>
 					<control type="label">
+						<left>120</left>
 						<top>55</top>
-						<width>1140</width>
+						<width>1600</width>
 						<height>60</height>
 						<align>right</align>
 						<font>font13</font>
@@ -76,31 +85,30 @@
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
-					<control type="label">
-						<visible>ListItem.IsRecording</visible>
-						<left>1085</left>
-						<top>20</top>
-						<width>40</width>
-						<height>30</height>
-						<font>IconSmall</font>
-						<textcolor>red</textcolor>
-						<label></label>
-					</control>
 				</itemlayout>
-				<focusedlayout height="120" width="1140">
+				<focusedlayout height="120" width="1720">
 					<control type="image">
-						<width>1140</width>
+						<width>1720</width>
 						<height>120</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">
-						<width>1139</width>
+						<width>1719</width>
 						<height>118</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
+					<control type="image">
+						<left>15</left>
+						<top>8</top>
+						<width>105</width>
+						<height>105</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true" fallback="settings/icons/livetv.png">$INFO[ListItem.Icon]</texture>
+					</control>
 					<control type="label">
-						<width>760</width>
+						<left>120</left>
+						<width>1600</width>
 						<height>70</height>
 						<font>font30</font>
 						<textoffsetx>20</textoffsetx>
@@ -108,120 +116,46 @@
 						<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.ChannelName)">Conditional</animation>
 					</control>
 					<control type="label">
+						<left>120</left>
 						<top>55</top>
-						<width>620</width>
+						<width>1600</width>
 						<height>60</height>
 						<font>font15</font>
 						<textoffsetx>20</textoffsetx>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 					<control type="label">
-						<width>1140</width>
+						<left>120</left>
+						<width>1600</width>
 						<height>70</height>
 						<align>right</align>
 						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
-						<label>$INFO[ListItem.Timertype]$INFO[ListItem.Comment, (,)]</label>
-						<animation effect="slide" start="0,0" end="-50,0" time="0" condition="ListItem.IsRecording">Conditional</animation>
+						<label>$INFO[ListItem.Timertype][COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Comment, (,)][/COLOR]</label>
 					</control>
 					<control type="label">
+						<left>120</left>
 						<top>55</top>
-						<width>1140</width>
+						<width>1600</width>
 						<height>60</height>
 						<align>right</align>
 						<font>font13</font>
 						<textoffsetx>20</textoffsetx>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
-					<control type="label">
-						<visible>ListItem.IsRecording</visible>
-						<left>1085</left>
-						<top>20</top>
-						<width>40</width>
-						<height>30</height>
-						<font>IconSmall</font>
-						<textcolor>red</textcolor>
-						<label></label>
-					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="73">
-				<left>1141</left>
+				<left>1722</left>
 				<top>180</top>
 				<width>12</width>
 				<height>840</height>
 				<onleft>50</onleft>
-				<onright condition="!Control.IsVisible(74)">50</onright>
-				<onright condition="Control.IsVisible(74)">74</onright>
+				<onright>50</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-			</control>
-			<control type="group">
-				<left>1196</left>
-				<control type="image">
-					<description>background image</description>
-					<left>16</left>
-					<top>164</top>
-					<width>538</width>
-					<height>872</height>
-					<texture border="18">dialogs/dialog-bg.png</texture>
-				</control>
-				<control type="group">
-					<visible>!String.IsEmpty(Container(50).ListItem.Title)</visible>
-					<control type="image">
-						<top>178</top>
-						<left>30</left>
-						<width>510</width>
-						<height>288</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[Container(50).ListItem.Icon]</texture>
-						<fadetime>CrossfadeTime</fadetime>
-						<bordersize>10</bordersize>
-					</control>
-					<control type="image">
-						<left>32</left>
-						<top>406</top>
-						<width>506</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="button">
-						<left>32</left>
-						<top>466</top>
-						<width>506</width>
-						<height>90</height>
-						<label>$INFO[Container(50).ListItem.Title,[COLOR grey],[/COLOR]][CR]$INFO[Container(50).ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
-						<textoffsetx>15</textoffsetx>
-						<font>font14</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<texturefocus border="4">dialogs/separator2.png</texturefocus>
-						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
-					</control>
-					<control type="textbox">
-						<label>$INFO[Container(50).ListItem.Plot]</label>
-						<top>560</top>
-						<left>47</left>
-						<width>476</width>
-						<height>438</height>
-						<font>font14_textbox2</font>
-						<textcolor>grey</textcolor>
-						<pagecontrol>74</pagecontrol>
-					</control>
-					<control type="scrollbar" id="74">
-						<left>540</left>
-						<top>560</top>
-						<width>12</width>
-						<height>460</height>
-						<onleft>50</onleft>
-						<onright>50</onright>
-						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-						<showonepage>true</showonepage>
-						<orientation>vertical</orientation>
-					</control>
-				</control>
 			</control>
 		</control>
 		<include>Topbar</include>

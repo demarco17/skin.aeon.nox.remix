@@ -140,7 +140,7 @@
 					</control>
 					<control type="image">
 						<left>15</left>
-						<top>47</top>
+						<top>48</top>
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
@@ -168,7 +168,7 @@
 					</control>
 					<control type="image">
 						<left>15</left>
-						<top>47</top>
+						<top>48</top>
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[PVRTimerIcon]</texture>

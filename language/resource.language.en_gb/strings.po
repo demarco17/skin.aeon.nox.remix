@@ -334,7 +334,7 @@ msgid "KodiFlix"
 msgstr ""
 
 msgctxt "#31094"
-msgid "Show recording information"
+msgid "Show pvr information"
 msgstr ""
 
 msgctxt "#31095"
@@ -601,7 +601,7 @@ msgid "Display a widget on the Home screen with media information when video is 
 msgstr ""
 
 msgctxt "#31922"
-msgid "Display a widget on the Home screen with PVR information when there is a recording in progress."
+msgid "Display a widget on the Home screen with PVR information when recordings are scheduled or in progress."
 msgstr ""
 
 msgctxt "#31923"

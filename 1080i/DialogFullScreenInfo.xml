@@ -24,7 +24,7 @@
 				<width>253</width>
 				<height>372</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture background="true">$VAR[HomeNowPlayingThumbVar]</texture>
+				<texture fallback="DefaultVideo.png" background="true">$VAR[HomeNowPlayingThumbVar]</texture>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!VideoPlayer.Content(livetv)</visible>
@@ -34,7 +34,7 @@
 				<width>253</width>
 				<height>318</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture background="true">$VAR[HomeNowPlayingThumbVar]</texture>
+				<texture fallback="settings/icons/livetv.png" background="true">$VAR[HomeNowPlayingThumbVar]</texture>
 				<bordersize>20</bordersize>
 				<visible>VideoPlayer.Content(livetv)</visible>
 			</control>

@@ -110,7 +110,7 @@
 				</control>
 				<control type="label">
 					<description>Label 3</description>
-					<top>95</top>
+					<top>100</top>
 					<width>1316</width>
 					<height>30</height>
 					<textoffsetx>30</textoffsetx>
@@ -120,7 +120,7 @@
 				</control>
 				<control type="label">
 					<description>Label 3</description>
-					<top>95</top>
+					<top>100</top>
 					<width>1316</width>
 					<height>30</height>
 					<textoffsetx>30</textoffsetx>
@@ -130,7 +130,7 @@
 					<font>font15</font>
 				</control>
 				<control type="textbox">
-					<top>155</top>
+					<top>160</top>
 					<left>30</left>
 					<width>1256</width>
 					<height>auto</height>
@@ -236,7 +236,7 @@
 						</control>
 						<!-- button / execute value -->
 						<control type="group">
-							<visible>StringCompare(ListItem.Property(Typ), button)</visible>
+							<visible>String.IsEqual(ListItem.Property(Typ), button)</visible>
 							<control type="image">
 								<left>1256</left>
 								<top>30</top>
@@ -335,7 +335,7 @@
 						</control>
 						<!-- button / execute value -->
 						<control type="group">
-							<visible>StringCompare(ListItem.Property(Typ), button)</visible>
+							<visible>String.IsEqual(ListItem.Property(Typ), button)</visible>
 							<control type="image">
 								<left>1256</left>
 								<top>30</top>

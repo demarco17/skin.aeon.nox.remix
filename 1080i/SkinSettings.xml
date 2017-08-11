@@ -149,8 +149,8 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>31094</label>
-						<onclick>Skin.ToggleSetting(Disable.Recordinginfo)</onclick>
-						<selected>!Skin.HasSetting(Disable.Recordinginfo)</selected>
+						<onclick>Skin.ToggleSetting(Disable.Pvrinfo)</onclick>
+						<selected>!Skin.HasSetting(Disable.Pvrinfo)</selected>
 						<visible>System.HasPVRAddon</visible>
 					</control>
 					<control type="radiobutton" id="105">

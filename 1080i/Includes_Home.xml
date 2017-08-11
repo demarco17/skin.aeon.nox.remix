@@ -632,63 +632,129 @@
 			</control>
 		</control>
 	</include>
-	<include name="NowRecordingVideoWidget">
-		<!-- Recording Info -->
+	<include name="PvrInfoWidget">
+		<!-- PVR Info -->
 		<control type="group">
 			<left>15</left>
 			<top>55</top>
-			<visible>Pvr.IsRecording + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
+			<visible>[Pvr.IsRecording | Pvr.HasNonRecordingTimer] + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<include>OpenCloseAnimation</include>
-			<control type="image">
-				<description>background image</description>
-				<left>16</left>
-				<top>16</top>
-				<width>768</width>
-				<height>174</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
-			</control>
-			<control type="image">
-				<left>33</left>
-				<top>33</top>
-				<width>110</width>
-				<height>141</height>
-				<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NowRecordingChannelIcon]</texture>
-				<aspectratio align="left" aligny="center">keep</aspectratio>
-			</control>
-			<control type="label">
-				<left>155</left>
-				<top>34</top>
-				<width>595</width>
-				<height>50</height>
-				<label>19158</label>
-				<font>font15_title</font>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-			</control>
-			<control type="fadelabel">
-				<left>155</left>
-				<top>86</top>
-				<width>595</width>
-				<height>30</height>
-				<font>font15</font>
-				<label>$INFO[Pvr.NowRecordingChannel,$LOCALIZE[19029]: ,]</label>
-				<textcolor>grey</textcolor>
+			<control type="grouplist">
+				<width>1905</width>
+				<height>206</height>
+				<itemgap>30</itemgap>
 				<align>left</align>
-				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
-			</control>
-			<control type="fadelabel">
-				<left>155</left>
-				<top>130</top>
-				<width>595</width>
-				<height>30</height>
-				<label>$INFO[Pvr.NowRecordingTitle]</label>
-				<font>font15</font>
-				<textcolor>grey</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
+				<orientation>horizontal</orientation>
+				<control type="group">
+					<width>768</width>
+					<visible>Pvr.IsRecording</visible>
+					<control type="image">
+						<description>background image</description>
+						<left>16</left>
+						<top>16</top>
+						<width>768</width>
+						<height>174</height>
+						<texture border="18">dialogs/dialog-bg.png</texture>
+					</control>
+					<control type="image">
+						<left>33</left>
+						<top>33</top>
+						<width>110</width>
+						<height>141</height>
+						<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NowRecordingChannelIcon]</texture>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>155</left>
+						<top>34</top>
+						<width>595</width>
+						<height>50</height>
+						<label>19158</label>
+						<font>font15_title</font>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
+					</control>
+					<control type="fadelabel">
+						<left>155</left>
+						<top>86</top>
+						<width>595</width>
+						<height>30</height>
+						<font>font15</font>
+						<label>$INFO[Pvr.NowRecordingChannel,$LOCALIZE[19029]: ,]</label>
+						<textcolor>grey</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scrollout>false</scrollout>
+						<pauseatend>2000</pauseatend>
+					</control>
+					<control type="fadelabel">
+						<left>155</left>
+						<top>130</top>
+						<width>595</width>
+						<height>30</height>
+						<label>$INFO[Pvr.NowRecordingTitle]</label>
+						<font>font15</font>
+						<textcolor>grey</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scrollout>false</scrollout>
+						<pauseatend>2000</pauseatend>
+					</control>
+				</control>
+				<control type="group">
+					<width>768</width>
+					<visible>Pvr.HasNonRecordingTimer</visible>
+					<control type="image">
+						<description>background image</description>
+						<left>16</left>
+						<top>16</top>
+						<width>768</width>
+						<height>174</height>
+						<texture border="18">dialogs/dialog-bg.png</texture>
+					</control>
+					<control type="image">
+						<left>33</left>
+						<top>33</top>
+						<width>110</width>
+						<height>141</height>
+						<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NextRecordingChannelIcon]</texture>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>155</left>
+						<top>34</top>
+						<width>600</width>
+						<height>50</height>
+						<label>$LOCALIZE[19157][COLOR grey]$INFO[PVR.NextRecordingDateTime,[COLOR grey3] | [/COLOR]][/COLOR]</label>
+						<font>font15_title</font>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
+					</control>
+					<control type="fadelabel">
+						<left>155</left>
+						<top>86</top>
+						<width>595</width>
+						<height>30</height>
+						<font>font15</font>
+						<label>$INFO[Pvr.NextRecordingChannel,$LOCALIZE[19029]: ,]</label>
+						<textcolor>grey</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scrollout>false</scrollout>
+						<pauseatend>2000</pauseatend>
+					</control>
+					<control type="fadelabel">
+						<left>155</left>
+						<top>130</top>
+						<width>595</width>
+						<height>30</height>
+						<label>$INFO[Pvr.NextRecordingTitle]</label>
+						<font>font15</font>
+						<textcolor>grey</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scrollout>false</scrollout>
+						<pauseatend>2000</pauseatend>
+					</control>
+				</control>
 			</control>
 		</control>
 	</include>

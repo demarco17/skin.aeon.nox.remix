@@ -10,7 +10,6 @@
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
-			<!-- view id = 50 -->
 			<control type="group">
 				<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
 				<control type="group">
@@ -49,28 +48,31 @@
 								<texture background="true" fallback="DefaultIconInfo.png">$INFO[ListItem.Icon]</texture>
 							</control>
 							<control type="label">
-								<left>135</left>
-								<width>1565</width>
+								<left>120</left>
+								<width>1600</width>
 								<height>70</height>
 								<font>font30</font>
+								<textoffsetx>20</textoffsetx>
 								<textcolor>grey</textcolor>
 								<label>$INFO[ListItem.Label]</label>
 								<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Property(Event.Description))">Conditional</animation>
 							</control>
 							<control type="label">
-								<left>135</left>
-								<top>50</top>
-								<width>1565</width>
+								<left>120</left>
+								<top>55</top>
+								<width>1600</width>
 								<height>60</height>
 								<font>font15</font>
+								<textoffsetx>20</textoffsetx>
 								<textcolor>grey2</textcolor>
 								<label>$INFO[ListItem.Property(Event.Description)]</label>
 							</control>
 							<control type="label">
-								<left>60</left>
-								<width>1630</width>
+								<left>120</left>
+								<width>1600</width>
 								<height>120</height>
 								<font>font15</font>
+								<textoffsetx>20</textoffsetx>
 								<align>right</align>
 								<textcolor>grey</textcolor>
 								<label>$INFO[ListItem.Label2]</label>
@@ -97,26 +99,29 @@
 								<texture background="true" fallback="DefaultIconInfo.png">$INFO[ListItem.Icon]</texture>
 							</control>
 							<control type="label">
-								<left>135</left>
-								<width>1565</width>
+								<left>120</left>
+								<width>1600</width>
 								<height>70</height>
 								<font>font30</font>
+								<textoffsetx>20</textoffsetx>
 								<label>$INFO[ListItem.Label]</label>
 								<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Property(Event.Description))">Conditional</animation>
 							</control>
 							<control type="label">
-								<left>135</left>
-								<top>50</top>
+								<left>120</left>
+								<top>55</top>
 								<width>1565</width>
 								<height>60</height>
 								<font>font15</font>
+								<textoffsetx>20</textoffsetx>
 								<label>$INFO[ListItem.Property(Event.Description)]</label>
 							</control>
 							<control type="label">
-								<left>60</left>
-								<width>1630</width>
+								<left>120</left>
+								<width>1600</width>
 								<height>120</height>
 								<font>font15</font>
+								<textoffsetx>20</textoffsetx>
 								<align>right</align>
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
@@ -128,7 +133,7 @@
 						<width>12</width>
 						<height>840</height>
 						<onleft>50</onleft>
-						<onright>9002</onright>
+						<onright>50</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 						<showonepage>false</showonepage>

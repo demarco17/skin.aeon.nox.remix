@@ -108,7 +108,7 @@
 							<onclick>ActivateWindow(programs,androidapp://sources/apps/,return)</onclick>
 							<visible>System.Platform.Android</visible>
 						</item>
-						<!--<item>
+						<item>
 							<label>$LOCALIZE[24998]</label>
 							<property name="AppsTarget">addonbrowser</property>
 							<property name="AppsContent">addons://user/</property>
@@ -119,7 +119,7 @@
 							<property name="AppsTarget">addonbrowser</property>
 							<property name="AppsContent">addons://all/</property>
 							<onclick>ActivateWindow(addonbrowser,addons://all/,return)</onclick>
-						</item>-->
+						</item>
 					</content>
 				</control>
 			</control>
@@ -157,7 +157,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -206,7 +206,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -252,7 +252,7 @@
 							<width>240</width>
 							<height>240</height>
 							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Art(thumb)]</texture>
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
@@ -264,7 +264,7 @@
 								<width>240</width>
 								<height>240</height>
 								<aspectratio>scale</aspectratio>
-								<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+								<texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
