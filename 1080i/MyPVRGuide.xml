@@ -38,6 +38,8 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>60</onright>
+				<onback>SetProperty(MediaMenu,True,home)</onback>
+				<onback>202</onback>
 				<orientation>vertical</orientation>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="19297">list</viewtype>
@@ -81,7 +83,7 @@
 						<aspectratio align="right">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<bordersize>10</bordersize>
-						<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</channellayout>
 				<focusedchannellayout height="90" width="440">
@@ -119,7 +121,7 @@
 						<aspectratio align="right">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<bordersize>10</bordersize>
-						<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</focusedchannellayout>
 				<itemlayout height="90">
@@ -239,19 +241,28 @@
 					</control>
 					<control type="image">
 						<width>404</width>
-						<height>60</height>
+						<height>90</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<bordersize>5</bordersize>
-						<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="label">
-						<top>60</top>
+						<width>80</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<textoffsetx>10</textoffsetx>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+					</control>
+					<control type="label">
 						<width>404</width>
-						<height>20</height>
-						<font>font10</font>
+						<height>90</height>
+						<font>font15_bold</font>
 						<align>center</align>
-						<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.ChannelName, - ,][/B]</label>
+						<textoffsetx>30</textoffsetx>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</channellayout>
 				<focusedchannellayout height="90" width="404">
@@ -269,19 +280,28 @@
 					</control>
 					<control type="image">
 						<width>404</width>
-						<height>60</height>
+						<height>90</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<bordersize>5</bordersize>
-						<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="label">
-						<top>60</top>
+						<width>80</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<textoffsetx>10</textoffsetx>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+					</control>
+					<control type="label">
 						<width>404</width>
-						<height>20</height>
-						<font>font10</font>
+						<height>90</height>
+						<font>font15_bold</font>
 						<align>center</align>
-						<label>[B]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.ChannelName, - ,][/B]</label>
+						<textoffsetx>30</textoffsetx>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</focusedchannellayout>
 				<itemlayout height="100" width="404">
@@ -356,9 +376,18 @@
 				</control>
 				<control type="image">
 					<width>140</width>
-					<height>90</height>
+					<height>70</height>
 					<texture colordiffuse="white">settings/icons/livetv.png</texture>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<top>55</top>
+					<width>140</width>
+					<height>20</height>
+					<font>font10</font>
+					<textoffsetx>5</textoffsetx>
+					<align>center</align>
+					<label>[UPPERCASE]$LOCALIZE[19069][/UPPERCASE]</label>
 				</control>
 			</control>
 			<control type="image">
@@ -376,6 +405,7 @@
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<fadetime>CrossfadeTime</fadetime>
 				<bordersize>45</bordersize>
+				<visible>!String.IsEmpty(ListItem.Icon)</visible>
 			</control>
 			<control type="group">
 				<left>522</left>
