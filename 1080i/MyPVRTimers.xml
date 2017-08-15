@@ -72,7 +72,7 @@
 						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<label>$INFO[ListItem.Timertype,[COLOR grey],[/COLOR]]$INFO[ListItem.Comment,[COLOR grey3] | [/COLOR]]</label>
+						<label>$INFO[ListItem.Timertype,[COLOR grey],[/COLOR]]$INFO[ListItem.Comment,[COLOR grey3]  |  [/COLOR]]</label>
 					</control>
 					<control type="label">
 						<left>120</left>
@@ -80,7 +80,7 @@
 						<width>1600</width>
 						<height>60</height>
 						<align>right</align>
-						<font>font13</font>
+						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Date]</label>
@@ -132,7 +132,7 @@
 						<font>font14</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<textoffsetx>20</textoffsetx>
-						<label>$INFO[ListItem.Timertype,[COLOR white],[/COLOR]]$INFO[ListItem.Comment,[COLOR grey3] | [/COLOR]]</label>
+						<label>$INFO[ListItem.Timertype,[COLOR white],[/COLOR]]$INFO[ListItem.Comment,[COLOR grey3]  |  [/COLOR]]</label>
 					</control>
 					<control type="label">
 						<left>120</left>
@@ -140,7 +140,7 @@
 						<width>1600</width>
 						<height>60</height>
 						<align>right</align>
-						<font>font13</font>
+						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
 						<label>$INFO[ListItem.Date]</label>
 					</control>

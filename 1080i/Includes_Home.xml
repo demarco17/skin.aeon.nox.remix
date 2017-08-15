@@ -579,7 +579,7 @@
 	<include name="NowPlayingVideoWidget">
 		<!-- Video Info -->
 		<control type="group">
-			<left>15</left>
+			<left>14</left>
 			<top>55</top>
 			<visible>Player.HasVideo + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<include>OpenCloseAnimation</include>
@@ -635,12 +635,12 @@
 	<include name="PvrInfoWidget">
 		<!-- PVR Info -->
 		<control type="group">
-			<left>15</left>
+			<left>14</left>
 			<top>55</top>
-			<visible>[Pvr.IsRecording | Pvr.HasNonRecordingTimer] + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
+			<visible>[Pvr.IsRecording | Pvr.HasNonRecordingTimer] + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)]</visible>
 			<include>OpenCloseAnimation</include>
 			<control type="grouplist">
-				<width>1905</width>
+				<width>1860</width>
 				<height>206</height>
 				<itemgap>30</itemgap>
 				<align>left</align>
@@ -761,9 +761,9 @@
 	<include name="NowPlayingMusicWidget">
 		<!-- Music Info -->
 		<control type="group">
-			<left>15</left>
+			<left>14</left>
 			<top>55</top>
-			<visible>Player.HasAudio + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
+			<visible>Player.HasAudio</visible>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<description>background image</description>

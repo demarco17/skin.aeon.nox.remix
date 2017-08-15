@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol always="true">9001</defaultcontrol>
 	<include>OpenCloseAnimation</include>
-    <controls>
-        <control type="group">            
+	<controls>
+		<control type="group">
 			<left>478</left>
 			<top>164</top>
-            <control type="image">
+			<control type="image">
 				<left>16</left>
 				<top>16</top>
 				<width>932</width>
@@ -23,82 +23,82 @@
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
 			</control>
-            <control type="panel" id="3110">
+			<control type="panel" id="3110">
 				<left>32</left>
 				<top>88</top>
 				<width>900</width>
-				<height>600</height>          
-                <onup>9001</onup>
+				<height>600</height>
+				<onup>9001</onup>
 				<ondown>9001</ondown>
-                <scrolltime tween="quadratic" easing="out">300</scrolltime>
-                <preloaditems>2</preloaditems>
-                <itemlayout width="150" height="150">
-                    <control type="image">
-                        <width>150</width>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<preloaditems>2</preloaditems>
+				<itemlayout width="150" height="150">
+					<control type="image">
+						<width>150</width>
 						<height>150</height>
-                        <texture>$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="150" height="150">
-                    <control type="image">
+					</control>
+				</itemlayout>
+				<focusedlayout width="150" height="150">
+					<control type="image">
 						<include>IconZoomAnimation</include>
-                        <width>150</width>
+						<width>150</width>
 						<height>150</height>
-                        <texture>$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 						<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 						<bordersize>5</bordersize>
-                    </control>
-                </focusedlayout>
-            </control>
-            <control type="grouplist" id="9001">
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="9001">
 				<left>32</left>
-                <top>704</top>
-                <width>900</width>
+				<top>704</top>
+				<width>900</width>
 				<align>center</align>
 				<itemgap>15</itemgap>
-                <onup>3110</onup>
+				<onup>3110</onup>
 				<ondown>3110</ondown>
 				<orientation>horizontal</orientation>
-                <control type="button" id="3010">
+				<control type="button" id="3010">
 					<description>Edit</description>
 					<width>280</width>
 					<align>center</align>
-                    <label>$INFO[Window.Property(colorstring)]</label>
+					<label>$INFO[Window.Property(colorstring)]</label>
 					<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
-                </control>
-                <control type="button" id="3012">
+				</control>
+				<control type="button" id="3012">
 					<description>Save</description>
 					<width>280</width>
 					<align>center</align>
-                    <label>190</label>
+					<label>190</label>
 					<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
-                </control>
-                <control type="button" id="9002">
+				</control>
+				<control type="button" id="9002">
 					<description>Reset/Default</description>
 					<width>280</width>
 					<align>center</align>
-                    <label>571</label>
+					<label>571</label>
 					<onclick>Skin.Reset(skincolour.name)</onclick>
 					<onclick>SetFocus(3012)</onclick>
 					<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
-                </control>
-            </control>
-        </control>
-        <control type="button" id="3011">
-			<visible allowhiddenfocus="true">false</visible>
+				</control>
+				<control type="button" id="3011">
+					<visible allowhiddenfocus="true">false</visible>
+				</control>
+				<control type="group" id="3020">
+					<control type="label" id="3016">
+						<visible allowhiddenfocus="true">false</visible>
+					</control>
+					<control type="slider" id="3015">
+						<visible allowhiddenfocus="true">false</visible>
+					</control>
+					<control type="label" id="3017">
+						<visible allowhiddenfocus="true">false</visible>
+					</control>
+				</control>
+			</control>
 		</control>
-        <control type="group" id="3020">
-            <control type="label" id="3016">
-				<visible allowhiddenfocus="true">false</visible>
-			</control>
-            <control type="slider" id="3015">
-				<visible allowhiddenfocus="true">false</visible>
-			</control>
-            <control type="label" id="3017">
-				<visible allowhiddenfocus="true">false</visible>
-			</control>
-        </control>
-    </controls>
+	</controls>
 </window>

@@ -114,11 +114,12 @@
 					<enable>false</enable>
 					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
-				<control type="button" id="2">
-					<description>View As button</description>
+				<control type="button" id="202">
 					<textwidth>352</textwidth>
+					<label>$LOCALIZE[24140]: $INFO[Container.Viewmode]</label>
 					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Container.ViewCount][/COLOR]</label2>
 					<include>ButtonCommonValues</include>
+					<onclick>Container.NextViewMode</onclick>
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>

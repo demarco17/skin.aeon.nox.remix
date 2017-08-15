@@ -169,7 +169,7 @@
 					<width>505</width>
 					<height>285</height>
 					<aspectratio>scale</aspectratio>
-					<texture background="true" fallback="DefaultVideo.png">$INFO[Container(50).ListItem.ActualIcon]</texture>
+					<texture background="true" fallback="DefaultVideo.png">$INFO[Container(50).ListItem.Icon]</texture>
 					<fadetime>CrossfadeTime</fadetime>
 				</control>
 				<control type="group">
