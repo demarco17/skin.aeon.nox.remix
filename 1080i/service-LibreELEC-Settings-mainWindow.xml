@@ -1130,7 +1130,7 @@
 					<textoffsetx>10</textoffsetx>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
-					<scrollspeed>20</scrollspeed>
+					<scrollspeed>25</scrollspeed>
 					<scrollout>false</scrollout>
 					<pauseatend>10000</pauseatend>
 					<label>$INFO[Player.Title]</label>

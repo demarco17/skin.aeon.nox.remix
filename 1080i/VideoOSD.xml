@@ -9,11 +9,11 @@
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(pvrchannelguide) | Window.IsVisible(PVROSDTeletext) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(subtitlesearch) | Window.IsVisible(playerprocessinfo)]</visible>
 			<control type="image">
 				<width>1920</width>
-				<height>106</height>
+				<height>102</height>
 				<texture border="4">dialogs/InfoBar.png</texture>
 			</control>
 			<control type="grouplist" id="202">
-				<height>144</height>
+				<height>100</height>
 				<width>1920</width>
 				<align>center</align>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>

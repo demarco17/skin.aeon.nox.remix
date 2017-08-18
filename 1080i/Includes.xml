@@ -206,8 +206,7 @@
 					<include>ButtonCommonValues</include>
 					<label>31068</label>
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
-					<onclick condition="Player.HasAudio + !Window.IsVisible(tvguide)">SetFocus(50)</onclick>
-					<onclick condition="Player.HasAudio + Window.IsVisible(tvguide)">SetFocus(10)</onclick>
+					<onclick condition="Player.HasAudio">SetFocus(50)</onclick>
 					<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
 					<onclick condition="Player.HasVideo">Fullscreen</onclick>
 					<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
@@ -317,7 +316,7 @@
 					<textoffsetx>10</textoffsetx>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
-					<scrollspeed>20</scrollspeed>
+					<scrollspeed>25</scrollspeed>
 					<scrollout>false</scrollout>
 					<pauseatend>10000</pauseatend>
 					<label>$INFO[Player.Title]</label>
@@ -1027,6 +1026,17 @@
 			<height>45</height>
 			<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+	<include name="PVRChannelNumberInput">
+		<control type="label">
+			<left>30</left>
+			<top>55</top>
+			<width>300</width>
+			<height>50</height>
+			<label>$INFO[PVR.ChannelNumberInput]</label>
+			<font>font35_title_bold</font>
+			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
 		</control>
 	</include>
 </includes>

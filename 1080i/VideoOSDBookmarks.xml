@@ -10,15 +10,13 @@
 				<height>224</height>
 				<texture border="4">dialogs/InfoBar.png</texture>
 			</control>
-			<control type="fixedlist" id="11">
+			<control type="panel" id="11">
 				<left>351</left>
 				<width>1570</width>
 				<height>210</height>
 				<ondown>60</ondown>
 				<onup>9000</onup>
 				<pagecontrol>60</pagecontrol>
-				<focusposition>0</focusposition>
-				<movement>3</movement>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<viewtype label="536">icon</viewtype>
 				<orientation>horizontal</orientation>
@@ -93,8 +91,8 @@
 				<width>350</width>
 				<height>210</height>
 				<orientation>vertical</orientation>
-				<onleft>11</onleft>
-				<onright>11</onright>
+				<onleft>SetFocus(11)</onleft>
+				<onright>SetFocus(11)</onright>
 				<control type="button" id="2">
 					<description>Create Bookmark button</description>
 					<label>294</label>

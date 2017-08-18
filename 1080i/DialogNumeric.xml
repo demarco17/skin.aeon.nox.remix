@@ -25,7 +25,6 @@
 				<font>font15_title</font>
 				<textcolor>dialogheader</textcolor>
 				<scroll>true</scroll>
-				<scrollspeed>20</scrollspeed>
 			</control>
 			<control type="label" id="4">
 				<left>12</left>

@@ -77,7 +77,7 @@
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
 							<texture>overlays/OverlayUnWatched2.png</texture>
-							<visible>!String.IsEmpty(Listitem.dbtype) + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Overlay)</visible>
+							<visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Overlay) | !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						</control>
 						<control type="image">
 							<left>1070</left>
@@ -160,7 +160,7 @@
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
 							<texture>overlays/OverlayUnWatched2.png</texture>
-							<visible>!String.IsEmpty(Listitem.dbtype) + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Overlay)</visible>
+							<visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Overlay) | !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						</control>
 						<control type="image">
 							<left>1070</left>

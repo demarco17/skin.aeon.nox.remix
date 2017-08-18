@@ -46,7 +46,7 @@
 			<include>FullscreenDimensions</include>
 			<fadetime>CrossfadeTime</fadetime>
 			<aspectratio>scale</aspectratio>
-			<texture fallback="backgrounds/default_bg.png" background="true">$VAR[GlobalBackgroundVar]</texture>
+			<texture fallback="backgrounds/SKINDEFAULT.jpg" background="true">$VAR[GlobalBackgroundVar]</texture>
 		</control>
 	</include>
 	<include name="HomeFanart">

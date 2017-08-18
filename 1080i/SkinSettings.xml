@@ -229,15 +229,6 @@
 						<onclick>Skin.ToggleSetting(Disable.ShowBackgroundVis)</onclick>
 						<selected>!Skin.HasSetting(Disable.ShowBackgroundVis)</selected>
 					</control>
-					<control type="radiobutton" id="204">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>31022</label>
-						<onclick>Skin.ToggleSetting(Disable.PauseClearArt)</onclick>
-						<selected>!Skin.HasSetting(Disable.PauseClearArt)</selected>
-					</control>
 				</control>
 				<control type="grouplist" id="9003">
 					<description>control area</description>
@@ -266,6 +257,15 @@
 						<label>$LOCALIZE[31127]</label>
 						<onclick>Skin.ToggleSetting(Disable.Netflix.Pause)</onclick>
 						<selected>!Skin.HasSetting(Disable.Netflix.Pause)</selected>
+					</control>
+					<control type="radiobutton" id="307">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31022</label>
+						<onclick>Skin.ToggleSetting(Disable.PauseClearArt)</onclick>
+						<selected>!Skin.HasSetting(Disable.PauseClearArt)</selected>
 					</control>
 					<control type="button" id="304">
 						<width>1316</width>
@@ -304,7 +304,7 @@
 						<font>font15</font>
 						<label>$LOCALIZE[10035] $LOCALIZE[20077]</label>
 						<onclick>Skin.ResetSettings</onclick>
-						<onclick>Skin.SetString(CustomGlobalBackground,backgrounds/default_bg.png)</onclick>
+						<onclick>Skin.SetString(CustomGlobalBackground,backgrounds/SKINDEFAULT.jpg)</onclick>
 						<onclick>ReloadSkin()</onclick>
 					</control>
 				</control>

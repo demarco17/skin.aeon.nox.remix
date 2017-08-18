@@ -583,6 +583,8 @@
 			<top>55</top>
 			<visible>Player.HasVideo + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<animation effect="slide" start="0,0" end="0,25" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>
@@ -639,6 +641,8 @@
 			<top>55</top>
 			<visible>[Pvr.IsRecording | Pvr.HasNonRecordingTimer] + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)]</visible>
 			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<animation effect="slide" start="0,0" end="0,25" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<control type="grouplist">
 				<width>1860</width>
 				<height>206</height>
@@ -719,14 +723,27 @@
 						<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NextRecordingChannelIcon]</texture>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
 					</control>
-					<control type="label">
+					<control type="grouplist">
 						<left>155</left>
 						<top>34</top>
 						<width>600</width>
 						<height>50</height>
-						<label>$LOCALIZE[19157][COLOR grey]$INFO[PVR.NextRecordingDateTime,[COLOR grey3] | [/COLOR]][/COLOR]</label>
-						<font>font15_title</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
+						<itemgap>10</itemgap>
+						<orientation>horizontal</orientation>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="label">
+							<width>auto</width>
+							<label>$LOCALIZE[19157]:</label>
+							<font>font15_title</font>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+						</control>
+						<control type="label">
+							<top>2</top>
+							<width>auto</width>
+							<label>$INFO[PVR.NextRecordingDateTime]</label>
+							<font>font14</font>
+							<textcolor>grey2</textcolor>
+						</control>
 					</control>
 					<control type="fadelabel">
 						<left>155</left>
@@ -765,6 +782,10 @@
 			<top>55</top>
 			<visible>Player.HasAudio</visible>
 			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<animation effect="slide" start="0,0" end="0,57" time="200" condition="Window.IsVisible(playercontrols) + !System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,32" time="200" condition="Window.IsVisible(playercontrols) + System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,25" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>
@@ -817,6 +838,8 @@
 	<include name="RSSFeedWidget">
 		<control type="group">
 			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<visible>!Window.IsVisible(playercontrols)</visible>
 			<control type="image">
 				<left>0</left>
 				<width>1920</width>

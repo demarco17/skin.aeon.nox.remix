@@ -8,12 +8,12 @@
 			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<width>1920</width>
-				<height>106</height>
+				<height>102</height>
 				<texture border="4">dialogs/InfoBar.png</texture>
 			</control>
 			<control type="grouplist" id="202">
 				<defaultcontrol always="true">602</defaultcontrol>
-				<height>144</height>
+				<height>100</height>
 				<width>1920</width>
 				<align>center</align>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>

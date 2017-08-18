@@ -73,9 +73,9 @@
 						<top>55</top>
 						<width>770</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>font12</font>
 						<textoffsetx>15</textoffsetx>
-						<textcolor>grey3</textcolor>
+						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Genre]</label>
 					</control>
 					<control type="label">
@@ -118,7 +118,7 @@
 						<top>55</top>
 						<width>770</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>font12</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Genre]</label>

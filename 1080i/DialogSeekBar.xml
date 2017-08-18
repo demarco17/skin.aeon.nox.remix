@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
-	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo] + VideoPlayer.IsFullscreen + !Window.IsVisible(1135)</visible>
+	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo | !String.IsEmpty(PVR.ChannelNumberInput)] + VideoPlayer.IsFullscreen + !Window.IsActive(pvrosdchannels) + !Window.IsVisible(1135)</visible>
 	<controls>
+		<include>PVRChannelNumberInput</include>
 		<control type="group">
 			<visible>!Player.ShowInfo</visible>
 			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>

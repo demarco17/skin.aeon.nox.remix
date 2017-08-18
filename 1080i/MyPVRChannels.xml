@@ -171,14 +171,18 @@
 					<height>872</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="image">
-					<left>33</left>
-					<top>32</top>
-					<width>821</width>
-					<height>461</height>
-					<texture>backgrounds/livetv.png</texture>
-					<include>VisibleFadeAnimation</include>
+				<control type="group">
 					<visible>!Player.HasVideo</visible>
+					<include>VisibleFadeAnimation</include>
+					<control type="image">
+						<left>33</left>
+						<top>32</top>
+						<width>821</width>
+						<height>461</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<bordersize>40</bordersize>
+					</control>
 				</control>
 				<control type="group">
 					<visible>Player.HasVideo</visible>
@@ -261,6 +265,7 @@
 			</control>
 		</control>
 		<include>Topbar</include>
+		<include>PVRChannelNumberInput</include>
 		<include>PVRMediaMenu</include>
 	</controls>
 </window>

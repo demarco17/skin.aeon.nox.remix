@@ -39,7 +39,7 @@
 				<onleft>9050</onleft>
 				<onright>60</onright>
 				<onback>SetProperty(MediaMenu,True,home)</onback>
-				<onback>202</onback>
+				<onback>28</onback>
 				<orientation>vertical</orientation>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="19297">list</viewtype>
@@ -203,6 +203,8 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>61</onright>
+				<onback>SetProperty(MediaMenu,True,home)</onback>
+				<onback>28</onback>
 				<orientation>horizontal</orientation>
 				<pagecontrol>61</pagecontrol>
 				<viewtype label="19298">list</viewtype>
@@ -269,7 +271,7 @@
 					<control type="image">
 						<width>404</width>
 						<height>90</height>
-						<texture  colordiffuse="dialogInner">dialogs/black.png</texture>
+						<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 						<bordersize>1</bordersize>
 					</control>
 					<control type="image">
@@ -399,20 +401,20 @@
 			<control type="image">
 				<left>82</left>
 				<top>632</top>
-				<width>436</width>
+				<width>240</width>
 				<height>240</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<fadetime>CrossfadeTime</fadetime>
-				<bordersize>45</bordersize>
+				<bordersize>40</bordersize>
 				<visible>!String.IsEmpty(ListItem.Icon)</visible>
 			</control>
 			<control type="group">
-				<left>522</left>
+				<left>320</left>
 				<top>632</top>
 				<control type="label">
 					<top>15</top>
-					<width>1316</width>
+					<width>1500</width>
 					<height>30</height>
 					<font>font15</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
@@ -421,7 +423,7 @@
 				</control>
 				<control type="label">
 					<top>58</top>
-					<width>1316</width>
+					<width>1500</width>
 					<height>30</height>
 					<font>font15</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
@@ -432,7 +434,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<left>15</left>
 					<top>115</top>
-					<width>1286</width>
+					<width>1485</width>
 					<height>105</height>
 					<font>font15_textbox2</font>
 					<textcolor>grey</textcolor>
@@ -441,6 +443,7 @@
 			</control>
 		</control>
 		<include>Topbar</include>
+		<include>PVRChannelNumberInput</include>
 		<include>PVRMediaMenu</include>
 	</controls>
 </window>

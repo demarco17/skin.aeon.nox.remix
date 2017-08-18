@@ -329,7 +329,7 @@
 							<width>1316</width>
 							<height>40</height>
 							<align>right</align>
-							<label>$INFO[Container(221).ListItem.Property(ChannelName),,[COLOR grey3] | [/COLOR]]$INFO[Container(221).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+							<label>$INFO[Container(221).ListItem.Property(ChannelName),,[COLOR grey3]  |  [/COLOR]]$INFO[Container(221).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 							<font>font15</font>
 							<textcolor>grey</textcolor>
 							<textoffsetx>15</textoffsetx>
@@ -412,7 +412,7 @@
 							<width>1316</width>
 							<height>40</height>
 							<align>right</align>
-							<label>$INFO[Container(111).ListItem.Property(Year),,[COLOR grey3] | [/COLOR]]$INFO[Container(111).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+							<label>$INFO[Container(111).ListItem.Property(Year),,[COLOR grey3]  |  [/COLOR]]$INFO[Container(111).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 							<font>font15</font>
 							<textcolor>grey</textcolor>
 							<textoffsetx>15</textoffsetx>
@@ -495,7 +495,7 @@
 							<width>1316</width>
 							<height>40</height>
 							<align>right</align>
-							<label>$INFO[Container(211).ListItem.Property(Year),,[COLOR grey3] | [/COLOR]]$INFO[Container(211).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+							<label>$INFO[Container(211).ListItem.Property(Year),,[COLOR grey3]  |  [/COLOR]]$INFO[Container(211).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 							<font>font15</font>
 							<textcolor>grey</textcolor>
 							<textoffsetx>15</textoffsetx>
@@ -578,7 +578,7 @@
 							<width>1316</width>
 							<height>40</height>
 							<align>right</align>
-							<label>$INFO[Container(231).ListItem.Property(Year),,[COLOR grey3] | [/COLOR]]$INFO[Container(231).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+							<label>$INFO[Container(231).ListItem.Property(Year),,[COLOR grey3]  |  [/COLOR]]$INFO[Container(231).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 							<font>font15</font>
 							<textcolor>grey</textcolor>
 							<textoffsetx>15</textoffsetx>
@@ -886,7 +886,7 @@
 							<top>670</top>
 							<width>996</width>
 							<height>40</height>
-							<label>$INFO[Container(151).ListItem.Property(Artist),,[COLOR grey3] | [/COLOR]]$INFO[Container(151).ListItem.Label]</label>
+							<label>$INFO[Container(151).ListItem.Property(Artist),,[COLOR grey3]  |  [/COLOR]]$INFO[Container(151).ListItem.Label]</label>
 							<font>font15</font>
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
@@ -896,7 +896,7 @@
 							<width>1316</width>
 							<height>40</height>
 							<align>right</align>
-							<label>$INFO[Container(151).ListItem.Property(Year),,[COLOR grey3] | [/COLOR]]$INFO[Container(151).ListItem.Property(Duration)]</label>
+							<label>$INFO[Container(151).ListItem.Property(Year),,[COLOR grey3]  |  [/COLOR]]$INFO[Container(151).ListItem.Property(Duration)]</label>
 							<font>font15</font>
 							<textcolor>grey</textcolor>
 							<textoffsetx>15</textoffsetx>
@@ -1119,7 +1119,7 @@
 							<top>720</top>
 							<width>1286</width>
 							<height>116</height>
-							<label>$INFO[Container(181).ListItem.Property(Album)]$INFO[Container(181).ListItem.Property(Year), (,)]$INFO[Container(181).ListItem.Property(Genre),[COLOR grey3] | [/COLOR],]$INFO[Container(181).ListItem.Property(Duration),[COLOR grey3] | [/COLOR], $LOCALIZE[12391]]</label>
+							<label>$INFO[Container(181).ListItem.Property(Album)]$INFO[Container(181).ListItem.Property(Year), (,)]$INFO[Container(181).ListItem.Property(Genre),[COLOR grey3]  |  [/COLOR],]$INFO[Container(181).ListItem.Property(Duration),[COLOR grey3]  |  [/COLOR], $LOCALIZE[12391]]</label>
 							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
 							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>

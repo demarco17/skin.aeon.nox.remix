@@ -2,10 +2,10 @@
 <includes>
 	<variable name="GlobalBackgroundVar">
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="Container.Content(images) + String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.FolderPath]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
+		<value condition="Container.Content(images) + String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.FolderPath]</value>
 		<value condition="Skin.HasSetting(Enable.CustomGlobalBackground)">$INFO[Skin.String(CustomGlobalBackground)]</value>
-		<value>backgrounds/default_bg.png</value>
+		<value>backgrounds/SKINDEFAULT.jpg</value>
 	</variable>
 	<variable name="HomeBackgroundVar">
 		<value condition="String.IsEqual(Container(9000).ListItem.Thumb,1)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
@@ -15,7 +15,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Thumb,5)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Art(thumb))">$INFO[Container(9000).ListItem.Art(thumb)]</value>
 		<value condition="Skin.HasSetting(Enable.CustomGlobalBackground)">$INFO[Skin.String(CustomGlobalBackground)]</value>
-		<value>backgrounds/default_bg.png</value>
+		<value>backgrounds/SKINDEFAULT.jpg</value>
 	</variable>
 	<variable name="ListOverlayEpisodesVar">
 		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)">   99 +</value>
@@ -436,7 +436,6 @@
 		<value condition="Control.HasFocus(106)">$LOCALIZE[31931]</value>
 		<value condition="Control.HasFocus(201)">$LOCALIZE[31918]</value>
 		<value condition="Control.HasFocus(202)">$LOCALIZE[31919]</value>
-		<value condition="Control.HasFocus(204)">$LOCALIZE[31930]</value>
 		<value condition="Control.HasFocus(203) | Control.HasFocus(205)">$LOCALIZE[31916]</value>
 		<value condition="Control.HasFocus(206)">$LOCALIZE[31917]</value>
 		<value condition="Control.HasFocus(405)">$LOCALIZE[31936]</value>
@@ -447,6 +446,7 @@
 		<value condition="Control.HasFocus(304)">$LOCALIZE[31937]</value>
 		<value condition="Control.HasFocus(305)">$LOCALIZE[31938]</value>
 		<value condition="Control.HasFocus(306)">$LOCALIZE[31128]</value>
+		<value condition="Control.HasFocus(307)">$LOCALIZE[31930]</value>
 		<value condition="Control.HasFocus(308)">$LOCALIZE[31948]</value>
 		<value condition="Control.HasFocus(90000) + String.IsEmpty(Container(90000).ListItem.Property(Path))">$LOCALIZE[31923]</value>
 		<value condition="Control.HasFocus(90010)">$LOCALIZE[31913]</value>
@@ -700,7 +700,7 @@
 		<value condition="!String.IsEmpty(Skin.String(weatherfanart.path)) + Skin.HasSetting(weatherfanart.multi)">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
 		<value condition="!String.IsEmpty(Skin.String(weatherfanart.path)) + !Skin.HasSetting(weatherfanart.multi)">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
 		<value condition="Skin.HasSetting(Enable.CustomGlobalBackground)">$INFO[Skin.String(CustomGlobalBackground)]</value>
-		<value>backgrounds/default_bg.png</value>
+		<value>backgrounds/SKINDEFAULT.jpg</value>
 	</variable>
 	<variable name="MusicInfoHeader">
 		<value condition="Container.Content(Artists)">$LOCALIZE[21891]</value>

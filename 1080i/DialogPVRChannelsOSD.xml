@@ -197,5 +197,10 @@
 				<orientation>vertical</orientation>
 			</control>
 		</control>
+		<control type="group">
+			<left>80</left>
+			<top>-17</top>
+			<include>PVRChannelNumberInput</include>
+		</control>
 	</controls>
 </window>
