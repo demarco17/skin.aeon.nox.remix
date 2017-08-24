@@ -119,5 +119,6 @@
 				</control>
 			</control>
 		</control>
+		<include>ScrollLabel</include>
 	</controls>
 </window>

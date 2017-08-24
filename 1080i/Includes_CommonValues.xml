@@ -100,6 +100,20 @@
 		<fadetime>200</fadetime>
 		<colordiffuse>grey</colordiffuse>
 	</include>
+	<!-- Scroll Label -->
+	<include name="ScrollLabel">
+		<control type="label">
+			<include>VisibleFadeAnimation</include>
+			<top>1000</top>
+			<width>120</width>
+			<height>60</height>
+			<textcolor>grey</textcolor>
+			<textoffsetx>20</textoffsetx>
+			<font>font35_title_bold</font>
+			<label>$INFO[ListItem.SortLetter]</label>
+			<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
+		</control>
+	</include>
 	<!-- TV Shows Next Aired script -->
 	<include name="TVNextAiredListCommonLayout">
 		<left>522</left>
@@ -222,7 +236,7 @@
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
 					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-				</control>			
+				</control>
 				<control type="textbox">
 					<description>NextEpisode</description>
 					<left>5</left>

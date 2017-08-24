@@ -16,7 +16,7 @@
 				<width>1920</width>
 				<align>center</align>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<orientation>horizontal</orientation>							
+				<orientation>horizontal</orientation>
 				<control type="button" id="11102">
 					<description>Resume button</description> 
 					<texturefocus>osd/buttons/OSDPlay.png</texturefocus>
@@ -36,7 +36,7 @@
 					<label />
 					<font />
 					<onclick>PlayerControl(Reset)</onclick>
-				</control>				
+				</control>
 				<control type="button" id="11104">
 					<description>Stop button</description> 
 					<texturefocus>osd/buttons/OSDStop.png</texturefocus>

@@ -68,7 +68,7 @@
 					<label>24034</label>
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick>SetFocus(50)</onclick>
-				</control>				
+				</control>
 			</control>
 			<control type="label">
 				<description>Last checked info</description>
@@ -80,5 +80,6 @@
 				<label>[I]$LOCALIZE[31070][CR]$INFO[Window(AddonBrowser).Property(Updated)][/I]</label>
 			</control>
 		</control>
+		<include>ScrollLabel</include>
 	</controls>
 </window>
