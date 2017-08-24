@@ -6,7 +6,6 @@
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.Label))">Skin.SetString($INFO[Window(Home).Property(Nox.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onunload>
 	<onunload>ClearProperty(Nox.Path,Home)</onunload>
 	<onunload>ClearProperty(Nox.Label,Home)</onunload>
-	<onunload>CancelAlarm(DialogClose,True)</onunload>
 	<controls>
 		<control type="group">
 			<left>457</left>
@@ -120,11 +119,6 @@
 						<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 						<onclick>Skin.SetString(ItemToEdit.Path,ActivateWindow(Music,$INFO[Skin.String(ItemToEdit.Path)],return))</onclick>
 						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[1036]</label>
-						<onclick>RunScript(script.favourites,property=ItemToEdit)</onclick>
-						<onclick>AlarmClock(DialogClose,Dialog.Close(1123),00:05,silent)</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[20190]</label>

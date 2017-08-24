@@ -883,6 +883,11 @@
 			<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 			<bordersize>20</bordersize>
 		</control>
+		<control type="group">
+			<left>226</left>
+			<top>475</top>
+			<include>IconWatchedStatus</include>
+		</control>
 		<control type="image">
 			<left>18</left>
 			<top>515</top>
@@ -902,6 +907,11 @@
 			<height>364</height>
 			<texture background="true" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="group">
+			<left>231.5</left>
+			<top>467</top>
+			<include>IconWatchedStatus</include>
 		</control>
 		<control type="image">
 			<left>-28</left>

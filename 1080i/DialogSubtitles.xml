@@ -166,7 +166,7 @@
 						<width>150</width>
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="grey">$INFO[ListItem.ActualIcon,rating,.png]</texture>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$INFO[ListItem.ActualIcon,flags/rating/rating,.png]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1260" height="90">
@@ -246,7 +246,7 @@
 						<width>150</width>
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.ActualIcon,rating,.png]</texture>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$INFO[ListItem.ActualIcon,flags/rating/rating,.png]</texture>
 					</control>
 				</focusedlayout>
 			</control>

@@ -730,7 +730,6 @@
 						<height>50</height>
 						<itemgap>10</itemgap>
 						<orientation>horizontal</orientation>
-						<usecontrolcoords>true</usecontrolcoords>
 						<control type="label">
 							<width>auto</width>
 							<label>$LOCALIZE[19157]:</label>
@@ -738,7 +737,6 @@
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
 						</control>
 						<control type="label">
-							<top>2</top>
 							<width>auto</width>
 							<label>$INFO[PVR.NextRecordingDateTime]</label>
 							<font>font14</font>

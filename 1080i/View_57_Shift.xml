@@ -15,47 +15,27 @@
 				<orientation>horizontal</orientation>
 				<viewtype label="31079">BigWrap</viewtype>
 				<pagecontrol>5761</pagecontrol>
-				<scrolltime tween="quadratic">400</scrolltime>
+				<scrolltime tween="quadratic" easing="out">400</scrolltime>
 				<focusposition>1</focusposition>
 				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<itemlayout width="272" height="620" condition="!String.IsEqual(Control.GetLabel(4440),1)">
 					<include>ShiftPosterThumbs</include>
-					<control type="group">
-						<left>226</left>
-						<top>475</top>
-						<include>IconWatchedStatus</include>
-					</control>
 				</itemlayout>
 				<focusedlayout width="272" height="620" condition="!String.IsEqual(Control.GetLabel(4440),1)">
 					<control type="group">
 						<animation effect="zoom" center="auto" start="100" end="130" time="400" reversible="false">Focus</animation>
 						<animation effect="zoom" center="auto" start="130" end="100" time="400" reversible="false">Unfocus</animation>
 						<include>ShiftPosterThumbs</include>
-						<control type="group">
-							<left>226</left>
-							<top>475</top>
-							<include>IconWatchedStatus</include>
-						</control>
 					</control>
 				</focusedlayout>
 				<itemlayout width="272" height="620" condition="String.IsEqual(Control.GetLabel(4440),1)">
 					<include>ShiftPosterCase</include>
-					<control type="group">
-						<left>231</left>
-						<top>467</top>
-						<include>IconWatchedStatus</include>
-					</control>
 				</itemlayout>
 				<focusedlayout width="272" height="620" condition="String.IsEqual(Control.GetLabel(4440),1)">
 					<control type="group">
 						<animation effect="zoom" center="auto" start="100" end="130" time="400" reversible="false">Focus</animation>
 						<animation effect="zoom" center="auto" start="130" end="100" time="400" reversible="false">Unfocus</animation>
 						<include>ShiftPosterCase</include>
-						<control type="group">
-							<left>231</left>
-							<top>467</top>
-							<include>IconWatchedStatus</include>
-						</control>
 					</control>
 				</focusedlayout>
 			</control>
@@ -87,7 +67,7 @@
 				<orientation>horizontal</orientation>
 				<viewtype label="31079">BigWrap</viewtype>
 				<pagecontrol>5761</pagecontrol>
-				<scrolltime tween="quadratic">400</scrolltime>
+				<scrolltime tween="quadratic" easing="out">400</scrolltime>
 				<focusposition>1</focusposition>
 				<preloaditems>2</preloaditems>
 				<visible>Container.Content(songs) | Container.Content(artists) | Container.Content(albums)</visible>

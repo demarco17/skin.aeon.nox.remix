@@ -38,21 +38,21 @@
 		<value condition="Window.IsActive(audiodspmanager)">$LOCALIZE[15020]</value>
 		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvrecordings) | Window.IsActive(tvtimers) | Window.IsActive(TVTimerRules) | Window.IsActive(tvsearch)">$LOCALIZE[19020]: </value>
 		<value condition="Window.IsActive(radiochannels) | Window.IsActive(radioguide) | Window.IsActive(radiorecordings) | Window.IsActive(radiotimers) | Window.IsActive(RadioTimerRules) | Window.IsActive(radiosearch)">$LOCALIZE[19183]: </value>
-		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[System.CurrentWindow,,: ]</value>
+		<value condition="!String.IsEmpty(Container.FolderName) | Window.IsActive(1133)">$INFO[System.CurrentWindow,,: ]</value>
 		<value>$INFO[System.CurrentWindow]</value>
 	</variable>
 	<variable name="BreadcrumbsVar">
-		<value condition="Window.IsActive(videos) + Container.Filtered">$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]$INFO[Control.GetLabel(10),[COLOR grey3] | [/COLOR],: $LOCALIZE[587]]</value>
-		<value condition="Window.IsActive(videos) + !String.IsEqual(Control.GetLabel(10),$LOCALIZE[16100])">$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]$INFO[Control.GetLabel(10),[COLOR grey3] | [/COLOR],]</value>
+		<value condition="Window.IsActive(videos) + Container.Filtered">$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]$INFO[Control.GetLabel(10),[COLOR grey3]  |  [/COLOR],: $LOCALIZE[587]]</value>
+		<value condition="Window.IsActive(videos) + !String.IsEqual(Control.GetLabel(10),$LOCALIZE[16100])">$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]$INFO[Control.GetLabel(10),[COLOR grey3]  |  [/COLOR],]</value>
 		<value condition="Window.IsActive(videos)">$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]</value>
-		<value condition="Window.IsActive(addoninformation) + !Window.IsActive(textviewer)">$VAR[BreadcrumbsFillerVar]$INFO[ListItem.AddonName,: ]</value>
+		<value condition="Window.IsActive(addoninformation) + !Window.IsActive(textviewer)">$VAR[BreadcrumbsFillerVar]$INFO[ListItem.AddonName,]</value>
 		<value condition="Window.IsActive(textviewer)">$VAR[BreadcrumbsFillerVar]</value>
 		<value condition="Window.IsActive(script-globalsearch-main.xml)">$INFO[System.AddonTitle(script.globalsearch)]$INFO[Control.GetLabel(190),: ]$INFO[Control.GetLabel(191), ]</value>
 		<value condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19069]]</value>
 		<value condition="Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19163]]</value>
 		<value condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19040]]</value>
 		<value condition="Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[137]]</value>
-		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]$INFO[Control.GetLabel(21),[COLOR grey3] | [/COLOR],]</value>
+		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]$INFO[Control.GetLabel(21),[COLOR grey3]  |  [/COLOR],]</value>
 		<value condition="Window.IsActive(SettingsCategory.xml)">$INFO[Control.GetLabel(2),$LOCALIZE[5]: ]</value>
 		<value condition="Window.IsActive(profiles)">$LOCALIZE[5]: $LOCALIZE[13200]</value>
 		<value condition="Window.IsActive(addonbrowser) + String.IsEqual(Container.FolderName,System.CurrentWindow)">$LOCALIZE[10040]</value>
@@ -62,7 +62,7 @@
 	<variable name="TopbarRightVar">
 		<value condition="Window.IsActive(1133)">$INFO[Container(51).NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Location)]</value>
-		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),, $LOCALIZE[33006]]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3] | [/COLOR], $LOCALIZE[20161]]</value>
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),, $LOCALIZE[33006]]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3]  |  [/COLOR], $LOCALIZE[20161]]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(20)">$INFO[Container(20).NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(21)">$INFO[Container(21).NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(SettingsCategory.xml)">$INFO[Control.GetLabel(20),$LOCALIZE[31142]: ,]</value>
@@ -385,14 +385,14 @@
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TvShowTitle]</value>
 		<value condition="Container.Content(seasons) + !String.IsEqual(ListItem.Dbtype,movie)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: ,]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
-		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,Top250.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[ListItem.Top250,#, $LOCALIZE[13409]]$INFO[ListItem.Rating,[COLOR grey3] | [/COLOR],]$VAR[RatingAndVotesVar, (,)]</value>
+		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,Top250.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[ListItem.Top250,#, $LOCALIZE[13409]]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$VAR[RatingAndVotesVar, (,)]</value>
 		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,BestPicture.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[Container.FolderName]$INFO[ListItem.Year,[COLOR grey3]: [/COLOR],]</value>
 		<value condition="Container.Content(musicvideos) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="FloorLabel2Var">
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(songs)">$INFO[ListItem.Duration,,[COLOR grey3] | [/COLOR]]$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(songs)">$INFO[ListItem.Duration,,[COLOR grey3]  |  [/COLOR]]$INFO[ListItem.Album]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
 		<value condition="Container.Content()">$INFO[ListItem.Comment]</value>
 		<value>$INFO[ListItem.Label2]</value>
@@ -424,7 +424,7 @@
 		<value>$INFO[Player.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PlayerTitleLabelVar">
-		<value condition="Player.ChapterCount">$INFO[Player.Title]$INFO[player.chapter,[COLOR grey3] | [/COLOR]$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]</value>
+		<value condition="Player.ChapterCount">$INFO[Player.Title]$INFO[player.chapter,[COLOR grey3]  |  [/COLOR]$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]</value>
 		<value>$INFO[Player.Title]</value>
 	</variable>
 	<variable name="SkinSettingsDescriptionVar">
@@ -622,9 +622,9 @@
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="BigListInfoVar2">
-		<value condition="Container.Content(movies) + !String.Contains(ListItem.Path,videodb://Movies/sets)">$INFO[ListItem.Year,,[COLOR grey3] | [/COLOR]]$INFO[ListItem.Rating,,[COLOR grey3] | [/COLOR]]$INFO[ListItem.Duration]</value>
+		<value condition="Container.Content(movies) + !String.Contains(ListItem.Path,videodb://Movies/sets)">$INFO[ListItem.Year,,[COLOR grey3]  |  [/COLOR]]$INFO[ListItem.Rating,,[COLOR grey3]  |  [/COLOR]]$INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Rating,,[COLOR grey3] | [/COLOR]]$INFO[ListItem.Duration]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Rating,,[COLOR grey3]  |  [/COLOR]]$INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="VisMediaFlags">

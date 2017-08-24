@@ -85,7 +85,7 @@
 				<align>right</align>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey2</textcolor>
-				<label>$INFO[System.Time,,[COLOR grey3] | [/COLOR]]$INFO[System.Date]</label>
+				<label>$INFO[System.Time,,[COLOR grey3]  |  [/COLOR]]$INFO[System.Date]</label>
 			</control>
 			<control type="label">
 				<left>238</left>

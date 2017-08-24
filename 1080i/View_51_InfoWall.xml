@@ -174,7 +174,7 @@
 					<left>1113</left>
 					<top>625</top>
 					<width>685</width>
-					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Genre,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes,[COLOR grey3] | [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3] | [/COLOR],]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Genre,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3]  |  [/COLOR],]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
@@ -467,7 +467,7 @@
 				<control type="button">
 					<top>461</top>
 					<width>668</width>
-					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Artist,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label),[COLOR grey3] | [/COLOR]]</label>
+					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Artist,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label),[COLOR grey3]  |  [/COLOR]]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>Container.Content(albums)</visible>
 				</control>

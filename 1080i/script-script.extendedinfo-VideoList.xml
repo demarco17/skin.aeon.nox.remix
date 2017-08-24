@@ -42,7 +42,7 @@
 							<width>240</width>
 							<height>360</height>
 							<aspectratio>scale</aspectratio>
-							<texture background="true" fallback="DefaultMovieTitle.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
@@ -63,7 +63,7 @@
 							<width>240</width>
 							<height>360</height>
 							<aspectratio>scale</aspectratio>
-							<texture background="true" fallback="DefaultMovieTitle.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
@@ -185,7 +185,7 @@
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
 				<align>left</align>
-				<label>$INFO[Control.GetLabel(5001),IMDB[COLOR grey3] | [/COLOR],]</label>
+				<label>$INFO[Control.GetLabel(5001),IMDB[COLOR grey3]  |  [/COLOR],]</label>
 			</control>
 			<control type="label">
 				<width>1920</width>
