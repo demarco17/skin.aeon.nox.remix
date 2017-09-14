@@ -11,7 +11,7 @@
 				<top>16</top>
 				<width>1704</width>
 				<height>690</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
 			<control type="grouplist">
 				<top>32</top>
@@ -28,7 +28,7 @@
 					<textcolor>dialogheader</textcolor>
 				</control>
 				<control type="image" id="110">
-					<top>5</top>
+					<top>6</top>
 					<height>30</height>
 					<width>auto</width>
 					<aspectratio>keep</aspectratio>
@@ -40,7 +40,7 @@
 				<width>350</width>
 				<height>48</height>
 				<font>font15</font>
-				<textcolor>grey2</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="label">
 				<left>370</left>

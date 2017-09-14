@@ -72,14 +72,6 @@
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
-						<visible>!String.IsEmpty(ListItem.Duration)</visible>
-					</control>
-					<control type="label">
-						<width>220</width>
-						<height>90</height>
-						<font>font14</font>
-						<textcolor>grey</textcolor>
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
 						<visible>[Container.Content(episodes) | Container.Content(tvshows)] + !String.IsEmpty(ListItem.Premiered)</visible>
 					</control>
@@ -98,6 +90,14 @@
 						<textcolor>grey</textcolor>
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[563]:[/COLOR][CR]$INFO[ListItem.Rating]</label>
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
+					</control>
+					<control type="label">
+						<width>220</width>
+						<height>90</height>
+						<font>font14</font>
+						<textcolor>grey</textcolor>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
+						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
 				</control>
 				<control type="textbox">

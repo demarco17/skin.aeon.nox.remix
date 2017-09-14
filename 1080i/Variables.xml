@@ -131,12 +131,12 @@
 		<value>$LOCALIZE[20360]</value>
 	</variable>
 	<variable name="VideoPlotVar">
-		<value condition="System.GetBool(Videos.showunwatchedplots) + !String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Tagline,,. ]$INFO[ListItem.PlotOutline,[COLOR grey],[/COLOR]]</value>
-		<value>$INFO[ListItem.Tagline,,. ]$INFO[ListItem.Plot,[COLOR grey],[/COLOR]]</value>
+		<value condition="System.GetBool(Videos.showunwatchedplots) + !String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Tagline,[I],[COLOR grey] - [/COLOR][/I]]$INFO[ListItem.PlotOutline,[COLOR grey],[/COLOR]]</value>
+		<value>$INFO[ListItem.Tagline,[I],[COLOR grey] - [/COLOR][/I]]$INFO[ListItem.Plot,[COLOR grey],[/COLOR]]</value>
 	</variable>
 	<variable name="VideoPlayerPlotVar">
-		<value condition="!String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.Tagline,,. ]$INFO[VideoPlayer.PlotOutline,[COLOR grey],[/COLOR]]</value>
-		<value>$INFO[VideoPlayer.Tagline,,. ]$INFO[VideoPlayer.Plot,[COLOR grey],[/COLOR]]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.Tagline,[I],[COLOR grey] - [/COLOR][/I]]$INFO[VideoPlayer.PlotOutline,[COLOR grey],[/COLOR]]</value>
+		<value>$INFO[VideoPlayer.Tagline,[I],[COLOR grey] - [/COLOR][/I]]$INFO[VideoPlayer.Plot,[COLOR grey],[/COLOR]]</value>
 	</variable>
 	<variable name="MusicPlotVar">
 		<value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
@@ -437,10 +437,8 @@
 		<value condition="Control.HasFocus(201)">$LOCALIZE[31918]</value>
 		<value condition="Control.HasFocus(202)">$LOCALIZE[31919]</value>
 		<value condition="Control.HasFocus(203) | Control.HasFocus(205)">$LOCALIZE[31916]</value>
+		<value condition="Control.HasFocus(204)">$LOCALIZE[31936]</value>
 		<value condition="Control.HasFocus(206)">$LOCALIZE[31917]</value>
-		<value condition="Control.HasFocus(405)">$LOCALIZE[31936]</value>
-		<value condition="Control.HasFocus(406)">$LOCALIZE[31928]</value>
-		<value condition="Control.HasFocus(407)">$LOCALIZE[31929]</value>
 		<value condition="Control.HasFocus(302)">$LOCALIZE[31939]</value>
 		<value condition="Control.HasFocus(303)">$LOCALIZE[31934]</value>
 		<value condition="Control.HasFocus(304)">$LOCALIZE[31937]</value>
@@ -763,5 +761,9 @@
 	<variable name="SkinThemeColour">
 		<value condition="!String.IsEmpty(Skin.String(skincolour.name)) + !String.IsEqual(Skin.String(skincolour.name),$LOCALIZE[231])">$INFO[Skin.String(skincolour.name)]</value>
 		<value>themecolor</value>
+	</variable>
+	<variable name="GameSettingsHeader">
+		<value condition="Window.IsVisible(GameVideoFilter)">$LOCALIZE[35225]</value>
+		<value>$LOCALIZE[629]</value>
 	</variable>
 </includes>

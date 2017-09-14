@@ -59,10 +59,9 @@
 					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 				</control>
 				<control type="gamecontroller" id="31">
-					<left>78</left>
-					<top>90</top>
-					<width>480</width>
-					<height>300</height>
+					<top>61</top>
+					<width>636</width>
+					<height>358</height>
 				</control>
 			</control>
 			<!-- middle group 2 -->

@@ -66,9 +66,6 @@
 						<label>16000</label>
 					</item>
 					<item id="3">
-						<label>250</label>
-					</item>
-					<item id="4">
 						<label>31014</label>
 					</item>
 				</content>
@@ -229,6 +226,15 @@
 						<onclick>Skin.ToggleSetting(Disable.ShowBackgroundVis)</onclick>
 						<selected>!Skin.HasSetting(Disable.ShowBackgroundVis)</selected>
 					</control>
+					<control type="radiobutton" id="204">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[31129]</label>
+						<onclick>Skin.ToggleSetting(HideVisualizationFanart)</onclick>
+						<selected>Skin.HasSetting(HideVisualizationFanart)</selected>
+					</control>
 				</control>
 				<control type="grouplist" id="9003">
 					<description>control area</description>
@@ -238,7 +244,7 @@
 					<height>720</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<visible>Container(9000).HasFocus(4)</visible>
+					<visible>Container(9000).HasFocus(3)</visible>
 					<control type="radiobutton" id="305">
 						<width>1316</width>
 						<height>90</height>
@@ -306,43 +312,6 @@
 						<onclick>Skin.ResetSettings</onclick>
 						<onclick>Skin.SetString(CustomGlobalBackground,backgrounds/SKINDEFAULT.jpg)</onclick>
 						<onclick>ReloadSkin()</onclick>
-					</control>
-				</control>
-				<control type="grouplist" id="9004">
-					<description>control area</description>
-					<left>522</left>
-					<top>32</top>
-					<width>1316</width>
-					<height>720</height>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<visible>Container(9000).HasFocus(3)</visible>
-					<control type="radiobutton" id="405">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[31129]</label>
-						<onclick>Skin.ToggleSetting(HideVisualizationFanart)</onclick>
-						<selected>Skin.HasSetting(HideVisualizationFanart)</selected>
-					</control>
-					<control type="radiobutton" id="406">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[31042]</label>
-						<onclick>Skin.ToggleSetting(BigAssLabel)</onclick>
-						<selected>Skin.HasSetting(BigAssLabel)</selected>
-					</control>
-					<control type="radiobutton" id="407">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[31017]</label>
-						<onclick>Skin.ToggleSetting(VizCDCase)</onclick>
-						<selected>Skin.HasSetting(VizCDCase)</selected>
 					</control>
 				</control>
 			</control>

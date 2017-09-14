@@ -125,7 +125,7 @@
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
 				<width>960</width>
-				<textwidth>880</textwidth>
+				<textwidth>860</textwidth>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default spincontrolex</description>

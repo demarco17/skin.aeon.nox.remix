@@ -190,11 +190,6 @@
 			<size>112</size>
 		</font>
 		<font>
-			<name>BigAssFont</name>
-			<filename>BebasNeue.ttf</filename>
-			<size>600</size>
-		</font>
-		<font>
 			<name>WeatherTemp</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>uppercase</style>

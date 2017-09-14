@@ -17,7 +17,7 @@
 				<top>44</top>
 				<width>853</width>
 				<height>872</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
 			<control type="label" id="12">
 				<description>current directory text label</description>
@@ -115,7 +115,7 @@
 				<top>44</top>
 				<width>853</width>
 				<height>872</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
 			<control type="label" id="101">
 				<description>current directory text label</description>

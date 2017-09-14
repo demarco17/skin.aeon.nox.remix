@@ -24,7 +24,6 @@
 				<focusedlayout width="272" height="620" condition="!String.IsEqual(Control.GetLabel(4440),1)">
 					<control type="group">
 						<animation effect="zoom" center="auto" start="100" end="130" time="400" reversible="false">Focus</animation>
-						<animation effect="zoom" center="auto" start="130" end="100" time="400" reversible="false">Unfocus</animation>
 						<include>ShiftPosterThumbs</include>
 					</control>
 				</focusedlayout>
@@ -34,7 +33,6 @@
 				<focusedlayout width="272" height="620" condition="String.IsEqual(Control.GetLabel(4440),1)">
 					<control type="group">
 						<animation effect="zoom" center="auto" start="100" end="130" time="400" reversible="false">Focus</animation>
-						<animation effect="zoom" center="auto" start="130" end="100" time="400" reversible="false">Unfocus</animation>
 						<include>ShiftPosterCase</include>
 					</control>
 				</focusedlayout>
@@ -77,7 +75,6 @@
 				<focusedlayout width="350" height="750" condition="!String.IsEqual(Control.GetLabel(4440),1)">
 					<control type="group">
 						<animation effect="zoom" center="150,450" start="100" end="130" time="400" reversible="false">Focus</animation>
-						<animation effect="zoom" center="150,450" start="130" end="100" time="400" reversible="false">Unfocus</animation>
 						<include>ShiftSquareThumbs</include>
 					</control>
 				</focusedlayout>
@@ -87,7 +84,6 @@
 				<focusedlayout width="350" height="750" condition="String.IsEqual(Control.GetLabel(4440),1)">
 					<control type="group">
 						<animation effect="zoom" center="150,450" start="100" end="130" time="400" reversible="false">Focus</animation>
-						<animation effect="zoom" center="150,450" start="130" end="100" time="400" reversible="false">Unfocus</animation>
 						<include>ShiftSquareCase</include>
 					</control>
 				</focusedlayout>

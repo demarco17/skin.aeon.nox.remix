@@ -55,7 +55,7 @@
 						<font>font15</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
-						<label>$INFO[ListItem.Tagline]</label>
+						<label>$INFO[ListItem.Tagline,[I],[/I]]</label>
 						<visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.Tagline)</visible>
 					</control>
 					<control type="label">
@@ -559,7 +559,7 @@
 					<width>360</width>
 					<height>360</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+					<texture background="true" diffuse="thumbs/cdart_mask.png">$INFO[ListItem.Art(discart)]</texture>
 					<visible>String.IsEqual(ListItem.DBType,movie) + String.IsEqual(Control.GetLabel(5),$LOCALIZE[206]) + !String.IsEmpty(ListItem.Art(discart))</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>

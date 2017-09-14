@@ -151,7 +151,7 @@
 		</control>
 		<control type="grouplist">
 			<left>10</left>
-			<top>930</top>
+			<top>938</top>
 			<width>748</width>
 			<height>150</height>
 			<itemgap>10</itemgap>
@@ -164,7 +164,8 @@
 				<label>$VAR[VideoPlayerForwardRewindVar]</label>
 				<width min="10" max="300">auto</width>
 				<height>90</height>
-				<font>font_MainMenu</font>
+				<font>font_KodiFiix</font>
+				<shadowcolor />
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="image">

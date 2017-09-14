@@ -60,7 +60,7 @@
 						<font>font15</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<scroll>true</scroll>
-						<label>$INFO[Window.Property(tagline)]</label>
+						<label>$INFO[Window.Property(tagline),[I],[/I]]</label>
 						<visible>!String.IsEmpty(Window.Property(tagline))</visible>
 					</control>
 				</control>

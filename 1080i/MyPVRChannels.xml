@@ -243,10 +243,10 @@
 				<control type="textbox">
 					<label>$INFO[Container(50).ListItem.Plot]</label>
 					<left>15</left>
-					<top>124</top>
+					<top>110</top>
 					<width>791</width>
-					<height>234</height>
-					<font>font15_textbox</font>
+					<height>255</height>
+					<font>font15_textbox2</font>
 					<pagecontrol>62</pagecontrol>
 					<textcolor>grey</textcolor>
 				</control>

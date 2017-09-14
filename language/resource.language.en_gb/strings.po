@@ -148,13 +148,7 @@ msgctxt "#31040"
 msgid "Wind Chill"
 msgstr ""
 
-#empty string with id 31041
-
-msgctxt "#31042"
-msgid "Show \"Now Playing\" information"
-msgstr ""
-
-#empty strings from id 31043 to 31046
+#empty strings from id 31041 to 31046
 
 msgctxt "#31047"
 msgid "Best Picture"
@@ -369,7 +363,7 @@ msgid "Shows an overview of the movie or episode 15 seconds after the video is p
 msgstr ""
 
 msgctxt "#31129"
-msgid "Hide Fanart"
+msgid "Hide visualisation Fanart"
 msgstr ""
 
 msgctxt "#31130"
@@ -624,13 +618,8 @@ msgctxt "#31927"
 msgid "Resets all above values to their defaults."
 msgstr ""
 
-msgctxt "#31928"
-msgid "Show \"Now Playing\" information blended in the background."
-msgstr ""
+#empty strings from id 31928 to 31929
 
-msgctxt "#31929"
-msgid "Enable CD case in full screen visualisation info."
-msgstr ""
 
 msgctxt "#31930"
 msgid "Enable clearart/logo (if available) when the vodeo is paused."

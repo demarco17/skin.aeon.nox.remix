@@ -895,8 +895,7 @@
 			<height>372</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400" reversible="false">Focus</animation>
 		</control>
 	</include>
 	<include name="ShiftPosterCase">
@@ -923,23 +922,21 @@
 		</control>
 		<control type="image">
 			<left>23</left>
-			<top>525</top>
+			<top>528</top>
 			<width>249</width>
 			<height>364</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400" reversible="false">Focus</animation>
 		</control>
 		<control type="image">
 			<left>-28</left>
-			<top>502</top>
+			<top>505</top>
 			<width>318</width>
 			<height>424</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/$VAR[ShiftCase_Var]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400" reversible="false">Focus</animation>
 		</control>
 	</include>
 	<include name="ShiftSquareThumbs">
@@ -959,8 +956,7 @@
 			<height>320</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400" reversible="false">Focus</animation>
 		</control>
 	</include>
 	<include name="ShiftSquareCase">
@@ -979,8 +975,7 @@
 			<height>300</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400" reversible="false">Focus</animation>
 		</control>
 		<control type="image">
 			<top>280</top>
@@ -995,8 +990,7 @@
 			<height>322</height>
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/cdcase.png</texture>
-			<animation effect="fade" start="100" end="0" time="400">Focus</animation>
-			<animation effect="fade" start="0" end="100" time="400">UnFocus</animation>
+			<animation effect="fade" start="100" end="0" time="400" reversible="false">Focus</animation>
 		</control>
 	</include>
 	<include name="BigList_Landscape">
