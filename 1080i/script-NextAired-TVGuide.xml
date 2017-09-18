@@ -262,7 +262,7 @@
 				<height>980</height>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>9000</onright>
-				<control type="button" id="200">
+				<control type="button" id="2000">
 					<description>View options header</description>
 					<textwidth>352</textwidth>
 					<font>font13_title</font>
@@ -275,10 +275,24 @@
 					<description>Settings</description>
 					<textwidth>352</textwidth>
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
-					<onright>ClearProperty(MediaMenu,Home)</onright>
-					<onright>9000</onright>
 					<include>ButtonCommonValues</include>
 					<label>5</label>
+				</control>
+				<control type="button" id="2001">
+					<description>update</description>
+					<textwidth>352</textwidth>
+					<onclick>Action(Close,script-NextAired-TVGuide.xml)</onclick>
+					<onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
+					<include>ButtonCommonValues</include>
+					<label>24069</label>
+				</control>
+				<control type="button" id="2002">
+					<description>reset</description>
+					<textwidth>352</textwidth>
+					<onclick>Action(Close,script-NextAired-TVGuide.xml)</onclick>
+					<onclick>RunScript(script.tv.show.next.aired,reset=True)</onclick>
+					<include>ButtonCommonValues</include>
+					<label>10035</label>
 				</control>
 			</control>
 		</control>
