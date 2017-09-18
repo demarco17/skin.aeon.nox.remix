@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
 	<onunload>ClearProperty(MediaMenu,Home)</onunload>
+	<menucontrol>9051</menucontrol>
 	<controls>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
@@ -18,7 +20,8 @@
 				<top>32</top>
 				<width>356</width>
 				<height>720</height>
-				<onleft>61</onleft>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>9050</onleft>
 				<onright condition="Container(9000).HasFocus(1)">200</onright>
 				<onright condition="Container(9000).HasFocus(2)">201</onright>
 				<onright condition="Container(9000).HasFocus(3)">202</onright>
@@ -35,7 +38,6 @@
 				<onright condition="Container(9000).HasFocus(14)">213</onright>
 				<onright condition="Container(9000).HasFocus(15)">214</onright>
 				<onright condition="Container(9000).HasFocus(16)">215</onright>
-				<pagecontrol>61</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="90" width="356">
 					<control type="image">
@@ -172,18 +174,6 @@
 					</item>
 				</content>
 			</control>
-			<control type="scrollbar" id="61">
-				<left>67</left>
-				<top>32</top>
-				<width>12</width>
-				<height>720</height>
-				<onleft>SetProperty(MediaMenu,True,home)</onleft>
-				<onleft>9050</onleft>
-				<onright>9000</onright>
-				<showonepage>false</showonepage>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-			</control>
 			<control type="image">
 				<description>LOGO</description>
 				<left>82</left>
@@ -216,6 +206,7 @@
 					<onleft condition="Container(9000).HasFocus(14)">213</onleft>
 					<onleft condition="Container(9000).HasFocus(15)">214</onleft>
 					<onleft condition="Container(9000).HasFocus(16)">215</onleft>
+					<onright>9000</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
@@ -306,12 +297,20 @@
 		<include>Topbar</include>
 		<control type="group">
 			<left>-440</left>
+			<!--<include>SideBladeLeft</include>-->
 			<animation effect="slide" start="440,0" end="0,0" time="400" tween="quadratic" easing="out" condition="String.IsEmpty(Window(home).Property(MediaMenu))">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<width>432</width>
 				<height>1080</height>
 				<texture border="40">dialogs/mediamenu_back.png</texture>
+			</control>
+			<control type="button" id="9051">
+				<include>HiddenObject</include>
+				<onfocus condition="String.IsEmpty(Window(Home).Property(MediaMenu))">SetProperty(MediaMenu,True,home)</onfocus>
+				<onfocus condition="String.IsEmpty(Window(Home).Property(MediaMenu))">SetFocus(9050)</onfocus>
+				<onfocus condition="!String.IsEmpty(Window(Home).Property(MediaMenu))">ClearProperty(MediaMenu,Home)</onfocus>
+				<onfocus condition="!String.IsEmpty(Window(Home).Property(MediaMenu))">SetFocus(9000)</onfocus>
 			</control>
 			<control type="image">
 				<description>LOGO</description>
@@ -324,20 +323,21 @@
 			<control type="grouplist" id="9050">
 				<top>100</top>
 				<width>400</width>
-				<height>1080</height>
-				<control type="label" id="20001">
-					<width>400</width>
-					<height>52</height>
-					<textoffsetx>15</textoffsetx>
+				<height>980</height>
+				<onright>ClearProperty(MediaMenu,Home)</onright>
+				<onright>9000</onright>
+				<control type="button" id="200">
+					<description>View options header</description>
+					<textwidth>352</textwidth>
 					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
 					<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
-					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<enable>false</enable>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
 				<control type="button" id="8">
 					<description>Settings</description>
 					<textwidth>352</textwidth>
-					<onup>8</onup>
-					<ondown>8</ondown>
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onright>ClearProperty(MediaMenu,Home)</onright>
 					<onright>9000</onright>

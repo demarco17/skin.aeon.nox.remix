@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol>50</defaultcontrol>
 	<views>50</views>
+	<menucontrol>9051</menucontrol>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>

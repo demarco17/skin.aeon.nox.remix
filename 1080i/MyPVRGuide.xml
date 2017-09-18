@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50,51</views>
+	<menucontrol>9051</menucontrol>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
@@ -38,8 +39,6 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>60</onright>
-				<onback>SetProperty(MediaMenu,True,home)</onback>
-				<onback>28</onback>
 				<orientation>vertical</orientation>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="19297">list</viewtype>
@@ -203,8 +202,6 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>61</onright>
-				<onback>SetProperty(MediaMenu,True,home)</onback>
-				<onback>28</onback>
 				<orientation>horizontal</orientation>
 				<pagecontrol>61</pagecontrol>
 				<viewtype label="19298">list</viewtype>
