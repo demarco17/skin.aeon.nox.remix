@@ -11,7 +11,7 @@
 				<width>445</width>
 				<height>45</height>
 				<texture border="1" colordiffuse="grey">dialogs/black.png</texture>
-				<visible>[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation) | Window.isActive(slideshow) | Window.IsActive(home)]</visible>
+				<visible>[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation) | Window.isActive(slideshow) | Window.IsActive(home) | Window.IsActive(FullscreenGame)]</visible>
 			</control>
 			<control type="label">
 				<left>30</left>

@@ -762,8 +762,4 @@
 		<value condition="!String.IsEmpty(Skin.String(skincolour.name)) + !String.IsEqual(Skin.String(skincolour.name),$LOCALIZE[231])">$INFO[Skin.String(skincolour.name)]</value>
 		<value>themecolor</value>
 	</variable>
-	<variable name="GameSettingsHeader">
-		<value condition="Window.IsVisible(GameVideoFilter)">$LOCALIZE[35225]</value>
-		<value>$LOCALIZE[629]</value>
-	</variable>
 </includes>

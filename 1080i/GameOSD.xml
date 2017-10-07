@@ -5,7 +5,7 @@
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
-			<visible>![Window.IsActive(GameVideoFilter) | Window.IsActive(GameViewMode) | Window.IsActive(GameControllers)]</visible>
+			<visible>![Window.IsActive(GameVideoFilter) | Window.IsActive(GameViewMode) | Window.IsActive(GameControllers) | Window.IsActive(GameVolume)]</visible>
 			<control type="image">
 				<width>1920</width>
 				<height>106</height>
@@ -69,6 +69,16 @@
 					<onclick>ActivateWindow(GameViewMode)</onclick>
 				</control>
 				<control type="button" id="106">
+					<description>Volume button</description>
+					<texturefocus>osd/buttons/OSDAudio.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDAudio.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(GameVolume)</onclick>
+				</control>
+				<control type="button" id="107">
 					<description>Input settings button</description>
 					<texturefocus>osd/buttons/OSDInput.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDInput.png</texturenofocus>

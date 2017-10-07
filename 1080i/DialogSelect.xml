@@ -21,25 +21,10 @@
 			<left>457</left>
 			<top>240</top>
 			<control type="label" id="1">
-				<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter)]</visible>
 				<left>32</left>
 				<top>32</top>
 				<width>942</width>
 				<height>40</height>
-				<label />
-				<font>font15_title</font>
-				<textoffsetx>15</textoffsetx>
-				<align>center</align>
-				<scroll>true</scroll>
-				<textcolor>dialogheader</textcolor>
-			</control>
-			<control type="label">
-				<visible>Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter)</visible>
-				<left>32</left>
-				<top>32</top>
-				<width>942</width>
-				<height>40</height>
-				<label>$VAR[GameSettingsHeader]</label>
 				<font>font15_title</font>
 				<textoffsetx>15</textoffsetx>
 				<align>center</align>
@@ -106,15 +91,15 @@
 					<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
 					<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
 				</control>
-				<control type="textbox">
+				<control type="textbox" id="12">
+					<description>Description Area</description>
 					<top>190</top>
 					<left>15</left>
 					<width>268</width>
 					<height>275</height>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
-					<label>Test description</label>
-					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+					<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 				</control>
 			</control>
 			<control type="group" id="9000">
