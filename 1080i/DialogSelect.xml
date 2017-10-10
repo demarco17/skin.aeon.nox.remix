@@ -97,7 +97,7 @@
 					<left>15</left>
 					<width>268</width>
 					<height>275</height>
-					<font>font12</font>
+					<font>font13</font>
 					<textcolor>grey</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 				</control>

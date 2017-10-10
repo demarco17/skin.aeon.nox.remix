@@ -4,21 +4,21 @@
 	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="group">
-			<left>122</left>
+			<left>200</left>
 			<top>254</top>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>
 				<top>16</top>
-				<width>1642</width>
+				<width>1486</width>
 				<height>568</height>
 				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<left>32</left>
+				<left>16</left>
 				<top>32</top>
-				<width>1610</width>
+				<width>1486</width>
 				<height>40</height>
 				<textoffsetx>15</textoffsetx>
 				<align>center</align>
@@ -54,19 +54,18 @@
 				<left>357</left>
 				<top>88</top>
 				<control type="image">
-					<width>636</width>
+					<width>480</width>
 					<height>480</height>
 					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 				</control>
 				<control type="gamecontroller" id="31">
-					<top>61</top>
-					<width>636</width>
-					<height>358</height>
+					<width>480</width>
+					<height>480</height>
 				</control>
 			</control>
 			<!-- middle group 2 -->
 			<control type="group">
-				<left>1007</left>
+				<left>850</left>
 				<top>88</top>
 				<control type="image">
 					<width>310</width>
@@ -90,7 +89,7 @@
 					<description>settings category label</description>
 					<width>310</width>
 					<height>60</height>
-					<font>font14</font>
+					<font>font13_title</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 					<label />
@@ -98,7 +97,7 @@
 				<control type="image" id="9">
 					<description>settings category separator</description>
 					<height>1</height>
-					<width>310</width>
+					<texture />
 					<visible>false</visible>
 				</control>
 				<control type="scrollbar" id="60">
@@ -115,7 +114,7 @@
 			</control>
 			<!-- right group -->
 			<control type="group">
-				<left>1331</left>
+				<left>1175</left>
 				<top>88</top>
 				<control type="image">
 					<width>310</width>

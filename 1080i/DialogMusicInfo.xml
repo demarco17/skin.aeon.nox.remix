@@ -149,8 +149,8 @@
 					</item>
 					<item>
 						<label>$INFO[ListItem.Property(Album_Description)]</label>
-						<label2>$LOCALIZE[31123]:</label2>
-						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[31123],Home)</onclick>
+						<label2>$LOCALIZE[183]:</label2>
+						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[183],Home)</onclick>
 						<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Property(Album_Description)],Home)</onclick>
 						<onclick>ActivateWindow(1132)</onclick>
 						<visible>!String.IsEmpty(ListItem.Property(Album_Description))</visible>
