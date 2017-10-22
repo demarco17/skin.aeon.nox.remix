@@ -102,7 +102,7 @@
 									<width>196</width>
 									<include>MediaFlagVars</include>
 									<bordersize>5</bordersize>
-									<texture fallback="flags/default-studio.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
+									<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
 								</control>
 							</itemlayout>
 							<focusedlayout width="196" height="90" />
@@ -116,7 +116,7 @@
 									<width>196</width>
 									<include>MediaFlagVars</include>
 									<bordersize>5</bordersize>
-									<texture fallback="flags/default-studio.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
+									<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
 								</control>
 							</itemlayout>
 							<focusedlayout width="198" height="90" />
@@ -325,10 +325,10 @@
 					<font>font15_textbox</font>
 					<align>left</align>
 					<label fallback="161">$INFO[Window.Property(Plot)]</label>
-					<textcolor>white</textcolor>
+					<textcolor>grey</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<include>VisibleFadeAnimation</include>
-					<visible>[ControlGroup(9000).HasFocus(5) | ControlGroup(9000).HasFocus(8)] + String.IsEqual(Control.GetLabel(5),$LOCALIZE[206])</visible>
+					<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + String.IsEqual(Control.GetLabel(201),)</visible>
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1181</left>
@@ -341,7 +341,7 @@
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>ControlGroup(9000).HasFocus(5) + Control.IsVisible(800)</visible>
+					<visible>ControlGroup(9000).HasFocus(201) + Control.IsVisible(800)</visible>
 				</control>
 				<control type="group">
 					<top>995</top>
@@ -354,7 +354,7 @@
 						<itemgap>25</itemgap>
 						<orientation>horizontal</orientation>
 						<include>VisibleFadeAnimation</include>
-						<visible>!String.IsEmpty(Window.Property(DBID)) + [ControlGroup(9000).HasFocus(5) | ControlGroup(9000).HasFocus(8)]</visible>
+						<visible>!String.IsEmpty(Window.Property(DBID)) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8)]</visible>
 						<control type="image">
 							<include>MediaFlagVars</include>
 							<bordersize>5</bordersize>
@@ -490,7 +490,7 @@
 					<ondown>9000</ondown>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<visible>[ControlGroup(9000).HasFocus(5) | ControlGroup(9000).HasFocus(8)] + String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
+					<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8)] + String.IsEqual(Control.GetLabel(201),)</visible>
 					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="297">
 						<control type="image">
@@ -619,6 +619,77 @@
 						</control>
 					</focusedlayout>
 				</control>
+				<control type="panel" id="350">
+					<description>YouTube</description>
+					<left>3</left>
+					<top>570</top>
+					<width>1188</width>
+					<height>420</height>
+					<onleft>350</onleft>
+					<onright>350</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<visible>Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(207)</visible>
+					<include>VisibleFadeAnimation</include>
+					<itemlayout height="420" width="594">
+						<control type="image">
+							<width>594</width>
+							<height>418</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+							<bordersize>2</bordersize>
+						</control>
+						<control type="image">
+							<top>328</top>
+							<width>594</width>
+							<height>90</height>
+							<texture colordiffuse="grey">dialogs/black.png</texture>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>330</top>
+							<width>574</width>
+							<height>75</height>
+							<align>center</align>
+							<font>font13</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="420" width="594">
+						<control type="group">
+							<include>IconZoomAnimation</include>
+							<control type="image">
+								<width>594</width>
+								<height>418</height>
+								<aspectratio>scale</aspectratio>
+								<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
+								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>328</top>
+								<width>584</width>
+								<height>85</height>
+								<texture colordiffuse="grey">dialogs/black.png</texture>
+							</control>
+							<control type="textbox">
+								<left>10</left>
+								<top>330</top>
+								<width>574</width>
+								<height>75</height>
+								<font>font13</font>
+								<align>center</align>
+								<label>$INFO[ListItem.Label]</label>
+								<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
 				<control type="panel" id="1250">
 					<description>Artwork</description>
 					<left>3</left>
@@ -632,7 +703,7 @@
 					<orientation>horizontal</orientation>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<visible>Integer.IsGreater(Container(1250).NumItems,0) + [ControlGroup(9000).HasFocus(204) + String.IsEqual(Control.GetLabel(204),$LOCALIZE[20445])]</visible>
+					<visible>Integer.IsGreater(Container(1250).NumItems,0) + ControlGroup(9000).HasFocus(204)</visible>
 					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="297">
 						<control type="image">
@@ -671,7 +742,7 @@
 					<orientation>horizontal</orientation>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<visible>Integer.IsGreater(Container(1350).NumItems,0) + [ControlGroup(9000).HasFocus(204) + String.IsEqual(Control.GetLabel(204),$LOCALIZE[31016])]</visible>
+					<visible>Integer.IsGreater(Container(1350).NumItems,0) + ControlGroup(9000).HasFocus(205)</visible>
 					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="594">
 						<control type="image">
@@ -700,7 +771,6 @@
 				<control type="group">
 					<visible>false</visible>
 					<control type="panel" id="150" />
-					<control type="panel" id="350" />
 					<control type="panel" id="450" />
 					<control type="panel" id="650" />
 					<control type="panel" id="750" />
@@ -717,9 +787,9 @@
 					<height>418</height>
 					<align>center</align>
 					<font>font30_title_bold</font>
-					<textcolor>grey</textcolor>
+					<textcolor>grey2</textcolor>
 					<label>161</label>
-					<visible>ControlGroup(9000).HasFocus(204) + [[!Integer.IsGreater(Container(1350).NumItems,0) + String.IsEqual(Control.GetLabel(204),$LOCALIZE[31016])] | [!Integer.IsGreater(Container(1250).NumItems,0) + String.IsEqual(Control.GetLabel(204),$LOCALIZE[20445])]]</visible>
+					<visible>[ControlGroup(9000).HasFocus(204) + !Integer.IsGreater(Container(1250).NumItems,0)] | [ControlGroup(9000).HasFocus(205) + !Integer.IsGreater(Container(1350).NumItems,0)]</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Fanart - Items/Page -->
@@ -734,7 +804,7 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[Container(1350).NumItems,, $LOCALIZE[31025]]</label>
-					<visible>Integer.IsGreater(Container(1350).NumItems,0) + ControlGroup(9000).HasFocus(204) + String.IsEqual(Control.GetLabel(204),$LOCALIZE[31016])</visible>
+					<visible>Integer.IsGreater(Container(1350).NumItems,0) + ControlGroup(9000).HasFocus(205)</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Thumb - Items/Page -->
@@ -749,7 +819,7 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[Container(1250).NumItems,, $LOCALIZE[31025]]</label>
-					<visible>Integer.IsGreater(Container(1250).NumItems,0) + ControlGroup(9000).HasFocus(204) + String.IsEqual(Control.GetLabel(204),$LOCALIZE[20445])</visible>
+					<visible>Integer.IsGreater(Container(1250).NumItems,0) + ControlGroup(9000).HasFocus(204)</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Trailers - Items/Page -->
@@ -767,6 +837,21 @@
 					<visible>Integer.IsGreater(Container(1150).NumItems,0) + ControlGroup(9000).HasFocus(206)</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
+				<!-- YouTube - Items/Page -->
+				<control type="label">
+					<left>880</left>
+					<top>1020</top>
+					<width>300</width>
+					<height>40</height>
+					<font>font13_title</font>
+					<textoffsetx>15</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[Container(350).NumItems,, $LOCALIZE[31025]]</label>
+					<visible>Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(207)</visible>
+					<include>VisibleFadeAnimation</include>
+				</control>
 				<!-- Set - Items/Page -->
 				<control type="label">
 					<left>880</left>
@@ -782,18 +867,17 @@
 					<visible>Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
-				<!-- Set Title -->
+				<!-- Panel Title -->
 				<control type="label">
 					<left>40</left>
 					<top>1020</top>
 					<width>800</width>
 					<height>40</height>
 					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<align>left</align>
 					<aligny>top</aligny>
-					<label>$INFO[Window.Property(Set)]</label>
-					<visible>Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)</visible>
+					<label>$VAR[EI_VID.PanelLabel]</label>
 					<include>VisibleFadeAnimation</include>
 				</control>
 			</control>
@@ -816,7 +900,7 @@
 				<control type="grouplist" id="9000">
 					<left>2</left>
 					<top>508</top>
-					<width>1188</width>
+					<width>1192</width>
 					<height>60</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
@@ -824,6 +908,7 @@
 					<align>left</align>
 					<ondown condition="Control.IsVisible(800)">60</ondown>
 					<ondown condition="Control.IsVisible(250)">250</ondown>
+					<ondown condition="Control.IsVisible(350)">350</ondown>
 					<ondown condition="Control.IsVisible(1000)">1000</ondown>
 					<ondown condition="Control.IsVisible(1150)">1150</ondown>
 					<ondown condition="Control.IsVisible(1250)">1250</ondown>
@@ -831,84 +916,51 @@
 					<orientation>horizontal</orientation>
 					<control type="button" id="8">
 						<description>Play</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>208</label>
-						<enable>!String.IsEmpty(Window.Property(DBID))</enable>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>!String.IsEmpty(Window.Property(DBID)) + !String.IsEqual(Window.Property(Type),tvshow)</visible>
 					</control>
-					<control type="image" id="200">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+					<control type="button" id="120">
+						<description>browse to show</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>!String.IsEmpty(Window.Property(DBID)) + String.IsEqual(Window.Property(Type),tvshow)</visible>
 					</control>
-					<control type="togglebutton" id="5">
+					<control type="togglebutton" id="201">
 						<description>Cast/Plot</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>206</label>
-						<altlabel>207</altlabel>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<altlabel></altlabel>
 					</control>
-					<control type="image" id="201">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+					<control type="button" id="204">
+						<description>Poster</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(1250).NumItems,0)</visible>
 					</control>
-					<control type="togglebutton" id="204">
-						<description>Thumb/Fanart</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20445</label>
-						<altlabel>31016</altlabel>
-						<enable>Integer.IsGreater(Container(1250).NumItems,0) | Integer.IsGreater(Container(1350).NumItems,0)</enable>
-					</control>
-					<control type="image" id="205">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+					<control type="button" id="205">
+						<description>Fanart</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>⊷</label>
+						<visible>Integer.IsGreater(Container(1350).NumItems,0)</visible>
 					</control>
 					<control type="button" id="206">
 						<description>Trailer</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20410</label>
-						<enable>Integer.IsGreater(Container(1150).NumItems,0)</enable>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(1150).NumItems,0)</visible>
 					</control>
-					<control type="image" id="207">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+					<control type="button" id="207">
+						<description>Youtube</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
 					</control>
 					<control type="button" id="208">
 						<description>Set</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20141</label>
-						<enable>Integer.IsGreater(Container(250).NumItems,0)</enable>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 					</control>
 				</control>
 			</control>

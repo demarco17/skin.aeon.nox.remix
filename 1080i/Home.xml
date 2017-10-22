@@ -127,20 +127,28 @@
 					<include condition="!System.HasAddon(script.skinshortcuts)">FallbackSubMenu</include>
 					<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>
 				</control>
-				<control type="image">
+				<control type="label">
+					<include>VisibleFadeAnimation</include>
 					<left>130</left>
-					<top>6</top>
+					<top>5</top>
 					<width>30</width>
 					<height>30</height>
-					<texture flipx="true" colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
+					<font>IconTiny</font>
+					<align>center</align>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label></label>
 					<visible>Container(9010).HasPrevious</visible>
 				</control>
-				<control type="image">
+				<control type="label">
+					<include>VisibleFadeAnimation</include>
 					<left>1800</left>
-					<top>6</top>
+					<top>5</top>
 					<width>30</width>
 					<height>30</height>
-					<texture colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
+					<font>IconTiny</font>
+					<align>center</align>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label></label>
 					<visible>Container(9010).HasNext</visible>
 				</control>
 			</control>

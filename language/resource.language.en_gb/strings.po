@@ -662,7 +662,7 @@ msgstr ""
 #empty strings from id 31940 to 31947
 
 msgctxt "#31948"
-msgid "**WARNING** This will reset all skin settings to there default values."
+msgid "Enable Artwork Downloader GUI mode in video info dialog, default 'auto download' as per addon settings."
 msgstr ""
 
 msgctxt "#31949"

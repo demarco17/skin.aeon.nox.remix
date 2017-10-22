@@ -762,4 +762,18 @@
 		<value condition="!String.IsEmpty(Skin.String(skincolour.name)) + !String.IsEqual(Skin.String(skincolour.name),$LOCALIZE[231])">$INFO[Skin.String(skincolour.name)]</value>
 		<value>themecolor</value>
 	</variable>
+	<variable name="EI_VID.PanelLabel">
+		<value condition="Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)">$INFO[Window.Property(Set)]</value>
+		<value condition="Integer.IsGreater(Container(1250).NumItems,0) + ControlGroup(9000).HasFocus(204)">$ADDON[script.extendedinfo 32119]</value>
+		<value condition="Integer.IsGreater(Container(1350).NumItems,0) + ControlGroup(9000).HasFocus(205)">$LOCALIZE[20445]</value>
+		<value condition="Integer.IsGreater(Container(1150).NumItems,0) + ControlGroup(9000).HasFocus(206)">$ADDON[script.extendedinfo 32117]</value>
+		<value condition="Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(207)">$ADDON[script.extendedinfo 32118]</value>
+	</variable>
+	<variable name="EI_INFO.PanelLabel">
+		<value condition="Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(32)">Movies</value>
+		<value condition="Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(34)">TvShows</value>
+		<value condition="Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36)">$ADDON[script.extendedinfo 32119]</value>
+		<value condition="Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(37)">$LOCALIZE[20445]</value>
+		<value condition="Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(38)">$ADDON[script.extendedinfo 32118]</value>
+	</variable>
 </includes>

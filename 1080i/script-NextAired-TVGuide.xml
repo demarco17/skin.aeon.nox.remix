@@ -284,7 +284,7 @@
 					<onclick>Action(Close,script-NextAired-TVGuide.xml)</onclick>
 					<onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
 					<include>ButtonCommonValues</include>
-					<label>24069</label>
+					<label>- $LOCALIZE[24069]</label>
 				</control>
 				<control type="button" id="2002">
 					<description>reset</description>
@@ -292,7 +292,7 @@
 					<onclick>Action(Close,script-NextAired-TVGuide.xml)</onclick>
 					<onclick>RunScript(script.tv.show.next.aired,reset=True)</onclick>
 					<include>ButtonCommonValues</include>
-					<label>10035</label>
+					<label>- $LOCALIZE[13007]</label>
 				</control>
 			</control>
 		</control>

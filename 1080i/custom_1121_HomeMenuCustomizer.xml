@@ -218,7 +218,7 @@
 					<height>90</height>
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
-					<label>$LOCALIZE[10035]</label>
+					<label>$LOCALIZE[13007]</label>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Label])</onclick>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Path])</onclick>
 					<onclick>Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.MultiFanart])</onclick>

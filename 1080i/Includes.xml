@@ -456,10 +456,11 @@
 			<width>1188</width>
 			<height>420</height>
 			<onup>9000</onup>
+			<ondown>9000</ondown>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
 			<orientation>horizontal</orientation>
 			<include>VisibleFadeAnimation</include>
-			<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
+			<visible>String.IsEqual(Control.GetLabel(201),)</visible>
 			<itemlayout height="420" width="297">
 				<control type="image">
 					<width>297</width>
@@ -742,10 +743,11 @@
 			<width>1188</width>
 			<height>420</height>
 			<onup>9000</onup>
+			<ondown>9000</ondown>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
 			<orientation>horizontal</orientation>
 			<include>VisibleFadeAnimation</include>
-			<visible>String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])</visible>
+			<visible>String.IsEqual(Control.GetLabel(201),)</visible>
 			<itemlayout height="420" width="297">
 				<control type="image">
 					<width>297</width>

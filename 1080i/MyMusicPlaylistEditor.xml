@@ -206,6 +206,17 @@
 				</focusedlayout>
 			</control>
 		</control>
+		<control type="label">
+			<include>OpenCloseAnimation</include>
+			<left>926</left>
+			<top>506</top>
+			<width>68</width>
+			<height>68</height>
+			<font>IconMedium</font>
+			<align>center</align>
+			<textcolor>$VAR[SkinThemeColour]</textcolor>
+			<label></label>
+		</control>
 		<include>Topbar</include>
 		<control type="group">
 			<left>-440</left>

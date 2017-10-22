@@ -177,13 +177,13 @@
 				</control>
 				<control type="textbox" id="800">
 					<description>Plot</description>
-					<top>560</top>
+					<top>570</top>
 					<width>1132</width>
-					<height>500</height>
+					<height>460</height>
 					<font>font15_textbox</font>
 					<align>left</align>
 					<label fallback="161">$INFO[Window.Property(Biography)]</label>
-					<textcolor>white</textcolor>
+					<textcolor>grey</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<include>VisibleFadeAnimation</include>
 					<visible>ControlGroup(9000).HasFocus(30)</visible>
@@ -457,7 +457,7 @@
 					<ondown>9000</ondown>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<visible>Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[20445])</visible>
+					<visible>Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36)</visible>
 					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="297">
 						<control type="image">
@@ -495,7 +495,7 @@
 					<ondown>9000</ondown>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<visible>Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[31016])</visible>
+					<visible>Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(37)</visible>
 					<include>VisibleFadeAnimation</include>
 					<itemlayout height="420" width="594">
 						<control type="image">
@@ -568,7 +568,7 @@
 					<font>font30_title_bold</font>
 					<textcolor>grey</textcolor>
 					<label>161</label>
-					<visible>ControlGroup(9000).HasFocus(36) + [[!Integer.IsGreater(Container(750).NumItems,0) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[31016])] | [!Integer.IsGreater(Container(450).NumItems,0) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[20445])]]</visible>
+					<visible>[ControlGroup(9000).HasFocus(37) + !Integer.IsGreater(Container(750).NumItems,0)] | [ControlGroup(9000).HasFocus(36) + !Integer.IsGreater(Container(450).NumItems,0)]</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Movies - Items/Page -->
@@ -613,7 +613,7 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[Container(750).NumItems,, $LOCALIZE[31025]]</label>
-					<visible>Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[31016])</visible>
+					<visible>Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(37)</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- Thumb - Items/Page -->
@@ -628,7 +628,7 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[Container(450).NumItems,, $LOCALIZE[31025]]</label>
-					<visible>Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36) + String.IsEqual(Control.GetLabel(36),$LOCALIZE[20445])</visible>
+					<visible>Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36)</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>
 				<!-- YouTube - Items/Page -->
@@ -644,6 +644,18 @@
 					<aligny>top</aligny>
 					<label>$INFO[Container(350).NumItems,, $LOCALIZE[31025]]</label>
 					<visible>Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(38)</visible>
+					<include>VisibleFadeAnimation</include>
+				</control>
+				<!-- Panel Title -->
+				<control type="label">
+					<top>1000</top>
+					<width>800</width>
+					<height>40</height>
+					<font>font13_title</font>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$VAR[EI_INFO.PanelLabel]</label>
 					<include>VisibleFadeAnimation</include>
 				</control>
 			</control>
@@ -665,9 +677,8 @@
 					<visible>!Integer.IsGreater(Container(300).NumItems,7)</visible>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>1</left>
 					<top>508</top>
-					<width>1188</width>
+					<width>1192</width>
 					<height>60</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
@@ -682,83 +693,38 @@
 					<orientation>horizontal</orientation>
 					<control type="button" id="30">
 						<description>Biography</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>21887</label>
-					</control>
-					<control type="image" id="31">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
 					</control>
 					<control type="button" id="32">
 						<description>Movies</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>342</label>
-						<enable>Integer.IsGreater(Container(150).NumItems,0)</enable>
-					</control>
-					<control type="image" id="33">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
 					</control>
 					<control type="button" id="34">
 						<description>TvShows</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>36903</label>
-						<enable>Integer.IsGreater(Container(250).NumItems,0)</enable>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 					</control>
-					<control type="image" id="35">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+					<control type="button" id="36">
+						<description>Poster</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
 					</control>
-					<control type="togglebutton" id="36">
-						<description>Thumb/Fanart</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20445</label>
-						<altlabel>31016</altlabel>
-						<enable>Integer.IsGreater(Container(450).NumItems,0) | Integer.IsGreater(Container(750).NumItems,0)</enable>
-					</control>
-					<control type="image" id="37">
-						<width>2</width>
-						<height>58</height>
-						<texture border="1">dialogs/separator3.png</texture>
+					<control type="button" id="37">
+						<description>Fanart</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>⊷</label>
+						<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
 					</control>
 					<control type="button" id="38">
-						<description>YouTube</description>
-						<height>60</height>
-						<width>236</width>
-						<textoffsetx>0</textoffsetx>
-						<align>center</align>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>31048</label>
-						<enable>Integer.IsGreater(Container(350).NumItems,0)</enable>
+						<description>Youtube</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
 					</control>
 				</control>
 			</control>

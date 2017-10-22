@@ -303,15 +303,15 @@
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=musicgenreicons&amp;type=resource.images.musicgenreicons)</onclick>
 					</control>
-					<control type="button" id="308">
+					<control type="radiobutton" id="308">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>$LOCALIZE[10035] $LOCALIZE[20077]</label>
-						<onclick>Skin.ResetSettings</onclick>
-						<onclick>Skin.SetString(CustomGlobalBackground,backgrounds/SKINDEFAULT.jpg)</onclick>
-						<onclick>ReloadSkin()</onclick>
+						<label>$INFO[System.AddonTitle(script.artwork.downloader)] GUI</label>
+						<onclick>Skin.ToggleSetting(ArtworkDownloader.GUI)</onclick>
+						<selected>Skin.HasSetting(ArtworkDownloader.GUI)</selected>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
 				</control>
 			</control>

@@ -952,20 +952,28 @@
 					<align>center</align>
 					<scroll>true</scroll>
 				</control>
-				<control type="image">
+				<control type="label">
+					<include>VisibleFadeAnimation</include>
 					<left>130</left>
-					<top>388</top>
+					<top>387</top>
 					<width>30</width>
 					<height>30</height>
-					<texture flipx="true" colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
+					<font>IconTiny</font>
+					<align>center</align>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label></label>
 					<visible>Container(9060).HasPrevious</visible>
 				</control>
-				<control type="image">
+				<control type="label">
+					<include>VisibleFadeAnimation</include>
 					<left>1800</left>
-					<top>388</top>
+					<top>387</top>
 					<width>30</width>
 					<height>30</height>
-					<texture colordiffuse="$VAR[SkinThemeColour]">home/arrowright.png</texture>
+					<font>IconTiny</font>
+					<align>center</align>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label></label>
 					<visible>Container(9060).HasNext</visible>
 				</control>
 			</control>

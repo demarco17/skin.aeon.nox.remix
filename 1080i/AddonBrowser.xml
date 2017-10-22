@@ -73,12 +73,14 @@
 			</control>
 			<control type="label">
 				<description>Last checked info</description>
+				<include>VisibleFadeAnimation</include>
 				<top>960</top>
 				<height>120</height>
 				<width>400</width>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey3</textcolor>
 				<label>[I]$LOCALIZE[31070][CR]$INFO[Window(AddonBrowser).Property(Updated)][/I]</label>
+				<visible>Control.HasFocus(9)</visible>
 			</control>
 		</control>
 		<include>ScrollLabel</include>

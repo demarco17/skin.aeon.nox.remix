@@ -34,13 +34,13 @@
 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>60</height>
-		<width>254</width>
-		<textoffsetx>0</textoffsetx>
+		<width>148.5</width>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>font15</font>
+		<font>IconMedium</font>
 		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
+		<texturenofocus border="4">dialogs/separator5.png</texturenofocus>
 	</include>
 	<!-- KeyBoard -->
 	<include name="Objects_KeyOffVars">
@@ -140,8 +140,8 @@
 			<control type="image">
 				<description>Poster</description>
 				<top>10</top>
-				<width>432</width>
-				<height>180</height>
+				<width>437</width>
+				<height>185</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
 				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
@@ -170,24 +170,12 @@
 				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
 			</control>
 			<control type="textbox">
-				<description>NextEpisode</description>
-				<left>5</left>
+				<description>NextEpisode/AirTime - Studio</description>
+				<left>10</left>
 				<top>195</top>
-				<width>429</width>
-				<height>120</height>
-				<label>$LOCALIZE[209]:[CR][COLOR grey]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR]</label>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<font>font14</font>
-				<align>center</align>
-				<autoscroll>false</autoscroll>
-			</control>
-			<control type="textbox">
-				<description>AirTime - Studio</description>
-				<left>5</left>
-				<top>315</top>
-				<width>429</width>
-				<height>80</height>
-				<label>$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+				<width>419</width>
+				<height>200</height>
+				<label>$LOCALIZE[209]:[CR][COLOR grey]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<font>font14</font>
 				<align>center</align>
@@ -208,8 +196,8 @@
 				<control type="image">
 					<description>Poster</description>
 					<top>10</top>
-					<width>432</width>
-					<height>180</height>
+					<width>437</width>
+					<height>185</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
@@ -238,28 +226,16 @@
 					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
 				</control>
 				<control type="textbox">
-					<description>NextEpisode</description>
-					<left>5</left>
+					<description>NextEpisode/AirTime - Studio</description>
+					<left>10</left>
 					<top>195</top>
-					<width>429</width>
-					<height>120</height>
-					<label>$LOCALIZE[209]:[CR][COLOR white]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR]</label>
+					<width>419</width>
+					<height>200</height>
+					<label>$LOCALIZE[209]:[CR][COLOR grey]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<font>font14</font>
 					<align>center</align>
 					<autoscroll time="3500" delay="3000" repeat="3000">True</autoscroll>
-				</control>
-				<control type="textbox">
-					<description>AirTime - Studio</description>
-					<left>5</left>
-					<top>315</top>
-					<width>429</width>
-					<height>80</height>
-					<label>$LOCALIZE[31012]:[CR][COLOR white]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
-					<textcolor>$VAR[SkinThemeColour]</textcolor>
-					<font>font14</font>
-					<align>center</align>
-					<autoscroll>false</autoscroll>
 				</control>
 			</control>
 		</focusedlayout>
