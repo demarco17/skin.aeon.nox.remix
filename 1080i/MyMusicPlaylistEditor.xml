@@ -10,212 +10,212 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<left>50</left>
-			<top>80</top>
 			<include>OpenCloseAnimation</include>
-			<control type="image">
-				<left>16</left>
-				<top>44</top>
-				<width>853</width>
-				<height>872</height>
-				<texture border="18">dialogs/dialog-bg2.png</texture>
+			<control type="group">
+				<left>50</left>
+				<top>80</top>
+				<control type="image">
+					<left>16</left>
+					<top>44</top>
+					<width>853</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg2.png</texture>
+				</control>
+				<control type="label" id="12">
+					<description>current directory text label</description>
+					<top>910</top>
+					<width>821</width>
+					<height>90</height>
+					<font>font16_title_bold</font>
+					<textcolor>grey2</textcolor>
+					<textoffsetx>30</textoffsetx>
+					<haspath>true</haspath>
+				</control>
+				<control type="scrollbar" id="60">
+					<left>854</left>
+					<top>62</top>
+					<width>12</width>
+					<height>840</height>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="list" id="50">
+					<left>32</left>
+					<top>62</top>
+					<width>821</width>
+					<height>840</height>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>9050</onleft>
+					<onright>60</onright>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<itemlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>630</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>820</width>
+							<height>58</height>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(50)</visible>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
 			</control>
-			<control type="label" id="12">
-				<description>current directory text label</description>
-				<top>910</top>
-				<width>821</width>
-				<height>90</height>
-				<font>font16_title_bold</font>
-				<textcolor>grey2</textcolor>
-				<textoffsetx>30</textoffsetx>
-				<haspath>true</haspath>
+			<control type="group">
+				<left>985</left>
+				<top>80</top>
+				<control type="image">
+					<left>16</left>
+					<top>44</top>
+					<width>853</width>
+					<height>872</height>
+					<texture border="18">dialogs/dialog-bg2.png</texture>
+				</control>
+				<control type="label" id="101">
+					<description>current directory text label</description>
+					<left>60</left>
+					<top>910</top>
+					<width>821</width>
+					<height>90</height>
+					<font>font16_title_bold</font>
+					<textcolor>grey2</textcolor>
+					<align>right</align>
+					<textoffsetx>30</textoffsetx>
+					<haspath>true</haspath>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>854</left>
+					<top>62</top>
+					<width>12</width>
+					<height>840</height>
+					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+					<onleft>100</onleft>
+					<onright>50</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="list" id="100">
+					<left>32</left>
+					<top>62</top>
+					<width>821</width>
+					<height>840</height>
+					<onleft>60</onleft>
+					<onright>61</onright>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<itemlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="label">
+							<width>630</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="821">
+						<control type="image">
+							<width>821</width>
+							<height>60</height>
+							<texture border="4">dialogs/separator2.png</texture>
+						</control>
+						<control type="image">
+							<width>820</width>
+							<height>58</height>
+							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
+							<visible>Control.HasFocus(100)</visible>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>821</width>
+							<height>60</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey</textcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
 			</control>
-			<control type="scrollbar" id="60">
-				<left>854</left>
-				<top>62</top>
-				<width>12</width>
-				<height>840</height>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<onleft>50</onleft>
-				<onright>100</onright>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
+			<control type="label">
+				<left>926</left>
+				<top>506</top>
+				<width>68</width>
+				<height>68</height>
+				<font>IconLarge</font>
+				<align>center</align>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<label></label>
 			</control>
-			<control type="list" id="50">
-				<left>32</left>
-				<top>62</top>
-				<width>821</width>
-				<height>840</height>
-				<onleft>SetProperty(MediaMenu,True,home)</onleft>
-				<onleft>9050</onleft>
-				<onright>60</onright>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<itemlayout height="60" width="821">
-					<control type="image">
-						<width>821</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="label">
-						<width>630</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<width>821</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="60" width="821">
-					<control type="image">
-						<width>821</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="image">
-						<width>820</width>
-						<height>58</height>
-						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-						<visible>Control.HasFocus(50)</visible>
-					</control>
-					<control type="label">
-						<width>821</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<width>821</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</focusedlayout>
-			</control>
-		</control>
-		<control type="group">
-			<left>985</left>
-			<top>80</top>
-			<include>OpenCloseAnimation</include>
-			<control type="image">
-				<left>16</left>
-				<top>44</top>
-				<width>853</width>
-				<height>872</height>
-				<texture border="18">dialogs/dialog-bg2.png</texture>
-			</control>
-			<control type="label" id="101">
-				<description>current directory text label</description>
-				<left>60</left>
-				<top>910</top>
-				<width>821</width>
-				<height>90</height>
-				<font>font16_title_bold</font>
-				<textcolor>grey2</textcolor>
-				<align>right</align>
-				<textoffsetx>30</textoffsetx>
-				<haspath>true</haspath>
-			</control>
-			<control type="scrollbar" id="61">
-				<left>854</left>
-				<top>62</top>
-				<width>12</width>
-				<height>840</height>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<onleft>100</onleft>
-				<onright>50</onright>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-			</control>
-			<control type="list" id="100">
-				<left>32</left>
-				<top>62</top>
-				<width>821</width>
-				<height>840</height>
-				<onleft>60</onleft>
-				<onright>61</onright>
-				<pagecontrol>61</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<itemlayout height="60" width="821">
-					<control type="image">
-						<width>821</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="label">
-						<width>630</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<width>821</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="60" width="821">
-					<control type="image">
-						<width>821</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="image">
-						<width>820</width>
-						<height>58</height>
-						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-						<visible>Control.HasFocus(100)</visible>
-					</control>
-					<control type="label">
-						<width>821</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<width>821</width>
-						<height>60</height>
-						<font>font14</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</focusedlayout>
-			</control>
-		</control>
-		<control type="label">
-			<include>OpenCloseAnimation</include>
-			<left>926</left>
-			<top>506</top>
-			<width>68</width>
-			<height>68</height>
-			<font>IconMedium</font>
-			<align>center</align>
-			<textcolor>$VAR[SkinThemeColour]</textcolor>
-			<label></label>
 		</control>
 		<include>Topbar</include>
 		<control type="group">

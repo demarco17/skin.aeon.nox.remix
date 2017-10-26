@@ -102,13 +102,16 @@
 			</control>
 			<control type="button" id="20">
 				<description>Power push button</description>
-				<left>920</left>
+				<left>880</left>
 				<top>960</top>
-				<width>80</width>
+				<width>160</width>
 				<height>80</height>
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
-				<texturefocus colordiffuse="$VAR[SkinThemeColour]">flags/power.png</texturefocus>
-				<texturenofocus colordiffuse="grey">flags/power.png</texturenofocus>
+				<label></label>
+				<align>center</align>
+				<font>IconLarge</font>
+				<texturefocus colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
+				<texturenofocus />
 				<onleft>52</onleft>
 				<onright>52</onright>
 				<onup>52</onup>

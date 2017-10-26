@@ -211,6 +211,11 @@
 			<size>36</size>
 		</font>
 		<font>
+			<name>IconLarge</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>48</size>
+		</font>
+		<font>
 			<name>PseudoTv10</name>
 			<filename>Lato-Regular.ttf</filename>
 			<size>24</size>

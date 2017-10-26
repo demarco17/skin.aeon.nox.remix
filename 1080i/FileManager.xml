@@ -197,12 +197,16 @@
 					</focusedlayout>
 				</control>
 			</control>
-			<control type="image">
+			<control type="label">
 				<left>926</left>
 				<top>506</top>
 				<width>68</width>
 				<height>68</height>
-				<texture colordiffuse="lightgrey" border="4">flags/left-right.png</texture>
+				<font>IconLarge</font>
+				<align>center</align>
+				<angle>90</angle>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<label></label>
 			</control>
 		</control>
 		<include>Topbar</include>
