@@ -36,12 +36,10 @@
 				<pagecontrol>61</pagecontrol>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>1349</left>
+				<left>1350</left>
 				<top>80</top>
-				<width>12</width>
+				<width>10</width>
 				<height>790</height>
-				<onleft>Dialog.Close(textviewer)</onleft>
-				<onright>Dialog.Close(textviewer)</onright>
 				<showonepage>false</showonepage>
 				<texturesliderbackground />
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>

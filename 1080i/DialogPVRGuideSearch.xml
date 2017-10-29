@@ -135,9 +135,9 @@
 				</control>
 			</control>
 			<control type="scrollbar" id="6">
-				<left>1168</left>
+				<left>1169</left>
 				<top>148</top>
-				<width>12</width>
+				<width>10</width>
 				<height>480</height>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>

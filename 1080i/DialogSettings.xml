@@ -46,9 +46,9 @@
 				<onright>6</onright>
 			</control>
 			<control type="scrollbar" id="6">
-				<left>1171</left>
+				<left>1172</left>
 				<top>88</top>
-				<width>12</width>
+				<width>10</width>
 				<height>540</height>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>

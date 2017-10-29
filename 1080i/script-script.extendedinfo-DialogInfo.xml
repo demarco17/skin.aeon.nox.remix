@@ -189,7 +189,7 @@
 					<visible>ControlGroup(9000).HasFocus(30)</visible>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>1141</left>
+					<left>1140</left>
 					<top>550</top>
 					<width>10</width>
 					<height>510</height>

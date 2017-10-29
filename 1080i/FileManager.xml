@@ -28,7 +28,7 @@
 				<control type="scrollbar" id="30">
 					<left>855</left>
 					<top>62</top>
-					<width>12</width>
+					<width>10</width>
 					<height>840</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
@@ -123,9 +123,9 @@
 					<haspath>true</haspath>
 				</control>
 				<control type="scrollbar" id="31">
-					<left>855</left>
+					<left>856</left>
 					<top>62</top>
-					<width>12</width>
+					<width>10</width>
 					<height>840</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
@@ -204,9 +204,8 @@
 				<height>68</height>
 				<font>IconLarge</font>
 				<align>center</align>
-				<angle>90</angle>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<label></label>
+				<label></label>
 			</control>
 		</control>
 		<include>Topbar</include>

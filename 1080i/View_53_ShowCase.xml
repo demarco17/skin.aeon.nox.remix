@@ -314,9 +314,9 @@
 			<include condition="String.IsEqual(Control.GetLabel(4450),1)">scmwrap</include>
 		</control>
 		<control type="scrollbar" id="5361">
-			<top>1068</top>
+			<top>1070</top>
 			<width>1920</width>
-			<height>12</height>
+			<height>10</height>
 			<onup>53</onup>
 			<ondown>53</ondown>
 			<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>

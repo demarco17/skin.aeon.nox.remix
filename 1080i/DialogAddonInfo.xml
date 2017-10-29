@@ -130,9 +130,9 @@
 						</control>
 					</control>
 					<control type="scrollbar" id="60">
-						<left>1351</left>
+						<left>1350</left>
 						<top>220</top>
-						<width>12</width>
+						<width>10</width>
 						<height>650</height>
 						<onleft>9000</onleft>
 						<onright>9000</onright>

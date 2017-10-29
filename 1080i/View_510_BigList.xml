@@ -215,9 +215,9 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="51060">
-					<left>1725</left>
+					<left>1726</left>
 					<top>151</top>
-					<width>12</width>
+					<width>10</width>
 					<height>868</height>
 					<onleft>510</onleft>
 					<onright>510</onright>
@@ -395,9 +395,9 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="51060">
-					<left>1725</left>
+					<left>1726</left>
 					<top>151</top>
-					<width>12</width>
+					<width>10</width>
 					<height>868</height>
 					<onleft>510</onleft>
 					<onright>510</onright>

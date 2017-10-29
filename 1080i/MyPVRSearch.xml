@@ -122,9 +122,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="77">
-				<left>1141</left>
+				<left>1142</left>
 				<top>180</top>
-				<width>12</width>
+				<width>10</width>
 				<height>840</height>
 				<onleft>50</onleft>
 				<onright condition="!Control.IsVisible(74)">50</onright>
@@ -188,7 +188,7 @@
 					<control type="scrollbar" id="74">
 						<left>540</left>
 						<top>560</top>
-						<width>12</width>
+						<width>10</width>
 						<height>460</height>
 						<onleft>50</onleft>
 						<onright>50</onright>

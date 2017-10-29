@@ -52,13 +52,15 @@
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
-						<control type="image">
-							<left>178</left>
+						<control type="label">
+							<left>175</left>
 							<width>60</width>
-							<height>55</height>
-							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
+							<height>60</height>
+							<align>center</align>
+							<font>IconSmall</font>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<label></label>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 				</itemlayout>
@@ -73,14 +75,15 @@
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="image">
-							<left>178</left>
-							<top>5</top>
+						<control type="label">
+							<left>175</left>
 							<width>60</width>
-							<height>55</height>
-							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
+							<height>60</height>
+							<align>center</align>
+							<font>IconSmall</font>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<label></label>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<aspectratio>keep</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>

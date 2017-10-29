@@ -331,7 +331,7 @@
 					<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + String.IsEqual(Control.GetLabel(201),)</visible>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>1181</left>
+					<left>1180</left>
 					<top>570</top>
 					<width>10</width>
 					<height>418</height>
@@ -898,7 +898,7 @@
 					<visible>!Integer.IsGreater(Container(300).NumItems,9)</visible>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>2</left>
+					<left>3</left>
 					<top>508</top>
 					<width>1192</width>
 					<height>60</height>

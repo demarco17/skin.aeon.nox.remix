@@ -73,9 +73,9 @@
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
 					<control type="scrollbar" id="5562">
-						<left>449</left>
+						<left>450</left>
 						<top>370</top>
-						<width>12</width>
+						<width>10</width>
 						<height>402</height>
 						<onleft>55</onleft>
 						<onright>55</onright>
@@ -99,8 +99,8 @@
 						</include>
 					</control>
 					<control type="scrollbar" id="5564">
-						<left>433</left>
-						<width>12</width>
+						<left>435</left>
+						<width>10</width>
 						<height>690</height>
 						<onleft>55</onleft>
 						<onright>55</onright>
@@ -562,9 +562,9 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="5560">
-					<left>777</left>
+					<left>779</left>
 					<top>92</top>
-					<width>12</width>
+					<width>10</width>
 					<height>840</height>
 					<onleft>55</onleft>
 					<onright condition="!ListItem.IsCollection">5562</onright>
@@ -673,9 +673,9 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="5563">
-					<left>449</left>
+					<left>450</left>
 					<top>182</top>
-					<width>12</width>
+					<width>10</width>
 					<height>330</height>
 					<onleft>55</onleft>
 					<onright>55</onright>
@@ -834,9 +834,9 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="5560">
-					<left>777</left>
+					<left>779</left>
 					<top>92</top>
-					<width>12</width>
+					<width>10</width>
 					<height>575</height>
 					<onleft>55</onleft>
 					<onright>5563</onright>

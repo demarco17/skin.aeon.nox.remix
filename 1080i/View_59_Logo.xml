@@ -49,9 +49,9 @@
 			</control>
 			<control type="scrollbar" id="5961">
 				<left>50</left>
-				<top>1068</top>
+				<top>1070</top>
 				<width>1820</width>
-				<height>12</height>
+				<height>10</height>
 				<onup>59</onup>
 				<ondown>59</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>

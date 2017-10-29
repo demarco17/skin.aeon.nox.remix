@@ -1008,9 +1008,9 @@
 				<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300) + String.IsEqual(Container(1300).NumItems, 0)</visible>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>1839</left>
+				<left>1840</left>
 				<top>32</top>
-				<width>12</width>
+				<width>10</width>
 				<height>720</height>
 				<onleft>9000</onleft>
 				<onright>1500</onright>

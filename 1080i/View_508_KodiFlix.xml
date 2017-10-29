@@ -230,9 +230,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="50863">
-				<top>1068</top>
+				<top>1070</top>
 				<width>1920</width>
-				<height>12</height>
+				<height>10</height>
 				<onup>508</onup>
 				<ondown>508</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>

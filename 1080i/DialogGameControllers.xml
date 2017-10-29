@@ -101,8 +101,8 @@
 					<visible>false</visible>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>312</left>
-					<width>12</width>
+					<left>313</left>
+					<width>10</width>
 					<height>480</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>

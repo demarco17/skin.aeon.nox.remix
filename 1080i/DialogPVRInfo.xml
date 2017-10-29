@@ -125,7 +125,7 @@
 					<left>770</left>
 					<top>450</top>
 					<height>265</height>
-					<width>12</width>
+					<width>10</width>
 					<onleft>9001</onleft>
 					<onright>9001</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>

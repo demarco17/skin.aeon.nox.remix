@@ -315,9 +315,9 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="61">
-					<left>1201</left>
+					<left>1202</left>
 					<top>140</top>
-					<width>12</width>
+					<width>10</width>
 					<height>840</height>
 					<onleft>51</onleft>
 					<onright>50</onright>

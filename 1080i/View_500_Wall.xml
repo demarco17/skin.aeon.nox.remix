@@ -120,9 +120,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="50060">
-				<left>1800</left>
+				<left>1802</left>
 				<top>179</top>
-				<width>12</width>
+				<width>10</width>
 				<height>720</height>
 				<onleft>500</onleft>
 				<onright>500</onright>
@@ -176,9 +176,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="50060">
-				<left>1800</left>
+				<left>1802</left>
 				<top>179</top>
-				<width>12</width>
+				<width>10</width>
 				<height>720</height>
 				<onleft>500</onleft>
 				<onright>500</onright>
@@ -232,9 +232,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="50060">
-				<left>1800</left>
+				<left>1802</left>
 				<top>179</top>
-				<width>12</width>
+				<width>10</width>
 				<height>720</height>
 				<onleft>500</onleft>
 				<onright>500</onright>

@@ -93,7 +93,7 @@
 						<param name="page_control">50164</param>
 					</include>
 					<control type="scrollbar" id="50164">
-						<left>625</left>
+						<left>624</left>
 						<width>10</width>
 						<height>427</height>
 						<onleft>501</onleft>
@@ -705,9 +705,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="50160">
-				<left>1260</left>
+				<left>1261</left>
 				<top>654</top>
-				<width>12</width>
+				<width>10</width>
 				<height>427</height>
 				<onleft>501</onleft>
 				<onright condition="ListItem.IsCollection">50164</onright>
@@ -1104,9 +1104,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="50160">
-				<left>1260</left>
+				<left>1261</left>
 				<top>654</top>
-				<width>12</width>
+				<width>10</width>
 				<height>427</height>
 				<onleft>501</onleft>
 				<onright condition="Container.Content(albums)">50162</onright>

@@ -101,8 +101,8 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="5860">
-				<left>1801</left>
-				<width>12</width>
+				<left>1802</left>
+				<width>10</width>
 				<top>560</top>
 				<height>330</height>
 				<onright>58</onright>

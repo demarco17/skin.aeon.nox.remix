@@ -66,8 +66,8 @@
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>961</left>
-					<width>12</width>
+					<left>962</left>
+					<width>10</width>
 					<height>480</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>

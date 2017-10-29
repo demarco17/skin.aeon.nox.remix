@@ -97,9 +97,9 @@
 						</focusedlayout>
 					</control>
 					<control type="scrollbar" id="73">
-						<left>523</left>
+						<left>524</left>
 						<top>88</top>
-						<width>12</width>
+						<width>10</width>
 						<height>540</height>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
@@ -169,9 +169,9 @@
 						</focusedlayout>
 					</control>
 					<control type="scrollbar" id="71">
-						<left>1028</left>
+						<left>1029</left>
 						<top>88</top>
-						<width>12</width>
+						<width>10</width>
 						<height>540</height>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
@@ -241,9 +241,9 @@
 						</focusedlayout>
 					</control>
 					<control type="scrollbar" id="72">
-						<left>1534</left>
+						<left>1535</left>
 						<top>88</top>
-						<width>12</width>
+						<width>10</width>
 						<height>540</height>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>

@@ -95,10 +95,10 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="260">
-					<left>663</left>
+					<left>664</left>
 					<top>88</top>
 					<height>480</height>
-					<width>12</width>
+					<width>10</width>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 					<onleft>211</onleft>

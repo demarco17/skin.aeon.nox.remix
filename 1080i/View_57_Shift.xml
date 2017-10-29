@@ -38,9 +38,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="5761">
-				<top>1068</top>
+				<top>1070</top>
 				<width>1920</width>
-				<height>12</height>
+				<height>10</height>
 				<onup>57</onup>
 				<ondown>57</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>
@@ -89,9 +89,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="5761">
-				<top>1068</top>
+				<top>1070</top>
 				<width>1920</width>
-				<height>12</height>
+				<height>10</height>
 				<onup>57</onup>
 				<ondown>57</ondown>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>

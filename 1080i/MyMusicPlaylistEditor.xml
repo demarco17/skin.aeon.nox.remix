@@ -32,9 +32,9 @@
 					<haspath>true</haspath>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>854</left>
+					<left>855</left>
 					<top>62</top>
-					<width>12</width>
+					<width>10</width>
 					<height>840</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
@@ -131,9 +131,9 @@
 					<haspath>true</haspath>
 				</control>
 				<control type="scrollbar" id="61">
-					<left>854</left>
+					<left>855</left>
 					<top>62</top>
-					<width>12</width>
+					<width>10</width>
 					<height>840</height>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 					<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>

@@ -50,9 +50,9 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="51160">
-				<left>1800</left>
+				<left>1801</left>
 				<top>210</top>
-				<width>12</width>
+				<width>10</width>
 				<height>708</height>
 				<onleft>511</onleft>
 				<onright>511</onright>

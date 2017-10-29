@@ -367,10 +367,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>769</left>
+				<left>770</left>
 				<top>88</top>
 				<height>630</height>
-				<width>12</width>
+				<width>10</width>
 				<onleft condition="String.IsEmpty(Window(musicinformation).Property(Discography))">9002</onleft>
 				<onleft condition="!String.IsEmpty(Window(musicinformation).Property(Discography))">50</onleft>
 				<onright>9001</onright>

@@ -67,9 +67,9 @@
 				<onright>60</onright>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>1839</left>
+				<left>1841</left>
 				<top>32</top>
-				<width>12</width>
+				<width>10</width>
 				<height>720</height>
 				<onleft>5</onleft>
 				<onright>3</onright>

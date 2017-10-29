@@ -147,9 +147,9 @@
 			</control>
 		</control>
 		<control type="scrollbar" id="5261">
-			<top>1068</top>
+			<top>1070</top>
 			<width>1920</width>
-			<height>12</height>
+			<height>10</height>
 			<onup>52</onup>
 			<ondown>52</ondown>
 			<texturesliderbar border="2">scrollbar/texturesliderbar_hor.png</texturesliderbar>

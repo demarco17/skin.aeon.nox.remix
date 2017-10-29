@@ -39,9 +39,9 @@
 				<label>$INFO[Window(Home).Property(TextViewerContent)]</label>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>1349</left>
+				<left>1350</left>
 				<top>80</top>
-				<width>12</width>
+				<width>10</width>
 				<height>790</height>
 				<onleft>Dialog.Close(1132)</onleft>
 				<onright>Dialog.Close(1132)</onright>
