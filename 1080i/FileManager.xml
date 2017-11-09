@@ -78,7 +78,7 @@
 						</control>
 						<control type="image">
 							<width>822</width>
-							<height>58</height>
+							<height>60</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(20)</visible>
 						</control>
@@ -175,7 +175,7 @@
 						</control>
 						<control type="image">
 							<width>820</width>
-							<height>58</height>
+							<height>60</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(21)</visible>
 						</control>

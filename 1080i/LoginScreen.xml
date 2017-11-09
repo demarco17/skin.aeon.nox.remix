@@ -26,13 +26,13 @@
 				<left>442</left>
 				<top>255</top>
 				<width>1035</width>
-				<height>602</height>
+				<height>568</height>
 				<onleft>20</onleft>
 				<onright>20</onright>
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<itemlayout height="150" width="1035">
+				<itemlayout height="142" width="1035">
 					<control type="image">
 						<left>15</left>
 						<top>15</top>
@@ -59,7 +59,7 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="150" width="870">
+				<focusedlayout height="142" width="870">
 					<control type="image">
 						<width>1035</width>
 						<height>142</height>

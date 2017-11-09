@@ -35,9 +35,8 @@
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="120" width="821">
 					<control type="image">
-						<top>60</top>
 						<width>821</width>
-						<height>60</height>
+						<height>120</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
@@ -92,9 +91,8 @@
 				</itemlayout>
 				<focusedlayout height="120" width="821">
 					<control type="image">
-						<top>60</top>
 						<width>821</width>
-						<height>60</height>
+						<height>120</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">

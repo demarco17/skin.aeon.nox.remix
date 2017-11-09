@@ -35,7 +35,7 @@
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="420">
 						<control type="image">
-							<width>4420</width>
+							<width>420</width>
 							<height>120</height>
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
@@ -56,8 +56,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>419</width>
-							<height>118</height>
+							<width>420</width>
+							<height>120</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>

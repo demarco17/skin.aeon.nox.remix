@@ -21,9 +21,8 @@
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="90" width="356">
 					<control type="image">
-						<top>30</top>
 						<width>356</width>
-						<height>60</height>
+						<height>90</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
@@ -38,9 +37,8 @@
 				</itemlayout>
 				<focusedlayout height="90" width="356">
 					<control type="image">
-						<top>30</top>
 						<width>356</width>
-						<height>60</height>
+						<height>90</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">
@@ -60,7 +58,7 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<label>513</label>
+						<label>10000</label>
 					</item>
 					<item id="2">
 						<label>16000</label>
@@ -303,7 +301,7 @@
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=musicgenreicons&amp;type=resource.images.musicgenreicons)</onclick>
 					</control>
-					<control type="radiobutton" id="308">
+					<!--<control type="radiobutton" id="308">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -312,6 +310,16 @@
 						<onclick>Skin.ToggleSetting(ArtworkDownloader.GUI)</onclick>
 						<selected>Skin.HasSetting(ArtworkDownloader.GUI)</selected>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>-->
+					<control type="radiobutton" id="308">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$INFO[System.AddonTitle(script.artwork.beef)] GUI</label>
+						<onclick>Skin.ToggleSetting(ArtworkDownloader.GUI)</onclick>
+						<selected>Skin.HasSetting(ArtworkDownloader.GUI)</selected>
+						<visible>System.HasAddon(script.artwork.beef)</visible>
 					</control>
 				</control>
 			</control>

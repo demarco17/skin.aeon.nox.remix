@@ -362,7 +362,7 @@
 					</control>
 					<control type="image">
 						<width>806</width>
-						<height>66</height>
+						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -460,7 +460,7 @@
 					</control>
 					<control type="image">
 						<width>806</width>
-						<height>66</height>
+						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -569,7 +569,7 @@
 					</control>
 					<control type="image">
 						<width>806</width>
-						<height>66</height>
+						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -666,7 +666,7 @@
 					</control>
 					<control type="image">
 						<width>806</width>
-						<height>66</height>
+						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -957,7 +957,7 @@
 					</control>
 					<control type="image">
 						<width>806</width>
-						<height>66</height>
+						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -1029,7 +1029,7 @@
 					</control>
 					<control type="image">
 						<width>806</width>
-						<height>66</height>
+						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -1090,7 +1090,7 @@
 					</control>
 					<control type="image">
 						<width>806</width>
-						<height>66</height>
+						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>

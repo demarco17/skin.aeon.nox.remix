@@ -277,8 +277,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>1055</width>
-							<height>68</height>
+							<width>1056</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>
@@ -376,8 +376,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>1055</width>
-							<height>68</height>
+							<width>1056</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>
@@ -473,8 +473,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>1055</width>
-							<height>68</height>
+							<width>1056</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>
@@ -571,8 +571,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>1055</width>
-							<height>68</height>
+							<width>1056</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(507)</visible>
 						</control>

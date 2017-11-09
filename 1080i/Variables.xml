@@ -93,9 +93,9 @@
 	</variable>
 	<!--  List Label Vars -->
 	<variable name="VideoListLabel2Var">
-		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: ,]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
-		<value>$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary,[COLOR grey2],[/COLOR]]</value>
+		<value>$INFO[ListItem.Genre,[COLOR grey2],[/COLOR]]</value>
 	</variable>
 	<variable name="ListLabel2Var">
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>

@@ -33,7 +33,7 @@
 			</control>
 			<control type="label">
 				<left>38</left>
-				<width>1100</width>
+				<width>1130</width>
 				<height>110</height>
 				<align>left</align>
 				<font>font35_title_bold</font>
@@ -66,7 +66,7 @@
 					<control type="label">
 						<left>36</left>
 						<width>545</width>
-						<height>50</height>
+						<height>45</height>
 						<font>font13</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -87,7 +87,7 @@
 					<control type="label">
 						<left>36</left>
 						<width>545</width>
-						<height>50</height>
+						<height>45</height>
 						<font>font13</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -114,7 +114,6 @@
 						<label>$INFO[ListItem.Season,$LOCALIZE[20373]: [COLOR grey],[/COLOR]]$INFO[ListItem.Episode,  $LOCALIZE[20359]: [COLOR grey],[/COLOR]]</label>
 						<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[ListItem.Artist,$LOCALIZE[557]: [COLOR grey],[/COLOR]]</label>
 						<visible>String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Artist)</visible>
@@ -172,6 +171,14 @@
 						<visible>!String.IsEmpty(ListItem.Country)</visible>
 					</item>
 					<item>
+						<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey] / ,[/COLOR]]</label>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+					</item>
+					<item>
+						<label>$INFO[ListItem.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.4),[COLOR grey] / ,[/COLOR]]</label>
+						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+					</item>
+					<item>
 						<label>$INFO[ListItem.DateAdded,$LOCALIZE[570]: [COLOR grey],[/COLOR]]</label>
 						<visible>[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + !String.IsEmpty(ListItem.DateAdded)</visible>
 					</item>
@@ -194,15 +201,7 @@
 					<item>
 						<label>$INFO[ListItem.Tag,$LOCALIZE[20459]: [COLOR grey],[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Tag)</visible>
-					</item>
-					<item>
-						<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey] / ,[/COLOR]]</label>
-						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
-					</item>
-					<item>
-						<label>$INFO[ListItem.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.4),[COLOR grey] / ,[/COLOR]]</label>
-						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
-					</item>
+					</item>	
 					<item>
 						<label>$INFO[ListItem.FileNameAndPath,$LOCALIZE[573]: [COLOR grey],[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.FileNameAndPath)</visible>
@@ -359,12 +358,13 @@
 					<itemgap>25</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="image" id="800011">
+						<width>130</width>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
-						<width>135</width>
+						<width>120</width>
 						<height>90</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Studio]</label>
@@ -389,8 +389,8 @@
 				<left>40</left>
 				<top>584</top>
 				<width>730</width>
-				<height>390</height>
-				<font>font15_textbox</font>
+				<height>385</height>
+				<font>font14_textbox2</font>
 				<align>left</align>
 				<label>$VAR[VideoPlotVar]</label>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
@@ -403,8 +403,8 @@
 				<left>40</left>
 				<top>584</top>
 				<width>1132</width>
-				<height>390</height>
-				<font>font15_textbox</font>
+				<height>385</height>
+				<font>font14_textbox2</font>
 				<align>left</align>
 				<label>$VAR[VideoPlotVar]</label>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
@@ -513,15 +513,29 @@
 					<onclick>ActivateWindow(1131)</onclick>
 					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				<control type="button" id="208">
+				<!--<control type="button" id="208">
 					<description>Artwork downloader</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
-					<onclick condition="Container.Content(movies) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="Container.Content(tvshows) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="Container.Content(movies) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="Container.Content(tvshows) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+				</control>-->
+				<control type="button" id="208">
+					<description>Artwork beef</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.artwork.beef) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 				</control>
 				<control type="button" id="210">
 					<description>Library editor</description>

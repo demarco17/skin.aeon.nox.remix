@@ -34,10 +34,9 @@
 				<visible>Player.Passthrough</visible>
 			</control>
 			<control type="label">
-				<description>Line 1 Label</description>
 				<width>445</width>
 				<height>40</height>
-				<font>font13_title</font>
+				<font>font13</font>
 				<align>right</align>
 				<label>$INFO[Control.GetLabel(1),,%]</label>
 			</control>

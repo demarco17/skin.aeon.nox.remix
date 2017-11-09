@@ -48,7 +48,7 @@
 							<width>920</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey2</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
@@ -110,9 +110,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<left>1</left>
-							<width>1138</width>
-							<height>118</height>
+							<width>1140</width>
+							<height>120</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
@@ -132,7 +131,7 @@
 							<width>920</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
@@ -441,9 +440,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<left>1</left>
-							<width>1138</width>
-							<height>118</height>
+							<width>1140</width>
+							<height>120</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50) + !Window.IsVisible(musicinformation)</visible>
 						</control>
@@ -624,9 +622,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<left>1</left>
-							<width>1138</width>
-							<height>118</height>
+							<width>1140</width>
+							<height>120</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
@@ -760,9 +757,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<left>1</left>
-							<width>1138</width>
-							<height>118</height>
+							<width>1140</width>
+							<height>120</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
@@ -780,7 +776,7 @@
 							<width>985</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -896,9 +892,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<left>1</left>
-							<width>1138</width>
-							<height>118</height>
+							<width>1140</width>
+							<height>120</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>

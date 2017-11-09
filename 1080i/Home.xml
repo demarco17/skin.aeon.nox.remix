@@ -101,7 +101,7 @@
 							<visible>Control.HasFocus(9010)</visible>
 							<control type="image">
 								<width>300</width>
-								<height>39</height>
+								<height>40</height>
 								<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							</control>
 							<control type="label">

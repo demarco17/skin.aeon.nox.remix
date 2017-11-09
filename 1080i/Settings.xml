@@ -70,7 +70,7 @@
 					<control type="image">
 						<left>1</left>
 						<width>838</width>
-						<height>148</height>
+						<height>150</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 					</control>
 					<control type="image">

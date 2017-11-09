@@ -218,8 +218,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>775</width>
-							<height>68</height>
+							<width>776</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
@@ -316,8 +316,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>775</width>
-							<height>68</height>
+							<width>776</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
@@ -413,8 +413,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>775</width>
-							<height>68</height>
+							<width>776</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
@@ -511,8 +511,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>775</width>
-							<height>68</height>
+							<width>776</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
@@ -767,8 +767,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>775</width>
-							<height>68</height>
+							<width>776</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
@@ -811,8 +811,8 @@
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="image">
-							<width>775</width>
-							<height>68</height>
+							<width>776</width>
+							<height>70</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>

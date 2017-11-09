@@ -93,7 +93,7 @@
 					</control>
 					<control type="image">
 						<width>1139</width>
-						<height>118</height>
+						<height>120</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
