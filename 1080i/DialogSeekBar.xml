@@ -140,10 +140,10 @@
 			<visible>!Skin.HasSetting(Disable.PauseClearArt)</visible>
 			<visible>Player.Paused + !Window.IsVisible(SubtitleSearch)</visible>
 			<visible>!Player.HasGame</visible>
-			<left>1470</left>
-			<top>776</top>
-			<width>450</width>
-			<height>254</height>
+			<left>1495</left>
+			<top>794</top>
+			<width>420</width>
+			<height>236</height>
 			<aspectratio aligny="bottom" align="right">keep</aspectratio>
 			<texture background="true">$VAR[PlayerArtworkVar]</texture>
 			<animation effect="slide" start="0,0" end="0,50" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning))">Conditional</animation>

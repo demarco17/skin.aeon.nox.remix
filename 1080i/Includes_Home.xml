@@ -935,7 +935,23 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<content target="videos" sortby="dateadded" sortorder="descending" limit="15">special://skin/extras/playlists/RecentUnwatchedMovies.xsp</content>
+				<content sortby="dateadded" sortorder="descending" limit="15">special://skin/extras/playlists/RecentUnwatchedMovies.xsp</content>
+			</control>
+			<control type="group">
+				<visible>!Control.HasFocus(9060)</visible>
+				<include>VisibleFadeAnimation</include>
+				<control type="label">
+					<left>160</left>
+					<top>382</top>
+					<width>1600</width>
+					<height>40</height>
+					<label>16101</label>
+					<textoffsetx>15</textoffsetx>
+					<font>font13_title</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<scroll>true</scroll>
+				</control>
 			</control>
 			<control type="group">
 				<visible>Control.HasFocus(9060)</visible>

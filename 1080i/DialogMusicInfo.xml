@@ -102,7 +102,7 @@
 					<item>
 						<label>$INFO[ListItem.Title]</label>
 						<label2>$LOCALIZE[369]:</label2>
-						<visible>!String.IsEmpty(ListItem.Title)</visible>
+						<visible>!String.IsEmpty(ListItem.Title) + String.IsEqual(ListItem.DBType,song)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Artist]</label>

@@ -49,7 +49,7 @@
 		<value condition="Window.IsActive(textviewer)">$VAR[BreadcrumbsFillerVar]</value>
 		<value condition="Window.IsActive(script-globalsearch-main.xml)">$INFO[System.AddonTitle(script.globalsearch)]$INFO[Control.GetLabel(190),: ]$INFO[Control.GetLabel(191), ]</value>
 		<value condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19069]]</value>
-		<value condition="Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19163]]</value>
+		<value condition="Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19163]]$INFO[Pvr.backenddiskspace,[COLOR grey3]  |  [/COLOR],]</value>
 		<value condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19040]]</value>
 		<value condition="Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[137]]</value>
 		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]$INFO[Control.GetLabel(21),[COLOR grey3]  |  [/COLOR],]</value>
@@ -399,8 +399,8 @@
 	</variable>
 	<variable name="SeekLabelVar">
 		<value condition="Player.Paused">$INFO[System.Time]$INFO[player.FinishTime, [,]]</value>
-		<value condition="Player.DisplayAfterSeek">$INFO[Player.SeekOffset]</value>
 		<value condition="Player.Seeking">$INFO[Player.SeekStepSize]</value>
+		<value condition="Player.DisplayAfterSeek">$INFO[Player.SeekOffset]</value>
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
 		<value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>

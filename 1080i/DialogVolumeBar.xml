@@ -2,66 +2,54 @@
 <window>
 	<controls>
 		<control type="group">
-			<visible>!Player.Muted</visible>
-			<left>1080</left>
+			<left>680</left>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
+			<visible>![Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(gameosd) | Window.IsVisible(playercontrols)]</visible>
 			<control type="image">
-				<left>15</left>
-				<width>445</width>
-				<height>45</height>
-				<texture border="1" colordiffuse="grey">dialogs/black.png</texture>
-				<visible>[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation) | Window.isActive(slideshow) | Window.IsActive(home) | Window.IsActive(FullscreenGame)]</visible>
-			</control>
-			<control type="label">
-				<left>30</left>
-				<height>40</height>
-				<width>60</width>
-				<aligny>top</aligny>
-				<textoffsety>3</textoffsety>
-				<font>IconSmall</font>
-				<label></label>
-				<visible>!Player.Passthrough</visible>
-			</control>
-			<control type="label">
-				<left>30</left>
-				<height>40</height>
-				<width>60</width>
-				<aligny>top</aligny>
-				<textoffsety>3</textoffsety>
-				<font>IconSmall</font>
-				<label></label>
-				<visible>Player.Passthrough</visible>
-			</control>
-			<control type="label">
-				<width>445</width>
-				<height>40</height>
-				<font>font13</font>
-				<align>right</align>
-				<label>$INFO[Control.GetLabel(1),,%]</label>
+				<top>-32</top>
+				<width>560</width>
+				<height>92</height>
+				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
 			<control type="progress" id="1">
-				<left>80</left>
-				<width>280</width>
-				<height>40</height>
+				<left>16</left>
+				<width>528</width>
+				<height>44</height>
 				<info>Player.Volume</info>
 			</control>
-		</control>
-		<control type="group">
-			<visible>Player.Muted</visible>
-			<left>1795</left>
-			<include>OpenCloseAnimation</include>
-			<include>VisibleFadeAnimation</include>
-			<animation effect="slide" start="0,0" end="0,80" time="200" condition="Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(playercontrols)">Conditional</animation>
 			<control type="label">
-				<left>45</left>
-				<top>40</top>
-				<width>50</width>
-				<height>50</height>
+				<height>42</height>
+				<width>560</width>
+				<textoffsetx>26</textoffsetx>
+				<font>IconSmall</font>
+				<label></label>
+				<visible>!Player.Muted + !Player.Passthrough</visible>
+			</control>
+			<control type="label">
+				<height>42</height>
+				<width>560</width>
+				<textoffsetx>26</textoffsetx>
+				<font>IconSmall</font>
+				<label></label>
+				<visible>!Player.Muted + Player.Passthrough</visible>
+			</control>
+			<control type="label">
+				<height>42</height>
+				<width>560</width>
+				<textoffsetx>26</textoffsetx>
 				<label></label>
-				<align>left</align>
-				<font>IconMedium</font>
+				<font>IconSmall</font>
 				<textcolor>red</textcolor>
+				<visible>Player.Muted</visible>
+			</control>
+			<control type="label">
+				<width>560</width>
+				<height>44</height>
+				<font>font13</font>
+				<textoffsetx>26</textoffsetx>
+				<align>right</align>
+				<label>$INFO[Control.GetLabel(1),,%]</label>
 			</control>
 		</control>
 	</controls>

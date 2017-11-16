@@ -162,7 +162,7 @@
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>$LOCALIZE[20386] ($LOCALIZE[16101])</label>
+						<label>$LOCALIZE[20386]</label>
 						<onclick>Skin.ToggleSetting(Enable.HomeWidget)</onclick>
 						<selected>Skin.HasSetting(Enable.HomeWidget)</selected>
 						<visible>Library.HasContent(Movies)</visible>

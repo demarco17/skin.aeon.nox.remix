@@ -33,7 +33,7 @@
 		<radioposx>340</radioposx>
 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
-		<height>60</height>
+		<height>70</height>
 		<width>148.5</width>
 		<align>center</align>
 		<aligny>center</aligny>

@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<controls>
-		<include condition="System.HasAddon(script.extendedinfo)">HiddenActorList</include>
 		<control type="group">
 			<include>VideoInfoLeftAnimation</include>
 			<control type="image">
@@ -34,7 +33,7 @@
 			<control type="label">
 				<left>38</left>
 				<width>1130</width>
-				<height>110</height>
+				<height>90</height>
 				<align>left</align>
 				<font>font35_title_bold</font>
 				<textcolor>grey</textcolor>
@@ -43,14 +42,13 @@
 			</control>
 			<control type="image">
 				<left>2</left>
-				<top>52</top>
 				<width>1190</width>
-				<height>60</height>
+				<height>90</height>
 				<texture border="4">dialogs/separator2.png</texture>
 			</control>
 			<control type="panel" id="300">
 				<left>2</left>
-				<top>112</top>
+				<top>90</top>
 				<width>1191</width>
 				<height>400</height>
 				<onup>9000</onup>
@@ -120,10 +118,7 @@
 					</item>
 					<item>
 						<label>$INFO[ListItem.Director,$LOCALIZE[20339]: [COLOR grey],[/COLOR]]</label>
-						<onclick condition="System.HasAddon(script.extendedinfo)">SetProperty(DirectorID,True)</onclick>
-						<onclick condition="System.HasAddon(script.extendedinfo)">SetProperty(ActorName,$INFO[ListItem.Director])</onclick>
-						<onclick condition="System.HasAddon(script.extendedinfo)">ActivateWindow(1130)</onclick>
-						<onclick condition="!System.HasAddon(script.extendedinfo)">SendClick(2003,13)</onclick>
+						<onclick>SendClick(2003,13)</onclick>	
 						<visible>!String.IsEmpty(ListItem.Director)</visible>
 					</item>
 					<item>
@@ -209,7 +204,7 @@
 				</content>
 			</control>
 			<control type="label">
-				<top>330</top>
+				<top>262</top>
 				<width>30</width>
 				<height>50</height>
 				<font>IconTiny</font>
@@ -220,7 +215,7 @@
 			</control>
 			<control type="label">
 				<left>1160</left>
-				<top>330</top>
+				<top>262</top>
 				<width>30</width>
 				<height>50</height>
 				<font>IconTiny</font>
@@ -231,10 +226,237 @@
 			</control>
 			<control type="image">
 				<left>596</left>
-				<top>112</top>
+				<top>90</top>
 				<width>2</width>
 				<height>400</height>
 				<texture border="1">dialogs/separator3.png</texture>
+			</control>
+			<control type="image">
+				<top>430</top>
+				<width>595</width>
+				<height>60</height>
+				<texture border="4">dialogs/separator2.png</texture>
+				<visible>!Integer.IsGreater(Container(300).NumItems,7)</visible>
+			</control>
+			<control type="image">
+				<left>594</left>
+				<top>430</top>
+				<width>595</width>
+				<height>60</height>
+				<texture border="4">dialogs/separator2.png</texture>
+				<visible>!Integer.IsGreater(Container(300).NumItems,15)</visible>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>3</left>
+				<top>490</top>
+				<width>1192</width>
+				<height>70</height>
+				<onup>300</onup>
+				<align>left</align>
+				<ondown condition="Control.IsVisible(400)">60</ondown>
+				<ondown condition="Control.IsVisible(401)">61</ondown>
+				<ondown condition="![Control.IsVisible(400) | Control.IsVisible(401)]">50</ondown>
+				<orientation>horizontal</orientation>
+				<control type="togglebutton" id="8">
+					<description>Play/browse to Show</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<altlabel></altlabel>
+					<usealttexture>String.IsEqual(ListItem.DBType,tvshow)</usealttexture>
+				</control>
+				<control type="togglebutton" id="201">
+					<description>Cast/Plot</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<altlabel></altlabel>
+				</control>
+				<control type="button" id="10">
+					<description>Get Thumb</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label>⊷</label>
+				</control>
+				<control type="button" id="11">
+					<description>Play Trailer</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
+				</control>
+				<control type="button" id="6">
+					<description>Refresh</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+				</control>
+				<control type="button" id="206">
+					<description>Fullscreen fanart</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick>SetProperty(FSFanart,$INFO[ListItem.Art(fanart)],movieinformation)</onclick>
+					<onclick>ActivateWindow(1131)</onclick>
+					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
+				</control>
+				<!--<control type="button" id="208">
+					<description>Artwork downloader</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+				</control>-->
+				<control type="button" id="208">
+					<description>Artwork beef</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,movie) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.artwork.beef) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
+				</control>
+				<control type="button" id="210">
+					<description>Library editor</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+					<visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+				</control>
+			</control>
+			<control type="panel" id="50">
+				<left>3</left>
+				<top>560</top>
+				<width>1188</width>
+				<height>420</height>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<orientation>horizontal</orientation>
+				<include>VisibleFadeAnimation</include>
+				<visible>String.IsEqual(Control.GetLabel(201),)</visible>
+				<itemlayout height="420" width="297">
+					<control type="image">
+						<width>297</width>
+						<height>418</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="image">
+						<top>328</top>
+						<width>297</width>
+						<height>90</height>
+						<texture colordiffuse="grey">dialogs/black.png</texture>
+					</control>
+					<control type="textbox">
+						<left>14</left>
+						<top>330</top>
+						<width>269</width>
+						<height>75</height>
+						<align>center</align>
+						<font>font13</font>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="420" width="297">
+					<control type="group">
+						<include>IconZoomAnimation</include>
+						<control type="image">
+							<width>297</width>
+							<height>418</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>328</top>
+							<width>287</width>
+							<height>85</height>
+							<texture colordiffuse="grey">dialogs/black.png</texture>
+						</control>
+						<control type="textbox">
+							<left>14</left>
+							<top>330</top>
+							<width>269</width>
+							<height>75</height>
+							<font>font13</font>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ,]</label>
+							<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="textbox" id="400">
+				<description>Plot</description>
+				<left>40</left>
+				<top>574</top>
+				<width>730</width>
+				<height>385</height>
+				<font>font14_textbox2</font>
+				<align>left</align>
+				<label>$VAR[VideoPlotVar]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<pagecontrol>60</pagecontrol>
+				<include>VisibleFadeAnimation</include>
+				<visible>String.IsEqual(Control.GetLabel(201),) + !String.IsEmpty(ListItem.Art(discart))</visible>
+			</control>
+			<control type="textbox" id="401">
+				<description>Plot</description>
+				<left>40</left>
+				<top>574</top>
+				<width>1132</width>
+				<height>385</height>
+				<font>font14_textbox2</font>
+				<align>left</align>
+				<label>$VAR[VideoPlotVar]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<pagecontrol>61</pagecontrol>
+				<include>VisibleFadeAnimation</include>
+				<visible>String.IsEqual(Control.GetLabel(201),) + String.IsEmpty(ListItem.Art(discart))</visible>
+			</control>
+			<!-- cdart -->
+			<control type="image">
+				<left>790</left>
+				<top>594</top>
+				<width>360</width>
+				<height>360</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true" diffuse="thumbs/cdart_mask.png">$INFO[ListItem.Art(discart)]</texture>
+				<visible>String.IsEqual(ListItem.DBType,movie) + String.IsEqual(Control.GetLabel(201),) + !String.IsEmpty(ListItem.Art(discart))</visible>
+				<include>VisibleFadeAnimation</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1181</left>
+				<top>560</top>
+				<width>10</width>
+				<height>418</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(400)</visible>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>1181</left>
+				<top>560</top>
+				<width>10</width>
+				<height>418</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(401)</visible>
 			</control>
 			<control type="group">
 				<top>995</top>
@@ -378,171 +600,6 @@
 						<include>MediaFlagVars</include>
 						<texture fallback="flags/mpaa/NR.png" colordiffuse="grey">$VAR[RatingFlagVar]</texture>
 					</control>
-				</control>
-			</control>
-			<control type="group" id="9001">
-				<include condition="!System.HasAddon(script.extendedinfo)">DefaultActorList</include>
-				<include condition="System.HasAddon(script.extendedinfo)">ExtendedVideoInfoLists</include>
-			</control>
-			<control type="textbox" id="400">
-				<description>Plot</description>
-				<left>40</left>
-				<top>584</top>
-				<width>730</width>
-				<height>385</height>
-				<font>font14_textbox2</font>
-				<align>left</align>
-				<label>$VAR[VideoPlotVar]</label>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<pagecontrol>60</pagecontrol>
-				<include>VisibleFadeAnimation</include>
-				<visible>String.IsEqual(Control.GetLabel(201),) + !String.IsEmpty(ListItem.Art(discart))</visible>
-			</control>
-			<control type="textbox" id="401">
-				<description>Plot</description>
-				<left>40</left>
-				<top>584</top>
-				<width>1132</width>
-				<height>385</height>
-				<font>font14_textbox2</font>
-				<align>left</align>
-				<label>$VAR[VideoPlotVar]</label>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<pagecontrol>61</pagecontrol>
-				<include>VisibleFadeAnimation</include>
-				<visible>String.IsEqual(Control.GetLabel(201),) + String.IsEmpty(ListItem.Art(discart))</visible>
-			</control>
-			<!-- cdart -->
-			<control type="image">
-				<left>790</left>
-				<top>604</top>
-				<width>360</width>
-				<height>360</height>
-				<aspectratio>stretch</aspectratio>
-				<texture background="true" diffuse="thumbs/cdart_mask.png">$INFO[ListItem.Art(discart)]</texture>
-				<visible>String.IsEqual(ListItem.DBType,movie) + String.IsEqual(Control.GetLabel(201),) + !String.IsEmpty(ListItem.Art(discart))</visible>
-				<include>VisibleFadeAnimation</include>
-			</control>
-			<control type="scrollbar" id="60">
-				<left>1181</left>
-				<top>570</top>
-				<width>10</width>
-				<height>418</height>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-				<visible>Control.IsVisible(400)</visible>
-			</control>
-			<control type="scrollbar" id="61">
-				<left>1181</left>
-				<top>570</top>
-				<width>10</width>
-				<height>418</height>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-				<visible>Control.IsVisible(401)</visible>
-			</control>
-			<control type="image">
-				<top>452</top>
-				<width>595</width>
-				<height>60</height>
-				<texture border="4">dialogs/separator2.png</texture>
-				<visible>!Integer.IsGreater(Container(300).NumItems,7)</visible>
-			</control>
-			<control type="image">
-				<left>594</left>
-				<top>452</top>
-				<width>595</width>
-				<height>60</height>
-				<texture border="4">dialogs/separator2.png</texture>
-				<visible>!Integer.IsGreater(Container(300).NumItems,15)</visible>
-			</control>
-			<control type="grouplist" id="9000">
-				<left>3</left>
-				<top>512</top>
-				<width>1192</width>
-				<height>60</height>
-				<onup>300</onup>
-				<align>left</align>
-				<ondown condition="Control.IsVisible(400)">60</ondown>
-				<ondown condition="Control.IsVisible(401)">61</ondown>
-				<ondown condition="![Control.IsVisible(400) | Control.IsVisible(401)] + !System.HasAddon(script.extendedinfo)">50</ondown>
-				<ondown condition="![Control.IsVisible(400) | Control.IsVisible(401)] + System.HasAddon(script.extendedinfo)">9001</ondown>
-				<orientation>horizontal</orientation>
-				<control type="togglebutton" id="8">
-					<description>Play/browse to Show</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<altlabel></altlabel>
-					<usealttexture>String.IsEqual(ListItem.DBType,tvshow)</usealttexture>
-				</control>
-				<control type="togglebutton" id="201">
-					<description>Cast/Plot</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<altlabel></altlabel>
-				</control>
-				<control type="button" id="10">
-					<description>Get Thumb</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label>⊷</label>
-				</control>
-				<control type="button" id="11">
-					<description>Play Trailer</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
-				</control>
-				<control type="button" id="6">
-					<description>Refresh</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-				</control>
-				<control type="button" id="206">
-					<description>Fullscreen fanart</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<onclick>SetProperty(FSFanart,$INFO[ListItem.Art(fanart)],movieinformation)</onclick>
-					<onclick>ActivateWindow(1131)</onclick>
-					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
-				</control>
-				<!--<control type="button" id="208">
-					<description>Artwork downloader</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<onclick condition="String.IsEqual(ListItem.DBType,movie) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,movie) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
-				</control>-->
-				<control type="button" id="208">
-					<description>Artwork beef</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<onclick condition="String.IsEqual(ListItem.DBType,movie) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,musicvideo) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,movie) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,musicvideo) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
-					<visible>System.HasAddon(script.artwork.beef) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
-				</control>
-				<control type="button" id="210">
-					<description>Library editor</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
-					<visible>System.HasAddon(script.libraryeditor) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 				</control>
 			</control>
 		</control>

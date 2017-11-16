@@ -626,7 +626,7 @@ msgid "Enable clearart/logo (if available) when the vodeo is paused."
 msgstr ""
 
 msgctxt "#31931"
-msgid "Enable recently added movie widget (unwatched) on the home screen."
+msgid "Enable unwatched recently added  movie widget on the home screen."
 msgstr ""
 
 #empty string with id 31932
