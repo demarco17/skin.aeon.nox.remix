@@ -5,7 +5,6 @@
 			<left>680</left>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
-			<visible>![Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(gameosd) | Window.IsVisible(playercontrols)]</visible>
 			<control type="image">
 				<top>-32</top>
 				<width>560</width>
