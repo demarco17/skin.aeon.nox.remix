@@ -4,12 +4,11 @@
 		<control type="group">
 			<left>680</left>
 			<include>OpenCloseAnimation</include>
-			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<top>-32</top>
 				<width>560</width>
 				<height>92</height>
-				<texture border="18">dialogs/dialog-bg2.png</texture>
+				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="progress" id="1">
 				<left>16</left>
@@ -18,6 +17,7 @@
 				<info>Player.Volume</info>
 			</control>
 			<control type="label">
+				<include>VisibleFadeAnimation</include>
 				<height>42</height>
 				<width>560</width>
 				<textoffsetx>26</textoffsetx>
@@ -26,6 +26,7 @@
 				<visible>!Player.Muted + !Player.Passthrough</visible>
 			</control>
 			<control type="label">
+				<include>VisibleFadeAnimation</include>
 				<height>42</height>
 				<width>560</width>
 				<textoffsetx>26</textoffsetx>
@@ -34,6 +35,17 @@
 				<visible>!Player.Muted + Player.Passthrough</visible>
 			</control>
 			<control type="label">
+				<include>VisibleFadeAnimation</include>
+				<width>560</width>
+				<height>44</height>
+				<font>font13</font>
+				<textoffsetx>26</textoffsetx>
+				<align>right</align>
+				<label>$INFO[Control.GetLabel(1),,%]</label>
+				<visible>!Player.Muted</visible>
+			</control>
+			<control type="label">
+				<include>VisibleFadeAnimation</include>
 				<height>42</height>
 				<width>560</width>
 				<textoffsetx>26</textoffsetx>
@@ -43,12 +55,15 @@
 				<visible>Player.Muted</visible>
 			</control>
 			<control type="label">
+				<include>VisibleFadeAnimation</include>
 				<width>560</width>
 				<height>44</height>
 				<font>font13</font>
+				<textcolor>red</textcolor>
 				<textoffsetx>26</textoffsetx>
 				<align>right</align>
-				<label>$INFO[Control.GetLabel(1),,%]</label>
+				<label>31059</label>
+				<visible>Player.Muted</visible>
 			</control>
 		</control>
 	</controls>

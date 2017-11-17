@@ -198,8 +198,11 @@ msgctxt "#31058"
 msgid "PVR information"
 msgstr ""
 
+msgctxt "#31059"
+msgid "Muted"
+msgstr ""
 
-#empty strings from id 31059 to 31060
+#empty string with id 31060
 
 msgctxt "#31061"
 msgid "Add-on & Favourite statistics"
@@ -336,6 +339,7 @@ msgid "BigList"
 msgstr ""
 
 #empty strings from id 31096 to 31101
+
 #Skin Settings labels
 #####################################################################
 

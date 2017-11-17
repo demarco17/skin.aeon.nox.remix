@@ -1114,28 +1114,6 @@
 				<align>right</align>
 				<label>$ADDON[service.libreelec.settings 607]$INFO[Window.Property(Version), ,]</label>
 			</control>
-			<control type="group">
-				<visible>Player.HasMedia + ![Window.IsActive(volumebar)]</visible>
-				<include>VisibleFadeAnimation</include>
-				<left>1080</left>
-				<control type="progress">
-					<width>500</width>
-					<height>41</height>
-					<info>Player.Progress</info>
-				</control>
-				<control type="fadelabel">
-					<width>500</width>
-					<height>40</height>
-					<font>font13_title</font>
-					<textoffsetx>10</textoffsetx>
-					<textcolor>grey</textcolor>
-					<scroll>true</scroll>
-					<scrollspeed>25</scrollspeed>
-					<scrollout>false</scrollout>
-					<pauseatend>10000</pauseatend>
-					<label>$INFO[Player.Title]</label>
-				</control>
-			</control>
 		</control>
 	</controls>
 </window>
