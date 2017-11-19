@@ -108,14 +108,16 @@
 					<bordersize>1</bordersize>
 				</control>
 				<control type="button">
-					<top>470</top>
+					<top>465</top>
 					<width>465</width>
+					<height>100</height>
+					<textoffsety>5</textoffsety>
 					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Genre][/COLOR][CR]$INFO[ListItem.Year]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Votes, (, $ADDON[script.extendedinfo 32082])]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 				</control>
 				<control type="textbox">
 					<left>15</left>
-					<top>565</top>
+					<top>568</top>
 					<width>445</width>
 					<height>345</height>
 					<label>$INFO[ListItem.Plot]</label>
@@ -123,14 +125,6 @@
 					<textcolor>grey</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 				</control>
-			</control>
-			<control type="button" id="600">
-				<onfocus>SetFocus(500)</onfocus>
-				<include>HiddenObject</include>
-			</control>
-			<control type="button" id="700">
-				<onfocus>SetFocus(500)</onfocus>
-				<include>HiddenObject</include>
 			</control>
 			<control type="group">
 				<top>-30</top>
@@ -172,15 +166,29 @@
 						</control>
 					</control>
 				</control>
-				<control type="image">
-					<left>1675</left>
+				<control type="group">
 					<top>1010</top>
-					<width>135</width>
-					<height>90</height>
-					<aspectratio>keep</aspectratio>
-					<fadetime>200</fadetime>
-					<texture>flags/moviedb.png</texture>
-					<bordersize>5</bordersize>
+					<control type="grouplist">
+						<width>1820</width>
+						<height>90</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<itemgap>25</itemgap>
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<width>160</width>
+							<height>78</height>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$INFO[ListItem.UserRating,flags/rating/,.png]</texture>
+						</control>
+						<control type="image">
+							<width>160</width>
+							<height>90</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flags/moviedb.png</texture>
+							<bordersize>5</bordersize>
+						</control>
+					</control>
 				</control>
 			</control>
 		</control>
@@ -264,10 +272,11 @@
 					<description>Type</description>
 					<label>$INFO[Window.Property(Type),$LOCALIZE[146] ,]</label>
 					<textwidth>352</textwidth>
-					<textureradioonfocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradiooffnofocus>
+					<textureradioonfocus>flags/moviedb.png</textureradioonfocus>
+					<textureradioonnofocus>flags/moviedb.png</textureradioonnofocus>
+					<textureradioofffocus>flags/moviedb.png</textureradioofffocus>
+					<textureradiooffnofocus>flags/moviedb.png</textureradiooffnofocus>
+					<radioposx />
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="5001">
@@ -368,6 +377,14 @@
 					<include>ButtonCommonValues</include>
 				</control>
 			</control>
+		</control>
+		<control type="button" id="600">
+			<onfocus>SetFocus(500)</onfocus>
+			<include>HiddenObject</include>
+		</control>
+		<control type="button" id="700">
+			<onfocus>SetFocus(500)</onfocus>
+			<include>HiddenObject</include>
 		</control>
 	</controls>
 </window>
