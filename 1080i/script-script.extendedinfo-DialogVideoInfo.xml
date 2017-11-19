@@ -129,7 +129,7 @@
 						<visible>!String.IsEmpty(Window.Property(genre))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window.Property(Duration),$LOCALIZE[2050]: [COLOR grey],[/COLOR]]</label>
+						<label>$INFO[Window.Property(Duration),$LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
 						<visible>!String.IsEqual(Window.Property(Duration),0) + !String.IsEmpty(Window.Property(Duration))</visible>
 					</item>
 					<item>
@@ -783,7 +783,7 @@
 							<control type="image">
 								<width>130</width>
 								<include>MediaFlagVars</include>
-								<bordersize>5</bordersize>
+								<bordersize>10</bordersize>
 								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
 							</control>
 						</itemlayout>
@@ -798,7 +798,7 @@
 							<control type="image">
 								<width>130</width>
 								<include>MediaFlagVars</include>
-								<bordersize>5</bordersize>
+								<bordersize>10</bordersize>
 								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
 							</control>
 						</itemlayout>

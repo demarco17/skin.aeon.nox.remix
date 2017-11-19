@@ -198,7 +198,7 @@
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
 				<align>left</align>
-				<label>$INFO[Control.GetLabel(5001),IMDB[COLOR grey3]  |  [/COLOR],]</label>
+				<label>$INFO[Control.GetLabel(5001),TMDB[COLOR grey3]  |  [/COLOR],]</label>
 			</control>
 			<control type="label">
 				<width>1920</width>
@@ -260,10 +260,14 @@
 					<enable>false</enable>
 					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
-				<control type="button" id="5007">
+				<control type="radiobutton" id="5007">
 					<description>Type</description>
 					<label>$INFO[Window.Property(Type),$LOCALIZE[146] ,]</label>
 					<textwidth>352</textwidth>
+					<textureradioonfocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFAAFF">flags/moviedb.png</textureradiooffnofocus>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="5001">
