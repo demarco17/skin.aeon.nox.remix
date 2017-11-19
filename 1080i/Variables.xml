@@ -763,11 +763,19 @@
 		<value>themecolor</value>
 	</variable>
 	<variable name="EI_VID.PanelLabel">
-		<value condition="Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)">$INFO[Window.Property(Set)]</value>
+		<value condition="Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208) + !String.IsEqual(Window.Property(Type),tvshow)">$INFO[Window.Property(Set)]</value>
+		<value condition="Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208) + String.IsEqual(Window.Property(Type),tvshow)">$LOCALIZE[33054]</value>
 		<value condition="Integer.IsGreater(Container(1250).NumItems,0) + ControlGroup(9000).HasFocus(204)">$ADDON[script.extendedinfo 32119]</value>
 		<value condition="Integer.IsGreater(Container(1350).NumItems,0) + ControlGroup(9000).HasFocus(205)">$LOCALIZE[20445]</value>
 		<value condition="Integer.IsGreater(Container(1150).NumItems,0) + ControlGroup(9000).HasFocus(206)">$ADDON[script.extendedinfo 32117]</value>
 		<value condition="Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(207)">$ADDON[script.extendedinfo 32118]</value>
+	</variable>
+	<variable name="EI_VID.PanelItems">
+		<value condition="Integer.IsGreater(Container(1250).NumItems,0) + ControlGroup(9000).HasFocus(204)">$INFO[Container(1250).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(1350).NumItems,0) + ControlGroup(9000).HasFocus(205)">$INFO[Container(1350).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(1150).NumItems,0) + ControlGroup(9000).HasFocus(206)">$INFO[Container(1150).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(207)">$INFO[Container(350).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)">$INFO[Container(250).NumItems]</value>
 	</variable>
 	<variable name="EI_INFO.PanelLabel">
 		<value condition="Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(32)">Movies</value>
@@ -775,5 +783,12 @@
 		<value condition="Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36)">$ADDON[script.extendedinfo 32119]</value>
 		<value condition="Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(37)">$LOCALIZE[20445]</value>
 		<value condition="Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(38)">$ADDON[script.extendedinfo 32118]</value>
+	</variable>
+	<variable name="EI_INFO.PanelItems">
+		<value condition="Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(32)">$INFO[Container(150).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(34)">$INFO[Container(250).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(450).NumItems,0) + ControlGroup(9000).HasFocus(36)">$INFO[Container(450).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(750).NumItems,0) + ControlGroup(9000).HasFocus(37)">$INFO[Container(750).NumItems]</value>
+		<value condition="Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(38)">$INFO[Container(350).NumItems]</value>
 	</variable>
 </includes>

@@ -23,7 +23,7 @@
 			<control type="image">
 				<width>1192</width>
 				<height>1080</height>
-				<texture border="1">dialogs/logo_back.png</texture>
+				<texture>dialogs/logo_back.png</texture>
 			</control>
 			<control type="image">
 				<width>1192</width>
@@ -118,7 +118,7 @@
 					</item>
 					<item>
 						<label>$INFO[ListItem.Director,$LOCALIZE[20339]: [COLOR grey],[/COLOR]]</label>
-						<onclick>SendClick(2003,13)</onclick>	
+						<onclick>SendClick(2003,13)</onclick>
 						<visible>!String.IsEmpty(ListItem.Director)</visible>
 					</item>
 					<item>
@@ -251,8 +251,8 @@
 				<top>490</top>
 				<width>1192</width>
 				<height>70</height>
-				<onup>300</onup>
 				<align>left</align>
+				<onup>300</onup>
 				<ondown condition="Control.IsVisible(400)">60</ondown>
 				<ondown condition="Control.IsVisible(401)">61</ondown>
 				<ondown condition="![Control.IsVisible(400) | Control.IsVisible(401)]">50</ondown>

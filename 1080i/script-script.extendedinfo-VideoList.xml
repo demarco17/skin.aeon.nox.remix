@@ -19,7 +19,7 @@
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture border="1">dialogs/logo_back.png</texture>
+				<texture>dialogs/logo_back.png</texture>
 			</control>
 			<control type="image">
 				<description>background image</description>
@@ -144,7 +144,7 @@
 						<font>font16_title_bold</font>
 						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]$INFO[ListItem.UserRating,[COLOR grey3]  |  ,[/COLOR]]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>30</textoffsetx>
 					</control>
 					<control type="grouplist">
@@ -175,8 +175,12 @@
 				<control type="image">
 					<left>1675</left>
 					<top>1010</top>
-					<include>MediaFlagVars</include>
+					<width>135</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>200</fadetime>
 					<texture>flags/moviedb.png</texture>
+					<bordersize>5</bordersize>
 				</control>
 			</control>
 		</control>

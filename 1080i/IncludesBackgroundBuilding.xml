@@ -25,7 +25,7 @@
 			<visible>![Window.IsActive(home) | Window.IsActive(startup)]</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture border="1">dialogs/logo_back.png</texture>
+				<texture>dialogs/logo_back.png</texture>
 			</control>
 		</control>
 	</include>
@@ -88,7 +88,7 @@
 			<include>VisibleFadeAnimation</include>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture border="1">dialogs/logo_back.png</texture>
+				<texture>dialogs/logo_back.png</texture>
 			</control>
 		</control>
 	</include>

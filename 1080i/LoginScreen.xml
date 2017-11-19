@@ -9,7 +9,7 @@
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture border="1">dialogs/logo_back.png</texture>
+			<texture>dialogs/logo_back.png</texture>
 		</control>
 		<control type="group">
 			<control type="label">
