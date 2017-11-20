@@ -132,7 +132,7 @@
 					<left>90</left>
 					<top>1010</top>
 					<control type="label">
-						<width>11500</width>
+						<width>1400</width>
 						<height>42</height>
 						<align>left</align>
 						<font>font16_title_bold</font>
@@ -144,7 +144,7 @@
 					<control type="grouplist">
 						<left>30</left>
 						<top>45</top>
-						<width>1100</width>
+						<width>1400</width>
 						<height>30</height>
 						<align>left</align>
 						<itemgap>10</itemgap>
@@ -169,7 +169,7 @@
 				<control type="group">
 					<top>1010</top>
 					<control type="grouplist">
-						<width>1820</width>
+						<width>1840</width>
 						<height>90</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -185,7 +185,7 @@
 							<width>160</width>
 							<height>90</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/moviedb.png</texture>
+							<texture colordiffuse="grey">flags/moviedb.png</texture>
 							<bordersize>5</bordersize>
 						</control>
 					</control>
@@ -362,6 +362,7 @@
 					<label>137</label>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
 					<onclick>SetFocus(500)</onclick>
 				</control>
 				<control type="button" id="7000">
@@ -369,6 +370,8 @@
 					<label>$ADDON[script.extendedinfo 32024]</label>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(500)</onclick>
 				</control>
 				<control type="button" id="5005">
 					<description>Clear Filter</description>

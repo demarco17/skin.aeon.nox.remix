@@ -52,7 +52,7 @@
 				<left>1070</left>
 				<width>120</width>
 				<height>90</height>
-				<texture>flags/moviedb.png</texture>
+				<texture colordiffuse="grey">flags/moviedb.png</texture>
 				<bordersize>5</bordersize>
 				<aspectratio>keep</aspectratio>
 			</control>
@@ -228,6 +228,7 @@
 				<align>left</align>
 				<onup>300</onup>
 				<ondown condition="Control.IsVisible(800)">60</ondown>
+				<ondown condition="Control.IsVisible(150)">150</ondown>
 				<ondown condition="Control.IsVisible(250)">250</ondown>
 				<ondown condition="Control.IsVisible(350)">350</ondown>
 				<ondown condition="Control.IsVisible(1000)">1000</ondown>
@@ -283,6 +284,12 @@
 					<label></label>
 					<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 				</control>
+				<control type="button" id="209">
+					<description>Recommended</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
+				</control>
 			</control>
 			<control type="textbox" id="800">
 				<description>Plot</description>
@@ -334,13 +341,15 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
-					<control type="image">
+					<control type="label">
 						<left>235</left>
 						<width>60</width>
-						<height>55</height>
-						<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
-						<visible>!String.IsEmpty(ListItem.dbid)</visible>
-						<aspectratio>keep</aspectratio>
+						<height>60</height>
+						<align>center</align>
+						<font>IconSmall</font>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
+						<label></label>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
 					</control>
 					<control type="image">
 						<top>328</top>
@@ -369,14 +378,105 @@
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
-						<control type="image">
-							<left>232</left>
-							<top>5</top>
+						<control type="label">
+							<left>235</left>
 							<width>60</width>
-							<height>55</height>
-							<texture colordiffuse="$VAR[SkinThemeColour]">overlays/OverlayWatched.png</texture>
-							<visible>!String.IsEmpty(ListItem.dbid)</visible>
-							<aspectratio>keep</aspectratio>
+							<height>60</height>
+							<align>center</align>
+							<font>IconSmall</font>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<label></label>
+							<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>328</top>
+							<width>287</width>
+							<height>85</height>
+							<texture colordiffuse="grey">dialogs/black.png</texture>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>330</top>
+							<width>277</width>
+							<height>75</height>
+							<font>font13</font>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+							<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="panel" id="150">
+				<description>Recommended By TMDB</description>
+				<left>3</left>
+				<top>560</top>
+				<width>1188</width>
+				<height>420</height>
+				<onleft>150</onleft>
+				<onright>150</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<orientation>horizontal</orientation>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<visible>Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(209)</visible>
+				<include>VisibleFadeAnimation</include>
+				<itemlayout height="420" width="297">
+					<control type="image">
+						<width>297</width>
+						<height>418</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="label">
+						<left>235</left>
+						<width>60</width>
+						<height>60</height>
+						<align>center</align>
+						<font>IconSmall</font>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
+						<label></label>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+					</control>
+					<control type="image">
+						<top>328</top>
+						<width>297</width>
+						<height>90</height>
+						<texture colordiffuse="grey">dialogs/black.png</texture>
+					</control>
+					<control type="textbox">
+						<left>10</left>
+						<top>330</top>
+						<width>277</width>
+						<height>75</height>
+						<align>center</align>
+						<font>font13</font>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="420" width="297">
+					<control type="group">
+						<include>IconZoomAnimation</include>
+						<control type="image">
+							<width>297</width>
+							<height>418</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="label">
+							<left>235</left>
+							<width>60</width>
+							<height>60</height>
+							<align>center</align>
+							<font>IconSmall</font>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<label></label>
+							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 						</control>
 						<control type="image">
 							<left>5</left>
@@ -714,7 +814,7 @@
 				<align>right</align>
 				<aligny>top</aligny>
 				<label>$VAR[EI_VID.PanelItems,, $LOCALIZE[31025]]</label>
-				<visible>ControlGroup(9000).HasFocus(204) | ControlGroup(9000).HasFocus(205) | ControlGroup(9000).HasFocus(206) | ControlGroup(9000).HasFocus(207) | ControlGroup(9000).HasFocus(208)</visible>
+				<visible>ControlGroup(9000).HasFocus(204) | ControlGroup(9000).HasFocus(205) | ControlGroup(9000).HasFocus(206) | ControlGroup(9000).HasFocus(207) | ControlGroup(9000).HasFocus(208) | ControlGroup(9000).HasFocus(209)</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
 			<control type="group">
@@ -816,14 +916,13 @@
 		</control>
 		<control type="group">
 			<visible>false</visible>
-			<control type="panel" id="150" />
-			<control type="panel" id="450" />
-			<control type="panel" id="650" />
-			<control type="panel" id="750" />
-			<control type="panel" id="850" />
-			<control type="panel" id="950" />
-			<control type="panel" id="1050" />
-			<control type="panel" id="2000" />
+			<control type="panel" id="450" /><!-- Related movie lists -->
+			<control type="panel" id="650" /><!-- Releases -->
+			<control type="panel" id="750" /><!-- Crew -->
+			<control type="panel" id="850" /><!-- Genres -->
+			<control type="panel" id="950" /><!-- Keywords -->
+			<control type="panel" id="1050" /><!-- Reviews -->
+			<control type="panel" id="2000" /><!-- Episode index -->
 		</control>
 	</controls>
 </window>
