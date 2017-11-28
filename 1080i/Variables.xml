@@ -91,6 +91,15 @@
 		<value condition="!Control.HasFocus(707)">88FFFFFF</value>
 		<value>FFFFFFFF</value>
 	</variable>
+	<variable name="PVRChannelsOSD">
+		<value condition="Pvr.IsPlayingTv">$LOCALIZE[19023]$INFO[VideoPlayer.ChannelGroup, - ,]</value>
+		<value condition="Pvr.IsPlayingRadio">$LOCALIZE[19024]$INFO[MusicPlayer.ChannelGroup, - ,]</value>
+	</variable>
+	<variable name="VideoInfoStudio">
+		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$LOCALIZE[31019]:</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie)">$LOCALIZE[572]:</value>
+	</variable>
+
 	<!--  List Label Vars -->
 	<variable name="VideoListLabel2Var">
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</value>
@@ -392,7 +401,7 @@
 	</variable>
 	<variable name="FloorLabel2Var">
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(songs)">$INFO[ListItem.Duration,,[COLOR grey3]  |  [/COLOR]]$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(songs)">$INFO[ListItem.Duration]$INFO[ListItem.Album,  |  ,]$INFO[ListItem.DiscNumber,  |  $LOCALIZE[427]: ,]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
 		<value condition="Container.Content()">$INFO[ListItem.Comment]</value>
 		<value>$INFO[ListItem.Label2]</value>

@@ -166,6 +166,10 @@
 						<visible>!String.IsEmpty(ListItem.Country)</visible>
 					</item>
 					<item>
+						<label>$VAR[VideoInfoStudio]$INFO[ListItem.Studio, [COLOR grey],[/COLOR]]</label>
+						<visible>!String.IsEmpty(ListItem.Studio)</visible>
+					</item>
+					<item>
 						<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey] / ,[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					</item>

@@ -185,13 +185,13 @@
 				</control>
 				<control type="group">
 					<visible>Player.HasVideo</visible>
+					<include>VisibleFadeAnimation</include>
 					<control type="image">
 						<left>33</left>
 						<top>32</top>
 						<width>821</width>
 						<height>461</height>
 						<texture>dialogs/black.png</texture>
-						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="videowindow">
 						<left>33</left>

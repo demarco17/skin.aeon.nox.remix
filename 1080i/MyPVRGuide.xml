@@ -127,7 +127,7 @@
 					<control type="image" id="2">
 						<height>90</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="3">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
+						<texture border="3" fallback="overlays/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
@@ -148,7 +148,7 @@
 					<control type="image" id="2">
 						<height>90</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="3">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
+						<texture border="3" fallback="overlays/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
 					</control>
 					<control type="image" id="2">
 						<height>90</height>
@@ -306,7 +306,7 @@
 				<itemlayout height="100" width="404">
 					<control type="image" id="2">
 						<aspectratio>stretch</aspectratio>
-						<texture border="3">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
+						<texture border="3" fallback="overlays/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
@@ -326,7 +326,7 @@
 				<focusedlayout height="100" width="404">
 					<control type="image" id="2">
 						<aspectratio>stretch</aspectratio>
-						<texture border="3">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
+						<texture border="3" fallback="overlays/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
 					</control>
 					<control type="image" id="2">
 						<texture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</texture>
@@ -373,11 +373,23 @@
 					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 					<bordersize>1</bordersize>
 				</control>
-				<control type="image">
+				<control type="label">
 					<width>140</width>
-					<height>70</height>
-					<texture colordiffuse="white">settings/icons/livetv.png</texture>
-					<aspectratio>keep</aspectratio>
+					<height>65</height>
+					<font>IconMedium</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<label></label>
+					<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
+				</control>
+				<control type="label">
+					<width>140</width>
+					<height>65</height>
+					<font>IconMedium</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<label></label>
+					<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 				</control>
 				<control type="label">
 					<top>55</top>

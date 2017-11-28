@@ -5,7 +5,7 @@
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
-			<visible>![Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(addonsettings) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDAudioSettings)]</visible>
+			<visible>![Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(addonsettings) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(pvrchannelguide) | Window.IsVisible(PVROSDChannels)]</visible>
 			<control type="image">
 				<width>1920</width>
 				<height>102</height>
@@ -26,6 +26,7 @@
 					<label />
 					<font />
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="togglebutton" id="701">
 					<texturefocus>osd/buttons/OSDAudio.png</texturefocus>
@@ -66,6 +67,29 @@
 					<font />
 					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 					<visible>Visualisation.HasPresets</visible>
+				</control>
+				<control type="button" id="712">
+					<texturefocus>osd/buttons/OSDChannelUP.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelUP.png</texturenofocus>
+					<label />
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Previous)</onclick>
+					<visible>Pvr.IsPlayingRadio</visible>
+				</control>
+				<control type="button" id="713">
+					<textoffsety>60</textoffsety>
+					<texturefocus>osd/buttons/OSDChannelDown.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelDown.png</texturenofocus>
+					<label />
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PlayerControl(Next)</onclick>
+					<visible>Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="button" id="600">
 					<texturefocus>osd/buttons/OSDPrevTrack.png</texturefocus>
@@ -135,6 +159,7 @@
 					<font />
 					<usealttexture>Playlist.IsRandom</usealttexture>
 					<onclick>PlayerControl(Random)</onclick>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="button" id="707">
 					<width>0.1</width>
@@ -144,11 +169,13 @@
 					<label />
 					<font />
 					<onclick>PlayerControl(Repeat)</onclick>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="image" id="708">
 					<texture colordiffuse="$VAR[RepeatButtonColordiffuseVar]">$VAR[OSDRepeatButtonVar]</texture>
 					<width>100</width>
 					<height>100</height>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="button" id="709">
 					<texturefocus>osd/buttons/OSDRating.png</texturefocus>
@@ -158,6 +185,27 @@
 					<label />
 					<font />
 					<onclick>setrating</onclick>
+					<visible>!Pvr.IsPlayingRadio</visible>
+				</control>
+				<control type="button" id="710">
+					<texturefocus>osd/buttons/OSDChannelList.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelList.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(PVROSDChannels)</onclick>
+					<visible>Pvr.IsPlayingRadio</visible>
+				</control>
+				<control type="button" id="711">
+					<texturefocus>osd/buttons/OSDChannelGuide.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelGuide.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(pvrchannelguide)</onclick>
+					<visible>Pvr.IsPlayingRadio</visible>
 				</control>
 				<control type="button" id="703">
 					<texturefocus>osd/buttons/OSDLyrics.png</texturefocus>
@@ -168,7 +216,7 @@
 					<font />
 					<onclick>Close</onclick>
 					<onclick>RunScript(script.cu.lrclyrics)</onclick>
-					<visible>System.HasAddon(script.cu.lrclyrics)</visible>
+					<visible>!Pvr.IsPlayingRadio + System.HasAddon(script.cu.lrclyrics)</visible>
 				</control>
 			</control>
 		</control>
