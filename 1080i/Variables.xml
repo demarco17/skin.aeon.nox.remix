@@ -99,6 +99,10 @@
 		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$LOCALIZE[31019]:</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie)">$LOCALIZE[572]:</value>
 	</variable>
+	<variable name="Premiered.Next.Label">
+		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$LOCALIZE[20416]:</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie)">$LOCALIZE[31030]:</value>
+	</variable>
 
 	<!--  List Label Vars -->
 	<variable name="VideoListLabel2Var">

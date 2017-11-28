@@ -154,7 +154,7 @@
 						<onclick>SendClick(2003,7)</onclick>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</label>
+						<label>$VAR[Premiered.Next.Label]$INFO[ListItem.Premiered, [COLOR grey],[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 					</item>
 					<item>
