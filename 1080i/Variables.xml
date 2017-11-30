@@ -96,12 +96,12 @@
 		<value condition="Pvr.IsPlayingRadio">$LOCALIZE[19024]$INFO[MusicPlayer.ChannelGroup, - ,]</value>
 	</variable>
 	<variable name="VideoInfoStudio">
-		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$LOCALIZE[31019]:</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie)">$LOCALIZE[572]:</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)">$LOCALIZE[572]:</value>
+		<value>$LOCALIZE[31019]:</value>
 	</variable>
-	<variable name="Premiered.Next.Label">
-		<value condition="String.IsEqual(ListItem.DBType,tvshow)">$LOCALIZE[20416]:</value>
-		<value condition="String.IsEqual(ListItem.DBType,movie)">$LOCALIZE[31030]:</value>
+	<variable name="Premiered.First.Label">
+		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)">$LOCALIZE[31030]:</value>
+		<value>$LOCALIZE[20416]:</value>
 	</variable>
 
 	<!--  List Label Vars -->

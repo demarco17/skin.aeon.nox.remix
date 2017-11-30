@@ -154,7 +154,7 @@
 						<onclick>SendClick(2003,7)</onclick>
 					</item>
 					<item>
-						<label>$VAR[Premiered.Next.Label]$INFO[ListItem.Premiered, [COLOR grey],[/COLOR]]</label>
+						<label>$VAR[Premiered.First.Label]$INFO[ListItem.Premiered, [COLOR grey],[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 					</item>
 					<item>
@@ -170,16 +170,16 @@
 						<visible>!String.IsEmpty(ListItem.Studio)</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey] / ,[/COLOR]]</label>
+						<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.4),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.5),[COLOR grey] / ,[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.4),[COLOR grey] / ,[/COLOR]]</label>
+						<label>$INFO[ListItem.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.4),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.5),[COLOR grey] / ,[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.DateAdded,$LOCALIZE[570]: [COLOR grey],[/COLOR]]</label>
-						<visible>[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + !String.IsEmpty(ListItem.DateAdded)</visible>
+						<visible>!String.IsEmpty(ListItem.DateAdded)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.PlayCount,$LOCALIZE[567]: [COLOR grey],[/COLOR]]</label>
