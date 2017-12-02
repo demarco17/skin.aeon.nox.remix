@@ -10,7 +10,6 @@
 				<width>1870</width>
 				<height>80</height>
 				<font>font_KodiFiix</font>
-				<textcolor>grey</textcolor>
 				<label>$INFO[ListItem.Title]</label>
 			</control>
 			<control type="grouplist">

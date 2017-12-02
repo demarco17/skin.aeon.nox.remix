@@ -138,8 +138,8 @@
 					</control>
 					<control type="group">
 						<control type="button">
-							<label>$VAR[InfoPanelLabel5Var]</label>
-							<width>251</width>
+							<label>$VAR[InfoPanelLabel4Var]</label>
+							<width>250</width>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 						</control>
 						<control type="image">
@@ -150,9 +150,9 @@
 							<texture border="1">dialogs/separator3.png</texture>
 						</control>
 						<control type="button">
-							<label>$VAR[InfoPanelLabel4Var]</label>
 							<left>251</left>
-							<width>250</width>
+							<label>$VAR[InfoPanelLabel5Var]</label>
+							<width>251</width>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 						</control>
 					</control>
@@ -243,17 +243,17 @@
 					</control>
 					<control type="button">
 						<width>560</width>
-						<label>$VAR[InfoPanelLabel2Var]</label>
+						<label>$VAR[InfoPanelLabel3Var]</label>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 					</control>
 					<control type="button">
 						<width>560</width>
-						<label>$VAR[InfoPanelLabel3Var]</label>
+						<label>$VAR[InfoPanelLabel2Var]</label>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 					</control>
 					<control type="group">
 						<control type="button">
-							<label>$VAR[InfoPanelLabel5Var]</label>
+							<label>$VAR[InfoPanelLabel4Var]</label>
 							<width>280</width>
 							<height>92</height>
 							<include>ShowCaseInfoPanelButtonsValues</include>
@@ -266,8 +266,8 @@
 							<texture border="1">dialogs/separator3.png</texture>
 						</control>
 						<control type="button">
-							<label>$VAR[InfoPanelLabel4Var]</label>
 							<left>280</left>
+							<label>$VAR[InfoPanelLabel5Var]</label>
 							<width>280</width>
 							<height>92</height>
 							<include>ShowCaseInfoPanelButtonsValues</include>

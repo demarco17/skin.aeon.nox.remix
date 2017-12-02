@@ -17,21 +17,30 @@
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsCollection</visible>
+					<control type="label">
+						<left>13</left>
+						<top>455</top>
+						<height>50</height>
+						<width>660</width>
+						<font>font14</font>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>$INFO[ListItem.Year]
+						<label>$VAR[FanartListInfoVar]</label>
+					</control>
 					<control type="textbox">
 						<label>$VAR[VideoPlotVar]</label>
 						<left>13</left>
-						<top>455</top>
+						<top>505</top>
 						<width>660</width>
-						<height>250</height>
-						<font>font14_textbox</font>
+						<height>215</height>
+						<font>font14_textbox2</font>
 						<pagecontrol>50762</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
 					<control type="scrollbar" id="50762">
 						<left>690</left>
-						<top>455</top>
+						<top>505</top>
 						<width>10</width>
-						<height>250</height>
+						<height>215</height>
 						<onleft>507</onleft>
 						<onright>507</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>

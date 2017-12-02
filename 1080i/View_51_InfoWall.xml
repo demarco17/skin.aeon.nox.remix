@@ -174,7 +174,8 @@
 					<left>1113</left>
 					<top>615</top>
 					<width>685</width>
-					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Genre,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3]  |  [/COLOR],]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]][CR][COLOR grey]$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3]  |  [/COLOR],][/COLOR]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
