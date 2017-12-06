@@ -130,6 +130,19 @@
 					<font />
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
+				<control type="togglebutton" id="606">
+					<texturefocus>osd/buttons/OSDRecordOff.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRecordOff.png</texturenofocus>
+					<alttexturefocus>osd/buttons/OSDRecordOn.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRecordOn.png</alttexturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
+					<visible>PVR.CanRecordPlayingChannel + Pvr.IsPlayingRadio</visible>
+				</control>
 				<control type="button" id="604">
 					<texturefocus>osd/buttons/OSDForward.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDForward.png</texturenofocus>

@@ -23,7 +23,7 @@
 						<height>50</height>
 						<width>660</width>
 						<font>font14</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>$INFO[ListItem.Year]
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<label>$VAR[FanartListInfoVar]</label>
 					</control>
 					<control type="textbox">

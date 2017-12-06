@@ -135,9 +135,9 @@
 					<height>100</height>
 					<label />
 					<font />
-					<onclick>PlayerControl(Record)</onclick>
-					<usealttexture>Player.Recording</usealttexture>
-					<visible>Player.CanRecord + VideoPlayer.Content(LiveTV)</visible>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
+					<visible>PVR.CanRecordPlayingChannel + VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="button" id="604">
 					<texturefocus>osd/buttons/OSDForward.png</texturefocus>

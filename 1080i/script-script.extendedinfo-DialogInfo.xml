@@ -224,7 +224,7 @@
 					<description>Fanart</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label>⊷</label>
-					<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
 				</control>
 				<control type="button" id="38">
 					<description>Youtube</description>
