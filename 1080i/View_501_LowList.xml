@@ -301,7 +301,7 @@
 					</control>
 				</control>
 			</control>
-			<control type="list" id="501">
+			<control type="fixedlist" id="501">
 				<left>450</left>
 				<top>655</top>
 				<width>976</width>
@@ -310,6 +310,8 @@
 				<onleft>9050</onleft>
 				<onright>50160</onright>
 				<pagecontrol>50160</pagecontrol>
+				<focusposition>0</focusposition>
+				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>

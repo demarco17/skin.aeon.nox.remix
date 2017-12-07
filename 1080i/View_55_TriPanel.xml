@@ -158,7 +158,7 @@
 					<height>872</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="list" id="55">
+				<control type="fixedlist" id="55">
 					<top>92</top>
 					<width>776</width>
 					<height>840</height>
@@ -168,6 +168,8 @@
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
 					<preloaditems>2</preloaditems>
+					<focusposition>0</focusposition>
+					<movement>11</movement>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="70" width="806" condition="Container.Content(movies)">
@@ -733,7 +735,7 @@
 					<height>591</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="list" id="55">
+				<control type="fixedlist" id="55">
 					<top>92</top>
 					<width>776</width>
 					<height>575</height>
@@ -743,6 +745,8 @@
 					<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + !String.Contains(container.folderpath,plugin)</visible>
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
+					<focusposition>0</focusposition>
+					<movement>11</movement>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="70" width="806" condition="Container.Content(albums)">

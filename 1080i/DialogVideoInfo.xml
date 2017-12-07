@@ -298,16 +298,6 @@
 					<onclick>ActivateWindow(1131)</onclick>
 					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				<!--<control type="button" id="208">
-					<description>Artwork downloader</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<label></label>
-					<onclick condition="String.IsEqual(ListItem.DBType,movie) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,movie) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-					<onclick condition="String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.downloader,mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-					<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
-				</control>-->
 				<control type="button" id="208">
 					<description>Artwork beef</description>
 					<include>ButtonInfoDialogsCommonValues</include>
