@@ -367,7 +367,7 @@
 					<height>874</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="list" id="50">
+				<control type="fixedlist" id="50">
 					<top>180</top>
 					<width>1140</width>
 					<height>840</height>
@@ -575,7 +575,7 @@
 					<height>874</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="list" id="50">
+				<control type="fixedlist" id="50">
 					<top>180</top>
 					<width>1140</width>
 					<height>840</height>
@@ -712,7 +712,7 @@
 					<height>874</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="list" id="50">
+				<control type="fixedlist" id="50">
 					<top>180</top>
 					<width>1140</width>
 					<height>840</height>
@@ -849,7 +849,7 @@
 					<height>874</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="list" id="50">
+				<control type="fixedlist" id="50">
 					<top>180</top>
 					<width>1140</width>
 					<height>840</height>

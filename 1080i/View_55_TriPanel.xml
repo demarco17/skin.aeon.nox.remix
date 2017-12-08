@@ -738,7 +738,7 @@
 				<control type="fixedlist" id="55">
 					<top>92</top>
 					<width>776</width>
-					<height>575</height>
+					<height>560</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>9050</onleft>
 					<onright>5560</onright>
@@ -746,7 +746,7 @@
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
 					<focusposition>0</focusposition>
-					<movement>11</movement>
+					<movement>7</movement>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="70" width="806" condition="Container.Content(albums)">
@@ -841,7 +841,7 @@
 					<left>779</left>
 					<top>92</top>
 					<width>10</width>
-					<height>575</height>
+					<height>560</height>
 					<onleft>55</onleft>
 					<onright>5563</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>

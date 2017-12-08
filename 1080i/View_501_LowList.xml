@@ -305,7 +305,7 @@
 				<left>450</left>
 				<top>655</top>
 				<width>976</width>
-				<height>410</height>
+				<height>408</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>50160</onright>
@@ -710,7 +710,7 @@
 				<left>1261</left>
 				<top>654</top>
 				<width>10</width>
-				<height>427</height>
+				<height>408</height>
 				<onleft>501</onleft>
 				<onright condition="ListItem.IsCollection">50164</onright>
 				<onright condition="!ListItem.IsCollection + !Container.Content(episodes)">50162</onright>
@@ -915,15 +915,17 @@
 					<texture border="4">dialogs/separator2.png</texture>
 				</control>
 			</control>
-			<control type="list" id="501">
+			<control type="fixedlist" id="501">
 				<left>450</left>
 				<top>655</top>
 				<width>976</width>
-				<height>410</height>
+				<height>408</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>50160</onright>
 				<pagecontrol>50160</pagecontrol>
+				<focusposition>0</focusposition>
+				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -1109,7 +1111,7 @@
 				<left>1261</left>
 				<top>654</top>
 				<width>10</width>
-				<height>427</height>
+				<height>408</height>
 				<onleft>501</onleft>
 				<onright condition="Container.Content(albums)">50162</onright>
 				<onright condition="!Container.Content(albums)">50163</onright>
