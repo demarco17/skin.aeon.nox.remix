@@ -2,6 +2,7 @@
 <window>
 	<controls>
 		<control type="group">
+			<visible>Player.HasVideo</visible>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
 				<width>1920</width>

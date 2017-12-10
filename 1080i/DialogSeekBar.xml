@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
-	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo | !String.IsEmpty(PVR.ChannelNumberInput)] + VideoPlayer.IsFullscreen + !Window.IsActive(pvrosdchannels) + !Window.IsVisible(1135)</visible>
+	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo | !String.IsEmpty(PVR.ChannelNumberInput)] + [VideoPlayer.IsFullscreen | Window.IsActive(visualisation )] + !Window.IsActive(pvrosdchannels) + !Window.IsVisible(1135)</visible>
 	<controls>
 		<include>PVRChannelNumberInput</include>
 		<control type="group">
@@ -140,7 +140,7 @@
 			<visible>!Skin.HasSetting(Disable.PauseClearArt)</visible>
 			<visible>Player.Paused + !Window.IsVisible(SubtitleSearch)</visible>
 			<visible>!Player.HasGame</visible>
-			<left>1495</left>
+			<left>1500</left>
 			<top>794</top>
 			<width>420</width>
 			<height>236</height>
@@ -167,6 +167,7 @@
 				<font>font_KodiFiix</font>
 				<shadowcolor />
 				<textcolor>grey</textcolor>
+				<visible>!Player.ShowInfo</visible>
 			</control>
 			<control type="image">
 				<top>5</top>
