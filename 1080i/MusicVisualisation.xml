@@ -176,7 +176,8 @@
 					<include>MediaFlagVars</include>
 					<bordersize>10</bordersize>
 					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture colordiffuse="grey">$VAR[VisMediaFlags]</texture>
+					<texture>$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
+					<visible>!String.IsEmpty(MusicPlayer.Codec)</visible>
 				</control>
 			</control>
 			<control type="progress">

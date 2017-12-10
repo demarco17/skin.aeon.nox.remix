@@ -644,16 +644,6 @@
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</value>
 	</variable>
-	<variable name="VisMediaFlags">
-		<value condition="String.EndsWith(player.Filename,.aac)">flags/audio/aac.png</value>
-		<value condition="String.EndsWith(player.Filename,.flac)">flags/audio/flac.png</value>
-		<value condition="String.EndsWith(player.Filename,.mp2)">flags/audio/mp2.png</value>
-		<value condition="String.EndsWith(player.Filename,.mp3)">flags/audio/mp3.png</value>
-		<value condition="String.EndsWith(player.Filename,.m4a)">flags/audio/m4a.png</value>
-		<value condition="String.EndsWith(player.Filename,.ogg)">flags/audio/vorbis.png</value>
-		<value condition="String.EndsWith(player.Filename,.wav)">flags/audio/wav.png</value>
-		<value condition="String.EndsWith(player.Filename,.wma)">flags/audio/wma.png</value>
-	</variable>
 	<variable name="ShiftCase_Var">
 		<value condition="ListItem.IsStereoscopic + !ListItem.IsParentFolder">3d.png</value>
 		<value condition="ListItem.IsCollection + !ListItem.IsParentFolder">set.png</value>
