@@ -87,7 +87,7 @@
 				<top>65</top>
 				<width>1570</width>
 				<height>40</height>
-				<font>font13_title</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year,[COLOR grey2] (,)[/COLOR]]$INFO[musicplayer.discnumber,[COLOR grey3]  |  [/COLOR]$LOCALIZE[427]: ,]</label>
@@ -97,7 +97,7 @@
 				<top>105</top>
 				<width>1570</width>
 				<height>40</height>
-				<font>font13_title</font>
+				<font>font13</font>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[MusicPlayer.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
@@ -107,7 +107,7 @@
 				<top>105</top>
 				<width>1570</width>
 				<height>40</height>
-				<font>font13_title</font>
+				<font>font13</font>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<textoffsetx>15</textoffsetx>
 				<align>right</align>
@@ -152,7 +152,7 @@
 				<control type="label">
 					<width>auto</width>
 					<height>68</height>
-					<font>font13</font>
+					<font>font12</font>
 					<textcolor>grey</textcolor>
 					<label>$INFO[MusicPlayer.SampleRate,[B], Hz[/B]]</label>
 					<visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
@@ -160,7 +160,7 @@
 				<control type="label">
 					<width>auto</width>
 					<height>68</height>
-					<font>font13</font>
+					<font>font12</font>
 					<textcolor>grey</textcolor>
 					<label>$INFO[MusicPlayer.BitRate,[B], kbps[/B]]</label>
 					<visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
