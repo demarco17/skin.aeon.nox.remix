@@ -111,7 +111,7 @@
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<textoffsetx>15</textoffsetx>
 				<align>right</align>
-				<label>$INFO[MusicPlayer.offset(1).TrackNumber,$LOCALIZE[19031]: [COLOR grey],. [/COLOR]]$INFO[MusicPlayer.offset(1).Title,[COLOR grey],[/COLOR]]$INFO[MusicPlayer.offset(1).Artist,[COLOR grey][COLOR grey3]  |  [/COLOR],[/COLOR]]</label>
+				<label>$INFO[MusicPlayer.offset(1).TrackNumber,$LOCALIZE[19031]: [COLOR grey2],. [/COLOR]]$INFO[MusicPlayer.offset(1).Title,[COLOR grey],[/COLOR]]$INFO[MusicPlayer.offset(1).Artist,[COLOR grey][COLOR grey3]  |  [/COLOR],[/COLOR]]</label>
 			</control>
 			<control type="image">
 				<left>360</left>
@@ -142,26 +142,37 @@
 				<visible>String.IsEmpty(Control.GetLabel(800015))</visible>
 			</control>
 			<control type="grouplist">
-				<left>1320</left>
+				<left>1308</left>
 				<top>150</top>
-				<width>585</width>
+				<width>600</width>
 				<height>90</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
 				<itemgap>25</itemgap>
-				<control type="label">
-					<width>auto</width>
-					<height>68</height>
-					<font>font12</font>
+				<control type="button">
+					<top>18</top>
+					<width>125</width>
+					<height>52</height>
+					<texturefocus>flags/flag.png</texturefocus>
+					<texturenofocus>flags/flag.png</texturenofocus>
+					<font>flag_font</font>
 					<textcolor>grey</textcolor>
+					<align>center</align>
+					<colordiffuse>grey</colordiffuse>
 					<label>$INFO[MusicPlayer.SampleRate,[B], Hz[/B]]</label>
 					<visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
 				</control>
-				<control type="label">
-					<width>auto</width>
-					<height>68</height>
-					<font>font12</font>
+				<control type="button">
+					<top>18</top>
+					<width>125</width>
+					<height>52</height>
+					<texturefocus>flags/flag.png</texturefocus>
+					<texturenofocus>flags/flag.png</texturenofocus>
+					<font>flag_font</font>
 					<textcolor>grey</textcolor>
+					<align>center</align>
+					<colordiffuse>grey</colordiffuse>
 					<label>$INFO[MusicPlayer.BitRate,[B], kbps[/B]]</label>
 					<visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
 				</control>
