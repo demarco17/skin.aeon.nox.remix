@@ -584,7 +584,7 @@
 						<height>90</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Studio]</label>
-						<font>font10</font>
+						<font>flag_font</font>
 						<textcolor>grey</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<visible>String.IsEmpty(Control.GetLabel(800011))</visible>

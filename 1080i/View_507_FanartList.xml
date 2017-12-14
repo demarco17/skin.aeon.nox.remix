@@ -176,7 +176,7 @@
 					<align>center</align>
 					<label>$INFO[ListItem.Studio]</label>
 					<textcolor>grey</textcolor>
-					<font>font10</font>
+					<font>flag_font</font>
 					<wrapmultiline>true</wrapmultiline>
 					<visible>String.IsEmpty(Control.GetLabel(800013))</visible>
 				</control>

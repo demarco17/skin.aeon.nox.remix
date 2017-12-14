@@ -136,7 +136,7 @@
 				<height>70</height>
 				<align>center</align>
 				<label>$INFO[MusicPlayer.Property(Album_Label)]</label>
-				<font>font10</font>
+				<font>flag_font</font>
 				<textcolor>grey</textcolor>
 				<wrapmultiline>true</wrapmultiline>
 				<visible>String.IsEmpty(Control.GetLabel(800015))</visible>

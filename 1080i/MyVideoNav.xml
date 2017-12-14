@@ -125,13 +125,12 @@
 							<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 						</control>
 						<control type="label">
-							<left>-10</left>
-							<width>135</width>
+							<width>140</width>
 							<height>90</height>
 							<align>center</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Studio]</label>
-							<font>font10</font>
+							<font>flag_font</font>
 							<wrapmultiline>true</wrapmultiline>
 							<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
 						</control>
@@ -222,12 +221,12 @@
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
-						<width>135</width>
+						<width>140</width>
 						<height>90</height>
 						<align>center</align>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Studio]</label>
-						<font>font10</font>
+						<font>flag_font</font>
 						<wrapmultiline>true</wrapmultiline>
 						<visible>String.IsEmpty(Control.GetLabel(800012))</visible>
 					</control>
