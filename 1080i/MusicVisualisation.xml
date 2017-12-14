@@ -151,29 +151,25 @@
 				<usecontrolcoords>true</usecontrolcoords>
 				<itemgap>25</itemgap>
 				<control type="button">
-					<top>18</top>
+					<top>19</top>
 					<width>130</width>
 					<height>52</height>
-					<texturefocus>flags/flag.png</texturefocus>
-					<texturenofocus>flags/flag.png</texturenofocus>
+					<texturefocus colordiffuse="grey">flags/flag.png</texturefocus>
+					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
 					<font>flag_font</font>
-					<textcolor>grey</textcolor>
 					<align>center</align>
-					<colordiffuse>grey</colordiffuse>
-					<label>$INFO[MusicPlayer.SampleRate,[B], Hz[/B]]</label>
+					<label>$INFO[MusicPlayer.SampleRate,, Hz]</label>
 					<visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
 				</control>
 				<control type="button">
-					<top>18</top>
-					<width>130</width>
+					<top>19</top>
+					<width>140</width>
 					<height>52</height>
-					<texturefocus>flags/flag.png</texturefocus>
-					<texturenofocus>flags/flag.png</texturenofocus>
+					<texturefocus colordiffuse="grey">flags/flag.png</texturefocus>
+					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
 					<font>flag_font</font>
-					<textcolor>grey</textcolor>
 					<align>center</align>
-					<colordiffuse>grey</colordiffuse>
-					<label>$INFO[MusicPlayer.BitRate,[B], kbps[/B]]</label>
+					<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
 					<visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
 				</control>
 				<control type="image">

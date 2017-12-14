@@ -8,6 +8,7 @@
 		<font>
 			<name>flag_font</name>
 			<filename>Lato-Regular.ttf</filename>
+			<style>bold</style>
 			<size>19</size>
 		</font>
 		<font>
