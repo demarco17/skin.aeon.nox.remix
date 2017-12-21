@@ -122,7 +122,6 @@
 							<description>Description/News/Disclaimer</description>
 							<width>1256</width>
 							<height>640</height>
-							<font>font15_textbox</font>
 							<align>justify</align>
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label>$INFO[ListItem.AddonDescription,$LOCALIZE[21821]:[COLOR grey][CR],[CR][/COLOR]]$INFO[ListItem.AddonNews,$LOCALIZE[24054]:[COLOR grey][CR],[CR][/COLOR]]$INFO[ListItem.AddonDisclaimer,$LOCALIZE[24052]:[COLOR grey][CR],[CR][/COLOR]]</label>

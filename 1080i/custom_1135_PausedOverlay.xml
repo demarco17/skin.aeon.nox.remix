@@ -107,7 +107,6 @@
 				<left>15</left>
 				<width>1000</width>
 				<height>290</height>
-				<font>font15_textbox</font>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$VAR[VideoPlayerPlotVar]</label>
 			</control>

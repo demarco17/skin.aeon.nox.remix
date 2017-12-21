@@ -68,7 +68,7 @@
 						<top>370</top>
 						<width>418</width>
 						<height>387</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>5562</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
@@ -669,7 +669,7 @@
 						<top>10</top>
 						<width>418</width>
 						<height>300</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>5563</pagecontrol>
 						<textcolor>grey</textcolor>
 					</control>

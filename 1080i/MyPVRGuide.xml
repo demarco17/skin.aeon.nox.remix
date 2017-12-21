@@ -422,7 +422,7 @@
 				<left>320</left>
 				<top>632</top>
 				<control type="label">
-					<top>15</top>
+					<top>10</top>
 					<width>1500</width>
 					<height>30</height>
 					<font>font15</font>
@@ -431,7 +431,7 @@
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ]$INFO[ListItem.Title,[COLOR grey],[/COLOR]]</label>
 				</control>
 				<control type="label">
-					<top>58</top>
+					<top>55</top>
 					<width>1500</width>
 					<height>30</height>
 					<font>font15</font>
@@ -442,10 +442,10 @@
 				<control type="textbox" id="81">
 					<label>$INFO[ListItem.Plot]</label>
 					<left>15</left>
-					<top>115</top>
+					<top>100</top>
 					<width>1485</width>
-					<height>105</height>
-					<font>font15_textbox2</font>
+					<height>128</height>
+					<font>font14_textbox</font>
 					<textcolor>grey</textcolor>
 					<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 				</control>

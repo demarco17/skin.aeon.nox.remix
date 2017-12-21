@@ -74,7 +74,7 @@
 								<height>85</height>
 								<label>$VAR[VideoPlotVar]</label>
 								<autoscroll>false</autoscroll>
-								<font>font14_textbox2</font>
+								<font>font14_textbox</font>
 								<textcolor>$VAR[SkinThemeColour]</textcolor>
 							</control>
 						</control>
@@ -168,8 +168,8 @@
 									<width>1330</width>
 									<height>85</height>
 									<label>$VAR[VideoPlotVar]</label>
-									<font>font14_textbox2</font>
-									<autoscroll time="3500" delay="4000" repeat="5000">True</autoscroll>
+									<font>font14_textbox</font>
+									<autoscroll time="4000" delay="4000" repeat="5000">True</autoscroll>
 									<textcolor>$VAR[SkinThemeColour]</textcolor>
 								</control>
 							</control>
@@ -313,7 +313,7 @@
 								<height>85</height>
 								<label>$VAR[MusicPlotVar]</label>
 								<autoscroll>false</autoscroll>
-								<font>font14_textbox2</font>
+								<font>font14_textbox</font>
 								<textcolor>grey</textcolor>
 								<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 							</control>
@@ -382,8 +382,8 @@
 									<width>1480</width>
 									<height>85</height>
 									<label>$VAR[MusicPlotVar]</label>
-									<font>font14_textbox2</font>
-									<autoscroll time="3500" delay="4000" repeat="5000">True</autoscroll>
+									<font>font14_textbox</font>
+									<autoscroll time="4000" delay="4000" repeat="5000">True</autoscroll>
 									<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 								</control>
 								<control type="image">

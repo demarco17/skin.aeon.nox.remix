@@ -340,9 +340,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(221).ListItem.Property(PlotOutline)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 							<visible>!String.IsEmpty(Container(221).ListItem.Property(PlotOutline))</visible>
 						</control>
 						<control type="textbox">
@@ -351,9 +350,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(221).ListItem.Property(Plot)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 							<visible>String.IsEmpty(Container(221).ListItem.Property(PlotOutline))</visible>
 						</control>
 					</control>
@@ -423,9 +421,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(111).ListItem.Property(PlotOutline)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 							<visible>!String.IsEmpty(Container(111).ListItem.Property(PlotOutline))</visible>
 						</control>
 						<control type="textbox">
@@ -434,9 +431,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(111).ListItem.Property(Plot)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 							<visible>String.IsEmpty(Container(111).ListItem.Property(PlotOutline))</visible>
 						</control>
 					</control>
@@ -506,9 +502,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(211).ListItem.Property(PlotOutline)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(PlotOutline))</visible>
 						</control>
 						<control type="textbox">
@@ -517,9 +512,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(211).ListItem.Property(Plot)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 							<visible>String.IsEmpty(Container(211).ListItem.Property(PlotOutline))</visible>
 						</control>
 					</control>
@@ -589,9 +583,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(231).ListItem.Property(PlotOutline)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 						</control>
 						<control type="textbox">
 							<left>15</left>
@@ -599,9 +592,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(231).ListItem.Property(Plot)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 							<visible>String.IsEmpty(Container(231).ListItem.Property(PlotOutline))</visible>
 						</control>
 					</control>
@@ -671,9 +663,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(121).ListItem.Property(Plot)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 						</control>
 					</control>
 				</control>
@@ -836,9 +827,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(141).ListItem.Property(Plot)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 						</control>
 					</control>
 				</control>
@@ -907,9 +897,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(151).ListItem.Property(Plot)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 						</control>
 					</control>
 				</control>
@@ -978,9 +967,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(161).ListItem.Property(Artist_Description)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 						</control>
 					</control>
 				</control>
@@ -1049,9 +1037,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(171).ListItem.Property(Album_Description)]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 						</control>
 					</control>
 				</control>
@@ -1120,9 +1107,8 @@
 							<width>1286</width>
 							<height>116</height>
 							<label>$INFO[Container(181).ListItem.Property(Album)]$INFO[Container(181).ListItem.Property(Year), (,)]$INFO[Container(181).ListItem.Property(Genre),[COLOR grey3]  |  [/COLOR],]$INFO[Container(181).ListItem.Property(Duration),[COLOR grey3]  |  [/COLOR], $LOCALIZE[12391]]</label>
-							<font>font15_textbox</font>
 							<textcolor>grey</textcolor>
-							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+							<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 						</control>
 					</control>
 				</control>

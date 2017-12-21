@@ -245,7 +245,7 @@
 					<top>110</top>
 					<width>791</width>
 					<height>255</height>
-					<font>font15_textbox2</font>
+					<font>font14_textbox</font>
 					<pagecontrol>62</pagecontrol>
 					<textcolor>grey</textcolor>
 				</control>

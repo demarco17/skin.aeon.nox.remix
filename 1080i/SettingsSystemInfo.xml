@@ -283,9 +283,9 @@
 				<left>537</left>
 				<top>32</top>
 				<width>1286</width>
-				<height>720</height>
+				<height>690</height>
 				<label />
-				<font>font15_textbox2</font>
+				<font>font14_textbox</font>
 				<textcolor>grey</textcolor>
 				<shadowcolor>shadow</shadowcolor>
 				<pagecontrol>60</pagecontrol>
@@ -294,7 +294,7 @@
 				<left>1841</left>
 				<top>32</top>
 				<width>10</width>
-				<height>720</height>
+				<height>690</height>
 				<onleft>9001</onleft>
 				<onright>9000</onright>
 				<showonepage>false</showonepage>

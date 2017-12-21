@@ -34,7 +34,8 @@
 					<height>40</height>
 					<align>right</align>
 					<orientation>horizontal</orientation>
-					<onup>9060</onup>
+					<onup condition="Control.IsVisible(9060)">9060</onup>
+					<onup condition="!Control.IsVisible(9060)">9000</onup>
 					<ondown>9000</ondown>
 					<include>HomeShutdownButton</include>
 					<include>HomeFavButton</include>

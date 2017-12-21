@@ -38,7 +38,7 @@
 			</control>
 			<control type="grouplist">
 				<left>32</left>
-				<top>642</top>
+				<top>650</top>
 				<width>1138</width>
 				<height>90</height>
 				<align>center</align>
@@ -1070,7 +1070,7 @@
 				<left>46</left>
 				<top>426</top>
 				<width>1108</width>
-				<height>200</height>
+				<height>215</height>
 				<font>font14_textbox</font>
 				<textcolor>grey</textcolor>
 				<pagecontrol>195</pagecontrol>
@@ -1102,7 +1102,7 @@
 			<control type="scrollbar" id="195">
 				<left>1171</left>
 				<top>426</top>
-				<height>210</height>
+				<height>215</height>
 				<width>10</width>
 				<onleft>101</onleft>
 				<onright>190</onright>

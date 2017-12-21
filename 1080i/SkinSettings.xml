@@ -97,7 +97,7 @@
 				<align>left</align>
 				<textcolor>grey3</textcolor>
 				<label>$VAR[SkinSettingsDescriptionVar]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 				<visible>!Window.IsActive(1121)</visible>
 			</control>
 			<control type="group" id="9010">

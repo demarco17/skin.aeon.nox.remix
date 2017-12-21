@@ -251,7 +251,7 @@
 				<top>574</top>
 				<width>1132</width>
 				<height>506</height>
-				<font>font14_textbox2</font>
+				<font>font14_textbox</font>
 				<align>left</align>
 				<label fallback="161">$INFO[Window.Property(Biography)]</label>
 				<textcolor>grey</textcolor>

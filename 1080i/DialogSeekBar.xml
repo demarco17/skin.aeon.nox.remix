@@ -103,9 +103,9 @@
 				<top>120</top>
 				<width>1652</width>
 				<height>90</height>
-				<font>font14_textbox2</font>
+				<font>font14_textbox</font>
 				<include>ShowCaseInfoPanelButtonsValues</include>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="progress">
 				<left>253</left>

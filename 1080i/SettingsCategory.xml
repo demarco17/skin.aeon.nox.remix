@@ -54,7 +54,7 @@
 				<font>Description_textbox</font>
 				<align>left</align>
 				<textcolor>grey3</textcolor>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>

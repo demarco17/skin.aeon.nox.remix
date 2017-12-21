@@ -405,7 +405,7 @@
 						<align>left</align>
 						<textcolor>grey3</textcolor>
 						<info>Container(9000).ListItem.Label2</info>
-						<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+						<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 					</control>
 				</control>
 			</control>

@@ -154,7 +154,7 @@
 					<top>19</top>
 					<width>130</width>
 					<height>52</height>
-					<texturefocus colordiffuse="grey">flags/flag.png</texturefocus>
+					<texturefocus />
 					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
 					<font>flag_font</font>
 					<align>center</align>
@@ -165,7 +165,7 @@
 					<top>19</top>
 					<width>140</width>
 					<height>52</height>
-					<texturefocus colordiffuse="grey">flags/flag.png</texturefocus>
+					<texturefocus />
 					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
 					<font>flag_font</font>
 					<align>center</align>

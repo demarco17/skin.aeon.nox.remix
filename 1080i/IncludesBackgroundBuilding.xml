@@ -165,7 +165,7 @@
 						<left>152</left>
 						<width>970</width>
 						<height>170</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>5362</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
@@ -289,7 +289,7 @@
 						<top>162</top>
 						<width>795</width>
 						<height>344</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>5262</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<visible>!ListItem.IsCollection</visible>
@@ -435,7 +435,7 @@
 						<left>152</left>
 						<width>970</width>
 						<height>180</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>5462</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
@@ -462,7 +462,7 @@
 						<left>152</left>
 						<width>940</width>
 						<height>350</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>5463</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>

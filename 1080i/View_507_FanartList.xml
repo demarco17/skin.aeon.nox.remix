@@ -16,42 +16,43 @@
 					<texture border="18">dialogs/dialog-bg3.png</texture>
 				</control>
 				<control type="group">
-					<visible>!ListItem.IsCollection</visible>
-					<control type="label">
-						<left>13</left>
-						<top>455</top>
-						<height>50</height>
-						<width>660</width>
-						<font>font14</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<label>$VAR[FanartListInfoVar]</label>
-					</control>
-					<control type="textbox">
-						<label>$VAR[VideoPlotVar]</label>
-						<left>13</left>
-						<top>505</top>
-						<width>660</width>
-						<height>215</height>
-						<font>font14_textbox2</font>
-						<pagecontrol>50762</pagecontrol>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
-					</control>
-					<control type="scrollbar" id="50762">
-						<left>690</left>
-						<top>505</top>
-						<width>10</width>
-						<height>215</height>
-						<onleft>507</onleft>
-						<onright>507</onright>
-						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
+					<left>13</left>
+					<top>450</top>
+					<control type="group">
+						<visible>!ListItem.IsCollection</visible>
+						<control type="label">
+							<height>50</height>
+							<width>660</width>
+							<font>font14</font>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<label>$VAR[FanartListInfoVar]</label>
+						</control>
+						<control type="textbox">
+							<label>$VAR[VideoPlotVar]</label>
+							<top>50</top>
+							<width>660</width>
+							<height>215</height>
+							<font>font14_textbox</font>
+							<pagecontrol>50762</pagecontrol>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+						</control>
+						<control type="scrollbar" id="50762">
+							<left>677</left>
+							<top>50</top>
+							<width>10</width>
+							<height>215</height>
+							<onleft>507</onleft>
+							<onright>507</onright>
+							<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
+							<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+							<showonepage>false</showonepage>
+							<orientation>vertical</orientation>
+						</control>
 					</control>
 				</control>
 				<control type="group">
 					<left>13</left>
-					<top>455</top>
+					<top>450</top>
 					<visible>!Container.Content(episodes) + ListItem.IsCollection</visible>
 					<control type="group">
 						<include content="InfoList">

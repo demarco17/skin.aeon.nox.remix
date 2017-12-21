@@ -393,7 +393,7 @@
 				<top>574</top>
 				<width>730</width>
 				<height>385</height>
-				<font>font14_textbox2</font>
+				<font>font14_textbox</font>
 				<align>left</align>
 				<label>$VAR[VideoPlotVar]</label>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
@@ -407,7 +407,7 @@
 				<top>574</top>
 				<width>1132</width>
 				<height>385</height>
-				<font>font14_textbox2</font>
+				<font>font14_textbox</font>
 				<align>left</align>
 				<label>$VAR[VideoPlotVar]</label>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
@@ -574,13 +574,13 @@
 					<itemgap>25</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="image" id="800011">
-						<width>130</width>
+						<width>123</width>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
-						<width>120</width>
+						<width>130</width>
 						<height>90</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Studio]</label>

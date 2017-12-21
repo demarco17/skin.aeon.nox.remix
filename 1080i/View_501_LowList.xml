@@ -63,7 +63,7 @@
 					<top>97</top>
 					<width>615</width>
 					<height>215</height>
-					<font>font14_textbox2</font>
+					<font>font14_textbox</font>
 					<pagecontrol>50162</pagecontrol>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
@@ -169,7 +169,7 @@
 						<width>615</width>
 						<height>215</height>
 						<pagecontrol>72</pagecontrol>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<textcolor>grey</textcolor>
 					</control>
 					<control type="scrollbar" id="72">
@@ -842,7 +842,7 @@
 						<top>95</top>
 						<width>615</width>
 						<height>215</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>50162</pagecontrol>
 						<textcolor>grey</textcolor>
 						<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
@@ -868,7 +868,7 @@
 						<top>8</top>
 						<width>615</width>
 						<height>310</height>
-						<font>font14_textbox2</font>
+						<font>font14_textbox</font>
 						<pagecontrol>50163</pagecontrol>
 						<textcolor>grey</textcolor>
 						<visible>!ListItem.IsParentFolder</visible>

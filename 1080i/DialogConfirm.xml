@@ -52,11 +52,10 @@
 				<top>98</top>
 				<width>825</width>
 				<height>282</height>
-				<font>font15_textbox</font>
 				<align>left</align>
 				<label />
 				<textcolor>grey</textcolor>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="grouplist" id="9000">
 				<left>32</left>

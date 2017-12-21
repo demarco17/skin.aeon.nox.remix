@@ -181,10 +181,10 @@
 				</control>
 				<control type="textbox">
 					<label>$VAR[VideoPlotVar]</label>
-					<top>715</top>
+					<top>710</top>
 					<left>1130</left>
 					<width>655</width>
-					<height>247</height>
+					<height>260</height>
 					<font>font14_textbox</font>
 					<autoscroll time="3000" delay="4000" repeat="5000">String.IsEqual(Control.GetLabel(4430),1) + !Control.HasFocus(5161)</autoscroll>
 					<pagecontrol>5161</pagecontrol>
@@ -192,9 +192,9 @@
 				</control>
 				<control type="scrollbar" id="5161">
 					<left>1800</left>
-					<top>715</top>
+					<top>710</top>
 					<width>10</width>
-					<height>250</height>
+					<height>260</height>
 					<onleft>51</onleft>
 					<onright>51</onright>
 					<showonepage>false</showonepage>
@@ -466,14 +466,14 @@
 					<textoffsetx>15</textoffsetx>
 				</control>
 				<control type="button">
-					<top>461</top>
+					<top>455</top>
 					<width>668</width>
 					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Artist,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label),[COLOR grey3]  |  [/COLOR]]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
 				<control type="button">
-					<top>461</top>
+					<top>455</top>
 					<width>668</width>
 					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
@@ -481,12 +481,12 @@
 				</control>
 				<control type="textbox">
 					<label>$VAR[MusicPlotVar]</label>
-					<top>555</top>
+					<top>550</top>
 					<left>15</left>
 					<width>640</width>
 					<height>342</height>
 					<font>font14_textbox</font>
-					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+					<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 					<textcolor>grey</textcolor>
 				</control>
 			</control>
