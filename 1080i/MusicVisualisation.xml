@@ -158,17 +158,19 @@
 					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
 					<font>flag_font</font>
 					<align>center</align>
+					<textoffsety>-3</textoffsety>
 					<label>$INFO[MusicPlayer.SampleRate,, Hz]</label>
 					<visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
 				</control>
 				<control type="button">
 					<top>19</top>
-					<width>140</width>
+					<width>130</width>
 					<height>52</height>
 					<texturefocus />
 					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
 					<font>flag_font</font>
 					<align>center</align>
+					<textoffsety>-3</textoffsety>
 					<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
 					<visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
 				</control>
