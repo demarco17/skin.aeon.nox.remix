@@ -373,28 +373,38 @@
 					<onclick>SetProperty(Discography,True,musicinformation)</onclick>
 					<altclick>ClearProperty(Discography,musicinformation)</altclick>
 					<usealttexture>!String.IsEmpty(Window(musicinformation).Property(Discography))</usealttexture>
-					<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
-				<control type="button" id="203">
+				<control type="togglebutton" id="203">
+					<description>Bio/Discography</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<altlabel></altlabel>
+					<onclick>SetProperty(Discography,True,musicinformation)</onclick>
+					<altclick>ClearProperty(Discography,musicinformation)</altclick>
+					<usealttexture>!String.IsEmpty(Window(musicinformation).Property(Discography))</usealttexture>
+					<visible>String.IsEqual(ListItem.DBType,album)</visible>
+				</control>
+				<control type="button" id="204">
 					<description>Get Thumb</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<onclick>SendClick(2001,10)</onclick>
 					<label></label>
 				</control>
-				<control type="button" id="204">
+				<control type="button" id="205">
 					<description>Get Fanart</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<onclick>SendClick(2001,12)</onclick>
 					<label>⊷</label>
 					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
-				<control type="button" id="205">
+				<control type="button" id="206">
 					<description>Refresh</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<onclick>SendClick(2001,6)</onclick>
 					<label></label>
 				</control>
-				<control type="button" id="206">
+				<control type="button" id="207">
 					<description>Fullscreen fanart</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -402,7 +412,7 @@
 					<onclick>ActivateWindow(1131)</onclick>
 					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				<control type="button" id="207">
+				<control type="button" id="208">
 					<description>Library editor</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>

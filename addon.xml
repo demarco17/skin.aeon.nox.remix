@@ -24,6 +24,7 @@
 			<screenshot>resources/screenshot003.png</screenshot>
 			<screenshot>resources/screenshot004.png</screenshot>
 			<screenshot>resources/screenshot005.png</screenshot>
+			<screenshot>resources/screenshot006.png</screenshot>
 		</assets>
 	</extension>
 </addon>
