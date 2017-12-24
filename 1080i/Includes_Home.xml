@@ -11,6 +11,7 @@
 			<ondown>9001</ondown>
 			<scrolltime tween="quadratic" easing="out">400</scrolltime>
 			<focusposition>2</focusposition>
+			<movement>20</movement>
 			<orientation>Horizontal</orientation>
 			<itemlayout height="100" width="510">
 				<control type="label">

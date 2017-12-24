@@ -244,6 +244,7 @@
 		<pagecontrol>5461</pagecontrol>
 		<scrolltime tween="quadratic">300</scrolltime>
 		<focusposition>3</focusposition>
+		<movement>20</movement>
 		<orientation>horizontal</orientation>
 		<preloaditems>2</preloaditems>
 		<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>

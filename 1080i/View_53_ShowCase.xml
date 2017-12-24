@@ -349,6 +349,7 @@
 		<pagecontrol>5361</pagecontrol>
 		<scrolltime tween="quadratic">300</scrolltime>
 		<focusposition>3</focusposition>
+		<movement>20</movement>
 		<orientation>horizontal</orientation>
 		<preloaditems>2</preloaditems>
 		<itemlayout height="525" width="260" />

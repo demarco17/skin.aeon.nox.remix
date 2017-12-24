@@ -177,6 +177,7 @@
 		<ondown>5261</ondown>
 		<pagecontrol>5261</pagecontrol>
 		<focusposition>1</focusposition>
+		<movement>20</movement>
 		<orientation>horizontal</orientation>
 		<preloaditems>2</preloaditems>
 		<viewtype label="31076">bigwrap</viewtype>
