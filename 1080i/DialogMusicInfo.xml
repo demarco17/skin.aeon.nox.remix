@@ -362,7 +362,7 @@
 					<description>Set my rating</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
-					<onclick>SendClick(2003,7)</onclick>
+					<onclick>SendClick(2001,7)</onclick>
 					<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
 				<control type="togglebutton" id="202">
@@ -378,19 +378,20 @@
 				<control type="button" id="203">
 					<description>Get Thumb</description>
 					<include>ButtonInfoDialogsCommonValues</include>
-					<onclick>SendClick(2003,10)</onclick>
+					<onclick>SendClick(2001,10)</onclick>
 					<label></label>
 				</control>
 				<control type="button" id="204">
 					<description>Get Fanart</description>
 					<include>ButtonInfoDialogsCommonValues</include>
-					<onclick>SendClick(2003,12)</onclick>
+					<onclick>SendClick(2001,12)</onclick>
 					<label>⊷</label>
+					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
 				<control type="button" id="205">
 					<description>Refresh</description>
 					<include>ButtonInfoDialogsCommonValues</include>
-					<onclick>SendClick(2003,6)</onclick>
+					<onclick>SendClick(2001,6)</onclick>
 					<label></label>
 				</control>
 				<control type="button" id="206">
