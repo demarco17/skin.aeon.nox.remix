@@ -125,6 +125,10 @@
 		<value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>
 		<value>$INFO[ListItem.Duration]</value>
 	</variable>
+	<variable name="MusicInfoBio">
+		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+	</variable>
 	<variable name="PosterVar">
 		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>

@@ -170,9 +170,6 @@
 					</item>
 					<item>
 						<label>$INFO[Window.Property(omdb.Awards),$LOCALIZE[31015]: [COLOR grey],[/COLOR]]</label>
-						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[31015],Home)</onclick>
-						<onclick>SetProperty(TextViewerContent,$ESCINFO[Window.Property(omdb.Awards)],Home)</onclick>
-						<onclick>ActivateWindow(1132)</onclick>
 						<visible>!String.IsEmpty(Window.Property(omdb.Awards))</visible>
 					</item>
 				</content>

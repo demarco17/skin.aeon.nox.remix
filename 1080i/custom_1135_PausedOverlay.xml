@@ -111,5 +111,15 @@
 				<label>$VAR[VideoPlayerPlotVar]</label>
 			</control>
 		</control>
+		<control type="image">
+			<include>OpenCloseAnimation</include>
+			<visible>!Skin.HasSetting(Disable.PauseClearArt)</visible>
+			<left>1500</left>
+			<top>844</top>
+			<width>420</width>
+			<height>236</height>
+			<aspectratio aligny="bottom" align="right">keep</aspectratio>
+			<texture background="true">$VAR[PlayerArtworkVar]</texture>
+		</control>
 	</controls>
 </window>
