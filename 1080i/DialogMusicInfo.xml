@@ -373,7 +373,7 @@
 					<onclick>SetProperty(Discography,True,musicinformation)</onclick>
 					<altclick>ClearProperty(Discography,musicinformation)</altclick>
 					<usealttexture>!String.IsEmpty(Window(musicinformation).Property(Discography))</usealttexture>
-					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)</visible>
 				</control>
 				<control type="button" id="203">
 					<description>Get Thumb</description>
@@ -414,66 +414,47 @@
 				<left>3</left>
 				<top>560</top>
 				<width>1188</width>
-				<height>450</height>
+				<height>420</height>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
 				<include>VisibleFadeAnimation</include>
 				<visible>!String.IsEmpty(Window(musicinformation).Property(Discography))</visible>
-				<itemlayout height="90" width="594">
+				<itemlayout height="60" width="594">
 					<control type="image">
 						<width>594</width>
-						<height>90</height>
+						<height>60</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
 						<left>20</left>
-						<top>45</top>
 						<width>574</width>
-						<height>38</height>
-						<font>font14</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>15</textoffsetx>
-					</control>
-					<control type="label">
-						<left>20</left>
-						<width>574</width>
-						<height>45</height>
-						<font>font14</font>
+						<height>60</height>
+						<font>font13</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<label>$INFO[ListItem.Label2,,:]</label>
+						<label>$INFO[ListItem.Label2,,: ]$INFO[ListItem.Label,[COLOR grey],[/COLOR]]</label>
 						<textoffsetx>15</textoffsetx>
 					</control>
 				</itemlayout>
-				<focusedlayout height="90" width="594">
+				<focusedlayout height="60" width="594">
 					<control type="image">
 						<width>594</width>
-						<height>90</height>
+						<height>60</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">
 						<width>594</width>
-						<height>90</height>
+						<height>60</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 					</control>
 					<control type="label">
 						<left>20</left>
-						<top>45</top>
 						<width>574</width>
-						<height>38</height>
-						<font>font14</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>15</textoffsetx>
-					</control>
-					<control type="label">
-						<left>20</left>
-						<width>574</width>
-						<height>45</height>
-						<font>font14</font>
+						<height>60</height>
+						<font>font13</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<label>$INFO[ListItem.Label2,,:]</label>
+						<label>$INFO[ListItem.Label2,,: ]$INFO[ListItem.Label,[COLOR grey],[/COLOR]]</label>
 						<textoffsetx>15</textoffsetx>
 					</control>
 				</focusedlayout>

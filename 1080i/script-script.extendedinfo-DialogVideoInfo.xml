@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<onunload>ClearProperty(ScriptActors,musicinformation)</onunload>
 	<controls>
 		<control type="group">
 			<include>VideoInfoLeftAnimation</include>
@@ -250,6 +251,9 @@
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<altlabel></altlabel>
+					<onclick>SetProperty(ScriptActors,True,musicinformation)</onclick>
+					<altclick>ClearProperty(ScriptActors,musicinformation)</altclick>
+					<usealttexture>!String.IsEmpty(Window(musicinformation).Property(ScriptActors))</usealttexture>
 				</control>
 				<control type="button" id="204">
 					<description>Poster</description>
@@ -300,7 +304,7 @@
 				<pagecontrol>60</pagecontrol>
 				<include>VisibleFadeAnimation</include>
 				<label fallback="161">$INFO[Window.Property(tagline),[I],[/I]]$INFO[Window.Property(Plot),  [COLOR grey],[/COLOR]]</label>
-				<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + String.IsEqual(Control.GetLabel(201),)</visible>
+				<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + String.IsEmpty(Window(musicinformation).Property(ScriptActors))</visible>
 			</control>
 			<control type="scrollbar" id="60">
 				<left>1181</left>
@@ -507,7 +511,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + String.IsEqual(Control.GetLabel(201),)</visible>
+				<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + !String.IsEmpty(Window(musicinformation).Property(ScriptActors))</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="297">
 					<control type="image">
