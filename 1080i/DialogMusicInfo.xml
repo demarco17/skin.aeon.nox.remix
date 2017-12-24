@@ -195,19 +195,19 @@
 					</item>
 					<item>
 						<label>$INFO[ListItem.Property(Artist_Mood),$LOCALIZE[175]: [COLOR grey],[/COLOR]]</label>
-						<visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Artist_Mood)) + String.IsEqual(ListItem.DBType,artist)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Property(Artist_Style),$LOCALIZE[176]: [COLOR grey],[/COLOR]]</label>
-						<visible>!String.IsEmpty(ListItem.Property(Artist_Style))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Artist_Style)) + String.IsEqual(ListItem.DBType,artist)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Property(Album_Mood),$LOCALIZE[175]: [COLOR grey],[/COLOR]]</label>
-						<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Album_Mood)) + !String.IsEqual(ListItem.DBType,artist)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Property(Album_Style),$LOCALIZE[176]: [COLOR grey],[/COLOR]]</label>
-						<visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Album_Style)) + !String.IsEqual(ListItem.DBType,artist)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Property(Album_Theme),$LOCALIZE[21895]: [COLOR grey],[/COLOR]]</label>
