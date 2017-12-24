@@ -134,7 +134,7 @@
 					<height>872</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="panel" id="51">
+				<control type="fixedlist" id="51">
 					<top>140</top>
 					<width>1200</width>
 					<height>840</height>
@@ -144,6 +144,7 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<movement>6</movement>
 					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[535])</visible>
 					<itemlayout height="120" width="1200">

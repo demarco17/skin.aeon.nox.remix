@@ -237,7 +237,6 @@
 					<viewtype label="31082">list</viewtype>
 					<pagecontrol>50760</pagecontrol>
 					<preloaditems>2</preloaditems>
-					<focusposition>0</focusposition>
 					<movement>11</movement>
 					<visible>[Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>

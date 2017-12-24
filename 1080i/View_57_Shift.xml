@@ -13,7 +13,7 @@
 				<onup>9050</onup>
 				<ondown>5761</ondown>
 				<orientation>horizontal</orientation>
-				<viewtype label="31079">BigWrap</viewtype>
+				<viewtype label="31079">bigwrap</viewtype>
 				<pagecontrol>5761</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">400</scrolltime>
 				<focusposition>1</focusposition>
@@ -63,7 +63,7 @@
 				<onup>9050</onup>
 				<ondown>5761</ondown>
 				<orientation>horizontal</orientation>
-				<viewtype label="31079">BigWrap</viewtype>
+				<viewtype label="31079">bigwrap</viewtype>
 				<pagecontrol>5761</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">400</scrolltime>
 				<focusposition>1</focusposition>

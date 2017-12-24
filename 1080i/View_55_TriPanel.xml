@@ -168,7 +168,6 @@
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
 					<preloaditems>2</preloaditems>
-					<focusposition>0</focusposition>
 					<movement>11</movement>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -745,7 +744,6 @@
 					<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + !String.Contains(container.folderpath,plugin)</visible>
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
-					<focusposition>0</focusposition>
 					<movement>7</movement>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>

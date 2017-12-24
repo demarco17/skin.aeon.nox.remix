@@ -24,7 +24,6 @@
 					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
-					<focusposition>0</focusposition>
 					<movement>6</movement>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
@@ -376,7 +375,6 @@
 					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
-					<focusposition>0</focusposition>
 					<movement>6</movement>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
@@ -584,7 +582,6 @@
 					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
-					<focusposition>0</focusposition>
 					<movement>6</movement>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
@@ -721,7 +718,6 @@
 					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
-					<focusposition>0</focusposition>
 					<movement>6</movement>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">
@@ -858,7 +854,6 @@
 					<onright>5060</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
-					<focusposition>0</focusposition>
 					<movement>6</movement>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="120" width="1140">

@@ -13,7 +13,7 @@
 				<ondown>5961</ondown>
 				<pagecontrol>5961</pagecontrol>
 				<scrolltime>0</scrolltime>
-				<viewtype label="31084">Icon</viewtype>
+				<viewtype label="31084">icon</viewtype>
 				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<orientation>horizontal</orientation>
 				<itemlayout width="640" height="210" />

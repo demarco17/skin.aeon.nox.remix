@@ -159,7 +159,6 @@
 				<pagecontrol>50863</pagecontrol>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<focusposition>0</focusposition>
 				<movement>3</movement>
 				<scrolltime tween="quadratic" easing="out">400</scrolltime>
 				<itemlayout height="270" width="480">
