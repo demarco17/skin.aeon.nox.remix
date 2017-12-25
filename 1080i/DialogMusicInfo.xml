@@ -469,6 +469,29 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="label">
+				<include>VisibleFadeAnimation</include>
+				<top>742</top>
+				<width>30</width>
+				<height>50</height>
+				<font>IconTiny</font>
+				<align>center</align>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<label></label>
+				<visible>Control.IsVisible(50) + Container(50).HasPrevious</visible>
+			</control>
+			<control type="label">
+				<include>VisibleFadeAnimation</include>
+				<left>1160</left>
+				<top>742</top>
+				<width>30</width>
+				<height>50</height>
+				<font>IconTiny</font>
+				<align>center</align>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<label></label>
+				<visible>Control.IsVisible(50) + Container(50).HasNext</visible>
+			</control>
 			<control type="textbox" id="400">
 				<description>Plot</description>
 				<visible>String.IsEmpty(Window(musicinformation).Property(Discography))</visible>

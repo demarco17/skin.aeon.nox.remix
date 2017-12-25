@@ -247,7 +247,7 @@
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
 				<control type="fixedlist" id="510">
-					<viewtype label="31095">list</viewtype>
+					<viewtype label="31095">fixedlist</viewtype>
 					<top>151</top>
 					<width>1725</width>
 					<height>868</height>
