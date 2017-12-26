@@ -11,6 +11,7 @@
 	<include file="View_53_ShowCase.xml" />
 	<include file="View_54_ShowCase.xml" />
 	<include file="View_55_TriPanel.xml" />
+	<include file="View_56_DoubleList.xml" />
 	<include file="View_57_Shift.xml" />
 	<include file="View_58_BannerWall.xml" />
 	<include file="View_59_Logo.xml" />
