@@ -330,6 +330,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)</visible>
 				<include>VisibleFadeAnimation</include>
@@ -420,6 +421,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(209)</visible>
 				<include>VisibleFadeAnimation</include>
@@ -510,6 +512,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + !String.IsEmpty(Window(musicinformation).Property(ScriptActors))</visible>
 				<include>VisibleFadeAnimation</include>

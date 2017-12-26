@@ -342,7 +342,11 @@ msgctxt "#31095"
 msgid "BigList"
 msgstr ""
 
-#empty strings from id 31096 to 31101
+msgctxt "#31096"
+msgid "DoubleList"
+msgstr ""
+
+#empty strings from id 31097 to 31101
 
 #Skin Settings labels
 #####################################################################

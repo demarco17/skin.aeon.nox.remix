@@ -167,7 +167,6 @@
 					<onright>5560</onright>
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
-					<preloaditems>2</preloaditems>
 					<movement>11</movement>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -644,6 +643,12 @@
 						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</control>
 					<control type="button">
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Year)</visible>
+					</control>
+					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21899]:[/COLOR][CR]$INFO[ListItem.Property(Album_Label)]</label>
 						<width>448</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
@@ -745,7 +750,6 @@
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
 					<movement>7</movement>
-					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="70" width="806" condition="Container.Content(albums)">
 						<control type="image">

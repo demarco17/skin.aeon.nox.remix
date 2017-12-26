@@ -310,7 +310,6 @@
 				<onleft>9050</onleft>
 				<onright>50160</onright>
 				<pagecontrol>50160</pagecontrol>
-				<focusposition>0</focusposition>
 				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
@@ -867,7 +866,7 @@
 						<left>15</left>
 						<top>8</top>
 						<width>615</width>
-						<height>310</height>
+						<height>300</height>
 						<font>font14_textbox</font>
 						<pagecontrol>50163</pagecontrol>
 						<textcolor>grey</textcolor>
@@ -924,7 +923,6 @@
 				<onleft>9050</onleft>
 				<onright>50160</onright>
 				<pagecontrol>50160</pagecontrol>
-				<focusposition>0</focusposition>
 				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
