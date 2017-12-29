@@ -55,17 +55,16 @@
 								<label>$VAR[BigListInfoVar]</label>
 								<aligny>bottom</aligny>
 								<font>font14</font>
-								<textcolor>$VAR[SkinThemeColour]</textcolor>
-							</control>
-							<control type="label">
-								<top>50</top>
-								<width>1330</width>
-								<height>25</height>
-								<label>$VAR[BigListInfoVar2]</label>
-								<align>right</align>
-								<aligny>bottom</aligny>
-								<font>font14</font>
 								<textcolor>grey2</textcolor>
+							</control>
+							<control type="image">
+								<left>1145</left>
+								<top>55</top>
+								<width>192</width>
+								<height>33</height>
+								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
+								<aspectratio align="right">keep</aspectratio>
+								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 							<control type="textbox">
 								<top>100</top>
@@ -150,17 +149,16 @@
 									<label>$VAR[BigListInfoVar]</label>
 									<aligny>bottom</aligny>
 									<font>font14</font>
-									<textcolor>$VAR[SkinThemeColour]</textcolor>
-								</control>
-								<control type="label">
-									<top>50</top>
-									<width>1330</width>
-									<height>25</height>
-									<label>$VAR[BigListInfoVar2]</label>
-									<align>right</align>
-									<aligny>bottom</aligny>
-									<font>font14</font>
 									<textcolor>grey2</textcolor>
+								</control>
+								<control type="image">
+									<left>1145</left>
+									<top>55</top>
+									<width>192</width>
+									<height>33</height>
+									<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
+									<aspectratio align="right">keep</aspectratio>
+									<visible>!ListItem.IsParentFolder</visible>
 								</control>
 								<control type="textbox">
 									<top>100</top>
@@ -293,15 +291,6 @@
 								<height>45</height>
 								<label>$VAR[BigListInfoVar]</label>
 								<font>font14</font>
-								<textcolor>$VAR[SkinThemeColour]</textcolor>
-							</control>
-							<control type="label">
-								<top>48</top>
-								<width>1480</width>
-								<height>45</height>
-								<label>$VAR[BigListInfoVar2]</label>
-								<align>right</align>
-								<font>font14</font>
 								<textcolor>grey2</textcolor>
 							</control>
 							<control type="textbox">
@@ -314,12 +303,21 @@
 								<textcolor>grey</textcolor>
 								<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 							</control>
+							<control type="label">
+								<width>1480</width>
+								<height>50</height>
+								<label>$INFO[ListItem.Artist]</label>
+								<align>right</align>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<visible>Container.Content(albums)</visible>
+							</control>
 							<control type="image">
 								<left>1290</left>
-								<top>5</top>
+								<top>55</top>
 								<width>192</width>
 								<height>33</height>
-								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 								<aspectratio align="right">keep</aspectratio>
 								<visible>Container.Content(albums) + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Title)</visible>
 							</control>
@@ -363,15 +361,6 @@
 									<height>45</height>
 									<label>$VAR[BigListInfoVar]</label>
 									<font>font14</font>
-									<textcolor>$VAR[SkinThemeColour]</textcolor>
-								</control>
-								<control type="label">
-									<top>48</top>
-									<width>1480</width>
-									<height>45</height>
-									<label>$VAR[BigListInfoVar2]</label>
-									<align>right</align>
-									<font>font14</font>
 									<textcolor>grey2</textcolor>
 								</control>
 								<control type="textbox">
@@ -384,12 +373,21 @@
 									<autoscroll time="4000" delay="4000" repeat="5000">True</autoscroll>
 									<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 								</control>
+								<control type="label">
+									<width>1480</width>
+									<height>50</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<align>right</align>
+									<font>font14</font>
+									<textcolor>grey</textcolor>
+									<visible>Container.Content(albums)</visible>
+								</control>
 								<control type="image">
 									<left>1290</left>
-									<top>5</top>
+									<top>55</top>
 									<width>192</width>
 									<height>33</height>
-									<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+									<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 									<aspectratio align="right">keep</aspectratio>
 									<visible>Container.Content(albums) + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Title)</visible>
 								</control>

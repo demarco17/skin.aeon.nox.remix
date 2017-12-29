@@ -632,16 +632,9 @@
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="BigListInfoVar">
-		<value condition="Container.Content(movies) | Container.Content(tvshows)">$INFO[ListItem.Genre,[COLOR grey2],[/COLOR]]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered,[COLOR grey2],[/COLOR]]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre),[COLOR grey2],[/COLOR]]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Artist,[COLOR grey2],[/COLOR]]</value>
-	</variable>
-	<variable name="BigListInfoVar2">
-		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3]  |  [/COLOR],]</value>
-		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Rating,,[COLOR grey3]  |  [/COLOR]]$INFO[ListItem.Duration]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(albums)">$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
+		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 	</variable>
 	<variable name="FanartListInfoVar">
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year,$LOCALIZE[345]: [COLOR grey],[/COLOR]]</value>
@@ -730,7 +723,7 @@
 		<value condition="String.IsEmpty(VideoPlayer.UserRating)">$INFO[VideoPlayer.Rating,flags/rating/,.png]</value>
 		<value>$INFO[VideoPlayer.UserRating,flags/rating/,.png]</value>
 	</variable>
-	<variable name="MusicStarRating">
+	<variable name="ListItemStarRating">
 		<value condition="String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.Rating,flags/rating/,.png]</value>
 		<value>$INFO[ListItem.UserRating,flags/rating/,.png]</value>
 	</variable>

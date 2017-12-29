@@ -398,12 +398,20 @@
 					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
 				<control type="button" id="206">
+					<description>Album info</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick>Action(close)</onclick>
+					<onclick>SendClick(2001,12)</onclick>
+					<visible>String.IsEqual(ListItem.DBType,song)</visible>
+				</control>
+				<control type="button" id="207">
 					<description>Refresh</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<onclick>SendClick(2001,6)</onclick>
 					<label></label>
 				</control>
-				<control type="button" id="207">
+				<control type="button" id="208">
 					<description>Fullscreen fanart</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -411,7 +419,7 @@
 					<onclick>ActivateWindow(1131)</onclick>
 					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				<control type="button" id="208">
+				<control type="button" id="209">
 					<description>Library editor</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -584,7 +592,7 @@
 						<description>Rating value</description>
 						<width>200</width>
 						<include>MediaFlagVars</include>
-						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
 					</control>
 					<control type="label">

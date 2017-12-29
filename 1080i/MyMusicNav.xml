@@ -90,7 +90,7 @@
 						<left>1600</left>
 						<width>200</width>
 						<include>MediaFlagVars</include>
-						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -145,7 +145,7 @@
 						<width>200</width>
 						<height>80</height>
 						<include>MediaFlagVars</include>
-						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 					</control>
 					<control type="label">
 						<width>135</width>

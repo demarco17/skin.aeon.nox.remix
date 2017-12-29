@@ -67,7 +67,7 @@
 							<width>160</width>
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="820">
@@ -115,7 +115,7 @@
 							<width>160</width>
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -195,7 +195,7 @@
 							<width>160</width>
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="820">
@@ -243,7 +243,7 @@
 							<width>160</width>
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						</control>
 					</focusedlayout>
 					<content target="music">$INFO[Container(56).ListItem.DBID,musicdb://artists/]</content>

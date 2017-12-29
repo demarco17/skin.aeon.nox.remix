@@ -421,7 +421,7 @@
 								<width>180</width>
 								<height>70</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 							</control>
 						</control>
 						<control type="label">
@@ -483,7 +483,7 @@
 								<width>180</width>
 								<height>70</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[MusicStarRating]</texture>
+								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 							</control>
 						</control>
 						<control type="label">
