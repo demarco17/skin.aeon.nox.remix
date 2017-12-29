@@ -119,6 +119,7 @@
 					<visible>[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 					<control type="group">
 						<left>120</left>
+						<visible>!Control.IsVisible(59)</visible>
 						<control type="image" id="800011">
 							<include>MediaFlagVars</include>
 							<bordersize>5</bordersize>
@@ -134,6 +135,15 @@
 							<wrapmultiline>true</wrapmultiline>
 							<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
 						</control>
+					</control>
+					<control type="image">
+						<left>100</left>
+						<top>30</top>
+						<width>195</width>
+						<height>35</height>
+						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
+						<aspectratio align="right">keep</aspectratio>
+						<visible>Control.IsVisible(59) + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<left>1675</left>
