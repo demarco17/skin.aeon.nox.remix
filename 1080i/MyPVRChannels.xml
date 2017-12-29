@@ -121,6 +121,7 @@
 						<width>530</width>
 						<height>60</height>
 						<font>font15</font>
+						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Title]</label>
 					</control>
 					<control type="progress">

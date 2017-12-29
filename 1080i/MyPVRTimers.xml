@@ -122,6 +122,7 @@
 						<width>1600</width>
 						<height>60</height>
 						<font>font15</font>
+						<textcolor>grey2</textcolor>
 						<textoffsetx>20</textoffsetx>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>

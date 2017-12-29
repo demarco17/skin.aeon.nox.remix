@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onunload>ClearProperty(Actors,musicinformation)</onunload>
+	<onunload>ClearProperty(Actors,home)</onunload>
 	<controls>
 		<control type="group">
 			<include>VideoInfoLeftAnimation</include>
@@ -274,9 +274,9 @@
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<altlabel></altlabel>
-					<onclick>SetProperty(Actors,True,musicinformation)</onclick>
-					<altclick>ClearProperty(Actors,musicinformation)</altclick>
-					<usealttexture>!String.IsEmpty(Window(musicinformation).Property(Actors))</usealttexture>
+					<onclick>SetProperty(Actors,True,home)</onclick>
+					<altclick>ClearProperty(Actors,home)</altclick>
+					<usealttexture>!String.IsEmpty(Window(home).Property(Actors))</usealttexture>
 				</control>
 				<control type="button" id="10">
 					<description>Get Thumb</description>
@@ -334,7 +334,7 @@
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
 				<include>VisibleFadeAnimation</include>
-				<visible>!String.IsEmpty(Window(musicinformation).Property(Actors))</visible>
+				<visible>!String.IsEmpty(Window(home).Property(Actors))</visible>
 				<itemlayout height="420" width="297">
 					<control type="image">
 						<width>297</width>
@@ -403,7 +403,7 @@
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<pagecontrol>60</pagecontrol>
 				<include>VisibleFadeAnimation</include>
-				<visible>String.IsEmpty(Window(musicinformation).Property(Actors)) + !String.IsEmpty(ListItem.Art(discart))</visible>
+				<visible>String.IsEmpty(Window(home).Property(Actors)) + !String.IsEmpty(ListItem.Art(discart))</visible>
 			</control>
 			<control type="textbox" id="401">
 				<description>Plot</description>
@@ -417,7 +417,7 @@
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<pagecontrol>61</pagecontrol>
 				<include>VisibleFadeAnimation</include>
-				<visible>String.IsEmpty(Window(musicinformation).Property(Actors)) + String.IsEmpty(ListItem.Art(discart))</visible>
+				<visible>String.IsEmpty(Window(home).Property(Actors)) + String.IsEmpty(ListItem.Art(discart))</visible>
 			</control>
 			<!-- cdart -->
 			<control type="image">
@@ -427,7 +427,7 @@
 				<height>360</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" diffuse="thumbs/cdart_mask.png">$INFO[ListItem.Art(discart)]</texture>
-				<visible>String.IsEqual(ListItem.DBType,movie) + String.IsEmpty(Window(musicinformation).Property(Actors)) + !String.IsEmpty(ListItem.Art(discart))</visible>
+				<visible>String.IsEqual(ListItem.DBType,movie) + String.IsEmpty(Window(home).Property(Actors)) + !String.IsEmpty(ListItem.Art(discart))</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
 			<control type="scrollbar" id="60">

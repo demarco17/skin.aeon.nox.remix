@@ -54,14 +54,14 @@
 						<control type="label">
 							<left>135</left>
 							<top>50</top>
-							<width>668</width>
+							<width>518</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey2</textcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 						</control>
 						<control type="image">
-							<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
+							<visible>!ListItem.IsParentFolder + String.IsEqual(ListItem.DBType,album)</visible>
 							<left>655</left>
 							<top>70</top>
 							<width>160</width>
@@ -102,14 +102,14 @@
 						<control type="label">
 							<left>135</left>
 							<top>50</top>
-							<width>668</width>
+							<width>518</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 						</control>
 						<control type="image">
-							<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
+							<visible>!ListItem.IsParentFolder + String.IsEqual(ListItem.DBType,album)</visible>
 							<left>655</left>
 							<top>70</top>
 							<width>160</width>
@@ -233,7 +233,7 @@
 							<width>668</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$INFO[ListItem.Year]</label>
 						</control>
 						<control type="image">
@@ -281,7 +281,7 @@
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey</textcolor>
-							<label>$INFO[ListItem.TrackNumber,,.]$INFO[ListItem.Label, ,]</label>
+							<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -320,7 +320,7 @@
 							<width>668</width>
 							<height>70</height>
 							<font>font30</font>
-							<label>$INFO[ListItem.TrackNumber,,.]$INFO[ListItem.Label, ,]</label>
+							<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -328,11 +328,11 @@
 							<width>668</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$INFO[ListItem.Duration]</label>
 						</control>
 					</focusedlayout>
-					<content>$INFO[Container(56).ListItem.DBID,musicdb://albums/]</content>
+					<content target="music">$INFO[Container(56).ListItem.DBID,musicdb://albums/]</content>
 				</control>
 				<control type="scrollbar" id="5661">
 					<left>823</left>

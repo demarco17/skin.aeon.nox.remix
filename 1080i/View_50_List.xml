@@ -49,7 +49,7 @@
 							<width>920</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
@@ -132,7 +132,7 @@
 							<width>920</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
@@ -445,7 +445,7 @@
 							<width>1140</width>
 							<height>120</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-							<visible>Control.HasFocus(50) + !Window.IsVisible(musicinformation)</visible>
+							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
 							<left>20</left>
@@ -464,7 +464,7 @@
 							<width>810</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 						</control>
 						<control type="group">
@@ -644,7 +644,7 @@
 							<width>985</width>
 							<height>60</height>
 							<font>font15</font>
-							<textcolor>grey</textcolor>
+							<textcolor>grey2</textcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">
@@ -867,7 +867,7 @@
 							<width>985</width>
 							<height>70</height>
 							<font>font30</font>
-							<textcolor>grey2</textcolor>
+							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.AddonSummary)">Conditional</animation>
 						</control>
@@ -886,7 +886,7 @@
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
-							<textcolor>grey2</textcolor>
+							<textcolor>grey</textcolor>
 							<label>$VAR[ListLabel2Var]</label>
 						</control>
 					</itemlayout>

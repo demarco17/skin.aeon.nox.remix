@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onunload>ClearProperty(Discography,musicinformation)</onunload>
+	<onunload>ClearProperty(Discography,home)</onunload>
 	<controls>
 		<control type="group">
 			<include>VideoInfoLeftAnimation</include>
@@ -369,9 +369,9 @@
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<altlabel></altlabel>
-					<onclick>SetProperty(Discography,True,musicinformation)</onclick>
-					<altclick>ClearProperty(Discography,musicinformation)</altclick>
-					<usealttexture>!String.IsEmpty(Window(musicinformation).Property(Discography))</usealttexture>
+					<onclick>SetProperty(Discography,True,home)</onclick>
+					<altclick>ClearProperty(Discography,home)</altclick>
+					<usealttexture>!String.IsEmpty(Window(home).Property(Discography))</usealttexture>
 					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
 				<control type="togglebutton" id="203">
@@ -379,9 +379,9 @@
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<altlabel></altlabel>
-					<onclick>SetProperty(Discography,True,musicinformation)</onclick>
-					<altclick>ClearProperty(Discography,musicinformation)</altclick>
-					<usealttexture>!String.IsEmpty(Window(musicinformation).Property(Discography))</usealttexture>
+					<onclick>SetProperty(Discography,True,home)</onclick>
+					<altclick>ClearProperty(Discography,home)</altclick>
+					<usealttexture>!String.IsEmpty(Window(home).Property(Discography))</usealttexture>
 					<visible>String.IsEqual(ListItem.DBType,album)</visible>
 				</control>
 				<control type="button" id="204">
@@ -429,7 +429,7 @@
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
 				<include>VisibleFadeAnimation</include>
-				<visible>!String.IsEmpty(Window(musicinformation).Property(Discography))</visible>
+				<visible>!String.IsEmpty(Window(home).Property(Discography))</visible>
 				<itemlayout height="60" width="594">
 					<control type="image">
 						<width>594</width>
@@ -441,9 +441,20 @@
 						<width>574</width>
 						<height>60</height>
 						<font>font13</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<label>$INFO[ListItem.Label2,,: ]$INFO[ListItem.Label,[COLOR grey],[/COLOR]]</label>
+						<textcolor>grey</textcolor>
+						<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Label2,,: ][/COLOR]$INFO[ListItem.Label]</label>
 						<textoffsetx>15</textoffsetx>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<width>574</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$INFO[ListItem.TrackNumber,[B],[/B]. ]$INFO[ListItem.Label]</label>
+						<textcolor>grey</textcolor>
+						<textoffsetx>15</textoffsetx>
+						<visible>!Container.Content(Artists)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="60" width="594">
@@ -462,9 +473,18 @@
 						<width>574</width>
 						<height>60</height>
 						<font>font13</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<label>$INFO[ListItem.Label2,,: ]$INFO[ListItem.Label,[COLOR grey],[/COLOR]]</label>
+						<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Label2,,: ][/COLOR]$INFO[ListItem.Label]</label>
 						<textoffsetx>15</textoffsetx>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<width>574</width>
+						<height>60</height>
+						<font>font13</font>
+						<label>$INFO[ListItem.TrackNumber,[B],[/B]. ]$INFO[ListItem.Label]</label>
+						<textoffsetx>15</textoffsetx>
+						<visible>!Container.Content(Artists)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -493,7 +513,7 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>Plot</description>
-				<visible>String.IsEmpty(Window(musicinformation).Property(Discography))</visible>
+				<visible>String.IsEmpty(Window(home).Property(Discography))</visible>
 				<left>40</left>
 				<top>574</top>
 				<width>1132</width>

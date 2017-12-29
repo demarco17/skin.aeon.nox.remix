@@ -200,7 +200,6 @@
 							<height>118</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(51)</visible>
-							<include>VisibleFadeAnimation</include>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -224,6 +223,7 @@
 							<width>1050</width>
 							<height>60</height>
 							<font>font15</font>
+							<textcolor>grey2</textcolor>
 							<label>$INFO[ListItem.AddonSummary]</label>
 						</control>
 						<control type="label">

@@ -65,7 +65,7 @@
 								<align>right</align>
 								<aligny>bottom</aligny>
 								<font>font14</font>
-								<textcolor>grey</textcolor>
+								<textcolor>grey2</textcolor>
 							</control>
 							<control type="textbox">
 								<top>100</top>
@@ -160,7 +160,7 @@
 									<align>right</align>
 									<aligny>bottom</aligny>
 									<font>font14</font>
-									<textcolor>grey</textcolor>
+									<textcolor>grey2</textcolor>
 								</control>
 								<control type="textbox">
 									<top>100</top>
@@ -208,7 +208,6 @@
 								<font>font12_title</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textcolor>grey2</textcolor>
 								<textoffsetx>18</textoffsetx>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
@@ -303,7 +302,7 @@
 								<label>$VAR[BigListInfoVar2]</label>
 								<align>right</align>
 								<font>font14</font>
-								<textcolor>grey</textcolor>
+								<textcolor>grey2</textcolor>
 							</control>
 							<control type="textbox">
 								<top>100</top>
@@ -373,7 +372,7 @@
 									<label>$VAR[BigListInfoVar2]</label>
 									<align>right</align>
 									<font>font14</font>
-									<textcolor>grey</textcolor>
+									<textcolor>grey2</textcolor>
 								</control>
 								<control type="textbox">
 									<top>100</top>
@@ -381,6 +380,7 @@
 									<height>85</height>
 									<label>$VAR[MusicPlotVar]</label>
 									<font>font14_textbox</font>
+									<textcolor>grey</textcolor>
 									<autoscroll time="4000" delay="4000" repeat="5000">True</autoscroll>
 									<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 								</control>

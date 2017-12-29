@@ -64,7 +64,7 @@
 						<align>right</align>
 						<font>font13</font>
 						<textoffsetx>20</textoffsetx>
-						<textcolor>grey2</textcolor>
+						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
 					<control type="image">
@@ -100,6 +100,7 @@
 						<width>840</width>
 						<height>60</height>
 						<font>font15</font>
+						<textcolor>grey2</textcolor>
 						<textoffsetx>20</textoffsetx>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
