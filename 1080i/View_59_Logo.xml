@@ -16,7 +16,6 @@
 				<viewtype label="31084">icon</viewtype>
 				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<orientation>horizontal</orientation>
-				<itemlayout width="640" height="210" />
 				<focusedlayout width="640" height="210">
 					<control type="group">
 						<animation effect="fade" time="400" reversible="false">Focus</animation>

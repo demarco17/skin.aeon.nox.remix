@@ -262,6 +262,7 @@
 				<ondown condition="Control.IsVisible(401)">61</ondown>
 				<ondown condition="![Control.IsVisible(400) | Control.IsVisible(401)]">50</ondown>
 				<orientation>horizontal</orientation>
+				<scrolltime tween="quadratic" easing="out">400</scrolltime>
 				<control type="togglebutton" id="200">
 					<description>Play/browse to Show</description>
 					<include>ButtonInfoDialogsCommonValues</include>

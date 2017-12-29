@@ -197,6 +197,7 @@
 				<ondown condition="Control.IsVisible(650)">650</ondown>
 				<ondown condition="Control.IsVisible(750)">750</ondown>
 				<orientation>horizontal</orientation>
+				<scrolltime tween="quadratic" easing="out">400</scrolltime>
 				<control type="button" id="30">
 					<description>Biography</description>
 					<include>ButtonInfoDialogsCommonValues</include>
