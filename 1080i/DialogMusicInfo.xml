@@ -341,7 +341,7 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<left>3</left>
-				<top>490</top>
+				<top>489</top>
 				<width>1192</width>
 				<height>70</height>
 				<align>left</align>
@@ -427,6 +427,13 @@
 					<onclick>SendClick(2001,7)</onclick>
 					<visible>!String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Dbid)</visible>
 				</control>
+			</control>
+			<control type="image">
+				<left>2</left>
+				<top>470</top>
+				<width>1190</width>
+				<height>90</height>
+				<texture border="4">dialogs/separator2.png</texture>
 			</control>
 			<control type="panel" id="50">
 				<left>3</left>

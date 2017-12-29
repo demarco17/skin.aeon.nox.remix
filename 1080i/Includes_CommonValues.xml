@@ -41,6 +41,7 @@
 		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturenofocus border="4">dialogs/separator5.png</texturenofocus>
+		<alttexturenofocus border="4">dialogs/separator5.png</alttexturenofocus>
 	</include>
 	<!-- KeyBoard -->
 	<include name="Objects_KeyOffVars">
