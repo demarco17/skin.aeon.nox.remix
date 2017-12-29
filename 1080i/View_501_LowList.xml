@@ -259,7 +259,7 @@
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>flag_font</font>
 							<textcolor>grey2</textcolor>
 						</control>
 					</control>
@@ -282,7 +282,7 @@
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>flag_font</font>
 							<textcolor>grey2</textcolor>
 						</control>
 					</control>

@@ -262,11 +262,12 @@
 				<ondown condition="Control.IsVisible(401)">61</ondown>
 				<ondown condition="![Control.IsVisible(400) | Control.IsVisible(401)]">50</ondown>
 				<orientation>horizontal</orientation>
-				<control type="togglebutton" id="8">
+				<control type="togglebutton" id="200">
 					<description>Play/browse to Show</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<altlabel></altlabel>
+					<onclick>SendClick(2003,8)</onclick>
 					<usealttexture>String.IsEqual(ListItem.DBType,tvshow)</usealttexture>
 				</control>
 				<control type="togglebutton" id="201">
@@ -278,23 +279,26 @@
 					<altclick>ClearProperty(Actors,home)</altclick>
 					<usealttexture>!String.IsEmpty(Window(home).Property(Actors))</usealttexture>
 				</control>
-				<control type="button" id="10">
+				<control type="button" id="202">
 					<description>Get Thumb</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label>⊷</label>
+					<onclick>SendClick(2003,10)</onclick>
 				</control>
-				<control type="button" id="11">
+				<control type="button" id="203">
 					<description>Play Trailer</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
+					<onclick>SendClick(2003,11)</onclick>
 					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 				</control>
-				<control type="button" id="6">
+				<control type="button" id="204">
 					<description>Refresh</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
+					<onclick>SendClick(2003,6)</onclick>
 				</control>
-				<control type="button" id="206">
+				<control type="button" id="205">
 					<description>Fullscreen fanart</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -302,7 +306,7 @@
 					<onclick>ActivateWindow(1131)</onclick>
 					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				<control type="button" id="208">
+				<control type="button" id="206">
 					<description>Artwork beef</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -316,12 +320,19 @@
 					<onclick condition="String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(ArtworkDownloader.GUI)">RunScript(script.artwork.beef, mode=gui, mediatype=episode, dbid=$INFO[ListItem.DBID])</onclick>
 					<visible>System.HasAddon(script.artwork.beef) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 				</control>
-				<control type="button" id="210">
+				<control type="button" id="207">
 					<description>Library editor</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
 					<visible>System.HasAddon(script.libraryeditor) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
+				</control>
+				<control type="button" id="208">
+					<description>Set my rating</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick>SendClick(2003,7)</onclick>
+					<visible>!String.IsEmpty(ListItem.Dbid)</visible>
 				</control>
 			</control>
 			<control type="panel" id="50">
@@ -483,7 +494,7 @@
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>flag_font</font>
 							<textcolor>grey</textcolor>
 						</control>
 					</control>
@@ -504,7 +515,7 @@
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>flag_font</font>
 							<textcolor>grey</textcolor>
 						</control>
 					</control>
@@ -525,7 +536,7 @@
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>flag_font</font>
 							<textcolor>grey</textcolor>
 						</control>
 					</control>
