@@ -4,6 +4,8 @@
 		<control type="group">
 			<left>680</left>
 			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
+			<visible>!Player.Muted</visible>
 			<control type="image">
 				<top>-32</top>
 				<width>560</width>
@@ -16,54 +18,42 @@
 				<height>44</height>
 				<info>Player.Volume</info>
 			</control>
-			<control type="group">
-				<include>VisibleFadeAnimation</include>
-				<visible>!Player.Muted</visible>
-				<control type="label">
-					<height>42</height>
-					<width>560</width>
-					<textoffsetx>26</textoffsetx>
-					<font>IconSmall</font>
-					<label></label>
-					<visible>!Player.Passthrough</visible>
-				</control>
-				<control type="label">
-					<height>42</height>
-					<width>560</width>
-					<textoffsetx>26</textoffsetx>
-					<font>IconSmall</font>
-					<label></label>
-					<visible>Player.Passthrough</visible>
-				</control>
-				<control type="label">
-					<width>560</width>
-					<height>44</height>
-					<font>font13</font>
-					<textoffsetx>26</textoffsetx>
-					<align>right</align>
-					<label>$INFO[Control.GetLabel(1),,%]</label>
-				</control>
+			<control type="label">
+				<height>42</height>
+				<width>560</width>
+				<textoffsetx>26</textoffsetx>
+				<font>IconSmall</font>
+				<label></label>
+				<visible>!Player.Passthrough</visible>
 			</control>
-			<control type="group">
-				<include>VisibleFadeAnimation</include>
-				<visible>Player.Muted</visible>
-				<control type="label">
-					<height>42</height>
-					<width>560</width>
-					<textoffsetx>26</textoffsetx>
-					<label></label>
-					<font>IconSmall</font>
-					<textcolor>red</textcolor>
-				</control>
-				<control type="label">
-					<width>560</width>
-					<height>44</height>
-					<font>font13</font>
-					<textoffsetx>26</textoffsetx>
-					<align>right</align>
-					<label>31059</label>
-				</control>
+			<control type="label">
+				<height>42</height>
+				<width>560</width>
+				<textoffsetx>26</textoffsetx>
+				<font>IconSmall</font>
+				<label></label>
+				<visible>Player.Passthrough</visible>
 			</control>
+			<control type="label">
+				<width>560</width>
+				<height>44</height>
+				<font>font13</font>
+				<textoffsetx>26</textoffsetx>
+				<align>right</align>
+				<label>$INFO[Control.GetLabel(1),,%]</label>
+			</control>
+		</control>
+		<control type="label">
+			<include>VisibleFadeAnimation</include>
+			<visible>Player.Muted + ![Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(playercontrols)]</visible>
+			<animation effect="slide" start="0,0" end="0,-25" time="200" condition="Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation) | [Window.IsVisible(home) + !System.GetBool(lookandfeel.enablerssfeeds)]">Conditional</animation>
+			<top>45</top>
+			<left>1860</left>
+			<height>60</height>
+			<width>60</width>
+			<label></label>
+			<font>IconMedium</font>
+			<textcolor>red</textcolor>
 		</control>
 	</controls>
 </window>

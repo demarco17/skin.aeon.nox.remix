@@ -40,10 +40,8 @@
 							<left>375</left>
 							<top>10</top>
 							<control type="label">
-								<top>-2</top>
 								<width>1200</width>
-								<height>35</height>
-								<aligny>top</aligny>
+								<height>45</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font16_title_bold</font>
 								<textcolor>grey</textcolor>
@@ -51,9 +49,8 @@
 							<control type="label">
 								<top>50</top>
 								<width>980</width>
-								<height>25</height>
+								<height>40</height>
 								<label>$VAR[BigListInfoVar]</label>
-								<aligny>bottom</aligny>
 								<font>font14</font>
 								<textcolor>grey2</textcolor>
 							</control>
@@ -135,19 +132,16 @@
 							<top>10</top>
 							<control type="group">
 								<control type="label">
-									<top>-2</top>
 									<width>1200</width>
-									<height>35</height>
-									<aligny>bottom</aligny>
+									<height>45</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font16_title_bold</font>
 								</control>
 								<control type="label">
 									<top>50</top>
 									<width>980</width>
-									<height>25</height>
+									<height>40</height>
 									<label>$VAR[BigListInfoVar]</label>
-									<aligny>bottom</aligny>
 									<font>font14</font>
 									<textcolor>grey2</textcolor>
 								</control>
@@ -234,7 +228,7 @@
 			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>100</left>
-				<top>-20</top>
+				<top>-25</top>
 				<control type="image">
 					<description>background image</description>
 					<left>-16</left>
@@ -286,9 +280,9 @@
 								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
-								<top>48</top>
+								<top>50</top>
 								<width>980</width>
-								<height>45</height>
+								<height>40</height>
 								<label>$VAR[BigListInfoVar]</label>
 								<font>font14</font>
 								<textcolor>grey2</textcolor>
@@ -304,8 +298,8 @@
 								<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 							</control>
 							<control type="label">
-								<width>1480</width>
-								<height>50</height>
+								<width>1482</width>
+								<height>45</height>
 								<label>$INFO[ListItem.Artist]</label>
 								<align>right</align>
 								<font>font14</font>
@@ -313,7 +307,7 @@
 								<visible>Container.Content(albums)</visible>
 							</control>
 							<control type="image">
-								<left>1290</left>
+								<left>1295</left>
 								<top>55</top>
 								<width>192</width>
 								<height>33</height>
@@ -356,9 +350,9 @@
 									<font>font16_title_bold</font>
 								</control>
 								<control type="label">
-									<top>48</top>
+									<top>50</top>
 									<width>980</width>
-									<height>45</height>
+									<height>40</height>
 									<label>$VAR[BigListInfoVar]</label>
 									<font>font14</font>
 									<textcolor>grey2</textcolor>
@@ -374,8 +368,8 @@
 									<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 								</control>
 								<control type="label">
-									<width>1480</width>
-									<height>50</height>
+									<width>1482</width>
+									<height>45</height>
 									<label>$INFO[ListItem.Artist]</label>
 									<align>right</align>
 									<font>font14</font>
@@ -383,7 +377,7 @@
 									<visible>Container.Content(albums)</visible>
 								</control>
 								<control type="image">
-									<left>1290</left>
+									<left>1295</left>
 									<top>55</top>
 									<width>192</width>
 									<height>33</height>

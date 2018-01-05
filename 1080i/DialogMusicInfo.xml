@@ -370,7 +370,7 @@
 					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
 				<control type="togglebutton" id="202">
-					<description>Bio/Discography</description>
+					<description>Review/Track list</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<altlabel></altlabel>
