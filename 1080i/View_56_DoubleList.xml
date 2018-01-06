@@ -26,7 +26,8 @@
 					<pagecontrol>5660</pagecontrol>
 					<movement>6</movement>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+					<!--<visible>Container.Content(artists) | Container.Content(albums)</visible>-->
+					<visible>Container.Content(artists)</visible>
 					<itemlayout height="120" width="820">
 						<control type="image">
 							<width>820</width>
@@ -60,7 +61,7 @@
 							<textcolor>grey2</textcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 						</control>
-						<control type="image">
+						<!--<control type="image">
 							<visible>!ListItem.IsParentFolder + String.IsEqual(ListItem.DBType,album)</visible>
 							<left>655</left>
 							<top>70</top>
@@ -68,7 +69,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
-						</control>
+						</control>-->
 					</itemlayout>
 					<focusedlayout height="120" width="820">
 						<control type="image">
@@ -108,7 +109,7 @@
 							<textcolor>grey2</textcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 						</control>
-						<control type="image">
+						<!--<control type="image">
 							<visible>!ListItem.IsParentFolder + String.IsEqual(ListItem.DBType,album)</visible>
 							<left>655</left>
 							<top>70</top>
@@ -116,7 +117,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
-						</control>
+						</control>-->
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="5660">
@@ -248,7 +249,7 @@
 					</focusedlayout>
 					<content target="music">$INFO[Container(56).ListItem.DBID,musicdb://artists/]</content>
 				</control>
-				<control type="fixedlist" id="561">
+				<!--<control type="fixedlist" id="561">
 					<top>180</top>
 					<width>820</width>
 					<height>840</height>
@@ -333,7 +334,7 @@
 						</control>
 					</focusedlayout>
 					<content target="music">$INFO[Container(56).ListItem.DBID,musicdb://albums/]</content>
-				</control>
+				</control>-->
 				<control type="scrollbar" id="5661">
 					<left>823</left>
 					<top>180</top>

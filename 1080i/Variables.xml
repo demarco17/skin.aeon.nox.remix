@@ -653,16 +653,12 @@
 		<value>$INFO[ListItem.AddonVersion]</value>
 	</variable>
 	<variable name="EpisodeInfoCountVar">
-		<value condition="!Integer.IsGreater(ListItem.Season,9) + !Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode,E0]</value>
-		<value condition="!Integer.IsGreater(ListItem.Season,9)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode,E]</value>
-		<value condition="!Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E0]</value>
-		<value>$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E]</value>
+		<value condition="!Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,[LOWERCASE]x[/LOWERCASE]0]</value>
+		<value>$INFO[ListItem.Season]$INFO[ListItem.Episode,[LOWERCASE]x[/LOWERCASE]]</value>
 	</variable>
 	<variable name="EpisodePlayCountVar">
-		<value condition="!Integer.IsGreater(VideoPlayer.Season,9) + !Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season,S0]$INFO[VideoPlayer.Episode,E0]</value>
-		<value condition="!Integer.IsGreater(VideoPlayer.Season,9)">$INFO[VideoPlayer.Season,S0]$INFO[VideoPlayer.Episode,E]</value>
-		<value condition="!Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season,S]$INFO[VideoPlayer.Episode,E0]</value>
-		<value>$INFO[VideoPlayer.Season,S]$INFO[VideoPlayer.Episode,E]</value>
+		<value condition="!Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,[LOWERCASE]x[/LOWERCASE]0]</value>
+		<value>$INFO[VideoPlayer.Season,S]$INFO[VideoPlayer.Episode,[LOWERCASE]x[/LOWERCASE]]</value>
 	</variable>
 	<variable name="UserRating">
 		<value condition="!String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating]</value>

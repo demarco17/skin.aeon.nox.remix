@@ -308,7 +308,7 @@
 				<textcolor>grey</textcolor>
 				<align>center</align>
 				<label>$INFO[System.Time]</label>
-				<visible>!Window.IsActive(volumebar)</visible>
+				<visible>!Window.IsActive(volumebar) | Player.Muted</visible>
 			</control>
 		</control>
 	</include>
