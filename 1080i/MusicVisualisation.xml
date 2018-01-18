@@ -152,7 +152,7 @@
 				<itemgap>25</itemgap>
 				<control type="button">
 					<top>19</top>
-					<width>130</width>
+					<width>135</width>
 					<height>52</height>
 					<texturefocus />
 					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
@@ -164,7 +164,7 @@
 				</control>
 				<control type="button">
 					<top>19</top>
-					<width>130</width>
+					<width>135</width>
 					<height>52</height>
 					<texturefocus />
 					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>

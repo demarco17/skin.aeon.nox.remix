@@ -55,9 +55,9 @@
 								<textcolor>grey2</textcolor>
 							</control>
 							<control type="image">
-								<left>1145</left>
+								<left>1187</left>
 								<top>55</top>
-								<width>192</width>
+								<width>150</width>
 								<height>33</height>
 								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 								<aspectratio align="right">keep</aspectratio>
@@ -146,9 +146,9 @@
 									<textcolor>grey2</textcolor>
 								</control>
 								<control type="image">
-									<left>1145</left>
+									<left>1187</left>
 									<top>55</top>
-									<width>192</width>
+									<width>150</width>
 									<height>33</height>
 									<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 									<aspectratio align="right">keep</aspectratio>
@@ -307,9 +307,9 @@
 								<visible>Container.Content(albums)</visible>
 							</control>
 							<control type="image">
-								<left>1295</left>
+								<left>1337</left>
 								<top>55</top>
-								<width>192</width>
+								<width>150</width>
 								<height>33</height>
 								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 								<aspectratio align="right">keep</aspectratio>
@@ -377,9 +377,9 @@
 									<visible>Container.Content(albums)</visible>
 								</control>
 								<control type="image">
-									<left>1295</left>
+									<left>1337</left>
 									<top>55</top>
-									<width>192</width>
+									<width>150</width>
 									<height>33</height>
 									<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 									<aspectratio align="right">keep</aspectratio>

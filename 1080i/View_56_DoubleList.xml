@@ -191,9 +191,9 @@
 						</control>
 						<control type="image">
 							<visible>!ListItem.IsParentFolder</visible>
-							<left>655</left>
+							<left>660</left>
 							<top>70</top>
-							<width>160</width>
+							<width>150</width>
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
@@ -239,9 +239,9 @@
 						</control>
 						<control type="image">
 							<visible>!ListItem.IsParentFolder</visible>
-							<left>655</left>
+							<left>660</left>
 							<top>70</top>
-							<width>160</width>
+							<width>150</width>
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>

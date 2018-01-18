@@ -104,7 +104,7 @@
 			<control type="image">
 				<left>253</left>
 				<top>105</top>
-				<width>160</width>
+				<width>150</width>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$VAR[VideoPlayerStarRating]</texture>
 			</control>

@@ -416,9 +416,9 @@
 								<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
 							</control>
 							<control type="image">
-								<left>950</left>
+								<left>980</left>
 								<top>50</top>
-								<width>180</width>
+								<width>150</width>
 								<height>70</height>
 								<aspectratio>keep</aspectratio>
 								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
@@ -478,9 +478,9 @@
 								<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
 							</control>
 							<control type="image">
-								<left>950</left>
+								<left>980</left>
 								<top>50</top>
-								<width>180</width>
+								<width>150</width>
 								<height>70</height>
 								<aspectratio>keep</aspectratio>
 								<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>

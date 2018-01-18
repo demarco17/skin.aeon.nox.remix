@@ -42,13 +42,13 @@
 			<include>Music_510_BigList</include><!-- view id = 510 -->
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(55) | Control.IsVisible(54) | Control.IsVisible(52) | Control.IsVisible(500) | Control.IsVisible(57)</visible>
+			<visible>Control.IsVisible(55) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(57)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
 			<include>OpenCloseAnimation</include>
 			<include>ViewFadeAnimation</include>
 			<top>-30</top>
 			<control type="group">
-				<visible>Control.IsVisible(54) | Control.IsVisible(52)</visible>
+				<visible>Control.IsVisible(54)</visible>
 				<control type="group">
 					<left>410</left>
 					<top>1010</top>
@@ -74,24 +74,35 @@
 					</control>
 				</control>
 				<control type="group">
-					<top>1010</top>
+					<top>1017</top>
 					<width>1920</width>
 					<visible>[Container.Content(albums) | Container.Content(songs)]</visible>
-					<control type="label">
-						<left>100</left>
-						<width>155</width>
-						<height>90</height>
-						<align>center</align>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Year]</label>
-						<font>font35_title_bold</font>
-					</control>
 					<control type="image">
-						<left>1600</left>
-						<width>200</width>
+						<left>125</left>
+						<width>150</width>
 						<include>MediaFlagVars</include>
 						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="button">
+						<left>1665</left>
+						<top>19</top>
+						<width>130</width>
+						<height>52</height>
+						<texturefocus />
+						<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
+						<font>flag_font</font>
+						<align>center</align>
+						<textoffsety>-3</textoffsety>
+						<label>$INFO[ListItem.Year]</label>
+						<visible>Container.Content(albums)</visible>
+					</control>
+					<control type="image">
+						<left>1655</left>
+						<bordersize>5</bordersize>
+						<include>MediaFlagVars</include>
+						<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
+						<visible>Container.Content(songs)</visible>
 					</control>
 				</control>
 			</control>
@@ -134,27 +145,31 @@
 				</control>
 				<control type="grouplist">
 					<top>1017</top>
-					<width>1820</width>
+					<width>1805</width>
 					<height>90</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<itemgap>25</itemgap>
 					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
 					<visible>[Container.Content(albums) | Container.Content(songs)] + !ListItem.IsParentFolder</visible>
 					<control type="image">
-						<width>200</width>
-						<height>80</height>
+						<width>150</width>
+						<height>90</height>
 						<include>MediaFlagVars</include>
 						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 					</control>
-					<control type="label">
-						<width>135</width>
-						<height>80</height>
+					<control type="button">
+						<top>19</top>
+						<width>130</width>
+						<height>52</height>
+						<texturefocus />
+						<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
+						<font>flag_font</font>
 						<align>center</align>
-						<textcolor>grey</textcolor>
-						<label fallback="• • • •">$INFO[ListItem.Year]</label>
-						<font>font35_title_bold</font>
-						<visible>Container.Content(albums)</visible>
+						<textoffsety>-3</textoffsety>
+						<label>$INFO[ListItem.Year]</label>
+						<visible>Container.Content(albums) + !String.IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="image">
 						<bordersize>5</bordersize>

@@ -27,6 +27,7 @@
 		<value condition="Container.Content(episodes) + !String.IsEqual(Container.FolderName,Container.ShowTitle)">$INFO[Container.ShowTitle,,: ]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://tvshows/)">$LOCALIZE[20343]: </value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/)">$LOCALIZE[20342]: </value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[36909]: </value>
 		<value condition="Window.IsActive(textviewer)">$INFO[Control.GetLabel(1)]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[System.AddonTitle(script.tv.show.next.aired)]</value>
 		<value condition="Window.IsActive(skinsettings)">$LOCALIZE[20077]</value>
@@ -47,7 +48,7 @@
 		<value condition="Window.IsActive(videos)">$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]</value>
 		<value condition="Window.IsActive(addoninformation) + !Window.IsActive(textviewer)">$VAR[BreadcrumbsFillerVar]$INFO[ListItem.AddonName,]</value>
 		<value condition="Window.IsActive(textviewer)">$VAR[BreadcrumbsFillerVar]</value>
-		<value condition="Window.IsActive(script-globalsearch-main.xml)">$INFO[System.AddonTitle(script.globalsearch)]$INFO[Control.GetLabel(190),: ]$INFO[Control.GetLabel(191), ]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[System.AddonTitle(script.globalsearch)]</value>
 		<value condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19069]]</value>
 		<value condition="Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19163]]$INFO[Pvr.backenddiskspace,[COLOR grey3]  |  [/COLOR],]</value>
 		<value condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">$VAR[BreadcrumbsFillerVar,,$LOCALIZE[19040]]</value>
@@ -62,6 +63,7 @@
 	<variable name="TopbarRightVar">
 		<value condition="Window.IsActive(1133)">$INFO[Container(51).NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Location)]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[137] ","[COLOR grey3]  |  [/COLOR]]$INFO[Container.NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),, $LOCALIZE[33006]]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3]  |  [/COLOR], $LOCALIZE[20161]]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(20)">$INFO[Container(20).NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(21)">$INFO[Container(21).NumItems,, $LOCALIZE[31025]]</value>
@@ -415,6 +417,13 @@
 		<value condition="Container.Content()">$INFO[ListItem.Comment]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
+	<variable name="GlobalSearchLabel2Var">
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">$INFO[ListItem.Year]</value>
+		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.TvShowTitle]</value>
+		<value condition="Container.Content(livetv)">$INFO[ListItem.Property(ChannelName)]</value>
+		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
+		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Artist]</value>
+	</variable>
 	<variable name="SeekLabelVar">
 		<value condition="Player.Paused">$INFO[System.Time]$INFO[player.FinishTime, [,]]</value>
 		<value condition="Player.Seeking">$INFO[Player.SeekStepSize]</value>
@@ -604,10 +613,6 @@
 		<value condition="!String.IsEmpty(Container.ListItem.Property(Fanart)) + !String.IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))">$INFO[Container.ListItem.Property(Fanart)]</value>
 		<value>special://home/addons/script.tv.show.next.aired/fanart.jpg</value>
 	</variable>
-	<variable name="GlobalSearchFanart">
-		<value condition="!String.IsEmpty(Container.ListItem.Property(Fanart))">$INFO[Container.ListItem.Property(Fanart)]</value>
-		<value>special://home/addons/script.globalsearch/fanart.jpg</value>
-	</variable>
 	<variable name="HomeNowPlayingThumbVar">
 		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + !String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
@@ -658,7 +663,7 @@
 	</variable>
 	<variable name="EpisodePlayCountVar">
 		<value condition="!Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,[LOWERCASE]x[/LOWERCASE]0]</value>
-		<value>$INFO[VideoPlayer.Season,S]$INFO[VideoPlayer.Episode,[LOWERCASE]x[/LOWERCASE]]</value>
+		<value>$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,[LOWERCASE]x[/LOWERCASE]]</value>
 	</variable>
 	<variable name="UserRating">
 		<value condition="!String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating]</value>

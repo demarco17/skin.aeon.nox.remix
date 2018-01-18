@@ -888,21 +888,19 @@
 			<control type="group">
 				<visible>Container.Content(songs)</visible>
 				<include>ViewFadeAnimation</include>
-				<left>1255</left>
-				<top>1000</top>
-				<width>1840</width>
+				<left>1575</left>
+				<top>992</top>
+				<width>345</width>
 				<height>90</height>
 				<control type="image">
-					<left>274</left>
-					<top>-5</top>
-					<width>200</width>
+					<width>150</width>
 					<include>MediaFlagVars</include>
 					<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
-					<left>506</left>
-					<top>-5</top>
+					<left>175</left>
+					<bordersize>5</bordersize>
 					<include>MediaFlagVars</include>
 					<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.FileExtension)</visible>
@@ -942,9 +940,9 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>610</left>
+						<left>645</left>
 						<top>17</top>
-						<width>190</width>
+						<width>150</width>
 						<height>34</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
@@ -971,9 +969,9 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>610</left>
+						<left>645</left>
 						<top>17</top>
-						<width>190</width>
+						<width>150</width>
 						<height>34</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
