@@ -308,7 +308,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(livetv)">
+				<itemlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
 					<control type="image">
 						<width>329</width>
 						<height>329</height>
@@ -335,7 +335,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(livetv)">
+				<focusedlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
 					<control type="group">
 						<include>IconZoomAnimation</include>
 						<control type="image">
