@@ -55,8 +55,8 @@
 						<control type="label">
 							<left>700</left>
 							<width>300</width>
-							<height>117</height>
-							<font>font15</font>
+							<height>120</height>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$VAR[ListLabel2Var]</label>
@@ -96,7 +96,7 @@
 								<left>-18</left>
 								<width>100</width>
 								<height>120</height>
-								<font>font12_title</font>
+								<font>flag_font</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>grey2</textcolor>
@@ -138,8 +138,8 @@
 						<control type="label">
 							<left>700</left>
 							<width>300</width>
-							<height>117</height>
-							<font>font15</font>
+							<height>120</height>
+							<font>font13</font>
 							<align>right</align>
 							<label>$VAR[ListLabel2Var]</label>
 							<animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEmpty(ListItem.VideoResolution) + !ListItem.IsCollection">conditional</animation>
@@ -178,7 +178,7 @@
 								<left>-18</left>
 								<width>100</width>
 								<height>120</height>
-								<font>font12_title</font>
+								<font>flag_font</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textoffsetx>18</textoffsetx>
@@ -269,7 +269,6 @@
 				<left>1280</left>
 				<top>-40</top>
 				<visible>Container.Content(episodes)</visible>
-				<include>ViewFadeAnimation</include>
 				<control type="image">
 					<description>background image</description>
 					<left>16</left>
@@ -299,25 +298,27 @@
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<pagecontrol>5062</pagecontrol>
 				</control>
-				<control type="group">
-					<top>930</top>
-					<left>23</left>
+				<control type="grouplist">
+					<left>32</left>
+					<top>940</top>
+					<width>504</width>
+					<height>90</height>
+					<itemgap>25</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
 					<control type="image">
-						<left>32</left>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					</control>
 					<control type="image">
-						<left>199</left>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="image">
-						<left>359</left>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
@@ -410,7 +411,7 @@
 								<left>60</left>
 								<width>1060</width>
 								<height>70</height>
-								<font>font30</font>
+								<font>font15</font>
 								<align>right</align>
 								<textcolor>grey</textcolor>
 								<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
@@ -473,7 +474,7 @@
 								<left>60</left>
 								<width>1060</width>
 								<height>70</height>
-								<font>font30</font>
+								<font>font15</font>
 								<align>right</align>
 								<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
 							</control>

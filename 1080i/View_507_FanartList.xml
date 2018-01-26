@@ -76,11 +76,13 @@
 					</control>
 				</control>
 			</control>
-			<control type="group">
-				<left>1185</left>
-				<top>863</top>
-				<width>640</width>
+			<control type="grouplist">
+				<left>1205</left>
+				<top>868</top>
+				<width>615</width>
 				<height>90</height>
+				<itemgap>25</itemgap>
+				<orientation>horizontal</orientation>
 				<control type="image">
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
@@ -109,30 +111,29 @@
 					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 				</control>
 			</control>
-			<control type="group">
-				<left>1180</left>
-				<top>863</top>
-				<width>1815</width>
+			<control type="grouplist">
+				<left>1190</left>
+				<top>868</top>
+				<width>615</width>
 				<height>90</height>
+				<itemgap>25</itemgap>
 				<orientation>horizontal</orientation>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.Dbtype,movie)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !ListItem.IsParentFolder</visible>
 				<control type="group">
-					<top>-5</top>
-					<width>175</width>
+					<width>135</width>
 					<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
 					<control type="label">
-						<top>2</top>
-						<width>165</width>
-						<height>60</height>
+						<width>135</width>
+						<height>70</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Property(TotalSeasons)]</label>
 						<font>font48_bold</font>
 						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
-						<top>52</top>
-						<width>165</width>
-						<height>30</height>
+						<top>55</top>
+						<width>135</width>
+						<height>25</height>
 						<align>center</align>
 						<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
 						<font>flag_font</font>
@@ -141,51 +142,68 @@
 				</control>
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
-					<width>167</width>
-					<left>165</left>
-					<top>-5</top>
+					<width>135</width>
 					<control type="label">
-						<top>2</top>
-						<width>165</width>
-						<height>60</height>
+						<width>135</width>
+						<height>70</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
 						<font>font48_bold</font>
 						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
-						<top>52</top>
-						<width>165</width>
-						<height>30</height>
+						<top>55</top>
+						<width>135</width>
+						<height>25</height>
 						<align>center</align>
 						<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
 						<font>flag_font</font>
 						<textcolor>grey</textcolor>
 					</control>
 				</control>
-				<control type="image" id="800013">
-					<left>330</left>
-					<width>165</width>
-					<include>MediaFlagVars</include>
-					<bordersize>5</bordersize>
-					<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+				<control type="group">
+					<visible>Container.Content(seasons) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+					<width>135</width>
+					<control type="label">
+						<width>135</width>
+						<height>70</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<font>font48_bold</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="label">
+						<top>55</top>
+						<width>135</width>
+						<height>25</height>
+						<align>center</align>
+						<label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
+						<font>flag_font</font>
+						<textcolor>grey</textcolor>
+					</control>
 				</control>
-				<control type="label">
-					<left>330</left>
-					<width>165</width>
-					<height>90</height>
-					<align>center</align>
-					<label>$INFO[ListItem.Studio]</label>
-					<textcolor>grey</textcolor>
-					<font>flag_font</font>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>String.IsEmpty(Control.GetLabel(800013))</visible>
+				<control type="group">
+					<width>135</width>
+					<control type="image" id="800013">
+						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
+						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+					</control>
+					<control type="label">
+						<width>135</width>
+						<height>80</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Studio]</label>
+						<textcolor>grey</textcolor>
+						<font>flag_font</font>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>String.IsEmpty(Control.GetLabel(800013))</visible>
+					</control>
 				</control>
 				<control type="image">
-					<left>495</left>
 					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
 					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -257,7 +275,7 @@
 							<left>360</left>
 							<width>620</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -303,7 +321,7 @@
 							<left>360</left>
 							<width>620</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -344,7 +362,7 @@
 							<left>360</left>
 							<width>620</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -371,7 +389,7 @@
 							<left>974</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textcolor>grey2</textcolor>
@@ -402,7 +420,7 @@
 							<left>360</left>
 							<width>620</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -428,7 +446,7 @@
 							<left>974</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textoffsetx>18</textoffsetx>
@@ -453,7 +471,7 @@
 							<left>915</left>
 							<width>65</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -499,7 +517,7 @@
 							<left>915</left>
 							<width>65</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -539,7 +557,7 @@
 							<left>360</left>
 							<width>620</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Premiered]</label>
@@ -566,7 +584,7 @@
 							<left>974</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textcolor>grey2</textcolor>
@@ -597,7 +615,7 @@
 							<left>360</left>
 							<width>620</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Premiered]</label>
 						</control>
@@ -623,7 +641,7 @@
 							<left>974</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textoffsetx>18</textoffsetx>

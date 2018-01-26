@@ -127,7 +127,7 @@
 						</control>
 						<control type="label">
 							<width>140</width>
-							<height>90</height>
+							<height>80</height>
 							<align>center</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Studio]</label>
@@ -137,17 +137,16 @@
 						</control>
 					</control>
 					<control type="image">
-						<left>100</left>
-						<top>30</top>
-						<width>195</width>
-						<height>35</height>
+						<left>145</left>
+						<width>150</width>
+						<include>MediaFlagVars</include>
 						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
-						<aspectratio align="right">keep</aspectratio>
 						<visible>Control.IsVisible(59) + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>1675</left>
+						<left>1680</left>
 						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
 						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
@@ -218,63 +217,66 @@
 						<label>$INFO[ListItem.AddonVersion]</label>
 					</control>
 				</control>
-				<control type="group">
-					<left>1525</left>
+				<control type="grouplist">
+					<left>1500</left>
 					<top>1010</top>
-					<width>395</width>
+					<width>320</width>
 					<height>90</height>
+					<itemgap>25</itemgap>
+					<align>right</align>
 					<orientation>horizontal</orientation>
-					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.Dbtype,movie)</visible>
-					<control type="image" id="800012">
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !ListItem.IsParentFolder</visible>
+					<control type="group">
+						<width>135</width>
+						<control type="image" id="800012">
+							<include>MediaFlagVars</include>
+							<bordersize>5</bordersize>
+							<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+						</control>
+						<control type="label">
+							<width>135</width>
+							<height>80</height>
+							<align>center</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Studio]</label>
+							<font>flag_font</font>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>String.IsEmpty(Control.GetLabel(800012))</visible>
+						</control>
+					</control>
+					<control type="image">
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
-						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-					</control>
-					<control type="label">
-						<width>140</width>
-						<height>90</height>
-						<align>center</align>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Studio]</label>
-						<font>flag_font</font>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEmpty(Control.GetLabel(800012))</visible>
-					</control>
-					<control type="image">
-						<left>160</left>
-						<include>MediaFlagVars</include>
 						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
-				<control type="group">
-					<left>1185</left>
-					<top>1017</top>
-					<width>735</width>
+				<control type="grouplist">
+					<left>1190</left>
+					<top>1010</top>
+					<width>615</width>
 					<height>90</height>
+					<itemgap>25</itemgap>
+					<align>right</align>
+					<orientation>horizontal</orientation>
 					<control type="image">
-						<left>32</left>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<left>192</left>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					</control>
 					<control type="image">
-						<left>352</left>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="image">
-						<left>502</left>
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>

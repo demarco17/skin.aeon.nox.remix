@@ -919,8 +919,8 @@
 					<control type="image">
 						<include>VisibleFadeAnimation</include>
 						<visible>ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)</visible>
-						<height>80</height>
 						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
 						<texture fallback="flags/mpaa/NR.png">$INFO[Window.Property(mpaa),flags/mpaa/,.png]</texture>
 					</control>
 				</control>

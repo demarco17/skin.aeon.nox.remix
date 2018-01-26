@@ -11,13 +11,22 @@
 				<aspectratio>scale</aspectratio>
 				<texture>dialogs/black.png</texture>
 			</control>
-			<control type="image">
+			<control type="image" id="800016">
 				<width>729</width>
 				<height>351</height>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
 				<texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Artist,,/logo.png]</texture>
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+			</control>
+			<control type="label">
+				<width>729</width>
+				<height>351</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Artist]</label>
+				<font>font_LogoAlt</font>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>String.IsEqual(ListItem.DBType,artist) + String.IsEmpty(Control.GetLabel(800016))</visible>
 			</control>
 			<control type="image">
 				<width>729</width>
@@ -48,7 +57,7 @@
 				<height>729</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[PosterVar]</texture>
-				<bordertexture border="2" colordiffuse="grey">dialogs/white50.png</bordertexture>
+				<bordertexture border="2" colordiffuse="grey2">dialogs/white50.png</bordertexture>
 				<bordersize>2</bordersize>
 			</control>
 		</control>
@@ -558,7 +567,7 @@
 			<control type="group">
 				<top>985</top>
 				<control type="grouplist">
-					<left>38</left>
+					<left>35</left>
 					<width>1190</width>
 					<height>90</height>
 					<align>left</align>
@@ -568,39 +577,36 @@
 					<control type="group">
 						<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)</visible>
 						<width>135</width>
-						<control type="image" id="800011">
-							<width>123</width>
+						<control type="image" id="800020">
 							<include>MediaFlagVars</include>
-							<bordersize>10</bordersize>
+							<bordersize>15</bordersize>
 							<texture>resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>
 						</control>
 						<control type="label">
-							<width>150</width>
-							<height>90</height>
+							<width>135</width>
+							<height>80</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Property(Album_Label)]</label>
 							<font>flag_font</font>
 							<textcolor>grey</textcolor>
 							<wrapmultiline>true</wrapmultiline>
-							<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
+							<visible>String.IsEmpty(Control.GetLabel(800020))</visible>
 						</control>
 					</control>
 				</control>
 			</control>
 			<control type="group">
-				<top>987</top>
+				<top>980</top>
 				<control type="grouplist">
 					<width>1160</width>
 					<height>90</height>
 					<align>right</align>
-					<aligny>center</aligny>
 					<itemgap>25</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="image">
 						<description>Rating value</description>
 						<width>150</width>
-						<height>90</height>
 						<include>MediaFlagVars</include>
 						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 						<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
@@ -618,8 +624,8 @@
 						<visible>String.IsEqual(ListItem.DBType,album)</visible>
 					</control>
 					<control type="image">
-						<bordersize>5</bordersize>
 						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
 						<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
 						<visible>String.IsEqual(ListItem.DBType,song)</visible>
 					</control>

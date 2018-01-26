@@ -91,7 +91,7 @@
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</control>
 					<control type="label">
-						<width>220</width>
+						<width>150</width>
 						<height>90</height>
 						<font>font14</font>
 						<textcolor>grey</textcolor>

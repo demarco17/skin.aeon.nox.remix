@@ -12,11 +12,11 @@
 			</control>
 			<control type="group">
 				<left>5</left>
-				<top>422</top>
+				<top>424</top>
 				<control type="image">
-					<top>20</top>
-					<width>440</width>
-					<height>640</height>
+					<top>185</top>
+					<width>320</width>
+					<height>471</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$VAR[PosterThumbVar]</texture>
 					<fadetime>CrossfadeTime</fadetime>
@@ -27,19 +27,19 @@
 				<control type="group">
 					<visible>String.IsEqual(Control.GetLabel(4440),1)</visible>
 					<control type="image">
-						<left>28</left>
-						<top>50</top>
-						<width>382</width>
-						<height>573</height>
+						<left>24</left>
+						<top>228</top>
+						<width>273</width>
+						<height>401</height>
 						<aspectratio>stretch</aspectratio>
 						<texture background="true">$VAR[PosterThumbVar]</texture>
 						<fadetime>CrossfadeTime</fadetime>
 					</control>
 					<control type="image">
-						<left>-51</left>
-						<top>-8</top>
-						<width>490</width>
-						<height>668</height>
+						<left>-30</left>
+						<top>186</top>
+						<width>346</width>
+						<height>468</height>
 						<texture>thumbs/boxes/$VAR[ShiftCase_Var]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<fadetime>CrossfadeTime</fadetime>
@@ -48,14 +48,41 @@
 			</control>
 			<control type="group">
 				<left>1272</left>
-				<top>653</top>
-				<visible>!Container.Content(episodes) + !ListItem.IsCollection</visible>
+				<top>655</top>
+				<visible>!ListItem.IsCollection</visible>
 				<control type="button">
 					<width>650</width>
 					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<include>ViewFadeAnimation</include>
-					<visible>!String.IsEmpty(ListItem.Genre)</visible>
+					<visible>!Container.Content(episodes) + !String.IsEmpty(ListItem.Genre)</visible>
+				</control>
+				<control type="group">
+					<visible>Container.Content(episodes)</visible>
+					<control type="button">
+						<width>650</width>
+						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
+					</control>
+					<control type="group">
+						<left>500</left>
+						<width>135</width>
+						<control type="image" id="800027">
+							<include>MediaFlagVars</include>
+							<bordersize>5</bordersize>
+							<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+						</control>
+						<control type="label">
+							<width>135</width>
+							<height>80</height>
+							<align>center</align>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Studio]</label>
+							<font>flag_font</font>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>String.IsEmpty(Control.GetLabel(800027))</visible>
+						</control>
+					</control>
 				</control>
 				<control type="textbox">
 					<label>$VAR[VideoPlotVar]</label>
@@ -82,8 +109,8 @@
 			</control>
 			<control type="group">
 				<left>1287</left>
-				<top>653</top>
-				<visible>!Container.Content(episodes) + ListItem.IsCollection</visible>
+				<top>655</top>
+				<visible>ListItem.IsCollection</visible>
 				<control type="group">
 					<include content="InfoList">
 						<param name="list_id">5001</param>
@@ -105,88 +132,8 @@
 					</control>
 				</control>
 			</control>
-			<control type="group">
-				<visible>Container.Content(episodes)</visible>
-				<left>1272</left>
-				<top>742</top>
-				<control type="group">
-					<animation type="Conditional" condition="Control.HasFocus(72) | Control.HasFocus(73)">
-						<effect type="rotatey" start="0" end="180" center="319,0" time="400" tween="sine" easing="inout" />
-						<effect type="fade" start="100" end="0" time="10" delay="200" />
-					</animation>
-					<control type="image">
-						<left>2</left>
-						<top>-89</top>
-						<width>635</width>
-						<height>324</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
-						<fadetime>CrossfadeTime</fadetime>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-						<bordersize>1</bordersize>
-					</control>
-					<control type="button" id="73">
-						<left>15</left>
-						<top>-89</top>
-						<width>70</width>
-						<height>50</height>
-						<onleft>501</onleft>
-						<onright>72</onright>
-						<font>IconTiny</font>
-						<label></label>
-						<textoffsetx>0</textoffsetx>
-						<textcolor>grey</textcolor>
-						<focusedcolor>grey</focusedcolor>
-						<texturefocus />
-						<texturenofocus />
-					</control>
-				</control>
-				<control type="group">
-					<visible>Control.HasFocus(72) | Control.HasFocus(73)</visible>
-					<animation type="Conditional" condition="Control.HasFocus(72) | Control.HasFocus(73)">
-						<effect type="rotatey" start="-180" end="0" center="319,0" time="400" tween="sine" easing="inout" />
-						<effect type="fade" start="0" end="100" time="10" delay="200" />
-					</animation>
-					<control type="button">
-						<top>-89</top>
-						<width>645</width>
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
-						<include>ShowCaseInfoPanelButtonsValues</include>
-						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
-					</control>
-					<control type="image">
-						<left>500</left>
-						<top>-89</top>
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture fallback="flags/default-studio.png">$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-						<visible>!String.IsEmpty(ListItem.Studio)</visible>
-					</control>
-					<control type="textbox">
-						<label>$INFO[ListItem.plot]</label>
-						<left>15</left>
-						<top>8</top>
-						<width>615</width>
-						<height>215</height>
-						<pagecontrol>72</pagecontrol>
-						<font>font14_textbox</font>
-						<textcolor>grey</textcolor>
-					</control>
-					<control type="scrollbar" id="72">
-						<left>638</left>
-						<width>10</width>
-						<height>237</height>
-						<onleft>501</onleft>
-						<onright>501</onright>
-						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-						<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
-					</control>
-				</control>
-			</control>
 			<control type="image">
-				<left>448</left>
+				<left>328</left>
 				<top>653</top>
 				<width>2</width>
 				<height>427</height>
@@ -206,105 +153,137 @@
 				<height>427</height>
 				<texture border="1">dialogs/separator3.png</texture>
 			</control>
-			<control type="group">
-				<left>1270</left>
+			<control type="grouplist">
+				<left>1310</left>
 				<top>982</top>
-				<width>1840</width>
+				<width>615</width>
 				<height>90</height>
+				<itemgap>25</itemgap>
+				<orientation>horizontal</orientation>
 				<control type="image">
-					<left>13.5</left>
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
 					<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 				</control>
 				<control type="image">
-					<left>176.5</left>
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
 					<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 				</control>
 				<control type="image">
-					<left>339</left>
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
 					<texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 				</control>
 				<control type="image">
-					<left>506</left>
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
 					<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 				</control>
+			</control>
+			<control type="grouplist">
+				<left>1295</left>
+				<top>982</top>
+				<width>615</width>
+				<height>90</height>
+				<itemgap>25</itemgap>
+				<orientation>horizontal</orientation>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !ListItem.IsParentFolder</visible>
 				<control type="group">
-					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.Dbtype,movie)</visible>
-					<control type="group">
-						<width>162.5</width>
-						<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
-						<control type="label">
-							<top>2</top>
-							<width>162.5</width>
-							<height>60</height>
-							<align>center</align>
-							<label>[B]$INFO[ListItem.Property(TotalSeasons)][/B]</label>
-							<font>font48</font>
-							<textcolor>grey2</textcolor>
-						</control>
-						<control type="label">
-							<top>52</top>
-							<width>162.5</width>
-							<height>30</height>
-							<align>center</align>
-							<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
-							<font>flag_font</font>
-							<textcolor>grey2</textcolor>
-						</control>
+					<width>135</width>
+					<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
+					<control type="label">
+						<width>135</width>
+						<height>70</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Property(TotalSeasons)]</label>
+						<font>font48_bold</font>
+						<textcolor>grey</textcolor>
 					</control>
-					<control type="group">
-						<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
-						<width>162.5</width>
-						<left>162.5</left>
-						<control type="label">
-							<top>2</top>
-							<width>162.5</width>
-							<height>60</height>
-							<align>center</align>
-							<label>[B]$INFO[ListItem.Property(TotalEpisodes)][/B]</label>
-							<font>font48</font>
-							<textcolor>grey2</textcolor>
-						</control>
-						<control type="label">
-							<top>52</top>
-							<width>162.5</width>
-							<height>30</height>
-							<align>center</align>
-							<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
-							<font>flag_font</font>
-							<textcolor>grey2</textcolor>
-						</control>
+					<control type="label">
+						<top>55</top>
+						<width>135</width>
+						<height>25</height>
+						<align>center</align>
+						<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
+						<font>flag_font</font>
+						<textcolor>grey</textcolor>
 					</control>
-					<control type="image">
-						<left>339</left>
+				</control>
+				<control type="group">
+					<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+					<width>135</width>
+					<control type="label">
+						<width>135</width>
+						<height>70</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
+						<font>font48_bold</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="label">
+						<top>55</top>
+						<width>135</width>
+						<height>25</height>
+						<align>center</align>
+						<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
+						<font>flag_font</font>
+						<textcolor>grey</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Container.Content(seasons) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+					<width>135</width>
+					<control type="label">
+						<width>135</width>
+						<height>70</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<font>font48_bold</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="label">
+						<top>55</top>
+						<width>135</width>
+						<height>25</height>
+						<align>center</align>
+						<label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
+						<font>flag_font</font>
+						<textcolor>grey</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<width>135</width>
+					<control type="image" id="800021">
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
-						<texture fallback="flags/default-studio.png">$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-						<visible>!ListItem.IsParentFolder</visible>
+						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
-					<control type="image">
-						<left>506</left>
-						<include>MediaFlagVars</include>
-						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-						<visible>!ListItem.IsParentFolder</visible>
+					<control type="label">
+						<width>135</width>
+						<height>80</height>
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Studio]</label>
+						<font>flag_font</font>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>String.IsEmpty(Control.GetLabel(800021))</visible>
 					</control>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 				</control>
 			</control>
 			<control type="fixedlist" id="501">
-				<left>450</left>
+				<left>330</left>
 				<top>655</top>
-				<width>976</width>
+				<width>927</width>
 				<height>408</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
@@ -313,15 +292,14 @@
 				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<itemlayout height="68" width="806" condition="Container.Content(movies)">
+				<itemlayout height="68" width="927" condition="Container.Content(movies) | Container.Content(musicvideos)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
-						<width>730</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
 						<textoffsetx>15</textoffsetx>
@@ -329,16 +307,16 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
+						<textoffsetx>70</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Rating]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -347,7 +325,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -355,35 +333,35 @@
 						<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="68" width="806" condition="Container.Content(movies)">
+				<focusedlayout height="68" width="927" condition="Container.Content(movies) | Container.Content(musicvideos)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
-						<width>730</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
+						<textoffsetx>70</textoffsetx>
 						<label>$INFO[ListItem.Rating]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -392,7 +370,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -400,14 +378,14 @@
 						<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 					</control>
 				</focusedlayout>
-				<itemlayout height="68" width="806" condition="Container.Content(tvshows)">
+				<itemlayout height="68" width="927" condition="Container.Content(tvshows)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
-						<width>730</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
 						<textoffsetx>15</textoffsetx>
@@ -415,16 +393,16 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
+						<textoffsetx>70</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Rating]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -433,7 +411,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -442,10 +420,10 @@
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
-						<left>724</left>
+						<left>842</left>
 						<width>100</width>
 						<height>68</height>
-						<font>font12_title</font>
+						<font>flag_font</font>
 						<align>center</align>
 						<label>$VAR[ListOverlayEpisodesVar]</label>
 						<textcolor>grey2</textcolor>
@@ -453,35 +431,35 @@
 						<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="68" width="806" condition="Container.Content(tvshows)">
+				<focusedlayout height="68" width="927" condition="Container.Content(tvshows)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
-						<width>730</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
+						<textoffsetx>70</textoffsetx>
 						<align>right</align>
 						<label>$INFO[ListItem.Rating]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -490,7 +468,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -499,41 +477,41 @@
 					</control>
 					<control type="label">
 						<description>Unwatched episodes</description>
-						<left>724</left>
+						<left>842</left>
 						<width>100</width>
 						<height>68</height>
-						<font>font12_title</font>
+						<font>flag_font</font>
 						<align>center</align>
 						<label>$VAR[ListOverlayEpisodesVar]</label>
 						<textoffsetx>18</textoffsetx>
 						<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 					</control>
 				</focusedlayout>
-				<itemlayout height="68" width="806" condition="Container.Content(seasons)">
+				<itemlayout height="68" width="927" condition="Container.Content(seasons)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>600</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
+						<textoffsetx>15</textoffsetx>
 						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
+						<textoffsetx>70</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Premiered]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -542,55 +520,43 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
-					<control type="label">
-						<description>Unwatched episodes</description>
-						<left>724</left>
-						<width>100</width>
-						<height>68</height>
-						<font>font12_title</font>
-						<align>center</align>
-						<label>$VAR[ListOverlayEpisodesVar]</label>
-						<textcolor>grey2</textcolor>
-						<textoffsetx>18</textoffsetx>
-						<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-					</control>
 				</itemlayout>
-				<focusedlayout height="68" width="806" condition="Container.Content(seasons)">
+				<focusedlayout height="68" width="927" condition="Container.Content(seasons)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>600</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
+						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
+						<textoffsetx>70</textoffsetx>
 						<align>right</align>
 						<label>$INFO[ListItem.Premiered]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -599,50 +565,39 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[SkinThemeColour]">$INFO[ListItem.Overlay,overlays/]</texture>
 					</control>
-					<control type="label">
-						<description>Unwatched episodes</description>
-						<left>724</left>
-						<width>100</width>
-						<height>68</height>
-						<font>font12_title</font>
-						<align>center</align>
-						<label>$VAR[ListOverlayEpisodesVar]</label>
-						<textoffsetx>18</textoffsetx>
-						<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-					</control>
 				</focusedlayout>
-				<itemlayout height="68" width="806" condition="Container.Content(episodes)">
+				<itemlayout height="68" width="927" condition="Container.Content(episodes)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
-						<width>730</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
+						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>15</textoffsetx>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
+						<textoffsetx>70</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Rating]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -651,7 +606,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -659,35 +614,35 @@
 						<texture colordiffuse="$VAR[SkinThemeColour]">$VAR[MediaWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="68" width="806" condition="Container.Content(episodes)">
+				<focusedlayout height="68" width="927" condition="Container.Content(episodes)">
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="image">
-						<width>806</width>
+						<width>927</width>
 						<height>68</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
-						<width>730</width>
+						<width>927</width>
 						<height>66</height>
 						<font>font15</font>
-						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>15</textoffsetx>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>110</left>
-						<width>620</width>
+						<width>927</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
+						<textoffsetx>70</textoffsetx>
 						<align>right</align>
 						<label>$INFO[ListItem.Rating]</label>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -696,7 +651,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>742</left>
+						<left>860</left>
 						<top>2</top>
 						<width>64</width>
 						<height>64</height>
@@ -712,8 +667,7 @@
 				<height>408</height>
 				<onleft>501</onleft>
 				<onright condition="ListItem.IsCollection">50164</onright>
-				<onright condition="!ListItem.IsCollection + !Container.Content(episodes)">50162</onright>
-				<onright condition="Container.Content(episodes)">73</onright>
+				<onright condition="!ListItem.IsCollection">50162</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>
@@ -887,7 +841,6 @@
 			</control>
 			<control type="group">
 				<visible>Container.Content(songs)</visible>
-				<include>ViewFadeAnimation</include>
 				<left>1575</left>
 				<top>992</top>
 				<width>345</width>
@@ -985,37 +938,18 @@
 						<texture border="4">dialogs/separator2.png</texture>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>60</width>
-						<height>66</height>
-						<font>font15</font>
-						<textcolor>grey2</textcolor>
-						<label fallback="• •">$INFO[ListItem.TrackNumber]</label>
-						<visible>!ListItem.IsParentFolder</visible>
-					</control>
-					<control type="label">
-						<left>65</left>
 						<width>545</width>
 						<height>66</height>
 						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Title]</label>
-						<visible>!ListItem.IsParentFolder</visible>
-					</control>
-					<control type="label">
-						<left>65</left>
-						<width>545</width>
-						<height>66</height>
-						<font>font15</font>
+						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
 						<left>110</left>
 						<width>680</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1034,35 +968,17 @@
 						<visible>Control.HasFocus(501)</visible>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>60</width>
-						<height>66</height>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<label fallback="• •">$INFO[ListItem.TrackNumber]</label>
-						<visible>!ListItem.IsParentFolder</visible>
-					</control>
-					<control type="label">
-						<left>65</left>
 						<width>545</width>
 						<height>66</height>
 						<font>font15</font>
-						<label>$INFO[ListItem.Title]</label>
-						<visible>!ListItem.IsParentFolder</visible>
-					</control>
-					<control type="label">
-						<left>65</left>
-						<width>545</width>
-						<height>66</height>
-						<font>font15</font>
+						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
 						<left>110</left>
 						<width>680</width>
 						<height>66</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>

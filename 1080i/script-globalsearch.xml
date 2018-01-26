@@ -258,7 +258,7 @@
 						<control type="label">
 							<top>177</top>
 							<width>329</width>
-							<height>37</height>
+							<height>40</height>
 							<font>font12</font>
 							<align>center</align>
 							<textoffsetx>10</textoffsetx>
@@ -369,7 +369,7 @@
 				<left>522</left>
 				<top>127</top>
 				<control type="label">
-					<top>672</top>
+					<top>680</top>
 					<width>1316</width>
 					<height>40</height>
 					<label>$INFO[ListItem.Label]</label>
@@ -377,7 +377,7 @@
 					<textoffsetx>15</textoffsetx>
 				</control>
 				<control type="label">
-					<top>672</top>
+					<top>680</top>
 					<width>1316</width>
 					<height>40</height>
 					<align>right</align>
@@ -388,44 +388,44 @@
 				</control>
 				<control type="textbox">
 					<left>15</left>
-					<top>725</top>
+					<top>735</top>
 					<width>1286</width>
-					<height>112</height>
+					<height>90</height>
 					<label>$VAR[VideoPlotVar]</label>
-					<font>font13</font>
+					<font>font14_textbox</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<autoscroll time="5000" delay="5000" repeat="5000">true</autoscroll>
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 				</control>
 				<control type="textbox">
 					<left>15</left>
-					<top>725</top>
+					<top>735</top>
 					<width>1286</width>
-					<height>112</height>
+					<height>90</height>
 					<label>$VAR[MusicPlotVar]</label>
-					<font>font13</font>
+					<font>font14_textbox</font>
 					<textcolor>grey</textcolor>
 					<autoscroll time="5000" delay="5000" repeat="5000">true</autoscroll>
 					<visible>Container.Content(artists) | Container.Content(albums)</visible>
 				</control>
 				<control type="textbox">
 					<left>15</left>
-					<top>725</top>
+					<top>735</top>
 					<width>1286</width>
-					<height>112</height>
+					<height>90</height>
 					<label>$INFO[ListItem.Album]$INFO[ListItem.Year, (,)]$INFO[ListItem.TrackNumber, - $LOCALIZE[554]: ,]$INFO[ListItem.Duration,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Genre,[COLOR grey3]  |  [/COLOR],][CR]$INFO[ListItem.Comment]</label>
-					<font>font13</font>
+					<font>font14_textbox</font>
 					<textcolor>grey</textcolor>
 					<autoscroll time="5000" delay="5000" repeat="5000">true</autoscroll>
 					<visible>Container.Content(songs)</visible>
 				</control>
 				<control type="textbox">
 					<left>15</left>
-					<top>725</top>
+					<top>735</top>
 					<width>1286</width>
-					<height>112</height>
+					<height>90</height>
 					<label>$INFO[ListItem.Property(Plot)]</label>
-					<font>font13</font>
+					<font>font14_textbox</font>
 					<textcolor>grey</textcolor>
 					<autoscroll time="5000" delay="5000" repeat="5000">true</autoscroll>
 					<visible>Container.Content(livetv)</visible>
@@ -443,73 +443,77 @@
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 			</control>
 		</control>
-		<control type="group">
-			<left>1210</left>
-			<top>987</top>
-			<width>735</width>
+		<control type="grouplist">
+			<left>1230</left>
+			<top>990</top>
+			<width>615</width>
 			<height>90</height>
+			<itemgap>25</itemgap>
+			<align>right</align>
+			<orientation>horizontal</orientation>
 			<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
 			<control type="image">
-				<left>32</left>
 				<include>MediaFlagVars</include>
 				<bordersize>5</bordersize>
 				<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 			<control type="image">
-				<left>192</left>
 				<include>MediaFlagVars</include>
 				<bordersize>5</bordersize>
 				<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 			</control>
 			<control type="image">
-				<left>352</left>
 				<include>MediaFlagVars</include>
 				<bordersize>5</bordersize>
 				<texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 			</control>
 			<control type="image">
-				<left>502</left>
 				<include>MediaFlagVars</include>
 				<bordersize>5</bordersize>
 				<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 			</control>
 		</control>
-		<control type="group">
+		<control type="grouplist">
 			<left>1570</left>
-			<top>987</top>
-			<width>300</width>
+			<top>990</top>
+			<width>295</width>
 			<height>90</height>
+			<itemgap>25</itemgap>
+			<align>right</align>
+			<orientation>horizontal</orientation>
 			<visible>Container.Content(tvshows)</visible>
-			<control type="image" id="800012">
-				<top>2</top>
-				<bordersize>10</bordersize>
-				<include>MediaFlagVars</include>
-				<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-			</control>
-			<control type="label">
-				<width>140</width>
-				<height>90</height>
-				<align>center</align>
-				<textcolor>grey</textcolor>
-				<label>$INFO[ListItem.Studio]</label>
-				<font>flag_font</font>
-				<wrapmultiline>true</wrapmultiline>
-				<visible>String.IsEmpty(Control.GetLabel(800012))</visible>
+			<control type="group">
+				<width>135</width>
+				<control type="image" id="800017">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+				</control>
+				<control type="label">
+					<width>135</width>
+					<height>80</height>
+					<align>center</align>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.Studio]</label>
+					<font>flag_font</font>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.IsEmpty(Control.GetLabel(800017))</visible>
+				</control>
 			</control>
 			<control type="image">
-				<left>150</left>
-				<bordersize>5</bordersize>
 				<include>MediaFlagVars</include>
+				<bordersize>5</bordersize>
 				<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 			</control>
 		</control>
 		<control type="grouplist">
-			<top>987</top>
-			<width>1840</width>
+			<left>1535</left>
+			<top>985</top>
+			<width>310</width>
 			<height>90</height>
 			<align>right</align>
 			<itemgap>25</itemgap>
@@ -518,7 +522,6 @@
 			<visible>Container.Content(albums) | Container.Content(songs)</visible>
 			<control type="image">
 				<width>150</width>
-				<height>90</height>
 				<include>MediaFlagVars</include>
 				<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 			</control>
@@ -532,11 +535,11 @@
 				<align>center</align>
 				<textoffsety>-3</textoffsety>
 				<label>$INFO[ListItem.Year]</label>
-				<visible>Container.Content(albums)</visible>
+				<visible>Container.Content(albums) + !String.IsEmpty(ListItem.Year)</visible>
 			</control>
 			<control type="image">
-				<bordersize>5</bordersize>
 				<include>MediaFlagVars</include>
+				<bordersize>5</bordersize>
 				<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
 				<visible>Container.Content(songs)</visible>
 			</control>

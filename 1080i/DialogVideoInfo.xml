@@ -37,7 +37,6 @@
 				<height>90</height>
 				<align>left</align>
 				<font>font35_title_bold</font>
-				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Title]</label>
 			</control>
@@ -107,7 +106,7 @@
 					</item>
 					<item>
 						<label>$INFO[Window(Home).Property(NextAired.Status),$LOCALIZE[126]: [COLOR grey],[/COLOR]]</label>
-						<visible>[String.IsEqual(ListItem.DBType,tvshow) + String.IsEmpty(ListItem.Status)] + !IsEmpty(Window(Home).Property(NextAired.Status))</visible>
+						<visible>String.IsEqual(ListItem.DBType,tvshow) + String.IsEmpty(ListItem.Status) + !String.IsEmpty(Window(Home).Property(NextAired.Status))</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Season,$LOCALIZE[20373]: [COLOR grey],[/COLOR]]$INFO[ListItem.Episode,  $LOCALIZE[20359]: [COLOR grey],[/COLOR]]</label>
@@ -143,9 +142,14 @@
 						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</item>
 					<item>
+						<label>$VAR[Premiered.First.Label]$INFO[ListItem.Premiered, [COLOR grey],[/COLOR]]</label>
+						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
+					</item>
+					<item>
 						<label>$INFO[ListItem.Duration,$LOCALIZE[2050]: [COLOR grey],[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</item>
+					
 					<item>
 						<label>$INFO[ListItem.Rating,$LOCALIZE[563]: [COLOR grey],[/COLOR]]$INFO[ListItem.Votes,[COLOR grey] (, $LOCALIZE[205])[/COLOR]]$INFO[ListItem.Top250,[COLOR grey] / $LOCALIZE[13409] #,[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
@@ -153,10 +157,6 @@
 					<item>
 						<label>$VAR[UserRating,$LOCALIZE[38018]: [COLOR grey],[/COLOR]]</label>
 						<onclick>SendClick(2003,7)</onclick>
-					</item>
-					<item>
-						<label>$VAR[Premiered.First.Label]$INFO[ListItem.Premiered, [COLOR grey],[/COLOR]]</label>
-						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 					</item>
 					<item>
 						<label>$INFO[Window(Home).Property(NextAired.Country),$LOCALIZE[574]: [COLOR grey],[/COLOR]]</label>
@@ -453,7 +453,7 @@
 				<left>1181</left>
 				<top>560</top>
 				<width>10</width>
-				<height>418</height>
+				<height>400</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
@@ -466,7 +466,7 @@
 				<left>1181</left>
 				<top>560</top>
 				<width>10</width>
-				<height>418</height>
+				<height>400</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
@@ -476,13 +476,12 @@
 				<visible>Control.IsVisible(401)</visible>
 			</control>
 			<control type="group">
-				<top>995</top>
+				<top>980</top>
 				<control type="grouplist">
 					<left>38</left>
 					<width>1190</width>
 					<height>90</height>
 					<align>left</align>
-					<aligny>center</aligny>
 					<itemgap>25</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="group">
@@ -499,7 +498,7 @@
 						<control type="label">
 							<top>50</top>
 							<width>135</width>
-							<height>30</height>
+							<height>25</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
 							<font>flag_font</font>
@@ -520,7 +519,7 @@
 						<control type="label">
 							<top>50</top>
 							<width>135</width>
-							<height>30</height>
+							<height>25</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
 							<font>flag_font</font>
@@ -541,7 +540,7 @@
 						<control type="label">
 							<top>50</top>
 							<width>135</width>
-							<height>30</height>
+							<height>25</height>
 							<align>center</align>
 							<label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
 							<font>flag_font</font>
@@ -588,34 +587,32 @@
 				</control>
 			</control>
 			<control type="group">
-				<top>995</top>
+				<top>985</top>
 				<control type="grouplist">
-					<width>1190</width>
+					<width>1170</width>
 					<height>90</height>
 					<align>right</align>
-					<aligny>center</aligny>
-					<itemgap>25</itemgap>
+					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
-					<control type="image" id="800011">
-						<width>123</width>
+					<control type="image" id="800019">
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
 						<width>130</width>
-						<height>90</height>
+						<height>80</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Studio]</label>
 						<font>flag_font</font>
 						<textcolor>grey</textcolor>
 						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(800019))</visible>
 					</control>
 					<control type="image">
-						<height>80</height>
 						<include>MediaFlagVars</include>
-						<texture fallback="flags/mpaa/NR.png" colordiffuse="grey">$VAR[RatingFlagVar]</texture>
+						<bordersize>5</bordersize>
+						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 					</control>
 				</control>
 			</control>

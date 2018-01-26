@@ -63,7 +63,7 @@
 	<variable name="TopbarRightVar">
 		<value condition="Window.IsActive(1133)">$INFO[Container(51).NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Location)]</value>
-		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[137] ","[COLOR grey3]  |  [/COLOR]]$INFO[Container.NumItems,, $LOCALIZE[31025]]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[137]: ","[COLOR grey3]  |  [/COLOR]]$INFO[Container.NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),, $LOCALIZE[33006]]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3]  |  [/COLOR], $LOCALIZE[20161]]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(20)">$INFO[Container(20).NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(21)">$INFO[Container(21).NumItems,, $LOCALIZE[31025]]</value>
@@ -642,7 +642,8 @@
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 	</variable>
 	<variable name="FanartListInfoVar">
-		<value condition="Container.Content(movies)">$INFO[ListItem.Year,$LOCALIZE[345]: [COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[31030]: [COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(movies) + String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Year,$LOCALIZE[345]: [COLOR grey],[/COLOR]]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</value>
 	</variable>

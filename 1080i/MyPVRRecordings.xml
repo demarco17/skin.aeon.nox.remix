@@ -197,25 +197,27 @@
 						<textcolor>grey</textcolor>
 						<pagecontrol>74</pagecontrol>
 					</control>
-					<control type="group">
-						<top>930</top>
-						<left>23</left>
+					<control type="grouplist">
+						<left>32</left>
+						<top>940</top>
+						<width>504</width>
+						<height>90</height>
+						<itemgap>25</itemgap>
+						<align>center</align>
+						<orientation>horizontal</orientation>
 						<control type="image">
-							<left>32</left>
 							<include>MediaFlagVars</include>
 							<bordersize>5</bordersize>
 							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image">
-							<left>199</left>
 							<include>MediaFlagVars</include>
 							<bordersize>5</bordersize>
 							<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
 							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image">
-							<left>359</left>
 							<include>MediaFlagVars</include>
 							<bordersize>5</bordersize>
 							<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>

@@ -45,17 +45,24 @@
 						<visible>!String.IsEmpty(ListItem.Genre) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
 					<control type="group">
+						<width>448</width>
 						<control type="button">
 							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
-							<width>224</width>
+							<width>448</width>
 							<include>ShowCaseInfoPanelButtonsValues</include>
-							<visible>!String.IsEmpty(ListItem.Duration)</visible>
+							<visible>[Container.Content(movies) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Duration)</visible>
 						</control>
 						<control type="button">
 							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
 							<left>224</left>
 							<width>224</width>
-							<include>ShowCaseInfoPanelButtonsValues</include>
+							<height>90</height>
+							<textoffsetx>15</textoffsetx>
+							<aligny>top</aligny>
+							<font>font14</font>
+							<textcolor>grey</textcolor>
+							<texturefocus />
+							<texturenofocus />
 							<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Year)</visible>
 						</control>
 					</control>
@@ -188,7 +195,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
@@ -234,7 +241,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -274,7 +281,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -301,7 +308,7 @@
 							<left>694</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textcolor>grey2</textcolor>
@@ -332,7 +339,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -358,7 +365,7 @@
 							<left>694</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textoffsetx>18</textoffsetx>
@@ -383,7 +390,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -429,7 +436,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -469,7 +476,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
@@ -496,7 +503,7 @@
 							<left>694</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textcolor>grey2</textcolor>
@@ -527,7 +534,7 @@
 							<left>120</left>
 							<width>590</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 						</control>
@@ -553,7 +560,7 @@
 							<left>694</left>
 							<width>100</width>
 							<height>68</height>
-							<font>font12_title</font>
+							<font>flag_font</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
 							<textoffsetx>18</textoffsetx>
@@ -751,7 +758,7 @@
 					<pagecontrol>5560</pagecontrol>
 					<movement>7</movement>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
-					<itemlayout height="70" width="806" condition="Container.Content(albums)">
+					<itemlayout height="70" width="806" condition="Container.Content(albums) | Container.Content(artists)">
 						<control type="image">
 							<width>776</width>
 							<height>70</height>
@@ -766,7 +773,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="70" width="806" condition="Container.Content(albums)">
+					<focusedlayout height="70" width="806" condition="Container.Content(albums) | Container.Content(artists)">
 						<control type="image">
 							<width>776</width>
 							<height>70</height>
@@ -786,7 +793,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</focusedlayout>
-					<itemlayout height="70" width="806" condition="!Container.Content(albums)">
+					<itemlayout height="70" width="806" condition="Container.Content(songs)">
 						<control type="image">
 							<width>776</width>
 							<height>70</height>
@@ -804,13 +811,13 @@
 							<left>80</left>
 							<width>680</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="70" width="806" condition="!Container.Content(albums)">
+					<focusedlayout height="70" width="806" condition="Container.Content(songs)">
 						<control type="image">
 							<width>776</width>
 							<height>70</height>
@@ -833,7 +840,7 @@
 							<left>80</left>
 							<width>680</width>
 							<height>66</height>
-							<font>font15</font>
+							<font>font13</font>
 							<align>right</align>
 							<label>$INFO[ListItem.label2]</label>
 						</control>

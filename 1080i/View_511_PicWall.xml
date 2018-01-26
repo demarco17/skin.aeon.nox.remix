@@ -61,39 +61,36 @@
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 			</control>
 			<control type="group">
-				<include>ViewFadeAnimation</include>
-				<control type="group">
-					<left>90</left>
-					<top>980</top>
-					<control type="label">
-						<width>1150</width>
-						<height>42</height>
-						<align>left</align>
-						<font>font16_title_bold</font>
-						<scroll>true</scroll>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-					<control type="label">
-						<top>45</top>
-						<width>1100</width>
-						<height>30</height>
-						<align>left</align>
-						<textcolor>grey3</textcolor>
-						<font>font13_title</font>
-						<label>$INFO[ListItem.PictureResolution]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-					<control type="label">
-						<left>1512</left>
-						<width>198</width>
-						<height>42</height>
-						<align>right</align>
-						<font>font16_title_bold</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
+				<left>90</left>
+				<top>980</top>
+				<control type="label">
+					<width>1150</width>
+					<height>42</height>
+					<align>left</align>
+					<font>font16_title_bold</font>
+					<scroll>true</scroll>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<textoffsetx>30</textoffsetx>
+				</control>
+				<control type="label">
+					<top>45</top>
+					<width>1100</width>
+					<height>30</height>
+					<align>left</align>
+					<textcolor>grey3</textcolor>
+					<font>font13_title</font>
+					<label>$INFO[ListItem.PictureResolution]</label>
+					<textoffsetx>30</textoffsetx>
+				</control>
+				<control type="label">
+					<left>1512</left>
+					<width>198</width>
+					<height>42</height>
+					<align>right</align>
+					<font>font16_title_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
 				</control>
 			</control>
 		</control>
