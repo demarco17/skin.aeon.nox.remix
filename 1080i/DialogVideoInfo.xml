@@ -476,7 +476,7 @@
 				<visible>Control.IsVisible(401)</visible>
 			</control>
 			<control type="group">
-				<top>980</top>
+				<top>990</top>
 				<control type="grouplist">
 					<left>38</left>
 					<width>1190</width>
@@ -589,11 +589,12 @@
 			<control type="group">
 				<top>985</top>
 				<control type="grouplist">
-					<width>1170</width>
+					<width>1172</width>
 					<height>90</height>
 					<align>right</align>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
 					<control type="image" id="800019">
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>

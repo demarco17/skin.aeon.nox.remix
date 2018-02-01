@@ -52,36 +52,30 @@
 				<visible>!ListItem.IsCollection</visible>
 				<control type="button">
 					<width>650</width>
-					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
+					<label>$VAR[LowListInfoVar]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!Container.Content(episodes) + !String.IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="group">
-					<visible>Container.Content(episodes)</visible>
-					<control type="button">
-						<width>650</width>
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
-						<include>ShowCaseInfoPanelButtonsValues</include>
-						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
+					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+					<left>500</left>
+					<width>135</width>
+					<control type="image" id="800027">
+						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
+						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
-					<control type="group">
-						<left>500</left>
+					<control type="label">
+						<left>-10</left>
+						<top>15</top>
 						<width>135</width>
-						<control type="image" id="800027">
-							<include>MediaFlagVars</include>
-							<bordersize>5</bordersize>
-							<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-						</control>
-						<control type="label">
-							<width>135</width>
-							<height>80</height>
-							<align>center</align>
-							<textcolor>grey</textcolor>
-							<label>$INFO[ListItem.Studio]</label>
-							<font>flag_font</font>
-							<wrapmultiline>true</wrapmultiline>
-							<visible>String.IsEmpty(Control.GetLabel(800027))</visible>
-						</control>
+						<height>55</height>
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Studio]</label>
+						<font>flag_font</font>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>String.IsEmpty(Control.GetLabel(800027))</visible>
 					</control>
 				</control>
 				<control type="textbox">
@@ -98,7 +92,7 @@
 					<left>640</left>
 					<top>89</top>
 					<width>10</width>
-					<height>237</height>
+					<height>228</height>
 					<onleft>501</onleft>
 					<onright>501</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
@@ -264,8 +258,10 @@
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
+						<left>-10</left>
+						<top>15</top>
 						<width>135</width>
-						<height>80</height>
+						<height>55</height>
 						<align>center</align>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Studio]</label>
@@ -508,7 +504,7 @@
 						<align>right</align>
 						<textoffsetx>70</textoffsetx>
 						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Premiered]</label>
+						<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 					</control>
 					<control type="image">
 						<left>860</left>
@@ -553,7 +549,7 @@
 						<font>font13</font>
 						<textoffsetx>70</textoffsetx>
 						<align>right</align>
-						<label>$INFO[ListItem.Premiered]</label>
+						<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 					</control>
 					<control type="image">
 						<left>860</left>
@@ -743,6 +739,29 @@
 				<height>427</height>
 				<texture border="1">dialogs/separator3.png</texture>
 			</control>
+			<control type="group">
+				<visible>Container.Content(albums) | Container.Content(songs)</visible>
+				<left>1785</left>
+				<top>652</top>
+				<width>650</width>
+				<control type="image" id="800028">
+					<include>MediaFlagVars</include>
+					<bordersize>15</bordersize>
+					<texture>resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>
+				</control>
+				<control type="label">
+					<left>-10</left>
+					<top>15</top>
+					<width>135</width>
+					<height>55</height>
+					<align>center</align>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.Property(Album_Label)]</label>
+					<font>flag_font</font>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>String.IsEmpty(Control.GetLabel(800028))</visible>
+				</control>
+			</control>
 			<control type="grouplist">
 				<left>1270</left>
 				<top>652</top>
@@ -751,19 +770,19 @@
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="button">
 					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[557]:[/COLOR][CR]$INFO[ListItem.Artist]</label>
-					<width>650</width>
+					<width>540</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Artist) + !Container.Content(artists)</visible>
 				</control>
 				<control type="button">
 					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Property(Artist_Genre)]</label>
-					<width>650</width>
+					<width>540</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Property(Artist_Genre)) + Container.Content(artists)</visible>
 				</control>
 				<control type="button">
 					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[558]:[/COLOR][CR]$INFO[ListItem.Album]$INFO[ListItem.DiscNumber, - $LOCALIZE[427]: ,]</label>
-					<width>650</width>
+					<width>540</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Duration) + Container.Content(songs)</visible>
 				</control>

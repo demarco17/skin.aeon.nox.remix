@@ -16,31 +16,54 @@
 					<texture border="18">dialogs/dialog-bg3.png</texture>
 				</control>
 				<control type="group">
-					<left>13</left>
-					<top>450</top>
+					<top>452</top>
 					<control type="group">
 						<visible>!ListItem.IsCollection</visible>
-						<control type="label">
-							<height>50</height>
-							<width>660</width>
-							<font>font14</font>
-							<textcolor>$VAR[SkinThemeColour]</textcolor>
+						<control type="button">
+							<width>688</width>
 							<label>$VAR[FanartListInfoVar]</label>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<textoffsetx>15</textoffsetx>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+						</control>
+						<control type="group">
+							<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+							<left>545</left>
+							<width>135</width>
+							<control type="image" id="800028">
+								<top>-5</top>
+								<include>MediaFlagVars</include>
+								<bordersize>5</bordersize>
+								<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+							</control>
+							<control type="label">
+								<left>-10</left>
+								<top>15</top>
+								<width>135</width>
+								<height>55</height>
+								<align>center</align>
+								<textcolor>grey</textcolor>
+								<label>$INFO[ListItem.Studio]</label>
+								<font>flag_font</font>
+								<wrapmultiline>true</wrapmultiline>
+								<visible>String.IsEmpty(Control.GetLabel(800028))</visible>
+							</control>
 						</control>
 						<control type="textbox">
-							<label>$VAR[VideoPlotVar]</label>
-							<top>50</top>
+							<left>15</left>
+							<top>90</top>
 							<width>660</width>
-							<height>215</height>
+							<height>175</height>
+							<label>$VAR[VideoPlotVar]</label>
 							<font>font14_textbox</font>
 							<pagecontrol>50762</pagecontrol>
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
 						</control>
 						<control type="scrollbar" id="50762">
-							<left>677</left>
-							<top>50</top>
+							<left>691</left>
+							<top>90</top>
 							<width>10</width>
-							<height>215</height>
+							<height>180</height>
 							<onleft>507</onleft>
 							<onright>507</onright>
 							<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
@@ -51,7 +74,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<left>13</left>
+					<left>15</left>
 					<top>450</top>
 					<visible>!Container.Content(episodes) + ListItem.IsCollection</visible>
 					<control type="group">
@@ -560,7 +583,7 @@
 							<font>font13</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
-							<label>$INFO[ListItem.Premiered]</label>
+							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 						</control>
 						<control type="image">
 							<left>992</left>
@@ -617,7 +640,7 @@
 							<height>66</height>
 							<font>font13</font>
 							<align>right</align>
-							<label>$INFO[ListItem.Premiered]</label>
+							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 						</control>
 						<control type="image">
 							<left>992</left>

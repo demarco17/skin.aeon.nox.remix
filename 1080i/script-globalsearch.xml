@@ -308,7 +308,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
+				<itemlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(directors) | Container.Content(livetv)">
 					<control type="image">
 						<width>329</width>
 						<height>329</height>
@@ -335,7 +335,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
+				<focusedlayout width="329" height="329" condition="Container.Content(songs) | Container.Content(directors) | Container.Content(livetv)">
 					<control type="group">
 						<include>IconZoomAnimation</include>
 						<control type="image">
@@ -356,6 +356,62 @@
 						<control type="label">
 							<top>287</top>
 							<width>329</width>
+							<height>37</height>
+							<font>font12</font>
+							<align>center</align>
+							<textoffsetx>10</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout width="219" height="329" condition="Container.Content(actors)">
+					<control type="image">
+						<width>219</width>
+						<height>329</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="image">
+						<top>289</top>
+						<width>219</width>
+						<height>40</height>
+						<texture colordiffuse="grey">dialogs/black.png</texture>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="label">
+						<top>287</top>
+						<width>219</width>
+						<height>40</height>
+						<font>font12</font>
+						<align>center</align>
+						<textoffsetx>10</textoffsetx>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="219" height="329" condition="Container.Content(actors)">
+					<control type="group">
+						<include>IconZoomAnimation</include>
+						<control type="image">
+							<width>219</width>
+							<height>329</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>289</top>
+							<width>209</width>
+							<height>37</height>
+							<texture colordiffuse="grey">dialogs/black.png</texture>
+						</control>
+						<control type="label">
+							<top>287</top>
+							<width>219</width>
 							<height>37</height>
 							<font>font12</font>
 							<align>center</align>

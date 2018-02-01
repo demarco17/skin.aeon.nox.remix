@@ -146,7 +146,16 @@
 				<top>220</top>
 				<width>1652</width>
 				<height>38</height>
+				<info>PVR.EpgEventProgress</info>
+				<visible>VideoPlayer.HasEpg</visible>
+			</control>
+			<control type="progress">
+				<left>253</left>
+				<top>220</top>
+				<width>1652</width>
+				<height>38</height>
 				<info>Player.Progress</info>
+				<visible>!VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="label">
 				<left>253</left>
@@ -154,7 +163,7 @@
 				<width>300</width>
 				<height>35</height>
 				<textoffsetx>10</textoffsetx>
-				<label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ,]</label>
+				<label>$VAR[SeekTimeLabelVar]</label>
 			</control>
 			<control type="label">
 				<left>253</left>
@@ -172,6 +181,17 @@
 				<align>right</align>
 				<textoffsetx>10</textoffsetx>
 				<label>$INFO[Player.FinishTime,$LOCALIZE[31013]: ,]</label>
+				<visible>!VideoPlayer.HasEpg</visible>
+			</control>
+			<control type="label">
+				<left>253</left>
+				<top>220</top>
+				<width>1652</width>
+				<height>35</height>
+				<align>right</align>
+				<textoffsetx>10</textoffsetx>
+				<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</label>
+				<visible>VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="scrollbar" id="62">
 				<left>1910</left>

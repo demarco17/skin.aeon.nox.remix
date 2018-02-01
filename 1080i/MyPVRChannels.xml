@@ -12,9 +12,8 @@
 		<control type="group">
 			<description>Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
-			<include>VisibleFadeAnimation</include>
-			<top>110</top>
 			<include>OpenCloseAnimation</include>
+			<top>110</top>
 			<control type="image">
 				<left>66</left>
 				<top>16</top>

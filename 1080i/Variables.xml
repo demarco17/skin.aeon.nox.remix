@@ -420,15 +420,19 @@
 	<variable name="GlobalSearchLabel2Var">
 		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.TvShowTitle]</value>
-		<value condition="Container.Content(livetv)">$INFO[ListItem.Property(ChannelName)]</value>
+		<value condition="Container.Content(livetv)">$INFO[ListItem.Property(ChannelName)]$INFO[ListItem.Property(Starttime), (,)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[ListItem.Label2,$LOCALIZE[31025]: ,]</value>
 	</variable>
 	<variable name="SeekLabelVar">
-		<value condition="Player.Paused">$INFO[System.Time]$INFO[player.FinishTime, [,]]</value>
+		<value condition="Player.Paused">$INFO[System.Time]</value>
 		<value condition="Player.Seeking">$INFO[Player.SeekStepSize]</value>
 		<value condition="Player.DisplayAfterSeek">$INFO[Player.SeekOffset]</value>
+	</variable>
+	<variable name="SeekTimeLabelVar">
+		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ,]</value>
+		<value>$INFO[Player.Time]$INFO[Player.Duration, / ]</value>
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
 		<value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
@@ -643,10 +647,16 @@
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 	</variable>
 	<variable name="FanartListInfoVar">
-		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[31030]: [COLOR grey],[/COLOR]]</value>
-		<value condition="Container.Content(movies) + String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Year,$LOCALIZE[345]: [COLOR grey],[/COLOR]]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[31030]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(movies) + String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Year,$LOCALIZE[345]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Genre,$LOCALIZE[515]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416]:[CR][COLOR grey],[/COLOR]]</value>
+	</variable>
+	<variable name="LowListInfoVar">
+		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[31030]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Year,$LOCALIZE[345]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Genre,$LOCALIZE[515]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416]:[CR][COLOR grey],[/COLOR]]</value>
 	</variable>
 	<variable name="ShiftCase_Var">
 		<value condition="ListItem.IsStereoscopic + !ListItem.IsParentFolder">3d.png</value>

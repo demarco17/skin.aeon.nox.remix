@@ -73,17 +73,17 @@
 						<label>$VAR[VideoPlotVar]</label>
 						<left>15</left>
 						<top>370</top>
-						<width>418</width>
-						<height>387</height>
+						<width>420</width>
+						<height>385</height>
 						<font>font14_textbox</font>
 						<pagecontrol>5562</pagecontrol>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
 					<control type="scrollbar" id="5562">
 						<left>450</left>
-						<top>370</top>
+						<top>360</top>
 						<width>10</width>
-						<height>402</height>
+						<height>420</height>
 						<onleft>55</onleft>
 						<onright>55</onright>
 						<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
