@@ -19,14 +19,13 @@
 					<texture flipy="true">home/submenu_bar.png</texture>
 				</control>
 				<control type="label">
+					<left>15</left>
 					<top>46</top>
-					<width>960</width>
+					<width>1020</width>
 					<height>40</height>
 					<label>$VAR[LibraryStatsVar]</label>
-					<textoffsetx>15</textoffsetx>
 					<font>font13_title</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
-					<scroll>true</scroll>
 				</control>
 				<control type="grouplist" id="9020">
 					<top>46</top>

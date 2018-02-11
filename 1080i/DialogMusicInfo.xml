@@ -86,7 +86,6 @@
 				<height>90</height>
 				<align>left</align>
 				<font>font35_title_bold</font>
-				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Title]</label>
 				<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
@@ -97,7 +96,6 @@
 				<height>90</height>
 				<align>left</align>
 				<font>font35_title_bold</font>
-				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Artist]</label>
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>

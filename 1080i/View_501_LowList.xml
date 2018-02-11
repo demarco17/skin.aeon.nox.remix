@@ -58,7 +58,7 @@
 				</control>
 				<control type="group">
 					<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
-					<left>500</left>
+					<left>505</left>
 					<width>135</width>
 					<control type="image" id="800027">
 						<include>MediaFlagVars</include>
@@ -66,7 +66,6 @@
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
-						<left>-10</left>
 						<top>15</top>
 						<width>135</width>
 						<height>55</height>
@@ -258,7 +257,6 @@
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
-						<left>-10</left>
 						<top>15</top>
 						<width>135</width>
 						<height>55</height>
@@ -750,7 +748,6 @@
 					<texture>resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>
 				</control>
 				<control type="label">
-					<left>-10</left>
 					<top>15</top>
 					<width>135</width>
 					<height>55</height>

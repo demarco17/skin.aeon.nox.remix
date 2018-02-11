@@ -225,6 +225,8 @@
 							<height>248</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeVar]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]" diffuse="thumbs/thumb_diffuse.png">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
 						</control>
 					</control>
 				</focusedlayout>

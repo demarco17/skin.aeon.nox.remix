@@ -126,8 +126,9 @@
 							<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 						</control>
 						<control type="label">
-							<width>140</width>
-							<height>80</height>
+							<top>20</top>
+							<width>135</width>
+							<height>55</height>
 							<align>center</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Studio]</label>
@@ -137,7 +138,7 @@
 						</control>
 					</control>
 					<control type="image">
-						<left>145</left>
+						<left>130</left>
 						<width>150</width>
 						<include>MediaFlagVars</include>
 						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
@@ -234,8 +235,9 @@
 							<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 						</control>
 						<control type="label">
+							<top>20</top>
 							<width>135</width>
-							<height>80</height>
+							<height>55</height>
 							<align>center</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Studio]</label>

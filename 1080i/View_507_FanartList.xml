@@ -27,8 +27,8 @@
 							<include>ShowCaseInfoPanelButtonsValues</include>
 						</control>
 						<control type="group">
-							<visible>Container.Content(movies) | Container.Content(episodes)</visible>
-							<left>545</left>
+							<visible>Container.Content(movies) | Container.Content(musicvideos) | Container.Content(episodes)</visible>
+							<left>550</left>
 							<width>135</width>
 							<control type="image" id="800028">
 								<top>-5</top>
@@ -37,7 +37,6 @@
 								<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 							</control>
 							<control type="label">
-								<left>-10</left>
 								<top>15</top>
 								<width>135</width>
 								<height>55</height>
@@ -213,8 +212,9 @@
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
+						<top>15</top>
 						<width>135</width>
-						<height>80</height>
+						<height>55</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Studio]</label>
 						<textcolor>grey</textcolor>
@@ -252,7 +252,7 @@
 				</control>
 				<control type="image">
 					<top>-16</top>
-					<width>40</width>
+					<width>30</width>
 					<height>798</height>
 					<texture border="1">dialogs/side_shadow.png</texture>
 				</control>
@@ -278,7 +278,7 @@
 					<viewtype label="31082">list</viewtype>
 					<pagecontrol>50760</pagecontrol>
 					<movement>11</movement>
-					<visible>[Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
+					<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<itemlayout height="70" width="1056" condition="Container.Content(movies)">
 						<control type="image">

@@ -172,7 +172,7 @@
 					<font />
 					<usealttexture>Playlist.IsRandom</usealttexture>
 					<onclick>PlayerControl(Random)</onclick>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<visible>![Pvr.IsPlayingRadio | MusicPartyMode.Enabled]</visible>
 				</control>
 				<control type="button" id="707">
 					<width>0.1</width>
@@ -182,13 +182,13 @@
 					<label />
 					<font />
 					<onclick>PlayerControl(Repeat)</onclick>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<visible>![Pvr.IsPlayingRadio | MusicPartyMode.Enabled]</visible>
 				</control>
 				<control type="image" id="708">
 					<texture colordiffuse="$VAR[RepeatButtonColordiffuseVar]">$VAR[OSDRepeatButtonVar]</texture>
 					<width>100</width>
 					<height>100</height>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<visible>![Pvr.IsPlayingRadio | MusicPartyMode.Enabled]</visible>
 				</control>
 				<control type="button" id="709">
 					<texturefocus>osd/buttons/OSDRating.png</texturefocus>

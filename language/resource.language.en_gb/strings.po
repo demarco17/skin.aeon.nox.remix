@@ -423,10 +423,14 @@ msgstr ""
 #empty strings from id 31304 to 31308
 
 msgctxt "#31309"
-msgid "Memory Used:"
+msgid "Memory used:"
 msgstr ""
 
-#empty strings from id 31310 to 31315
+msgctxt "#31310"
+msgid "CPU usage:"
+msgstr ""
+
+#empty strings from id 31311 to 31315
 
 msgctxt "#31316"
 msgid "Select Icons"

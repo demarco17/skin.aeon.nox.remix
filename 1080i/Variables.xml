@@ -81,7 +81,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),5)">$INFO[Window(Weather).Property(Location),[COLOR grey],:[/COLOR] ]$INFO[Weather.Conditions]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),6)">$INFO[Window(Home).Property(SkinHelper.TotalAddons),[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]: [/COLOR],]$INFO[Window(Home).Property(SkinHelper.TotalFavourites),[COLOR grey3]  |  [/COLOR][COLOR grey]$LOCALIZE[1036]: [/COLOR],]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),7)">$INFO[Window(Home).Property(MusicVideos.Count),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.Watched),[COLOR grey][COLOR grey3]  |  [/COLOR]$LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.UnWatched),[COLOR grey][COLOR grey3]  |  [/COLOR]$LOCALIZE[16101]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),8)">$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309][/COLOR] ]$INFO[System.CPUUsage,[COLOR grey][COLOR grey3]  |  [/COLOR]$LOCALIZE[13271][/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),8)">$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309][/COLOR] ]$INFO[System.CPUUsage,[COLOR grey][COLOR grey3]  |  [/COLOR]$LOCALIZE[31310][/COLOR] ]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),9)">$INFO[System.Uptime,[COLOR grey]$LOCALIZE[12390]:[/COLOR] ]</value>
 	</variable>
 	<variable name="OSDRepeatButtonVar">
@@ -647,8 +647,8 @@
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 	</variable>
 	<variable name="FanartListInfoVar">
-		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[31030]:[CR][COLOR grey],[/COLOR]]</value>
-		<value condition="Container.Content(movies) + String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Year,$LOCALIZE[345]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[31030]:[CR][COLOR grey],[/COLOR]]</value>
+		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Year,$LOCALIZE[345]:[CR][COLOR grey],[/COLOR]]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Genre,$LOCALIZE[515]:[CR][COLOR grey],[/COLOR]]</value>
 		<value condition="Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416]:[CR][COLOR grey],[/COLOR]]</value>
 	</variable>

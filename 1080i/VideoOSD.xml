@@ -217,7 +217,7 @@
 					<label />
 					<font />
 					<onclick>StereoMode</onclick>
-					<visible>VideoPlayer.IsStereoscopic</visible>
+					<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.IsStereoscopic</visible>
 				</control>
 				<control type="button" id="707">
 					<texturefocus>osd/buttons/OSDAudioProfiles.png</texturefocus>

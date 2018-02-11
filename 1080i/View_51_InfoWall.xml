@@ -293,8 +293,9 @@
 						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="label">
+						<top>15</top>
 						<width>135</width>
-						<height>80</height>
+						<height>55</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Studio]</label>
 						<font>flag_font</font>
