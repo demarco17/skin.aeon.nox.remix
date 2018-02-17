@@ -36,7 +36,6 @@
 				<height>90</height>
 				<align>left</align>
 				<font>font35_title_bold</font>
-				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
 				<label>$INFO[Window.Property(label)]</label>
 			</control>

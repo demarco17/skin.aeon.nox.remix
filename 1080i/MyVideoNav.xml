@@ -226,7 +226,7 @@
 					<itemgap>25</itemgap>
 					<align>right</align>
 					<orientation>horizontal</orientation>
-					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !ListItem.IsParentFolder</visible>
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
 					<control type="group">
 						<width>135</width>
 						<control type="image" id="800012">

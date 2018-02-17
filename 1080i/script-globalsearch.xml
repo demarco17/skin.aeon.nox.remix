@@ -426,7 +426,7 @@
 				<top>127</top>
 				<control type="label">
 					<top>680</top>
-					<width>1316</width>
+					<width>1200</width>
 					<height>40</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>font15_bold</font>
@@ -439,7 +439,7 @@
 					<align>right</align>
 					<label>$VAR[GlobalSearchLabel2Var]</label>
 					<font>font14</font>
-					<textcolor>grey2</textcolor>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 				</control>
 				<control type="textbox">
