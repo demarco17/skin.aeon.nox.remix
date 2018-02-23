@@ -53,7 +53,7 @@
 				<width>120</width>
 				<height>90</height>
 				<texture colordiffuse="grey">flags/moviedb.png</texture>
-				<bordersize>5</bordersize>
+				<bordersize>15</bordersize>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="image">

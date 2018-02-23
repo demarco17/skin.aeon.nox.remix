@@ -45,13 +45,14 @@
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>
 			<control type="grouplist">
-				<left>10</left>
+				<left>15</left>
 				<height>70</height>
 				<itemgap>40</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="image">
-					<width>180</width>
+					<top>5</top>
+					<width>150</width>
 					<aspectratio>keep</aspectratio>
 					<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$VAR[VideoPlayerStarRating]</texture>
 				</control>

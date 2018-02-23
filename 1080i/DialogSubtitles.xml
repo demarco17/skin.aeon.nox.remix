@@ -34,23 +34,22 @@
 					<aspectratio>keep</aspectratio>
 				</control>
 			</control>
-			<control type="label" id="140">
+			<control type="label">
 				<left>40</left>
 				<top>640</top>
-				<width>350</width>
+				<width>1340</width>
 				<height>48</height>
-				<font>font15</font>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-			</control>
-			<control type="label">
-				<left>370</left>
-				<top>640</top>
-				<width>1325</width>
-				<height>48</height>
-				<align>right</align>
 				<font>font15</font>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$INFO[Player.Filename]</label>
+			</control>
+			<control type="label" id="140">
+				<left>40</left>
+				<top>640</top>
+				<width>1655</width>
+				<height>48</height>
+				<align>right</align>
+				<font>font14</font>
 			</control>
 			<control type="group" id="130">
 				<control type="grouplist">

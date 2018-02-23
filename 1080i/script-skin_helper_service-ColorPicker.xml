@@ -31,7 +31,6 @@
 				<onup>9001</onup>
 				<ondown>9001</ondown>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<preloaditems>2</preloaditems>
 				<itemlayout width="150" height="150">
 					<control type="image">
 						<width>150</width>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">602</defaultcontrol>
+	<onload>SetFocus(707)</onload>
 	<controls>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
@@ -17,18 +17,47 @@
 				<align>center</align>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
-				<control type="button" id="700">
-					<texturefocus>osd/buttons/OSDPlaylist.png</texturefocus>
-					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPlaylist.png</texturenofocus>
-					<width>100</width>
-					<height>100</height>
-					<onclick>Close</onclick>
+				<control type="button" id="500">
+					<texturefocus>osd/buttons/OSDViz.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDViz.png</texturenofocus>
 					<label />
 					<font />
-					<onclick>ActivateWindow(MusicPlaylist)</onclick>
-					<visible>!Pvr.IsPlayingRadio</visible>
+					<width>100</width>
+					<height>100</height>
 				</control>
-				<control type="togglebutton" id="701">
+				<control type="button" id="700">
+					<texturefocus>osd/buttons/OSDSettings.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDSettings.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+					<visible>Visualisation.Enabled</visible>
+				</control>
+				<control type="button" id="701">
+					<texturefocus>osd/buttons/OSDVideo.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDVideo.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+					<visible>Visualisation.Enabled + Visualisation.HasPresets</visible>
+				</control>
+				<control type="togglebutton" id="501">
+					<texturefocus>osd/buttons/OSDPresetUnlocked.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPresetUnlocked.png</texturenofocus>
+					<usealttexture>Visualisation.Locked</usealttexture>
+					<alttexturefocus>osd/buttons/OSDPresetLocked.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPresetLocked.png</alttexturenofocus>
+					<label />
+					<font />
+					<width>100</width>
+					<height>100</height>
+					<visible>Visualisation.Enabled + Visualisation.HasPresets</visible>
+				</control>
+				<control type="togglebutton" id="702">
 					<texturefocus>osd/buttons/OSDAudio.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDAudio.png</texturenofocus>
 					<usealttexture>system.getbool(audiooutput.dspaddonsenabled)</usealttexture>
@@ -40,35 +69,7 @@
 					<font />
 					<onclick>ActivateWindow(osdaudiosettings)</onclick>
 				</control>
-				<control type="button" id="500">
-					<texturefocus>osd/buttons/OSDViz.png</texturefocus>
-					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDViz.png</texturenofocus>
-					<label />
-					<font />
-					<width>100</width>
-					<height>100</height>
-				</control>
-				<control type="button" id="702">
-					<texturefocus>osd/buttons/OSDSettings.png</texturefocus>
-					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDSettings.png</texturenofocus>
-					<width>100</width>
-					<height>100</height>
-					<label />
-					<font />
-					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-					<visible>Visualisation.Enabled</visible>
-				</control>
-				<control type="button" id="705">
-					<texturefocus>osd/buttons/OSDVideo.png</texturefocus>
-					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDVideo.png</texturenofocus>
-					<width>100</width>
-					<height>100</height>
-					<label />
-					<font />
-					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
-					<visible>Visualisation.HasPresets</visible>
-				</control>
-				<control type="button" id="712">
+				<control type="button" id="703">
 					<texturefocus>osd/buttons/OSDChannelUP.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelUP.png</texturenofocus>
 					<label />
@@ -79,7 +80,7 @@
 					<onclick>PlayerControl(Previous)</onclick>
 					<visible>Pvr.IsPlayingRadio</visible>
 				</control>
-				<control type="button" id="713">
+				<control type="button" id="704">
 					<textoffsety>60</textoffsety>
 					<texturefocus>osd/buttons/OSDChannelDown.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelDown.png</texturenofocus>
@@ -91,7 +92,7 @@
 					<onclick>PlayerControl(Next)</onclick>
 					<visible>Pvr.IsPlayingRadio</visible>
 				</control>
-				<control type="button" id="600">
+				<control type="button" id="705">
 					<texturefocus>osd/buttons/OSDPrevTrack.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPrevTrack.png</texturenofocus>
 					<width>100</width>
@@ -100,7 +101,7 @@
 					<font />
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
-				<control type="button" id="601">
+				<control type="button" id="706">
 					<texturefocus>osd/buttons/OSDRewind.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRewind.png</texturenofocus>
 					<width>100</width>
@@ -109,7 +110,7 @@
 					<font />
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control>
-				<control type="togglebutton" id="602">
+				<control type="togglebutton" id="707">
 					<texturefocus>osd/buttons/OSDPause.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPause.png</texturenofocus>
 					<alttexturefocus>osd/buttons/OSDPlay.png</alttexturefocus>
@@ -121,7 +122,7 @@
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
-				<control type="button" id="603">
+				<control type="button" id="708">
 					<texturefocus>osd/buttons/OSDStop.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDStop.png</texturenofocus>
 					<width>100</width>
@@ -130,7 +131,7 @@
 					<font />
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
-				<control type="togglebutton" id="606">
+				<control type="togglebutton" id="709">
 					<texturefocus>osd/buttons/OSDRecordOff.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRecordOff.png</texturenofocus>
 					<alttexturefocus>osd/buttons/OSDRecordOn.png</alttexturefocus>
@@ -143,7 +144,7 @@
 					<usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
 					<visible>PVR.CanRecordPlayingChannel + Pvr.IsPlayingRadio</visible>
 				</control>
-				<control type="button" id="604">
+				<control type="button" id="710">
 					<texturefocus>osd/buttons/OSDForward.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDForward.png</texturenofocus>
 					<width>100</width>
@@ -152,7 +153,7 @@
 					<font />
 					<onclick>PlayerControl(Forward)</onclick>
 				</control>
-				<control type="button" id="605">
+				<control type="button" id="711">
 					<texturefocus>osd/buttons/OSDNextTrack.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDNextTrack.png</texturenofocus>
 					<width>100</width>
@@ -161,7 +162,7 @@
 					<font />
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
-				<control type="togglebutton" id="704">
+				<control type="togglebutton" id="712">
 					<texturefocus>osd/buttons/OSDRandomOff.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRandomOff.png</texturenofocus>
 					<alttexturefocus>osd/buttons/OSDRandomOn.png</alttexturefocus>
@@ -174,7 +175,7 @@
 					<onclick>PlayerControl(Random)</onclick>
 					<visible>![Pvr.IsPlayingRadio | MusicPartyMode.Enabled]</visible>
 				</control>
-				<control type="button" id="707">
+				<control type="button" id="800">
 					<width>0.1</width>
 					<height>0.1</height>
 					<texturefocus />
@@ -184,13 +185,13 @@
 					<onclick>PlayerControl(Repeat)</onclick>
 					<visible>![Pvr.IsPlayingRadio | MusicPartyMode.Enabled]</visible>
 				</control>
-				<control type="image" id="708">
+				<control type="image" id="714">
 					<texture colordiffuse="$VAR[RepeatButtonColordiffuseVar]">$VAR[OSDRepeatButtonVar]</texture>
 					<width>100</width>
 					<height>100</height>
 					<visible>![Pvr.IsPlayingRadio | MusicPartyMode.Enabled]</visible>
 				</control>
-				<control type="button" id="709">
+				<control type="button" id="715">
 					<texturefocus>osd/buttons/OSDRating.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDRating.png</texturenofocus>
 					<width>100</width>
@@ -200,7 +201,7 @@
 					<onclick>setrating</onclick>
 					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
-				<control type="button" id="710">
+				<control type="button" id="716">
 					<texturefocus>osd/buttons/OSDChannelList.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelList.png</texturenofocus>
 					<width>100</width>
@@ -210,7 +211,7 @@
 					<onclick>ActivateWindow(PVROSDChannels)</onclick>
 					<visible>Pvr.IsPlayingRadio</visible>
 				</control>
-				<control type="button" id="711">
+				<control type="button" id="717">
 					<texturefocus>osd/buttons/OSDChannelGuide.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDChannelGuide.png</texturenofocus>
 					<width>100</width>
@@ -220,7 +221,7 @@
 					<onclick>ActivateWindow(pvrchannelguide)</onclick>
 					<visible>Pvr.IsPlayingRadio</visible>
 				</control>
-				<control type="button" id="703">
+				<control type="button" id="718">
 					<texturefocus>osd/buttons/OSDLyrics.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDLyrics.png</texturenofocus>
 					<width>100</width>
@@ -230,6 +231,17 @@
 					<onclick>Close</onclick>
 					<onclick>RunScript(script.cu.lrclyrics)</onclick>
 					<visible>!Pvr.IsPlayingRadio + System.HasAddon(script.cu.lrclyrics)</visible>
+				</control>
+				<control type="button" id="719">
+					<texturefocus>osd/buttons/OSDPlaylist.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPlaylist.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<onclick>Close</onclick>
+					<label />
+					<font />
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<visible>!Pvr.IsPlayingRadio</visible>
 				</control>
 			</control>
 		</control>

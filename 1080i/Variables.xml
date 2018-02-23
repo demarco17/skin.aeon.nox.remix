@@ -90,7 +90,7 @@
 		<value>osd/buttons/OSDRepeat.png</value>
 	</variable>
 	<variable name="RepeatButtonColordiffuseVar">
-		<value condition="!Control.HasFocus(707)">88FFFFFF</value>
+		<value condition="!Control.HasFocus(800)">88FFFFFF</value>
 		<value>FFFFFFFF</value>
 	</variable>
 	<variable name="PVRChannelsOSD">
