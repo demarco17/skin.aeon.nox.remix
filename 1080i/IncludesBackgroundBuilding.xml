@@ -9,16 +9,21 @@
 		</control>
 		<control type="visualisation">
 			<include>FullscreenDimensions</include>
-			<visible>Player.HasAudio + !Skin.HasSetting(Disable.ShowBackgroundVis) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + ![Window.IsVisible(tvchannels) | Window.IsVisible(radiochannels)] + !SlideShow.IsActive</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(Disable.ShowBackgroundVis) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !SlideShow.IsActive</visible>
 		</control>
 		<control type="group">
-			<visible>Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo) + ![Window.IsVisible(tvchannels) | Window.IsVisible(radiochannels)] + !SlideShow.IsActive</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(Disable.ShowBackgroundVideo) + !SlideShow.IsActive</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>dialogs/black.png</texture>
 			</control>
 			<control type="videowindow">
 				<include>FullscreenDimensions</include>
+			</control>
+			<control type="image">
+				<visible>Control.IsVisible(508)</visible>
+				<include>FullscreenDimensions</include>
+				<texture>thumbs/video_diffuse.png</texture>
 			</control>
 		</control>
 		<control type="group">
