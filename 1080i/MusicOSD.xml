@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>SetFocus(707)</onload>
+	<onload condition="!Pvr.IsPlayingRadio">SetFocus(707)</onload>
+	<onload condition="Pvr.IsPlayingRadio">SetFocus(716)</onload>
 	<controls>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
