@@ -70,14 +70,12 @@
 					<align>center</align>
 					<itemgap>18</itemgap>
 					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
 					<control type="label">
 						<width>auto</width>
 						<height>42</height>
 						<align>center</align>
 						<font>font16_title_bold</font>
 						<textcolor>grey</textcolor>
-						<scroll>true</scroll>
 						<label>$VAR[FloorLabelVar]</label>
 					</control>
 					<control type="image">

@@ -65,11 +65,11 @@
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
+						<visible>ListItem.HasEpg</visible>
 						<left>5</left>
 						<top>102</top>
 						<width>112</width>
 						<height>8</height>
-						<visible>ListItem.HasEpg</visible>
 						<info>ListItem.Progress</info>
 					</control>
 					<control type="image">
@@ -125,11 +125,11 @@
 					</control>
 					<control type="progress">
 						<description>Progressbar</description>
+						<visible>ListItem.HasEpg</visible>
 						<left>5</left>
 						<top>102</top>
 						<width>112</width>
 						<height>8</height>
-						<visible>ListItem.HasEpg</visible>
 						<info>ListItem.Progress</info>
 					</control>
 					<control type="image">
@@ -150,7 +150,7 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="70">
-				<left>907</left>
+				<left>908</left>
 				<top>32</top>
 				<width>10</width>
 				<height>840</height>
@@ -161,7 +161,6 @@
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 			</control>
 			<control type="group">
-				<description>Small Media Window</description>
 				<left>985</left>
 				<control type="image">
 					<left>16</left>
@@ -170,35 +169,14 @@
 					<height>872</height>
 					<texture border="18">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="group">
-					<visible>!Player.HasVideo</visible>
-					<include>VisibleFadeAnimation</include>
-					<control type="image">
-						<left>33</left>
-						<top>32</top>
-						<width>821</width>
-						<height>461</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<bordersize>40</bordersize>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Player.HasVideo</visible>
-					<include>VisibleFadeAnimation</include>
-					<control type="image">
-						<left>33</left>
-						<top>32</top>
-						<width>821</width>
-						<height>461</height>
-						<texture>dialogs/black.png</texture>
-					</control>
-					<control type="videowindow">
-						<left>33</left>
-						<top>32</top>
-						<width>821</width>
-						<height>461</height>
-					</control>
+				<control type="image">
+					<left>33</left>
+					<top>32</top>
+					<width>821</width>
+					<height>461</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<bordersize>40</bordersize>
 				</control>
 				<control type="image">
 					<description>separator image</description>
@@ -213,47 +191,73 @@
 				<left>1017</left>
 				<top>494</top>
 				<control type="label">
-					<top>15</top>
+					<top>10</top>
 					<width>821</width>
 					<height>30</height>
-					<font>font15</font>
-					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<font>font15_title_bold</font>
 					<textoffsetx>15</textoffsetx>
-					<visible>!String.IsEmpty(Container(50).ListItem.Title)</visible>
-					<label>$INFO[Container(50).ListItem.StartTime]$INFO[Container(50).ListItem.EndTime, - ,: ]$INFO[Container(50).ListItem.Title,[COLOR grey],[/COLOR]]</label>
+					<label>$INFO[ListItem.Title]</label>
 				</control>
 				<control type="label">
-					<top>58</top>
+					<top>53</top>
 					<width>821</width>
 					<height>30</height>
-					<font>font15</font>
+					<font>font14</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
-					<visible>!String.IsEmpty(Container(50).ListItem.NextTitle)</visible>
-					<label>$INFO[Container(50).ListItem.NextTitle,$LOCALIZE[19031]: [COLOR grey],[/COLOR]]</label>
-				</control>
-				<control type="image">
-					<description>separator image</description>
-					<top>45</top>
-					<width>821</width>
-					<height>60</height>
-					<texture border="4">dialogs/separator2.png</texture>
+					<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
 				</control>
 				<control type="textbox">
-					<label>$INFO[Container(50).ListItem.Plot]</label>
+					<label>$INFO[ListItem.Plot]</label>
 					<left>15</left>
-					<top>110</top>
+					<top>92</top>
 					<width>791</width>
-					<height>255</height>
+					<height>172</height>
 					<font>font14_textbox</font>
 					<pagecontrol>62</pagecontrol>
 					<textcolor>grey</textcolor>
 				</control>
+				<control type="progress">
+					<left>15</left>
+					<top>280</top>
+					<width>792</width>
+					<height>38</height>
+					<info>ListItem.Progress</info>
+				</control>
+				<control type="label">
+					<left>15</left>
+					<top>280</top>
+					<width>792</width>
+					<height>35</height>
+					<textoffsetx>15</textoffsetx>
+					<align>left</align>
+					<label>$INFO[ListItem.StartTime]</label>
+				</control>
+				<control type="label">
+					<left>15</left>
+					<top>280</top>
+					<width>792</width>
+					<height>35</height>
+					<textoffsetx>15</textoffsetx>
+					<align>right</align>
+					<label>$INFO[ListItem.EndTime]</label>
+				</control>
+				<control type="label">
+					<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
+					<top>335</top>
+					<width>821</width>
+					<height>30</height>
+					<font>font14</font>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<textoffsetx>15</textoffsetx>
+					<align>right</align>
+					<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]: [COLOR grey],[/COLOR]]</label>
+				</control>
 				<control type="scrollbar" id="62">
 					<left>826</left>
-					<top>105</top>
+					<top>92</top>
 					<width>10</width>
-					<height>272</height>
+					<height>172</height>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>

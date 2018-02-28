@@ -19,7 +19,48 @@
 				<height>872</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
+			<control type="image">
+				<left>82</left>
+				<width>1756</width>
+				<height>80</height>
+				<texture border="4">dialogs/separator2.png</texture>
+			</control>
+			<control type="group">
+				<left>82</left>
+				<top>80</top>
+				<visible>Control.IsVisible(51)</visible>
+				<control type="image">
+					<width>140</width>
+					<height>90</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="label">
+					<width>140</width>
+					<height>80</height>
+					<font>IconLarge</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<label></label>
+					<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
+				</control>
+				<control type="label">
+					<width>140</width>
+					<height>80</height>
+					<font>IconLarge</font>
+					<textcolor>grey</textcolor>
+					<align>center</align>
+					<label></label>
+					<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
+				</control>
+			</control>
 		</control>
+		
+		<!-- Too do? Don't like it! -->
+		<control type="fixedlist" id="11">
+			<visible>false</visible>
+		</control>
+		
 		<control type="group">
 			<description>TV Guide Vertical</description>
 			<include>OpenCloseAnimation</include>
@@ -64,17 +105,17 @@
 						<height>90</height>
 						<font>font15_title_bold</font>
 						<align>center</align>
-						<textcolor>grey</textcolor>
+						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					</control>
 					<control type="label">
 						<left>60</left>
 						<width>300</width>
 						<height>90</height>
-						<font>font14</font>
+						<font>font12_title</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.ChannelName]</label>
+						<label>[B]$INFO[ListItem.ChannelName][/B]</label>
 					</control>
 					<control type="image">
 						<width>436</width>
@@ -103,6 +144,7 @@
 						<width>60</width>
 						<height>90</height>
 						<font>font15_title_bold</font>
+						<textcolor>grey2</textcolor>
 						<align>center</align>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					</control>
@@ -110,9 +152,9 @@
 						<left>60</left>
 						<width>300</width>
 						<height>90</height>
-						<font>font14</font>
+						<font>font12_title</font>
 						<textoffsetx>15</textoffsetx>
-						<label>$INFO[ListItem.ChannelName]</label>
+						<label>[B]$INFO[ListItem.ChannelName][/B]</label>
 					</control>
 					<control type="image">
 						<width>436</width>
@@ -131,7 +173,7 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font14</font>
+						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -157,7 +199,7 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font14</font>
+						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -241,27 +283,19 @@
 					<control type="image">
 						<width>404</width>
 						<height>90</height>
-						<aspectratio align="center">keep</aspectratio>
+						<aspectratio align="left">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<bordersize>5</bordersize>
 						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="label">
-						<width>80</width>
-						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
-						<textoffsetx>10</textoffsetx>
-						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					</control>
-					<control type="label">
-						<width>404</width>
+						<left>85</left>
+						<width>320</width>
 						<height>90</height>
-						<font>font15_bold</font>
-						<align>center</align>
-						<textoffsetx>30</textoffsetx>
-						<label>$INFO[ListItem.ChannelName]</label>
-						<visible>String.IsEmpty(ListItem.Icon)</visible>
+						<font>font12_title</font>
+						<textcolor>grey2</textcolor>
+						<textoffsetx>15</textoffsetx>
+						<label>[B]$INFO[ListItem.ChannelNumberLabel,[COLOR grey2],: [/COLOR]]$INFO[ListItem.ChannelName][/B]</label>
 					</control>
 				</channellayout>
 				<focusedchannellayout height="90" width="404">
@@ -280,27 +314,18 @@
 					<control type="image">
 						<width>404</width>
 						<height>90</height>
-						<aspectratio align="center">keep</aspectratio>
+						<aspectratio align="left">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<bordersize>5</bordersize>
 						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="label">
-						<width>80</width>
-						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
-						<textoffsetx>10</textoffsetx>
-						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					</control>
-					<control type="label">
-						<width>404</width>
+						<left>85</left>
+						<width>320</width>
 						<height>90</height>
-						<font>font15_bold</font>
-						<align>center</align>
-						<textoffsetx>30</textoffsetx>
-						<label>$INFO[ListItem.ChannelName]</label>
-						<visible>String.IsEmpty(ListItem.Icon)</visible>
+						<font>font12_title</font>
+						<textoffsetx>15</textoffsetx>
+						<label>[B]$INFO[ListItem.ChannelNumberLabel,[COLOR grey2],: [/COLOR]]$INFO[ListItem.ChannelName][/B]</label>
 					</control>
 				</focusedchannellayout>
 				<itemlayout height="100" width="404">
@@ -310,7 +335,7 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font14</font>
+						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -334,7 +359,7 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font14</font>
+						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -363,78 +388,43 @@
 		<control type="group">
 			<top>110</top>
 			<include>OpenCloseAnimation</include>
-			<control type="group">
-				<left>82</left>
-				<top>80</top>
-				<visible>Control.IsVisible(51)</visible>
-				<control type="image">
-					<width>140</width>
-					<height>90</height>
-					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-					<bordersize>1</bordersize>
-				</control>
-				<control type="label">
-					<width>140</width>
-					<height>65</height>
-					<font>IconMedium</font>
-					<textcolor>grey</textcolor>
-					<align>center</align>
-					<label></label>
-					<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
-				</control>
-				<control type="label">
-					<width>140</width>
-					<height>65</height>
-					<font>IconMedium</font>
-					<textcolor>grey</textcolor>
-					<align>center</align>
-					<label></label>
-					<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
-				</control>
-				<control type="label">
-					<top>55</top>
-					<width>140</width>
-					<height>20</height>
-					<font>font10</font>
-					<textoffsetx>5</textoffsetx>
-					<align>center</align>
-					<label>[UPPERCASE]$LOCALIZE[19069][/UPPERCASE]</label>
-				</control>
-			</control>
 			<control type="image">
 				<left>82</left>
-				<width>1756</width>
-				<height>80</height>
-				<texture border="4">dialogs/separator2.png</texture>
-			</control>
-			<control type="image">
-				<left>82</left>
-				<top>632</top>
-				<width>240</width>
+				<top>630</top>
+				<width>440</width>
 				<height>240</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<fadetime>CrossfadeTime</fadetime>
-				<bordersize>40</bordersize>
+				<bordersize>20</bordersize>
 				<visible>!String.IsEmpty(ListItem.Icon)</visible>
 			</control>
 			<control type="group">
-				<left>320</left>
+				<left>520</left>
 				<top>632</top>
 				<control type="label">
 					<top>10</top>
-					<width>1500</width>
+					<width>1315</width>
 					<height>30</height>
-					<font>font15</font>
-					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<font>font15_title_bold</font>
 					<textoffsetx>15</textoffsetx>
-					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ]$INFO[ListItem.Title,[COLOR grey],[/COLOR]]</label>
+					<label>$INFO[ListItem.Title]</label>
+				</control>
+				<control type="label">
+					<top>10</top>
+					<width>1315</width>
+					<height>30</height>
+					<font>font14</font>
+					<textcolor>grey2</textcolor>
+					<textoffsetx>15</textoffsetx>
+					<align>right</align>
+					<label>$INFO[ListItem.StartTime,(,]$INFO[ListItem.EndTime, - ,)]</label>
 				</control>
 				<control type="label">
 					<top>55</top>
-					<width>1500</width>
+					<width>1315</width>
 					<height>30</height>
-					<font>font15</font>
+					<font>font14</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 					<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
@@ -442,8 +432,8 @@
 				<control type="textbox" id="81">
 					<label>$INFO[ListItem.Plot]</label>
 					<left>15</left>
-					<top>100</top>
-					<width>1485</width>
+					<top>102</top>
+					<width>1290</width>
 					<height>128</height>
 					<font>font14_textbox</font>
 					<textcolor>grey</textcolor>
