@@ -83,7 +83,7 @@
 				<height>480</height>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<itemlayout height="60" width="462">
 					<control type="image">
 						<width>462</width>

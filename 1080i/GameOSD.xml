@@ -16,7 +16,7 @@
 				<height>144</height>
 				<width>1920</width>
 				<align>center</align>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<orientation>horizontal</orientation>
 				<control type="button" id="101">
 					<description>Resume button</description> 

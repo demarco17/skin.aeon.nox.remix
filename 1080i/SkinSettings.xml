@@ -16,7 +16,7 @@
 				<height>840</height>
 				<onleft>9010</onleft>
 				<onright>9010</onright>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>!Window.IsActive(1121)</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="90" width="356">

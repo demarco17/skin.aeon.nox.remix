@@ -15,7 +15,7 @@
 				<orientation>horizontal</orientation>
 				<viewtype label="31079">bigwrap</viewtype>
 				<pagecontrol>5761</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">400</scrolltime>
+				<scrolltime>300</scrolltime>
 				<focusposition>1</focusposition>
 				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<itemlayout width="272" height="620" condition="!String.IsEqual(Control.GetLabel(4440),1)">
@@ -65,7 +65,7 @@
 				<orientation>horizontal</orientation>
 				<viewtype label="31079">bigwrap</viewtype>
 				<pagecontrol>5761</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">400</scrolltime>
+				<scrolltime>300</scrolltime>
 				<focusposition>1</focusposition>
 				<preloaditems>2</preloaditems>
 				<visible>Container.Content(songs) | Container.Content(artists) | Container.Content(albums)</visible>

@@ -12,7 +12,7 @@
 				<height>750</height>
 				<onleft>90001</onleft>
 				<onright>90001</onright>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<itemlayout height="90" width="356">
 					<control type="image">
 						<width>356</width>

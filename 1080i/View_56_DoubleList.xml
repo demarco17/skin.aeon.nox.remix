@@ -25,7 +25,7 @@
 					<viewtype label="31096">list</viewtype>
 					<pagecontrol>5660</pagecontrol>
 					<movement>6</movement>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<!--<visible>Container.Content(artists) | Container.Content(albums)</visible>-->
 					<visible>Container.Content(artists)</visible>
 					<itemlayout height="120" width="820">
@@ -153,7 +153,7 @@
 					<viewtype>list</viewtype>
 					<pagecontrol>5661</pagecontrol>
 					<movement>6</movement>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<visible>Container.Content(artists)</visible>
 					<onclick>PlayMedia($ESCINFO[ListItem.FolderPath],isdir)</onclick>
 					<itemlayout height="120" width="820">
@@ -258,7 +258,7 @@
 					<viewtype>list</viewtype>
 					<pagecontrol>5661</pagecontrol>
 					<movement>6</movement>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<visible>Container.Content(albums)</visible>
 					<itemlayout height="120" width="820">
 						<control type="image">

@@ -32,7 +32,7 @@
 					<onleft>SetFocus(9050)</onleft>
 					<onright>51</onright>
 					<viewtype label="535">list</viewtype>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<itemlayout height="120" width="420">
 						<control type="image">
 							<width>420</width>
@@ -143,7 +143,7 @@
 					<animation effect="fade" start="100" end="0" time="400" condition="Container(51).IsUpdating">conditional</animation>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<movement>6</movement>
 					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[535])</visible>
@@ -246,7 +246,7 @@
 					<animation effect="fade" start="100" end="0" time="400" condition="Container(51).IsUpdating">conditional</animation>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>61</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<include>VisibleFadeAnimation</include>
 					<visible>String.IsEqual(Skin.String(CustomAppsView),$LOCALIZE[31010])</visible>
 					<itemlayout height="240" width="240">

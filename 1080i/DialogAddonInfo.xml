@@ -152,7 +152,7 @@
 						<onleft>9000</onleft>
 						<onright>9000</onright>
 						<orientation>vertical</orientation>
-						<scrolltime tween="quadratic" easing="out">300</scrolltime>
+						<scrolltime>300</scrolltime>
 						<itemlayout height="371" width="658">
 							<control type="image">
 								<width>658</width>

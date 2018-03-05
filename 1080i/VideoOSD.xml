@@ -16,7 +16,7 @@
 				<height>100</height>
 				<width>1920</width>
 				<align>center</align>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<orientation>horizontal</orientation>
 				<control type="button" id="700">
 					<texturefocus>osd/buttons/OSDVideo.png</texturefocus>

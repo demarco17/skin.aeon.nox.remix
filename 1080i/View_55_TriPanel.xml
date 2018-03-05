@@ -176,7 +176,7 @@
 					<pagecontrol>5560</pagecontrol>
 					<movement>11</movement>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<itemlayout height="70" width="806" condition="Container.Content(movies)">
 						<control type="image">
 							<width>776</width>
@@ -756,7 +756,7 @@
 					<viewtype label="31078">list</viewtype>
 					<pagecontrol>5560</pagecontrol>
 					<movement>7</movement>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 					<itemlayout height="70" width="806" condition="Container.Content(albums) | Container.Content(artists)">
 						<control type="image">
 							<width>776</width>

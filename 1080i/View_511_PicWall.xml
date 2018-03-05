@@ -23,7 +23,7 @@
 				<viewtype label="31010">icon</viewtype>
 				<pagecontrol>51160</pagecontrol>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>Container.Content(images)</visible>
 				<itemlayout height="236" width="420">
 					<control type="image">

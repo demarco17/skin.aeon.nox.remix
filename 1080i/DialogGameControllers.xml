@@ -41,7 +41,7 @@
 					<height>480</height>
 					<onleft>9001</onleft>
 					<onright>5</onright>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 				</control>
 				<control type="button" id="10">
 					<description>Default controller types button</description>
@@ -79,7 +79,7 @@
 					<pagecontrol>60</pagecontrol>
 					<onleft>3</onleft>
 					<onright>60</onright>
-					<scrolltime tween="quadratic" easing="out">300</scrolltime>
+					<scrolltime>300</scrolltime>
 				</control>
 				<control type="button" id="7">
 					<description>Default feature types button</description>

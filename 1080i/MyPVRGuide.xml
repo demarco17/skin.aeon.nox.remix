@@ -73,7 +73,7 @@
 				<top>30</top>
 				<width>1756</width>
 				<height>590</height>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<timeblocks>20</timeblocks>
 				<progresstexture border="0,50,4,4">overlays/pvr/PVR-EpgProgressIndicator.png</progresstexture>
 				<rulerunit>6</rulerunit>
@@ -237,7 +237,7 @@
 				<top>30</top>
 				<width>1756</width>
 				<height>590</height>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<timeblocks>30</timeblocks>
 				<progresstexture border="141,0,4,4">overlays/pvr/PVR-EpgProgressIndicatorH.png</progresstexture>
 				<rulerunit>6</rulerunit>

@@ -70,7 +70,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<itemlayout height="50" width="595">
 					<control type="image">
 						<width>595</width>
@@ -233,7 +233,7 @@
 				<ondown condition="Control.IsVisible(1250)">1250</ondown>
 				<ondown condition="Control.IsVisible(1350)">1350</ondown>
 				<orientation>horizontal</orientation>
-				<scrolltime tween="quadratic" easing="out">400</scrolltime>
+				<scrolltime>300</scrolltime>
 				<control type="button" id="8">
 					<description>Play</description>
 					<include>ButtonInfoDialogsCommonValues</include>
@@ -338,7 +338,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>Integer.IsGreater(Container(250).NumItems,0) + ControlGroup(9000).HasFocus(208)</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="297">
@@ -429,7 +429,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>Integer.IsGreater(Container(150).NumItems,0) + ControlGroup(9000).HasFocus(209)</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="297">
@@ -520,7 +520,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>[ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)] + !String.IsEmpty(Window(home).Property(ScriptActors))</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="297">
@@ -591,7 +591,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>Integer.IsGreater(Container(1150).NumItems,0) + ControlGroup(9000).HasFocus(206)</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="594">
@@ -662,7 +662,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>Integer.IsGreater(Container(350).NumItems,0) + ControlGroup(9000).HasFocus(207)</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="594">
@@ -733,7 +733,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>Integer.IsGreater(Container(1250).NumItems,0) + ControlGroup(9000).HasFocus(204)</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="297">
@@ -772,7 +772,7 @@
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>Integer.IsGreater(Container(1350).NumItems,0) + ControlGroup(9000).HasFocus(205)</visible>
 				<include>VisibleFadeAnimation</include>
 				<itemlayout height="420" width="594">

@@ -38,7 +38,7 @@
 				<onright condition="Container(9000).HasFocus(14)">213</onright>
 				<onright condition="Container(9000).HasFocus(15)">214</onright>
 				<onright condition="Container(9000).HasFocus(16)">215</onright>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<itemlayout height="90" width="356">
 					<control type="image">
 						<width>356</width>
@@ -297,8 +297,8 @@
 		<include>Topbar</include>
 		<control type="group">
 			<left>-440</left>
-			<animation effect="slide" start="440,0" end="0,0" time="400" tween="quadratic" easing="out" condition="String.IsEmpty(Window(home).Property(MediaMenu))">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="440,0" end="0,0" time="400" condition="String.IsEmpty(Window(home).Property(MediaMenu))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-440,0" time="400">WindowClose</animation>
 			<control type="image">
 				<width>432</width>
 				<height>1080</height>

@@ -89,7 +89,7 @@
 				<onleft>121</onleft>
 				<onright>121</onright>
 				<pagecontrol>121</pagecontrol>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<itemlayout width="1260" height="90">
 					<control type="image">
 						<width>1260</width>
@@ -278,7 +278,7 @@
 				<onup>160</onup>
 				<ondown>160</ondown>
 				<viewtype label="535">list</viewtype>
-				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<scrolltime>300</scrolltime>
 				<itemlayout width="398" height="90">
 					<control type="image">
 						<width>398</width>
