@@ -27,7 +27,7 @@
 					<pagecontrol>51060</pagecontrol>
 					<orientation>vertical</orientation>
 					<movement>3</movement>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<itemlayout width="1808" height="217">
 						<control type="image">
@@ -249,7 +249,7 @@
 					<movement>3</movement>
 					<pagecontrol>51060</pagecontrol>
 					<orientation>vertical</orientation>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<visible>Container.Content(artists) | Container.Content(albums)</visible>
 					<itemlayout width="1725" height="217">
 						<control type="image">

@@ -63,7 +63,7 @@
 					<onright>60</onright>
 					<onup>5</onup>
 					<ondown>5</ondown>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 				</control>
 				<control type="scrollbar" id="60">
 					<left>962</left>

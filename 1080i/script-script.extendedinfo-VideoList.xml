@@ -35,7 +35,7 @@
 				<width>1200</width>
 				<height>720</height>
 				<viewtype label="31010">icon</viewtype>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>500</onright>

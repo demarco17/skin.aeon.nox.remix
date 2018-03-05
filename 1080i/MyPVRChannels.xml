@@ -31,7 +31,7 @@
 				<onright>70</onright>
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>70</pagecontrol>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<itemlayout height="120" width="821">
 					<control type="image">
 						<width>821</width>

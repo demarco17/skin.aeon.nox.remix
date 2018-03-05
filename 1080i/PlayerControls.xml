@@ -15,7 +15,7 @@
 				<height>100</height>
 				<width>1920</width>
 				<align>center</align>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<orientation>horizontal</orientation>
 				<control type="button" id="600">
 					<texturefocus>osd/buttons/OSDChannelList.png</texturefocus>

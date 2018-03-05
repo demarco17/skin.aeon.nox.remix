@@ -27,7 +27,7 @@
 				<viewtype label="31010">icon</viewtype>
 				<pagecontrol>50060</pagecontrol>
 				<preloaditems>2</preloaditems>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<visible>[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]] | Container.Content(addons)</visible>
 				<itemlayout height="360" width="240" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
 					<control type="image">
@@ -182,7 +182,7 @@
 				<onright>50060</onright>
 				<viewtype label="31010">icon</viewtype>
 				<pagecontrol>50060</pagecontrol>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons)</visible>
 				<itemlayout height="240" width="240">
 					<control type="image">
@@ -238,7 +238,7 @@
 				<onright>50060</onright>
 				<viewtype label="31010">icon</viewtype>
 				<pagecontrol>50060</pagecontrol>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<visible>Container.Content(addons)</visible>
 				<itemlayout height="240" width="240">
 					<control type="image">

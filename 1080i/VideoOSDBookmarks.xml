@@ -17,7 +17,7 @@
 				<ondown>60</ondown>
 				<onup>9000</onup>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<viewtype label="536">icon</viewtype>
 				<orientation>horizontal</orientation>
 				<itemlayout height="210" width="392">

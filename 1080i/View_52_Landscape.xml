@@ -180,7 +180,7 @@
 		<orientation>horizontal</orientation>
 		<preloaditems>2</preloaditems>
 		<viewtype label="31076">bigwrap</viewtype>
-		<scrolltime>300</scrolltime>
+		<scrolltime>400</scrolltime>
 		<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 		<itemlayout width="642" height="680"/>
 		<focusedlayout width="636" height="680"/>

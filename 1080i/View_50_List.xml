@@ -25,7 +25,7 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
 					<movement>6</movement>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -377,7 +377,7 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
 					<movement>6</movement>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -584,7 +584,7 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
 					<movement>6</movement>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -720,7 +720,7 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
 					<movement>6</movement>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>
@@ -856,7 +856,7 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>5060</pagecontrol>
 					<movement>6</movement>
-					<scrolltime>300</scrolltime>
+					<scrolltime>400</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
 							<width>1140</width>

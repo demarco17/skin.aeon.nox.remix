@@ -15,7 +15,7 @@
 				<onleft>9001</onleft>
 				<onright>20</onright>
 				<orientation>vertical</orientation>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<itemlayout width="356" height="90">
 					<control type="image">
 						<width>356</width>

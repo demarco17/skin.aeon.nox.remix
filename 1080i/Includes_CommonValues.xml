@@ -124,7 +124,7 @@
 		<onright>60</onright>
 		<onleft>9000</onleft>
 		<orientation>vertical</orientation>
-		<scrolltime>300</scrolltime>
+		<scrolltime>400</scrolltime>
 		<pagecontrol>60</pagecontrol>
 		<itemlayout height="420" width="439">
 			<control type="image">

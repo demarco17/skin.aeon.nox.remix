@@ -893,7 +893,7 @@
 				<movement>5</movement>
 				<viewtype label="31081">list</viewtype>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
-				<scrolltime>300</scrolltime>
+				<scrolltime>400</scrolltime>
 				<itemlayout height="68" width="806" condition="Container.Content(albums)">
 					<control type="image">
 						<width>806</width>
