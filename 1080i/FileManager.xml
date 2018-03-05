@@ -4,7 +4,9 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
+			<visible>!Window.IsVisible(textviewer)</visible>
 			<include>OpenCloseAnimation</include>
+			<include>ViewFadeAnimation</include>
 			<control type="group">
 				<left>50</left>
 				<top>80</top>
