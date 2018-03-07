@@ -30,7 +30,6 @@
 				<height>600</height>
 				<onup>9001</onup>
 				<ondown>9001</ondown>
-				<scrolltime>400</scrolltime>
 				<itemlayout width="150" height="150">
 					<control type="image">
 						<width>150</width>

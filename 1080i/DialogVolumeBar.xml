@@ -47,7 +47,7 @@
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<visible>Player.Muted</visible>
-			<animation effect="slide" start="0,0" end="0,-25" time="200" condition="Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation) | [Window.IsVisible(home) + !System.GetBool(lookandfeel.enablerssfeeds)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-25" time="300" condition="Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation) | [Window.IsVisible(home) + !System.GetBool(lookandfeel.enablerssfeeds)]">Conditional</animation>
 			<top>45</top>
 			<left>1860</left>
 			<height>60</height>

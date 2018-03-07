@@ -52,7 +52,6 @@
 					<onleft>9050</onleft>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime>400</scrolltime>
 					<itemlayout height="60" width="821">
 						<control type="image">
 							<width>821</width>
@@ -150,7 +149,6 @@
 					<onleft>60</onleft>
 					<onright>61</onright>
 					<pagecontrol>61</pagecontrol>
-					<scrolltime>400</scrolltime>
 					<itemlayout height="60" width="821">
 						<control type="image">
 							<width>821</width>

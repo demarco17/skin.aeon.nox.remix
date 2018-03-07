@@ -52,7 +52,6 @@
 					<onleft>9001</onleft>
 					<onright>9002</onright>
 					<pagecontrol>60</pagecontrol>
-					<scrolltime>200</scrolltime>
 					<itemlayout height="60" width="632">
 						<control type="image">
 							<width>632</width>
@@ -119,7 +118,7 @@
 							<width>632</width>
 							<height>100</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-							<animation effect="fade" start="100" end="40" time="200" condition="!Control.HasFocus(20)">Conditional</animation>
+							<animation effect="fade" start="100" end="40" time="400" condition="!Control.HasFocus(20)">Conditional</animation>
 						</control>
 						<control type="image">
 							<left>8</left>

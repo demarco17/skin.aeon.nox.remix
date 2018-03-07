@@ -781,8 +781,8 @@
 			<visible>Player.HasAudio</visible>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
-			<animation effect="slide" start="0,0" end="0,57" time="200" condition="Window.IsVisible(playercontrols) + !System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,32" time="200" condition="Window.IsVisible(playercontrols) + System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,57" time="300" condition="Window.IsVisible(playercontrols) + !System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,32" time="300" condition="Window.IsVisible(playercontrols) + System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,25" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>

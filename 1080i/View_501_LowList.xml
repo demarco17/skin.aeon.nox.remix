@@ -284,6 +284,7 @@
 				<onright>50160</onright>
 				<pagecontrol>50160</pagecontrol>
 				<movement>5</movement>
+				<scrolltime>300</scrolltime>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<itemlayout height="68" width="927" condition="Container.Content(movies) | Container.Content(musicvideos)">
@@ -891,9 +892,9 @@
 				<onright>50160</onright>
 				<pagecontrol>50160</pagecontrol>
 				<movement>5</movement>
+				<scrolltime>300</scrolltime>
 				<viewtype label="31081">list</viewtype>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
-				<scrolltime>400</scrolltime>
 				<itemlayout height="68" width="806" condition="Container.Content(albums)">
 					<control type="image">
 						<width>806</width>

@@ -58,7 +58,6 @@
 						<onleft>29</onleft>
 						<onright>73</onright>
 						<pagecontrol>73</pagecontrol>
-						<scrolltime>400</scrolltime>
 						<orientation>vertical</orientation>
 						<itemlayout height="60">
 							<control type="image">
@@ -131,7 +130,6 @@
 						<onleft>73</onleft>
 						<onright>71</onright>
 						<pagecontrol>71</pagecontrol>
-						<scrolltime>200</scrolltime>
 						<itemlayout height="60">
 							<control type="image">
 								<width>490</width>
@@ -203,7 +201,6 @@
 						<onleft>71</onleft>
 						<onright>72</onright>
 						<pagecontrol>72</pagecontrol>
-						<scrolltime>200</scrolltime>
 						<itemlayout height="60">
 							<control type="image">
 								<width>490</width>

@@ -24,7 +24,7 @@
 				<pagecontrol>5860</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<viewtype label="31091">icon</viewtype>
-				<scrolltime>400</scrolltime>
+				<scrolltime>300</scrolltime>
 				<visible>[Container.Content(tvshows) | Container.Content(movies)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 				<itemlayout height="110" width="560">
 					<control type="image">

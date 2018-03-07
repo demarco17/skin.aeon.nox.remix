@@ -279,7 +279,7 @@
 					<pagecontrol>50760</pagecontrol>
 					<movement>11</movement>
 					<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
-					<scrolltime>400</scrolltime>
+					<scrolltime>300</scrolltime>
 					<itemlayout height="70" width="1056" condition="Container.Content(movies)">
 						<control type="image">
 							<width>1056</width>
