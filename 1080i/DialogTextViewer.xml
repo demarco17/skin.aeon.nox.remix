@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>SetFocus(61)</onload>
+	<defaultcontrol always="true">61</defaultcontrol>
 	<controls>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
@@ -45,6 +45,7 @@
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<orientation>vertical</orientation>
+				<visible allowhiddenfocus="true">true</visible>
 			</control>
 		</control>
 	</controls>

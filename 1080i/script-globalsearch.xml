@@ -128,6 +128,7 @@
 				<onleft>9000</onleft>
 				<onright>61</onright>
 				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
 				<viewtype label="536">icon</viewtype>
 				<preloaditems>2</preloaditems>
 				<itemlayout width="219" height="329" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)">
