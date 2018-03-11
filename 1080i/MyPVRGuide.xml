@@ -55,12 +55,43 @@
 				</control>
 			</control>
 		</control>
-		
-		<!-- Too do? Don't like it! -->
-		<control type="fixedlist" id="11">
-			<visible>false</visible>
+		<control type="list" id="11">
+			<left>82</left>
+			<top>140</top>
+			<width>1756</width>
+			<height>50</height>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<visible allowhiddenfocus="true">[Control.IsVisible(50) | Control.IsVisible(51)] + Skin.HasSetting(Enable.GroupSelector) + Control.HasFocus(11)</visible>
+			<itemlayout height="48" width="439">
+				<control type="label">
+					<width>439</width>
+					<height>45</height>
+					<textoffsetx>5</textoffsetx>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>grey</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="48" width="439">
+				<control type="image">
+					<width>439</width>
+					<height>48</height>
+					<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
+				</control>
+				<control type="label">
+					<width>439</width>
+					<height>45</height>
+					<textoffsetx>5</textoffsetx>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
 		</control>
-		
 		<control type="group">
 			<description>TV Guide Vertical</description>
 			<include>OpenCloseAnimation</include>
@@ -80,16 +111,18 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>60</onright>
+				<onup condition="Skin.HasSetting(Enable.GroupSelector)">11</onup>
+				<ondown condition="Skin.HasSetting(Enable.GroupSelector)">11</ondown>
 				<orientation>vertical</orientation>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="19297">list</viewtype>
 				<rulerlayout height="50" id="2">
 					<control type="label">
 						<height>40</height>
-						<font>font13</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(11)</visible>
 					</control>
 				</rulerlayout>
 				<channellayout height="90" width="440">
@@ -173,7 +206,6 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -199,7 +231,6 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -244,6 +275,8 @@
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>61</onright>
+				<onup condition="Skin.HasSetting(Enable.GroupSelector)">11</onup>
+				<ondown condition="Skin.HasSetting(Enable.GroupSelector)">11</ondown>
 				<orientation>horizontal</orientation>
 				<pagecontrol>61</pagecontrol>
 				<viewtype label="19298">list</viewtype>
@@ -255,6 +288,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<align>center</align>
+						<visible>!Control.HasFocus(11)</visible>
 					</control>
 				</rulerdatelayout>
 				<rulerlayout width="140">
@@ -267,7 +301,6 @@
 					<control type="label" id="2">
 						<width>140</width>
 						<height>40</height>
-						<font>font13</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
@@ -335,7 +368,6 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -359,7 +391,6 @@
 					</control>
 					<control type="label" id="1">
 						<height>55</height>
-						<font>font13</font>
 						<textoffsetx>15</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>

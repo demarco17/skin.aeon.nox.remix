@@ -141,6 +141,14 @@
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 				</control>
+				<control type="radiobutton" id="204">
+					<description>Enable group selector</description>
+					<include>ButtonCommonValues</include>
+					<label>31060</label>
+					<onclick>Skin.ToggleSetting(Enable.GroupSelector)</onclick>
+					<selected>Skin.HasSetting(Enable.GroupSelector)</selected>
+					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
+				</control>
 				<control type="button" id="203">
 					<description>Actions header</description>
 					<textwidth>352</textwidth>

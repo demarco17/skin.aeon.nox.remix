@@ -83,7 +83,7 @@
 				<font>font15_title_bold</font>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
-				<label>$INFO[VideoPlayer.ChannelNumberLabel,,: ]$INFO[VideoPlayer.ChannelName]</label>
+				<label>$INFO[VideoPlayer.ChannelNumberLabel,[COLOR grey2],:[/COLOR] ]$INFO[VideoPlayer.ChannelName]</label>
 			</control>
 			<control type="label">
 				<left>1420</left>

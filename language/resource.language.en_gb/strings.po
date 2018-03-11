@@ -206,7 +206,9 @@ msgctxt "#31059"
 msgid "Muted"
 msgstr ""
 
-#empty string with id 31060
+msgctxt "#31060"
+msgid "Enable group selector"
+msgstr ""
 
 msgctxt "#31061"
 msgid "Add-on & Favourite statistics"

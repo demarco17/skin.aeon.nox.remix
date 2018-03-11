@@ -631,7 +631,7 @@
 	</variable>
 	<variable name="InfoPlayingTitleVar">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$INFO[VideoPlayer.ChannelNumberLabel,,: ]$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$INFO[VideoPlayer.ChannelNumberLabel,[COLOR grey2],:[/COLOR] ]$INFO[VideoPlayer.ChannelName]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
