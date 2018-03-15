@@ -28,7 +28,7 @@
 				<onright condition="Container(9000).HasFocus(5)">204</onright>
 				<onright condition="Container(9000).HasFocus(6)">205</onright>
 				<onright condition="Container(9000).HasFocus(7)">206</onright>
-				<scrolltime>400</scrolltime>
+				<scrolltime>300</scrolltime>
 				<itemlayout height="90" width="356">
 					<control type="image">
 						<width>356</width>

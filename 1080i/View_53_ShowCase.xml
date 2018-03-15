@@ -347,7 +347,7 @@
 		<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 		<viewtype label="31077">bigwrap</viewtype>
 		<pagecontrol>5361</pagecontrol>
-		<scrolltime>400</scrolltime>
+		<scrolltime tween="sine">400</scrolltime>
 		<focusposition>3</focusposition>
 		<orientation>horizontal</orientation>
 		<preloaditems>2</preloaditems>

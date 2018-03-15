@@ -9,7 +9,7 @@
 			<height>100</height>
 			<onup>9020</onup>
 			<ondown>9001</ondown>
-			<scrolltime>400</scrolltime>
+			<scrolltime tween="sine">500</scrolltime>
 			<focusposition>2</focusposition>
 			<orientation>Horizontal</orientation>
 			<itemlayout height="100" width="510">

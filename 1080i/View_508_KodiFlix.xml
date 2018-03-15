@@ -160,7 +160,7 @@
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 				<movement>3</movement>
-				<scrolltime>400</scrolltime>
+				<scrolltime tween="sine">400</scrolltime>
 				<itemlayout height="270" width="480">
 					<control type="image">
 						<left>20</left>
