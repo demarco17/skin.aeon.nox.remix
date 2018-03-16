@@ -236,7 +236,7 @@
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<font>font14</font>
 					<align>center</align>
-					<autoscroll time="3500" delay="3000" repeat="3000">True</autoscroll>
+					<autoscroll time="2500" delay="2000" repeat="3000">True</autoscroll>
 				</control>
 			</control>
 		</focusedlayout>
