@@ -16,7 +16,7 @@
 				<height>351</height>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
-				<texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Artist,,/logo.png]</texture>
+				<texture background="true">$INFO[Listitem.Art(clearlogo)]</texture>
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 			</control>
 			<control type="label">
@@ -33,7 +33,7 @@
 				<height>729</height>
 				<bordersize>5</bordersize>
 				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true" fallback="thumbs/cdart.png">$INFO[ListItem.FileNameAndPath,,cdart.png]</texture>
+				<texture background="true" fallback="thumbs/cdart.png">$INFO[Listitem.Art(discart)]</texture>
 				<visible>String.IsEqual(ListItem.DBType,album)</visible>
 			</control>
 			<control type="image">
@@ -41,15 +41,21 @@
 				<height>729</height>
 				<bordersize>5</bordersize>
 				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true" fallback="thumbs/cdart.png">$INFO[ListItem.Path,,cdart.png]</texture>
+				<texture background="true" fallback="thumbs/cdart.png">$INFO[Listitem.Art(album.discart)]</texture>
 				<visible>String.IsEqual(ListItem.DBType,song)</visible>
 			</control>
 			<control type="image">
-				<top>338</top>
+				<top>336</top>
 				<width>729</width>
 				<height>16</height>
 				<texture colordiffuse="grey">dialogs/logo_back.png</texture>
 				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)</visible>
+			</control>
+			<control type="image">
+				<top>349</top>
+				<width>729</width>
+				<height>2</height>
+				<texture colordiffuse="grey2">dialogs/white50.png</texture>
 			</control>
 			<control type="image">
 				<top>351</top>
@@ -57,8 +63,6 @@
 				<height>729</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[PosterVar]</texture>
-				<bordertexture border="2" colordiffuse="grey2">dialogs/white50.png</bordertexture>
-				<bordersize>2</bordersize>
 			</control>
 		</control>
 		<control type="group">
