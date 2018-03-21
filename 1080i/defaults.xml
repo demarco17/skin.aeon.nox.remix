@@ -22,7 +22,7 @@
 		<shadowcolor>shadow</shadowcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<selectedcolor>$VAR[SkinThemeColour]</selectedcolor>
-		<scrollspeed>50</scrollspeed>
+		<scrollspeed>40</scrollspeed>
 	</default>
 	<default type="fadelabel">
 		<left>0</left>
@@ -31,7 +31,7 @@
 		<textcolor>white</textcolor>
 		<shadowcolor>shadow</shadowcolor>
 		<disabledcolor>grey3</disabledcolor>
-		<scrollspeed>50</scrollspeed>
+		<scrollspeed>40</scrollspeed>
 	</default>
 	<default type="button">
 		<left>0</left>

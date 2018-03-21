@@ -578,258 +578,272 @@
 	</include>
 	<include name="NowPlayingVideoWidget">
 		<!-- Video Info -->
-		<control type="group">
+		<control type="grouplist">
 			<left>14</left>
 			<top>55</top>
+			<width>1860</width>
+			<height>206</height>
+			<itemgap>30</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
 			<visible>Player.HasVideo + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<animation effect="slide" start="0,0" end="0,25" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
-			<control type="image">
-				<description>background image</description>
-				<left>16</left>
-				<top>16</top>
+			<control type="group">
 				<width>768</width>
-				<height>174</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
-			</control>
-			<control type="image">
-				<left>33</left>
-				<top>33</top>
-				<width>110</width>
-				<height>141</height>
-				<texture fallback="DefaultVideoCover.png">$VAR[HomeNowPlayingThumbVar]</texture>
-				<aspectratio align="left">keep</aspectratio>
-			</control>
-			<control type="label">
-				<left>155</left>
-				<top>34</top>
-				<width>595</width>
-				<height>50</height>
-				<label>31021</label>
-				<font>font15_title</font>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-			</control>
-			<control type="fadelabel">
-				<left>155</left>
-				<top>86</top>
-				<width>595</width>
-				<height>30</height>
-				<font>font15</font>
-				<label>$VAR[HomePlayingTitleVar]</label>
-				<textcolor>grey</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
-			</control>
-			<control type="label">
-				<left>155</left>
-				<top>130</top>
-				<width>595</width>
-				<height>30</height>
-				<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
-				<font>font15</font>
-				<textcolor>grey</textcolor>
+				<control type="image">
+					<description>background image</description>
+					<left>16</left>
+					<top>16</top>
+					<width>768</width>
+					<height>174</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="image">
+					<left>33</left>
+					<top>33</top>
+					<width>110</width>
+					<height>141</height>
+					<texture fallback="DefaultVideoCover.png">$VAR[HomeNowPlayingThumbVar]</texture>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>34</top>
+					<width>595</width>
+					<height>50</height>
+					<label>31021</label>
+					<font>font15_title</font>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+				</control>
+				<control type="fadelabel">
+					<left>155</left>
+					<top>86</top>
+					<width>595</width>
+					<height>30</height>
+					<font>font15</font>
+					<label>$VAR[HomePlayingTitleVar]</label>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>130</top>
+					<width>595</width>
+					<height>30</height>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
+					<font>font15</font>
+					<textcolor>grey</textcolor>
+				</control>
 			</control>
 		</control>
 	</include>
 	<include name="PvrInfoWidget">
 		<!-- PVR Info -->
-		<control type="group">
+		<control type="grouplist">
 			<left>14</left>
 			<top>55</top>
+			<width>1860</width>
+			<height>206</height>
+			<itemgap>30</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
 			<visible>[Pvr.IsRecording | Pvr.HasNonRecordingTimer] + ![Player.HasVideo + !Skin.HasSetting(Disable.Videoinfo)] + ![Player.HasAudio + !Skin.HasSetting(Disable.Musicinfo)]</visible>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<animation effect="slide" start="0,0" end="0,25" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
-			<control type="grouplist">
-				<width>1860</width>
-				<height>206</height>
-				<itemgap>30</itemgap>
-				<align>left</align>
-				<orientation>horizontal</orientation>
-				<control type="group">
+			<control type="group">
+				<width>768</width>
+				<visible>Pvr.IsRecording</visible>
+				<control type="image">
+					<description>background image</description>
+					<left>16</left>
+					<top>16</top>
 					<width>768</width>
-					<visible>Pvr.IsRecording</visible>
-					<control type="image">
-						<description>background image</description>
-						<left>16</left>
-						<top>16</top>
-						<width>768</width>
-						<height>174</height>
-						<texture border="18">dialogs/dialog-bg.png</texture>
-					</control>
-					<control type="image">
-						<left>33</left>
-						<top>33</top>
-						<width>110</width>
-						<height>141</height>
-						<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NowRecordingChannelIcon]</texture>
-						<aspectratio align="left" aligny="center">keep</aspectratio>
-					</control>
+					<height>174</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="image">
+					<left>33</left>
+					<top>33</top>
+					<width>110</width>
+					<height>141</height>
+					<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NowRecordingChannelIcon]</texture>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>34</top>
+					<width>595</width>
+					<height>50</height>
+					<label>19158</label>
+					<font>font15_title</font>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+				</control>
+				<control type="fadelabel">
+					<left>155</left>
+					<top>86</top>
+					<width>595</width>
+					<height>30</height>
+					<font>font15</font>
+					<label>$INFO[Pvr.NowRecordingChannel,$LOCALIZE[19029]: ,]</label>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<left>155</left>
+					<top>130</top>
+					<width>595</width>
+					<height>30</height>
+					<label>$INFO[Pvr.NowRecordingTitle]</label>
+					<font>font15</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+			</control>
+			<control type="group">
+				<width>768</width>
+				<visible>Pvr.HasNonRecordingTimer</visible>
+				<control type="image">
+					<description>background image</description>
+					<left>16</left>
+					<top>16</top>
+					<width>768</width>
+					<height>174</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="image">
+					<left>33</left>
+					<top>33</top>
+					<width>110</width>
+					<height>141</height>
+					<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NextRecordingChannelIcon]</texture>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+				</control>
+				<control type="grouplist">
+					<left>155</left>
+					<top>34</top>
+					<width>600</width>
+					<height>50</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
 					<control type="label">
-						<left>155</left>
-						<top>34</top>
-						<width>595</width>
-						<height>50</height>
-						<label>19158</label>
+						<width>auto</width>
+						<label>$LOCALIZE[19157]:</label>
 						<font>font15_title</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
-					<control type="fadelabel">
-						<left>155</left>
-						<top>86</top>
-						<width>595</width>
-						<height>30</height>
-						<font>font15</font>
-						<label>$INFO[Pvr.NowRecordingChannel,$LOCALIZE[19029]: ,]</label>
-						<textcolor>grey</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<scrollout>false</scrollout>
-						<pauseatend>2000</pauseatend>
-					</control>
-					<control type="fadelabel">
-						<left>155</left>
-						<top>130</top>
-						<width>595</width>
-						<height>30</height>
-						<label>$INFO[Pvr.NowRecordingTitle]</label>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<scrollout>false</scrollout>
-						<pauseatend>2000</pauseatend>
+					<control type="label">
+						<width>auto</width>
+						<label>$INFO[PVR.NextRecordingDateTime]</label>
+						<font>font14</font>
+						<textcolor>grey2</textcolor>
 					</control>
 				</control>
-				<control type="group">
-					<width>768</width>
-					<visible>Pvr.HasNonRecordingTimer</visible>
-					<control type="image">
-						<description>background image</description>
-						<left>16</left>
-						<top>16</top>
-						<width>768</width>
-						<height>174</height>
-						<texture border="18">dialogs/dialog-bg.png</texture>
-					</control>
-					<control type="image">
-						<left>33</left>
-						<top>33</top>
-						<width>110</width>
-						<height>141</height>
-						<texture fallback="DefaultVideoCover.png">$INFO[Pvr.NextRecordingChannelIcon]</texture>
-						<aspectratio align="left" aligny="center">keep</aspectratio>
-					</control>
-					<control type="grouplist">
-						<left>155</left>
-						<top>34</top>
-						<width>600</width>
-						<height>50</height>
-						<itemgap>10</itemgap>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<width>auto</width>
-							<label>$LOCALIZE[19157]:</label>
-							<font>font15_title</font>
-							<textcolor>$VAR[SkinThemeColour]</textcolor>
-						</control>
-						<control type="label">
-							<width>auto</width>
-							<label>$INFO[PVR.NextRecordingDateTime]</label>
-							<font>font14</font>
-							<textcolor>grey2</textcolor>
-						</control>
-					</control>
-					<control type="fadelabel">
-						<left>155</left>
-						<top>86</top>
-						<width>595</width>
-						<height>30</height>
-						<font>font15</font>
-						<label>$INFO[Pvr.NextRecordingChannel,$LOCALIZE[19029]: ,]</label>
-						<textcolor>grey</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<scrollout>false</scrollout>
-						<pauseatend>2000</pauseatend>
-					</control>
-					<control type="fadelabel">
-						<left>155</left>
-						<top>130</top>
-						<width>595</width>
-						<height>30</height>
-						<label>$INFO[Pvr.NextRecordingTitle]</label>
-						<font>font15</font>
-						<textcolor>grey</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<scrollout>false</scrollout>
-						<pauseatend>2000</pauseatend>
-					</control>
+				<control type="fadelabel">
+					<left>155</left>
+					<top>86</top>
+					<width>595</width>
+					<height>30</height>
+					<font>font15</font>
+					<label>$INFO[Pvr.NextRecordingChannel,$LOCALIZE[19029]: ,]</label>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<left>155</left>
+					<top>130</top>
+					<width>595</width>
+					<height>30</height>
+					<label>$INFO[Pvr.NextRecordingTitle]</label>
+					<font>font15</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
 				</control>
 			</control>
 		</control>
 	</include>
 	<include name="NowPlayingMusicWidget">
 		<!-- Music Info -->
-		<control type="group">
+		<control type="grouplist">
 			<left>14</left>
 			<top>55</top>
+			<width>1860</width>
+			<height>206</height>
+			<itemgap>30</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
 			<visible>Player.HasAudio</visible>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<animation effect="slide" start="0,0" end="0,57" time="300" condition="Window.IsVisible(playercontrols) + !System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,32" time="300" condition="Window.IsVisible(playercontrols) + System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,25" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
-			<control type="image">
-				<description>background image</description>
-				<left>16</left>
-				<top>16</top>
+			<control type="group">
 				<width>768</width>
-				<height>174</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
-			</control>
-			<control type="image">
-				<left>33</left>
-				<top>33</top>
-				<width>110</width>
-				<height>141</height>
-				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-				<aspectratio  align="left" aligny="center">keep</aspectratio>
-			</control>
-			<control type="label">
-				<left>155</left>
-				<top>34</top>
-				<width>595</width>
-				<height>50</height>
-				<label>31020</label>
-				<font>font15_title</font>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-			</control>
-			<control type="fadelabel">
-				<left>155</left>
-				<top>86</top>
-				<width>595</width>
-				<height>30</height>
-				<font>font15</font>
-				<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.TrackNumber, - ,. ]$INFO[Player.Title]</label>
-				<textcolor>grey</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
-			</control>
-			<control type="label">
-				<left>155</left>
-				<top>130</top>
-				<width>595</width>
-				<height>30</height>
-				<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
-				<font>font15</font>
-				<textcolor>grey</textcolor>
+				<control type="image">
+					<description>background image</description>
+					<left>16</left>
+					<top>16</top>
+					<width>768</width>
+					<height>174</height>
+					<texture border="18">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="image">
+					<left>33</left>
+					<top>33</top>
+					<width>110</width>
+					<height>141</height>
+					<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+					<aspectratio  align="left" aligny="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>34</top>
+					<width>595</width>
+					<height>50</height>
+					<label>31020</label>
+					<font>font15_title</font>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+				</control>
+				<control type="fadelabel">
+					<left>155</left>
+					<top>86</top>
+					<width>595</width>
+					<height>30</height>
+					<font>font15</font>
+					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.TrackNumber, - ,. ]$INFO[Player.Title]</label>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>130</top>
+					<width>595</width>
+					<height>30</height>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
+					<font>font15</font>
+					<textcolor>grey</textcolor>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -906,7 +920,7 @@
 				<top>76</top>
 				<visible>Integer.IsGreater(Container(9060).NumItems,0) | Container(9060).IsUpdating</visible>
 				<height>300</height>
-				<scrolltime>400</scrolltime>
+				<scrolltime tween="sine">400</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 				<onup>9000</onup>
