@@ -853,25 +853,22 @@
 			<include>VisibleFadeAnimation</include>
 			<visible>!Window.IsVisible(playercontrols)</visible>
 			<control type="image">
-				<left>0</left>
 				<width>1920</width>
 				<height>87</height>
 				<texture>home/submenu_bar.png</texture>
 			</control>
 			<control type="label">
-				<left>1880</left>
-				<top>-2</top>
+				<left>1885</left>
 				<width>40</width>
-				<height>41</height>
+				<height>38</height>
 				<label></label>
-				<font>IconSmall</font>
+				<font>IconTiny</font>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="rss">
 				<description>RSS feed</description>
-				<left>10</left>
 				<top>-2</top>
-				<height>25</height>
+				<left>12</left>
 				<width>1860</width>
 				<font>font13</font>
 				<urlset>1</urlset>
