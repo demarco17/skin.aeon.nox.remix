@@ -12,6 +12,20 @@
 			<align>center</align>
 			<control type="button" id="2">
 				<width>494</width>
+				<height>70</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<font>font15_title</font>
+				<label>19140</label>
+				<textcolor>dialogheader</textcolor>
+				<focusedcolor>dialogheader</focusedcolor>
+				<disabledcolor>dialogheader</disabledcolor>
+				<invalidcolor>dialogheader</invalidcolor>
+				<enable>false</enable>
+			</control>
+			<control type="button" id="3">
+				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
 				<align>center</align>
@@ -20,7 +34,7 @@
 				<onclick condition="!System.hasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 				<onclick condition="System.hasAddon(script.globalsearch)">RunScript(script.globalsearch)</onclick>
 			</control>
-			<control type="button" id="3">
+			<control type="button" id="4">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -30,7 +44,7 @@
 				<onclick condition="!System.hasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
 				<onclick condition="System.hasAddon(plugin.video.youtube)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/list/",return)</onclick>
 			</control>
-			<control type="button" id="4">
+			<control type="button" id="5">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -39,6 +53,15 @@
 				<onclick>Dialog.Close(all)</onclick>
 				<onclick condition="!System.hasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 				<onclick condition="System.hasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=moviedbbrowser,search=True)</onclick>
+			</control>
+			<control type="button" id="6">
+				<width>494</width>
+				<height>30</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label />
+				<enable>false</enable>
 			</control>
 		</control>
 	</controls>

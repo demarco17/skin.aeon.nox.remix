@@ -55,8 +55,8 @@
 						<control type="label">
 							<left>700</left>
 							<width>300</width>
-							<height>120</height>
-							<font>font13</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$VAR[ListLabel2Var]</label>
@@ -69,7 +69,7 @@
 							<width>42</width>
 							<height>26</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="grey2">$VAR[UnFocusHDIndicator]</texture>
+							<texture colordiffuse="grey2">$VAR[HD_Indicator]</texture>
 						</control>
 						<control type="image">
 							<left>1070</left>
@@ -138,8 +138,8 @@
 						<control type="label">
 							<left>700</left>
 							<width>300</width>
-							<height>120</height>
-							<font>font13</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$VAR[ListLabel2Var]</label>
 							<animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEmpty(ListItem.VideoResolution) + !ListItem.IsCollection">conditional</animation>
@@ -151,7 +151,7 @@
 							<width>42</width>
 							<height>26</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="white">$VAR[UnFocusHDIndicator]</texture>
+							<texture colordiffuse="white">$VAR[HD_Indicator]</texture>
 						</control>
 						<control type="image">
 							<left>1070</left>
@@ -428,8 +428,8 @@
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
-							<height>120</height>
-							<font>font15</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$VAR[ListLabel2Var]</label>
@@ -490,8 +490,8 @@
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
-							<height>120</height>
-							<font>font15</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$VAR[ListLabel2Var]</label>
 							<visible>![Container.Content(albums) | Container.Content(songs)]</visible>
@@ -748,8 +748,8 @@
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
-							<height>120</height>
-							<font>font15</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.AddonVersion]</label>
@@ -787,8 +787,8 @@
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
-							<height>120</height>
-							<font>font15</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.AddonVersion]</label>
 						</control>
@@ -884,8 +884,8 @@
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
-							<height>120</height>
-							<font>font15</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$VAR[ListLabel2Var]</label>
@@ -923,8 +923,8 @@
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
-							<height>120</height>
-							<font>font15</font>
+							<height>122</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$VAR[ListLabel2Var]</label>
 						</control>

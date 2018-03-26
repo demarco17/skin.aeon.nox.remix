@@ -12,6 +12,20 @@
 			<align>center</align>
 			<control type="button" id="2">
 				<width>494</width>
+				<height>70</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<font>font15_title</font>
+				<label>$LOCALIZE[31141]</label>
+				<textcolor>dialogheader</textcolor>
+				<focusedcolor>dialogheader</focusedcolor>
+				<disabledcolor>dialogheader</disabledcolor>
+				<invalidcolor>dialogheader</invalidcolor>
+				<enable>false</enable>
+			</control>
+			<control type="button" id="3">
+				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
 				<align>center</align>
@@ -19,7 +33,7 @@
 				<onclick>Quit()</onclick>
 				<visible>System.ShowExitButton</visible>
 			</control>
-			<control type="button" id="3">
+			<control type="button" id="4">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -28,7 +42,7 @@
 				<onclick>Powerdown()</onclick>
 				<visible>System.CanPowerDown</visible>
 			</control>
-			<control type="button" id="4">
+			<control type="button" id="5">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -38,7 +52,7 @@
 				<visible>!System.HasAlarm(shutdowntimer)</visible>
 				<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 			</control>
-			<control type="button" id="5">
+			<control type="button" id="6">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -47,7 +61,7 @@
 				<onclick>CancelAlarm(shutdowntimer)</onclick>
 				<visible>System.HasAlarm(shutdowntimer)</visible>
 			</control>
-			<control type="button" id="6">
+			<control type="button" id="7">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -56,7 +70,7 @@
 				<onclick>Suspend()</onclick>
 				<visible>System.CanSuspend</visible>
 			</control>
-			<control type="button" id="7">
+			<control type="button" id="8">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -65,7 +79,7 @@
 				<onclick>Hibernate()</onclick>
 				<visible>System.CanHibernate</visible>
 			</control>
-			<control type="button" id="8">
+			<control type="button" id="9">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -74,7 +88,7 @@
 				<onclick>Reset()</onclick>
 				<visible>System.CanReboot</visible>
 			</control>
-			<control type="button" id="9">
+			<control type="button" id="10">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -85,7 +99,7 @@
 				<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 				<visible>System.Loggedon</visible>
 			</control>
-			<control type="button" id="10">
+			<control type="button" id="11">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -96,7 +110,7 @@
 				<onclick>mastermode</onclick>
 				<visible>System.HasLocks</visible>
 			</control>
-			<control type="button" id="11">
+			<control type="button" id="12">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -105,7 +119,7 @@
 				<onclick>InhibitIdleShutdown(false)</onclick>
 				<visible>System.HasShutdown +!System.IsInhibit</visible>
 			</control>
-			<control type="button" id="12">
+			<control type="button" id="13">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -114,7 +128,7 @@
 				<onclick>InhibitIdleShutdown(false)</onclick>
 				<visible>System.HasShutdown + System.IsInhibit</visible>
 			</control>
-			<control type="button" id="13">
+			<control type="button" id="14">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
@@ -122,6 +136,15 @@
 				<label>$LOCALIZE[5]</label>
 				<onclick>Dialog.Close(shutdownmenu)</onclick>
 				<onclick>ActivateWindow(settings)</onclick>
+			</control>
+			<control type="button" id="15">
+				<width>494</width>
+				<height>30</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label />
+				<enable>false</enable>
 			</control>
 		</control>
 	</controls>

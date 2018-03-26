@@ -582,7 +582,7 @@
 				<width>$PARAM[width]</width>
 				<textcolor>grey3</textcolor>
 				<label>$PARAM[label]</label>
-				<font>font13_title</font>
+				<font>font13</font>
 				<align>$PARAM[align]</align>
 			</control>
 			<control type="list" id="$PARAM[list_id]">

@@ -392,7 +392,11 @@ msgctxt "#31132"
 msgid "Hardware decoding"
 msgstr ""
 
-#empty strings from id 31133 to 31141
+#empty strings from id 31133 to 31140
+
+msgctxt "#31141"
+msgid "Power Options"
+msgstr ""
 
 msgctxt "#31142"
 msgid "Settings level"

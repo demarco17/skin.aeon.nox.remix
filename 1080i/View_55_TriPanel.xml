@@ -44,26 +44,28 @@
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Genre) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
-					<control type="group">
+					<control type="grouplist">
 						<width>448</width>
+						<height>90</height>
+						<orientation>horizontal</orientation>
+						<control type="button">
+							<label>$VAR[TriPanelInfoVar]</label>
+							<width>224</width>
+							<textcolor>$VAR[SkinThemeColour]</textcolor>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>Container.Content(movies)</visible>
+						</control>
 						<control type="button">
 							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
-							<width>448</width>
+							<width>224</width>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 							<visible>[Container.Content(movies) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Duration)</visible>
 						</control>
 						<control type="button">
-							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
-							<left>224</left>
+							<label />
 							<width>224</width>
-							<height>90</height>
-							<textoffsetx>15</textoffsetx>
-							<aligny>top</aligny>
-							<font>font14</font>
-							<textcolor>grey</textcolor>
-							<texturefocus />
-							<texturenofocus />
-							<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Year)</visible>
+							<include>ShowCaseInfoPanelButtonsValues</include>
+							<visible>Container.Content(episodes)</visible>
 						</control>
 					</control>
 				</control>
@@ -194,8 +196,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
@@ -240,8 +242,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -280,8 +282,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -338,8 +340,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -389,8 +391,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -435,8 +437,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -475,8 +477,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
@@ -533,8 +535,8 @@
 						<control type="label">
 							<left>120</left>
 							<width>590</width>
-							<height>66</height>
-							<font>font13</font>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 						</control>
@@ -808,9 +810,9 @@
 						</control>
 						<control type="label">
 							<left>80</left>
-							<width>680</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>685</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
@@ -837,11 +839,11 @@
 						</control>
 						<control type="label">
 							<left>80</left>
-							<width>680</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>685</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
-							<label>$INFO[ListItem.label2]</label>
+							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>

@@ -82,7 +82,7 @@
 						<width>42</width>
 						<height>42</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="grey">$VAR[UnFocusHDIndicator]</texture>
+						<texture colordiffuse="grey">$VAR[HD_Indicator]</texture>
 						<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 					</control>
 				</control>
@@ -92,7 +92,7 @@
 						<width>1920</width>
 						<height>30</height>
 						<align>center</align>
-						<font>font13_title</font>
+						<font>font13</font>
 						<textcolor>grey3</textcolor>
 						<label>$VAR[FloorSubLabelVar]</label>
 						<textoffsetx>30</textoffsetx>
@@ -193,7 +193,7 @@
 						<width>1080</width>
 						<height>30</height>
 						<align>left</align>
-						<font>font13_title</font>
+						<font>font13</font>
 						<textcolor>grey3</textcolor>
 						<label>$VAR[FloorSubLabelVar]</label>
 						<textoffsetx>30</textoffsetx>

@@ -52,15 +52,14 @@
 					<height>45</height>
 					<font>font15_title</font>
 					<textoffsetx>15</textoffsetx>
-					<textcolor>grey</textcolor>
-					<label>$INFO[Window.Property(Location)]</label>
+					<label>$INFO[Window.Property(Location),[B],[/B]]$INFO[Window.Property(Day0.HighTemp),    [COLOR red],]$INFO[System.TemperatureUnits,,[/COLOR]]$INFO[Window.Property(Day0.LowTemp),[COLOR grey3]  |  [/COLOR][COLOR dodgerblue],]$INFO[System.TemperatureUnits,,[/COLOR]]</label>
 				</control>
 				<control type="label">
 					<description>update label</description>
-					<top>190</top>
+					<top>200</top>
 					<width>690</width>
 					<height>45</height>
-					<font>font13_title</font>
+					<font>font13</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>grey2</textcolor>
 					<label>$INFO[Window.Property(Updated),$LOCALIZE[31301]: ]</label>
@@ -243,14 +242,14 @@
 							<label>$LOCALIZE[31909]</label>
 							<visible>!Weather.IsFetched</visible>
 						</item>
-						<item>
+						<!--<item>
 							<label>$INFO[Window.Property(Day0.Title)]</label>
 							<label2>$INFO[Window.Property(Day0.Outlook)]</label2>
 							<icon>$VAR[WeatherIconDay0]</icon>
 							<property name="HighTemp">$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</property>
 							<visible>!String.IsEmpty(Window.Property(Day0.Title))</visible>
-						</item>
+						</item>-->
 						<item>
 							<label>$INFO[Window.Property(Day1.Title)]</label>
 							<label2>$INFO[Window.Property(Day1.Outlook)]</label2>
@@ -282,6 +281,14 @@
 							<property name="HighTemp">$INFO[Window.Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</property>
 							<property name="LowTemp">$INFO[Window.Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</property>
 							<visible>!String.IsEmpty(Window.Property(Day4.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Day5.Title)]</label>
+							<label2>$INFO[Window.Property(Day5.Outlook)]</label2>
+							<icon>$VAR[WeatherIconDay5]</icon>
+							<property name="HighTemp">$INFO[Window.Property(Day5.HighTemp)]$INFO[System.TemperatureUnits]</property>
+							<property name="LowTemp">$INFO[Window.Property(Day5.LowTemp)]$INFO[System.TemperatureUnits]</property>
+							<visible>!String.IsEmpty(Window.Property(Day5.Title))</visible>
 						</item>
 					</content>
 				</control>

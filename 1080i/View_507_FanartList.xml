@@ -296,9 +296,9 @@
 						</control>
 						<control type="label">
 							<left>360</left>
-							<width>620</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>625</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -342,9 +342,9 @@
 						</control>
 						<control type="label">
 							<left>360</left>
-							<width>620</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>625</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -383,9 +383,9 @@
 						</control>
 						<control type="label">
 							<left>360</left>
-							<width>620</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>625</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -441,9 +441,9 @@
 						</control>
 						<control type="label">
 							<left>360</left>
-							<width>620</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>625</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -492,9 +492,9 @@
 						</control>
 						<control type="label">
 							<left>915</left>
-							<width>65</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>70</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
@@ -538,9 +538,9 @@
 						</control>
 						<control type="label">
 							<left>915</left>
-							<width>65</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>70</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
@@ -578,9 +578,9 @@
 						</control>
 						<control type="label">
 							<left>360</left>
-							<width>620</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>625</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
@@ -636,9 +636,9 @@
 						</control>
 						<control type="label">
 							<left>360</left>
-							<width>620</width>
-							<height>66</height>
-							<font>font13</font>
+							<width>625</width>
+							<height>68</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</label>
 						</control>

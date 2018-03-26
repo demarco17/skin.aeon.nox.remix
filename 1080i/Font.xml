@@ -22,9 +22,38 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>font12_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>bold</style>
+			<size>26</size>
+		</font>
+		<font>
+			<name>font12_title</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>26</size>
+		</font>
+		<font>
 			<name>font13</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>30</size>
+		</font>
+		<font>
+			<name>font13_title</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
+			<name>font14_title</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>33</size>
 		</font>
 		<font>
 			<name>font14_textbox</name>
@@ -33,27 +62,11 @@
 			<linespacing>1.1</linespacing>
 		</font>
 		<font>
-			<name>font15_textbox</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>35</size>
-			<linespacing>1.4</linespacing>
-		</font>
-		<font>
 			<name>Description_textbox</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>33</size>
 			<style>italics</style>
 			<linespacing>1.27</linespacing>
-		</font>
-		<font>
-			<name>font30_mono</name>
-			<filename>RobotoMono-Regular.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>font14</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>33</size>
 		</font>
 		<font>
 			<name>font15</name>
@@ -67,45 +80,6 @@
 			<size>35</size>
 		</font>
 		<font>
-			<name>font16</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>38</size>
-		</font>
-		<font>
-			<name>font30</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>45</size>
-		</font>
-		<font>
-			<name>font48</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>48</size>
-		</font>
-		<font>
-			<name>font48_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<style>bold</style>
-			<size>48</size>
-		</font>
-		<font>
-			<name>font12_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<style>uppercase</style>
-			<size>26</size>
-		</font>
-		<font>
-			<name>font13_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<style>uppercase</style>
-			<size>30</size>
-		</font>
-		<font>
-			<name>font14_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<style>uppercase</style>
-			<size>33</size>
-		</font>
-		<font>
 			<name>font15_title</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>uppercase</style>
@@ -116,6 +90,17 @@
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>uppercase bold</style>
 			<size>33</size>
+		</font>
+		<font>
+			<name>font15_textbox</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>35</size>
+			<linespacing>1.4</linespacing>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>38</size>
 		</font>
 		<font>
 			<name>font16_title</name>
@@ -142,16 +127,20 @@
 			<size>36</size>
 		</font>
 		<font>
+			<name>font30</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>45</size>
+		</font>
+		<font>
 			<name>font30_title_bold</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>uppercase bold</style>
 			<size>45</size>
 		</font>
 		<font>
-			<name>font48_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<style>uppercase</style>
-			<size>48</size>
+			<name>font30_mono</name>
+			<filename>RobotoMono-Regular.ttf</filename>
+			<size>30</size>
 		</font>
 		<font>
 			<name>font35_title</name>
@@ -170,6 +159,23 @@
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>uppercase</style>
 			<size>68</size>
+		</font>
+		<font>
+			<name>font48</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font48_title</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font48_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>bold</style>
+			<size>48</size>
 		</font>
 		<font>
 			<name>font_LogoAlt</name>
