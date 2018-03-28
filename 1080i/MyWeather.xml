@@ -48,21 +48,30 @@
 				<control type="label">
 					<description>weather location label</description>
 					<top>150</top>
-					<width>690</width>
+					<width>820</width>
 					<height>45</height>
-					<font>font15_title</font>
+					<font>font30</font>
 					<textoffsetx>15</textoffsetx>
-					<label>$INFO[Window.Property(Location),[B],[/B]]$INFO[Window.Property(Day0.HighTemp),    [COLOR red],]$INFO[System.TemperatureUnits,,[/COLOR]]$INFO[Window.Property(Day0.LowTemp),[COLOR grey3]  |  [/COLOR][COLOR dodgerblue],]$INFO[System.TemperatureUnits,,[/COLOR]]</label>
+					<label>$INFO[Window.Property(Location),[B],[/B]]</label>
 				</control>
 				<control type="label">
-					<description>update label</description>
+					<description>today forcast condition</description>
 					<top>200</top>
-					<width>690</width>
+					<width>820</width>
 					<height>45</height>
-					<font>font13</font>
+					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
-					<textcolor>grey2</textcolor>
-					<label>$INFO[Window.Property(Updated),$LOCALIZE[31301]: ]</label>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Window.Property(Day0.Outlook)]</label>
+				</control>
+				<control type="label">
+					<description>today forcast temp</description>
+					<top>245</top>
+					<width>820</width>
+					<height>45</height>
+					<font>font15</font>
+					<textoffsetx>15</textoffsetx>
+					<label>[COLOR crimson]$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR][COLOR dodgerblue]$INFO[Window.Property(Day0.LowTemp),[COLOR grey3]  |  [/COLOR],]$INFO[System.TemperatureUnits][/COLOR]</label>
 				</control>
 				<control type="label">
 					<description>current temp Value</description>
@@ -85,11 +94,13 @@
 				</control>
 				<control type="label">
 					<description>current condition label</description>
-					<top>260</top>
-					<width>1316</width>
+					<left>715</left>
+					<top>230</top>
+					<width>620</width>
 					<height>70</height>
-					<info>Window.Property(Current.Condition)</info>
-					<font>font48_bold</font>
+					<align>center</align>
+					<label>$INFO[Window.Property(Current.Condition),[B],[/B]]</label>
+					<font>font30</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>grey</textcolor>
 				</control>
@@ -191,7 +202,7 @@
 					</control>
 				</control>
 				<control type="panel" id="300">
-					<top>540</top>
+					<top>550</top>
 					<width>1645</width>
 					<height>300</height>
 					<orientation>horizontal</orientation>
@@ -211,7 +222,6 @@
 							<height>60</height>
 							<font>font15</font>
 							<align>center</align>
-							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<textoffsetx>15</textoffsetx>
 						</control>
@@ -226,13 +236,13 @@
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
-							<top>240</top>
+							<top>215</top>
 							<width>329</width>
 							<height>60</height>
 							<font>font15</font>
 							<align>center</align>
 							<textcolor>grey</textcolor>
-							<label>$INFO[ListItem.Property(HighTemp),[COLOR red],[/COLOR]]$INFO[ListItem.Property(LowTemp),[COLOR grey3]  |  [/COLOR][COLOR dodgerblue],[/COLOR]]</label>
+							<label>$INFO[ListItem.Property(HighTemp),[COLOR crimson],[/COLOR]]$INFO[ListItem.Property(LowTemp),[COLOR grey3]  |  [/COLOR][COLOR dodgerblue],[/COLOR]]</label>
 							<textoffsetx>15</textoffsetx>
 						</control>
 					</itemlayout>
