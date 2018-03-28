@@ -148,9 +148,7 @@ msgctxt "#31039"
 msgid "Actions"
 msgstr ""
 
-msgctxt "#31040"
-msgid "Wind Chill"
-msgstr ""
+#empty string with id 31040
 
 msgctxt "#31041"
 msgid "Forecast"
@@ -568,13 +566,7 @@ msgstr ""
 
 #Weather plugin
 
-#empty strings from id 31906 to 31908
-
-msgctxt "#31909"
-msgid "Fetching forecast info..."
-msgstr ""
-
-#empty string with id 31910
+#empty strings from id 31906 to 31910
 
 msgctxt "#31911"
 msgid "Setup the Aeon Nox main menu."

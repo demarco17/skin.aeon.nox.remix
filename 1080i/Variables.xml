@@ -700,11 +700,6 @@
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Current.FanartCode)]</value>
 		<value>$INFO[Window.Property(Current.ConditionIcon)]</value>
 	</variable>
-	<!--<variable name="WeatherIconDay0">
-		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day0.FanartCode),,.png]</value>
-		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day0.FanartCode)]</value>
-		<value>$INFO[Window.Property(Day0.OutlookIcon)]</value>
-	</variable>-->
 	<variable name="WeatherIconDay1">
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day1.FanartCode),,.png]</value>
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day1.FanartCode)]</value>

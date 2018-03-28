@@ -167,16 +167,9 @@
 						<include>SettingsPanelButtonsValues</include>
 					</control>
 					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31040]: [/COLOR]$INFO[Window.Property(Current.WindChill)]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-						<visible>String.IsEqual(Weather.Plugin,weather.yahoo) + !String.IsEmpty(Window.Property(Current.WindChill))</visible>
-					</control>
-					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[1448]: [/COLOR]$INFO[Window.Property(Current.Precipitation)]</label>
 						<textoffsety>10</textoffsety>
 						<include>SettingsPanelButtonsValues</include>
-						<visible>!String.IsEqual(Weather.Plugin,weather.yahoo) + !String.IsEmpty(Window.Property(Current.Precipitation))</visible>
 					</control>
 				</control>
 				<control type="image">
@@ -249,18 +242,6 @@
 					</itemlayout>
 					<focusedlayout height="300" width="329" />
 					<content>
-						<item>
-							<label>$LOCALIZE[31909]</label>
-							<visible>!Weather.IsFetched</visible>
-						</item>
-						<!--<item>
-							<label>$INFO[Window.Property(Day0.Title)]</label>
-							<label2>$INFO[Window.Property(Day0.Outlook)]</label2>
-							<icon>$VAR[WeatherIconDay0]</icon>
-							<property name="HighTemp">$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</property>
-							<property name="LowTemp">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</property>
-							<visible>!String.IsEmpty(Window.Property(Day0.Title))</visible>
-						</item>-->
 						<item>
 							<label>$INFO[Window.Property(Day1.Title)]</label>
 							<label2>$INFO[Window.Property(Day1.Outlook)]</label2>
