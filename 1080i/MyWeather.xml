@@ -214,7 +214,7 @@
 						<control type="label">
 							<width>329</width>
 							<height>60</height>
-							<font>font15</font>
+							<font>font15_bold</font>
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textoffsetx>15</textoffsetx>
