@@ -61,8 +61,8 @@
 					<height>45</height>
 					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
-					<textcolor>grey</textcolor>
-					<label>$INFO[Window.Property(Day0.Outlook)]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label>$INFO[Window.Property(Day0.Outlook),$LOCALIZE[31041]: [COLOR grey],[/COLOR]]</label>
 				</control>
 				<control type="label">
 					<description>today forcast temp</description>
@@ -71,7 +71,8 @@
 					<height>45</height>
 					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
-					<label>[COLOR crimson]$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR][COLOR dodgerblue]$INFO[Window.Property(Day0.LowTemp),[COLOR grey3]  |  [/COLOR],]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<label>$INFO[Window.Property(Day0.HighTemp),$LOCALIZE[393]: [COLOR grey],,]$INFO[System.TemperatureUnits,,[/COLOR]]$INFO[Window.Property(Day0.LowTemp),  $LOCALIZE[391]: [COLOR grey],]$INFO[System.TemperatureUnits,,[/COLOR]]</label>
 				</control>
 				<control type="label">
 					<description>current temp Value</description>
