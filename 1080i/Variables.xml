@@ -62,7 +62,7 @@
 	</variable>
 	<variable name="TopbarRightVar">
 		<value condition="Window.IsActive(1133)">$INFO[Container(51).NumItems,, $LOCALIZE[31025]]</value>
-		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Location)]</value>
+		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Updated),$LOCALIZE[31301]: ]</value>
 		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[137]: ","[COLOR grey3]  |  [/COLOR]]$INFO[Container.NumItems,, $LOCALIZE[31025]]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),, $LOCALIZE[33006]]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3]  |  [/COLOR], $LOCALIZE[20161]]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(20)">$INFO[Container(20).NumItems,, $LOCALIZE[31025]]</value>
@@ -700,11 +700,11 @@
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Current.FanartCode)]</value>
 		<value>$INFO[Window.Property(Current.ConditionIcon)]</value>
 	</variable>
-	<variable name="WeatherIconDay0">
+	<!--<variable name="WeatherIconDay0">
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day0.FanartCode),,.png]</value>
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day0.FanartCode)]</value>
 		<value>$INFO[Window.Property(Day0.OutlookIcon)]</value>
-	</variable>
+	</variable>-->
 	<variable name="WeatherIconDay1">
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day1.FanartCode),,.png]</value>
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Day1.FanartCode)]</value>

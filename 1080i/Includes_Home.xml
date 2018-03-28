@@ -638,6 +638,17 @@
 					<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
 					<font>font15</font>
 					<textcolor>grey</textcolor>
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="label">
+					<left>155</left>
+					<top>130</top>
+					<width>620</width>
+					<height>30</height>
+					<label>$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ,]</label>
+					<font>font15</font>
+					<textcolor>grey</textcolor>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 			</control>
 		</control>
