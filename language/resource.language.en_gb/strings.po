@@ -245,7 +245,7 @@ msgid "Player Controls"
 msgstr ""
 
 msgctxt "#31069"
-msgid "Change location"
+msgid "Location"
 msgstr ""
 
 msgctxt "#31070"

@@ -181,8 +181,8 @@
 						</control>
 						<control type="label">
 							<width>1200</width>
-							<height>60</height>
-							<font>font15</font>
+							<height>70</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
@@ -228,8 +228,8 @@
 						</control>
 						<control type="label">
 							<width>1200</width>
-							<height>60</height>
-							<font>font15</font>
+							<height>70</height>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.AddonVersion]</label>

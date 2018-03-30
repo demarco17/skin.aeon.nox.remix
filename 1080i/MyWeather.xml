@@ -14,6 +14,9 @@
 			<onleft>SetProperty(MediaMenu,True,home)</onleft>
 			<onleft>9050</onleft>
 		</control>
+		<control type="button" id="3">
+			<include>HiddenObject</include>
+		</control>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<control type="image">
@@ -48,7 +51,7 @@
 				<control type="label">
 					<description>current condition label</description>
 					<left>1234</left>
-					<top>260</top>
+					<top>264</top>
 					<width>410</width>
 					<height>70</height>
 					<align>center</align>
@@ -84,7 +87,7 @@
 					<font>font15</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
-					<label>$INFO[Window.Property(Day0.HighTemp),$LOCALIZE[393]: [COLOR grey],,]$INFO[System.TemperatureUnits,,[/COLOR]]$INFO[Window.Property(Day0.LowTemp),  $LOCALIZE[391]: [COLOR grey],]$INFO[System.TemperatureUnits,,[/COLOR]]</label>
+					<label>$INFO[Window.Property(Day0.HighTemp),$LOCALIZE[393]: [COLOR grey],[/COLOR],]$INFO[System.TemperatureUnits,[COLOR grey],[/COLOR]]$INFO[Window.Property(Day0.LowTemp),  $LOCALIZE[391]: [COLOR grey],[/COLOR]]$INFO[System.TemperatureUnits,[COLOR grey],[/COLOR]]</label>
 				</control>
 				<control type="label">
 					<description>current temp Value</description>
@@ -104,6 +107,7 @@
 					<font>font16</font>
 					<label>$INFO[System.TemperatureUnits]</label>
 					<textcolor>grey</textcolor>
+					<visible>!String.IsEmpty(Window.Property(Current.Temperature))</visible>
 				</control>
 				<control type="image">
 					<description>separator image</description>
@@ -305,10 +309,12 @@
 					<enable>false</enable>
 					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
-				<control type="spincontrolex" id="3">
+				<control type="button" id="201">
 					<description>change location button</description>
-					<width>400</width>
-					<font />
+					<include>ButtonCommonValues</include>
+					<label>31069</label>
+					<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Control.GetLabel(3)][/COLOR]</label2>
+					<onclick>Weather.LocationNext</onclick>
 				</control>
 				<control type="button" id="206">
 					<description>Weather icons</description>
@@ -367,20 +373,6 @@
 					<onclick condition="Player.HasVideo">Fullscreen</onclick>
 					<onclick condition="Player.HasVideo">ActivateWindow(videoosd)</onclick>
 					<visible>Player.HasMedia</visible>
-				</control>
-			</control>
-			<control type="group">
-				<top>160</top>
-				<control type="label">
-					<include>ButtonCommonValues</include>
-					<label>31069</label>
-					<visible>!Control.HasFocus(3)</visible>
-				</control>
-				<control type="label">
-					<textcolor>white</textcolor>
-					<include>ButtonCommonValues</include>
-					<label>31069</label>
-					<visible>Control.HasFocus(3)</visible>
 				</control>
 			</control>
 		</control>

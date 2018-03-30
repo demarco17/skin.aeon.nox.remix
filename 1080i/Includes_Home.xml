@@ -614,7 +614,7 @@
 					<width>620</width>
 					<height>50</height>
 					<label>31021</label>
-					<font>font15_title</font>
+					<font>font15_title_bold</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="fadelabel">
@@ -622,7 +622,7 @@
 					<top>86</top>
 					<width>620</width>
 					<height>30</height>
-					<font>font15</font>
+					<font>font14</font>
 					<label>$VAR[HomePlayingTitleVar]</label>
 					<textcolor>grey</textcolor>
 					<align>left</align>
@@ -630,25 +630,29 @@
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
 				</control>
-				<control type="label">
+				<control type="progress">
 					<left>155</left>
-					<top>130</top>
-					<width>620</width>
-					<height>30</height>
-					<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
-					<font>font15</font>
-					<textcolor>grey</textcolor>
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<top>135</top>
+					<width>644</width>
+					<height>38</height>
+					<info>PVR.EpgEventProgress</info>
+					<visible>VideoPlayer.HasEpg</visible>
+				</control>
+				<control type="progress">
+					<left>155</left>
+					<top>135</top>
+					<width>644</width>
+					<height>38</height>
+					<info>Player.Progress</info>
+					<visible>!VideoPlayer.HasEpg</visible>
 				</control>
 				<control type="label">
-					<left>155</left>
-					<top>130</top>
-					<width>620</width>
-					<height>30</height>
-					<label>$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ,]</label>
-					<font>font15</font>
-					<textcolor>grey</textcolor>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<left>150</left>
+					<top>135</top>
+					<width>644</width>
+					<height>35</height>
+					<label>$VAR[SeekTimeLabelVar]</label>
+					<textoffsetx>15</textoffsetx>
 				</control>
 			</control>
 		</control>
@@ -692,7 +696,7 @@
 					<width>620</width>
 					<height>50</height>
 					<label>19158</label>
-					<font>font15_title</font>
+					<font>font15_title_bold</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="fadelabel">
@@ -700,8 +704,8 @@
 					<top>86</top>
 					<width>620</width>
 					<height>30</height>
-					<font>font15</font>
-					<label>$INFO[Pvr.NowRecordingChannel,$LOCALIZE[19029]: ,]</label>
+					<font>font14</font>
+					<label>$INFO[Pvr.NowRecordingChannel,[B]$LOCALIZE[19029]:[/B] ,]</label>
 					<textcolor>grey</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -714,7 +718,7 @@
 					<width>620</width>
 					<height>30</height>
 					<label>$INFO[Pvr.NowRecordingTitle]</label>
-					<font>font15</font>
+					<font>font14</font>
 					<textcolor>grey</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -751,7 +755,7 @@
 					<control type="label">
 						<width>auto</width>
 						<label>$LOCALIZE[19157]:</label>
-						<font>font15_title</font>
+						<font>font15_title_bold</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
 					<control type="label">
@@ -766,8 +770,8 @@
 					<top>86</top>
 					<width>620</width>
 					<height>30</height>
-					<font>font15</font>
-					<label>$INFO[Pvr.NextRecordingChannel,$LOCALIZE[19029]: ,]</label>
+					<font>font14</font>
+					<label>$INFO[Pvr.NextRecordingChannel,[B]$LOCALIZE[19029]:[/B] ,]</label>
 					<textcolor>grey</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -780,7 +784,7 @@
 					<width>620</width>
 					<height>30</height>
 					<label>$INFO[Pvr.NextRecordingTitle]</label>
-					<font>font15</font>
+					<font>font14</font>
 					<textcolor>grey</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -830,7 +834,7 @@
 					<width>620</width>
 					<height>50</height>
 					<label>31020</label>
-					<font>font15_title</font>
+					<font>font15_title_bold</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 				</control>
 				<control type="fadelabel">
@@ -838,7 +842,7 @@
 					<top>86</top>
 					<width>620</width>
 					<height>30</height>
-					<font>font15</font>
+					<font>font14</font>
 					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.TrackNumber, - ,. ]$INFO[Player.Title]</label>
 					<textcolor>grey</textcolor>
 					<align>left</align>
@@ -846,14 +850,21 @@
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
 				</control>
-				<control type="label">
+				<control type="progress">
 					<left>155</left>
-					<top>130</top>
-					<width>620</width>
-					<height>30</height>
+					<top>135</top>
+					<width>644</width>
+					<height>38</height>
+					<info>Player.Progress</info>
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>135</top>
+					<width>644</width>
+					<height>35</height>
+					<label>$VAR[SeekTimeLabelVar]</label>
+					<textoffsetx>15</textoffsetx>
 					<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
-					<font>font15</font>
-					<textcolor>grey</textcolor>
 				</control>
 			</control>
 		</control>

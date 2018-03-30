@@ -61,15 +61,15 @@
 		<value>$VAR[BreadcrumbsFillerVar]$INFO[Container.FolderName]</value>
 	</variable>
 	<variable name="TopbarRightVar">
-		<value condition="Window.IsActive(1133)">$INFO[Container(51).NumItems,, $LOCALIZE[31025]]</value>
+		<value condition="Window.IsActive(1133)">$INFO[Container(51).NumItems,$LOCALIZE[31025]: ,]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Updated),$LOCALIZE[31301]: ]</value>
-		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[137]: ","[COLOR grey3]  |  [/COLOR]]$INFO[Container.NumItems,, $LOCALIZE[31025]]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[137]: ","[COLOR grey3]  |  [/COLOR]]$INFO[Container.NumItems,$LOCALIZE[31025]: ,]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),, $LOCALIZE[33006]]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3]  |  [/COLOR], $LOCALIZE[20161]]</value>
-		<value condition="Window.IsActive(filemanager) + Control.HasFocus(20)">$INFO[Container(20).NumItems,, $LOCALIZE[31025]]</value>
-		<value condition="Window.IsActive(filemanager) + Control.HasFocus(21)">$INFO[Container(21).NumItems,, $LOCALIZE[31025]]</value>
+		<value condition="Window.IsActive(filemanager) + Control.HasFocus(20)">$INFO[Container(20).NumItems,$LOCALIZE[31025]: ,]</value>
+		<value condition="Window.IsActive(filemanager) + Control.HasFocus(21)">$INFO[Container(21).NumItems,$LOCALIZE[31025]: ,]</value>
 		<value condition="Window.IsActive(SettingsCategory.xml)">$INFO[Control.GetLabel(20),$LOCALIZE[31142]: ,]</value>
 		<value condition="Window.IsActive(settings) | Window.IsActive(skinsettings) | Window.IsActive(profiles) | Window.IsActive(systeminfo)">$INFO[System.AddonTitle(skin.aeon.nox.remix)]</value>
-		<value>$INFO[Container.NumItems,, $LOCALIZE[31025]]</value>
+		<value>$INFO[Container.NumItems,$LOCALIZE[31025]: ,]</value>
 	</variable>
 	<variable name="LibraryStatsVar">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),1)">$INFO[Window(Home).Property(Movies.Count),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(Movies.Watched),[COLOR grey][COLOR grey3]  |  [/COLOR]$LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(Movies.UnWatched),[COLOR grey][COLOR grey3]  |  [/COLOR]$LOCALIZE[16101]:[/COLOR] ]</value>
@@ -121,7 +121,7 @@
 	<variable name="MusicListLabel3Var">
 		<value condition="Container.Content(artists)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
-		<value>$INFO[ListItem.Artist]</value>
+		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="MusicListLabel4Var">
 		<value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>

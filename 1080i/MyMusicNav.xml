@@ -67,7 +67,7 @@
 						<width>1100</width>
 						<height>30</height>
 						<align>center</align>
-						<font>font13_title</font>
+						<font>font13</font>
 						<textcolor>grey3</textcolor>
 						<label>$VAR[FloorLabel2Var]</label>
 						<textoffsetx>30</textoffsetx>
@@ -127,7 +127,7 @@
 						<width>1100</width>
 						<height>30</height>
 						<align>left</align>
-						<font>font13_title</font>
+						<font>font13</font>
 						<textcolor>grey3</textcolor>
 						<label>$VAR[FloorLabel2Var]</label>
 						<textoffsetx>30</textoffsetx>

@@ -411,7 +411,7 @@
 								<left>60</left>
 								<width>1060</width>
 								<height>70</height>
-								<font>font15</font>
+								<font>font12_bold</font>
 								<align>right</align>
 								<textcolor>grey</textcolor>
 								<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
@@ -474,7 +474,7 @@
 								<left>60</left>
 								<width>1060</width>
 								<height>70</height>
-								<font>font15</font>
+								<font>font12_bold</font>
 								<align>right</align>
 								<label fallback="• • • •">$VAR[MusicListLabel4Var]</label>
 							</control>
@@ -613,7 +613,7 @@
 							<left>60</left>
 							<width>1060</width>
 							<height>120</height>
-							<font>font15</font>
+							<font>font12_bold</font>
 							<align>right</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
@@ -652,7 +652,7 @@
 							<left>60</left>
 							<width>1060</width>
 							<height>120</height>
-							<font>font15</font>
+							<font>font12_bold</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>

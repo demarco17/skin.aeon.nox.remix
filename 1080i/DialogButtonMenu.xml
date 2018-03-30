@@ -18,10 +18,7 @@
 				<align>center</align>
 				<font>font15_title</font>
 				<label>$LOCALIZE[31141]</label>
-				<textcolor>dialogheader</textcolor>
-				<focusedcolor>dialogheader</focusedcolor>
 				<disabledcolor>dialogheader</disabledcolor>
-				<invalidcolor>dialogheader</invalidcolor>
 				<enable>false</enable>
 			</control>
 			<control type="button" id="3">

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>1</defaultcontrol>
-	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo | !String.IsEmpty(PVR.ChannelNumberInput)] + [VideoPlayer.IsFullscreen | Window.IsActive(visualisation )] + !Window.IsActive(pvrosdchannels) + !Window.IsVisible(1135)</visible>
+	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo | !String.IsEmpty(PVR.ChannelNumberInput)] + [VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsActive(pvrosdchannels) + !Window.IsVisible(1135)</visible>
 	<controls>
 		<include>PVRChannelNumberInput</include>
 		<control type="group">
@@ -108,91 +107,137 @@
 				<visible>Player.Forwarding | Player.IsTempo</visible>
 			</control>
 		</control>
+
+		<!-- PVR - show channel information when switching channels -->
 		<control type="group">
 			<include>OpenCloseAnimation</include>
-			<top>814</top>
+			<top>815</top>
 			<visible>VideoPlayer.Content(LiveTV) + Player.ShowInfo</visible>
 			<control type="image">
-				<top>20</top>
+				<top>-35</top>
 				<width>1920</width>
-				<height>246</height>
+				<height>320</height>
 				<texture border="4" flipy="true">dialogs/InfoBar.png</texture>
 			</control>
 			<control type="image">
-				<left>5</left>
-				<top>28</top>
-				<width>233</width>
-				<height>233</height>
-				<texture background="true">$INFO[Player.Art(thumb)]</texture>
+				<top>-255</top>
+				<width>1920</width>
+				<height>520</height>
+				<texture>dialogs/logo_back.png</texture>
+			</control>
+			<control type="image">
+				<top>-40</top>
+				<width>253</width>
+				<height>318</height>
+				<aspectratio aligny="center">keep</aspectratio>
+				<texture fallback="settings/icons/livetv.png" background="true">$VAR[HomeNowPlayingThumbVar]</texture>
+				<bordersize>20</bordersize>
 			</control>
 			<control type="label">
 				<left>238</left>
-				<top>28</top>
-				<width>1180</width>
-				<height>40</height>
-				<font>font15_title_bold</font>
+				<top>-30</top>
+				<width>1420</width>
+				<height>60</height>
+				<font>font24_title_bold</font>
+				<scroll>true</scroll>
+				<textoffsetx>15</textoffsetx>
+				<label>$VAR[InfoPlayingTitleVar]</label>
+			</control>
+			<control type="label">
+				<left>238</left>
+				<top>25</top>
+				<width>1420</width>
+				<height>35</height>
+				<font>font13</font>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
-				<label>$INFO[VideoPlayer.ChannelNumberLabel,[COLOR grey2],:[/COLOR] ]$INFO[VideoPlayer.ChannelName]</label>
+				<label>$VAR[InfoPlayingTitleVar2]</label>
 			</control>
 			<control type="label">
-				<left>1420</left>
-				<top>28</top>
-				<width>495</width>
+				<left>1079</left>
+				<top>25</top>
+				<width>840</width>
 				<height>40</height>
-				<font>font12</font>
 				<align>right</align>
+				<font>font13</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>grey2</textcolor>
-				<label>$INFO[System.Time,,[COLOR grey3]  |  [/COLOR]]$INFO[System.Date]</label>
-			</control>
-			<control type="label">
-				<left>238</left>
-				<top>72</top>
-				<width>1682</width>
-				<height>40</height>
-				<font>font14_title</font>
-				<textoffsetx>15</textoffsetx>
-				<textcolor>grey2</textcolor>
-				<label>$INFO[VideoPlayer.Title]$VAR[EpisodePlayCountVar, [COLOR grey2](,)[/COLOR]]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: [COLOR grey2]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)][/COLOR]</label>
 			</control>
 			<control type="textbox">
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<left>253</left>
-				<top>120</top>
-				<width>1652</width>
+				<top>65</top>
+				<width>1645</width>
 				<height>90</height>
 				<font>font14_textbox</font>
-				<include>ShowCaseInfoPanelButtonsValues</include>
-				<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
+				<textcolor>grey</textcolor>
+				<pagecontrol>62</pagecontrol>
+			</control>
+			<control type="grouplist">
+				<left>1320</left>
+				<top>150</top>
+				<width>585</width>
+				<height>90</height>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<itemgap>25</itemgap>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+				</control>
 			</control>
 			<control type="progress">
 				<left>253</left>
-				<top>227</top>
+				<top>220</top>
 				<width>1652</width>
 				<height>38</height>
 				<info>PVR.EpgEventProgress</info>
 			</control>
 			<control type="label">
 				<left>253</left>
-				<top>227</top>
+				<top>220</top>
 				<width>300</width>
 				<height>35</height>
-				<font>font14_title</font>
 				<textoffsetx>10</textoffsetx>
-				<textcolor>grey2</textcolor>
-				<label>$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ,]</label>
+				<label>$VAR[SeekTimeLabelVar]</label>
 			</control>
 			<control type="label">
 				<left>253</left>
-				<top>227</top>
+				<top>220</top>
+				<width>1652</width>
+				<height>35</height>
+				<align>center</align>
+				<label>$INFO[System.Time]</label>
+			</control>
+			<control type="label">
+				<left>253</left>
+				<top>220</top>
 				<width>1652</width>
 				<height>35</height>
 				<align>right</align>
 				<textoffsetx>10</textoffsetx>
-				<font>font14_title</font>
-				<textcolor>grey2</textcolor>
-				<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013] ,]</label>
+				<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</label>
 			</control>
 		</control>
 	</controls>

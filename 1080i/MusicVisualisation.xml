@@ -76,9 +76,9 @@
 				<left>345</left>
 				<top>25</top>
 				<width>1405</width>
-				<height>40</height>
-				<font>font13_title</font>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<height>30</height>
+				<font>font13</font>
+				<textcolor>grey</textcolor>
 				<textoffsetx>15</textoffsetx>
 				<label>$INFO[MusicPlayer.Artist]</label>
 			</control>

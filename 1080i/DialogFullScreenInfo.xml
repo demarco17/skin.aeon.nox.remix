@@ -73,10 +73,10 @@
 				<left>238</left>
 				<top>25</top>
 				<width>1420</width>
-				<height>40</height>
-				<font>font13_title</font>
+				<height>35</height>
+				<font>font13</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<textcolor>grey</textcolor>
 				<label>$VAR[InfoPlayingTitleVar2]</label>
 			</control>
 			<control type="label">
@@ -85,7 +85,7 @@
 				<width>840</width>
 				<height>40</height>
 				<align>right</align>
-				<font>font13_title</font>
+				<font>font13</font>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: [COLOR grey2]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)][/COLOR]</label>

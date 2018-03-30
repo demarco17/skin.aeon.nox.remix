@@ -851,7 +851,7 @@
 				<textcolor>grey2</textcolor>
 				<align>right</align>
 				<aligny>top</aligny>
-				<label>$VAR[EI_INFO.PanelItems,, $LOCALIZE[31025]]</label>
+				<label>$VAR[EI_INFO.PanelItems,$LOCALIZE[31025]: ,]</label>
 				<visible>ControlGroup(9000).HasFocus(32) | ControlGroup(9000).HasFocus(34) | ControlGroup(9000).HasFocus(36) | ControlGroup(9000).HasFocus(37) | ControlGroup(9000).HasFocus(38) | ControlGroup(9000).HasFocus(39) | ControlGroup(9000).HasFocus(40)</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
