@@ -44,10 +44,8 @@
 						<top>32</top>
 						<width>490</width>
 						<height>40</height>
-						<font>font15</font>
-						<align>center</align>
+						<font>font15_title_bold</font>
 						<textcolor>dialogheader</textcolor>
-						<textoffsetx>15</textoffsetx>
 						<label>31506</label>
 					</control>
 					<control type="list" id="13">
@@ -116,7 +114,7 @@
 						<top>32</top>
 						<width>490</width>
 						<height>40</height>
-						<font>font15</font>
+						<font>font15_title_bold</font>
 						<align>center</align>
 						<textcolor>dialogheader</textcolor>
 						<textoffsetx>15</textoffsetx>
@@ -187,7 +185,7 @@
 						<top>32</top>
 						<width>490</width>
 						<height>40</height>
-						<font>font15</font>
+						<font>font15_title_bold</font>
 						<textcolor>dialogheader</textcolor>
 						<align>center</align>
 						<textoffsetx>15</textoffsetx>

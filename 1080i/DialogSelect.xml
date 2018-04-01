@@ -25,7 +25,7 @@
 				<top>32</top>
 				<width>942</width>
 				<height>40</height>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<textoffsetx>15</textoffsetx>
 				<align>center</align>
 				<scroll>true</scroll>

@@ -76,7 +76,7 @@
 				<height>35</height>
 				<font>font13</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>grey</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<label>$VAR[InfoPlayingTitleVar2]</label>
 			</control>
 			<control type="label">

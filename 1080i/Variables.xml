@@ -644,8 +644,8 @@
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="InfoPlayingTitleVar2">
-		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Studio,$LOCALIZE[572]: ,]</value>
+		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</value>
+		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Year,$LOCALIZE[345]: [COLOR grey],[/COLOR]]</value>
 		<value condition="[VideoPlayer.Content(episodes) | VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording] + !VideoPlayer.Content(addons)">$INFO[VideoPlayer.Title]$VAR[EpisodePlayCountVar, [COLOR grey2](,)[/COLOR]]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>

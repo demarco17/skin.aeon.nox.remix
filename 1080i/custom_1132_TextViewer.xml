@@ -21,7 +21,7 @@
 				<top>32</top>
 				<width>1316</width>
 				<height>40</height>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
 				<label>$INFO[Window(Home).Property(TextViewerHeader)]</label>

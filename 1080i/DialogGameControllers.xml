@@ -23,7 +23,7 @@
 				<textoffsetx>15</textoffsetx>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<label>$LOCALIZE[35058]</label>
 			</control>
 			<!-- left group -->

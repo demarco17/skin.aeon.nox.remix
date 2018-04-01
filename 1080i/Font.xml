@@ -34,6 +34,12 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>font12_title_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase bold</style>
+			<size>26</size>
+		</font>
+		<font>
 			<name>font13</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>30</size>
@@ -225,11 +231,6 @@
 			<name>IconLarge</name>
 			<filename>webhostinghub-glyphs.ttf</filename>
 			<size>48</size>
-		</font>
-		<font>
-			<name>IconMassive</name>
-			<filename>webhostinghub-glyphs.ttf</filename>
-			<size>68</size>
 		</font>
 		<font>
 			<name>PseudoTv10</name>

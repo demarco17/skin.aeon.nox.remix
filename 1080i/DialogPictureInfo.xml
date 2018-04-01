@@ -16,11 +16,11 @@
 			</control>
 			<control type="label" id="2">
 				<description>header label</description>
-				<left>30</left>
+				<left>32</left>
 				<top>32</top>
-				<width>1062</width>
+				<width>1058</width>
 				<height>40</height>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<label>13406</label>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
@@ -41,18 +41,18 @@
 					</control>
 					<control type="label">
 						<width>1058</width>
-						<height>60</height>
-						<font>font15</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
+						<height>55</height>
+						<font>font14</font>
+						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label,,:]</label>
 						<textoffsetx>15</textoffsetx>
 					</control>
 					<control type="label">
 						<width>1058</width>
 						<height>60</height>
-						<font>font15</font>
+						<font>font13</font>
 						<align>right</align>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<textoffsetx>15</textoffsetx>
 					</control>
@@ -71,16 +71,16 @@
 					</control>
 					<control type="label">
 						<width>1058</width>
-						<height>60</height>
-						<font>font15</font>
-						<textcolor>$VAR[SkinThemeColour]</textcolor>
+						<height>55</height>
+						<font>font14</font>
 						<label>$INFO[ListItem.Label,,:]</label>
 						<textoffsetx>15</textoffsetx>
 					</control>
 					<control type="label">
 						<width>1058</width>
 						<height>60</height>
-						<font>font15</font>
+						<font>font13</font>
+						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
 						<textoffsetx>15</textoffsetx>

@@ -27,7 +27,7 @@
 						<textcolor>grey</textcolor>
 						<textoffsetx>15</textoffsetx>
 						<align>right</align>
-						<font>font15</font>
+						<font>font12_title_bold</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>

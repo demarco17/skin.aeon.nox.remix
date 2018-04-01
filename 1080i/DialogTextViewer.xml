@@ -20,7 +20,7 @@
 				<width>1772</width>
 				<height>40</height>
 				<label />
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
 			</control>

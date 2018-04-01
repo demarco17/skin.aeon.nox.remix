@@ -20,7 +20,7 @@
 				<top>32</top>
 				<width>1538</width>
 				<height>40</height>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<label>$LOCALIZE[19199] - $LOCALIZE[19023]</label>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
@@ -32,7 +32,7 @@
 				<top>32</top>
 				<width>1538</width>
 				<height>40</height>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<label>$LOCALIZE[19199] - $LOCALIZE[19024]</label>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>

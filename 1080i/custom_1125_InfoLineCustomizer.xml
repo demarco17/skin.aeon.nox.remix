@@ -89,7 +89,7 @@
 					<label>$LOCALIZE[20088]</label>
 					<onclick>Skin.SetString(ItemToEdit.InfoLine,5)</onclick>
 					<onclick>Dialog.Close(1125)</onclick>
-				</item>								
+				</item>
 				<item>
 					<label>$LOCALIZE[130]</label>
 					<onclick>Skin.SetString(ItemToEdit.InfoLine,8)</onclick>

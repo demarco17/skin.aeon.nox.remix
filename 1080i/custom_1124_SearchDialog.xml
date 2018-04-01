@@ -16,7 +16,7 @@
 				<texturefocus border="4">dialogs/separator4.png</texturefocus>
 				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
 				<align>center</align>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<label>19140</label>
 				<disabledcolor>dialogheader</disabledcolor>
 				<enable>false</enable>

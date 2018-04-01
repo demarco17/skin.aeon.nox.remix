@@ -16,7 +16,7 @@
 				<left>32</left>
 				<width>345</width>
 				<height>60</height>
-				<font>font14_title</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="label" id="12">
@@ -25,7 +25,7 @@
 				<width>656</width>
 				<height>60</height>
 				<align>right</align>
-				<font>font14_title</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="slider" id="11">

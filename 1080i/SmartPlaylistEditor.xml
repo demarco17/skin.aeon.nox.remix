@@ -22,7 +22,7 @@
 				<top>32</top>
 				<width>1458</width>
 				<height>40</height>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>
 			</control>

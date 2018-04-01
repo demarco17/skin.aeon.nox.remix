@@ -169,7 +169,7 @@
 				</control>
 				<control type="image">
 					<description>separator image</description>
-					<top>405</top>
+					<top>400</top>
 					<width>1645</width>
 					<height>60</height>
 					<texture border="4">dialogs/separator2.png</texture>
@@ -212,7 +212,7 @@
 							<top>230</top>
 							<width>329</width>
 							<height>60</height>
-							<font>font15</font>
+							<font>font14</font>
 							<align>center</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Property(HighTemp),[COLOR crimson],[/COLOR]]$INFO[ListItem.Property(LowTemp),[COLOR grey3]  |  [/COLOR][COLOR dodgerblue],[/COLOR]]</label>

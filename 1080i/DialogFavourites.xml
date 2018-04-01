@@ -28,7 +28,7 @@
 				<top>32</top>
 				<width>1064</width>
 				<height>40</height>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<label>$LOCALIZE[1036]</label>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>

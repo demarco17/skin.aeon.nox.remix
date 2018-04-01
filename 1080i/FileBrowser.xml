@@ -21,7 +21,7 @@
 				<width>1506</width>
 				<height>40</height>
 				<textoffsetx>15</textoffsetx>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<label>1023</label>
 				<align>center</align>
 				<textcolor>dialogheader</textcolor>

@@ -28,7 +28,7 @@
 				<top>15</top>
 				<width>700</width>
 				<height>45</height>
-				<font>font14_title</font>
+				<font>font15_title_bold</font>
 				<label>$LOCALIZE[19222]$INFO[Container(11).ListItem.ChannelName, - ]</label>
 				<align>right</align>
 				<textoffsetx>15</textoffsetx>

@@ -18,7 +18,7 @@
 			<control type="label">
 				<width>120</width>
 				<height>110</height>
-				<font>IconMassive</font>
+				<font>IconLarge</font>
 				<textcolor>grey</textcolor>
 				<align>center</align>
 				<label></label>
@@ -27,7 +27,7 @@
 			<control type="label">
 				<width>120</width>
 				<height>110</height>
-				<font>IconMassive</font>
+				<font>IconLarge</font>
 				<textcolor>grey</textcolor>
 				<align>center</align>
 				<label></label>
@@ -38,15 +38,14 @@
 				<left>120</left>
 				<top>15</top>
 				<width>700</width>
-				<height>45</height>
-				<font>font14_title</font>
+				<height>40</height>
+				<font>font15_title_bold</font>
 				<label>$VAR[PVRChannelsOSD]</label>
 				<align>right</align>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
 			<control type="label">
-				<description>header label</description>
 				<left>120</left>
 				<top>60</top>
 				<width>700</width>

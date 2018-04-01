@@ -18,9 +18,9 @@
 				<left>32</left>
 				<top>20</top>
 				<width>1124</width>
-				<height>50</height>
+				<height>40</height>
 				<align>center</align>
-				<font>font15_title</font>
+				<font>font15_title_bold</font>
 				<textcolor>dialogheader</textcolor>
 			</control>
 			<control type="edit" id="312">
