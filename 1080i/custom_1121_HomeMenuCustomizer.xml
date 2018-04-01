@@ -74,11 +74,10 @@
 				<description>description area</description>
 				<include>VisibleFadeAnimation</include>
 				<left>552</left>
-				<top>760</top>
+				<top>775</top>
 				<width>1256</width>
-				<height>100</height>
+				<height>90</height>
 				<font>Description_textbox</font>
-				<align>left</align>
 				<textcolor>grey3</textcolor>
 				<label>$VAR[SkinSettingsDescriptionVar]</label>
 				<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>

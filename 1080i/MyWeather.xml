@@ -111,110 +111,75 @@
 				</control>
 				<control type="image">
 					<description>separator image</description>
-					<top>280</top>
+					<top>300</top>
 					<width>1645</width>
 					<height>60</height>
 					<texture border="4">dialogs/separator2.png</texture>
 				</control>
-				<control type="grouplist">
-					<top>350</top>
-					<width>411</width>
-					<itemgap>10</itemgap>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[402]: [/COLOR]$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[405]: [/COLOR]$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
+				<control type="panel" id="380">
+					<top>360</top>
+					<width>1645</width>
+					<height>100</height>
+					<orientation>vertical</orientation>
+					<itemlayout height="50" width="411">
+						<control type="label">
+							<width>411</width>
+							<height>45</height>
+							<font>font13</font>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, ,]</label>
+							<textoffsetx>15</textoffsetx>
+						</control>
+					</itemlayout>
+					<focusedlayout height="50" width="411" />
+					<content>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[402]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label2>
+						</item>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[406]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Current.Humidity)]</label2>
+						</item>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[1448]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Current.Precipitation)]</label2>
+						</item>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[404]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Current.Wind)]</label2>
+						</item>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[1376]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Current.Pressure)]</label2>
+						</item>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[405]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label2>
+						</item>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33027]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Today.Sunrise)]</label2>
+						</item>
+						<item>
+							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33028]:[/COLOR]</label>
+							<label2 fallback="161">$INFO[Window.Property(Today.Sunset)]</label2>
+						</item>
+					</content>
 				</control>
 				<control type="image">
-					<top>340</top>
-					<left>411</left>
-					<width>2</width>
-					<height>198</height>
-					<texture border="1">dialogs/separator3.png</texture>
-				</control>
-				<control type="grouplist">
-					<left>412</left>
-					<top>350</top>
-					<width>411</width>
-					<itemgap>10</itemgap>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[406]: [/COLOR]$INFO[Window.Property(Current.Humidity)]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[1376]: [/COLOR]$INFO[Window.Property(Current.Pressure)]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
-				</control>
-				<control type="image">
-					<top>340</top>
-					<left>823</left>
-					<width>2</width>
-					<height>198</height>
-					<texture border="1">dialogs/separator3.png</texture>
-				</control>
-				<control type="grouplist">
-					<left>824</left>
-					<top>350</top>
-					<width>411</width>
-					<itemgap>10</itemgap>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[404]:[/COLOR][CR]$INFO[Window.Property(Current.Wind)]</label>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[1448]: [/COLOR]$INFO[Window.Property(Current.Precipitation)]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
-				</control>
-				<control type="image">
-					<top>340</top>
-					<left>1234</left>
-					<width>2</width>
-					<height>198</height>
-					<texture border="1">dialogs/separator3.png</texture>
-				</control>
-				<control type="grouplist">
-					<left>1235</left>
-					<top>350</top>
-					<width>411</width>
-					<itemgap>10</itemgap>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33027]: [/COLOR]$INFO[Window.Property(Today.Sunrise)]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
-					<control type="button">
-						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33028]: [/COLOR]$INFO[Window.Property(Today.Sunset)]</label>
-						<textoffsety>10</textoffsety>
-						<include>SettingsPanelButtonsValues</include>
-					</control>
+					<description>separator image</description>
+					<top>405</top>
+					<width>1645</width>
+					<height>60</height>
+					<texture border="4">dialogs/separator2.png</texture>
 				</control>
 				<control type="panel" id="300">
-					<top>550</top>
+					<top>505</top>
 					<width>1645</width>
 					<height>300</height>
 					<orientation>horizontal</orientation>
 					<itemlayout height="300" width="329">
-						<control type="multiimage">
-							<description>current weather icon</description>
-							<top>60</top>
-							<width>329</width>
-							<height>100</height>
-							<imagepath>$INFO[ListItem.Icon]</imagepath>
-							<aspectratio aligny="top">keep</aspectratio>
-							<timeperimage>100</timeperimage>
-							<randomize>false</randomize>
-						</control>
 						<control type="label">
 							<width>329</width>
 							<height>60</height>
@@ -223,8 +188,18 @@
 							<label>$INFO[ListItem.Label]</label>
 							<textoffsetx>15</textoffsetx>
 						</control>
+						<control type="multiimage">
+							<description>current weather icon</description>
+							<top>60</top>
+							<width>329</width>
+							<height>120</height>
+							<imagepath>$INFO[ListItem.Icon]</imagepath>
+							<aspectratio aligny="top">keep</aspectratio>
+							<timeperimage>100</timeperimage>
+							<randomize>false</randomize>
+						</control>
 						<control type="label">
-							<top>160</top>
+							<top>180</top>
 							<width>329</width>
 							<height>60</height>
 							<font>font15</font>
@@ -234,7 +209,7 @@
 							<textoffsetx>15</textoffsetx>
 						</control>
 						<control type="label">
-							<top>215</top>
+							<top>230</top>
 							<width>329</width>
 							<height>60</height>
 							<font>font15</font>

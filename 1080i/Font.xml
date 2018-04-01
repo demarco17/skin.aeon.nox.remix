@@ -45,6 +45,12 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>font13_title_bold</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase bold</style>
+			<size>30</size>
+		</font>
+		<font>
 			<name>font14</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<size>33</size>
@@ -64,7 +70,7 @@
 		<font>
 			<name>Description_textbox</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>33</size>
+			<size>30</size>
 			<style>italics</style>
 			<linespacing>1.27</linespacing>
 		</font>

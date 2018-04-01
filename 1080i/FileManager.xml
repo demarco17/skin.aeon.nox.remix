@@ -64,7 +64,7 @@
 						<control type="label">
 							<width>821</width>
 							<height>60</height>
-							<font>font14</font>
+							<font>font12_bold</font>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
 							<align>right</align>
@@ -93,7 +93,7 @@
 						<control type="label">
 							<width>821</width>
 							<height>60</height>
-							<font>font14</font>
+							<font>font12_bold</font>
 							<textoffsetx>15</textoffsetx>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
@@ -160,7 +160,7 @@
 						<control type="label">
 							<width>821</width>
 							<height>60</height>
-							<font>font14</font>
+							<font>font12_bold</font>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
 							<align>right</align>
@@ -189,7 +189,7 @@
 						<control type="label">
 							<width>821</width>
 							<height>60</height>
-							<font>font14</font>
+							<font>font12_bold</font>
 							<textoffsetx>15</textoffsetx>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>

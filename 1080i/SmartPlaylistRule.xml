@@ -40,7 +40,7 @@
 				<height>60</height>
 				<align>left</align>
 				<label>21422</label>
-				<font>font14</font>
+				<font>font13_title</font>
 				<textoffsetx>15</textoffsetx>
 				<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				<enable>false</enable>

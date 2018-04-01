@@ -517,7 +517,7 @@ msgid "Setup control of Kodi via UPnP & HTTP · Configure file sharing · Enable
 msgstr ""
 
 msgctxt "#31411"
-msgid "Transfer/copy/move/delete/rename/create files or folders on your local hard drive"
+msgid "Transfer, copy, move, delete, rename and create files or folders on your local hard drive"
 msgstr ""
 
 msgctxt "#31412"

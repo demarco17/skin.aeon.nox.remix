@@ -395,11 +395,10 @@
 						<description>description area</description>
 						<include>VisibleFadeAnimation</include>
 						<left>30</left>
-						<top>728</top>
+						<top>744</top>
 						<width>1256</width>
-						<height>100</height>
+						<height>90</height>
 						<font>Description_textbox</font>
-						<align>left</align>
 						<textcolor>grey3</textcolor>
 						<info>Container(9000).ListItem.Label2</info>
 						<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>

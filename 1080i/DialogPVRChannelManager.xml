@@ -186,7 +186,7 @@
 					<description>channel options Header</description>
 					<width>570</width>
 					<height>40</height>
-					<font>font14</font>
+					<font>font14_title</font>
 					<label>$LOCALIZE[31511]</label>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
@@ -244,7 +244,7 @@
 						<description>channel options Header</description>
 						<width>570</width>
 						<height>40</height>
-						<font>font14</font>
+						<font>font14_title</font>
 						<label>$LOCALIZE[31026]</label>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<textoffsetx>15</textoffsetx>

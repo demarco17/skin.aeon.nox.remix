@@ -154,14 +154,14 @@
 							<height>30</height>
 							<align>left</align>
 							<textcolor>grey3</textcolor>
-							<font>font13_title</font>
+							<font>font13</font>
 							<label>$ADDON[script.extendedinfo 32023]:</label>
 						</control>
 						<control type="label">
 							<width>auto</width>
 							<height>30</height>
 							<textcolor>grey3</textcolor>
-							<font>font13_title</font>
+							<font>font13</font>
 							<label fallback="16018">$INFO[Window.Property(Filter_Label)]</label>
 						</control>
 					</control>

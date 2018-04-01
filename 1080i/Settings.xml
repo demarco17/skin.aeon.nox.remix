@@ -141,10 +141,10 @@
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 					</item>
 					<item>
-						<label>10511</label>
-						<label2>31405</label2>
-						<icon>settings/icons/sysinfo.png</icon>
-						<onclick>ActivateWindow(SystemInfo)</onclick>
+						<label>15016</label>
+						<label2>31408</label2>
+						<icon>settings/icons/games.png</icon>
+						<onclick>ActivateWindow(GameSettings)</onclick>
 					</item>
 					<item>
 						<label>7</label>
@@ -153,10 +153,10 @@
 						<onclick>ActivateWindow(FileManager)</onclick>
 					</item>
 					<item>
-						<label>15016</label>
-						<label2>31408</label2>
-						<icon>settings/icons/games.png</icon>
-						<onclick>ActivateWindow(GameSettings)</onclick>
+						<label>10511</label>
+						<label2>31405</label2>
+						<icon>settings/icons/sysinfo.png</icon>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
 					</item>
 				</content>
 			</control>

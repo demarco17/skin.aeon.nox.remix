@@ -77,9 +77,10 @@
 				<top>960</top>
 				<height>120</height>
 				<width>400</width>
+				<font>Description_textbox</font>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey3</textcolor>
-				<label>[I]$LOCALIZE[31070][CR]$INFO[Window(AddonBrowser).Property(Updated)][/I]</label>
+				<label>$LOCALIZE[31070][CR]$INFO[Window(AddonBrowser).Property(Updated)]</label>
 				<visible>Control.HasFocus(9)</visible>
 			</control>
 		</control>

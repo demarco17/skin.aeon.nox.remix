@@ -207,7 +207,7 @@
 							<control type="label">
 								<width>1316</width>
 								<height>90</height>
-								<font>font15_title</font>
+								<font>font15_title_bold</font>
 								<textcolor>$VAR[SkinThemeColour]</textcolor>
 								<textoffsetx>30</textoffsetx>
 								<info>ListItem.Label</info>
@@ -306,7 +306,7 @@
 							<control type="label">
 								<width>1316</width>
 								<height>90</height>
-								<font>font15_title</font>
+								<font>font15_title_bold</font>
 								<textcolor>$VAR[SkinThemeColour]</textcolor>
 								<textoffsetx>30</textoffsetx>
 								<info>ListItem.Label</info>
@@ -1021,9 +1021,9 @@
 				<description>description area</description>
 				<include>VisibleFadeAnimation</include>
 				<left>552</left>
-				<top>760</top>
+				<top>775</top>
 				<width>1256</width>
-				<height>100</height>
+				<height>90</height>
 				<font>Description_textbox</font>
 				<textcolor>grey3</textcolor>
 				<label>$INFO[Window.Property(InfoText)]</label>
