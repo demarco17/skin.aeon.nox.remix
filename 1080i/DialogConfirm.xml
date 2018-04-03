@@ -43,8 +43,7 @@
 				<width>852</width>
 				<height>40</height>
 				<textoffsetx>15</textoffsetx>
-				<font>font15_title_bold</font>
-				<textcolor>dialogheader</textcolor>
+				<font>font13_title</font>
 				<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
 				<align>center</align>
 			</control>
@@ -53,7 +52,6 @@
 				<top>98</top>
 				<width>825</width>
 				<height>282</height>
-				<align>left</align>
 				<label />
 				<textcolor>grey</textcolor>
 				<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>

@@ -168,7 +168,7 @@
 				<control type="button" id="203">
 					<description>Settings level</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31142]</label>
 					<enable>false</enable>
@@ -184,7 +184,7 @@
 				<control type="button" id="204">
 					<description>Actions header</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>

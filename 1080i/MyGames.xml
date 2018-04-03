@@ -81,7 +81,7 @@
 				<control type="button" id="203">
 					<description>Actions</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>

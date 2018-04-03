@@ -228,7 +228,7 @@
 				<control type="button" id="200">
 					<description>View Options</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>31006</label>
 					<enable>false</enable>
@@ -249,7 +249,7 @@
 				<control type="button" id="201">
 					<description>Playlist options</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>559</label>
 					<enable>false</enable>

@@ -89,7 +89,7 @@
 					<description>settings category label</description>
 					<width>310</width>
 					<height>60</height>
-					<font>font13_title</font>
+					<font>font13_title_bold</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 					<label />

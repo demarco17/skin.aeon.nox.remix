@@ -26,9 +26,7 @@
 				<top>32</top>
 				<width>800</width>
 				<height>50</height>
-				<font>font13</font>
 				<textoffsetx>50</textoffsetx>
-				<align>left</align>
 				<label>$INFO[Control.GetLabel(30)]$INFO[Control.GetLabel(32),: ,%]</label>
 			</control>
 			<control type="label" id="31">
@@ -36,8 +34,6 @@
 				<top>75</top>
 				<width>800</width>
 				<height>50</height>
-				<font>font13</font>
-				<align>left</align>
 				<textoffsetx>50</textoffsetx>
 			</control>
 			<control type="label" id="30">

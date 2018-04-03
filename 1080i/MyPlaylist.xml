@@ -24,7 +24,7 @@
 				<control type="button" id="201">
 					<description>Misc options header</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>31026</label>
 					<enable>false</enable>
@@ -58,7 +58,7 @@
 				<control type="button" id="203">
 					<description>Actions header</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>31039</label>
 					<enable>false</enable>

@@ -6,12 +6,12 @@
 	<controls>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
+			<left>50</left>
 			<top>108</top>
-			<left>270</left>
 			<control type="image">
 				<left>16</left>
 				<top>16</top>
-				<width>1348</width>
+				<width>1788</width>
 				<height>872</height>
 				<texture border="18">dialogs/dialog-bg2.png</texture>
 			</control>
@@ -19,7 +19,7 @@
 				<description>header label</description>
 				<left>32</left>
 				<top>32</top>
-				<width>1316</width>
+				<width>1772</width>
 				<height>40</height>
 				<font>font15_title_bold</font>
 				<align>center</align>
@@ -32,13 +32,12 @@
 				<top>80</top>
 				<width>1290</width>
 				<height>790</height>
-				<align>left</align>
 				<textcolor>grey</textcolor>
 				<pagecontrol>61</pagecontrol>
 				<label>$INFO[Window(Home).Property(TextViewerContent)]</label>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>1351</left>
+				<left>1791</left>
 				<top>80</top>
 				<width>10</width>
 				<height>790</height>
@@ -49,6 +48,7 @@
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<orientation>vertical</orientation>
+				<visible allowhiddenfocus="true">true</visible>
 			</control>
 		</control>
 	</controls>

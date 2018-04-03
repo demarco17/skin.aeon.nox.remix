@@ -245,7 +245,7 @@
 				<control type="button" id="5000">
 					<description>View Options Heading</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>31006</label>
 					<enable>false</enable>
@@ -279,7 +279,7 @@
 				<control type="button" id="5333">
 					<description>Filter Heading</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>$ADDON[script.extendedinfo 32023]</label>
 					<enable>false</enable>
@@ -336,7 +336,7 @@
 				<control type="button" id="5334">
 					<description>Misc Options Heading</description>
 					<textwidth>352</textwidth>
-					<font>font13_title</font>
+					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
 					<label>31026</label>
 					<enable>false</enable>
