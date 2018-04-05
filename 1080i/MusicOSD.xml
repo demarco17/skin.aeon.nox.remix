@@ -6,7 +6,7 @@
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
-			<visible>![Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(addonsettings) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(pvrchannelguide) | Window.IsVisible(PVROSDChannels)]</visible>
+			<visible>![Window.IsVisible(addonsettings) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(selectdialog) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(pvrchannelguide) | Window.IsVisible(PVROSDChannels)]</visible>
 			<control type="image">
 				<width>1920</width>
 				<height>102</height>
@@ -58,12 +58,9 @@
 					<height>100</height>
 					<visible>Visualisation.Enabled + Visualisation.HasPresets</visible>
 				</control>
-				<control type="togglebutton" id="702">
+				<control type="button" id="702">
 					<texturefocus>osd/buttons/OSDAudio.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDAudio.png</texturenofocus>
-					<usealttexture>system.getbool(audiooutput.dspaddonsenabled)</usealttexture>
-					<alttexturefocus>osd/buttons/OSDDSPAudio.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDDSPAudio.png</alttexturenofocus>
 					<width>100</width>
 					<height>100</height>
 					<label />

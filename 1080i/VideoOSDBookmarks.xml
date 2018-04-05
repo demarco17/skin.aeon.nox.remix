@@ -87,6 +87,11 @@
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 			</control>
+			<control type="image">
+				<width>351</width>
+				<height>210</height>
+				<texture colordiffuse="A0FFFFFF">dialogs/black.png</texture>
+			</control>
 			<control type="grouplist" id="9000">
 				<width>350</width>
 				<height>210</height>
@@ -111,12 +116,6 @@
 					<width>350</width>
 					<height>70</height>
 				</control>
-			</control>
-			<control type="image">
-				<left>349</left>
-				<width>2</width>
-				<height>209</height>
-				<texture border="1">dialogs/separator3.png</texture>
 			</control>
 		</control>
 	</controls>

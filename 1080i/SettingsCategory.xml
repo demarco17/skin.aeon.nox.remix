@@ -9,7 +9,6 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(audiodspmanager)">Conditional</animation>
 			<top>128</top>
 			<include>OpenCloseAnimation</include>
 			<include>SystemLeftPanel</include>

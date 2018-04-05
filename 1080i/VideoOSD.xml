@@ -27,12 +27,9 @@
 					<font />
 					<onclick>ActivateWindow(osdvideosettings)</onclick>
 				</control>
-				<control type="togglebutton" id="701">
+				<control type="button" id="701">
 					<texturefocus>osd/buttons/OSDAudio.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDAudio.png</texturenofocus>
-					<usealttexture>system.getbool(audiooutput.dspaddonsenabled)</usealttexture>
-					<alttexturefocus>osd/buttons/OSDDSPAudio.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDDSPAudio.png</alttexturenofocus>
 					<width>100</width>
 					<height>100</height>
 					<label />

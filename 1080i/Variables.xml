@@ -36,7 +36,6 @@
 		<value condition="Window.IsActive(Games) + !String.IsEmpty(Container.FolderName)">$LOCALIZE[15016]: </value>
 		<value condition="Window.IsActive(Games)">$LOCALIZE[15016]</value>
 		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]</value>
-		<value condition="Window.IsActive(audiodspmanager)">$LOCALIZE[15020]</value>
 		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvguide) | Window.IsActive(tvrecordings) | Window.IsActive(tvtimers) | Window.IsActive(TVTimerRules) | Window.IsActive(tvsearch)">$LOCALIZE[19020]: </value>
 		<value condition="Window.IsActive(radiochannels) | Window.IsActive(radioguide) | Window.IsActive(radiorecordings) | Window.IsActive(radiotimers) | Window.IsActive(RadioTimerRules) | Window.IsActive(radiosearch)">$LOCALIZE[19183]: </value>
 		<value condition="!String.IsEmpty(Container.FolderName) | Window.IsActive(1133)">$INFO[System.CurrentWindow,,: ]</value>
