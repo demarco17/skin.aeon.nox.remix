@@ -12,7 +12,7 @@
 			<control type="image">
 				<description>Fanart image</description>
 				<include>FullscreenDimensions</include>
-				<fadetime>CrossfadeTime</fadetime>
+				<fadetime>400</fadetime>
 				<texture background="true">$INFO[Player.Art(fanart)]</texture>
 				<animation effect="fade" start="100" end="40" condition="!String.IsEmpty(Visualisation.Name)">Conditional</animation>
 			</control>

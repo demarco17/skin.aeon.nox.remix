@@ -197,7 +197,7 @@
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$VAR[PosterThumbVar]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -207,7 +207,7 @@
 					<width>530</width>
 					<height>795</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumbVar]</texture>
 				</control>
 			</control>
@@ -230,7 +230,7 @@
 					<height>570</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<texture fallback="flags/DefaultStudios.png">$VAR[StudioIconVar]$INFO[ListItem.Label,,.png]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 				</control>
 				<control type="image">
 					<top>795</top>
@@ -251,7 +251,7 @@
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true" fallback="DefaultGenre.png">$VAR[GenreIconVideoVar]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -261,7 +261,7 @@
 					<width>530</width>
 					<height>795</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="DefaultGenre.png">$VAR[GenreIconVideoVar]</texture>
 				</control>
 			</control>
@@ -286,7 +286,7 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>1</bordersize>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 				</control>
 				<control type="textbox">
 					<label>$VAR[VideoPlotVar]</label>
@@ -520,7 +520,7 @@
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -529,7 +529,7 @@
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>20</bordersize>
 				</control>
@@ -543,7 +543,7 @@
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true" fallback="DefaultMusicGenres.png">$VAR[GenreIconMusicVar]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -552,7 +552,7 @@
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="DefaultMusicGenres.png">$VAR[GenreIconMusicVar]</texture>
 					<bordersize>20</bordersize>
 				</control>
@@ -679,7 +679,7 @@
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -688,7 +688,7 @@
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>20</bordersize>
 				</control>
@@ -815,7 +815,7 @@
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -824,7 +824,7 @@
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>20</bordersize>
 				</control>
@@ -951,7 +951,7 @@
 					<height>835</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -960,7 +960,7 @@
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
 					<bordersize>20</bordersize>
 				</control>

@@ -41,7 +41,7 @@
 			<left>500</left>
 			<width>1420</width>
 			<height>855</height>
-			<fadetime>CrossfadeTime</fadetime>
+			<fadetime>400</fadetime>
 			<aspectratio align="left">scale</aspectratio>
 			<texture background="true" diffuse="thumbs/fanart_diffuse.png">$VAR[GlobalBackgroundVar]</texture>
 		</control>
@@ -49,7 +49,7 @@
 			<visible>!Control.IsVisible(508)</visible>
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
-			<fadetime>CrossfadeTime</fadetime>
+			<fadetime>400</fadetime>
 			<aspectratio>scale</aspectratio>
 			<texture fallback="backgrounds/SKINDEFAULT.jpg" background="true">$VAR[GlobalBackgroundVar]</texture>
 		</control>
@@ -58,7 +58,7 @@
 		<control type="image">
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
-			<fadetime>CrossfadeTime</fadetime>
+			<fadetime>400</fadetime>
 			<texture background="true">$VAR[HomeBackgroundVar]</texture>
 		</control>
 		<control type="image">
@@ -66,7 +66,7 @@
 			<include>VisibleFadeAnimation</include>
 			<aspectratio align="center">scale</aspectratio>
 			<include>FullscreenDimensions</include>
-			<fadetime>CrossfadeTime</fadetime>
+			<fadetime>400</fadetime>
 			<texture background="true">$INFO[Container(9060).ListItem.Art(fanart)]</texture>
 			<visible>!String.IsEmpty(Container(9060).ListItem.Art(fanart)) + Control.HasFocus(9060)</visible>
 		</control>
@@ -87,7 +87,7 @@
 			<include>FullscreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture background="true">$VAR[NextAiredFanart]</texture>
-			<fadetime>CrossfadeTime</fadetime>
+			<fadetime>400</fadetime>
 		</control>
 		<control type="group">
 			<include>VisibleFadeAnimation</include>
@@ -227,7 +227,7 @@
 					<top>162</top>
 					<width>640</width>
 					<height>360</height>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
@@ -351,7 +351,7 @@
 					<top>162</top>
 					<width>245</width>
 					<height>360</height>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$VAR[PosterThumbVar]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
@@ -498,7 +498,7 @@
 					<top>162</top>
 					<width>640</width>
 					<height>360</height>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>400</fadetime>
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>1</bordersize>

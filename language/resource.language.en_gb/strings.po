@@ -47,15 +47,15 @@ msgid "View Options"
 msgstr ""
 
 msgctxt "#31007"
-msgid "Search local library"
+msgid "local library"
 msgstr ""
 
 msgctxt "#31008"
-msgid "Search YouTube"
+msgid "YouTube"
 msgstr ""
 
 msgctxt "#31009"
-msgid "Search TheMovieDB"
+msgid "TheMovieDB"
 msgstr ""
 
 msgctxt "#31010"

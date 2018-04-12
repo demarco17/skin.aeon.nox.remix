@@ -26,7 +26,6 @@
 					<pagecontrol>5660</pagecontrol>
 					<movement>6</movement>
 					<scrolltime>300</scrolltime>
-					<!--<visible>Container.Content(artists) | Container.Content(albums)</visible>-->
 					<visible>Container.Content(artists)</visible>
 					<itemlayout height="120" width="820">
 						<control type="image">
@@ -61,15 +60,6 @@
 							<textcolor>grey2</textcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 						</control>
-						<!--<control type="image">
-							<visible>!ListItem.IsParentFolder + String.IsEqual(ListItem.DBType,album)</visible>
-							<left>655</left>
-							<top>70</top>
-							<width>160</width>
-							<height>30</height>
-							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
-						</control>-->
 					</itemlayout>
 					<focusedlayout height="120" width="820">
 						<control type="image">
@@ -109,15 +99,6 @@
 							<textcolor>grey2</textcolor>
 							<label>$VAR[MusicListLabel3Var]</label>
 						</control>
-						<!--<control type="image">
-							<visible>!ListItem.IsParentFolder + String.IsEqual(ListItem.DBType,album)</visible>
-							<left>655</left>
-							<top>70</top>
-							<width>160</width>
-							<height>30</height>
-							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
-						</control>-->
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="5660">
@@ -249,92 +230,6 @@
 					</focusedlayout>
 					<content target="music">$INFO[Container(56).ListItem.DBID,musicdb://artists/]</content>
 				</control>
-				<!--<control type="fixedlist" id="561">
-					<top>180</top>
-					<width>820</width>
-					<height>840</height>
-					<onleft>56</onleft>
-					<onright>5661</onright>
-					<viewtype>list</viewtype>
-					<pagecontrol>5661</pagecontrol>
-					<movement>6</movement>
-					<scrolltime>300</scrolltime>
-					<visible>Container.Content(albums)</visible>
-					<itemlayout height="120" width="820">
-						<control type="image">
-							<width>820</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
-						<control type="image">
-							<left>15</left>
-							<top>7</top>
-							<width>105</width>
-							<height>105</height>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="1">dialogs/black.png</bordertexture>
-							<bordersize>1</bordersize>
-						</control>
-						<control type="label">
-							<left>135</left>
-							<width>668</width>
-							<height>70</height>
-							<font>font30</font>
-							<textcolor>grey</textcolor>
-							<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>135</left>
-							<top>50</top>
-							<width>668</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>grey2</textcolor>
-							<label>$INFO[ListItem.Duration]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="120" width="820">
-						<control type="image">
-							<width>820</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
-						<control type="image">
-							<width>820</width>
-							<height>120</height>
-							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-							<visible>Control.HasFocus(561)</visible>
-						</control>
-						<control type="image">
-							<left>15</left>
-							<top>7</top>
-							<width>105</width>
-							<height>105</height>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="1">dialogs/black.png</bordertexture>
-							<bordersize>1</bordersize>
-						</control>
-						<control type="label">
-							<left>135</left>
-							<width>668</width>
-							<height>70</height>
-							<font>font30</font>
-							<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>135</left>
-							<top>50</top>
-							<width>668</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>grey2</textcolor>
-							<label>$INFO[ListItem.Duration]</label>
-						</control>
-					</focusedlayout>
-					<content target="music">$INFO[Container(56).ListItem.DBID,musicdb://albums/]</content>
-				</control>-->
 				<control type="scrollbar" id="5661">
 					<left>823</left>
 					<top>180</top>

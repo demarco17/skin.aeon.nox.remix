@@ -426,7 +426,7 @@
 				<height>240</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<fadetime>CrossfadeTime</fadetime>
+				<fadetime>400</fadetime>
 				<bordersize>20</bordersize>
 				<visible>!String.IsEmpty(ListItem.Icon)</visible>
 			</control>

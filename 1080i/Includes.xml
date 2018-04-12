@@ -22,7 +22,6 @@
 	<include file="View_511_PicWall.xml" />
 	<include file="Variables.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
-	<constant name="CrossfadeTime">400</constant>
 	<include name="FullscreenDimensions">
 		<left>0</left>
 		<top>0</top>

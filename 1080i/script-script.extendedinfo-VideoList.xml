@@ -13,7 +13,7 @@
 			<texture background="true" fallback="dialogs/black.png">$INFO[ListItem.Art(fanart_small)]</texture>
 			<include>FullscreenDimensions</include>
 			<aspectratio aligny="top">scale</aspectratio>
-			<fadetime>CrossfadeTime</fadetime>
+			<fadetime>400</fadetime>
 		</control>
 		<control type="group">
 			<include>OpenCloseAnimation</include>
@@ -101,7 +101,7 @@
 					<top>202</top>
 					<width>462</width>
 					<height>262</height>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
 					<texture>$INFO[ListItem.Art(fanart_small)]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>

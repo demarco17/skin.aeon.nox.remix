@@ -153,7 +153,7 @@
 				<height>385</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true" fallback="DefaultVideo.png">$VAR[FanartVar]</texture>
-				<fadetime>CrossfadeTime</fadetime>
+				<fadetime>400</fadetime>
 				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 				<bordersize>1</bordersize>
 			</control>
@@ -444,7 +444,7 @@
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>400</fadetime>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">

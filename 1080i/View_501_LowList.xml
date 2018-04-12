@@ -19,7 +19,7 @@
 					<height>471</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$VAR[PosterThumbVar]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<visible>!String.IsEqual(Control.GetLabel(4440),1)</visible>
@@ -33,7 +33,7 @@
 						<height>401</height>
 						<aspectratio>stretch</aspectratio>
 						<texture background="true">$VAR[PosterThumbVar]</texture>
-						<fadetime>CrossfadeTime</fadetime>
+						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
 						<left>-30</left>
@@ -42,7 +42,7 @@
 						<height>468</height>
 						<texture>thumbs/boxes/$VAR[ShiftCase_Var]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<fadetime>CrossfadeTime</fadetime>
+						<fadetime>300</fadetime>
 					</control>
 				</control>
 			</control>
@@ -690,7 +690,7 @@
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -706,7 +706,7 @@
 					<height>370</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 				</control>
 				<control type="image">
 					<left>10</left>

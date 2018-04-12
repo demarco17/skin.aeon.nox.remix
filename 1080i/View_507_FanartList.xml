@@ -237,7 +237,7 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="DefaultVideo.png">$VAR[LandscapeVar]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
@@ -247,7 +247,7 @@
 					<height>200</height>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>300</fadetime>
 					<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="image">

@@ -6,7 +6,7 @@
 	</default>
 	<default type="multiimage">
 		<aspectratio align="center">scale</aspectratio>
-		<fadetime>CrossfadeTime</fadetime>
+		<fadetime>400</fadetime>
 		<include>FullscreenDimensions</include>
 		<timeperimage>7000</timeperimage>
 		<randomize>true</randomize>

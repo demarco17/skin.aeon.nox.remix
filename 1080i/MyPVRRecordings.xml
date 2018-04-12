@@ -170,7 +170,7 @@
 					<height>285</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="DefaultVideo.png">$INFO[Container(50).ListItem.Icon]</texture>
-					<fadetime>CrossfadeTime</fadetime>
+					<fadetime>400</fadetime>
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsFolder + !String.IsEmpty(Container(50).ListItem.Title)</visible>
