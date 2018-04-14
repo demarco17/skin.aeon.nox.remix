@@ -282,10 +282,8 @@
 					<top>179</top>
 					<width>504</width>
 					<height>285</height>
-					<aspectratio>keep</aspectratio>
+					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-					<bordersize>1</bordersize>
 					<fadetime>300</fadetime>
 				</control>
 				<control type="textbox">

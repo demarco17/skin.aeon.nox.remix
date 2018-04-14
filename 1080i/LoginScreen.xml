@@ -124,7 +124,7 @@
 				<width>356</width>
 				<height>90</height>
 				<aspectratio align="left">keep</aspectratio>
-				<texture>flags/xbmc-logo.png</texture>
+				<texture>flags/kodi-logo.png</texture>
 				<bordersize>10</bordersize>
 			</control>
 		</control>
