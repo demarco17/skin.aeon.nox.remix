@@ -190,7 +190,7 @@
 			<control type="group">
 				<left>1296</left>
 				<top>135</top>
-				<visible>![Container.Content(episodes) | Container.Content(studios) | Container.Content(genres)]</visible>
+				<visible>![Container.Content(episodes) | Container.Content(studios) | Container.Content(genres) | String.Contains(container.folderpath,plugin.video)]</visible>
 				<control type="image">
 					<top>20</top>
 					<width>570</width>
@@ -268,7 +268,7 @@
 			<control type="group">
 				<left>1280</left>
 				<top>-40</top>
-				<visible>Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes) | String.Contains(container.folderpath,plugin.video)</visible>
 				<control type="image">
 					<description>background image</description>
 					<left>16</left>
@@ -282,7 +282,7 @@
 					<top>179</top>
 					<width>504</width>
 					<height>285</height>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>1</bordersize>
