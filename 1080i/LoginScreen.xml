@@ -14,11 +14,11 @@
 		<control type="group">
 			<control type="label">
 				<left>442</left>
-				<top>150</top>
+				<top>140</top>
 				<width>1035</width>
 				<height>60</height>
-				<font>font15</font>
-				<textcolor>grey</textcolor>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
 				<align>center</align>
 				<label>$LOCALIZE[31421]</label>
 			</control>
@@ -55,7 +55,7 @@
 						<width>870</width>
 						<height>38</height>
 						<font>font13</font>
-						<textcolor>grey</textcolor>
+						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
@@ -87,6 +87,7 @@
 						<width>870</width>
 						<height>38</height>
 						<font>font13</font>
+						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>

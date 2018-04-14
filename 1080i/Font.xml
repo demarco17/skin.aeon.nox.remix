@@ -208,9 +208,8 @@
 		</font>
 		<font>
 			<name>WeatherTemp</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<style>uppercase</style>
-			<size>120</size>
+			<filename>BebasNeue.ttf</filename>
+			<size>128</size>
 		</font>
 		<font>
 			<name>IconTiny</name>

@@ -53,12 +53,12 @@
 					<left>1234</left>
 					<top>264</top>
 					<width>410</width>
-					<height>70</height>
+					<height>65</height>
 					<align>center</align>
 					<label>$INFO[Window.Property(Current.Condition)]</label>
-					<font>font15</font>
+					<font>font13</font>
 					<textoffsetx>15</textoffsetx>
-					<textcolor>grey</textcolor>
+					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
 					<description>weather location label</description>
@@ -202,7 +202,7 @@
 							<top>180</top>
 							<width>329</width>
 							<height>60</height>
-							<font>font15</font>
+							<font>font14</font>
 							<align>center</align>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
