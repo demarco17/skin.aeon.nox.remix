@@ -63,7 +63,7 @@
 		<value condition="Window.IsActive(1133)">$INFO[Container(51).NumItems,$LOCALIZE[31025]: ,]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Updated),$LOCALIZE[31301]: ]</value>
 		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Window.Property(GlobalSearch.SearchString),$LOCALIZE[137]: ","[COLOR grey3]  |  [/COLOR]]$INFO[Container.NumItems,$LOCALIZE[31025]: ,]</value>
-		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),, $LOCALIZE[33006]]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3]  |  [/COLOR], $LOCALIZE[20161]]</value>
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[Window(Home).Property(NextAired.TodayTotal),$LOCALIZE[33006]: ,]$INFO[Window(Home).Property(NextAired.Total),[COLOR grey3]  |  [/COLOR]$LOCALIZE[20161]: ,]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(20)">$INFO[Container(20).NumItems,$LOCALIZE[31025]: ,]</value>
 		<value condition="Window.IsActive(filemanager) + Control.HasFocus(21)">$INFO[Container(21).NumItems,$LOCALIZE[31025]: ,]</value>
 		<value condition="Window.IsActive(SettingsCategory.xml)">$INFO[Control.GetLabel(20),$LOCALIZE[31142]: ,]</value>

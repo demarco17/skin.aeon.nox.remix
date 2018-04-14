@@ -5,99 +5,111 @@
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.MultiFanart))">Skin.SetString($INFO[Window(Home).Property(Nox.Temp)],$INFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.BGType))">Skin.SetString($INFO[Window(Home).Property(Nox.BGType)],$INFO[Skin.String(ItemToEdit.BGType)])</onunload>
 	<controls>
-		<control type="list" id="90100">
+		<control type="grouplist" id="90100">
 			<left>713</left>
-			<top>336</top>
 			<width>494</width>
-			<height>420</height>
-			<onleft>Dialog.Close(1122)</onleft>
-			<onright>Dialog.Close(1122)</onright>
-			<orientation>vertical</orientation>
-			<itemlayout height="60" width="494">
-				<control type="image">
-					<width>494</width>
-					<height>60</height>
-					<texture>dialogs/separator4.png</texture>
-				</control>
-				<control type="label">
-					<width>494</width>
-					<height>60</height>
-					<font>font14</font>
-					<textcolor>grey</textcolor>
-					<align>center</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="60" width="494">
-				<control type="image">
-					<width>494</width>
-					<height>60</height>
-					<texture>dialogs/separator4.png</texture>
-				</control>
-				<control type="image">
-					<width>494</width>
-					<height>60</height>
-					<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-				</control>
-				<control type="label">
-					<width>494</width>
-					<height>60</height>
-					<font>font14</font>
-					<align>center</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
-			<content>
-				<item>
-					<label>$LOCALIZE[13007]</label>
-					<onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
-					<onclick>Skin.Reset(ItemToEdit.BGType)</onclick>
-					<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Temp)],$INFO[Skin.String(ItemToEdit.MultiFanart)])</onclick>
-					<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.BGType)],$INFO[Skin.String(ItemToEdit.BGType)])</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[31023]</label>
-					<onclick>Skin.SetString(ItemToEdit.BGType,1)</onclick>
-					<onclick>Skin.SetImage(ItemToEdit.MultiFanart)</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[31062]</label>
-					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
-					<onclick>Skin.SetString(ItemToEdit.MultiFanart,1)</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-					<enable>System.HasAddon(script.grab.fanart)</enable>
-				</item>
-				<item>
-					<label>$LOCALIZE[31063]</label>
-					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
-					<onclick>Skin.SetString(ItemToEdit.MultiFanart,2)</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-					<enable>System.HasAddon(script.grab.fanart)</enable>
-				</item>
-				<item>
-					<label>$LOCALIZE[31064]</label>
-					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
-					<onclick>Skin.SetString(ItemToEdit.MultiFanart,3)</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-					<enable>System.HasAddon(script.grab.fanart)</enable>
-				</item>
-				<item>
-					<label>$LOCALIZE[31065]</label>
-					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
-					<onclick>Skin.SetString(ItemToEdit.MultiFanart,4)</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-					<enable>System.HasAddon(script.grab.fanart)</enable>
-				</item>
-				<item>
-					<label>$LOCALIZE[31066]</label>
-					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
-					<onclick>Skin.SetString(ItemToEdit.MultiFanart,5)</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-					<enable>System.HasAddon(script.grab.fanart)</enable>
-				</item>
-			</content>
+			<height>1060</height>
+			<onleft>Close</onleft>
+			<onright>Close</onright>
+			<align>center</align>
+			<control type="button" id="2">
+				<width>494</width>
+				<height>70</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<font>font15_title_bold</font>
+				<label>31027</label>
+				<disabledcolor>dialogheader</disabledcolor>
+				<enable>false</enable>
+			</control>
+			<control type="button" id="3">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[16018]</label>
+				<label>$LOCALIZE[13007]</label>
+				<onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
+				<onclick>Skin.Reset(ItemToEdit.BGType)</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Temp)],$INFO[Skin.String(ItemToEdit.MultiFanart)])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.BGType)],$INFO[Skin.String(ItemToEdit.BGType)])</onclick>
+				<onclick>Dialog.Close(1122)</onclick>
+			</control>
+			<control type="button" id="4">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31023]</label>
+				<onclick>Skin.SetString(ItemToEdit.BGType,1)</onclick>
+				<onclick>Skin.SetImage(ItemToEdit.MultiFanart)</onclick>
+				<onclick>Dialog.Close(1122)</onclick>
+			</control>
+			<control type="button" id="5">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31062]</label>
+				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.MultiFanart,1)</onclick>
+				<onclick>Dialog.Close(1122)</onclick>
+				<enable>System.HasAddon(script.grab.fanart)</enable>
+			</control>
+			<control type="button" id="6">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31063]</label>
+				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.MultiFanart,2)</onclick>
+				<onclick>Dialog.Close(1122)</onclick>
+				<enable>System.HasAddon(script.grab.fanart)</enable>
+			</control>
+			<control type="button" id="7">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31064]</label>
+				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.MultiFanart,3)</onclick>
+				<onclick>Dialog.Close(1122)</onclick>
+				<enable>System.HasAddon(script.grab.fanart)</enable>
+			</control>
+			<control type="button" id="8">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31065]</label>
+				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.MultiFanart,4)</onclick>
+				<onclick>Dialog.Close(1122)</onclick>
+				<enable>System.HasAddon(script.grab.fanart)</enable>
+			</control>
+			<control type="button" id="9">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31066]</label>
+				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.MultiFanart,5)</onclick>
+				<onclick>Dialog.Close(1122)</onclick>
+				<enable>System.HasAddon(script.grab.fanart)</enable>
+			</control>
+			<control type="button" id="10">
+				<width>494</width>
+				<height>30</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label />
+				<enable>false</enable>
+			</control>
 		</control>
 	</controls>
 </window>

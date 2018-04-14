@@ -16,20 +16,21 @@
 			<left>697</left>
 			<top>240</top>
 			<control type="image">
-				<left>16</left>
+				<left>32</left>
 				<top>16</top>
-				<width>494</width>
-				<height>568</height>
-				<texture border="18">dialogs/dialog-bg2.png</texture>
+				<width>478</width>
+				<height>580</height>
+				<texture border="4">dialogs/separator4.png</texture>
 			</control>
 			<control type="label" id="1">
 				<left>32</left>
 				<top>32</top>
-				<width>462</width>
+				<width>478</width>
 				<height>40</height>
 				<font>font15_title_bold</font>
 				<label>$LOCALIZE[31074]</label>
 				<align>center</align>
+				<textoffsetx>15</textoffsetx>
 				<textcolor>dialogheader</textcolor>
 			</control>
 			<control type="list" id="9000">

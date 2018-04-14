@@ -351,11 +351,11 @@
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
-						<left>235</left>
-						<width>60</width>
-						<height>60</height>
+						<left>245</left>
+						<width>50</width>
+						<height>50</height>
 						<align>center</align>
-						<font>IconSmall</font>
+						<font>IconTiny</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<label></label>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
@@ -388,11 +388,11 @@
 							<bordersize>5</bordersize>
 						</control>
 						<control type="label">
-							<left>235</left>
-							<width>60</width>
-							<height>60</height>
+							<left>245</left>
+							<width>50</width>
+							<height>50</height>
 							<align>center</align>
-							<font>IconSmall</font>
+							<font>IconTiny</font>
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label></label>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>
@@ -442,11 +442,11 @@
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
-						<left>235</left>
-						<width>60</width>
-						<height>60</height>
+						<left>245</left>
+						<width>50</width>
+						<height>50</height>
 						<align>center</align>
-						<font>IconSmall</font>
+						<font>IconTiny</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 						<label></label>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
@@ -479,11 +479,11 @@
 							<bordersize>5</bordersize>
 						</control>
 						<control type="label">
-							<left>235</left>
-							<width>60</width>
-							<height>60</height>
+							<left>245</left>
+							<width>50</width>
+							<height>50</height>
 							<align>center</align>
-							<font>IconSmall</font>
+							<font>IconTiny</font>
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<label></label>
 							<visible>!String.IsEmpty(ListItem.DBID)</visible>

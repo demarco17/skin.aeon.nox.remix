@@ -5,102 +5,125 @@
 	<onunload condition="!String.IsEmpty(Skin.String(ItemToEdit.InfoLine))">Skin.SetString($INFO[Window(Home).Property(Nox.InfoLine)],$INFO[Skin.String(ItemToEdit.InfoLine)])</onunload>
 	<onunload>ClearProperty(Nox.InfoLine,Home)</onunload>
 	<controls>
-		<control type="list" id="90100">
+		<control type="grouplist" id="90100">
 			<left>713</left>
-			<top>210</top>
 			<width>494</width>
-			<height>660</height>
-			<onleft>Dialog.Close(1125)</onleft>
-			<onright>Dialog.Close(1125)</onright>
-			<orientation>vertical</orientation>
-			<itemlayout height="60" width="494">
-				<control type="image">
-					<width>494</width>
-					<height>60</height>
-					<texture>dialogs/separator4.png</texture>
-				</control>
-				<control type="label">
-					<width>494</width>
-					<height>60</height>
-					<font>font14</font>
-					<textcolor>grey</textcolor>
-					<align>center</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="60" width="494">
-				<control type="image">
-					<width>494</width>
-					<height>60</height>
-					<texture>dialogs/separator4.png</texture>
-				</control>
-				<control type="image">
-					<width>494</width>
-					<height>60</height>
-					<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-				</control>
-				<control type="label">
-					<width>494</width>
-					<height>60</height>
-					<font>font14</font>
-					<align>center</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
-			<content>
-				<item>
-					<label>$LOCALIZE[16018]</label>
-					<onclick>Skin.Reset(ItemToEdit.InfoLine)</onclick>
-					<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.InfoLine)],$INFO[Skin.String(ItemToEdit.InfoLine)])</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[31052]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,1)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[31053]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,2)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[31054]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,3)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[31085]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,7)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[31061]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,6)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-					<visible>System.HasAddon(script.skin.helper.service)</visible>
-				</item>
-				<item>
-					<label>$LOCALIZE[31058]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,4)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[20088]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,5)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[130]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,8)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-				<item>
-					<label>$LOCALIZE[12390]</label>
-					<onclick>Skin.SetString(ItemToEdit.InfoLine,9)</onclick>
-					<onclick>Dialog.Close(1125)</onclick>
-				</item>
-			</content>
+			<height>1060</height>
+			<onleft>Close</onleft>
+			<onright>Close</onright>
+			<align>center</align>
+			<control type="button" id="2">
+				<width>494</width>
+				<height>70</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<font>font15_title_bold</font>
+				<label>31049</label>
+				<disabledcolor>dialogheader</disabledcolor>
+				<enable>false</enable>
+			</control>
+			<control type="button" id="3">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[16018]</label>
+				<onclick>Skin.Reset(ItemToEdit.InfoLine)</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.InfoLine)],$INFO[Skin.String(ItemToEdit.InfoLine)])</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="4">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31052]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,1)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="5">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31053]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,2)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="6">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31054]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,3)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="7">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31085]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,7)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="8">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31061]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,6)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+				<visible>System.HasAddon(script.skin.helper.service)</visible>
+			</control>
+			<control type="button" id="9">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[31058]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,4)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="10">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[20088]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,5)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="11">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[130]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,8)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="12">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[12390]</label>
+				<onclick>Skin.SetString(ItemToEdit.InfoLine,9)</onclick>
+				<onclick>Dialog.Close(1125)</onclick>
+			</control>
+			<control type="button" id="13">
+				<width>494</width>
+				<height>30</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label />
+				<enable>false</enable>
+			</control>
 		</control>
 	</controls>
 </window>

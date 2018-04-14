@@ -416,7 +416,7 @@
 					<height>40</height>
 					<align>right</align>
 					<label>$VAR[GlobalSearchLabel2Var]</label>
-					<font>font14</font>
+					<font>font13</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<textoffsetx>15</textoffsetx>
 				</control>

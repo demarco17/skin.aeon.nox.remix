@@ -7,137 +7,119 @@
 	<onunload>ClearProperty(Nox.Path,Home)</onunload>
 	<onunload>ClearProperty(Nox.Label,Home)</onunload>
 	<controls>
-		<control type="group">
-			<left>457</left>
-			<top>240</top>
-			<control type="image">
-				<left>173</left>
-				<top>16</top>
-				<width>660</width>
-				<height>568</height>
-				<texture border="18">dialogs/dialog-bg2.png</texture>
-			</control>
-			<control type="label" id="1">
-				<left>173</left>
-				<top>32</top>
-				<width>660</width>
-				<height>40</height>
+		<control type="grouplist" id="90100">
+			<left>713</left>
+			<width>494</width>
+			<height>1060</height>
+			<onleft>Close</onleft>
+			<onright>Close</onright>
+			<align>center</align>
+			<control type="button" id="2">
+				<width>494</width>
+				<height>70</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
 				<font>font15_title_bold</font>
 				<label>$LOCALIZE[22079]</label>
+				<disabledcolor>dialogheader</disabledcolor>
+				<enable>false</enable>
+			</control>
+			<control type="button" id="3">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
 				<align>center</align>
-				<textcolor>dialogheader</textcolor>
+				<label>$LOCALIZE[13007]</label>
+				<onclick>Skin.Reset(ItemToEdit.Path)</onclick>
+				<onclick>Skin.Reset(ItemToEdit.Label)</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Path)],$INFO[Skin.String(ItemToEdit.Path)])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
 			</control>
-			<control type="list" id="90100">
-				<left>189</left>
-				<top>88</top>
-				<width>628</width>
-				<height>480</height>
-				<onright>60</onright>
-				<pagecontrol>60</pagecontrol>
-				<itemlayout height="60" width="628">
-					<control type="image">
-						<width>628</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="label">
-						<width>628</width>
-						<height>60</height>
-						<textoffsetx>15</textoffsetx>
-						<font>font14</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="60" width="628">
-					<control type="image">
-						<width>628</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="image">
-						<width>628</width>
-						<height>60</height>
-						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
-						<visible>Control.HasFocus(90100)</visible>
-					</control>
-					<control type="label">
-						<width>628</width>
-						<height>60</height>
-						<textoffsetx>15</textoffsetx>
-						<font>font14</font>
-						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>$LOCALIZE[13007]</label>
-						<onclick>Skin.Reset(ItemToEdit.Path)</onclick>
-						<onclick>Skin.Reset(ItemToEdit.Label)</onclick>
-						<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Path)],$INFO[Skin.String(ItemToEdit.Path)])</onclick>
-						<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[1037]</label>
-						<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.video)</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[1038]</label>
-						<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.audio)</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[1043]</label>
-						<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.executable)</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[1039]</label>
-						<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.image)</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[20012]</label>
-						<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/video/)</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Path,ActivateWindow(Videos,$INFO[Skin.String(ItemToEdit.Path)],return))</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[20011]</label>
-						<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
-						<onclick>Skin.SetString(ItemToEdit.Path,ActivateWindow(Music,$INFO[Skin.String(ItemToEdit.Path)],return))</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-					<item>
-						<label>$LOCALIZE[20190]</label>
-						<onclick>Skin.SetString(ItemToEdit.Path)</onclick>
-						<onclick>Skin.Reset(ItemToEdit.Label)</onclick>
-						<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onclick>
-						<onclick>Dialog.Close(1123)</onclick>
-					</item>
-				</content>
+			<control type="button" id="4">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[1037]</label>
+				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.video)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
 			</control>
-			<control type="scrollbar" id="60">
-				<left>820</left>
-				<top>88</top>
-				<height>480</height>
-				<width>10</width>
-				<onleft>90100</onleft>
-				<onright>90100</onright>
-				<showonepage>false</showonepage>
-				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
-				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+			<control type="button" id="5">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[1038]</label>
+				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.audio)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
+			</control>
+			<control type="button" id="6">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[1043]</label>
+				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.executable)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
+			</control>
+			<control type="button" id="7">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[1039]</label>
+				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.image)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
+			</control>
+			<control type="button" id="8">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[20012]</label>
+				<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Path,ActivateWindow(Videos,$INFO[Skin.String(ItemToEdit.Path)],return))</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
+			</control>
+			<control type="button" id="9">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[20011]</label>
+				<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
+				<onclick>Skin.SetString(ItemToEdit.Path,ActivateWindow(Music,$INFO[Skin.String(ItemToEdit.Path)],return))</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
+			</control>
+			<control type="button" id="10">
+				<width>494</width>
+				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label>$LOCALIZE[20190]</label>
+				<onclick>Skin.SetString(ItemToEdit.Path)</onclick>
+				<onclick>Skin.Reset(ItemToEdit.Label)</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(Nox.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onclick>
+				<onclick>Dialog.Close(1123)</onclick>
+			</control>
+			<control type="button" id="11">
+				<width>494</width>
+				<height>30</height>
+				<texturefocus border="4">dialogs/separator4.png</texturefocus>
+				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<align>center</align>
+				<label />
+				<enable>false</enable>
 			</control>
 		</control>
 	</controls>
