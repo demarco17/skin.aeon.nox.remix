@@ -151,15 +151,6 @@
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>$LOCALIZE[31206]</label>
-						<onclick>Skin.ToggleSetting(Enable.FanartTitle)</onclick>
-						<selected>Skin.HasSetting(Enable.FanartTitle)</selected>
-					</control>
-					<control type="radiobutton" id="106">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
 						<label>$LOCALIZE[20386]</label>
 						<onclick>Skin.ToggleSetting(Enable.HomeWidget)</onclick>
 						<selected>Skin.HasSetting(Enable.HomeWidget)</selected>

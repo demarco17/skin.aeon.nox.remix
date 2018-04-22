@@ -410,11 +410,7 @@ msgctxt "#31205"
 msgid "Lyrics Source"
 msgstr ""
 
-msgctxt "#31206"
-msgid "Display background name"
-msgstr ""
-
-#empty strings from id 31207 to 31300
+#empty strings from id 31206 to 31300
 
 msgctxt "#31301"
 msgid "Last Updated"
@@ -620,9 +616,7 @@ msgctxt "#31923"
 msgid "Set a default select action to enable this item."
 msgstr ""
 
-msgctxt "#31924"
-msgid "Display the title of movie/tvshow/artist on home screen if the menu item has a fanart slideshow option as background."
-msgstr ""
+#empty string with id 31924
 
 msgctxt "#31925"
 msgid "Pick one of the preset backgrounds or set your own images as the menu items background."

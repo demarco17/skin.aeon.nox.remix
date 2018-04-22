@@ -41,24 +41,13 @@
 				<control type="multiimage">
 					<description>current weather icon</description>
 					<left>1234</left>
+					<top>20</top>
 					<width>410</width>
-					<height>290</height>
+					<height>300</height>
 					<imagepath>$VAR[WeatherIconPath]</imagepath>
 					<aspectratio>keep</aspectratio>
 					<timeperimage>100</timeperimage>
 					<randomize>false</randomize>
-				</control>
-				<control type="label">
-					<description>current condition label</description>
-					<left>1234</left>
-					<top>264</top>
-					<width>410</width>
-					<height>65</height>
-					<align>center</align>
-					<label>$INFO[Window.Property(Current.Condition)]</label>
-					<font>font13</font>
-					<textoffsetx>15</textoffsetx>
-					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
 					<description>weather location label</description>
@@ -74,7 +63,7 @@
 					<top>200</top>
 					<width>820</width>
 					<height>45</height>
-					<font>font15</font>
+					<font>font15_bold</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<label>$INFO[Window.Property(Day0.Outlook),$LOCALIZE[31041]: [COLOR grey],[/COLOR]]</label>
@@ -84,7 +73,7 @@
 					<top>245</top>
 					<width>820</width>
 					<height>45</height>
-					<font>font15</font>
+					<font>font15_bold</font>
 					<textoffsetx>15</textoffsetx>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<label>$INFO[Window.Property(Day0.HighTemp),$LOCALIZE[393]: [COLOR grey],[/COLOR],]$INFO[System.TemperatureUnits,[COLOR grey],[/COLOR]]$INFO[Window.Property(Day0.LowTemp),  $LOCALIZE[391]: [COLOR grey],[/COLOR]]$INFO[System.TemperatureUnits,[COLOR grey],[/COLOR]]</label>
@@ -93,28 +82,19 @@
 					<description>current temp Value</description>
 					<left>824</left>
 					<width>411</width>
-					<height>335</height>
+					<height>355</height>
 					<font>WeatherTemp</font>
 					<align>center</align>
 					<label>$INFO[Window.Property(Current.Temperature)]</label>
-					<textcolor>grey</textcolor>
 				</control>
 				<control type="label">
 					<description>current temp Value Units</description>
 					<left>1085</left>
 					<width>150</width>
-					<height>280</height>
+					<height>300</height>
 					<font>font16</font>
 					<label>$INFO[System.TemperatureUnits]</label>
-					<textcolor>grey</textcolor>
 					<visible>!String.IsEmpty(Window.Property(Current.Temperature))</visible>
-				</control>
-				<control type="image">
-					<description>separator image</description>
-					<top>300</top>
-					<width>1645</width>
-					<height>60</height>
-					<texture border="4">dialogs/separator2.png</texture>
 				</control>
 				<control type="panel" id="380">
 					<top>360</top>
@@ -122,6 +102,11 @@
 					<height>100</height>
 					<orientation>vertical</orientation>
 					<itemlayout height="50" width="411">
+						<control type="image">
+							<width>411</width>
+							<height>50</height>
+							<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+						</control>
 						<control type="label">
 							<width>411</width>
 							<height>45</height>
@@ -166,13 +151,6 @@
 							<label2 fallback="161">$INFO[Window.Property(Today.Sunset)]</label2>
 						</item>
 					</content>
-				</control>
-				<control type="image">
-					<description>separator image</description>
-					<top>400</top>
-					<width>1645</width>
-					<height>60</height>
-					<texture border="4">dialogs/separator2.png</texture>
 				</control>
 				<control type="panel" id="300">
 					<top>505</top>

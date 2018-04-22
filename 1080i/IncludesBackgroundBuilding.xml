@@ -238,40 +238,51 @@
 				<visible>Control.IsVisible(52)</visible>
 				<visible>String.IsEqual(Control.GetLabel(4420),1) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 				<include>VisibleFadeAnimation</include>
-				<control type="grouplist">
+				<control type="image">
 					<left>138</left>
+					<top>162</top>
+					<width>245</width>
+					<height>360</height>
+					<fadetime>400</fadetime>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$VAR[PosterThumbVar]</texture>
+					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="grouplist">
+					<left>383</left>
 					<top>162</top>
 					<control type="button">
 						<label>$VAR[InfoPanelLabel1Var]</label>
-						<width>560</width>
+						<width>578</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 					</control>
 					<control type="button">
-						<width>560</width>
+						<width>578</width>
 						<label>$VAR[InfoPanelLabel3Var]</label>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 					</control>
 					<control type="button">
-						<width>560</width>
+						<width>578</width>
 						<label>$VAR[InfoPanelLabel2Var]</label>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 					</control>
 					<control type="group">
 						<control type="button">
 							<label>$VAR[InfoPanelLabel4Var]</label>
-							<width>280</width>
+							<width>289</width>
 							<height>92</height>
 							<include>ShowCaseInfoPanelButtonsValues</include>
 						</control>
 						<control type="image">
-							<left>280</left>
+							<left>289</left>
 							<top>-1</top>
 							<width>2</width>
 							<height>91</height>
 							<texture border="1">dialogs/separator3.png</texture>
 						</control>
 						<control type="button">
-							<left>280</left>
+							<left>289</left>
 							<label>$VAR[InfoPanelLabel5Var]</label>
 							<width>280</width>
 							<height>92</height>
@@ -280,7 +291,7 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>698</left>
+					<left>960</left>
 					<top>162</top>
 					<width>2</width>
 					<height>360</height>
@@ -288,11 +299,11 @@
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsCollection</visible>
+					<left>978</left>
+					<top>162</top>
 					<control type="textbox">
-						<left>713</left>
 						<label>$VAR[VideoPlotVar]</label>
-						<top>162</top>
-						<width>795</width>
+						<width>775</width>
 						<height>344</height>
 						<font>font14_textbox</font>
 						<pagecontrol>5262</pagecontrol>
@@ -300,8 +311,7 @@
 						<visible>!ListItem.IsCollection</visible>
 					</control>
 					<control type="scrollbar" id="5262">
-						<top>162</top>
-						<left>1525</left>
+						<left>804</left>
 						<width>10</width>
 						<height>360</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
@@ -315,18 +325,18 @@
 					</control>
 				</control>
 				<control type="group">
-					<left>715</left>
+					<left>978</left>
 					<top>162</top>
 					<visible>ListItem.IsCollection</visible>
 					<include content="InfoList">
 						<param name="list_id">5006</param>
 						<param name="header_label">$LOCALIZE[342]:$INFO[Container(5006).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
 						<param name="height">310</param>
-						<param name="width">795</param>
+						<param name="width">775</param>
 						<param name="page_control">5263</param>
 					</include>
 					<control type="scrollbar" id="5263">
-						<left>810</left>
+						<left>804</left>
 						<width>10</width>
 						<height>360</height>
 						<onup>SetProperty(MediaMenu,True,home)</onup>
@@ -345,17 +355,6 @@
 					<width>1141</width>
 					<height>60</height>
 					<texture border="4">dialogs/separator2.png</texture>
-				</control>
-				<control type="image">
-					<left>1535</left>
-					<top>162</top>
-					<width>245</width>
-					<height>360</height>
-					<fadetime>400</fadetime>
-					<aspectratio>scale</aspectratio>
-					<texture background="true">$VAR[PosterThumbVar]</texture>
-					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-					<bordersize>1</bordersize>
 				</control>
 			</control>
 		</control>
@@ -504,22 +503,6 @@
 					<bordersize>1</bordersize>
 				</control>
 			</control>
-		</control>
-	</include>
-	<include name="FanartTitle">
-		<control type="label">
-			<include>OpenCloseAnimation</include>
-			<include>VisibleFadeAnimation</include>
-			<top>1000</top>
-			<width>1920</width>
-			<height>80</height>
-			<font>font14</font>
-			<textcolor>F0FFFFFF</textcolor>
-			<shadowcolor>F0000000</shadowcolor>
-			<align>right</align>
-			<textoffsetx>40</textoffsetx>
-			<label>$VAR[FanartTitleVar]</label>
-			<visible>!Player.HasVideo | Skin.HasSetting(Disable.ShowBackgroundVideo)</visible>
 		</control>
 	</include>
 </includes>

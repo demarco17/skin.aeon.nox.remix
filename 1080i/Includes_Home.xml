@@ -64,7 +64,7 @@
 			<label fallback="2">$INFO[Skin.String(MusicHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<thumb>$INFO[Skin.String(MusicHomeItem.MultiFanart)]</thumb>
-			<property name="Path" fallback="ActivateWindow(Music,root)">$INFO[Skin.String(MusicHomeItem.Path)]</property>
+			<property name="Path" fallback="ActivateWindow(Music,Artists,return)">$INFO[Skin.String(MusicHomeItem.Path)]</property>
 			<property name="Item">Music</property>
 			<property name="BGType">$INFO[Skin.String(MusicHomeItem.BGType)]</property>
 			<property name="InfoLine">$INFO[Skin.String(MusicHomeItem.InfoLine)]</property>

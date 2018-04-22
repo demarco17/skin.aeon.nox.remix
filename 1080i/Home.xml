@@ -179,6 +179,5 @@
 				<texture border="1">home/gradient_floor.png</texture>
 			</control>
 		</control>
-		<include condition="Skin.HasSetting(Enable.FanartTitle)">FanartTitle</include>
 	</controls>
 </window>
