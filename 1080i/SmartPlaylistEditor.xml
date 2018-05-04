@@ -76,7 +76,7 @@
 					<top>268</top>
 					<width>2</width>
 					<height>180</height>
-					<texture border="1">dialogs/separator3.png</texture>
+					<texture>dialogs/separator3.png</texture>
 				</control>
 				<control type="panel" id="10">
 					<description>Rules List Control</description>
@@ -178,7 +178,7 @@
 					<top>568</top>
 					<width>2</width>
 					<height>119</height>
-					<texture border="1">dialogs/separator3.png</texture>
+					<texture>dialogs/separator3.png</texture>
 				</control>
 				<control type="button" id="18">
 					<left>32</left>

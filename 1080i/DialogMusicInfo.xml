@@ -333,7 +333,7 @@
 				<top>90</top>
 				<width>2</width>
 				<height>400</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="image">
 				<top>430</top>
@@ -391,19 +391,6 @@
 					<visible>String.IsEqual(ListItem.DBType,album)</visible>
 				</control>
 				<control type="button" id="203">
-					<description>Get Thumb</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<onclick>SendClick(2001,10)</onclick>
-					<label></label>
-				</control>
-				<control type="button" id="204">
-					<description>Get Fanart</description>
-					<include>ButtonInfoDialogsCommonValues</include>
-					<onclick>SendClick(2001,12)</onclick>
-					<label>⊷</label>
-					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-				</control>
-				<control type="button" id="205">
 					<description>Album info</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -411,13 +398,19 @@
 					<onclick>SendClick(2001,12)</onclick>
 					<visible>String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
-				<control type="button" id="206">
+				<control type="button" id="204">
+					<description>Artwork</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<onclick>SendClick(2001,10)</onclick>
+					<label>⊷</label>
+				</control>
+				<control type="button" id="205">
 					<description>Refresh</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<onclick>SendClick(2001,6)</onclick>
 					<label></label>
 				</control>
-				<control type="button" id="207">
+				<control type="button" id="206">
 					<description>Fullscreen fanart</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -425,14 +418,14 @@
 					<onclick>ActivateWindow(1131)</onclick>
 					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				<control type="button" id="208">
+				<control type="button" id="207">
 					<description>Library editor</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
 					<visible>System.HasAddon(script.libraryeditor) + [String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</visible>
 				</control>
-				<control type="button" id="209">
+				<control type="button" id="208">
 					<description>Set my rating</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>

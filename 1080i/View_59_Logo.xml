@@ -19,7 +19,7 @@
 				<itemlayout />
 				<focusedlayout width="640" height="210">
 					<control type="group">
-						<animation effect="fade" time="400" reversible="false">Focus</animation>
+						<animation effect="fade" time="300" reversible="false">Focus</animation>
 						<control type="image">
 							<left>640</left>
 							<width>640</width>

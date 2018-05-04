@@ -52,7 +52,7 @@
 					<top>148</top>
 					<width>2</width>
 					<height>60</height>
-					<texture border="1">dialogs/separator3.png</texture>
+					<texture>dialogs/separator3.png</texture>
 				</control>
 				<control type="button" id="15">
 					<description>Rule Field</description>
@@ -81,7 +81,7 @@
 					<top>208</top>
 					<width>2</width>
 					<height>60</height>
-					<texture border="1">dialogs/separator3.png</texture>
+					<texture>dialogs/separator3.png</texture>
 				</control>
 				<control type="edit" id="17">
 					<description>Value Button</description>

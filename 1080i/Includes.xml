@@ -778,7 +778,7 @@
 				<left>439</left>
 				<width>2</width>
 				<height>419</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="image">
 				<left>1</left>

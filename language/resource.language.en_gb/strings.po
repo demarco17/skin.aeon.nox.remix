@@ -394,7 +394,11 @@ msgctxt "#31132"
 msgid "Hardware decoding"
 msgstr ""
 
-#empty strings from id 31133 to 31140
+msgctxt "#31133"
+msgid "Show \"Now Playing\" information"
+msgstr ""
+
+#empty strings from id 31134 to 31140
 
 msgctxt "#31141"
 msgid "Power Options"
@@ -600,16 +604,14 @@ msgctxt "#31919"
 msgid "Projects the visualisation on the background when music is played."
 msgstr ""
 
-msgctxt "#31920"
-msgid "Display a widget on the Home screen with media information when music is playing."
-msgstr ""
+#empty string with id 31920
 
 msgctxt "#31921"
-msgid "Display a widget on the Home screen with media information when video is playing."
+msgid "Display the \"Now Playing\" information on the Home screen when media is playing."
 msgstr ""
 
 msgctxt "#31922"
-msgid "Display a widget on the Home screen with PVR information when recordings are scheduled or in progress."
+msgid "Display PVR information on the Home screen when recordings are in progress or are scheduled to be recorded."
 msgstr ""
 
 msgctxt "#31923"
@@ -638,7 +640,7 @@ msgid "Enable clearart/logo (if available) when the vodeo is paused."
 msgstr ""
 
 msgctxt "#31931"
-msgid "Enable unwatched recently added  movie widget on the home screen."
+msgid "Enable a recently added movie widget (unwatched) on the home screen."
 msgstr ""
 
 #empty string with id 31932

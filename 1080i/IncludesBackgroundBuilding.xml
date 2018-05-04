@@ -132,7 +132,7 @@
 					<top>162</top>
 					<width>2</width>
 					<height>179</height>
-					<texture border="1">dialogs/separator3.png</texture>
+					<texture>dialogs/separator3.png</texture>
 				</control>
 				<control type="grouplist">
 					<left>639</left>
@@ -152,7 +152,7 @@
 							<left>251</left>
 							<width>2</width>
 							<height>90</height>
-							<texture border="1">dialogs/separator3.png</texture>
+							<texture>dialogs/separator3.png</texture>
 						</control>
 						<control type="button">
 							<left>251</left>
@@ -279,7 +279,7 @@
 							<top>-1</top>
 							<width>2</width>
 							<height>91</height>
-							<texture border="1">dialogs/separator3.png</texture>
+							<texture>dialogs/separator3.png</texture>
 						</control>
 						<control type="button">
 							<left>289</left>
@@ -295,7 +295,7 @@
 					<top>162</top>
 					<width>2</width>
 					<height>360</height>
-					<texture border="1">dialogs/separator3.png</texture>
+					<texture>dialogs/separator3.png</texture>
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsCollection</visible>
@@ -407,7 +407,7 @@
 						<top>162</top>
 						<width>2</width>
 						<height>179</height>
-						<texture border="1">dialogs/separator3.png</texture>
+						<texture>dialogs/separator3.png</texture>
 					</control>
 					<control type="grouplist">
 						<left>640</left>

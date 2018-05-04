@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="OpenCloseAnimation">
-		<animation effect="fade" time="400">WindowOpen</animation>
+		<animation effect="fade" time="300">WindowOpen</animation>
 		<animation effect="fade" time="300">WindowClose</animation>
 	</include>
 	<include name="VisibleFadeAnimation">
-		<animation effect="fade" time="400">Visible</animation>
+		<animation effect="fade" time="300">Visible</animation>
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
 	<include name="ViewFadeAnimation">
-		<animation effect="fade" time="400">Visible</animation>
+		<animation effect="fade" time="300">Visible</animation>
 	</include>
 	<include name="IconZoomAnimation">
 		<animation effect="zoom" center="auto" start="95" end="100" time="200" reversible="false">Focus</animation>

@@ -130,21 +130,21 @@
 				<top>653</top>
 				<width>2</width>
 				<height>427</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="image">
 				<left>1258</left>
 				<top>653</top>
 				<width>2</width>
 				<height>427</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="image">
 				<left>1272</left>
 				<top>653</top>
 				<width>2</width>
 				<height>427</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="grouplist">
 				<left>1310</left>
@@ -722,21 +722,21 @@
 				<top>653</top>
 				<width>2</width>
 				<height>427</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="image">
 				<left>1258</left>
 				<top>653</top>
 				<width>2</width>
 				<height>427</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="image">
 				<left>1272</left>
 				<top>653</top>
 				<width>2</width>
 				<height>427</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="group">
 				<visible>Container.Content(albums) | Container.Content(songs)</visible>

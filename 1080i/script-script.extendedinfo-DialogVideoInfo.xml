@@ -200,7 +200,7 @@
 				<top>90</top>
 				<width>2</width>
 				<height>400</height>
-				<texture border="1">dialogs/separator3.png</texture>
+				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="image">
 				<top>430</top>
