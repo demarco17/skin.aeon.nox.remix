@@ -5,8 +5,8 @@
 		<control type="group">
 			<visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation)</visible>
 			<left>560</left>
-			<top>75</top>
-			<animation effect="slide" start="0,0" end="0,25" condition="Window.IsActive(home) + System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
+			<top>55</top>
+			<animation effect="slide" start="0,0" end="0,20" condition="Window.IsActive(home) + System.GetBool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(Disable.Pvrinfo)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>

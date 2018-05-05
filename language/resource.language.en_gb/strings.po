@@ -607,11 +607,11 @@ msgstr ""
 #empty string with id 31920
 
 msgctxt "#31921"
-msgid "Display the \"Now Playing\" information on the Home screen when media is playing."
+msgid "Display the \"Now Playing\" information on the home screen when media is playing."
 msgstr ""
 
 msgctxt "#31922"
-msgid "Display PVR information on the Home screen when recordings are in progress or are scheduled to be recorded."
+msgid "Display PVR information on the home screen when recordings are in progress or are scheduled to be recorded."
 msgstr ""
 
 msgctxt "#31923"
@@ -676,7 +676,7 @@ msgstr ""
 #empty strings from id 31940 to 31947
 
 msgctxt "#31948"
-msgid "Enable Artwork download GUI mode in video info dialog. Otherwise 'auto download' as per addon settings."
+msgid "Enable artwork download GUI mode in video info dialog. Otherwise 'auto download' as per addon settings."
 msgstr ""
 
 msgctxt "#31949"

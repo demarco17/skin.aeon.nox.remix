@@ -463,8 +463,12 @@
 		<value>$INFO[Player.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PlayerTitleLabelVar">
-		<value condition="Player.ChapterCount">$INFO[Player.Title]$INFO[player.chapter,[COLOR grey3]  |  [/COLOR]$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]</value>
-		<value>$INFO[Player.Title]</value>
+		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]$INFO[player.chapter,[COLOR grey3]  |  [/COLOR]$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]</value>
+		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + !Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]$INFO[Player.Title,: ,]$VAR[EpisodePlayCountVar,[COLOR grey2] (,)[/COLOR]]</value>
+		<value condition="VideoPlayer.HasEpg">$INFO[VideoPlayer.ChannelName]$INFO[Player.Title,:[COLOR grey2] ,[/COLOR]]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ,]$INFO[MusicPlayer.TrackNumber, - [COLOR grey2],.[/COLOR]]$INFO[Player.Title]</value>
+		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="SkinSettingsDescriptionVar">
 		<value condition="Control.HasFocus(100)">$LOCALIZE[31912]</value>
@@ -623,17 +627,10 @@
 		<value condition="!String.IsEmpty(Container.ListItem.Property(Fanart)) + !String.IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))">$INFO[Container.ListItem.Property(Fanart)]</value>
 		<value>special://home/addons/script.tv.show.next.aired/fanart.jpg</value>
 	</variable>
-	<variable name="HomeNowPlayingThumbVar">
+	<variable name="NowPlayingThumbVar">
 		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + !String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
 		<value>$INFO[Player.Art(thumb)]</value>
-	</variable>
-	<variable name="HomePlayingTitleVar">
-		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]$INFO[Player.Title,: ,]$VAR[EpisodePlayCountVar,[COLOR grey2] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]$INFO[Player.Title,:[COLOR grey2] ,[/COLOR]]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Album]$INFO[MusicPlayer.TrackNumber, - [COLOR grey2],.[/COLOR] ]$INFO[Player.Title]</value>
-		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="InfoPlayingTitleVar">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]</value>
@@ -773,6 +770,12 @@
 		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">overlays/pvr/PVR-HasTimerDisabled.png</value>
 		<value condition="ListItem.HasTimerSchedule">overlays/pvr/PVR-HasTimerSchedule.png</value>
 		<value condition="ListItem.HasTimer">overlays/pvr/PVR-HasTimer.png</value>
+	</variable>
+	<variable name="HomeNowPlayIcon">
+		<value condition="Player.Rewinding"></value>
+		<value condition="Player.Forwarding | Player.IsTempo"></value>
+		<value condition="Player.Paused"></value>
+		<value></value>
 	</variable>
 	<variable name="MediaWatchedIconVar">
 		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,66) + !Integer.IsGreater(ListItem.Playcount,0)">overlays/inprogress-75.png</value>

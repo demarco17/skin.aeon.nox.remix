@@ -48,7 +48,7 @@
 				<width>360</width>
 				<height>372</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture background="true" fallback="DefaultAlbumCover.png">$VAR[HomeNowPlayingThumbVar]</texture>
+				<texture background="true" fallback="DefaultAlbumCover.png">$VAR[NowPlayingThumbVar]</texture>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>!Pvr.IsPlayingRadio</visible>
@@ -58,7 +58,7 @@
 				<width>360</width>
 				<height>318</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture fallback="settings/icons/livetv.png" background="true">$VAR[HomeNowPlayingThumbVar]</texture>
+				<texture fallback="settings/icons/livetv.png" background="true">$VAR[NowPlayingThumbVar]</texture>
 				<bordersize>20</bordersize>
 				<visible>Pvr.IsPlayingRadio</visible>
 			</control>

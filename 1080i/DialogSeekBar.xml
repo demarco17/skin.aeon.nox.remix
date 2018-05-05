@@ -109,7 +109,7 @@
 		</control>
 
 		<!-- PVR - show channel information when switching channels -->
-		<control type="group">
+		<!--<control type="group">
 			<include>OpenCloseAnimation</include>
 			<top>815</top>
 			<visible>VideoPlayer.Content(LiveTV) + Player.ShowInfo</visible>
@@ -130,7 +130,7 @@
 				<width>253</width>
 				<height>318</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<texture fallback="settings/icons/livetv.png" background="true">$VAR[HomeNowPlayingThumbVar]</texture>
+				<texture fallback="settings/icons/livetv.png" background="true">$VAR[NowPlayingThumbVar]</texture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="label">
@@ -239,6 +239,6 @@
 				<textoffsetx>10</textoffsetx>
 				<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</label>
 			</control>
-		</control>
+		</control>-->
 	</controls>
 </window>

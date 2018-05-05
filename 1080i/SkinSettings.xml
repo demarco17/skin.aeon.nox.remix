@@ -91,7 +91,7 @@
 				<left>552</left>
 				<top>775</top>
 				<width>1256</width>
-				<height>90</height>
+				<height>93</height>
 				<font>Description_textbox</font>
 				<textcolor>grey3</textcolor>
 				<label>$VAR[SkinSettingsDescriptionVar]</label>
@@ -209,7 +209,7 @@
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>$LOCALIZE[31129]</label>
+						<label> - $LOCALIZE[31129]</label>
 						<onclick>Skin.ToggleSetting(HideVisualizationFanart)</onclick>
 						<selected>Skin.HasSetting(HideVisualizationFanart)</selected>
 					</control>
