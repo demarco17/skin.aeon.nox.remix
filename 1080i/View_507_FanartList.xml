@@ -24,7 +24,7 @@
 							<label>$VAR[FanartListInfoVar]</label>
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
 							<textoffsetx>15</textoffsetx>
-							<include>ShowCaseInfoPanelButtonsValues</include>
+							<include>MediaInfoPanelButtons</include>
 						</control>
 						<control type="group">
 							<visible>Container.Content(movies) | Container.Content(musicvideos) | Container.Content(episodes)</visible>
@@ -368,9 +368,8 @@
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(tvshows)">
 						<control type="image">
-							<top>12</top>
 							<width>1056</width>
-							<height>60</height>
+							<height>70</height>
 							<texture border="4">dialogs/separator2.png</texture>
 						</control>
 						<control type="label">

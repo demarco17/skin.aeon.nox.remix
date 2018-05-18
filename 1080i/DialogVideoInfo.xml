@@ -101,12 +101,12 @@
 						<visible>String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TvShowTitle)</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Status,$LOCALIZE[126]: [COLOR grey],[/COLOR]]</label>
-						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Status)</visible>
+						<label>$INFO[Window(Home).Property(NextAired.Status),$LOCALIZE[126]: [COLOR grey],[/COLOR]]</label>
+						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.Status))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(Home).Property(NextAired.Status),$LOCALIZE[126]: [COLOR grey],[/COLOR]]</label>
-						<visible>String.IsEqual(ListItem.DBType,tvshow) + String.IsEmpty(ListItem.Status) + !String.IsEmpty(Window(Home).Property(NextAired.Status))</visible>
+						<label>$INFO[ListItem.Status,$LOCALIZE[126]: [COLOR grey],[/COLOR]]</label>
+						<visible>String.IsEqual(ListItem.DBType,tvshow) + String.IsEmpty(Window(Home).Property(NextAired.Status)) + !String.IsEmpty(ListItem.Status)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Season,$LOCALIZE[20373]: [COLOR grey],[/COLOR]]$INFO[ListItem.Episode,  $LOCALIZE[20359]: [COLOR grey],[/COLOR]]</label>

@@ -171,81 +171,6 @@
 		<value condition="VideoPlayer.IsStereoscopic">3D</value>
 		<value>$INFO[VideoPlayer.VideoCodec]</value>
 	</variable>
-	<!-- InfoPanel -->
-	<variable name="VideoInfoPanelVar">
-		<value condition="Control.IsVisible(53) + Container.Content(movies)">$INFO[Skin.String(53.Movies.InfoPanel)]</value>
-		<value condition="Control.IsVisible(53) + Container.Content(tvshows)">$INFO[Skin.String(53.TVShows.InfoPanel)]</value>
-		<value condition="Control.IsVisible(53) + Container.Content(seasons)">$INFO[Skin.String(53.Seasons.InfoPanel)]</value>
-		<value condition="Control.IsVisible(53) + Container.Content(sets)">$INFO[Skin.String(53.Sets.InfoPanel)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(movies)">$INFO[Skin.String(52.Movies.InfoPanel)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(tvshows)">$INFO[Skin.String(52.TVShows.InfoPanel)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(seasons)">$INFO[Skin.String(52.Seasons.InfoPanel)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(episodes)">$INFO[Skin.String(52.Episodes.InfoPanel)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(sets)">$INFO[Skin.String(52.Sets.InfoPanel)]</value>
-	</variable>
-	<variable name="MusicInfoPanelVar">
-		<value condition="Control.IsVisible(54) + Container.Content(albums)">$INFO[Skin.String(54.Albums.InfoPanel)]</value>
-		<value condition="Control.IsVisible(54) + Container.Content(artists)">$INFO[Skin.String(54.Artists.InfoPanel)]</value>
-	</variable>
-	<variable name="52VideoInfoPanelVar">
-		<value condition="Container.Content(movies) + String.IsEmpty(Skin.String(52.Movies.InfoPanel))">Skin.SetString(52.Movies.InfoPanel,1)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(52.Movies.InfoPanel),1)">Skin.Reset(52.Movies.InfoPanel)</value>
-		<value condition="Container.Content(tvshows) + String.IsEmpty(Skin.String(52.TVShows.InfoPanel))">Skin.SetString(52.TVShows.InfoPanel,1)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(52.TVShows.InfoPanel),1)">Skin.Reset(52.TVShows.InfoPanel)</value>
-		<value condition="Container.Content(seasons) + String.IsEmpty(Skin.String(52.Seasons.InfoPanel))">Skin.SetString(52.Seasons.InfoPanel,1)</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(52.Seasons.InfoPanel),1)">Skin.Reset(52.Seasons.InfoPanel)</value>
-		<value condition="Container.Content(episodes) + String.IsEmpty(Skin.String(52.Episodes.InfoPanel))">Skin.SetString(52.Episodes.InfoPanel,1)</value>
-		<value condition="Container.Content(episodes) + String.IsEqual(Skin.String(52.Episodes.InfoPanel),1)">Skin.Reset(52.Episodes.InfoPanel)</value>
-		<value condition="Container.Content(sets) + String.IsEmpty(Skin.String(52.Sets.InfoPanel))">Skin.SetString(52.Sets.InfoPanel,1)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(52.Sets.InfoPanel),1)">Skin.Reset(52.Sets.InfoPanel)</value>
-	</variable>
-	<variable name="53VideoInfoPanelVar">
-		<value condition="Container.Content(movies) + String.IsEmpty(Skin.String(53.Movies.InfoPanel))">Skin.SetString(53.Movies.InfoPanel,1)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(53.Movies.InfoPanel),1)">Skin.Reset(53.Movies.InfoPanel)</value>
-		<value condition="Container.Content(tvshows) + String.IsEmpty(Skin.String(53.TVShows.InfoPanel))">Skin.SetString(53.TVShows.InfoPanel,1)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(53.TVShows.InfoPanel),1)">Skin.Reset(53.TVShows.InfoPanel)</value>
-		<value condition="Container.Content(seasons) + String.IsEmpty(Skin.String(53.Seasons.InfoPanel))">Skin.SetString(53.Seasons.InfoPanel,1)</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(53.Seasons.InfoPanel),1)">Skin.Reset(53.Seasons.InfoPanel)</value>
-		<value condition="Container.Content(sets) + String.IsEmpty(Skin.String(53.Sets.InfoPanel))">Skin.SetString(53.Sets.InfoPanel,1)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(53.Sets.InfoPanel),1)">Skin.Reset(53.Sets.InfoPanel)</value>
-	</variable>
-	<variable name="54MusicInfoPanelVar">
-		<value condition="Container.Content(albums) + String.IsEmpty(Skin.String(54.Albums.InfoPanel))">Skin.SetString(54.Albums.InfoPanel,1)</value>
-		<value condition="Container.Content(albums) + String.IsEqual(Skin.String(54.Albums.InfoPanel),1)">Skin.Reset(54.Albums.InfoPanel)</value>
-		<value condition="Container.Content(artists) + String.IsEmpty(Skin.String(54.Artists.InfoPanel))">Skin.SetString(54.Artists.InfoPanel,1)</value>
-		<value condition="Container.Content(artists) + String.IsEqual(Skin.String(54.Artists.InfoPanel),1)">Skin.Reset(54.Artists.InfoPanel)</value>
-	</variable>
-	<variable name="InfoPanelLabelVar">
-		<value condition="String.IsEqual(Control.GetLabel(4420),1)">$LOCALIZE[16041]</value>
-		<value>$LOCALIZE[351]</value>
-	</variable>
-	<variable name="InfoPanelLabel1Var">
-		<value condition="ListItem.IsCollection">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31000]:[/COLOR][CR]$INFO[Container(5010).ListItemPosition().Director]</value>
-		<value condition="[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(episodes)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</value>
-	</variable>
-	<variable name="InfoPanelLabel2Var">
-		<value condition="ListItem.IsCollection">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[563]:[/COLOR][CR]$INFO[Container(5010).ListItemPosition().RatingAndVotes]</value>
-		<value condition="[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(tvshows) | Container.Content(episodes)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[563]:[/COLOR][CR]$INFO[ListItem.RatingAndVotes]$INFO[ListItem.Top250, / $LOCALIZE[13409] #]</value>
-		<value condition="Container.Content(seasons)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31019]:[/COLOR][CR]$INFO[ListItem.Studio]</value>
-	</variable>
-	<variable name="InfoPanelLabel3Var">
-		<value condition="ListItem.IsCollection">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31001]:[/COLOR][CR]$INFO[Container(5010).ListItemPosition().Writer]</value>
-		<value condition="[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(episodes)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31001]:[/COLOR][CR]$INFO[ListItem.Writer]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</value>
-	</variable>
-	<variable name="InfoPanelLabel4Var">
-		<value condition="ListItem.IsCollection">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[Container(5010).ListItemPosition().Duration]</value>
-		<value condition="[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(episodes)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</value>
-		<value condition="Container.Content(tvshows)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[33054]:[/COLOR][CR]$INFO[ListItem.Property(TotalSeasons)]</value>
-		<value condition="Container.Content(seasons)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20360]:[/COLOR][CR]$INFO[ListItem.Property(TotalEpisodes)]</value>
-	</variable>
-	<variable name="InfoPanelLabel5Var">
-		<value condition="[Container.Content(movies) | Container.Content(sets)]">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</value>
-		<value condition="Container.Content(tvshows)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20360]:[/COLOR][CR]$INFO[ListItem.Property(TotalEpisodes)]$INFO[ListItem.Property(UnWatchedEpisodes), (,)]</value>
-		<value condition="Container.Content(seasons)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[16101]:[/COLOR][CR]$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
-		<value condition="Container.Content(episodes)">[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</value>
-	</variable>
 
 	<!-- InfoWall Icon Toggle -->
 	<variable name="InfoWallIconVar">
@@ -328,58 +253,6 @@
 		<value condition="Control.IsVisible(501) + Container.Content(songs) + String.IsEqual(Skin.String(501.Songs.CaseToggle),1)">Skin.Reset(501.Songs.CaseToggle)</value>
 	</variable>
 
-	<!-- WrapList Toggle -->
-	<variable name="VideoWrapListToggleVar">
-		<value condition="Control.IsVisible(53) + Container.Content(movies)">$INFO[Skin.String(53.Movies.WrapList)]</value>
-		<value condition="Control.IsVisible(53) + Container.Content(tvshows)">$INFO[Skin.String(53.TVShows.WrapList)]</value>
-		<value condition="Control.IsVisible(53) + Container.Content(seasons)">$INFO[Skin.String(53.Seasons.WrapList)]</value>
-		<value condition="Control.IsVisible(53) + Container.Content(sets)">$INFO[Skin.String(53.Sets.WrapList)]</value>
-		<value condition="Control.IsVisible(53) + Container.Content(musicvideos)">$INFO[Skin.String(53.Musicvideos.WrapList)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(movies)">$INFO[Skin.String(52.Movies.WrapList)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(tvshows)">$INFO[Skin.String(52.TVShows.WrapList)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(episodes)">$INFO[Skin.String(52.Episodes.WrapList)]</value>
-		<value condition="Control.IsVisible(52) + Container.Content(sets)">$INFO[Skin.String(52.Sets.WrapList)]</value>
-	</variable>
-	<variable name="MusicWrapListToggleVar">
-		<value condition="Control.IsVisible(54) + Container.Content(albums)">$INFO[Skin.String(54.Albums.WrapList)]</value>
-		<value condition="Control.IsVisible(54) + Container.Content(artists)">$INFO[Skin.String(54.Artists.WrapList)]</value>
-		<value condition="Control.IsVisible(54) + Container.Content(songs)">$INFO[Skin.String(54.Songs.WrapList)]</value>
-	</variable>
-	<variable name="WrapListToggleLabelVar">
-		<value condition="String.IsEqual(Control.GetLabel(4450),1)">$LOCALIZE[16041]</value>
-		<value>$LOCALIZE[351]</value>
-	</variable>
-	<variable name="53WrapListToggleVar">
-		<value condition="Container.Content(movies) + String.IsEmpty(Skin.String(53.Movies.WrapList))">Skin.SetString(53.Movies.WrapList,1)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(53.Movies.WrapList),1)">Skin.Reset(53.Movies.WrapList)</value>
-		<value condition="Container.Content(tvshows) + String.IsEmpty(Skin.String(53.TVShows.WrapList))">Skin.SetString(53.TVShows.WrapList,1)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(53.TVShows.WrapList),1)">Skin.Reset(53.TVShows.WrapList)</value>
-		<value condition="Container.Content(seasons) + String.IsEmpty(Skin.String(53.Seasons.WrapList))">Skin.SetString(53.Seasons.WrapList,1)</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(Skin.String(53.Seasons.WrapList),1)">Skin.Reset(53.Seasons.WrapList)</value>
-		<value condition="Container.Content(sets) + String.IsEmpty(Skin.String(53.Sets.WrapList))">Skin.SetString(53.Sets.WrapList,1)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(53.Sets.WrapList),1)">Skin.Reset(53.Sets.WrapList)</value>
-		<value condition="Container.Content(musicvideos) + String.IsEmpty(Skin.String(53.Musicvideos.WrapList))">Skin.SetString(53.Musicvideos.WrapList,1)</value>
-		<value condition="Container.Content(musicvideos) + String.IsEqual(Skin.String(53.Musicvideos.WrapList),1)">Skin.Reset(53.Musicvideos.WrapList)</value>
-	</variable>
-	<variable name="52WrapListToggleVar">
-		<value condition="Container.Content(movies) + String.IsEmpty(Skin.String(52.Movies.WrapList))">Skin.SetString(52.Movies.WrapList,1)</value>
-		<value condition="Container.Content(movies) + String.IsEqual(Skin.String(52.Movies.WrapList),1)">Skin.Reset(52.Movies.WrapList)</value>
-		<value condition="Container.Content(tvshows) + String.IsEmpty(Skin.String(52.TVShows.WrapList))">Skin.SetString(52.TVShows.WrapList,1)</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(52.TVShows.WrapList),1)">Skin.Reset(52.TVShows.WrapList)</value>
-		<value condition="Container.Content(episodes) + String.IsEmpty(Skin.String(52.Episodes.WrapList))">Skin.SetString(52.Episodes.WrapList,1)</value>
-		<value condition="Container.Content(episodes) + String.IsEqual(Skin.String(52.Episodes.WrapList),1)">Skin.Reset(52.Episodes.WrapList)</value>
-		<value condition="Container.Content(sets) + String.IsEmpty(Skin.String(52.Sets.WrapList))">Skin.SetString(52.Sets.WrapList,1)</value>
-		<value condition="Container.Content(sets) + String.IsEqual(Skin.String(52.Sets.WrapList),1)">Skin.Reset(52.Sets.WrapList)</value>
-	</variable>
-	<variable name="54WrapListToggleVar">
-		<value condition="Container.Content(albums) + String.IsEmpty(Skin.String(54.Albums.WrapList))">Skin.SetString(54.Albums.WrapList,1)</value>
-		<value condition="Container.Content(albums) + String.IsEqual(Skin.String(54.Albums.WrapList),1)">Skin.Reset(54.Albums.WrapList)</value>
-		<value condition="Container.Content(artists) + String.IsEmpty(Skin.String(54.Artists.WrapList))">Skin.SetString(54.Artists.WrapList,1)</value>
-		<value condition="Container.Content(artists) + String.IsEqual(Skin.String(54.Artists.WrapList),1)">Skin.Reset(54.Artists.WrapList)</value>
-		<value condition="Container.Content(songs) + String.IsEmpty(Skin.String(54.Songs.WrapList))">Skin.SetString(54.Songs.WrapList,1)</value>
-		<value condition="Container.Content(songs) + String.IsEqual(Skin.String(54.Songs.WrapList),1)">Skin.Reset(54.Songs.WrapList)</value>
-	</variable>
-
 	<variable name="BannerThumb">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
@@ -412,8 +285,8 @@
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TvShowTitle]</value>
 		<value condition="Container.Content(seasons) + !String.IsEqual(ListItem.Dbtype,movie)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: ,]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
-		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,Top250.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[ListItem.Top250,#, $LOCALIZE[13409]]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$VAR[RatingAndVotesVar, (,)]</value>
-		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,BestPicture.xsp) + ![Control.IsVisible(53) + [String.IsEqual(Skin.String(53.Movies.InfoPanel),1) | String.IsEqual(Skin.String(53.Movies.InfoPanel),2)]]">$INFO[Container.FolderName]$INFO[ListItem.Year,[COLOR grey3]: [/COLOR],]</value>
+		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,Top250.xsp)">$INFO[ListItem.Top250,#, $LOCALIZE[13409]]$INFO[ListItem.Rating,[COLOR grey3]  |  [/COLOR],]$VAR[RatingAndVotesVar, (,)]</value>
+		<value condition="Container.Content(movies) + String.EndsWith(Container.FolderPath,BestPicture.xsp)">$INFO[Container.FolderName]$INFO[ListItem.Year,[COLOR grey3]: [/COLOR],]</value>
 		<value condition="Container.Content(musicvideos) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
@@ -454,7 +327,6 @@
 		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.30)">1.3x</value>
 		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.40)">1.4x</value>
 		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.50)">1.5x</value>
-		<value condition="Player.Paused">$LOCALIZE[112]</value>
 	</variable>
 	<variable name="PlayerArtworkVar">
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
@@ -463,11 +335,11 @@
 		<value>$INFO[Player.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PlayerTitleLabelVar">
-		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]$INFO[player.chapter,[COLOR grey3]  |  [/COLOR]$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]</value>
-		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + !Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]$INFO[Player.Title,: ,]$VAR[EpisodePlayCountVar,[COLOR grey2] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.HasEpg">$INFO[VideoPlayer.ChannelName]$INFO[Player.Title,:[COLOR grey2] ,[/COLOR]]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ,]$INFO[MusicPlayer.TrackNumber, - [COLOR grey2],.[/COLOR]]$INFO[Player.Title]</value>
+		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey] (,)[/COLOR]]$INFO[player.chapter,[COLOR grey3]  |  [/COLOR]$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]</value>
+		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + !Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey] (,)[/COLOR]]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]$INFO[Player.Title,: ,]$VAR[EpisodePlayCountVar,[COLOR grey] (,)[/COLOR]]</value>
+		<value condition="VideoPlayer.HasEpg">$INFO[VideoPlayer.ChannelName]$INFO[Player.Title,:[COLOR grey] ,[/COLOR]]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ,]$INFO[MusicPlayer.TrackNumber, - [COLOR grey],.[/COLOR]]$INFO[Player.Title]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="SkinSettingsDescriptionVar">
@@ -633,21 +505,16 @@
 		<value>$INFO[Player.Art(thumb)]</value>
 	</variable>
 	<variable name="InfoPlayingTitleVar">
-		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey2] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$INFO[VideoPlayer.ChannelNumberLabel,[COLOR grey2],:[/COLOR] ]$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey] (,)[/COLOR]]</value>
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$INFO[VideoPlayer.ChannelNumberLabel,[COLOR grey],:[/COLOR] ]$INFO[VideoPlayer.ChannelName]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="InfoPlayingTitleVar2">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Year,$LOCALIZE[345]: [COLOR grey],[/COLOR]]</value>
-		<value condition="[VideoPlayer.Content(episodes) | VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording] + !VideoPlayer.Content(addons)">$INFO[VideoPlayer.Title]$VAR[EpisodePlayCountVar, [COLOR grey2](,)[/COLOR]]</value>
+		<value condition="[VideoPlayer.Content(episodes) | VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording] + !VideoPlayer.Content(addons)">$INFO[VideoPlayer.Title]$VAR[EpisodePlayCountVar, [COLOR grey](,)[/COLOR]]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
-	</variable>
-	<variable name="BigListInfoVar">
-		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(albums)">$INFO[ListItem.Genre]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 	</variable>
 	<variable name="FanartListInfoVar">
 		<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[31030]:[CR][COLOR grey],[/COLOR]]</value>

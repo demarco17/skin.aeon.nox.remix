@@ -16,7 +16,7 @@
 
    Customisable main menu/submenu.  
    Customisable backgrounds.  
-   Up to 13 different views available.  
+   Up to 10 different views available.  
    Skin integration for popular add-ons.  
    Master branch aims to be up-to-date with latest Kodi core changes.  
 

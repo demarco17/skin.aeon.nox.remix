@@ -610,6 +610,7 @@
 	<include name="PvrInfoWidget">
 		<control type="group">
 			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<visible>[Pvr.IsRecording | Pvr.HasNonRecordingTimer] + !Window.IsVisible(playercontrols)</visible>
 			<animation effect="slide" end="0,41" condition="System.GetBool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<control type="image">
@@ -788,6 +789,7 @@
 	<include name="NowPlayingWidget">
 		<control type="group">
 			<include>OpenCloseAnimation</include>
+			<include>VisibleFadeAnimation</include>
 			<visible>[Player.HasVideo | Player.HasAudio] + String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<top>1010</top>
 			<control type="image">
@@ -821,16 +823,25 @@
 				<height>38</height>
 				<label>$VAR[HomeNowPlayIcon]</label>
 				<font>IconTiny</font>
+			</control><control type="label">
+				<left>35</left>
+				<top>27</top>
+				<width>100</width>
+				<height>35</height>
+				<textoffsetx>15</textoffsetx>
+				<align>left</align>
+				<label>$VAR[VideoPlayerForwardRewindVar]</label>
+				<visible>Player.Forwarding | Player.Rewinding | Player.IsTempo</visible>
 			</control>
 			<control type="label">
 				<left>35</left>
 				<top>27</top>
-				<width>1885</width>
+				<width>795</width>
 				<height>35</height>
 				<textoffsetx>15</textoffsetx>
 				<align>left</align>
 				<label>$VAR[PlayerTitleLabelVar]</label>
-				<textcolor>grey</textcolor>
+				<visible>![Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			</control>
 			<control type="label">
 				<left>35</left>
@@ -840,7 +851,6 @@
 				<textoffsetx>15</textoffsetx>
 				<align>right</align>
 				<label>$VAR[SeekTimeLabelVar]</label>
-				<textcolor>grey</textcolor>
 			</control>
 		</control>
 	</include>

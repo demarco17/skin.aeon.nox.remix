@@ -3,10 +3,10 @@
 	<defaultcontrol always="true">62</defaultcontrol>
 	<controls>
 		<control type="group">
+			<top>815</top>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
-			<top>815</top>
-			<visible>!Player.Paused</visible>
+			<visible>![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
 			<control type="image">
 				<top>-35</top>
 				<width>1920</width>
@@ -88,7 +88,7 @@
 				<font>font13</font>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: [COLOR grey2]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)][/COLOR]</label>
+				<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: [COLOR grey]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)][/COLOR]</label>
 				<visible>VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="textbox">

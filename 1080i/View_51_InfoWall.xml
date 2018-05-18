@@ -175,7 +175,7 @@
 					<width>685</width>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR grey],[/COLOR]][CR][COLOR grey]$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes,[COLOR grey3]  |  [/COLOR],]$INFO[ListItem.Duration,[COLOR grey3]  |  [/COLOR],][/COLOR]</label>
-					<include>ShowCaseInfoPanelButtonsValues</include>
+					<include>MediaInfoPanelButtons</include>
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="textbox">
@@ -460,14 +460,14 @@
 					<top>455</top>
 					<width>668</width>
 					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Artist,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label),[COLOR grey3]  |  [/COLOR]]</label>
-					<include>ShowCaseInfoPanelButtonsValues</include>
+					<include>MediaInfoPanelButtons</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
 				<control type="button">
 					<top>455</top>
 					<width>668</width>
 					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
-					<include>ShowCaseInfoPanelButtonsValues</include>
+					<include>MediaInfoPanelButtons</include>
 					<visible>Container.Content(artists)</visible>
 				</control>
 				<control type="textbox">

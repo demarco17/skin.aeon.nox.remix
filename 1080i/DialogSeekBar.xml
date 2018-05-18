@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo | !String.IsEmpty(PVR.ChannelNumberInput)] + [VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsActive(pvrosdchannels) + !Window.IsVisible(1135)</visible>
+	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo] + [VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsVisible(1135)</visible>
 	<controls>
 		<include>PVRChannelNumberInput</include>
 		<control type="group">
-			<visible>!Player.ShowInfo</visible>
-			<visible>String.IsEmpty(Window(home).Property(PseudoTVRunning))</visible>
 			<visible>!Player.HasGame</visible>
 			<include>OpenCloseAnimation</include>
 			<top>1010</top>
@@ -32,12 +30,32 @@
 				<visible>!VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="label">
+				<left>12</left>
+				<top>26</top>
+				<width>40</width>
+				<height>38</height>
+				<label>$VAR[HomeNowPlayIcon]</label>
+				<font>IconTiny</font>
+			</control>
+			<control type="label">
+				<left>35</left>
 				<top>27</top>
-				<width>820</width>
+				<width>100</width>
+				<height>35</height>
+				<textoffsetx>15</textoffsetx>
+				<align>left</align>
+				<label>$VAR[VideoPlayerForwardRewindVar]</label>
+				<visible>Player.Forwarding | Player.Rewinding | Player.IsTempo</visible>
+			</control>
+			<control type="label">
+				<left>35</left>
+				<top>27</top>
+				<width>795</width>
 				<height>35</height>
 				<textoffsetx>15</textoffsetx>
 				<align>left</align>
 				<label>$VAR[PlayerTitleLabelVar]</label>
+				<visible>![Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			</control>
 			<control type="label">
 				<top>27</top>
@@ -67,178 +85,7 @@
 			<height>236</height>
 			<aspectratio aligny="bottom" align="right">keep</aspectratio>
 			<texture background="true">$VAR[PlayerArtworkVar]</texture>
-			<animation effect="slide" start="0,0" end="0,50" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning))">Conditional</animation>
 			<include>VisibleFadeAnimation</include>
 		</control>
-		<control type="grouplist">
-			<left>10</left>
-			<top>938</top>
-			<width>748</width>
-			<height>150</height>
-			<itemgap>10</itemgap>
-			<orientation>horizontal</orientation>
-			<visible>Player.Forwarding | Player.Rewinding | Player.Paused | Player.IsTempo</visible>
-			<usecontrolcoords>true</usecontrolcoords>
-			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!String.IsEmpty(Window(home).Property(PseudoTVRunning)) | Player.HasGame">Conditional</animation>
-			<include>VisibleFadeAnimation</include>
-			<control type="label">
-				<label>$VAR[VideoPlayerForwardRewindVar]</label>
-				<width min="10" max="300">auto</width>
-				<height>90</height>
-				<font>font_KodiFiix</font>
-				<shadowcolor />
-				<textcolor>grey</textcolor>
-				<visible>!Player.ShowInfo</visible>
-			</control>
-			<control type="image">
-				<top>5</top>
-				<width>90</width>
-				<height>87</height>
-				<aspectratio>keep</aspectratio>
-				<texture flipx="true" colordiffuse="grey">osd/ff.png</texture>
-				<visible>Player.Rewinding</visible>
-			</control>
-			<control type="image">
-				<top>5</top>
-				<width>90</width>
-				<height>87</height>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="grey">osd/ff.png</texture>
-				<visible>Player.Forwarding | Player.IsTempo</visible>
-			</control>
-		</control>
-
-		<!-- PVR - show channel information when switching channels -->
-		<!--<control type="group">
-			<include>OpenCloseAnimation</include>
-			<top>815</top>
-			<visible>VideoPlayer.Content(LiveTV) + Player.ShowInfo</visible>
-			<control type="image">
-				<top>-35</top>
-				<width>1920</width>
-				<height>320</height>
-				<texture border="4" flipy="true">dialogs/InfoBar.png</texture>
-			</control>
-			<control type="image">
-				<top>-255</top>
-				<width>1920</width>
-				<height>520</height>
-				<texture>dialogs/logo_back.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>253</width>
-				<height>318</height>
-				<aspectratio aligny="center">keep</aspectratio>
-				<texture fallback="settings/icons/livetv.png" background="true">$VAR[NowPlayingThumbVar]</texture>
-				<bordersize>20</bordersize>
-			</control>
-			<control type="label">
-				<left>238</left>
-				<top>-30</top>
-				<width>1420</width>
-				<height>60</height>
-				<font>font24_title_bold</font>
-				<scroll>true</scroll>
-				<textoffsetx>15</textoffsetx>
-				<label>$VAR[InfoPlayingTitleVar]</label>
-			</control>
-			<control type="label">
-				<left>238</left>
-				<top>25</top>
-				<width>1420</width>
-				<height>35</height>
-				<font>font13</font>
-				<textoffsetx>15</textoffsetx>
-				<textcolor>grey</textcolor>
-				<label>$VAR[InfoPlayingTitleVar2]</label>
-			</control>
-			<control type="label">
-				<left>1079</left>
-				<top>25</top>
-				<width>840</width>
-				<height>40</height>
-				<align>right</align>
-				<font>font13</font>
-				<textoffsetx>15</textoffsetx>
-				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: [COLOR grey2]]$INFO[VideoPlayer.NextStartTime, (, - ]$INFO[VideoPlayer.NextEndTime,,)][/COLOR]</label>
-			</control>
-			<control type="textbox">
-				<label>$INFO[VideoPlayer.Plot]</label>
-				<left>253</left>
-				<top>65</top>
-				<width>1645</width>
-				<height>90</height>
-				<font>font14_textbox</font>
-				<textcolor>grey</textcolor>
-				<pagecontrol>62</pagecontrol>
-			</control>
-			<control type="grouplist">
-				<left>1320</left>
-				<top>150</top>
-				<width>585</width>
-				<height>90</height>
-				<align>right</align>
-				<orientation>horizontal</orientation>
-				<itemgap>25</itemgap>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
-				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
-				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
-				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
-				</control>
-			</control>
-			<control type="progress">
-				<left>253</left>
-				<top>220</top>
-				<width>1652</width>
-				<height>38</height>
-				<info>PVR.EpgEventProgress</info>
-			</control>
-			<control type="label">
-				<left>253</left>
-				<top>220</top>
-				<width>300</width>
-				<height>35</height>
-				<textoffsetx>10</textoffsetx>
-				<label>$VAR[SeekTimeLabelVar]</label>
-			</control>
-			<control type="label">
-				<left>253</left>
-				<top>220</top>
-				<width>1652</width>
-				<height>35</height>
-				<align>center</align>
-				<label>$INFO[System.Time]</label>
-			</control>
-			<control type="label">
-				<left>253</left>
-				<top>220</top>
-				<width>1652</width>
-				<height>35</height>
-				<align>right</align>
-				<textoffsetx>10</textoffsetx>
-				<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</label>
-			</control>
-		</control>-->
 	</controls>
 </window>

@@ -137,6 +137,7 @@
 					<scrolltime>300</scrolltime>
 					<visible>Container.Content(artists)</visible>
 					<onclick>PlayMedia($ESCINFO[ListItem.FolderPath],isdir)</onclick>
+					<onclick>ReplaceWindow(musicplaylist)</onclick>
 					<itemlayout height="120" width="820">
 						<control type="image">
 							<width>820</width>

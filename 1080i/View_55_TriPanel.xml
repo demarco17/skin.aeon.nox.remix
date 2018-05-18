@@ -23,25 +23,25 @@
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Premiered) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[31019]:[/COLOR][CR]$INFO[ListItem.Studio]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Studio) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Genre) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
 					<control type="grouplist">
@@ -52,19 +52,19 @@
 							<label>$VAR[TriPanelInfoVar]</label>
 							<width>224</width>
 							<textcolor>$VAR[SkinThemeColour]</textcolor>
-							<include>ShowCaseInfoPanelButtonsValues</include>
+							<include>MediaInfoPanelButtons</include>
 							<visible>Container.Content(movies)</visible>
 						</control>
 						<control type="button">
 							<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
 							<width>224</width>
-							<include>ShowCaseInfoPanelButtonsValues</include>
+							<include>MediaInfoPanelButtons</include>
 							<visible>[Container.Content(movies) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Duration)</visible>
 						</control>
 						<control type="button">
 							<label />
 							<width>224</width>
-							<include>ShowCaseInfoPanelButtonsValues</include>
+							<include>MediaInfoPanelButtons</include>
 							<visible>Container.Content(episodes)</visible>
 						</control>
 					</control>
@@ -610,25 +610,25 @@
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[557]:[/COLOR][CR]$INFO[ListItem.Artist]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Artist)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[558]:[/COLOR][CR]$INFO[ListItem.Album]$INFO[ListItem.DiscNumber, - $LOCALIZE[427]: ,]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Album)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Year)</visible>
 					</control>
 				</control>
@@ -641,25 +641,25 @@
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[557]:[/COLOR][CR]$INFO[ListItem.Artist]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Artist)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[21899]:[/COLOR][CR]$INFO[ListItem.Property(Album_Label)]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
 					</control>
 				</control>
@@ -672,7 +672,7 @@
 					<control type="button">
 						<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Property(Artist_Genre)]</label>
 						<width>448</width>
-						<include>ShowCaseInfoPanelButtonsValues</include>
+						<include>MediaInfoPanelButtons</include>
 						<visible>!String.IsEmpty(ListItem.Property(Artist_Genre))</visible>
 					</control>
 					<control type="textbox">

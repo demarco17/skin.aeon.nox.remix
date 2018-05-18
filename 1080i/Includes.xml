@@ -6,9 +6,6 @@
 	<include file="IncludesBackgroundBuilding.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_InfoWall.xml" />
-	<include file="View_52_Landscape.xml" />
-	<include file="View_53_ShowCase.xml" />
-	<include file="View_54_ShowCase.xml" />
 	<include file="View_55_TriPanel.xml" />
 	<include file="View_56_DoubleList.xml" />
 	<include file="View_57_Shift.xml" />
@@ -18,7 +15,6 @@
 	<include file="View_501_LowList.xml" />
 	<include file="View_507_FanartList.xml" />
 	<include file="View_508_KodiFlix.xml" />
-	<include file="View_510_BigList.xml" />
 	<include file="View_511_PicWall.xml" />
 	<include file="Variables.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
@@ -312,7 +308,7 @@
 		<texturenofocus border="4">dialogs/separator5.png</texturenofocus>
 		<alttexturenofocus border="4">dialogs/separator5.png</alttexturenofocus>
 	</include>
-	<include name="ShowCaseInfoPanelButtonsValues">
+	<include name="MediaInfoPanelButtons">
 		<height>90</height>
 		<width>501</width>
 		<textoffsetx>15</textoffsetx>
@@ -710,28 +706,6 @@
 			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
 			<texture flipy="true" diffuse="thumbs/thumb_diffuse.png">thumbs/boxes/cdcase.png</texture>
 			<animation effect="fade" start="100" end="0" time="400" reversible="false">Focus</animation>
-		</control>
-	</include>
-	<include name="BigList_Landscape">
-		<control type="group">
-			<left>12</left>
-			<top>11</top>
-			<control type="image">
-				<width>346</width>
-				<height>195</height>
-				<texture background="true" fallback="DefaultVideo.png">$VAR[LandscapeVar]</texture>
-				<aspectratio>scale</aspectratio>
-				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-				<bordersize>1</bordersize>
-			</control>
-			<control type="image">
-				<top>90</top>
-				<width>346</width>
-				<height>98</height>
-				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-				<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
-			</control>
 		</control>
 	</include>
 	<include name="IconWatchedStatus">
