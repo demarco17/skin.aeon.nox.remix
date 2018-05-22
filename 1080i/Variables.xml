@@ -315,18 +315,18 @@
 		<value>$INFO[Player.Time]$INFO[Player.Duration, / ]</value>
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
-		<value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
-		<value condition="Player.Forwarding4x | Player.Rewinding4x">4x</value>
-		<value condition="Player.Forwarding8x | Player.Rewinding8x">8x</value>
-		<value condition="Player.Forwarding16x | Player.Rewinding16x">16x</value>
-		<value condition="Player.Forwarding32x | Player.Rewinding32x">32x</value>
-		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,0.90)">0.9x</value>
-		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,0.80)">0.8x</value>
-		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.10)">1.1x</value>
-		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.20)">1.2x</value>
-		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.30)">1.3x</value>
-		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.40)">1.4x</value>
-		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.50)">1.5x</value>
+		<value condition="Player.Forwarding2x | Player.Rewinding2x">2X</value>
+		<value condition="Player.Forwarding4x | Player.Rewinding4x">4X</value>
+		<value condition="Player.Forwarding8x | Player.Rewinding8x">8X</value>
+		<value condition="Player.Forwarding16x | Player.Rewinding16x">16X</value>
+		<value condition="Player.Forwarding32x | Player.Rewinding32x">32X</value>
+		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,0.90)">0.9X</value>
+		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,0.80)">0.8X</value>
+		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.10)">1.1X</value>
+		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.20)">1.2X</value>
+		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.30)">1.3X</value>
+		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.40)">1.4X</value>
+		<value condition="Player.IsTempo + String.IsEqual(Player.PlaySpeed,1.50)">1.5X</value>
 	</variable>
 	<variable name="PlayerArtworkVar">
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>

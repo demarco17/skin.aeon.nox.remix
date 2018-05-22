@@ -109,7 +109,7 @@
 						<visible>String.IsEqual(ListItem.DBType,tvshow) + String.IsEmpty(Window(Home).Property(NextAired.Status)) + !String.IsEmpty(ListItem.Status)</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Season,$LOCALIZE[20373]: [COLOR grey],[/COLOR]]$INFO[ListItem.Episode,  $LOCALIZE[20359]: [COLOR grey],[/COLOR]]</label>
+						<label>$INFO[ListItem.Season,$LOCALIZE[20373]: [COLOR grey],[/COLOR]  ]$INFO[ListItem.Episode,$LOCALIZE[20359]: [COLOR grey],[/COLOR]]</label>
 						<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 					</item>
 					<item>

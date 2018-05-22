@@ -28,7 +28,8 @@
 		</control>
 		<control type="group">
 			<top>815</top>
-			<visible>Player.ShowInfo + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(Addon)]</visible>
+			<visible>Player.ShowInfo + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(Addon) | Window.IsVisible(OSDAudioSettings)]</visible>
+			<visible>![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
 			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
