@@ -181,7 +181,7 @@
 				<visible>!Integer.IsGreater(Container(300).NumItems,15)</visible>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>3</left>
+				<left>2</left>
 				<top>489</top>
 				<width>1192</width>
 				<height>70</height>
@@ -257,21 +257,12 @@
 				<left>40</left>
 				<top>574</top>
 				<width>1132</width>
-				<height>506</height>
+				<height>472</height>
 				<font>font14_textbox</font>
 				<align>left</align>
 				<label fallback="161">$INFO[Window.Property(Biography)]</label>
 				<textcolor>grey</textcolor>
 				<pagecontrol>60</pagecontrol>
-				<include>VisibleFadeAnimation</include>
-				<visible>ControlGroup(9000).HasFocus(30)</visible>
-			</control>
-			<control type="image">
-				<left>3</left>
-				<top>1020</top>
-				<width>1192</width>
-				<height>60</height>
-				<texture>dialogs/logo_back.png</texture>
 				<include>VisibleFadeAnimation</include>
 				<visible>ControlGroup(9000).HasFocus(30)</visible>
 			</control>
@@ -692,7 +683,7 @@
 						<height>75</height>
 						<align>center</align>
 						<font>font13</font>
-						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]$INFO[ListItem.Property(Job),  ,]</label>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)][CR][COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Property(Job)][/COLOR]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="420" width="297">
@@ -730,7 +721,7 @@
 							<height>75</height>
 							<font>font13</font>
 							<align>center</align>
-							<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]$INFO[ListItem.Property(Job),  ,]</label>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)][CR][COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Property(Job)][/COLOR]</label>
 							<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
 						</control>
 					</control>
@@ -782,7 +773,7 @@
 						<height>75</height>
 						<align>center</align>
 						<font>font13</font>
-						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]$INFO[ListItem.Property(Job),  ,]</label>
+						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)][CR][COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Property(Job)][/COLOR]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="420" width="297">
@@ -820,7 +811,7 @@
 							<height>75</height>
 							<font>font13</font>
 							<align>center</align>
-							<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]$INFO[ListItem.Property(Job),  ,]</label>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)][CR][COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Property(Job)][/COLOR]</label>
 							<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
 						</control>
 					</control>

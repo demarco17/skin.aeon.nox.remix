@@ -299,7 +299,7 @@
 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>70</height>
-		<width>148.5</width>
+		<width>119</width>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>IconMedium</font>

@@ -218,7 +218,7 @@
 				<visible>!Integer.IsGreater(Container(300).NumItems,15)</visible>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>3</left>
+				<left>2</left>
 				<top>489</top>
 				<width>1192</width>
 				<height>70</height>

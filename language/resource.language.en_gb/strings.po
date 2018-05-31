@@ -607,7 +607,7 @@ msgstr ""
 #empty string with id 31920
 
 msgctxt "#31921"
-msgid "Display the \"Now Playing\" information on the home screen when media is playing."
+msgid "Display the \"Now Playing\" information on the home screen."
 msgstr ""
 
 msgctxt "#31922"
@@ -666,7 +666,7 @@ msgid "Customize studio icons (White/Coloured)."
 msgstr ""
 
 msgctxt "#31938"
-msgid "Enables extra information in the TvShow video info dialog, like TV show status, next/latest episode. Depends on TV Show Next Aired add-on."
+msgid "Enables extra information in the TvShow video info dialog, like TV show status, next episode shedualed date and time/latest aired episode. Depends on TV Show Next Aired add-on."
 msgstr ""
 
 msgctxt "#31939"

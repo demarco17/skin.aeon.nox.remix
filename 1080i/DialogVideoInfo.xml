@@ -252,9 +252,9 @@
 				<visible>!Integer.IsGreater(Container(300).NumItems,15)</visible>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>3</left>
+				<left>2</left>
 				<top>489</top>
-				<width>1192</width>
+				<width>1191</width>
 				<height>70</height>
 				<align>left</align>
 				<onup>300</onup>
@@ -322,13 +322,22 @@
 					<visible>System.HasAddon(script.artwork.beef) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 				</control>
 				<control type="button" id="207">
+					<description>Extended info</description>
+					<include>ButtonInfoDialogsCommonValues</include>
+					<label></label>
+					<onclick>Dialog.Close(movieinformation)</onclick>
+					<onclick condition="String.IsEqual(ListItem.DbType,movie)">RunScript(script.extendedinfo, info=extendedinfo, dbid=$INFO[ListItem.DBID], name=$INFO[ListItem.Title])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DbType,tvshow)">RunScript(script.extendedinfo, info=extendedtvinfo, dbid=$INFO[ListItem.DBID])</onclick>
+					<visible>System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow)]</visible>
+				</control>
+				<control type="button" id="208">
 					<description>Library editor</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
 					<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
 					<visible>System.HasAddon(script.libraryeditor) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 				</control>
-				<control type="button" id="208">
+				<control type="button" id="209">
 					<description>Set my rating</description>
 					<include>ButtonInfoDialogsCommonValues</include>
 					<label></label>
@@ -349,7 +358,9 @@
 				<width>1188</width>
 				<height>420</height>
 				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<ondown condition="System.hasAddon(script.extendedinfo) + Control.HasFocus(50)">Dialog.Close(movieinformation)</ondown>
+				<ondown condition="System.hasAddon(script.extendedinfo) + Control.HasFocus(50)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</ondown>
+				<ondown condition="!System.hasAddon(script.extendedinfo)">9000</ondown>
 				<scrolltime>400</scrolltime>
 				<orientation>horizontal</orientation>
 				<include>VisibleFadeAnimation</include>
@@ -445,7 +456,7 @@
 				<width>360</width>
 				<height>360</height>
 				<aspectratio>stretch</aspectratio>
-				<texture background="true" diffuse="thumbs/cdart_mask.png">$INFO[ListItem.Art(discart)]</texture>
+				<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 				<visible>String.IsEqual(ListItem.DBType,movie) + String.IsEmpty(Window(home).Property(Actors)) + !String.IsEmpty(ListItem.Art(discart))</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
