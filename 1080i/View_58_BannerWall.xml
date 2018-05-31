@@ -8,16 +8,16 @@
 			<control type="image">
 				<description>background image</description>
 				<left>104</left>
-				<top>545</top>
+				<top>409</top>
 				<width>1712</width>
-				<height>362</height>
+				<height>497</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="panel" id="58">
 				<left>120</left>
 				<width>1680</width>
-				<top>560</top>
-				<height>330</height>
+				<top>425</top>
+				<height>465</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>5860</onright>
@@ -26,10 +26,10 @@
 				<viewtype label="31091">icon</viewtype>
 				<scrolltime>300</scrolltime>
 				<visible>[Container.Content(tvshows) | Container.Content(movies)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
-				<itemlayout height="110" width="560">
+				<itemlayout height="155" width="840">
 					<control type="image">
-						<width>560</width>
-						<height>110</height>
+						<width>840</width>
+						<height>155</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[BannerThumb]</texture>
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
@@ -39,34 +39,34 @@
 					<control type="group">
 						<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 						<control type="image">
-							<width>560</width>
-							<height>110</height>
+							<width>840</width>
+							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
 						<control type="image">
-							<top>5</top>
-							<width>300</width>
-							<height>100</height>
+							<top>10</top>
+							<width>420</width>
+							<height>135</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 							<bordersize>4</bordersize>
 						</control>
 					</control>
 					<control type="group">
-						<left>518</left>
-						<top>68</top>
+						<left>798</left>
+						<top>113</top>
 						<include>IconWatchedStatus</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="110" width="560">
+				<focusedlayout height="155" width="840">
 					<control type="group">
 						<include>IconZoomAnimation</include>
 						<control type="image">
-							<width>560</width>
-							<height>110</height>
+							<width>840</width>
+							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[BannerThumb]</texture>
 							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
@@ -76,25 +76,25 @@
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 							<control type="image">
-								<width>560</width>
-								<height>110</height>
+								<width>840</width>
+								<height>155</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 								<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
-								<top>5</top>
-								<width>300</width>
-								<height>100</height>
+								<top>10</top>
+								<width>420</width>
+								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<bordersize>4</bordersize>
 							</control>
 						</control>
 						<control type="group">
-							<left>515</left>
-							<top>66</top>
+							<left>795</left>
+							<top>110</top>
 							<include>IconWatchedStatus</include>
 						</control>
 					</control>
@@ -103,8 +103,8 @@
 			<control type="scrollbar" id="5860">
 				<left>1802</left>
 				<width>10</width>
-				<top>560</top>
-				<height>330</height>
+				<top>425</top>
+				<height>465</height>
 				<onright>58</onright>
 				<onleft>58</onleft>
 				<showonepage>false</showonepage>
