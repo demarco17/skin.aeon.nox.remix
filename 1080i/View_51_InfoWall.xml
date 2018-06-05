@@ -370,7 +370,7 @@
 				<viewtype label="31090">icon</viewtype>
 				<scrolltime>400</scrolltime>
 				<visible>Container.Content(albums) | Container.Content(artists)</visible>
-				<itemlayout height="300" width="300" condition="Container.Content(albums)">
+				<itemlayout height="300" width="300">
 					<control type="image">
 						<width>300</width>
 						<height>300</height>
@@ -380,30 +380,7 @@
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>
-				<focusedlayout height="300" width="300" condition="Container.Content(albums)">
-					<control type="group">
-						<include>IconZoomAnimation</include>
-						<control type="image">
-							<width>300</width>
-							<height>300</height>
-							<aspectratio>scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
-							<bordersize>5</bordersize>
-						</control>
-					</control>
-				</focusedlayout>
-				<itemlayout height="300" width="300" condition="Container.Content(artists)">
-					<control type="image">
-						<width>300</width>
-						<height>300</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-						<bordersize>2</bordersize>
-					</control>
-				</itemlayout>
-				<focusedlayout height="300" width="300" condition="Container.Content(artists)">
+				<focusedlayout height="300" width="300">
 					<control type="group">
 						<include>IconZoomAnimation</include>
 						<control type="image">

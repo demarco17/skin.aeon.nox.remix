@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,56,501,55,57,500,51</views>
+	<views>50,56,501,55,507,57,500,51</views>
 	<menucontrol>9051</menucontrol>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
@@ -21,6 +21,7 @@
 			<include>MusicTriPanel</include><!-- view id = 55 -->
 			<include>MusicDoubleList</include><!-- view id = 56 -->
 			<include>AlbumShift</include><!-- view id = 57 -->
+			<include>MusicFanartList</include><!-- view id = 507 -->
 			<include>MusicWall</include><!-- view id = 500 -->
 			<include>MusicLowList</include><!-- view id = 501 -->
 		</control>
