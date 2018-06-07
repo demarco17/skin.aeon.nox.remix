@@ -14,7 +14,7 @@
 				<pagecontrol>5961</pagecontrol>
 				<scrolltime>0</scrolltime>
 				<viewtype label="31084">icon</viewtype>
-				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)] | [Container.Content(artists) + String.Contains(Container.FolderPath,musicdb://)]</visible>
 				<orientation>horizontal</orientation>
 				<itemlayout />
 				<focusedlayout width="640" height="210">
