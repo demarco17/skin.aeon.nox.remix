@@ -747,17 +747,28 @@
 			<control type="group">
 				<visible>Control.HasFocus(9060)</visible>
 				<include>VisibleFadeAnimation</include>
-				<control type="label">
+				<control type="grouplist">
 					<left>160</left>
 					<top>382</top>
 					<width>1600</width>
-					<height>40</height>
-					<label>$INFO[Container(9060).ListItem.Label]$INFO[Container(9060).ListItem.Year,[COLOR grey3]  |  [/COLOR]]</label>
-					<textoffsetx>15</textoffsetx>
-					<font>font13_title</font>
-					<textcolor>grey</textcolor>
 					<align>center</align>
-					<scroll>true</scroll>
+					<itemgap>8</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width>auto</width>
+						<height>40</height>
+						<label>$INFO[Container(9060).ListItem.Label]$INFO[Container(9060).ListItem.Year,[COLOR grey3]  |  [/COLOR]]$INFO[Container(9060).ListItem.Rating,[COLOR grey3]  |  [/COLOR]]</label>
+						<font>font13_title</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="label">
+						<width>auto</width>
+						<height>38</height>
+						<label></label>
+						<font>IconTiny</font>
+						<textcolor>grey</textcolor>
+						<visible>!String.IsEmpty(Container(9060).ListItem.Rating)</visible>
+					</control>
 				</control>
 				<control type="label">
 					<include>VisibleFadeAnimation</include>
