@@ -33,11 +33,6 @@
 				<pagecontrol>70</pagecontrol>
 				<scrolltime>400</scrolltime>
 				<itemlayout height="120" width="821">
-					<control type="image">
-						<width>821</width>
-						<height>120</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>120</width>
 						<height>120</height>
@@ -89,11 +84,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="821">
-					<control type="image">
-						<width>821</width>
-						<height>120</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>821</width>
 						<height>120</height>
@@ -177,14 +167,6 @@
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<bordersize>40</bordersize>
-				</control>
-				<control type="image">
-					<description>separator image</description>
-					<left>32</left>
-					<top>434</top>
-					<width>821</width>
-					<height>60</height>
-					<texture border="4">dialogs/separator2.png</texture>
 				</control>
 			</control>
 			<control type="group">

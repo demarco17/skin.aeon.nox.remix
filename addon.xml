@@ -11,7 +11,7 @@
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Aeon Nox Remix: Modded by Steveb</summary>
 		<description lang="en">A modded version of Aeon Nox 5.[CR]Extensive thanks to BigNoid for creating such a great skin!</description>
-		<disclaimer lang="en">Mouse and touchscreen use not supported.[CR]English language only.</disclaimer>
+		<disclaimer lang="en">Mouse and touchscreen use not supported.[CR]English language only.[CR]US and AU MPAA flags only.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-NC-SA 4.0</license>
 		<news lang="en">Kodi Leia compatible (v18).</news>

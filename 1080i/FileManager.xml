@@ -48,11 +48,6 @@
 					<onright>30</onright>
 					<pagecontrol>30</pagecontrol>
 					<itemlayout height="60" width="821">
-						<control type="image">
-							<width>821</width>
-							<height>60</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<width>630</width>
 							<height>60</height>
@@ -72,11 +67,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="821">
-						<control type="image">
-							<width>821</width>
-							<height>60</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>822</width>
 							<height>60</height>
@@ -144,11 +134,6 @@
 					<onright>31</onright>
 					<pagecontrol>31</pagecontrol>
 					<itemlayout height="60" width="821">
-						<control type="image">
-							<width>821</width>
-							<height>60</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<width>630</width>
 							<height>60</height>
@@ -168,11 +153,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="821">
-						<control type="image">
-							<width>821</width>
-							<height>60</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>820</width>
 							<height>60</height>

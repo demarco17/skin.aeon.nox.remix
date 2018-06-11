@@ -14,13 +14,6 @@
 				<height>783</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
-			<control type="image">
-				<left>960</left>
-				<top>180</top>
-				<width>2</width>
-				<height>750</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
 			<control type="panel" id="9000">
 				<left>120</left>
 				<top>179</top>
@@ -31,11 +24,6 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemlayout height="150" width="840">
-					<control type="image">
-						<width>840</width>
-						<height>150</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<left>8</left>
 						<top>8</top>
@@ -62,11 +50,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="150" width="840">
-					<control type="image">
-						<width>840</width>
-						<height>150</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<left>1</left>
 						<width>838</width>

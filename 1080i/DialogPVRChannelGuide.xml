@@ -11,11 +11,6 @@
 				<texture border="40">dialogs/mediamenu_back.png</texture>
 			</control>
 			<control type="image">
-				<width>820</width>
-				<height>120</height>
-				<texture border="4">dialogs/separator2.png</texture>
-			</control>
-			<control type="image">
 				<width>120</width>
 				<height>120</height>
 				<aspectratio align="center">keep</aspectratio>
@@ -56,11 +51,6 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>400</scrolltime>
 				<itemlayout height="96">
-					<control type="image">
-						<width>820</width>
-						<height>96</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>820</width>
 						<height>55</height>
@@ -96,11 +86,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="96">
-					<control type="image">
-						<width>820</width>
-						<height>96</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>820</width>
 						<height>96</height>

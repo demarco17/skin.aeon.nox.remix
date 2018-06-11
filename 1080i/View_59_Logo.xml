@@ -5,9 +5,9 @@
 			<visible>Control.IsVisible(59)</visible>
 			<include>ViewFadeAnimation</include>
 			<control type="wraplist" id="59">
-				<top>800</top>
+				<top>750</top>
 				<width>1920</width>
-				<height>210</height>
+				<height>250</height>
 				<onup>SetProperty(MediaMenu,True,home)</onup>
 				<onup>9050</onup>
 				<ondown>5961</ondown>
@@ -17,20 +17,20 @@
 				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)] | [Container.Content(artists) + String.Contains(Container.FolderPath,musicdb://)]</visible>
 				<orientation>horizontal</orientation>
 				<itemlayout />
-				<focusedlayout width="640" height="210">
+				<focusedlayout width="640" height="250">
 					<control type="group">
 						<animation effect="fade" time="300" reversible="false">Focus</animation>
 						<control type="image">
 							<left>640</left>
 							<width>640</width>
-							<height>200</height>
+							<height>250</height>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 						</control>
 						<control type="textbox">
 							<left>640</left>
 							<width>640</width>
-							<height>205</height>
+							<height>245</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>

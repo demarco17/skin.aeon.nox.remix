@@ -301,12 +301,9 @@
 		<height>70</height>
 		<width>119</width>
 		<align>center</align>
-		<aligny>center</aligny>
 		<font>IconMedium</font>
 		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
-		<texturenofocus border="4">dialogs/separator5.png</texturenofocus>
-		<alttexturenofocus border="4">dialogs/separator5.png</alttexturenofocus>
 	</include>
 	<include name="MediaInfoPanelButtons">
 		<height>90</height>
@@ -316,8 +313,7 @@
 		<font>font14</font>
 		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
-		<texturefocus border="4">dialogs/separator2.png</texturefocus>
-		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<texturefocus />
 	</include>
 	<include name="SettingsPanelButtonsValues">
 		<height>90</height>
@@ -328,8 +324,7 @@
 		<font>font15</font>
 		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
-		<texturefocus border="4">dialogs/separator2.png</texturefocus>
-		<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+		<texturefocus />
 	</include>
 	<!-- KeyBoard -->
 	<include name="Objects_KeyOffVars">
@@ -450,7 +445,6 @@
 			<align>center</align>
 			<font>IconTiny</font>
 			<textcolor>grey</textcolor>
-			<texturenofocus />
 			<onclick>ActivateWindow(shutdownmenu)</onclick>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -464,7 +458,6 @@
 			<align>center</align>
 			<font>IconTiny</font>
 			<textcolor>grey</textcolor>
-			<texturenofocus />
 			<onclick>ActivateWindow(Favourites)</onclick>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -478,7 +471,6 @@
 			<align>center</align>
 			<font>IconTiny</font>
 			<textcolor>grey</textcolor>
-			<texturenofocus />
 			<onclick>ActivateWindow(1124)</onclick>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -492,7 +484,6 @@
 			<align>center</align>
 			<font>IconTiny</font>
 			<textcolor>grey</textcolor>
-			<texturenofocus />
 			<visible>System.HasMediaDVD</visible>
 			<onclick>EjectTray()</onclick>
 			<include>VisibleFadeAnimation</include>
@@ -507,7 +498,6 @@
 			<align>center</align>
 			<font>IconTiny</font>
 			<textcolor>grey</textcolor>
-			<texturenofocus />
 			<visible>System.HasMediaDVD | Player.HasMedia</visible>
 			<onclick condition="System.HasMediaDVD + !Player.HasMedia">PlayDVD</onclick>
 			<onclick condition="Player.HasAudio">ActivateWindow(playercontrols)</onclick>
@@ -749,18 +739,6 @@
 		<pagecontrol>60</pagecontrol>
 		<itemlayout height="420" width="439">
 			<control type="image">
-				<left>439</left>
-				<width>2</width>
-				<height>419</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
-			<control type="image">
-				<left>1</left>
-				<width>438</width>
-				<height>420</height>
-				<texture border="4">dialogs/separator2.png</texture>
-			</control>
-			<control type="image">
 				<description>Poster</description>
 				<top>10</top>
 				<width>437</width>
@@ -798,7 +776,7 @@
 				<top>195</top>
 				<width>419</width>
 				<height>198</height>
-				<label>$LOCALIZE[209]:[CR][COLOR grey]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+				<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey2](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<font>font14</font>
 				<align>center</align>
@@ -854,7 +832,7 @@
 					<top>195</top>
 					<width>419</width>
 					<height>198</height>
-					<label>$LOCALIZE[209]:[CR][COLOR grey]$INFO[ListItem.Property(NextSeasonNumber),S,]$INFO[ListItem.Property(NextEpisodeNumber),E,]$INFO[ListItem.Property(NextTitle), - ,][/COLOR][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+					<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey2](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<font>font14</font>
 					<align>center</align>

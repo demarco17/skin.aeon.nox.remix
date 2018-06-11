@@ -15,8 +15,8 @@
 			<control type="button" id="2">
 				<width>494</width>
 				<height>70</height>
-				<texturefocus border="4">dialogs/separator4.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturefocus border="4">dialogs/buttonmenu_nofocus.png</texturefocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<font>font15_title_bold</font>
 				<label>31049</label>
@@ -26,7 +26,7 @@
 			<control type="button" id="3">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[16018]</label>
 				<onclick>Skin.Reset(ItemToEdit.InfoLine)</onclick>
@@ -36,7 +36,7 @@
 			<control type="button" id="4">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31052]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,1)</onclick>
@@ -45,7 +45,7 @@
 			<control type="button" id="5">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31053]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,2)</onclick>
@@ -54,7 +54,7 @@
 			<control type="button" id="6">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31054]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,3)</onclick>
@@ -63,7 +63,7 @@
 			<control type="button" id="7">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31085]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,7)</onclick>
@@ -72,7 +72,7 @@
 			<control type="button" id="8">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31061]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,6)</onclick>
@@ -82,7 +82,7 @@
 			<control type="button" id="9">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31058]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,4)</onclick>
@@ -91,7 +91,7 @@
 			<control type="button" id="10">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[20088]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,5)</onclick>
@@ -100,7 +100,7 @@
 			<control type="button" id="11">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[130]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,8)</onclick>
@@ -109,7 +109,7 @@
 			<control type="button" id="12">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[12390]</label>
 				<onclick>Skin.SetString(ItemToEdit.InfoLine,9)</onclick>
@@ -118,8 +118,8 @@
 			<control type="button" id="13">
 				<width>494</width>
 				<height>30</height>
-				<texturefocus border="4">dialogs/separator4.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturefocus border="4">dialogs/buttonmenu_nofocus.png</texturefocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label />
 				<enable>false</enable>

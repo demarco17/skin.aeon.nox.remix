@@ -227,19 +227,13 @@
 					</control>
 				</control>
 			</control>
-			<control type="image">
-				<left>1113</left>
-				<top>550</top>
-				<width>2</width>
-				<height>519</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
 			<control type="grouplist">
 				<left>1150</left>
 				<top>990</top>
 				<width>615</width>
 				<height>90</height>
 				<itemgap>25</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
 				<orientation>horizontal</orientation>
 				<visible>Container.Content(tvshows) + !ListItem.IsParentFolder</visible>
 				<control type="group">
@@ -284,7 +278,13 @@
 						<textcolor>grey</textcolor>
 					</control>
 				</control>
+				<control type="image">
+					<top>2</top>
+					<include>MediaFlagVars</include>
+					<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
+				</control>
 				<control type="group">
+					<top>2</top>
 					<width>135</width>
 					<control type="image" id="800014">
 						<include>MediaFlagVars</include>
@@ -302,11 +302,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<visible>String.IsEmpty(Control.GetLabel(800014))</visible>
 					</control>
-				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>5</bordersize>
-					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -404,13 +399,6 @@
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
-			</control>
-			<control type="image">
-				<left>1080</left>
-				<top>179</top>
-				<width>2</width>
-				<height>900</height>
-				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="group">
 				<left>1080</left>

@@ -40,11 +40,10 @@
 			<visible>!Window.IsActive(addoninformation)</visible>
 			<include>OpenCloseAnimation</include>
 			<include>ViewFadeAnimation</include>
-			<top>-30</top>
 			<control type="group">
 				<visible>Control.IsVisible(59)</visible>
 				<control type="group">
-					<top>1055</top>
+					<top>1025</top>
 					<control type="label">
 						<width>1920</width>
 						<height>30</height>
@@ -61,26 +60,6 @@
 						<param name="align" value="center" />
 					</include>
 				</control>
-				<control type="group">
-					<top>1010</top>
-					<width>1920</width>
-					<align>center</align>
-					<visible>[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(tvshows)</visible>
-					<control type="image">
-						<left>130</left>
-						<width>150</width>
-						<include>MediaFlagVars</include>
-						<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
-						<visible>Control.IsVisible(59) + !ListItem.IsParentFolder</visible>
-					</control>
-					<control type="image">
-						<left>1680</left>
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-						<visible>!ListItem.IsParentFolder</visible>
-					</control>
-				</control>
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(508)</visible>
@@ -88,7 +67,7 @@
 				<visible>[Container.Content(movies) | Container.Content(sets) | Container.Content(addons) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
 				<control type="group">
 					<left>90</left>
-					<top>1010</top>
+					<top>980</top>
 					<visible>![Control.IsVisible(55) | Control.IsVisible(508)]</visible>
 					<control type="label">
 						<width>1080</width>
@@ -130,14 +109,21 @@
 				</control>
 				<control type="grouplist">
 					<left>1500</left>
-					<top>1010</top>
+					<top>980</top>
 					<width>320</width>
 					<height>90</height>
 					<itemgap>25</itemgap>
 					<align>right</align>
+					<usecontrolcoords>true</usecontrolcoords>
 					<orientation>horizontal</orientation>
 					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
+					<control type="image">
+						<top>2</top>
+						<include>MediaFlagVars</include>
+						<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
+					</control>
 					<control type="group">
+						<top>2</top>
 						<width>135</width>
 						<control type="image" id="800012">
 							<include>MediaFlagVars</include>
@@ -156,15 +142,10 @@
 							<visible>String.IsEmpty(Control.GetLabel(800012))</visible>
 						</control>
 					</control>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-					</control>
 				</control>
 				<control type="grouplist">
 					<left>1190</left>
-					<top>1010</top>
+					<top>980</top>
 					<width>615</width>
 					<height>90</height>
 					<itemgap>25</itemgap>

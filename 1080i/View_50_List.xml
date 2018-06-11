@@ -27,11 +27,6 @@
 					<movement>6</movement>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<left>20</left>
 							<width>920</width>
@@ -105,11 +100,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -377,11 +367,6 @@
 					<movement>6</movement>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<left>20</left>
 							<width>985</width>
@@ -435,11 +420,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -584,11 +564,6 @@
 					<movement>6</movement>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<left>20</left>
 							<width>985</width>
@@ -618,11 +593,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -720,11 +690,6 @@
 					<movement>6</movement>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<left>20</left>
 							<width>985</width>
@@ -754,11 +719,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -856,11 +816,6 @@
 					<movement>6</movement>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<left>20</left>
 							<width>985</width>
@@ -890,11 +845,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="1140">
-						<control type="image">
-							<width>1140</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>

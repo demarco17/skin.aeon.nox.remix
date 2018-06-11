@@ -34,11 +34,6 @@
 				<pagecontrol>72</pagecontrol>
 				<scrolltime>400</scrolltime>
 				<itemlayout height="120" width="1140">
-					<control type="image">
-						<width>1140</width>
-						<height>120</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>710</width>
 						<height>70</height>
@@ -85,11 +80,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="1140">
-					<control type="image">
-						<width>1140</width>
-						<height>120</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>1139</width>
 						<height>120</height>
@@ -183,8 +173,7 @@
 						<textoffsetx>15</textoffsetx>
 						<font>font14</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<texturefocus border="4">dialogs/separator2.png</texturefocus>
-						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+						<texturefocus />
 					</control>
 					<control type="textbox">
 						<label>$INFO[ListItem.Plot]</label>
@@ -247,8 +236,7 @@
 						<textoffsetx>15</textoffsetx>
 						<font>font14</font>
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
-						<texturefocus border="4">dialogs/separator2.png</texturefocus>
-						<texturenofocus border="4">dialogs/separator2.png</texturenofocus>
+						<texturefocus />
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="panel" id="5000">

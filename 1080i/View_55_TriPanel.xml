@@ -82,7 +82,7 @@
 						<textcolor>$VAR[SkinThemeColour]</textcolor>
 					</control>
 					<control type="scrollbar" id="5562">
-						<left>450</left>
+						<left>451</left>
 						<top>360</top>
 						<width>10</width>
 						<height>420</height>
@@ -108,7 +108,7 @@
 						</include>
 					</control>
 					<control type="scrollbar" id="5564">
-						<left>435</left>
+						<left>436</left>
 						<width>10</width>
 						<height>690</height>
 						<onleft>55</onleft>
@@ -180,11 +180,6 @@
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="70" width="806">
-						<control type="image">
-							<width>776</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<width>730</width>
 							<height>66</height>
@@ -233,11 +228,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="806">
-						<control type="image">
-							<width>776</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>776</width>
 							<height>70</height>
@@ -406,7 +396,7 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="5563">
-					<left>450</left>
+					<left>451</left>
 					<top>182</top>
 					<width>10</width>
 					<height>330</height>
@@ -479,11 +469,6 @@
 					<movement>7</movement>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="70" width="806">
-						<control type="image">
-							<width>776</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<width>730</width>
 							<height>66</height>
@@ -504,11 +489,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="806">
-						<control type="image">
-							<width>776</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>776</width>
 							<height>70</height>

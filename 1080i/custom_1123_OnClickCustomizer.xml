@@ -17,8 +17,8 @@
 			<control type="button" id="2">
 				<width>494</width>
 				<height>70</height>
-				<texturefocus border="4">dialogs/separator4.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturefocus border="4">dialogs/buttonmenu_nofocus.png</texturefocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<font>font15_title_bold</font>
 				<label>$LOCALIZE[22079]</label>
@@ -28,7 +28,7 @@
 			<control type="button" id="3">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[13007]</label>
 				<onclick>Skin.Reset(ItemToEdit.Path)</onclick>
@@ -40,7 +40,7 @@
 			<control type="button" id="4">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[1037]</label>
 				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.video)</onclick>
@@ -51,7 +51,7 @@
 			<control type="button" id="5">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[1038]</label>
 				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.audio)</onclick>
@@ -62,7 +62,7 @@
 			<control type="button" id="6">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[1043]</label>
 				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.executable)</onclick>
@@ -73,7 +73,7 @@
 			<control type="button" id="7">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[1039]</label>
 				<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.image)</onclick>
@@ -84,7 +84,7 @@
 			<control type="button" id="8">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[20012]</label>
 				<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/video/)</onclick>
@@ -94,7 +94,7 @@
 			<control type="button" id="9">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[20011]</label>
 				<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
@@ -104,7 +104,7 @@
 			<control type="button" id="10">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[20190]</label>
 				<onclick>Skin.SetString(ItemToEdit.Path)</onclick>
@@ -115,8 +115,8 @@
 			<control type="button" id="11">
 				<width>494</width>
 				<height>30</height>
-				<texturefocus border="4">dialogs/separator4.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturefocus border="4">dialogs/buttonmenu_nofocus.png</texturefocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label />
 				<enable>false</enable>

@@ -60,11 +60,6 @@
 						<pagecontrol>73</pagecontrol>
 						<orientation>vertical</orientation>
 						<itemlayout height="60">
-							<control type="image">
-								<width>490</width>
-								<height>60</height>
-								<texture border="4">dialogs/separator2.png</texture>
-							</control>
 							<control type="label">
 								<width>490</width>
 								<height>60</height>
@@ -75,11 +70,6 @@
 							</control>
 						</itemlayout>
 						<focusedlayout height="60">
-							<control type="image">
-								<width>490</width>
-								<height>60</height>
-								<texture border="4">dialogs/separator2.png</texture>
-							</control>
 							<control type="image">
 								<width>490</width>
 								<height>60</height>
@@ -131,11 +121,6 @@
 						<onright>71</onright>
 						<pagecontrol>71</pagecontrol>
 						<itemlayout height="60">
-							<control type="image">
-								<width>490</width>
-								<height>60</height>
-								<texture border="4">dialogs/separator2.png</texture>
-							</control>
 							<control type="label">
 								<width>490</width>
 								<height>60</height>
@@ -146,11 +131,6 @@
 							</control>
 						</itemlayout>
 						<focusedlayout height="60">
-							<control type="image">
-								<width>490</width>
-								<height>60</height>
-								<texture border="4">dialogs/separator2.png</texture>
-							</control>
 							<control type="image">
 								<width>490</width>
 								<height>60</height>
@@ -202,11 +182,6 @@
 						<onright>72</onright>
 						<pagecontrol>72</pagecontrol>
 						<itemlayout height="60">
-							<control type="image">
-								<width>490</width>
-								<height>60</height>
-								<texture border="4">dialogs/separator2.png</texture>
-							</control>
 							<control type="label">
 								<width>490</width>
 								<height>60</height>
@@ -217,11 +192,6 @@
 							</control>
 						</itemlayout>
 						<focusedlayout height="60">
-							<control type="image">
-								<width>490</width>
-								<height>60</height>
-								<texture border="4">dialogs/separator2.png</texture>
-							</control>
 							<control type="image">
 								<width>490</width>
 								<height>60</height>

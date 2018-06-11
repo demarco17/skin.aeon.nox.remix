@@ -15,8 +15,8 @@
 			<control type="button" id="2">
 				<width>494</width>
 				<height>70</height>
-				<texturefocus border="4">dialogs/separator4.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturefocus border="4">dialogs/buttonmenu_nofocus.png</texturefocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<font>font15_title_bold</font>
 				<label>31027</label>
@@ -26,7 +26,7 @@
 			<control type="button" id="3">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[16018]</label>
 				<label>$LOCALIZE[13007]</label>
@@ -39,7 +39,7 @@
 			<control type="button" id="4">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31023]</label>
 				<onclick>Skin.SetString(ItemToEdit.BGType,1)</onclick>
@@ -49,7 +49,7 @@
 			<control type="button" id="5">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31062]</label>
 				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
@@ -60,7 +60,7 @@
 			<control type="button" id="6">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31063]</label>
 				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
@@ -71,7 +71,7 @@
 			<control type="button" id="7">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31064]</label>
 				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
@@ -82,7 +82,7 @@
 			<control type="button" id="8">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31065]</label>
 				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
@@ -93,7 +93,7 @@
 			<control type="button" id="9">
 				<width>494</width>
 				<texturefocus border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/buttonmenu_focus.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label>$LOCALIZE[31066]</label>
 				<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
@@ -104,8 +104,8 @@
 			<control type="button" id="10">
 				<width>494</width>
 				<height>30</height>
-				<texturefocus border="4">dialogs/separator4.png</texturefocus>
-				<texturenofocus border="4">dialogs/separator4.png</texturenofocus>
+				<texturefocus border="4">dialogs/buttonmenu_nofocus.png</texturefocus>
+				<texturenofocus border="4">dialogs/buttonmenu_nofocus.png</texturenofocus>
 				<align>center</align>
 				<label />
 				<enable>false</enable>

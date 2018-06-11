@@ -49,11 +49,6 @@
 				<width>514</width>
 				<height>240</height>
 				<itemlayout width="514" height="60">
-					<control type="image">
-						<width>514</width>
-						<height>60</height>
-						<texture  border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>514</width>
 						<height>60</height>

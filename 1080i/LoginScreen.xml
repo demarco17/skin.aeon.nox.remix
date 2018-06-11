@@ -112,7 +112,6 @@
 				<align>center</align>
 				<font>IconLarge</font>
 				<texturefocus colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texturefocus>
-				<texturenofocus />
 				<onleft>52</onleft>
 				<onright>52</onright>
 				<onup>52</onup>

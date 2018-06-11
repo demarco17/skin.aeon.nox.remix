@@ -569,7 +569,7 @@ msgstr ""
 #empty strings from id 31906 to 31910
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu."
+msgid "Setup the main menu"
 msgstr ""
 
 msgctxt "#31912"

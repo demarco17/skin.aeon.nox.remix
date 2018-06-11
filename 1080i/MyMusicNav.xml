@@ -27,15 +27,15 @@
 			<include>MusicLowList</include><!-- view id = 501 -->
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(500) | Control.IsVisible(57) | Control.IsVisible(59)</visible>
+			<visible>Control.IsVisible(500) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(59)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
 			<include>OpenCloseAnimation</include>
 			<include>ViewFadeAnimation</include>
-			<animation effect="slide" start="0" end="45" condition="Control.IsVisible(57)">Conditional</animation>
+			<animation effect="slide" start="0" end="45" condition="Control.IsVisible(57) | Control.IsVisible(55)">Conditional</animation>
 			<control type="group">
 				<left>90</left>
 				<top>980</top>
-				<visible>!Control.IsVisible(59)</visible>
+				<visible>![Control.IsVisible(59) | Control.IsVisible(55)]</visible>
 				<control type="label">
 					<width>1150</width>
 					<height>42</height>

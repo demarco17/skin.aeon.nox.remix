@@ -31,7 +31,6 @@
 				<align>center</align>
 				<font>font15</font>
 				<texturefocus />
-				<texturenofocus />
 			</control>
 			<control type="group" id="4000">
 				<left>30</left>

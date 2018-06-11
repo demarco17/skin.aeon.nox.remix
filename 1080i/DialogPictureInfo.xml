@@ -34,11 +34,6 @@
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<itemlayout height="60" width="1058">
-					<control type="image">
-						<width>1058</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>1058</width>
 						<height>55</height>
@@ -58,11 +53,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="60" width="1058">
-					<control type="image">
-						<width>1058</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>1058</width>
 						<height>60</height>

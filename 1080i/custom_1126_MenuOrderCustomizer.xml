@@ -20,7 +20,7 @@
 				<top>16</top>
 				<width>478</width>
 				<height>580</height>
-				<texture border="4">dialogs/separator4.png</texture>
+				<texture border="4">dialogs/buttonmenu_nofocus.png</texture>
 			</control>
 			<control type="label" id="1">
 				<left>32</left>
@@ -85,11 +85,6 @@
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<itemlayout height="60" width="462">
-					<control type="image">
-						<width>462</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>462</width>
 						<height>60</height>
@@ -101,11 +96,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="60" width="462">
-					<control type="image">
-						<width>462</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>462</width>
 						<height>60</height>

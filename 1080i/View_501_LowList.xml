@@ -125,27 +125,6 @@
 					</control>
 				</control>
 			</control>
-			<control type="image">
-				<left>328</left>
-				<top>653</top>
-				<width>2</width>
-				<height>427</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
-			<control type="image">
-				<left>1258</left>
-				<top>653</top>
-				<width>2</width>
-				<height>427</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
-			<control type="image">
-				<left>1272</left>
-				<top>653</top>
-				<width>2</width>
-				<height>427</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
 			<control type="grouplist">
 				<left>1310</left>
 				<top>982</top>
@@ -184,6 +163,7 @@
 				<width>615</width>
 				<height>90</height>
 				<itemgap>25</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
 				<orientation>horizontal</orientation>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !ListItem.IsParentFolder</visible>
 				<control type="group">
@@ -249,7 +229,13 @@
 						<textcolor>grey</textcolor>
 					</control>
 				</control>
+				<control type="image">
+					<top>2</top>
+					<include>MediaFlagVars</include>
+					<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
+				</control>
 				<control type="group">
+					<top>2</top>
 					<width>135</width>
 					<control type="image" id="800021">
 						<include>MediaFlagVars</include>
@@ -268,17 +254,12 @@
 						<visible>String.IsEmpty(Control.GetLabel(800021))</visible>
 					</control>
 				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>5</bordersize>
-					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-				</control>
 			</control>
 			<control type="fixedlist" id="501">
 				<left>330</left>
 				<top>655</top>
 				<width>927</width>
-				<height>408</height>
+				<height>420</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>50160</onright>
@@ -287,12 +268,7 @@
 				<scrolltime>300</scrolltime>
 				<viewtype label="31081">list</viewtype>
 				<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
-				<itemlayout height="68" width="927">
-					<control type="image">
-						<width>927</width>
-						<height>68</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
+				<itemlayout height="70" width="927">
 					<control type="label">
 						<width>927</width>
 						<height>66</height>
@@ -340,15 +316,10 @@
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="68" width="927">
+				<focusedlayout height="70" width="927">
 					<control type="image">
 						<width>927</width>
-						<height>68</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="image">
-						<width>927</width>
-						<height>68</height>
+						<height>70</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -399,9 +370,9 @@
 			</control>
 			<control type="scrollbar" id="50160">
 				<left>1261</left>
-				<top>654</top>
+				<top>655</top>
 				<width>10</width>
-				<height>408</height>
+				<height>420</height>
 				<onleft>501</onleft>
 				<onright condition="ListItem.IsCollection">50164</onright>
 				<onright condition="!ListItem.IsCollection">50162</onright>
@@ -458,27 +429,6 @@
 					<texture>thumbs/boxes/cdcase.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
-			</control>
-			<control type="image">
-				<left>448</left>
-				<top>653</top>
-				<width>2</width>
-				<height>427</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
-			<control type="image">
-				<left>1258</left>
-				<top>653</top>
-				<width>2</width>
-				<height>427</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
-			<control type="image">
-				<left>1272</left>
-				<top>653</top>
-				<width>2</width>
-				<height>427</height>
-				<texture>dialogs/separator3.png</texture>
 			</control>
 			<control type="group">
 				<visible>Container.Content(albums) | Container.Content(songs)</visible>
@@ -617,18 +567,12 @@
 					<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.FileExtension)</visible>
 				</control>
-				<control type="image">
-					<top>-90</top>
-					<width>650</width>
-					<height>90</height>
-					<texture border="4">dialogs/separator2.png</texture>
-				</control>
 			</control>
 			<control type="fixedlist" id="501">
 				<left>450</left>
 				<top>655</top>
 				<width>976</width>
-				<height>408</height>
+				<height>420</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>9050</onleft>
 				<onright>50160</onright>
@@ -637,12 +581,7 @@
 				<scrolltime>300</scrolltime>
 				<viewtype label="31081">list</viewtype>
 				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
-				<itemlayout height="68" width="806">
-					<control type="image">
-						<width>806</width>
-						<height>68</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
+				<itemlayout height="70" width="806">
 					<control type="label">
 						<width>610</width>
 						<height>66</height>
@@ -671,15 +610,10 @@
 						<visible>Container.Content(songs)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="68" width="806">
+				<focusedlayout height="70" width="806">
 					<control type="image">
 						<width>806</width>
-						<height>68</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
-					<control type="image">
-						<width>806</width>
-						<height>68</height>
+						<height>70</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<visible>Control.HasFocus(501)</visible>
 					</control>
@@ -712,9 +646,9 @@
 			</control>
 			<control type="scrollbar" id="50160">
 				<left>1261</left>
-				<top>654</top>
+				<top>655</top>
 				<width>10</width>
-				<height>408</height>
+				<height>420</height>
 				<onleft>501</onleft>
 				<onright condition="Container.Content(albums)">50162</onright>
 				<onright condition="!Container.Content(albums)">50163</onright>

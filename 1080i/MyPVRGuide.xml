@@ -19,12 +19,6 @@
 				<height>872</height>
 				<texture border="18">dialogs/dialog-bg.png</texture>
 			</control>
-			<control type="image">
-				<left>82</left>
-				<width>1756</width>
-				<height>80</height>
-				<texture border="4">dialogs/separator2.png</texture>
-			</control>
 			<control type="group">
 				<left>82</left>
 				<top>80</top>

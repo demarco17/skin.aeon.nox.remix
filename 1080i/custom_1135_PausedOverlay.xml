@@ -92,7 +92,7 @@
 					<left>-30</left>
 					<width>auto</width>
 					<aspectratio>keep</aspectratio>
-					<texture fallback="flags/mpaa/NR.png" colordiffuse="grey2">$VAR[VideoRatingFlagVar]</texture>
+					<texture fallback="flags/mpaa/NR.png" colordiffuse="grey2">$VAR[VideoMpaaFlagVar]</texture>
 				</control>
 			</control>
 			<control type="label">

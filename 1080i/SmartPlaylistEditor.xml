@@ -40,6 +40,7 @@
 					<left>32</left>
 					<top>88</top>
 					<width>1138</width>
+					<height>60</height>
 					<label>467</label>
 					<onright>9001</onright>
 					<onleft>9001</onleft>
@@ -71,13 +72,6 @@
 					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 					<enable>false</enable>
 				</control>
-				<control type="image">
-					<left>858</left>
-					<top>268</top>
-					<width>2</width>
-					<height>180</height>
-					<texture>dialogs/separator3.png</texture>
-				</control>
 				<control type="panel" id="10">
 					<description>Rules List Control</description>
 					<left>32</left>
@@ -88,14 +82,9 @@
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<ondown>16</ondown>
-					<itemlayout width="828" height="60">
-						<control type="image">
-							<width>828</width>
-							<height>60</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
+					<itemlayout width="826" height="60">
 						<control type="label">
-							<width>828</width>
+							<width>826</width>
 							<height>60</height>
 							<textoffsetx>15</textoffsetx>
 							<info>ListItem.Label</info>
@@ -103,19 +92,14 @@
 							<font>font14</font>
 						</control>
 					</itemlayout>
-					<focusedlayout width="828" height="68">
+					<focusedlayout width="826" height="60">
 						<control type="image">
-							<width>828</width>
-							<height>60</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
-						<control type="image">
-							<width>828</width>
+							<width>826</width>
 							<height>60</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						</control>
 						<control type="label">
-							<width>828</width>
+							<width>826</width>
 							<height>60</height>
 							<textoffsetx>15</textoffsetx>
 							<info>ListItem.Label</info>
@@ -124,7 +108,7 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>859</left>
+					<left>860</left>
 					<top>268</top>
 					<width>310</width>
 					<height>180</height>
@@ -132,21 +116,25 @@
 					<onleft>10</onleft>
 					<onright>9001</onright>
 					<ondown>9000</ondown>
+					<itemgap>2</itemgap>
 					<control type="button" id="13">
 						<description>Add Rule Button</description>
 						<width>310</width>
+						<height>60</height>
 						<label>15019</label>
 						<font>font15</font>
 					</control>
 					<control type="button" id="14">
 						<description>Remove Rule Button</description>
 						<width>310</width>
+						<height>60</height>
 						<label>1210</label>
 						<font>font15</font>
 					</control>
 					<control type="button" id="15">
 						<description>Edit Rule Button</description>
 						<width>310</width>
+						<height>60</height>
 						<label>21435</label>
 						<font>font15</font>
 					</control>
@@ -173,17 +161,10 @@
 					<onup>16</onup>
 					<ondown>18</ondown>
 				</control>
-				<control type="image">
-					<left>858</left>
-					<top>568</top>
-					<width>2</width>
-					<height>119</height>
-					<texture>dialogs/separator3.png</texture>
-				</control>
 				<control type="button" id="18">
 					<left>32</left>
 					<top>568</top>
-					<width>827</width>
+					<width>825</width>
 					<height>60</height>
 					<label>21429</label>
 					<onright>19</onright>
@@ -205,7 +186,7 @@
 				<control type="button" id="23">
 					<left>32</left>
 					<top>628</top>
-					<width>827</width>
+					<width>825</width>
 					<height>60</height>
 					<label>21458</label>
 					<onright>24</onright>

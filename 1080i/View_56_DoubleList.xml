@@ -29,11 +29,6 @@
 					<visible>Container.Content(artists)</visible>
 					<itemlayout height="120" width="820">
 						<control type="image">
-							<width>820</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
-						<control type="image">
 							<left>15</left>
 							<top>7</top>
 							<width>105</width>
@@ -62,11 +57,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="820">
-						<control type="image">
-							<width>820</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>820</width>
 							<height>120</height>
@@ -140,11 +130,6 @@
 					<onclick>ReplaceWindow(musicplaylist)</onclick>
 					<itemlayout height="120" width="820">
 						<control type="image">
-							<width>820</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
-						<control type="image">
 							<left>15</left>
 							<top>7</top>
 							<width>105</width>
@@ -182,11 +167,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="120" width="820">
-						<control type="image">
-							<width>820</width>
-							<height>120</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>820</width>
 							<height>120</height>

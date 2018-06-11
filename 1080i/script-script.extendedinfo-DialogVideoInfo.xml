@@ -56,15 +56,9 @@
 				<bordersize>15</bordersize>
 				<aspectratio>keep</aspectratio>
 			</control>
-			<control type="image">
-				<left>2</left>
-				<width>1190</width>
-				<height>90</height>
-				<texture border="4">dialogs/separator2.png</texture>
-			</control>
 			<control type="panel" id="300">
 				<left>2</left>
-				<top>90</top>
+				<top>80</top>
 				<width>1191</width>
 				<height>400</height>
 				<onup>9000</onup>
@@ -72,11 +66,6 @@
 				<orientation>horizontal</orientation>
 				<scrolltime>400</scrolltime>
 				<itemlayout height="50" width="595">
-					<control type="image">
-						<width>595</width>
-						<height>50</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<left>36</left>
 						<width>545</width>
@@ -87,11 +76,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="50" width="595">
-					<control type="image">
-						<width>595</width>
-						<height>50</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>595</width>
 						<height>50</height>
@@ -149,6 +133,10 @@
 						<visible>!String.IsEmpty(Window.Property(Premiered))</visible>
 					</item>
 					<item>
+						<label>$INFO[Window.Property(Studio),$LOCALIZE[572]: [COLOR grey],[/COLOR]]</label>
+						<visible>!String.IsEmpty(Window.Property(Studio))</visible>
+					</item>
+					<item>
 						<label>$INFO[Window.Property(Budget),$ADDON[script.extendedinfo 32109]: [COLOR grey]$,[/COLOR]]</label>
 						<visible>!String.IsEmpty(Window.Property(Budget))</visible>
 					</item>
@@ -175,7 +163,7 @@
 				</content>
 			</control>
 			<control type="label">
-				<top>262</top>
+				<top>252</top>
 				<width>30</width>
 				<height>50</height>
 				<font>IconTiny</font>
@@ -186,7 +174,7 @@
 			</control>
 			<control type="label">
 				<left>1160</left>
-				<top>262</top>
+				<top>252</top>
 				<width>30</width>
 				<height>50</height>
 				<font>IconTiny</font>
@@ -196,30 +184,15 @@
 				<visible>Container(300).HasNext</visible>
 			</control>
 			<control type="image">
-				<left>596</left>
-				<top>90</top>
-				<width>2</width>
-				<height>400</height>
-				<texture>dialogs/separator3.png</texture>
-			</control>
-			<control type="image">
-				<top>430</top>
-				<width>595</width>
-				<height>60</height>
-				<texture border="4">dialogs/separator2.png</texture>
-				<visible>!Integer.IsGreater(Container(300).NumItems,7)</visible>
-			</control>
-			<control type="image">
-				<left>594</left>
-				<top>430</top>
-				<width>595</width>
-				<height>60</height>
-				<texture border="4">dialogs/separator2.png</texture>
-				<visible>!Integer.IsGreater(Container(300).NumItems,15)</visible>
+				<left>2</left>
+				<top>490</top>
+				<width>1191</width>
+				<height>70</height>
+				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 			</control>
 			<control type="grouplist" id="9000">
 				<left>2</left>
-				<top>489</top>
+				<top>490</top>
 				<width>1192</width>
 				<height>70</height>
 				<align>left</align>
@@ -291,13 +264,6 @@
 					<label></label>
 					<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
 				</control>
-			</control>
-			<control type="image">
-				<left>2</left>
-				<top>470</top>
-				<width>1190</width>
-				<height>90</height>
-				<texture border="4">dialogs/separator2.png</texture>
 			</control>
 			<control type="textbox" id="800">
 				<description>Plot</description>
@@ -877,50 +843,46 @@
 				</control>
 			</control>
 			<control type="group">
-				<top>995</top>
+				<top>985</top>
 				<control type="grouplist">
-					<width>1190</width>
+					<width>1180</width>
 					<height>90</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<itemgap>25</itemgap>
+					<itemgap>10</itemgap>
+					<usecontrolcoords>true</usecontrolcoords>
 					<orientation>horizontal</orientation>
-					<control type="panel" id="550">
-						<width>130</width>
-						<height>90</height>
-						<include>VisibleFadeAnimation</include>
-						<visible>!Integer.IsGreater(Container(1450).NumItems,0) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
-						<itemlayout width="130" height="90">
-							<control type="image">
-								<width>130</width>
-								<include>MediaFlagVars</include>
-								<bordersize>10</bordersize>
-								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
-							</control>
-						</itemlayout>
-						<focusedlayout width="130" height="90" />
-					</control>
-					<control type="panel" id="1450">
-						<width>130</width>
-						<height>90</height>
-						<include>VisibleFadeAnimation</include>
-						<visible>Integer.IsGreater(Container(1450).NumItems,0) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
-						<itemlayout width="130" height="90">
-							<control type="image">
-								<width>130</width>
-								<include>MediaFlagVars</include>
-								<bordersize>10</bordersize>
-								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
-							</control>
-						</itemlayout>
-						<focusedlayout width="198" height="90" />
-					</control>
 					<control type="image">
 						<include>VisibleFadeAnimation</include>
 						<visible>ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)</visible>
 						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
 						<texture fallback="flags/mpaa/NR.png">$INFO[Window.Property(mpaa),flags/mpaa/,.png]</texture>
+					</control>
+					<control type="panel" id="550">
+						<width>135</width>
+						<include>VisibleFadeAnimation</include>
+						<visible>!Integer.IsGreater(Container(1450).NumItems,0) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
+						<itemlayout width="135" height="90">
+							<control type="image">
+								<include>MediaFlagVars</include>
+								<bordersize>5</bordersize>
+								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout />
+					</control>
+					<control type="panel" id="1450">
+						<width>135</width>
+						<include>VisibleFadeAnimation</include>
+						<visible>Integer.IsGreater(Container(1450).NumItems,0) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
+						<itemlayout width="135" height="90">
+							<control type="image">
+								<include>MediaFlagVars</include>
+								<bordersize>5</bordersize>
+								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout />
 					</control>
 				</control>
 			</control>

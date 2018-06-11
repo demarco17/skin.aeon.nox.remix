@@ -101,7 +101,6 @@
 					<width>0.1</width>
 					<height>0.1</height>
 					<texturefocus />
-					<texturenofocus />
 					<label />
 					<font />
 					<onclick>PlayerControl(Repeat)</onclick>

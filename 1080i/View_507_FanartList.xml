@@ -135,6 +135,7 @@
 				<width>615</width>
 				<height>90</height>
 				<itemgap>25</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
 				<orientation>horizontal</orientation>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !ListItem.IsParentFolder</visible>
 				<control type="group">
@@ -200,7 +201,13 @@
 						<textcolor>grey</textcolor>
 					</control>
 				</control>
+				<control type="image">
+					<top>2</top>
+					<include>MediaFlagVars</include>
+					<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
+				</control>
 				<control type="group">
+					<top>2</top>
 					<width>135</width>
 					<control type="image" id="800013">
 						<include>MediaFlagVars</include>
@@ -218,11 +225,6 @@
 						<wrapmultiline>true</wrapmultiline>
 						<visible>String.IsEmpty(Control.GetLabel(800013))</visible>
 					</control>
-				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>5</bordersize>
-					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -277,11 +279,6 @@
 					<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="70" width="1056">
-						<control type="image">
-							<width>1056</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<width>930</width>
 							<height>66</height>
@@ -330,11 +327,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="1056">
-						<control type="image">
-							<width>1056</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>1056</width>
 							<height>70</height>
@@ -587,11 +579,6 @@
 					<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + [String.Contains(Container.FolderPath,musicdb://) | String.Contains(Container.FolderPath,playlist)]</visible>
 					<scrolltime>300</scrolltime>
 					<itemlayout height="70" width="1056">
-						<control type="image">
-							<width>1056</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="label">
 							<width>930</width>
 							<height>66</height>
@@ -621,11 +608,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="1056">
-						<control type="image">
-							<width>1056</width>
-							<height>70</height>
-							<texture border="4">dialogs/separator2.png</texture>
-						</control>
 						<control type="image">
 							<width>1056</width>
 							<height>70</height>

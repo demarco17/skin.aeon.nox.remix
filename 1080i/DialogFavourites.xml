@@ -50,11 +50,6 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>400</scrolltime>
 				<itemlayout height="60" width="630">
-					<control type="image">
-						<width>630</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>630</width>
 						<height>60</height>
@@ -74,11 +69,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="60" width="630">
-					<control type="image">
-						<width>630</width>
-						<height>60</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>630</width>
 						<height>60</height>

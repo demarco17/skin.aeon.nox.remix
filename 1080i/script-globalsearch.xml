@@ -55,11 +55,6 @@
 				<movement>6</movement>
 				<scrolltime>400</scrolltime>
 				<itemlayout height="90" width="356">
-					<control type="image">
-						<width>356</width>
-						<height>90</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="label">
 						<width>356</width>
 						<height>90</height>
@@ -71,11 +66,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="90" width="356">
-					<control type="image">
-						<width>356</width>
-						<height>90</height>
-						<texture border="4">dialogs/separator2.png</texture>
-					</control>
 					<control type="image">
 						<width>355</width>
 						<height>90</height>
@@ -100,14 +90,6 @@
 				<height>100</height>
 				<aspectratio>keep</aspectratio>
 				<texture>flags/aeon-nox-logo.png</texture>
-			</control>
-			<control type="image">
-				<description>separator image</description>
-				<left>522</left>
-				<top>710</top>
-				<width>1316</width>
-				<height>60</height>
-				<texture border="4">dialogs/separator2.png</texture>
 			</control>
 			<control type="label" id="999">
 				<left>522</left>
@@ -512,24 +494,32 @@
 			</control>
 		</control>
 		<control type="grouplist">
-			<left>1570</left>
-			<top>985</top>
+			<left>1560</left>
+			<top>978</top>
 			<width>295</width>
 			<height>90</height>
 			<itemgap>25</itemgap>
 			<align>right</align>
 			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
 			<visible>Container.Content(tvshows)</visible>
+			<control type="image">
+				<top>2</top>
+				<include>MediaFlagVars</include>
+				<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
+			</control>
 			<control type="group">
+				<top>2</top>
 				<width>135</width>
 				<control type="image" id="800017">
 					<include>MediaFlagVars</include>
-					<bordersize>10</bordersize>
+					<bordersize>5</bordersize>
 					<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 				</control>
 				<control type="label">
+					<top>20</top>
 					<width>135</width>
-					<height>80</height>
+					<height>55</height>
 					<align>center</align>
 					<textcolor>grey</textcolor>
 					<label>$INFO[ListItem.Studio]</label>
@@ -537,11 +527,6 @@
 					<wrapmultiline>true</wrapmultiline>
 					<visible>String.IsEmpty(Control.GetLabel(800017))</visible>
 				</control>
-			</control>
-			<control type="image">
-				<include>MediaFlagVars</include>
-				<bordersize>5</bordersize>
-				<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 			</control>
 		</control>
 		<control type="grouplist">

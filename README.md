@@ -11,6 +11,7 @@
 
    Mouse and touchscreen use not supported.  
    English language only.
+   US and AU MPAA flags only.
 
 ## Main features:
 
@@ -40,7 +41,7 @@
    [script.libraryeditor](https://github.com/phil65/script.libraryeditor)  
    [script.pseudotv](https://github.com/Steveb1968/script.pseudotv)  
    [script.skin.helper.colorpicker](https://github.com/marcelveldt/script.skin.helper.colorpicker)  
-   [script.skinshortcuts (Leia)](https://github.com/BigNoid/script.skinshortcuts/tree/leia)  
+   [script.skinshortcuts (v1.9.0 Leia)](https://github.com/BigNoid/script.skinshortcuts/tree/leia)  
    [script.tv.show.next.aired](https://github.com/WayneD/script.tv.show.next.aired)  
    [image.resource.select](https://github.com/ronie/script.image.resource.select)  
    [service.nextup.notification](https://github.com/im85288/service.nextup.notification)  

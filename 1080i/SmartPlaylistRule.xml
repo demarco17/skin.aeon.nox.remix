@@ -47,18 +47,11 @@
 			</control>
 			<!-- left group -->
 			<control type="group" id="9001">
-				<control type="image">
-					<left>599</left>
-					<top>148</top>
-					<width>2</width>
-					<height>60</height>
-					<texture>dialogs/separator3.png</texture>
-				</control>
 				<control type="button" id="15">
 					<description>Rule Field</description>
 					<left>32</left>
 					<top>148</top>
-					<width>768</width>
+					<width>766</width>
 					<height>60</height>
 					<onright>16</onright>
 					<onleft>9000</onleft>
@@ -76,18 +69,12 @@
 					<onup>20</onup>
 					<ondown>20</ondown>
 				</control>
-				<control type="image">
-					<left>858</left>
-					<top>208</top>
-					<width>2</width>
-					<height>60</height>
-					<texture>dialogs/separator3.png</texture>
-				</control>
 				<control type="edit" id="17">
 					<description>Value Button</description>
 					<left>32</left>
 					<top>208</top>
-					<width>768</width>
+					<width>766</width>
+					<height>60</height>
 					<onup>15</onup>
 					<ondown>15</ondown>
 					<onleft>9000</onleft>
@@ -99,6 +86,7 @@
 					<left>800</left>
 					<top>208</top>
 					<width>369</width>
+					<height>60</height>
 					<label>1024</label>
 					<onup>16</onup>
 					<ondown>16</ondown>
