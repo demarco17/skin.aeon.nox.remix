@@ -118,7 +118,6 @@
 					<orientation>horizontal</orientation>
 					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
 					<control type="image">
-						<top>2</top>
 						<include>MediaFlagVars</include>
 						<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
 					</control>

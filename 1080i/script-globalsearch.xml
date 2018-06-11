@@ -504,7 +504,6 @@
 			<usecontrolcoords>true</usecontrolcoords>
 			<visible>Container.Content(tvshows)</visible>
 			<control type="image">
-				<top>2</top>
 				<include>MediaFlagVars</include>
 				<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
 			</control>

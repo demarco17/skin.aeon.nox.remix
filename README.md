@@ -10,8 +10,8 @@
 ## Disclaimer
 
    Mouse and touchscreen use not supported.  
-   English language only.
-   US and AU MPAA flags only.
+   English language only.  
+   US/AU MPAA flags only.
 
 ## Main features:
 
@@ -19,7 +19,7 @@
    Customisable backgrounds.  
    Up to 10 different views available.  
    Skin integration for popular add-ons.  
-   Master branch aims to be up-to-date with latest Kodi core changes.  
+   Master branch aims to be up-to-date with latest Kodi core changes.
 
 ## Branches guide:
 
@@ -44,4 +44,4 @@
    [script.skinshortcuts (v1.9.0 Leia)](https://github.com/BigNoid/script.skinshortcuts/tree/leia)  
    [script.tv.show.next.aired](https://github.com/WayneD/script.tv.show.next.aired)  
    [image.resource.select](https://github.com/ronie/script.image.resource.select)  
-   [service.nextup.notification](https://github.com/im85288/service.nextup.notification)  
+   [service.nextup.notification](https://github.com/im85288/service.nextup.notification)
