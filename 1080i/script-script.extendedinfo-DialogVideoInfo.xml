@@ -113,6 +113,10 @@
 						<visible>!String.IsEmpty(Window.Property(genre))</visible>
 					</item>
 					<item>
+						<label>$INFO[Window.Property(mpaa),$LOCALIZE[31031]: [COLOR grey],[/COLOR]]</label>
+						<visible>!String.IsEmpty(Window.Property(mpaa))</visible>
+					</item>
+					<item>
 						<label>$INFO[Window.Property(Duration),$LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
 						<visible>!String.IsEqual(Window.Property(Duration),0) + !String.IsEmpty(Window.Property(Duration))</visible>
 					</item>

@@ -394,8 +394,8 @@
 		<value condition="String.StartsWith(ListItem.mpaa,Rated PG) | String.IsEqual(ListItem.mpaa,PG) | String.Contains(ListItem.mpaa,Australia:PG)">flags/mpaa/Rated PG.png</value>
 		<value condition="String.StartsWith(ListItem.mpaa,Rated NC) | String.IsEqual(ListItem.mpaa,NC-17)">flags/mpaa/Rated NC-17.png</value>
 		<value condition="String.StartsWith(ListItem.mpaa,Rated G) | String.IsEqual(ListItem.mpaa,G) | String.Contains(ListItem.mpaa,Australia:G)">flags/mpaa/Rated G.png</value>
-		<value condition="String.StartsWith(ListItem.mpaa,Rated MA15) | String.Contains(ListItem.mpaa,Australia:MA)">flags/mpaa/australia_ma.png</value>
-		<value condition="[String.StartsWith(ListItem.mpaa,Rated M) + !String.Contains(ListItem.mpaa,15)] | String.IsEqual(ListItem.mpaa,M) | String.Contains(ListItem.mpaa,Australia:M)">flags/mpaa/australia_m.png</value>
+		<value condition="String.Contains(ListItem.mpaa,MA15) | String.Contains(ListItem.mpaa,Australia:MA)">flags/mpaa/australia_ma.png</value>
+		<value condition="[String.StartsWith(ListItem.mpaa,Rated M) | String.IsEqual(ListItem.mpaa,M) | String.Contains(ListItem.mpaa,Australia:M)] + !String.Contains(ListItem.mpaa,15)">flags/mpaa/australia_m.png</value>
 		<value condition="String.StartsWith(ListItem.mpaa,Rated X) | String.IsEqual(ListItem.mpaa,X) | String.Contains(ListItem.mpaa,Australia:X)">flags/mpaa/australia_x.png</value>
 		<value>$INFO[ListItem.MPAA,flags/mpaa/,.png]</value>
 	</variable>

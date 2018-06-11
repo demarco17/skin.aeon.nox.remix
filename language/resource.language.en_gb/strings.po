@@ -142,7 +142,11 @@ msgctxt "#31030"
 msgid "Premiered"
 msgstr ""
 
-#empty strings from id 31031 to 31038
+msgctxt "#31031"
+msgid "Classification"
+msgstr ""
+
+#empty strings from id 31032 to 31038
 
 msgctxt "#31039"
 msgid "Actions"

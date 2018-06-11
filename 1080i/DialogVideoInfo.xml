@@ -126,7 +126,7 @@
 						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Mpaa,$LOCALIZE[20074]: [COLOR grey],[/COLOR]]</label>
+						<label>$INFO[ListItem.Mpaa,$LOCALIZE[31031]: [COLOR grey],[/COLOR]]</label>
 						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[20074],Home)</onclick>
 						<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Mpaa],Home)</onclick>
 						<onclick>ActivateWindow(1132)</onclick>
