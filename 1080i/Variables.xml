@@ -405,8 +405,8 @@
 		<value condition="String.StartsWith(VideoPlayer.mpaa,Rated PG) | String.IsEqual(VideoPlayer.mpaa,PG) | String.Contains(VideoPlayer.mpaa,Australia:PG)">flags/mpaa/Rated PG.png</value>
 		<value condition="String.StartsWith(VideoPlayer.mpaa,Rated NC) | String.IsEqual(VideoPlayer.mpaa,NC-17)">flags/mpaa/Rated NC-17.png</value>
 		<value condition="String.StartsWith(VideoPlayer.mpaa,Rated G) | String.IsEqual(VideoPlayer.mpaa,G) | String.Contains(VideoPlayer.mpaa,Australia:G)">flags/mpaa/Rated G.png</value>
-		<value condition="String.StartsWith(VideoPlayer.mpaa,Rated MA15+) | String.IsEqual(VideoPlayer.mpaa,MA15+) | String.Contains(VideoPlayer.mpaa,Australia:MA)">flags/mpaa/australia_ma.png</value>
-		<value condition="[String.StartsWith(VideoPlayer.mpaa,Rated M) + !String.Contains(VideoPlayer.mpaa,15)] | String.IsEqual(VideoPlayer.mpaa,M) | String.Contains(VideoPlayer.mpaa,Australia:M)">flags/mpaa/australia_m.png</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,MA15) | String.Contains(VideoPlayer.mpaa,Australia:MA)">flags/mpaa/australia_ma.png</value>
+		<value condition="[String.StartsWith(VideoPlayer.mpaa,Rated M) | String.IsEqual(VideoPlayer.mpaa,M) | String.Contains(VideoPlayer.mpaa,Australia:M)] + !String.Contains(VideoPlayer.mpaa,15)">flags/mpaa/australia_m.png</value>
 		<value condition="String.StartsWith(VideoPlayer.mpaa,Rated X) | String.IsEqual(VideoPlayer.mpaa,X) | String.Contains(VideoPlayer.mpaa,Australia:X)">flags/mpaa/australia_x.png</value>
 		<value>$INFO[VideoPlayer.MPAA,flags/mpaa/,.png]</value>
 	</variable>

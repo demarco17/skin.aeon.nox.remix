@@ -86,9 +86,8 @@
 					<label>$INFO[VideoPlayer.Duration]</label>
 				</control>
 				<control type="image">
-					<left>-15</left>
-					<width>auto</width>
-					<aspectratio>keep</aspectratio>
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
 					<texture fallback="flags/mpaa/NR.png" colordiffuse="grey">$VAR[VideoMpaaFlagVar]</texture>
 				</control>
 			</control>
