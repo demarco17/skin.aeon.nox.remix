@@ -119,6 +119,7 @@
 					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
 					<control type="image">
 						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
 						<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
 					</control>
 					<control type="group">

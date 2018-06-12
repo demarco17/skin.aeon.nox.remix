@@ -127,7 +127,7 @@
 					</item>
 					<item>
 						<label>$INFO[ListItem.Mpaa,$LOCALIZE[31031]: [COLOR grey],[/COLOR]]</label>
-						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[20074],Home)</onclick>
+						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[31031],Home)</onclick>
 						<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Mpaa],Home)</onclick>
 						<onclick>ActivateWindow(1132)</onclick>
 						<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
@@ -161,11 +161,11 @@
 						<visible>!String.IsEmpty(ListItem.Studio)</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.4),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.5),[COLOR grey] / ,[/COLOR]]</label>
+						<label>$INFO[ListItem.Property(AudioLanguage.1),$LOCALIZE[21447]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(AudioLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.4),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.5),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.6),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.7),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.8),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.9),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(AudioLanguage.10),[COLOR grey] / ,[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.4),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.5),[COLOR grey] / ,[/COLOR]]</label>
+						<label>$INFO[ListItem.Property(SubtitleLanguage.1),$LOCALIZE[21448]: [COLOR grey],[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.2),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.3),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.4),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.5),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.6),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.7),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.8),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.9),[COLOR grey] / ,[/COLOR]]$INFO[ListItem.Property(SubtitleLanguage.10),[COLOR grey] / ,[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 					</item>
 					<item>
@@ -194,6 +194,9 @@
 					</item>	
 					<item>
 						<label>$INFO[ListItem.FileNameAndPath,$LOCALIZE[573]: [COLOR grey],[/COLOR]]</label>
+						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[573],Home)</onclick>
+						<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.FileNameAndPath],Home)</onclick>
+						<onclick>ActivateWindow(1132)</onclick>
 						<visible>!String.IsEmpty(ListItem.FileNameAndPath)</visible>
 					</item>
 				</content>
@@ -568,14 +571,15 @@
 			<control type="group">
 				<top>985</top>
 				<control type="grouplist">
-					<width>1180</width>
+					<width>1178</width>
 					<height>90</height>
 					<align>right</align>
-					<itemgap>5</itemgap>
+					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="image">
 						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
 						<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
 					</control>
 					<control type="group">

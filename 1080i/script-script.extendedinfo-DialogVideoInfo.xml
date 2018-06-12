@@ -799,7 +799,7 @@
 				<include>VisibleFadeAnimation</include>
 			</control>
 			<control type="group">
-				<top>995</top>
+				<top>990</top>
 				<control type="grouplist">
 					<left>38</left>
 					<width>1150</width>
@@ -860,6 +860,7 @@
 						<include>VisibleFadeAnimation</include>
 						<visible>ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)</visible>
 						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
 						<texture fallback="flags/mpaa/NR.png">$INFO[Window.Property(mpaa),flags/mpaa/,.png]</texture>
 					</control>
 					<control type="panel" id="550">
