@@ -798,52 +798,50 @@
 				<visible>ControlGroup(9000).HasFocus(204) | ControlGroup(9000).HasFocus(205) | ControlGroup(9000).HasFocus(206) | ControlGroup(9000).HasFocus(207) | ControlGroup(9000).HasFocus(208) | ControlGroup(9000).HasFocus(209)</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
-			<control type="group">
+			<control type="grouplist">
 				<top>990</top>
-				<control type="grouplist">
-					<left>38</left>
-					<width>1150</width>
-					<height>90</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<itemgap>25</itemgap>
-					<orientation>horizontal</orientation>
-					<include>VisibleFadeAnimation</include>
-					<visible>!String.IsEmpty(Window.Property(DBID)) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture>$INFO[Window.Property(VideoResolution),flags/resolution/,.png]</texture>
-						<visible>!String.IsEmpty(Window.Property(VideoResolution))</visible>
-					</control>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture>$INFO[Window.Property(VideoCodec),flags/video/,.png]</texture>
-					</control>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture>$INFO[Window.Property(AudioChannels),flags/channels/,.png]</texture>
-						<visible>!String.IsEmpty(Window.Property(AudioChannels))</visible>
-					</control>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture>$INFO[Window.Property(AudioCodec),flags/audio/,.png]</texture>
-						<visible>!String.IsEmpty(Window.Property(AudioCodec))</visible>
-					</control>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture>$INFO[Window.Property(VideoAspect),flags/aspectratio/,.png]</texture>
-					</control>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture>flags/cc.png</texture>
-						<visible>!String.IsEmpty(Window.Property(SubtitleLanguage))</visible>
-					</control>
+				<left>38</left>
+				<width>1150</width>
+				<height>90</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<itemgap>25</itemgap>
+				<orientation>horizontal</orientation>
+				<include>VisibleFadeAnimation</include>
+				<visible>!String.IsEmpty(Window.Property(DBID)) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Window.Property(VideoResolution),flags/resolution/,.png]</texture>
+					<visible>!String.IsEmpty(Window.Property(VideoResolution))</visible>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Window.Property(VideoCodec),flags/video/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Window.Property(AudioChannels),flags/channels/,.png]</texture>
+					<visible>!String.IsEmpty(Window.Property(AudioChannels))</visible>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Window.Property(AudioCodec),flags/audio/,.png]</texture>
+					<visible>!String.IsEmpty(Window.Property(AudioCodec))</visible>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture>$INFO[Window.Property(VideoAspect),flags/aspectratio/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture>flags/cc.png</texture>
+					<visible>!String.IsEmpty(Window.Property(SubtitleLanguage))</visible>
 				</control>
 			</control>
 			<control type="group">

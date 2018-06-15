@@ -226,6 +226,8 @@
 					<height>50</height>
 					<textcolor>grey</textcolor>
 					<font>font15</font>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
 					<label>$INFO[ListItem.AddonBroken]</label>
 				</control>
 			</control>

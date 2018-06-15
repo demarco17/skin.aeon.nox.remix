@@ -358,7 +358,6 @@
 		<width>135</width>
 		<height>90</height>
 		<aspectratio>keep</aspectratio>
-		<fadetime>200</fadetime>
 		<colordiffuse>grey</colordiffuse>
 	</include>
 	<!-- Scroll Label -->

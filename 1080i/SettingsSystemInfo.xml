@@ -270,7 +270,6 @@
 				<label />
 				<font>font14_textbox</font>
 				<textcolor>grey</textcolor>
-				<shadowcolor>shadow</shadowcolor>
 				<pagecontrol>60</pagecontrol>
 			</control>
 			<control type="scrollbar" id="60">

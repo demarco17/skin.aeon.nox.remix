@@ -47,14 +47,15 @@
 				<label>$VAR[VideoPlayerForwardRewindVar]</label>
 				<visible>Player.Forwarding | Player.Rewinding | Player.IsTempo</visible>
 			</control>
-			<control type="label">
-				<left>35</left>
-				<top>27</top>
+			<control type="fadelabel">
+				<left>50</left>
+				<top>24</top>
 				<width>845</width>
 				<height>35</height>
-				<textoffsetx>15</textoffsetx>
 				<align>left</align>
 				<label>$VAR[PlayerTitleLabelVar]</label>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
 				<visible>![Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			</control>
 			<control type="label">

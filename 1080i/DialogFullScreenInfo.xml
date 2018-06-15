@@ -3,24 +3,24 @@
 	<defaultcontrol always="true">62</defaultcontrol>
 	<controls>
 		<control type="group">
-			<top>815</top>
+			<top>650</top>
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<visible>![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
 			<control type="image">
-				<top>-35</top>
+				<top>130</top>
 				<width>1920</width>
 				<height>320</height>
 				<texture border="4" flipy="true">dialogs/InfoBar.png</texture>
 			</control>
 			<control type="image">
-				<top>-255</top>
+				<top>-90</top>
 				<width>1920</width>
 				<height>520</height>
 				<texture>dialogs/logo_back.png</texture>
 			</control>
 			<control type="image">
-				<top>-94</top>
+				<top>70</top>
 				<width>253</width>
 				<height>372</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
@@ -30,7 +30,7 @@
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="image">
-				<top>-40</top>
+				<top>125</top>
 				<width>253</width>
 				<height>318</height>
 				<aspectratio aligny="center">keep</aspectratio>
@@ -40,7 +40,7 @@
 			</control>
 			<control type="label">
 				<left>238</left>
-				<top>-30</top>
+				<top>135</top>
 				<width>1420</width>
 				<height>60</height>
 				<font>font24_title_bold</font>
@@ -48,30 +48,16 @@
 				<textoffsetx>15</textoffsetx>
 				<label>$VAR[InfoPlayingTitleVar]</label>
 			</control>
-			<control type="image" id="800018">
-				<left>1730</left>
-				<top>-15</top>
-				<width>150</width>
-				<height>70</height>
-				<colordiffuse>grey</colordiffuse>
-				<aspectratio align="right">keep</aspectratio>
-				<texture>$VAR[StudioIconVar]$INFO[VideoPlayer.Studio,,.png]</texture>
-			</control>
-			<control type="label">
-				<left>1690</left>
-				<top>-15</top>
-				<width>200</width>
-				<height>70</height>
-				<align>center</align>
-				<label>$INFO[VideoPlayer.Studio]</label>
-				<font>flag_font</font>
-				<textcolor>grey</textcolor>
-				<wrapmultiline>true</wrapmultiline>
-				<visible>String.IsEmpty(Control.GetLabel(800018))</visible>
+			<control type="image">
+				<left>1750</left>
+				<top>135</top>
+				<include>MediaFlagVars</include>
+				<bordersize>7</bordersize>
+				<texture fallback="flags/DefaultStudios.png">$VAR[StudioIconVar]$INFO[VideoPlayer.Studio,,.png]</texture>
 			</control>
 			<control type="label">
 				<left>238</left>
-				<top>25</top>
+				<top>192</top>
 				<width>1420</width>
 				<height>35</height>
 				<font>font13</font>
@@ -81,7 +67,7 @@
 			</control>
 			<control type="label">
 				<left>1079</left>
-				<top>25</top>
+				<top>192</top>
 				<width>840</width>
 				<height>40</height>
 				<align>right</align>
@@ -92,26 +78,26 @@
 				<visible>VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="textbox">
-				<label>$INFO[VideoPlayer.Plot]</label>
+				<label>$VAR[VideoPlayerPlotVar]</label>
 				<left>253</left>
-				<top>65</top>
+				<top>230</top>
 				<width>1645</width>
 				<height>90</height>
 				<font>font14_textbox</font>
-				<textcolor>grey</textcolor>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
 				<pagecontrol>62</pagecontrol>
 			</control>
 			<control type="image">
 				<left>253</left>
-				<top>105</top>
+				<top>270</top>
 				<width>150</width>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$VAR[VideoPlayerStarRating]</texture>
 			</control>
 			<control type="grouplist">
-				<left>1320</left>
-				<top>150</top>
-				<width>585</width>
+				<left>1132</left>
+				<top>315</top>
+				<width>775</width>
 				<height>90</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
@@ -119,31 +105,32 @@
 				<control type="image">
 					<include>MediaFlagVars</include>
 					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
 				</control>
 				<control type="image">
 					<include>MediaFlagVars</include>
 					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
 				</control>
 				<control type="image">
 					<include>MediaFlagVars</include>
 					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
 				</control>
 				<control type="image">
 					<include>MediaFlagVars</include>
 					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>10</bordersize>
+					<texture fallback="flags/mpaa/NR.png">$VAR[VideoMpaaFlagVar]</texture>
 				</control>
 			</control>
 			<control type="progress">
 				<left>253</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1652</width>
 				<height>38</height>
 				<info>PVR.EpgEventProgress</info>
@@ -151,7 +138,7 @@
 			</control>
 			<control type="progress">
 				<left>253</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1652</width>
 				<height>38</height>
 				<info>Player.Progress</info>
@@ -159,7 +146,7 @@
 			</control>
 			<control type="label">
 				<left>253</left>
-				<top>220</top>
+				<top>385</top>
 				<width>300</width>
 				<height>35</height>
 				<textoffsetx>10</textoffsetx>
@@ -167,7 +154,7 @@
 			</control>
 			<control type="label">
 				<left>253</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1652</width>
 				<height>35</height>
 				<align>center</align>
@@ -175,7 +162,7 @@
 			</control>
 			<control type="label">
 				<left>253</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1652</width>
 				<height>35</height>
 				<align>right</align>
@@ -185,7 +172,7 @@
 			</control>
 			<control type="label">
 				<left>253</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1652</width>
 				<height>35</height>
 				<align>right</align>
@@ -195,9 +182,9 @@
 			</control>
 			<control type="scrollbar" id="62">
 				<left>1910</left>
-				<top>75</top>
+				<top>230</top>
 				<width>10</width>
-				<height>70</height>
+				<height>90</height>
 				<texturesliderbar border="1">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
 				<showonepage>false</showonepage>

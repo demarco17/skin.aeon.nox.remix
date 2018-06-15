@@ -32,8 +32,8 @@
 					<textoffsetx>30</textoffsetx>
 				</control>
 				<control type="label">
-					<left>1512</left>
-					<width>198</width>
+					<left>1510</left>
+					<width>200</width>
 					<height>42</height>
 					<align>right</align>
 					<font>font16_title_bold</font>

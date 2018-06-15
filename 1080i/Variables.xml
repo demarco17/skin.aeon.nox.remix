@@ -140,14 +140,6 @@
 		<value condition="!Integer.IsGreater(ListItem.Votes,0)">$LOCALIZE[563]</value>
 		<value>$INFO[ListItem.Votes,, $LOCALIZE[205]]</value>
 	</variable>
-	<variable name="OneOrMoreSeasonsVar">
-		<value condition="String.IsEqual(ListItem.Property(TotalSeasons),1)">$LOCALIZE[20373]</value>
-		<value>$LOCALIZE[33054]</value>
-	</variable>
-	<variable name="OneOrMoreEpisodesVar">
-		<value condition="String.IsEqual(ListItem.Property(TotalEpisodes),1)">$LOCALIZE[20359]</value>
-		<value>$LOCALIZE[20360]</value>
-	</variable>
 	<variable name="VideoPlotVar">
 		<value condition="System.GetBool(Videos.showunwatchedplots) + !String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Tagline,[I],[COLOR grey] - [/COLOR][/I]]$INFO[ListItem.PlotOutline, [COLOR grey],[/COLOR]]</value>
 		<value>$INFO[ListItem.Tagline,[I],[COLOR grey] -  [/COLOR][/I]]$INFO[ListItem.Plot,[COLOR grey],[/COLOR]]</value>

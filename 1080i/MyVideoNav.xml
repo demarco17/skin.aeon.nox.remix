@@ -64,24 +64,25 @@
 			<control type="group">
 				<visible>Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(508)</visible>
 				<animation effect="slide" start="0" end="50" condition="Control.IsVisible(57) | Control.IsVisible(508) | Control.IsVisible(55)">Conditional</animation>
-				<visible>[Container.Content(movies) | Container.Content(sets) | Container.Content(addons) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
 				<control type="group">
 					<left>90</left>
 					<top>980</top>
 					<visible>![Control.IsVisible(55) | Control.IsVisible(508)]</visible>
-					<control type="label">
-						<width>1080</width>
+					<control type="fadelabel">
+						<top>-5</top>
+						<left>30</left>
+						<width>940</width>
 						<height>42</height>
 						<align>left</align>
 						<font>font16_title_bold</font>
 						<textcolor>grey</textcolor>
-						<scroll>true</scroll>
+						<scrollout>false</scrollout>
+						<pauseatend>2000</pauseatend>
 						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>30</textoffsetx>
 					</control>
 					<control type="label">
 						<top>45</top>
-						<width>1080</width>
+						<width>1000</width>
 						<height>30</height>
 						<align>left</align>
 						<font>font13</font>
@@ -94,12 +95,13 @@
 						<top>45</top>
 						<include content="MovieSetGenre">
 							<param name="list_id" value="5012" />
+							<param name="width">1000</param>
 							<param name="label" value="$INFO[Container(5012).ListItemPosition().Genre]" />
 						</include>
 					</control>
 					<control type="label">
-						<left>1512</left>
-						<width>198</width>
+						<left>1510</left>
+						<width>200</width>
 						<height>42</height>
 						<align>right</align>
 						<font>font16_title_bold</font>
@@ -108,45 +110,9 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<left>1500</left>
+					<left>1030</left>
 					<top>980</top>
-					<width>320</width>
-					<height>90</height>
-					<itemgap>25</itemgap>
-					<align>right</align>
-					<usecontrolcoords>true</usecontrolcoords>
-					<orientation>horizontal</orientation>
-					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
-					<control type="image">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
-					</control>
-					<control type="group">
-						<top>2</top>
-						<width>135</width>
-						<control type="image" id="800012">
-							<include>MediaFlagVars</include>
-							<bordersize>5</bordersize>
-							<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-						</control>
-						<control type="label">
-							<top>20</top>
-							<width>135</width>
-							<height>55</height>
-							<align>center</align>
-							<textcolor>grey</textcolor>
-							<label>$INFO[ListItem.Studio]</label>
-							<font>flag_font</font>
-							<wrapmultiline>true</wrapmultiline>
-							<visible>String.IsEmpty(Control.GetLabel(800012))</visible>
-						</control>
-					</control>
-				</control>
-				<control type="grouplist">
-					<left>1190</left>
-					<top>980</top>
-					<width>615</width>
+					<width>775</width>
 					<height>90</height>
 					<itemgap>25</itemgap>
 					<align>right</align>
@@ -175,6 +141,18 @@
 						<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
+					<control type="image">
+						<include>MediaFlagVars</include>
+						<bordersize>5</bordersize>
+						<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
+						<visible>!String.IsEqual(ListItem.DBType,set) + !ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<include>MediaFlagVars</include>
+						<bordersize>7</bordersize>
+						<texture fallback="flags/DefaultStudios.png">$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
+					</control>
 				</control>
 			</control>
 		</control>
@@ -191,7 +169,7 @@
 					<label>$LOCALIZE[31017]</label>
 					<label2>[COLOR $VAR[SkinThemeColour]]$VAR[CaseToggleLabelVar][/COLOR]</label2>
 					<onclick>$VAR[StringVideoCaseToggleVar]</onclick>
-					<visible>[Control.IsVisible(57) | Control.IsVisible(501)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(musicvideos)]</visible>
+					<visible>Control.IsVisible(57) | Control.IsVisible(501)</visible>
 				</control>
 				<control type="button" id="303">
 					<description>WallInfo Icon Toggle</description>

@@ -508,25 +508,10 @@
 				<bordersize>5</bordersize>
 				<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
 			</control>
-			<control type="group">
-				<top>2</top>
-				<width>135</width>
-				<control type="image" id="800017">
-					<include>MediaFlagVars</include>
-					<bordersize>5</bordersize>
-					<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-				</control>
-				<control type="label">
-					<top>20</top>
-					<width>135</width>
-					<height>55</height>
-					<align>center</align>
-					<textcolor>grey</textcolor>
-					<label>$INFO[ListItem.Studio]</label>
-					<font>flag_font</font>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>String.IsEmpty(Control.GetLabel(800017))</visible>
-				</control>
+			<control type="image">
+				<include>MediaFlagVars</include>
+				<bordersize>7</bordersize>
+				<texture fallback="flags/DefaultStudios.png">$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
 			</control>
 		</control>
 		<control type="grouplist">

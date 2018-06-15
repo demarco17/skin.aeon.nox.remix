@@ -2,7 +2,6 @@
 <window>
 	<controls>
 		<control type="group">
-			<description>Video Mode</description>
 			<include>VisibleFadeAnimation</include>
 			<visible>Control.IsVisible(10) | Control.IsVisible(11) | Control.IsVisible(12)</visible>
 			<control type="image">

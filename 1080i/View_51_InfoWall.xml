@@ -228,90 +228,13 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>1150</left>
-				<top>990</top>
-				<width>615</width>
-				<height>90</height>
-				<itemgap>25</itemgap>
-				<usecontrolcoords>true</usecontrolcoords>
-				<orientation>horizontal</orientation>
-				<visible>Container.Content(tvshows) + !ListItem.IsParentFolder</visible>
-				<control type="group">
-					<width>135</width>
-					<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
-					<control type="label">
-						<width>135</width>
-						<height>70</height>
-						<align>center</align>
-						<label>$INFO[ListItem.Property(TotalSeasons)]</label>
-						<font>font48_bold</font>
-						<textcolor>grey</textcolor>
-					</control>
-					<control type="label">
-						<top>55</top>
-						<width>135</width>
-						<height>25</height>
-						<align>center</align>
-						<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
-						<font>flag_font</font>
-						<textcolor>grey</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
-					<width>135</width>
-					<control type="label">
-						<width>135</width>
-						<height>70</height>
-						<align>center</align>
-						<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
-						<font>font48_bold</font>
-						<textcolor>grey</textcolor>
-					</control>
-					<control type="label">
-						<top>55</top>
-						<width>135</width>
-						<height>25</height>
-						<align>center</align>
-						<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
-						<font>flag_font</font>
-						<textcolor>grey</textcolor>
-					</control>
-				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>5</bordersize>
-					<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
-				</control>
-				<control type="group">
-					<top>2</top>
-					<width>135</width>
-					<control type="image" id="800014">
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture>$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
-					</control>
-					<control type="label">
-						<top>15</top>
-						<width>135</width>
-						<height>55</height>
-						<align>center</align>
-						<label>$INFO[ListItem.Studio]</label>
-						<font>flag_font</font>
-						<textcolor>grey</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEmpty(Control.GetLabel(800014))</visible>
-					</control>
-				</control>
-			</control>
-			<control type="grouplist">
 				<left>1165</left>
 				<top>985</top>
 				<width>615</width>
 				<height>90</height>
 				<itemgap>25</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
 				<orientation>horizontal</orientation>
-				<visible>Container.Content(movies)</visible>
 				<control type="image">
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
@@ -336,9 +259,50 @@
 					<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 				</control>
+				<control type="button">
+					<top>17</top>
+					<width>135</width>
+					<height>56</height>
+					<texturefocus />
+					<texturenofocus colordiffuse="grey">flags/season.png</texturenofocus>
+					<font>flag_font</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsety>14</textoffsety>
+					<textoffsetx>70</textoffsetx>
+					<label>$INFO[ListItem.Property(TotalSeasons)]</label>
+					<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Property(TotalSeasons)) + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="button">
+					<top>17</top>
+					<width>135</width>
+					<height>56</height>
+					<texturefocus />
+					<texturenofocus colordiffuse="grey">flags/episode.png</texturenofocus>
+					<font>flag_font</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsety>14</textoffsety>
+					<textoffsetx>70</textoffsetx>
+					<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
+					<visible>Container.Content(tvshows) + !String.IsEmpty(ListItem.Property(TotalEpisodes)) + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
+					<visible>Container.Content(tvshows) + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>7</bordersize>
+					<texture fallback="flags/DefaultStudios.png">$VAR[StudioIconVar]$INFO[ListItem.Studio,,.png]</texture>
+					<visible>Container.Content(tvshows) + !String.IsEqual(ListItem.DBType,movie) + !ListItem.IsParentFolder</visible>
+				</control>
 			</control>
 		</control>
 	</include>
+
 	<include name="MusicInfoWall">
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
@@ -426,14 +390,14 @@
 					<width>668</width>
 					<label>[COLOR $VAR[SkinThemeColour]]$INFO[ListItem.Artist,,[CR]][/COLOR]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label),[COLOR grey3]  |  [/COLOR]]</label>
 					<include>MediaInfoPanelButtons</include>
-					<visible>Container.Content(albums)</visible>
+					<visible>Container.Content(albums) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 				</control>
 				<control type="button">
 					<top>455</top>
 					<width>668</width>
 					<label>[COLOR $VAR[SkinThemeColour]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<include>MediaInfoPanelButtons</include>
-					<visible>Container.Content(artists)</visible>
+					<visible>Container.Content(artists) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="textbox">
 					<label>$VAR[MusicPlotVar]</label>
@@ -444,6 +408,7 @@
 					<font>font14_textbox</font>
 					<autoscroll time="4000" delay="4000" repeat="5000">true</autoscroll>
 					<textcolor>grey</textcolor>
+					<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 				</control>
 			</control>
 		</control>

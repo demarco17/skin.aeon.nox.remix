@@ -32,6 +32,7 @@
 				<textcolor>grey</textcolor>
 				<label>$INFO[Player.Title]</label>
 				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
 				<visible>VideoPlayer.Content(movies)</visible>
 			</control>
 			<control type="fadelabel">
@@ -42,6 +43,7 @@
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.TvShowTitle]</label>
 				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>
 			<control type="label">

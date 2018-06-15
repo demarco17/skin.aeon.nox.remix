@@ -6,16 +6,13 @@
 			<include>FullscreenDimensions</include>
 			<visible>Player.HasAudio + String.IsEmpty(Window(videos).Property(PlayingBackgroundMedia))</visible>
 		</control>
-		<control type="group">
+		<control type="image">
+			<description>Fanart image</description>
+			<include>FullscreenDimensions</include>
+			<fadetime>400</fadetime>
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<animation effect="fade" start="100" end="40" condition="!String.IsEmpty(Visualisation.Name)">Conditional</animation>
 			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
-			<include>VisibleFadeAnimation</include>
-			<control type="image">
-				<description>Fanart image</description>
-				<include>FullscreenDimensions</include>
-				<fadetime>400</fadetime>
-				<texture background="true">$INFO[Player.Art(fanart)]</texture>
-				<animation effect="fade" start="100" end="40" condition="!String.IsEmpty(Visualisation.Name)">Conditional</animation>
-			</control>
 		</control>
 		<control type="label" id="1">
 			<left>30</left>
@@ -27,25 +24,25 @@
 			<visible>!String.IsEmpty(Player.SeekNumeric) + !Window.IsActive(musicosd)</visible>
 		</control>
 		<control type="group">
-			<top>815</top>
+			<top>650</top>
 			<visible>Player.ShowInfo + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(Addon) | Window.IsVisible(OSDAudioSettings)]</visible>
 			<visible>![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
 			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
-				<top>-35</top>
+				<top>130</top>
 				<width>1920</width>
 				<height>320</height>
 				<texture border="4" flipy="true">dialogs/InfoBar.png</texture>
 			</control>
 			<control type="image">
-				<top>-255</top>
+				<top>-90</top>
 				<width>1920</width>
 				<height>520</height>
 				<texture>dialogs/logo_back.png</texture>
 			</control>
 			<control type="image">
-				<top>-94</top>
+				<top>70</top>
 				<width>360</width>
 				<height>372</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
@@ -55,7 +52,7 @@
 				<visible>!Pvr.IsPlayingRadio</visible>
 			</control>
 			<control type="image">
-				<top>-40</top>
+				<top>125</top>
 				<width>360</width>
 				<height>318</height>
 				<aspectratio aligny="center">keep</aspectratio>
@@ -65,7 +62,7 @@
 			</control>
 			<control type="label">
 				<left>345</left>
-				<top>-30</top>
+				<top>135</top>
 				<width>1405</width>
 				<height>60</height>
 				<font>font24_title_bold</font>
@@ -75,7 +72,7 @@
 			</control>
 			<control type="label">
 				<left>345</left>
-				<top>25</top>
+				<top>192</top>
 				<width>1405</width>
 				<height>30</height>
 				<font>font13</font>
@@ -85,7 +82,7 @@
 			</control>
 			<control type="label">
 				<left>345</left>
-				<top>65</top>
+				<top>228</top>
 				<width>1570</width>
 				<height>40</height>
 				<font>font13</font>
@@ -95,7 +92,7 @@
 			</control>
 			<control type="label">
 				<left>345</left>
-				<top>105</top>
+				<top>270</top>
 				<width>1570</width>
 				<height>40</height>
 				<font>font13</font>
@@ -105,7 +102,7 @@
 			</control>
 			<control type="label">
 				<left>345</left>
-				<top>105</top>
+				<top>270</top>
 				<width>1570</width>
 				<height>40</height>
 				<font>font13</font>
@@ -116,90 +113,78 @@
 			</control>
 			<control type="image">
 				<left>360</left>
-				<top>105</top>
+				<top>270</top>
 				<width>160</width>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$VAR[MusicPlayerStarRating]</texture>
 			</control>
-			<control type="image" id="800015">
+			<control type="image">
 				<left>1730</left>
-				<top>-15</top>
+				<top>150</top>
 				<width>150</width>
 				<height>70</height>
 				<colordiffuse>grey</colordiffuse>
 				<aspectratio align="right">keep</aspectratio>
-				<texture>resource://resource.images.recordlabels.white/$INFO[MusicPlayer.Property(Album_Label),,.png]</texture>
-			</control>
-			<control type="label">
-				<left>1690</left>
-				<top>-15</top>
-				<width>200</width>
-				<height>70</height>
-				<align>center</align>
-				<label>$INFO[MusicPlayer.Property(Album_Label)]</label>
-				<font>flag_font</font>
-				<textcolor>grey</textcolor>
-				<wrapmultiline>true</wrapmultiline>
-				<visible>String.IsEmpty(Control.GetLabel(800015))</visible>
+				<texture fallback="flags/DefaultStudios.png">resource://resource.images.recordlabels.white/$INFO[MusicPlayer.Property(Album_Label),,.png]</texture>
 			</control>
 			<control type="grouplist">
-				<left>1308</left>
-				<top>142</top>
-				<width>600</width>
+				<left>1270</left>
+				<top>305</top>
+				<width>640</width>
 				<height>90</height>
 				<align>right</align>
-				<orientation>horizontal</orientation>
-				<usecontrolcoords>true</usecontrolcoords>
 				<itemgap>25</itemgap>
-				<control type="button">
-					<top>19</top>
-					<width>135</width>
-					<height>52</height>
-					<texturefocus />
-					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
-					<font>flag_font</font>
-					<align>center</align>
-					<textoffsety>-3</textoffsety>
-					<label>$INFO[MusicPlayer.SampleRate,, Hz]</label>
-					<visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
-				</control>
-				<control type="button">
-					<top>19</top>
-					<width>135</width>
-					<height>52</height>
-					<texturefocus />
-					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
-					<font>flag_font</font>
-					<align>center</align>
-					<textoffsety>-3</textoffsety>
-					<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
-					<visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture>$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
+					<visible>!String.IsEmpty(MusicPlayer.Codec)</visible>
 				</control>
 				<control type="image">
 					<include>MediaFlagVars</include>
-					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<bordersize>5</bordersize>
 					<texture>$INFO[MusicPlayer.Channels,flags/channels/,.png]</texture>
 					<visible>!String.IsEmpty(MusicPlayer.Channels)</visible>
 				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>10</bordersize>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
-					<visible>!String.IsEmpty(MusicPlayer.Codec)</visible>
+				<control type="button">
+					<top>17</top>
+					<width>135</width>
+					<height>56</height>
+					<texturefocus />
+					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
+					<font>flag_font</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsety>14</textoffsety>
+					<label>$INFO[MusicPlayer.BitRate,, kbps]</label>
+					<visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
+				</control>
+				<control type="button">
+					<top>17</top>
+					<width>135</width>
+					<height>56</height>
+					<texturefocus />
+					<texturenofocus colordiffuse="grey">flags/flag.png</texturenofocus>
+					<font>flag_font</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsety>14</textoffsety>
+					<label>$INFO[MusicPlayer.SampleRate,, Hz]</label>
+					<visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
 				</control>
 			</control>
 			<control type="progress">
 				<left>360</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1545</width>
 				<height>38</height>
 				<info>Player.Progress</info>
 			</control>
 			<control type="label">
 				<left>360</left>
-				<top>220</top>
+				<top>385</top>
 				<width>300</width>
 				<height>35</height>
 				<textoffsetx>10</textoffsetx>
@@ -207,7 +192,7 @@
 			</control>
 			<control type="label">
 				<left>360</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1545</width>
 				<height>35</height>
 				<align>center</align>
@@ -215,7 +200,7 @@
 			</control>
 			<control type="label">
 				<left>360</left>
-				<top>220</top>
+				<top>385</top>
 				<width>1545</width>
 				<height>35</height>
 				<align>right</align>
