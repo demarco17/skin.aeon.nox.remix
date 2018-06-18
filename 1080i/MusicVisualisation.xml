@@ -117,6 +117,7 @@
 				<width>160</width>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$VAR[MusicPlayerStarRating]</texture>
+				<visible>!Pvr.IsPlayingRadio</visible>
 			</control>
 			<control type="image">
 				<left>1730</left>
@@ -126,6 +127,7 @@
 				<colordiffuse>grey</colordiffuse>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="flags/DefaultStudios.png">resource://resource.images.recordlabels.white/$INFO[MusicPlayer.Property(Album_Label),,.png]</texture>
+				<visible>!Pvr.IsPlayingRadio</visible>
 			</control>
 			<control type="grouplist">
 				<left>1270</left>

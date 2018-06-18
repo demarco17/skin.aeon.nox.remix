@@ -393,6 +393,7 @@
 						<font>font14_textbox</font>
 						<pagecontrol>5563</pagecontrol>
 						<textcolor>grey</textcolor>
+						<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 					</control>
 				</control>
 				<control type="scrollbar" id="5563">

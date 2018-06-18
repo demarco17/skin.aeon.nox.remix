@@ -306,6 +306,10 @@
 		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ,]</value>
 		<value>$INFO[Player.Time]$INFO[Player.Duration, / ]</value>
 	</variable>
+	<variable name="FinishTimeLabelVar">
+		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</value>
+		<value>$INFO[Player.FinishTime,$LOCALIZE[31013]: ,]</value>
+	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
 		<value condition="Player.Forwarding2x | Player.Rewinding2x">2X</value>
 		<value condition="Player.Forwarding4x | Player.Rewinding4x">4X</value>

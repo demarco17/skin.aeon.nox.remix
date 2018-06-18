@@ -54,6 +54,7 @@
 				<include>MediaFlagVars</include>
 				<bordersize>7</bordersize>
 				<texture fallback="flags/DefaultStudios.png">$VAR[StudioIconVar]$INFO[VideoPlayer.Studio,,.png]</texture>
+				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="label">
 				<left>238</left>
@@ -93,6 +94,7 @@
 				<width>150</width>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="flags/rating/empty.png" colordiffuse="goldenrod">$VAR[VideoPlayerStarRating]</texture>
+				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 			<control type="grouplist">
 				<left>1132</left>
@@ -126,6 +128,7 @@
 					<include>MediaFlagVars</include>
 					<bordersize>10</bordersize>
 					<texture fallback="flags/mpaa/NR.png">$VAR[VideoMpaaFlagVar]</texture>
+					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 			</control>
 			<control type="progress">
@@ -167,18 +170,7 @@
 				<height>35</height>
 				<align>right</align>
 				<textoffsetx>10</textoffsetx>
-				<label>$INFO[Player.FinishTime,$LOCALIZE[31013]: ,]</label>
-				<visible>!VideoPlayer.HasEpg</visible>
-			</control>
-			<control type="label">
-				<left>253</left>
-				<top>385</top>
-				<width>1652</width>
-				<height>35</height>
-				<align>right</align>
-				<textoffsetx>10</textoffsetx>
-				<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</label>
-				<visible>VideoPlayer.HasEpg</visible>
+				<label>$VAR[FinishTimeLabelVar]</label>
 			</control>
 			<control type="scrollbar" id="62">
 				<left>1910</left>

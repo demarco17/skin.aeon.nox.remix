@@ -109,6 +109,7 @@
 					<width>150</width>
 					<include>MediaFlagVars</include>
 					<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
+					<visible>![ListItem.IsParentFolder | String.StartsWith(ListItem.Label,*)]</visible>
 				</control>
 			</control>
 		</control>
