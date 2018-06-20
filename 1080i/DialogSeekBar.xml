@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | [Player.DisplayAfterSeek + String.IsEmpty(Window(home).Property(PseudoTVRunning))] | Player.IsTempo] + [VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsVisible(1135)</visible>
+	<visible>[Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo] + [VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + ![Window.IsVisible(1135) | !String.IsEmpty(Window(home).Property(PseudoTVRunning))]</visible>
 	<controls>
 		<include>PVRChannelNumberInput</include>
 		<control type="group">
