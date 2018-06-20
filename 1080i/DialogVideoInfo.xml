@@ -148,10 +148,10 @@
 						<label>$VAR[UserRating,$LOCALIZE[38018]: [COLOR grey],[/COLOR]]</label>
 						<onclick>SendClick(2003,7)</onclick>
 					</item>
-					<item>
+					<!--<item>
 						<label>$INFO[Window(Home).Property(NextAired.Country),$LOCALIZE[574]: [COLOR grey],[/COLOR]]</label>
 						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.Country))</visible>
-					</item>
+					</item>-->
 					<item>
 						<label>$INFO[ListItem.Country,$LOCALIZE[574]: [COLOR grey],[/COLOR]]</label>
 						<visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.Country)</visible>

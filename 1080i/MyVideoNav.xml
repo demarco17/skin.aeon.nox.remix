@@ -145,7 +145,7 @@
 						<include>MediaFlagVars</include>
 						<bordersize>5</bordersize>
 						<texture fallback="flags/mpaa/NR.png">$VAR[MpaaFlagVar]</texture>
-						<visible>!String.IsEqual(ListItem.DBType,set) + !ListItem.IsParentFolder</visible>
+						<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !String.IsEqual(ListItem.DBType,set) + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<include>MediaFlagVars</include>
