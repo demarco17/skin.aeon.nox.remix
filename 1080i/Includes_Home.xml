@@ -633,7 +633,7 @@
 					<width>1850</width>
 					<height>37</height>
 					<font>font13_title</font>
-					<label>$INFO[Pvr.NowRecordingChannel,[COLOR grey],:[/COLOR]]$INFO[Pvr.NowRecordingTitle,  ,]$INFO[PVR.NowRecordingDateTime,[COLOR grey][COLOR grey3]  |  [/COLOR],[/COLOR]]</label>
+					<label>$INFO[Pvr.NowRecordingChannel,[COLOR grey],[/COLOR]]$INFO[Pvr.NowRecordingTitle,[COLOR grey3]  |  [/COLOR],]$INFO[PVR.NowRecordingDateTime,[COLOR grey][COLOR grey3]  |  [/COLOR],[/COLOR]]</label>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<align>left</align>
 				</control>
@@ -653,7 +653,7 @@
 					<width>1850</width>
 					<height>37</height>
 					<font>font13_title</font>
-					<label>$INFO[Pvr.NextRecordingChannel,[COLOR grey],:[/COLOR]]$INFO[Pvr.NextRecordingTitle,  ,]$INFO[PVR.NextRecordingDateTime,[COLOR grey][COLOR grey3]  |  [/COLOR],[/COLOR]]</label>
+					<label>$INFO[Pvr.NextRecordingChannel,[COLOR grey],[/COLOR]]$INFO[Pvr.NextRecordingTitle,[COLOR grey3]  |  [/COLOR],]$INFO[PVR.NextRecordingDateTime,[COLOR grey][COLOR grey3]  |  [/COLOR],[/COLOR]]</label>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
 					<align>left</align>
 				</control>

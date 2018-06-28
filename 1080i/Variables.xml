@@ -290,7 +290,7 @@
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	<variable name="GlobalSearchLabel2Var">
-		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">$INFO[ListItem.Year]</value>
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)">$INFO[ListItem.Year,(,)]</value>
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.TvShowTitle]</value>
 		<value condition="Container.Content(livetv)">$INFO[ListItem.Property(ChannelName)]$INFO[ListItem.Property(Starttime), (,)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
@@ -466,10 +466,6 @@
 		<value condition="!String.IsEmpty(ListItem.VideoResolution)">$INFO[ListItem.VideoResolution].png</value>
 		<value condition="[Container.Content(tvshows) | [Container.Content(seasons) + String.IsEmpty(ListItem.VideoResolution)]] + !ListItem.IsParentFolder">tv.png</value>
 		<value>blank.png</value>
-	</variable>
-	<variable name="DialogSelectLabel2Var">
-		<value condition="String.IsEqual(Control.GetLabel(1),$LOCALIZE[25006])">$INFO[ListItem.Duration]</value>
-		<value>$INFO[ListItem.AddonVersion]</value>
 	</variable>
 	<variable name="EpisodeInfoCountVar">
 		<value condition="!Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,[LOWERCASE]x[/LOWERCASE]0]</value>

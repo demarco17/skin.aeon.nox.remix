@@ -4,273 +4,271 @@
 	<include>OpenCloseAnimation</include>
 	<controls>
 		<control type="image">
-			<left>473</left>
-			<top>256</top>
-			<width>974</width>
-			<height>568</height>
+			<left>350</left>
+			<top>226</top>
+			<width>1214</width>
+			<height>628</height>
 			<texture border="18">dialogs/dialog-bg2.png</texture>
 		</control>
-		<control type="image">
-			<left>490</left>
-			<top>328</top>
-			<width>630</width>
-			<height>480</height>
-			<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+		<control type="label" id="1">
+			<left>350</left>
+			<top>242</top>
+			<width>1214</width>
+			<height>40</height>
+			<font>font15_title_bold</font>
+			<textoffsetx>30</textoffsetx>
+			<align>center</align>
+			<scroll>true</scroll>
+			<textcolor>dialogheader</textcolor>
 		</control>
 		<control type="group">
-			<left>457</left>
-			<top>240</top>
-			<control type="label" id="1">
+			<left>334</left>
+			<top>298</top>
+			<control type="image">
 				<left>32</left>
-				<top>32</top>
-				<width>942</width>
-				<height>40</height>
-				<font>font15_title_bold</font>
-				<textoffsetx>15</textoffsetx>
-				<align>center</align>
-				<scroll>true</scroll>
-				<textcolor>dialogheader</textcolor>
+				<width>750</width>
+				<height>540</height>
+				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 			</control>
 			<control type="label" id="4">
 				<description>No Settings Label</description>
 				<left>32</left>
 				<top>88</top>
-				<width>630</width>
+				<width>750</width>
 				<height>100</height>
 				<textoffsetx>15</textoffsetx>
 				<font>font14</font>
 				<align>center</align>
 			</control>
-			<control type="group">
-				<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter)]</visible>
-				<left>676</left>
-				<top>88</top>
-				<control type="image">
-					<width>298</width>
-					<height>332</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<texture>$INFO[Container(6).ListItem.Icon]</texture>
-					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-					<bordersize>1</bordersize>
-				</control>
-				<control type="image">
-					<top>359</top>
-					<width>298</width>
-					<height>120</height>
-					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-				</control>
-				<control type="grouplist" id="9001">
-					<top>359</top>
-					<height>120</height>
-					<onleft>60</onleft>
-					<onright>3</onright>
-					<control type="button" id="5">
-						<description>Manual button</description>
-						<width>298</width>
-						<label>186</label>
-					</control>
-					<control type="button" id="7">
-						<description>Cancel</description>
-						<width>298</width>
-					</control>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter)</visible>
-				<left>676</left>
-				<top>88</top>
-				<control type="image">
-					<top>182</top>
-					<width>298</width>
-					<height>297</height>
-					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
-				</control>
-				<control type="gamewindow">
-					<width>298</width>
-					<height>168</height>
-					<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
-					<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				</control>
-				<control type="textbox" id="12">
-					<description>Description Area</description>
-					<top>190</top>
-					<left>15</left>
-					<width>268</width>
-					<height>275</height>
-					<font>font13</font>
-					<textcolor>grey</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
-				</control>
-			</control>
 			<control type="group" id="9000">
 				<control type="list" id="3">
-					<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter)]</visible>
+					<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(GameVideoRotation)]</visible>
 					<left>32</left>
-					<top>88</top>
-					<width>630</width>
-					<height>480</height>
+					<width>750</width>
+					<height>540</height>
 					<onleft>9001</onleft>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
-					<itemlayout height="60" width="630">
+					<itemlayout height="90" width="750">
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
-							<textoffsetx>15</textoffsetx>
+							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+							<width>750</width>
+							<height>50</height>
 							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
+							<top>45</top>
+							<width>750</width>
+							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<font>font14</font>
-							<textcolor>grey</textcolor>
-							<align>right</align>
+							<textcolor>grey2</textcolor>
+							<font>font12</font>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="60" width="630">
+					<focusedlayout height="90" width="750">
 						<control type="image">
-							<width>630</width>
-							<height>60</height>
+							<width>750</width>
+							<height>90</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(3)</visible>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
-							<textoffsetx>15</textoffsetx>
+							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+							<width>750</width>
+							<height>50</height>
 							<font>font14</font>
-							<scroll>true</scroll>
+							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
+							<top>45</top>
+							<width>750</width>
+							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<font>font14</font>
-							<align>right</align>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="list" id="6">
-					<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter)]</visible>
+					<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(GameVideoRotation)]</visible>
 					<left>32</left>
-					<top>88</top>
-					<width>630</width>
-					<height>480</height>
+					<width>750</width>
+					<height>540</height>
 					<onleft>9001</onleft>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
-					<itemlayout height="60" width="630">
+					<itemlayout height="90" width="750">
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
+							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+							<width>750</width>
+							<height>50</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
-							<font>font14</font>
+							<top>45</top>
+							<width>750</width>
+							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<textcolor>grey</textcolor>
-							<align>right</align>
-							<label>$VAR[DialogSelectLabel2Var]</label>
+							<textcolor>grey2</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="60" width="630">
+					<focusedlayout height="90" width="750">
 						<control type="image">
-							<width>630</width>
-							<height>60</height>
+							<width>750</width>
+							<height>90</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(6)</visible>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
+							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+							<width>750</width>
+							<height>50</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
-							<font>font14</font>
+							<top>45</top>
+							<width>750</width>
+							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<align>right</align>
-							<label>$VAR[DialogSelectLabel2Var]</label>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="list" id="11">
-					<visible>Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter)</visible>
+					<visible>Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(GameVideoRotation)</visible>
 					<left>32</left>
-					<top>88</top>
-					<width>630</width>
-					<height>480</height>
+					<width>750</width>
+					<height>540</height>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
-					<itemlayout height="60" width="630">
+					<itemlayout height="90" width="750">
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
-							<textoffsetx>15</textoffsetx>
+							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+							<width>750</width>
+							<height>50</height>
 							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
+							<top>45</top>
+							<width>750</width>
+							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<font>font14</font>
-							<textcolor>grey</textcolor>
-							<align>right</align>
+							<textcolor>grey2</textcolor>
+							<font>font12</font>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="60" width="630">
+					<focusedlayout height="90" width="750">
 						<control type="image">
-							<width>630</width>
-							<height>60</height>
+							<width>750</width>
+							<height>90</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
-							<textoffsetx>15</textoffsetx>
+							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+							<width>750</width>
+							<height>50</height>
 							<font>font14</font>
-							<scroll>true</scroll>
+							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>630</width>
-							<height>60</height>
+							<top>45</top>
+							<width>750</width>
+							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<font>font14</font>
-							<align>right</align>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>664</left>
-				<top>88</top>
-				<height>480</height>
+				<left>784</left>
+				<height>540</height>
 				<width>10</width>
 				<onleft>9000</onleft>
 				<onright>9001</onright>
 				<showonepage>false</showonepage>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
 				<texturesliderbarfocus border="2" colordiffuse="$VAR[SkinThemeColour]">scrollbar/texturesliderbarfocus_ver.png</texturesliderbarfocus>
+			</control>
+			<control type="group">
+				<left>796</left>
+				<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(GameVideoRotation)]</visible>
+				<control type="image">
+					<width>418</width>
+					<height>407</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture fallback="DefaultFile.png">$INFO[Container(6).ListItem.Icon]</texture>
+					<visible>!Control.HasFocus(11)</visible>
+				</control>
+				<control type="grouplist" id="9001">
+					<top>419</top>
+					<height>120</height>
+					<onleft>60</onleft>
+					<onright>9000</onright>
+					<align>bottom</align>
+					<control type="button" id="5">
+						<description>Manual button</description>
+						<width>418</width>
+						<align>center</align>
+						<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+					</control>
+					<control type="button" id="7">
+						<description>Cancel</description>
+						<width>418</width>
+						<align>center</align>
+						<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(GameVideoRotation)</visible>
+				<left>796</left>
+				<control type="gamewindow">
+					<width>418</width>
+					<height>235</height>
+					<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
+					<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+				</control>
+				<control type="image">
+					<top>250</top>
+					<width>418</width>
+					<height>290</height>
+					<texture colordiffuse="dialogInner">dialogs/black.png</texture>
+				</control>
+				<control type="textbox" id="12">
+					<description>Description Area</description>
+					<top>250</top>
+					<left>15</left>
+					<width>388</width>
+					<height>275</height>
+					<align>center</align>
+					<font>font13</font>
+					<textcolor>grey</textcolor>
+					<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+				</control>
 			</control>
 		</control>
 	</controls>

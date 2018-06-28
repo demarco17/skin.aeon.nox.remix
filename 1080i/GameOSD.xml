@@ -5,7 +5,7 @@
 		<control type="group">
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
-			<visible>![Window.IsActive(GameVideoFilter) | Window.IsActive(GameViewMode) | Window.IsActive(GameControllers) | Window.IsActive(GameVolume)]</visible>
+			<visible>![Window.IsActive(GameVideoFilter) | Window.IsActive(GameViewMode) | Window.IsActive(GameControllers) | Window.IsActive(GameVolume) | Window.IsActive(GameAdvancedSettings) | Window.IsActive(GameVideoRotation)]</visible>
 			<control type="image">
 				<width>1920</width>
 				<height>106</height>
@@ -68,6 +68,16 @@
 					<font />
 					<onclick>ActivateWindow(GameViewMode)</onclick>
 				</control>
+				<control type="button" id="107">
+					<description>Video rotation button</description>
+					<texturefocus>osd/buttons/OSDGameRotate.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDGameRotate.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(GameVideoRotation)</onclick>
+				</control>
 				<control type="button" id="106">
 					<description>Volume button</description>
 					<texturefocus>osd/buttons/OSDAudio.png</texturefocus>
@@ -78,7 +88,7 @@
 					<font />
 					<onclick>ActivateWindow(GameVolume)</onclick>
 				</control>
-				<control type="button" id="107">
+				<control type="button" id="108">
 					<description>Input settings button</description>
 					<texturefocus>osd/buttons/OSDInput.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDInput.png</texturenofocus>
@@ -87,6 +97,16 @@
 					<label />
 					<font />
 					<onclick>ActivateWindow(gamecontrollers)</onclick>
+				</control>
+				<control type="button" id="109">
+					<description>Advanced settings</description>
+					<texturefocus>osd/buttons/OSDSettings.png</texturefocus>
+					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDSettings.png</texturenofocus>
+					<width>100</width>
+					<height>100</height>
+					<label />
+					<font />
+					<onclick>ActivateWindow(GameAdvancedSettings)</onclick>
 				</control>
 			</control>
 		</control>
