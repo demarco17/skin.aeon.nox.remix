@@ -26,7 +26,7 @@
 						<height>210</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio align="center">scale</aspectratio>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">

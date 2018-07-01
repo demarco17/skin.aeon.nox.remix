@@ -558,12 +558,6 @@
 					<texture colordiffuse="goldenrod" fallback="flags/rating/empty.png">$VAR[ListItemStarRating]</texture>
 					<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
-				<control type="image">
-					<include>MediaFlagVars</include>
-					<bordersize>15</bordersize>
-					<texture fallback="flags/DefaultStudios.png">resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>
-					<visible>String.IsEqual(ListItem.DBType,album)</visible>
-				</control>
 			</control>
 		</control>
 	</controls>

@@ -261,7 +261,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
@@ -351,7 +351,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
@@ -441,7 +441,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">
@@ -511,7 +511,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>
@@ -549,7 +549,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">
@@ -619,7 +619,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
@@ -709,7 +709,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">

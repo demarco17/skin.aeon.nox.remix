@@ -35,7 +35,7 @@
 						<height>360</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="group">
@@ -68,7 +68,7 @@
 						<height>240</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>
@@ -91,7 +91,7 @@
 						<height>240</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">
@@ -190,7 +190,7 @@
 						<height>240</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>
@@ -246,7 +246,7 @@
 						<height>240</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>

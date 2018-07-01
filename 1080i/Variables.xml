@@ -303,8 +303,8 @@
 		<value condition="Player.DisplayAfterSeek">$INFO[Player.SeekOffset]</value>
 	</variable>
 	<variable name="SeekTimeLabelVar">
-		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ,]</value>
-		<value>$INFO[Player.Time]$INFO[Player.Duration, / ]</value>
+		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration,[COLOR grey3]  |  [/COLOR],]</value>
+		<value>$INFO[Player.Time]$INFO[Player.Duration,[COLOR grey3]  |  [/COLOR],]</value>
 	</variable>
 	<variable name="FinishTimeLabelVar">
 		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</value>

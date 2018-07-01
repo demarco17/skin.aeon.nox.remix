@@ -32,7 +32,7 @@
 						<height>155</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[BannerThumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 						<visible>!String.IsEmpty(ListItem.Art(banner)) | String.IsEmpty(ListItem.Art(fanart))</visible>
 					</control>
@@ -43,7 +43,7 @@
 							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+							<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
 						<control type="image">

@@ -4,14 +4,14 @@
 	<controls>
 		<control type="image">
 			<left>350</left>
-			<top>226</top>
+			<top>196</top>
 			<width>1214</width>
-			<height>628</height>
+			<height>688</height>
 			<texture border="18">dialogs/dialog-bg2.png</texture>
 		</control>
 		<control type="label" id="411">
 			<left>350</left>
-			<top>242</top>
+			<top>212</top>
 			<width>1214</width>
 			<height>40</height>
 			<font>font15_title_bold</font>
@@ -23,7 +23,7 @@
 		</control>
 		<control type="label" id="412">
 			<left>350</left>
-			<top>242</top>
+			<top>212</top>
 			<width>1214</width>
 			<height>40</height>
 			<font>font15_title_bold</font>
@@ -35,62 +35,62 @@
 		</control>
 		<control type="group">
 			<left>334</left>
-			<top>298</top>
+			<top>268</top>
 			<control type="image">
 				<left>32</left>
 				<width>750</width>
-				<height>540</height>
+				<height>600</height>
 				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 			</control>
 			<control type="group" id="9000">
 				<control type="list" id="450">
 					<left>32</left>
 					<width>750</width>
-					<height>540</height>
+					<height>600</height>
 					<onleft>9001</onleft>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
-					<itemlayout height="90" width="750">
+					<itemlayout height="100" width="750">
 						<control type="label">
 							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
 							<width>750</width>
-							<height>50</height>
+							<height>55</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<top>45</top>
+							<top>50</top>
 							<width>750</width>
 							<height>40</height>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey2</textcolor>
-							<font>font12</font>
+							<font>font10</font>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="90" width="750">
+					<focusedlayout height="100" width="750">
 						<control type="image">
 							<width>750</width>
-							<height>90</height>
+							<height>100</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(450)</visible>
 						</control>
 						<control type="label">
 							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
 							<width>750</width>
-							<height>50</height>
+							<height>55</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<top>45</top>
+							<top>50</top>
 							<width>750</width>
 							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<font>font12</font>
+							<font>font10</font>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -99,51 +99,51 @@
 				<control type="list" id="451">
 					<left>32</left>
 					<width>750</width>
-					<height>540</height>
+					<height>600</height>
 					<onleft>9001</onleft>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
-					<itemlayout height="90" width="750">
+					<itemlayout height="100" width="750">
 						<control type="label">
 							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
 							<width>750</width>
-							<height>50</height>
+							<height>55</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<top>45</top>
+							<top>50</top>
 							<width>750</width>
 							<height>40</height>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey2</textcolor>
-							<font>font12</font>
+							<font>font10</font>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="90" width="750">
+					<focusedlayout height="100" width="750">
 						<control type="image">
 							<width>750</width>
-							<height>90</height>
+							<height>100</height>
 							<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 							<visible>Control.HasFocus(451)</visible>
 						</control>
 						<control type="label">
 							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
 							<width>750</width>
-							<height>50</height>
+							<height>55</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<top>45</top>
+							<top>50</top>
 							<width>750</width>
 							<height>40</height>
 							<textoffsetx>15</textoffsetx>
-							<font>font12</font>
+							<font>font10</font>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
@@ -152,7 +152,7 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<left>784</left>
-				<height>540</height>
+				<height>600</height>
 				<width>10</width>
 				<onleft>9000</onleft>
 				<onright>9001</onright>
@@ -164,20 +164,20 @@
 				<left>796</left>
 				<control type="image">
 					<width>418</width>
-					<height>407</height>
+					<height>467</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<visible>!String.Contains(Control.GetLabel(416),*)</visible>
 				</control>
 				<control type="image">
 					<width>418</width>
-					<height>407</height>
+					<height>467</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture background="true" flipx="true">$INFO[ListItem.Icon]</texture>
 					<visible>String.Contains(Control.GetLabel(416),*)</visible>
 				</control>
 				<control type="grouplist" id="9001">
-					<top>299</top>
+					<top>359</top>
 					<height>240</height>
 					<onleft>60</onleft>
 					<onright>9000</onright>

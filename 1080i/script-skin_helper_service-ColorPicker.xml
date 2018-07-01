@@ -35,7 +35,7 @@
 						<width>150</width>
 						<height>150</height>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>

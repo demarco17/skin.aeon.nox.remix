@@ -137,12 +137,12 @@
 					<enable>false</enable>
 					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
-				<control type="button" id="8">
+				<control type="button" id="615">
 					<description>Search</description>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
 					<onclick>ClearProperty(MediaMenu,Home)</onclick>
-					<onclick>SetFocus(50)</onclick>
+					<onclick>SendClick(8)</onclick>
 				</control>
 				<control type="edit" id="19">
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>

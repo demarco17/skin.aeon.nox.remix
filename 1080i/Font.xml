@@ -14,7 +14,8 @@
 		<font>
 			<name>font10</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
-			<size>21</size>
+			<style>bold</style>
+			<size>22</size>
 		</font>
 		<font>
 			<name>font12</name>

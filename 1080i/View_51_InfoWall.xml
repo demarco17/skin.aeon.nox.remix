@@ -32,7 +32,7 @@
 						<height>300</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="group">
@@ -65,7 +65,7 @@
 						<height>180</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[BannerThumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 						<visible>!String.IsEmpty(ListItem.Art(banner)) | String.IsEmpty(ListItem.Art(fanart))</visible>
 					</control>
@@ -76,7 +76,7 @@
 							<height>180</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+							<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
 						<control type="image">
@@ -154,8 +154,6 @@
 				<aspectratio>scale</aspectratio>
 				<texture background="true" fallback="DefaultVideo.png">$VAR[FanartVar]</texture>
 				<fadetime>400</fadetime>
-				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-				<bordersize>1</bordersize>
 			</control>
 			<control type="label">
 				<left>1113</left>
@@ -335,7 +333,7 @@
 						<height>300</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>
@@ -372,9 +370,7 @@
 					<height>400</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Art(fanart)]</texture>
-					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<fadetime>400</fadetime>
-					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
 					<top>401</top>

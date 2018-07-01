@@ -87,8 +87,6 @@
 					<width>120</width>
 					<height>120</height>
 					<aspectratio align="left">keep</aspectratio>
-					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-					<bordersize>1</bordersize>
 					<texture fallback="DefaultUser.png">$INFO[Container(2).Listitem.Icon]</texture>
 				</control>
 				<control type="label">

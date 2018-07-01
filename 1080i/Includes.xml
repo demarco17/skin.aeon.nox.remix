@@ -744,8 +744,6 @@
 				<height>185</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-				<bordersize>1</bordersize>
 				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 			</control>
 			<control type="image">
@@ -756,8 +754,6 @@
 				<height>180</height>
 				<aspectratio aligny="center">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-				<bordersize>1</bordersize>
 				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
 			</control>
 			<control type="image">
@@ -800,8 +796,6 @@
 					<height>185</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-					<bordersize>1</bordersize>
 					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 				</control>
 				<control type="image">
@@ -812,8 +806,6 @@
 					<height>180</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-					<bordersize>1</bordersize>
 					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
 				</control>
 				<control type="image">

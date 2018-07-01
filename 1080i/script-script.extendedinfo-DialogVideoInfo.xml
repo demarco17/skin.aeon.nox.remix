@@ -317,7 +317,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
@@ -408,7 +408,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
@@ -499,7 +499,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">
@@ -570,7 +570,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">
@@ -641,7 +641,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">
@@ -712,7 +712,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>
@@ -751,7 +751,7 @@
 						<height>418</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="DefaultPicture.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 				</itemlayout>
@@ -819,6 +819,7 @@
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
 					<texture>$INFO[Window.Property(VideoCodec),flags/video/,.png]</texture>
+					<visible>!String.IsEmpty(Window.Property(VideoCodec))</visible>
 				</control>
 				<control type="image">
 					<include>MediaFlagVars</include>
@@ -836,6 +837,7 @@
 					<include>MediaFlagVars</include>
 					<bordersize>5</bordersize>
 					<texture>$INFO[Window.Property(VideoAspect),flags/aspectratio/,.png]</texture>
+					<visible>!String.IsEmpty(Window.Property(VideoAspect))</visible>
 				</control>
 				<control type="image">
 					<include>MediaFlagVars</include>
@@ -843,56 +845,29 @@
 					<texture>flags/cc.png</texture>
 					<visible>!String.IsEmpty(Window.Property(SubtitleLanguage))</visible>
 				</control>
-			</control>
-			<control type="group">
-				<top>985</top>
-				<control type="grouplist">
-					<width>1180</width>
-					<height>90</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<itemgap>10</itemgap>
-					<usecontrolcoords>true</usecontrolcoords>
-					<orientation>horizontal</orientation>
-					<control type="image">
-						<include>VisibleFadeAnimation</include>
-						<visible>ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)</visible>
-						<include>MediaFlagVars</include>
-						<bordersize>5</bordersize>
-						<texture fallback="flags/mpaa/NR.png">$INFO[Window.Property(mpaa),flags/mpaa/,.png]</texture>
-					</control>
-					<control type="panel" id="550">
-						<width>135</width>
-						<include>VisibleFadeAnimation</include>
-						<visible>!Integer.IsGreater(Container(1450).NumItems,0) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
-						<itemlayout width="135" height="90">
-							<control type="image">
-								<include>MediaFlagVars</include>
-								<bordersize>5</bordersize>
-								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
-							</control>
-						</itemlayout>
-						<focusedlayout />
-					</control>
-					<control type="panel" id="1450">
-						<width>135</width>
-						<include>VisibleFadeAnimation</include>
-						<visible>Integer.IsGreater(Container(1450).NumItems,0) + [ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
-						<itemlayout width="135" height="90">
-							<control type="image">
-								<include>MediaFlagVars</include>
-								<bordersize>5</bordersize>
-								<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
-							</control>
-						</itemlayout>
-						<focusedlayout />
-					</control>
+				<control type="image">
+					<include>MediaFlagVars</include>
+					<bordersize>5</bordersize>
+					<texture fallback="flags/mpaa/NR.png">$INFO[Window.Property(mpaa),flags/mpaa/,.png]</texture>
+				</control>
+				<control type="panel" id="1450">
+					<width>135</width>
+					<visible>Integer.IsGreater(Container(1450).NumItems,0)</visible>
+					<itemlayout width="135" height="90">
+						<control type="image">
+							<include>MediaFlagVars</include>
+							<bordersize>5</bordersize>
+							<texture fallback="flags/DefaultStudios.png">$INFO[ListItem.label,resource://resource.images.studios.white/,.png]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout />
 				</control>
 			</control>
 		</control>
 		<control type="group">
 			<visible>false</visible>
 			<control type="panel" id="450" /><!-- Related movie lists -->
+			<control type="panel" id="550" /><!-- Movie studio -->
 			<control type="panel" id="650" /><!-- Releases -->
 			<control type="panel" id="750" /><!-- Crew -->
 			<control type="panel" id="850" /><!-- Genres -->
