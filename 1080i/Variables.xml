@@ -307,8 +307,8 @@
 		<value>$INFO[Player.Time]$INFO[Player.Duration,[COLOR grey3]  |  [/COLOR],]</value>
 	</variable>
 	<variable name="FinishTimeLabelVar">
-		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013]: ,]</value>
-		<value>$INFO[Player.FinishTime,$LOCALIZE[31013]: ,]</value>
+		<value condition="VideoPlayer.HasEpg">$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31013][COLOR grey3]  |  [/COLOR],]</value>
+		<value>$INFO[Player.FinishTime,$LOCALIZE[31013][COLOR grey3]  |  [/COLOR],]</value>
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
 		<value condition="Player.Forwarding2x | Player.Rewinding2x">2X</value>
@@ -331,11 +331,11 @@
 		<value>$INFO[Player.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PlayerTitleLabelVar">
-		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey] (,)[/COLOR]]$INFO[player.chapter,[COLOR grey3]  |  [/COLOR]$LOCALIZE[21396] ]$INFO[player.chaptercount, / ,]</value>
+		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey] (,)[/COLOR]]$INFO[player.chapter,[COLOR grey3]  |  [/COLOR]$LOCALIZE[21396]: [COLOR grey],[/COLOR]]$INFO[player.chaptercount,[COLOR grey]/,[/COLOR]]</value>
 		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + !Player.ChapterCount">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR grey] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]$INFO[Player.Title,: ,]$VAR[EpisodePlayCountVar,[COLOR grey] (,)[/COLOR]]</value>
-		<value condition="VideoPlayer.HasEpg">$INFO[VideoPlayer.ChannelName]$INFO[Player.Title,:[COLOR grey] ,[/COLOR]]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ,]$INFO[MusicPlayer.TrackNumber, - [COLOR grey],.[/COLOR]]$INFO[Player.Title]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]$INFO[Player.Title,[COLOR grey3]  |  [/COLOR],]$VAR[EpisodePlayCountVar,[COLOR grey] (,)[/COLOR]]</value>
+		<value condition="VideoPlayer.HasEpg">$INFO[VideoPlayer.ChannelName]$INFO[Player.Title,[COLOR grey3]  |  [/COLOR][COLOR grey],[/COLOR]]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,[COLOR grey3]  |  [/COLOR],]$INFO[MusicPlayer.TrackNumber,[COLOR grey3]  |  [/COLOR][COLOR grey],. [/COLOR]]$INFO[Player.Title]</value>
 		<value>$INFO[VideoPlayer.Title]</value>
 	</variable>
 	<variable name="SkinSettingsDescriptionVar">

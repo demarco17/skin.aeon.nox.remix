@@ -190,7 +190,7 @@
 				<width>300</width>
 				<height>35</height>
 				<textoffsetx>10</textoffsetx>
-				<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
+				<label>$VAR[SeekTimeLabelVar]</label>
 			</control>
 			<control type="label">
 				<left>360</left>
@@ -207,7 +207,7 @@
 				<height>35</height>
 				<align>right</align>
 				<textoffsetx>10</textoffsetx>
-				<label>$INFO[Player.FinishTime,$LOCALIZE[31013]: ,]</label>
+				<label>$VAR[FinishTimeLabelVar]</label>
 			</control>
 		</control>
 	</controls>

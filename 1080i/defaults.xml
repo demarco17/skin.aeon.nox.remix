@@ -81,7 +81,7 @@
 	<default type="progress">
 		<left>0</left>
 		<top>0</top>
-		<texturebg colordiffuse="80FFFFFF">dialogs/white50.png</texturebg>
+		<texturebg colordiffuse="56FFFFFF">dialogs/white50.png</texturebg>
 		<midtexture colordiffuse="$VAR[SkinThemeColour]">dialogs/white50.png</midtexture>
 		<lefttexture />
 		<righttexture />
