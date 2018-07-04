@@ -109,16 +109,19 @@
 						<description>Browse Button</description>
 						<width>310</width>
 						<label>1024</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="13">
 						<description>Add Path Button</description>
 						<width>310</width>
 						<label>15019</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="14">
 						<description>Remove Path Button</description>
 						<width>310</width>
 						<label>1210</label>
+						<align>center</align>
 					</control>
 				</control>
 			</control>

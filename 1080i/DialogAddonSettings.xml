@@ -105,14 +105,17 @@
 					<control type="button" id="28">
 						<description>OK Button</description>
 						<width>312</width>
+						<align>center</align>
 					</control>
 					<control type="button" id="29">
 						<description>Cancel Button</description>
 						<width>312</width>
+						<align>center</align>
 					</control>
 					<control type="button" id="30">
 						<description>Defaults Button</description>
 						<width>312</width>
+						<align>center</align>
 					</control>
 				</control>
 			</control>

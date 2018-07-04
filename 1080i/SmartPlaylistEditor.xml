@@ -225,11 +225,13 @@
 						<description>Ok Button</description>
 						<width>310</width>
 						<label>186</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="21">
 						<description>Cancel Button</description>
 						<width>310</width>
 						<label>222</label>
+						<align>center</align>
 					</control>
 				</control>
 			</control>

@@ -130,21 +130,25 @@
 						<description>OK Button</description>
 						<width>310</width>
 						<label>186</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="19">
 						<description>Reset</description>
 						<width>310</width>
 						<label>13007</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="17">
 						<description>Help</description>
 						<width>310</width>
 						<label>10043</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="20">
 						<description>Link to install more controllers</description>
 						<width>310</width>
 						<label>$LOCALIZE[21452]</label>
+						<align>center</align>
 					</control>
 				</control>
 			</control>

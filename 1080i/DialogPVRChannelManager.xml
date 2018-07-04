@@ -283,16 +283,19 @@
 						<description>Ok Button</description>
 						<width>310</width>
 						<label>186</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="5">
 						<description>Apply changes Button</description>
 						<width>310</width>
 						<label>14070</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="6">
 						<description>Clear Button</description>
 						<width>310</width>
 						<label>222</label>
+						<align>center</align>
 					</control>
 				</control>
 			</control>

@@ -103,18 +103,21 @@
 					<label>294</label>
 					<width>350</width>
 					<height>70</height>
+					<align>center</align>
 				</control>
 				<control type="button" id="3">
 					<description>Clear Bookmark button</description>
 					<label>296</label>
 					<width>350</width>
 					<height>70</height>
+					<align>center</align>
 				</control>
 				<control type="button" id="4">
 					<description>Set episode thumbnail button</description>
 					<label>20406</label>
 					<width>350</width>
 					<height>70</height>
+					<align>center</align>
 				</control>
 			</control>
 		</control>

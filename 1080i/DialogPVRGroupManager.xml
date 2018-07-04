@@ -237,26 +237,31 @@
 						<description>OK</description>
 						<width>322</width>
 						<label>186</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="26">
 						<description>Add Group</description>
 						<width>322</width>
 						<label>31503</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="27">
 						<description>Rename Group</description>
 						<width>322</width>
 						<label>31504</label>
+						<align>center</align>
 					</control>
 					<control type="radiobutton" id="25">
 						<description>Hide Group</description>
 						<width>322</width>
 						<label>19289</label>
+						<align>center</align>
 					</control>
 					<control type="button" id="28">
 						<description>Delete Group</description>
 						<width>322</width>
 						<label>31505</label>
+						<align>center</align>
 					</control>
 					<control type="togglebutton" id="34">
 						<description>TV/Radio toggle</description>
@@ -264,6 +269,7 @@
 						<label>$LOCALIZE[19174]</label> 
 						<altlabel>$LOCALIZE[19173]</altlabel> 
 						<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
+						<align>center</align>
 					</control>
 				</control>
 			</control>

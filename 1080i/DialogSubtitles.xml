@@ -276,6 +276,7 @@
 						<textoffsetx>15</textoffsetx>
 						<font>font15</font>
 						<textcolor>grey</textcolor>
+						<align>center</align>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
@@ -291,6 +292,7 @@
 						<height>90</height>
 						<textoffsetx>15</textoffsetx>
 						<font>font15</font>
+						<align>center</align>
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>
@@ -303,6 +305,7 @@
 				<height>90</height>
 				<label>$LOCALIZE[24120]</label>
 				<font>font15</font>
+				<align>center</align>
 				<onleft>120</onleft>
 				<onright>120</onright>
 				<onup>150</onup>
