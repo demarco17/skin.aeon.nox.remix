@@ -141,7 +141,7 @@
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Rating,$LOCALIZE[563]: [COLOR grey],[/COLOR]]$INFO[ListItem.Votes, [COLOR grey](, $LOCALIZE[205])[/COLOR]]$INFO[ListItem.Top250,[COLOR grey] / $LOCALIZE[13409] #,[/COLOR]]</label>
+						<label>$INFO[ListItem.Rating,$LOCALIZE[563]: [COLOR grey],[/COLOR]]$INFO[ListItem.Votes, [COLOR grey](, $LOCALIZE[205])[/COLOR]]$INFO[ListItem.Top250,[COLOR grey]  [COLOR grey3]|[/COLOR]  $LOCALIZE[13409] #,[/COLOR]]</label>
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					</item>
 					<item>

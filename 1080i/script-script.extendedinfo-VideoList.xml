@@ -198,7 +198,7 @@
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
 				<align>right</align>
-				<label>$INFO[Window.Property(TotalItems),$LOCALIZE[31025]: ,]</label>
+				<label>$INFO[Window.Property(TotalItems),$LOCALIZE[31025]:  ,]</label>
 			</control>
 		</control>
 		<control type="group">

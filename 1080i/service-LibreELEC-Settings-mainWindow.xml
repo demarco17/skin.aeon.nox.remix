@@ -1061,7 +1061,7 @@
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey</textcolor>
 				<align>right</align>
-				<label>$ADDON[service.libreelec.settings 607]$INFO[Window.Property(Version), ,]</label>
+				<label>$ADDON[service.libreelec.settings 607]$INFO[Window.Property(Version),[COLOR grey3]  |  [/COLOR],]</label>
 			</control>
 		</control>
 	</controls>

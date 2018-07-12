@@ -6,7 +6,7 @@
 		<control type="group">
 			<left>199</left>
 			<top>210</top>
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(DialogSubtitles.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(SliderDialog) | Window.IsActive(filebrowser) | Window.IsVisible(DialogSubtitles.xml)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
 				<left>16</left>
