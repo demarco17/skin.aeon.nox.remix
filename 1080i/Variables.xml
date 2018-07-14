@@ -345,20 +345,14 @@
 		<value condition="Control.HasFocus(203) | Control.HasFocus(205)">$LOCALIZE[31916]</value>
 		<value condition="Control.HasFocus(204)">$LOCALIZE[31936]</value>
 		<value condition="Control.HasFocus(206)">$LOCALIZE[31917]</value>
-		
-		
-		
 		<value condition="Control.HasFocus(305)">$LOCALIZE[31938]</value>
 		<value condition="Control.HasFocus(306)">$LOCALIZE[31128]</value>
 		<value condition="Control.HasFocus(307)">$LOCALIZE[31930]</value>
 		<value condition="Control.HasFocus(308)">$LOCALIZE[31948]</value>
-		
-		
 		<value condition="Control.HasFocus(401)">$LOCALIZE[31937]</value>
 		<value condition="Control.HasFocus(402)">$LOCALIZE[31934]</value>
 		<value condition="Control.HasFocus(403)">$LOCALIZE[31939]</value>
 		<value condition="Control.HasFocus(404)">$LOCALIZE[31940]</value>
-		
 		<value condition="Control.HasFocus(90000) + String.IsEmpty(Container(90000).ListItem.Property(Path))">$LOCALIZE[31923]</value>
 		<value condition="Control.HasFocus(90010)">$LOCALIZE[31913]</value>
 		<value condition="Control.HasFocus(90011)">$LOCALIZE[31914]</value>

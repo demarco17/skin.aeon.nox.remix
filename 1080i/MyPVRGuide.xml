@@ -10,17 +10,15 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<top>110</top>
+			<top>195</top>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
-				<left>66</left>
-				<top>16</top>
-				<width>1788</width>
-				<height>872</height>
-				<texture border="18">dialogs/dialog-bg.png</texture>
+				<top>24</top>
+				<width>1920</width>
+				<height>865</height>
+				<texture border="4" flipy="true">dialogs/InfoBar.png</texture>
 			</control>
 			<control type="group">
-				<left>82</left>
 				<top>80</top>
 				<visible>Control.IsVisible(51)</visible>
 				<control type="image">
@@ -50,9 +48,8 @@
 			</control>
 		</control>
 		<control type="list" id="11">
-			<left>82</left>
-			<top>140</top>
-			<width>1756</width>
+			<top>225</top>
+			<width>1920</width>
 			<height>50</height>
 			<onleft>11</onleft>
 			<onright>11</onright>
@@ -61,9 +58,9 @@
 			<orientation>horizontal</orientation>
 			<scrolltime>400</scrolltime>
 			<visible allowhiddenfocus="true">[Control.IsVisible(50) | Control.IsVisible(51)] + Skin.HasSetting(Enable.GroupSelector) + Control.HasFocus(11)</visible>
-			<itemlayout height="48" width="439">
+			<itemlayout height="48" width="480">
 				<control type="label">
-					<width>439</width>
+					<width>480</width>
 					<height>45</height>
 					<textoffsetx>5</textoffsetx>
 					<align>center</align>
@@ -71,14 +68,14 @@
 					<textcolor>grey</textcolor>
 				</control>
 			</itemlayout>
-			<focusedlayout height="48" width="439">
+			<focusedlayout height="48" width="480">
 				<control type="image">
-					<width>439</width>
+					<width>480</width>
 					<height>48</height>
 					<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 				</control>
 				<control type="label">
-					<width>439</width>
+					<width>480</width>
 					<height>45</height>
 					<textoffsetx>5</textoffsetx>
 					<align>center</align>
@@ -91,15 +88,14 @@
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<visible>Control.IsVisible(50)</visible>
-			<top>110</top>
+			<top>195</top>
 			<control type="epggrid" id="50">
 				<description>EPG Grid</description>
-				<left>82</left>
 				<top>30</top>
-				<width>1756</width>
+				<width>1908</width>
 				<height>590</height>
 				<scrolltime>400</scrolltime>
-				<timeblocks>20</timeblocks>
+				<timeblocks>30</timeblocks>
 				<progresstexture border="0,50,4,4">overlays/pvr/PVR-EpgProgressIndicator.png</progresstexture>
 				<rulerunit>6</rulerunit>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
@@ -238,7 +234,7 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>1840</left>
+				<left>1910</left>
 				<top>80</top>
 				<width>10</width>
 				<height>540</height>
@@ -255,12 +251,11 @@
 			<include>OpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<visible>Control.IsVisible(51)</visible>
-			<top>110</top>
+			<top>195</top>
 			<control type="epggrid" id="51">
 				<description>EPG Grid</description>
-				<left>82</left>
 				<top>30</top>
-				<width>1756</width>
+				<width>1908</width>
 				<height>590</height>
 				<scrolltime>400</scrolltime>
 				<timeblocks>30</timeblocks>
@@ -274,9 +269,9 @@
 				<orientation>horizontal</orientation>
 				<pagecontrol>61</pagecontrol>
 				<viewtype label="19298">list</viewtype>
-				<rulerdatelayout width="1756" height="50">
+				<rulerdatelayout width="1920" height="50">
 					<control type="label">
-						<width>1756</width>
+						<width>1920</width>
 						<height>45</height>
 						<font>font24</font>
 						<label>$INFO[ListItem.Label]</label>
@@ -300,15 +295,15 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</rulerlayout>
-				<channellayout height="90" width="404">
+				<channellayout height="90" width="442">
 					<control type="image">
-						<width>404</width>
+						<width>442</width>
 						<height>90</height>
 						<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 						<bordersize>1</bordersize>
 					</control>
 					<control type="image">
-						<width>404</width>
+						<width>442</width>
 						<height>90</height>
 						<aspectratio align="left">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
@@ -317,7 +312,7 @@
 					</control>
 					<control type="label">
 						<left>85</left>
-						<width>320</width>
+						<width>327</width>
 						<height>90</height>
 						<font>font12_title</font>
 						<textcolor>grey2</textcolor>
@@ -325,21 +320,21 @@
 						<label>[B]$INFO[ListItem.ChannelNumberLabel,[COLOR grey2],: [/COLOR]]$INFO[ListItem.ChannelName][/B]</label>
 					</control>
 				</channellayout>
-				<focusedchannellayout height="90" width="404">
+				<focusedchannellayout height="90" width="442">
 					<control type="image">
-						<width>404</width>
+						<width>442</width>
 						<height>90</height>
 						<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 						<bordersize>1</bordersize>
 					</control>
 					<control type="image">
-						<width>404</width>
+						<width>442</width>
 						<height>90</height>
 						<texture border="4" colordiffuse="$VAR[SkinThemeColour]">dialogs/listselect_fo.png</texture>
 						<bordersize>1</bordersize>
 					</control>
 					<control type="image">
-						<width>404</width>
+						<width>442</width>
 						<height>90</height>
 						<aspectratio align="left">keep</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
@@ -348,14 +343,14 @@
 					</control>
 					<control type="label">
 						<left>85</left>
-						<width>320</width>
+						<width>327</width>
 						<height>90</height>
 						<font>font12_title</font>
 						<textoffsetx>15</textoffsetx>
 						<label>[B]$INFO[ListItem.ChannelNumberLabel,[COLOR grey2],: [/COLOR]]$INFO[ListItem.ChannelName][/B]</label>
 					</control>
 				</focusedchannellayout>
-				<itemlayout height="100" width="404">
+				<itemlayout height="90" width="442">
 					<control type="image" id="2">
 						<aspectratio>stretch</aspectratio>
 						<texture border="3" fallback="overlays/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
@@ -374,7 +369,7 @@
 						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="100" width="404">
+				<focusedlayout height="90" width="442">
 					<control type="image" id="2">
 						<aspectratio>stretch</aspectratio>
 						<texture border="3" fallback="overlays/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),overlays/pvr/genres/,.png]</texture>
@@ -398,10 +393,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>1840</left>
+				<left>1910</left>
 				<top>170</top>
 				<width>10</width>
-				<height>450</height>
+				<height>440</height>
 				<onleft>51</onleft>
 				<onright>51</onright>
 				<texturesliderbar border="2">scrollbar/texturesliderbar_ver.png</texturesliderbar>
@@ -411,10 +406,9 @@
 			</control>
 		</control>
 		<control type="group">
-			<top>110</top>
+			<top>195</top>
 			<include>OpenCloseAnimation</include>
 			<control type="image">
-				<left>82</left>
 				<top>630</top>
 				<width>440</width>
 				<height>240</height>
@@ -425,11 +419,11 @@
 				<visible>!String.IsEmpty(ListItem.Icon)</visible>
 			</control>
 			<control type="group">
-				<left>520</left>
+				<left>438</left>
 				<top>632</top>
 				<control type="label">
 					<top>10</top>
-					<width>1315</width>
+					<width>1480</width>
 					<height>30</height>
 					<font>font15_title_bold</font>
 					<textoffsetx>15</textoffsetx>
@@ -437,7 +431,7 @@
 				</control>
 				<control type="label">
 					<top>10</top>
-					<width>1315</width>
+					<width>1480</width>
 					<height>30</height>
 					<font>font14</font>
 					<textcolor>grey2</textcolor>
@@ -447,7 +441,7 @@
 				</control>
 				<control type="label">
 					<top>55</top>
-					<width>1315</width>
+					<width>1480</width>
 					<height>30</height>
 					<font>font14</font>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
@@ -458,7 +452,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<left>15</left>
 					<top>102</top>
-					<width>1290</width>
+					<width>1465</width>
 					<height>128</height>
 					<font>font14_textbox</font>
 					<textcolor>grey</textcolor>
