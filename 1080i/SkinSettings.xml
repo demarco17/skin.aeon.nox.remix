@@ -55,6 +55,9 @@
 					<item id="3">
 						<label>31014</label>
 					</item>
+					<item id="4">
+						<label>536</label>
+					</item>
 				</content>
 			</control>
 			<control type="image">
@@ -233,36 +236,6 @@
 						<onclick>Skin.ToggleSetting(Disable.PauseClearArt)</onclick>
 						<selected>!Skin.HasSetting(Disable.PauseClearArt)</selected>
 					</control>
-					<control type="button" id="304">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[572] $LOCALIZE[536]</label>
-						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(studioicons.name)][/COLOR]</label2>
-						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=studioicons&amp;type=resource.images.studios)</onclick>
-					</control>
-					<control type="button" id="303">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[157] $LOCALIZE[515] $LOCALIZE[536]</label>
-						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(moviegenreicons.name)][/COLOR]</label2>
-						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=moviegenreicons&amp;type=resource.images.moviegenreicons)</onclick>
-					</control>
-					<control type="button" id="302">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[2] $LOCALIZE[515] $LOCALIZE[536]</label>
-						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(musicgenreicons.name)][/COLOR]</label2>
-						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=musicgenreicons&amp;type=resource.images.musicgenreicons)</onclick>
-					</control>
 					<control type="radiobutton" id="308">
 						<width>1316</width>
 						<height>90</height>
@@ -272,6 +245,56 @@
 						<onclick>Skin.ToggleSetting(ArtworkDownloader.GUI)</onclick>
 						<selected>Skin.HasSetting(ArtworkDownloader.GUI)</selected>
 						<visible>System.HasAddon(script.artwork.beef)</visible>
+					</control>
+				</control>
+				<control type="grouplist" id="9004">
+					<description>control area</description>
+					<left>522</left>
+					<top>32</top>
+					<width>1316</width>
+					<height>720</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<visible>Container(9000).HasFocus(4)</visible>
+					<control type="button" id="401">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[572] $LOCALIZE[536]</label>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(studioicons.name)][/COLOR]</label2>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=studioicons&amp;type=resource.images.studios)</onclick>
+					</control>
+					<control type="button" id="402">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[157] $LOCALIZE[515] $LOCALIZE[536]</label>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(moviegenreicons.name)][/COLOR]</label2>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=moviegenreicons&amp;type=resource.images.moviegenreicons)</onclick>
+					</control>
+					<control type="button" id="403">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[2] $LOCALIZE[515] $LOCALIZE[536]</label>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(musicgenreicons.name)][/COLOR]</label2>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=musicgenreicons&amp;type=resource.images.musicgenreicons)</onclick>
+					</control>
+					<control type="button" id="404">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[20338] $LOCALIZE[21875] $LOCALIZE[536]</label>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(moviecountryicons.name)][/COLOR]</label2>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=moviecountryicons&amp;type=resource.images.moviecountryicons)</onclick>
 					</control>
 				</control>
 			</control>

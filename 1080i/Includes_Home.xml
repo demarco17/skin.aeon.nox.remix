@@ -90,7 +90,7 @@
 			<label fallback="20343">$INFO[Skin.String(TVShowHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<thumb>$INFO[Skin.String(TVShowHomeItem.MultiFanart)]</thumb>
-			<property name="Path" fallback="ActivateWindow(Videos,library://video/tvshows/titles.xml,return)">$INFO[Skin.String(TVShowHomeItem.Path)]</property>
+			<property name="Path" fallback="ActivateWindow(Videos,special://skin/extras/playlists/TvShows.xsp,return)">$INFO[Skin.String(TVShowHomeItem.Path)]</property>
 			<property name="Item">TVShow</property>
 			<property name="BGType">$INFO[Skin.String(TVShowHomeItem.BGType)]</property>
 			<property name="InfoLine">$INFO[Skin.String(TVShowHomeItem.InfoLine)]</property>
@@ -367,7 +367,7 @@
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11) + !System.HasAddon(script.tv.show.next.aired)</visible>
 		</item>
 		<item>
-			<label>$ADDON[script.tv.show.next.aired 32019]</label>
+			<label>31040</label>
 			<onclick>RunAddon(script.tv.show.next.aired,return)</onclick>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11) + System.HasAddon(script.tv.show.next.aired)</visible>
 		</item>

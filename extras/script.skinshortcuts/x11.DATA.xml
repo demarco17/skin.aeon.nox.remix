@@ -10,8 +10,8 @@
 		<visible>!System.HasAddon(script.tv.show.next.aired)</visible>
 	</shortcut>
 	<shortcut>
-		<defaultID>4</defaultID>
-		<label>4</label>
+		<defaultID>31040</defaultID>
+		<label>31040</label>
 		<label2 />
 		<icon />
 		<thumb />

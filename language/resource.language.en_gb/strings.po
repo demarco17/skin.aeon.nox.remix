@@ -152,7 +152,9 @@ msgctxt "#31039"
 msgid "Actions"
 msgstr ""
 
-#empty string with id 31040
+msgctxt "#31040"
+msgid "Next Aired"
+msgstr ""
 
 msgctxt "#31041"
 msgid "Forecast"
@@ -677,7 +679,11 @@ msgctxt "#31939"
 msgid "Customize music genre icons."
 msgstr ""
 
-#empty strings from id 31940 to 31947
+msgctxt "#31940"
+msgid "Customize movie country icons."
+msgstr ""
+
+#empty strings from id 31941 to 31947
 
 msgctxt "#31948"
 msgid "Enable artwork download GUI mode in video info dialog. Otherwise 'auto download' as per addon settings."

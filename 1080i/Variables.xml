@@ -29,7 +29,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,videodb://movies/)">$LOCALIZE[20342][COLOR grey3]  |  [/COLOR]</value>
 		<value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[36909][COLOR grey3]  |  [/COLOR]</value>
 		<value condition="Window.IsActive(textviewer)">$INFO[Control.GetLabel(1)]</value>
-		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$INFO[System.AddonTitle(script.tv.show.next.aired)]</value>
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$LOCALIZE[36903][COLOR grey3]  |  [/COLOR]$LOCALIZE[31040]</value>
 		<value condition="Window.IsActive(skinsettings)">$LOCALIZE[20077]</value>
 		<value condition="Window.IsActive(music) + !String.IsEmpty(Container.FolderName)">$LOCALIZE[2][COLOR grey3]  |  [/COLOR]</value>
 		<value condition="Window.IsActive(music)">$LOCALIZE[2]</value>
@@ -104,7 +104,6 @@
 		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)">$LOCALIZE[31030]:</value>
 		<value>$LOCALIZE[20416]:</value>
 	</variable>
-
 	<!--  List Label Vars -->
 	<variable name="VideoListLabel2Var">
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Premiered]</value>
@@ -114,7 +113,7 @@
 	<variable name="ListLabel2Var">
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
 		<value condition="Container.Content(tvshows) + !String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
-		<value condition="Container.Content(tvshows) + String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating,,.0]</value>
+		<value condition="Container.Content(tvshows) + String.IsEmpty(ListItem.Rating)">$INFO[ListItem.UserRating,,.0]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
@@ -164,7 +163,6 @@
 		<value condition="VideoPlayer.IsStereoscopic">3D</value>
 		<value>$INFO[VideoPlayer.VideoCodec]</value>
 	</variable>
-
 	<!-- InfoWall Icon Toggle -->
 	<variable name="InfoWallIconVar">
 		<value condition="Control.IsVisible(51) + Container.Content(movies)">$INFO[Skin.String(51.Movies.InfoWallIcon)]</value>
@@ -180,7 +178,6 @@
 		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(51.TVShows.InfoWallIcon),1)">Skin.SetString(51.TVShows.InfoWallIcon,2)</value>
 		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(51.TVShows.InfoWallIcon),2)">Skin.SetString(51.TVShows.InfoWallIcon,1)</value>
 	</variable>
-
 	<!-- Case Toggle -->
 	<variable name="VideoCaseToggleVar">
 		<value condition="Control.IsVisible(57) + Container.Content(movies)">$INFO[Skin.String(57.Movies.CaseToggle)]</value>
@@ -245,7 +242,6 @@
 		<value condition="Control.IsVisible(501) + Container.Content(songs) + String.IsEmpty(Skin.String(501.Songs.CaseToggle))">Skin.SetString(501.Songs.CaseToggle,1)</value>
 		<value condition="Control.IsVisible(501) + Container.Content(songs) + String.IsEqual(Skin.String(501.Songs.CaseToggle),1)">Skin.Reset(501.Songs.CaseToggle)</value>
 	</variable>
-
 	<variable name="BannerThumb">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
@@ -349,13 +345,20 @@
 		<value condition="Control.HasFocus(203) | Control.HasFocus(205)">$LOCALIZE[31916]</value>
 		<value condition="Control.HasFocus(204)">$LOCALIZE[31936]</value>
 		<value condition="Control.HasFocus(206)">$LOCALIZE[31917]</value>
-		<value condition="Control.HasFocus(302)">$LOCALIZE[31939]</value>
-		<value condition="Control.HasFocus(303)">$LOCALIZE[31934]</value>
-		<value condition="Control.HasFocus(304)">$LOCALIZE[31937]</value>
+		
+		
+		
 		<value condition="Control.HasFocus(305)">$LOCALIZE[31938]</value>
 		<value condition="Control.HasFocus(306)">$LOCALIZE[31128]</value>
 		<value condition="Control.HasFocus(307)">$LOCALIZE[31930]</value>
 		<value condition="Control.HasFocus(308)">$LOCALIZE[31948]</value>
+		
+		
+		<value condition="Control.HasFocus(401)">$LOCALIZE[31937]</value>
+		<value condition="Control.HasFocus(402)">$LOCALIZE[31934]</value>
+		<value condition="Control.HasFocus(403)">$LOCALIZE[31939]</value>
+		<value condition="Control.HasFocus(404)">$LOCALIZE[31940]</value>
+		
 		<value condition="Control.HasFocus(90000) + String.IsEmpty(Container(90000).ListItem.Property(Path))">$LOCALIZE[31923]</value>
 		<value condition="Control.HasFocus(90010)">$LOCALIZE[31913]</value>
 		<value condition="Control.HasFocus(90011)">$LOCALIZE[31914]</value>
@@ -420,6 +423,10 @@
 		<value condition="!String.IsEmpty(Skin.String(moviegenreicons.path))">$INFO[Skin.String(moviegenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(moviegenreicons.ext)]</value>
 		<value condition="String.IsEmpty(Skin.String(moviegenreicons.path))">DefaultGenre.png</value>
 	</variable>
+	<variable name="CountryIconVideoVar">
+		<value condition="!String.IsEmpty(Skin.String(moviecountryicons.path))">$INFO[Skin.String(moviecountryicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(moviecountryicons.ext)]</value>
+		<value condition="String.IsEmpty(Skin.String(moviecountryicons.path))">DefaultCountry.png</value>
+	</variable>
 	<variable name="GenreIconMusicVar">
 		<value condition="!String.IsEmpty(Skin.String(musicgenreicons.path))">$INFO[Skin.String(musicgenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(musicgenreicons.ext)]</value>
 		<value condition="String.IsEmpty(Skin.String(musicgenreicons.path))">DefaultMusicGenres.png</value>
@@ -480,7 +487,6 @@
 		<value condition="!String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating]</value>
 		<value>$LOCALIZE[38023]</value>
 	</variable>
-
 	<!-- Custom Weather -->
 	<variable name="WeatherIconPath">
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Current.FanartCode),,.png]</value>
