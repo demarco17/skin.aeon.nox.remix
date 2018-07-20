@@ -146,7 +146,6 @@
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
-			<!-- right group -->
 			<control type="group">
 				<left>1180</left>
 				<top>88</top>

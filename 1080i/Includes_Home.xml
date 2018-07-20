@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- Main Menu Includes -->
 	<include name="MainMenuListContent">
 		<control type="wraplist" id="9000">
 			<left>-315</left>
@@ -45,7 +44,6 @@
 			<include>FallbackMenu</include>
 		</control>
 	</include>
-	<!--Main Menu-->
 	<include name="PicturesMainMenu">
 		<item id="4">
 			<label fallback="1">$INFO[Skin.String(PicturesHomeItem.Label)]</label>
@@ -305,7 +303,6 @@
 			<include condition="String.IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
 		</content>
 	</include>
-	<!-- SubMenu -->
 	<include name="HomeSubMenuVideos">
 		<item>
 			<label>342</label>

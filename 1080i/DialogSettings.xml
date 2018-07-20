@@ -84,7 +84,6 @@
 				<textoffsetx>15</textoffsetx>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
 			</control>
-			<!-- right group -->
 			<control type="group">
 				<left>1184</left>
 				<top>88</top>

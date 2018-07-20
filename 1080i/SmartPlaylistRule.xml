@@ -45,7 +45,6 @@
 				<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				<enable>false</enable>
 			</control>
-			<!-- left group -->
 			<control type="group" id="9001">
 				<control type="button" id="15">
 					<description>Rule Field</description>
@@ -94,7 +93,6 @@
 					<onright>9000</onright>
 				</control>
 			</control>
-			<!-- right group -->
 			<control type="group">
 				<left>1180</left>
 				<top>88</top>

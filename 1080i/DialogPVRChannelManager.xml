@@ -267,7 +267,6 @@
 					<info>ListItem.Property(Icon)</info>
 				</control>
 			</control>
-			<!-- right group -->
 			<control type="group">
 				<left>1260</left>
 				<top>88</top>

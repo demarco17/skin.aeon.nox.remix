@@ -26,7 +26,6 @@
 				<font>font15_title_bold</font>
 				<label>$LOCALIZE[35058]</label>
 			</control>
-			<!-- left group -->
 			<control type="group">
 				<left>32</left>
 				<top>88</top>
@@ -49,7 +48,6 @@
 					<align>right</align>
 				</control>
 			</control>
-			<!-- middle group 1 -->
 			<control type="group">
 				<left>357</left>
 				<top>88</top>
@@ -63,7 +61,6 @@
 					<height>480</height>
 				</control>
 			</control>
-			<!-- middle group 2 -->
 			<control type="group">
 				<left>850</left>
 				<top>88</top>
@@ -112,7 +109,6 @@
 					<orientation>vertical</orientation>
 				</control>
 			</control>
-			<!-- right group -->
 			<control type="group">
 				<left>1175</left>
 				<top>88</top>

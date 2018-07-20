@@ -13,7 +13,6 @@
 			<include>OpenCloseAnimation</include>
 			<include condition="Window.IsActive(musicplaylist)">MusicList</include>
 			<include condition="Window.IsActive(videoplaylist)">VideoList</include>
-			<!-- view id = 50 -->
 		</control>
 		<include>Topbar</include>
 		<control type="group">

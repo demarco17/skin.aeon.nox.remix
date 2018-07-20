@@ -258,7 +258,7 @@
 				<width>1908</width>
 				<height>590</height>
 				<scrolltime>400</scrolltime>
-				<timeblocks>30</timeblocks>
+				<timeblocks>20</timeblocks>
 				<progresstexture border="141,0,4,4">overlays/pvr/PVR-EpgProgressIndicatorH.png</progresstexture>
 				<rulerunit>6</rulerunit>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
@@ -314,6 +314,7 @@
 						<left>85</left>
 						<width>327</width>
 						<height>90</height>
+						<align>center</align>
 						<font>font12_title</font>
 						<textcolor>grey2</textcolor>
 						<textoffsetx>15</textoffsetx>
@@ -345,6 +346,7 @@
 						<left>85</left>
 						<width>327</width>
 						<height>90</height>
+						<align>center</align>
 						<font>font12_title</font>
 						<textoffsetx>15</textoffsetx>
 						<label>[B]$INFO[ListItem.ChannelNumberLabel,[COLOR grey2],: [/COLOR]]$INFO[ListItem.ChannelName][/B]</label>
@@ -362,9 +364,9 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>15</left>
-						<top>48</top>
-						<width>30</width>
+						<right>15</right>
+						<top>15</top>
+						<aspectratio align="right">keep</aspectratio>
 						<height>30</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
@@ -384,9 +386,9 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
-						<left>15</left>
-						<top>48</top>
-						<width>30</width>
+						<right>15</right>
+						<top>15</top>
+						<aspectratio align="right">keep</aspectratio>
 						<height>30</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>

@@ -33,7 +33,6 @@
 				<height>600</height>
 				<texture colordiffuse="dialogInner">dialogs/black.png</texture>
 			</control>
-			<!-- left group-->
 			<control type="group" id="9002">
 				<control type="button" id="22">
 					<description>Set Playlist type</description>
@@ -207,7 +206,6 @@
 					<ondown>22</ondown>
 				</control>
 			</control>
-			<!-- right group -->
 			<control type="group">
 				<left>1180</left>
 				<top>88</top>

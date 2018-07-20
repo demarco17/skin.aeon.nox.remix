@@ -769,7 +769,6 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<!-- Panel Title -->
 			<control type="label">
 				<visible>![ControlGroup(9000).HasFocus(201) | ControlGroup(9000).HasFocus(8) | ControlGroup(9000).HasFocus(120)]</visible>
 				<include>VisibleFadeAnimation</include>
@@ -783,7 +782,6 @@
 				<aligny>top</aligny>
 				<label>$VAR[EI_VID.PanelLabel]</label>
 			</control>
-			<!-- Items/Page -->
 			<control type="label">
 				<left>880</left>
 				<top>1020</top>
