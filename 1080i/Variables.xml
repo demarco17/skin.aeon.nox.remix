@@ -104,7 +104,6 @@
 		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)">$LOCALIZE[31030]:</value>
 		<value>$LOCALIZE[20416]:</value>
 	</variable>
-	<!--  List Label Vars -->
 	<variable name="VideoListLabel2Var">
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Premiered]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
@@ -163,7 +162,6 @@
 		<value condition="VideoPlayer.IsStereoscopic">3D</value>
 		<value>$INFO[VideoPlayer.VideoCodec]</value>
 	</variable>
-	<!-- InfoWall Icon Toggle -->
 	<variable name="InfoWallIconVar">
 		<value condition="Control.IsVisible(51) + Container.Content(movies)">$INFO[Skin.String(51.Movies.InfoWallIcon)]</value>
 		<value condition="Control.IsVisible(51) + Container.Content(tvshows)">$INFO[Skin.String(51.TVShows.InfoWallIcon)]</value>
@@ -178,7 +176,6 @@
 		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(51.TVShows.InfoWallIcon),1)">Skin.SetString(51.TVShows.InfoWallIcon,2)</value>
 		<value condition="Container.Content(tvshows) + String.IsEqual(Skin.String(51.TVShows.InfoWallIcon),2)">Skin.SetString(51.TVShows.InfoWallIcon,1)</value>
 	</variable>
-	<!-- Case Toggle -->
 	<variable name="VideoCaseToggleVar">
 		<value condition="Control.IsVisible(57) + Container.Content(movies)">$INFO[Skin.String(57.Movies.CaseToggle)]</value>
 		<value condition="Control.IsVisible(57) + Container.Content(sets)">$INFO[Skin.String(57.Sets.CaseToggle)]</value>
@@ -427,7 +424,8 @@
 	</variable>
 	<variable name="NextAiredFanart">
 		<value condition="!String.IsEmpty(Container.ListItem.Property(Fanart)) + !String.IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))">$INFO[Container.ListItem.Property(Fanart)]</value>
-		<value>special://home/addons/script.tv.show.next.aired/fanart.jpg</value>
+		<value condition="Skin.HasSetting(Enable.CustomGlobalBackground)">$INFO[Skin.String(CustomGlobalBackground)]</value>
+		<value>backgrounds/SKINDEFAULT.jpg</value>
 	</variable>
 	<variable name="NowPlayingThumbVar">
 		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)] + !String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
@@ -481,7 +479,6 @@
 		<value condition="!String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating]</value>
 		<value>$LOCALIZE[38023]</value>
 	</variable>
-	<!-- Custom Weather -->
 	<variable name="WeatherIconPath">
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Current.FanartCode),,.png]</value>
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window.Property(Current.FanartCode)]</value>

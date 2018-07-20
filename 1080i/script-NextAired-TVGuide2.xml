@@ -7,10 +7,7 @@
 	<onunload>ClearProperty(MediaMenu,Home)</onunload>
 	<menucontrol>9051</menucontrol>
 	<controls>
-		<control type="group">
-			<include>OpenCloseAnimation</include>
-			<include>TVShowNextAiredBackground</include>
-		</control>
+		<include>TVShowNextAiredBackground</include>
 		<control type="group">
 			<top>128</top>
 			<include>OpenCloseAnimation</include>
@@ -51,7 +48,7 @@
 					<control type="label">
 						<width>356</width>
 						<height>90</height>
-						<font>font15</font>
+						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
 						<textcolor>grey</textcolor>
 						<align>right</align>
@@ -75,7 +72,7 @@
 					<control type="label">
 						<width>356</width>
 						<height>90</height>
-						<font>font15</font>
+						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>

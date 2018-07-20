@@ -38,7 +38,6 @@
 		<itemlayout width="1" height="1" />
 		<focusedlayout width="1" height="1" />
 	</include>
-	<!-- Media Menu -->
 	<include name="SideBladeLeft">
 		<animation effect="slide" start="440,0" end="0,0" time="400" condition="String.IsEmpty(Window(home).Property(MediaMenu))">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-440,0" time="400">WindowClose</animation>
@@ -285,7 +284,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- Buttons -->
 	<include name="ButtonCommonValues">
 		<width>400</width>
 		<height>60</height>
@@ -326,7 +324,6 @@
 		<focusedcolor>white</focusedcolor>
 		<texturefocus />
 	</include>
-	<!-- KeyBoard -->
 	<include name="Objects_KeyOffVars">
 		<textoffsety>32</textoffsety>
 		<align>center</align>
@@ -353,14 +350,12 @@
 		<texturenofocus colordiffuse="dialogInner">dialogs/black.png</texturenofocus>
 		<include>Objects_KeyOffVars</include>
 	</include>
-	<!-- Media Flags -->
 	<include name="MediaFlagVars">
 		<width>135</width>
 		<height>90</height>
 		<aspectratio>keep</aspectratio>
 		<colordiffuse>grey</colordiffuse>
 	</include>
-	<!-- Scroll Label -->
 	<include name="ScrollLabel">
 		<control type="label">
 			<include>VisibleFadeAnimation</include>
@@ -374,7 +369,6 @@
 			<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
 		</control>
 	</include>
-	<!-- Navigation Bar -->
 	<include name="Topbar">
 		<control type="group">
 			<include>OpenCloseAnimation</include>
@@ -414,7 +408,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- System windows -->
 	<include name="SystemLeftPanel">
 		<control type="image">
 			<left>66</left>
@@ -433,7 +426,6 @@
 			<texture border="18">dialogs/dialog-bg.png</texture>
 		</control>
 	</include>
-	<!-- Home window buttons -->
 	<include name="HomeShutdownButton">
 		<control type="button" id="9027">
 			<label></label>
@@ -504,7 +496,6 @@
 			<include>VisibleFadeAnimation</include>
 		</control>
 	</include>
-	<!-- MovieSet info -->
 	<include name="InfoList">
 		<param name="list_label">$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</param>
 		<param name="header_label">$LOCALIZE[342]:$INFO[Container(5000).NumItems,[COLOR grey][B] ,[/B][/COLOR]]</param>
@@ -724,7 +715,6 @@
 			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
 		</control>
 	</include>
-	<!-- TV Shows Next Aired script -->
 	<include name="TVNextAiredListCommonLayout">
 		<left>521</left>
 		<top>32</top>
@@ -735,49 +725,134 @@
 		<orientation>vertical</orientation>
 		<scrolltime>400</scrolltime>
 		<pagecontrol>60</pagecontrol>
-		<itemlayout height="420" width="439">
+		<itemlayout height="420" width="658" condition="String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)">
 			<control type="image">
-				<description>Poster</description>
-				<top>10</top>
-				<width>437</width>
-				<height>185</height>
-				<aspectratio>keep</aspectratio>
+				<left>5</left>
+				<top>5</top>
+				<width>279</width>
+				<height>410</height>
+				<aspectratio>stretch</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 			</control>
+			<control type="textbox">
+				<description>NextEpisode/AirTime - Studio</description>
+				<left>299</left>
+				<top>15</top>
+				<width>350</width>
+				<height>410</height>
+				<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey2](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network),[COLOR grey3]  |  [/COLOR],][/COLOR][CR]$LOCALIZE[2050]:[CR]$INFO[ListItem.Property(Runtime),[COLOR grey], min[/COLOR]]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<font>font13</font>
+				<autoscroll>false</autoscroll>
+			</control>
+		</itemlayout>
+		<focusedlayout height="420" width="658" condition="String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)">
+			<control type="group">
+				<include>IconZoomAnimation</include>
+				<control type="image">
+					<width>658</width>
+					<height>420</height>
+					<texture colordiffuse="00FFFFFF">dialogs/white50.png</texture>
+					<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>ControlGroup(9001).HasFocus()</visible>
+				</control>
+				<control type="image">
+					<left>5</left>
+					<top>5</top>
+					<width>279</width>
+					<height>410</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+				</control>
+				<control type="textbox">
+					<description>NextEpisode/AirTime - Studio</description>
+					<left>299</left>
+					<top>15</top>
+					<width>350</width>
+					<height>410</height>
+					<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR white],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR white]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network),[COLOR grey3]  |  [/COLOR],][/COLOR][CR]$LOCALIZE[2050]:[CR]$INFO[ListItem.Property(Runtime),[COLOR white], min[/COLOR]]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<font>font13</font>
+					<autoscroll time="2500" delay="2000" repeat="3000">True</autoscroll>
+				</control>
+			</control>
+		</focusedlayout>
+		<itemlayout height="140" width="1317" condition="String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)">
 			<control type="image">
-				<description>Banner</description>
-				<left>10</left>
-				<top>10</top>
-				<width>419</width>
-				<height>180</height>
-				<aspectratio aligny="center">keep</aspectratio>
+				<left>5</left>
+				<top>5</top>
+				<width>704</width>
+				<height>130</height>
+				<aspectratio>stretch</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
 			</control>
+			<control type="textbox">
+				<description>NextEpisode/AirTime - Studio/Runtime</description>
+				<left>724</left>
+				<top>13</top>
+				<width>583</width>
+				<height>110</height>
+				<label>$LOCALIZE[209]: $INFO[ListItem.Property(NextTitle),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey2](,)[/COLOR]][CR]$LOCALIZE[31012]: [COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network),[COLOR grey3]  |  [/COLOR],][/COLOR][CR]$LOCALIZE[2050]: $INFO[ListItem.Property(Runtime),[COLOR grey], min[/COLOR]]</label>
+				<textcolor>$VAR[SkinThemeColour]</textcolor>
+				<font>font13</font>
+				<autoscroll>false</autoscroll>
+			</control>
+		</itemlayout>
+		<focusedlayout height="140" width="1317" condition="String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)">
+			<control type="group">
+				<include>IconZoomAnimation</include>
+				<control type="image">
+					<width>1317</width>
+					<height>140</height>
+					<texture colordiffuse="00FFFFFF">dialogs/white50.png</texture>
+					<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>ControlGroup(9001).HasFocus()</visible>
+				</control>
+				<control type="image">
+					<left>5</left>
+					<top>5</top>
+					<width>704</width>
+					<height>130</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
+				</control>
+				<control type="textbox">
+					<description>NextEpisode/AirTime - Studio/Runtime</description>
+					<left>724</left>
+					<top>13</top>
+					<width>583</width>
+					<height>110</height>
+					<label>$LOCALIZE[209]: $INFO[ListItem.Property(NextTitle),[COLOR white],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey](,)[/COLOR]][CR]$LOCALIZE[31012]: [COLOR white]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network),[COLOR grey3]  |  [/COLOR],][/COLOR][CR]$LOCALIZE[2050]: $INFO[ListItem.Property(Runtime),[COLOR white], min[/COLOR]]</label>
+					<textcolor>$VAR[SkinThemeColour]</textcolor>
+					<font>font13</font>
+					<autoscroll time="2500" delay="2000" repeat="3000">True</autoscroll>
+				</control>
+			</control>
+		</focusedlayout>
+		<itemlayout height="420" width="439" condition="String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)">
 			<control type="image">
-				<description>Logo</description>
 				<top>10</top>
 				<width>439</width>
 				<height>160</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-				<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
 			</control>
 			<control type="textbox">
 				<description>NextEpisode/AirTime - Studio</description>
 				<left>10</left>
-				<top>195</top>
+				<top>185</top>
 				<width>419</width>
-				<height>198</height>
-				<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey2](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+				<height>215</height>
+				<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey2](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network),[COLOR grey3]  |  [/COLOR],][/COLOR][CR]$LOCALIZE[2050]:[CR]$INFO[ListItem.Property(Runtime),[COLOR grey], min[/COLOR]]</label>
 				<textcolor>$VAR[SkinThemeColour]</textcolor>
-				<font>font14</font>
+				<font>font13</font>
 				<align>center</align>
 				<autoscroll>false</autoscroll>
 			</control>
 		</itemlayout>
-		<focusedlayout height="420" width="439">
+		<focusedlayout height="420" width="439" condition="String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)">
 			<control type="group">
 				<include>IconZoomAnimation</include>
 				<control type="image">
@@ -789,42 +864,21 @@
 					<visible>ControlGroup(9001).HasFocus()</visible>
 				</control>
 				<control type="image">
-					<description>Poster</description>
-					<top>10</top>
-					<width>437</width>
-					<height>185</height>
-					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-				</control>
-				<control type="image">
-					<description>Banner</description>
-					<left>10</left>
-					<top>10</top>
-					<width>419</width>
-					<height>180</height>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
-				</control>
-				<control type="image">
-					<description>Logo</description>
 					<top>10</top>
 					<width>439</width>
 					<height>160</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-					<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
 				</control>
 				<control type="textbox">
 					<description>NextEpisode/AirTime - Studio</description>
 					<left>10</left>
-					<top>195</top>
+					<top>185</top>
 					<width>419</width>
-					<height>198</height>
-					<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey2](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR grey]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), - ,][/COLOR]</label>
+					<height>215</height>
+					<label>$LOCALIZE[209]:[CR]$INFO[ListItem.Property(NextTitle),[COLOR white],[/COLOR]]$INFO[ListItem.Property(NextNumber), [COLOR grey](,)[/COLOR]][CR]$LOCALIZE[31012]:[CR][COLOR white]$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network),[COLOR grey3]  |  [/COLOR],][/COLOR][CR]$LOCALIZE[2050]:[CR]$INFO[ListItem.Property(Runtime),[COLOR white], min[/COLOR]]</label>
 					<textcolor>$VAR[SkinThemeColour]</textcolor>
-					<font>font14</font>
+					<font>font13</font>
 					<align>center</align>
 					<autoscroll time="2500" delay="2000" repeat="3000">True</autoscroll>
 				</control>

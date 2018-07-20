@@ -77,20 +77,18 @@
 			<imagepath background="true">$VAR[WeatherFanartPath]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
-			<include>VisibleFadeAnimation</include>
 			<include>OpenCloseAnimation</include>
 		</control>
 	</include>
 	<include name="TVShowNextAiredBackground">
-		<control type="image">
-			<include>VisibleFadeAnimation</include>
-			<include>FullscreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$VAR[NextAiredFanart]</texture>
-			<fadetime>400</fadetime>
-		</control>
 		<control type="group">
-			<include>VisibleFadeAnimation</include>
+			<include>OpenCloseAnimation</include>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$VAR[NextAiredFanart]</texture>
+				<fadetime>400</fadetime>
+			</control>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>dialogs/logo_back.png</texture>
