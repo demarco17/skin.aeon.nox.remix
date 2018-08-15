@@ -82,9 +82,7 @@ msgctxt "#31015"
 msgid "Awards"
 msgstr ""
 
-msgctxt "#31016"
-msgid "Poster"
-msgstr ""
+#empty string with id 31016
 
 msgctxt "#31017"
 msgid "Enable Cases"
@@ -285,7 +283,7 @@ msgid "TriPanel"
 msgstr ""
 
 msgctxt "#31079"
-msgid "Shift"
+msgid "Poster"
 msgstr ""
 
 msgctxt "#31080"
@@ -345,7 +343,7 @@ msgid "KodiFlix"
 msgstr ""
 
 msgctxt "#31094"
-msgid "Show pvr information"
+msgid "Show PVR information"
 msgstr ""
 
 msgctxt "#31095"
@@ -668,7 +666,7 @@ msgid "Hide Fanart in full screen visualisation."
 msgstr ""
 
 msgctxt "#31937"
-msgid "Customize studio icons (White/Coloured)."
+msgid "Customize studio icons."
 msgstr ""
 
 msgctxt "#31938"
@@ -683,7 +681,11 @@ msgctxt "#31940"
 msgid "Customize movie country icons."
 msgstr ""
 
-#empty strings from id 31941 to 31947
+msgctxt "#31941"
+msgid "Customize weather icons."
+msgstr ""
+
+#empty strings from id 31942 to 31947
 
 msgctxt "#31948"
 msgid "Enable artwork download GUI mode in video info dialog. Otherwise 'auto download' as per addon settings."
