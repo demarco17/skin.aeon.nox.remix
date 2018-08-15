@@ -182,6 +182,15 @@
 				<top>135</top>
 				<visible>![Container.Content(episodes) | Container.Content(studios) | Container.Content(genres) | Container.Content(countries) | String.Contains(container.folderpath,plugin.video)]</visible>
 				<control type="image">
+					<left>20</left>
+					<top>839</top>
+					<width>530</width>
+					<height>795</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumbVar]</texture>
+				</control>
+				<control type="image">
 					<top>20</top>
 					<width>570</width>
 					<height>835</height>
@@ -190,15 +199,6 @@
 					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
-					<left>20</left>
-					<top>837</top>
-					<width>530</width>
-					<height>795</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumbVar]</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -222,19 +222,20 @@
 					<texture fallback="flags/DefaultStudios.png">$VAR[StudioIconVar]$INFO[ListItem.Label,,.png]</texture>
 					<fadetime>300</fadetime>
 				</control>
-				<control type="image">
-					<top>795</top>
-					<width>570</width>
-					<height>835</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<texture diffuse="thumbs/thumb_reflect.png" flipy="true">DefaultBlank.png</texture>
-					<bordersize>20</bordersize>
-				</control>
 			</control>
 			<control type="group">
 				<left>1296</left>
 				<top>135</top>
 				<visible>Container.Content(genres)</visible>
+				<control type="image">
+					<left>20</left>
+					<top>839</top>
+					<width>530</width>
+					<height>795</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="DefaultGenre.png">$VAR[GenreIconVideoVar]</texture>
+				</control>
 				<control type="image">
 					<top>20</top>
 					<width>570</width>
@@ -245,20 +246,20 @@
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
-				<control type="image">
-					<left>20</left>
-					<top>837</top>
-					<width>530</width>
-					<height>795</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="DefaultGenre.png">$VAR[GenreIconVideoVar]</texture>
-				</control>
 			</control>
 			<control type="group">
 				<left>1296</left>
 				<top>135</top>
 				<visible>Container.Content(countries)</visible>
+				<control type="image">
+					<left>20</left>
+					<top>839</top>
+					<width>530</width>
+					<height>795</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="DefaultCountry.png">$VAR[CountryIconVideoVar]</texture>
+				</control>
 				<control type="image">
 					<top>20</top>
 					<width>570</width>
@@ -268,15 +269,6 @@
 					<fadetime>300</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
-					<left>20</left>
-					<top>837</top>
-					<width>530</width>
-					<height>795</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true" fallback="DefaultCountry.png">$VAR[CountryIconVideoVar]</texture>
 				</control>
 			</control>
 			<control type="group">

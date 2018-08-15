@@ -131,21 +131,21 @@
 					<texture border="1">dialogs/side_shadow.png</texture>
 				</control>
 				<control type="image">
-					<width>570</width>
-					<height>835</height>
-					<aspectratio>scale</aspectratio>
-					<texture background="true">$VAR[PosterThumbVar]</texture>
-					<fadetime>300</fadetime>
-					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
 					<top>798</top>
 					<width>570</width>
 					<height>835</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumbVar]</texture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<width>570</width>
+					<height>835</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$VAR[PosterThumbVar]</texture>
+					<fadetime>300</fadetime>
+					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
@@ -421,21 +421,21 @@
 					<texture border="1">dialogs/side_shadow.png</texture>
 				</control>
 				<control type="image">
-					<width>570</width>
-					<height>570</height>
-					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>300</fadetime>
-					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
 					<top>532</top>
 					<width>570</width>
 					<height>570</height>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
+					<bordersize>20</bordersize>
+				</control>
+				<control type="image">
+					<width>570</width>
+					<height>570</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<fadetime>300</fadetime>
+					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">

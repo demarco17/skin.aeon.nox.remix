@@ -46,7 +46,9 @@
 					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 					<visible>Visualisation.Enabled + Visualisation.HasPresets</visible>
 				</control>
-				<control type="togglebutton" id="501">
+				
+				<!-- ###### bool broken Visualisation.Locked ###### -->
+				<!--<control type="togglebutton" id="501">
 					<texturefocus>osd/buttons/OSDPresetUnlocked.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDPresetUnlocked.png</texturenofocus>
 					<usealttexture>Visualisation.Locked</usealttexture>
@@ -57,7 +59,8 @@
 					<width>100</width>
 					<height>100</height>
 					<visible>Visualisation.Enabled + Visualisation.HasPresets</visible>
-				</control>
+				</control>-->
+				
 				<control type="button" id="702">
 					<texturefocus>osd/buttons/OSDAudio.png</texturefocus>
 					<texturenofocus colordiffuse="88FFFFFF">osd/buttons/OSDAudio.png</texturenofocus>

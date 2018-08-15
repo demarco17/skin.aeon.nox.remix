@@ -249,12 +249,21 @@
 				<height>980</height>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright>9000</onright>
-				<control type="button" id="2000">
+				<!--<control type="button" id="2000">
 					<description>View options header</description>
 					<textwidth>352</textwidth>
 					<font>font12_title_bold</font>
 					<include>ButtonCommonValues</include>
-					<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
+					<label>31006</label>
+					<enable>false</enable>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
+				</control>-->
+				<control type="button" id="2002">
+					<description>Misc options header</description>
+					<textwidth>352</textwidth>
+					<font>font12_title_bold</font>
+					<include>ButtonCommonValues</include>
+					<label>31026</label>
 					<enable>false</enable>
 					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
 				</control>
@@ -265,23 +274,40 @@
 					<include>ButtonCommonValues</include>
 					<label>5</label>
 				</control>
-				<control type="button" id="2001">
+				<control type="button" id="2003">
+					<description>Actions header</description>
+					<textwidth>352</textwidth>
+					<font>font12_title_bold</font>
+					<include>ButtonCommonValues</include>
+					<label>31039</label>
+					<enable>false</enable>
+					<disabledcolor>$VAR[SkinThemeColour]</disabledcolor>
+				</control>
+				<control type="button" id="2004">
 					<description>update</description>
 					<textwidth>352</textwidth>
-					<onclick>Action(Close,script-NextAired-TVGuide.xml)</onclick>
+					<onclick>Action(Close,script-NextAired-TVGuide2.xml)</onclick>
 					<onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
 					<include>ButtonCommonValues</include>
-					<label>- $LOCALIZE[24069]</label>
+					<label>$LOCALIZE[24069]</label>
 				</control>
-				<control type="button" id="2002">
+				<control type="button" id="2005">
 					<description>reset</description>
 					<textwidth>352</textwidth>
-					<onclick>Action(Close,script-NextAired-TVGuide.xml)</onclick>
+					<onclick>Action(Close,script-NextAired-TVGuide2.xml)</onclick>
 					<onclick>RunScript(script.tv.show.next.aired,reset=True)</onclick>
 					<include>ButtonCommonValues</include>
-					<label>- $LOCALIZE[13007]</label>
+					<label>$LOCALIZE[13007]</label>
 				</control>
 			</control>
+			<!--<control type="image">
+				<description>LOGO</description>
+				<top>860</top>
+				<width>400</width>
+				<height>200</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[System.AddonIcon(script.tv.show.next.aired)]</texture>
+			</control>-->
 		</control>
 	</controls>
 </window>

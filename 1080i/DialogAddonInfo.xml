@@ -8,10 +8,10 @@
 			<control type="group">
 				<include>SystemLeftPanel</include>
 				<control type="image">
-					<left>82</left>
+					<left>83</left>
 					<top>32</top>
-					<width>356</width>
-					<height>356</height>
+					<width>354</width>
+					<height>354</height>
 					<aspectratio>scale</aspectratio>
 					<texture>$INFO[ListItem.Icon]</texture>
 				</control>

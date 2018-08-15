@@ -189,12 +189,8 @@
 						<visible>!String.IsEmpty(ListItem.Tag)</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054]: [COLOR grey],[/COLOR]  ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: [COLOR grey],[/COLOR]]</label>
+						<label>$INFO[ListItem.Property(TotalSeasons),$LOCALIZE[33054]: [COLOR grey],[/COLOR]  ]$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[20360]: [COLOR grey],[/COLOR]  ]$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[16101]: [COLOR grey],[/COLOR]]</label>
 						<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
-					</item>
-					<item>
-						<label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[16101]: [COLOR grey],[/COLOR]]</label>
-						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.FileNameAndPath,$LOCALIZE[573]: [COLOR grey],[/COLOR]]</label>

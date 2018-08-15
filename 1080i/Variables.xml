@@ -167,7 +167,7 @@
 		<value condition="Control.IsVisible(51) + Container.Content(tvshows)">$INFO[Skin.String(51.TVShows.InfoWallIcon)]</value>
 	</variable>
 	<variable name="InfoWallIconLabelVar">
-		<value condition="String.IsEqual(Control.GetLabel(4430),1)">$LOCALIZE[31016]</value>
+		<value condition="String.IsEqual(Control.GetLabel(4430),1)">$LOCALIZE[31079]</value>
 		<value condition="String.IsEqual(Control.GetLabel(4430),2)">$LOCALIZE[31087]</value>
 	</variable>
 	<variable name="51InfoWallIconVar">
@@ -350,6 +350,7 @@
 		<value condition="Control.HasFocus(402)">$LOCALIZE[31934]</value>
 		<value condition="Control.HasFocus(403)">$LOCALIZE[31939]</value>
 		<value condition="Control.HasFocus(404)">$LOCALIZE[31940]</value>
+		<value condition="Control.HasFocus(405)">$LOCALIZE[31941]</value>
 		<value condition="Control.HasFocus(90000) + String.IsEmpty(Container(90000).ListItem.Property(Path))">$LOCALIZE[31923]</value>
 		<value condition="Control.HasFocus(90010)">$LOCALIZE[31913]</value>
 		<value condition="Control.HasFocus(90011)">$LOCALIZE[31914]</value>

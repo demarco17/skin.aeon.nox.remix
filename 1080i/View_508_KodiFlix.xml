@@ -164,6 +164,14 @@
 				<itemlayout height="270" width="480">
 					<control type="image">
 						<left>20</left>
+						<top>253</top>
+						<width>440</width>
+						<height>248</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeVar]</texture>
+					</control>
+					<control type="image">
+						<left>20</left>
 						<width>440</width>
 						<height>248</height>
 						<aspectratio>scale</aspectratio>
@@ -178,14 +186,6 @@
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 						<visible>String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<control type="image">
-						<left>20</left>
-						<top>249</top>
-						<width>440</width>
-						<height>248</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeVar]</texture>
-					</control>
 					<control type="group">
 						<left>420</left>
 						<top>208</top>
@@ -195,6 +195,16 @@
 				<focusedlayout height="270" width="480">
 					<control type="group">
 						<include>IconZoomAnimation</include>
+						<control type="image">
+							<left>20</left>
+							<top>253</top>
+							<width>440</width>
+							<height>248</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeVar]</texture>
+							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]" diffuse="thumbs/thumb_diffuse.png">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
 						<control type="image">
 							<left>20</left>
 							<width>440</width>
@@ -217,16 +227,6 @@
 							<left>415</left>
 							<top>203</top>
 							<include>IconWatchedStatus</include>
-						</control>
-						<control type="image">
-							<left>20</left>
-							<top>249</top>
-							<width>440</width>
-							<height>248</height>
-							<aspectratio>scale</aspectratio>
-							<texture background="true" flipy="true" diffuse="thumbs/thumb_diffuse.png">$VAR[LandscapeVar]</texture>
-							<bordertexture border="5" colordiffuse="$VAR[SkinThemeColour]" diffuse="thumbs/thumb_diffuse.png">thumbs/thumbnail_focused.png</bordertexture>
-							<bordersize>5</bordersize>
 						</control>
 					</control>
 				</focusedlayout>

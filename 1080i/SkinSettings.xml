@@ -296,6 +296,16 @@
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=moviecountryicons&amp;type=resource.images.moviecountryicons)</onclick>
 					</control>
+					<control type="button" id="405">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[8] $LOCALIZE[536]</label>
+						<label2>[COLOR $VAR[SkinThemeColour]]$INFO[Skin.String(weathericons.name)][/COLOR]</label2>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
+					</control>
 				</control>
 			</control>
 		</control>

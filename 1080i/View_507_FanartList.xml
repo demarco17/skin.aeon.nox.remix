@@ -163,6 +163,8 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="DefaultVideo.png">$VAR[LandscapeVar]</texture>
+					<bordertexture border="1" colordiffuse="88FFFFFF">dialogs/black.png</bordertexture>
+					<bordersize>1</bordersize>
 					<fadetime>300</fadetime>
 				</control>
 				<control type="image">
@@ -445,6 +447,8 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="DefaultVideo.png">$VAR[LandscapeVar]</texture>
+					<bordertexture border="1" colordiffuse="88FFFFFF">dialogs/black.png</bordertexture>
+					<bordersize>1</bordersize>
 					<fadetime>300</fadetime>
 				</control>
 				<control type="image">
